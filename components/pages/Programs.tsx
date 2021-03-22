@@ -1,22 +1,21 @@
 import Head from 'next/head'
 
-import { useEffect } from 'react'
-import loadJs from 'loadjs'
+// import { useEffect } from 'react'
+// import loadJs from 'loadjs'
 
-const Programs = () => {
-
-  useEffect(() => {
-
-    loadJs([
-      '/assets/js/slick.min.js',
-      '/assets/js/lazysizes.min.js',
-      '/assets/js/circle-progress.min.js',
-      '/assets/js/jquery.magnific-popup.min.js',
-      '/assets/js/myjs.js'
-    ], {
-      async: false
-    })
-  }, [])
+const PagePrograms = () => {
+  // useEffect(() => {
+  //   loadJs(
+  //     [
+  //       '/assets/js/slick.min.js',
+  //       '/assets/js/lazysizes.min.js',
+  //       '/assets/js/myjs.js',
+  //     ],
+  //     {
+  //       async: false,
+  //     }
+  //   )
+  // }, [])
 
   return (
     <>
@@ -148,4 +147,4 @@ const Programs = () => {
   )
 }
 
-export default Programs
+export default PagePrograms

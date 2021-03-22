@@ -1,20 +1,19 @@
 import Head from 'next/head'
 
-import { useEffect } from 'react'
-import loadJs from 'loadjs'
+// import { useEffect } from 'react'
+// import loadJs from 'loadjs'
 
 const webinar = () => {
+  // useEffect(() => {
 
-  useEffect(() => {
-
-    loadJs([
-      '/assets/js/lazysizes.min.js',
-      '/assets/js/jquery.magnific-popup.min.js',
-      '/assets/js/myjs.js'
-    ], {
-      async: false
-    })
-  }, [])
+  //   loadJs([
+  //     '/assets/js/lazysizes.min.js',
+  //     '/assets/js/jquery.magnific-popup.min.js',
+  //     '/assets/js/myjs.js'
+  //   ], {
+  //     async: false
+  //   })
+  // }, [])
 
   return (
     <>
@@ -327,7 +326,8 @@ const webinar = () => {
           </div>
           <div className='vebinars-more'>
             <a href='' className='button'>
-              <img src='/assets/images/icon_rotate.svg' alt='' /> Еще 10 вебинаров
+              <img src='/assets/images/icon_rotate.svg' alt='' /> Еще 10
+              вебинаров
             </a>
           </div>
         </section>

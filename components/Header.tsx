@@ -1,23 +1,27 @@
+import Link from 'next/link'
+
 const Header = () => {
   return (
     <header>
       <div className='container'>
         <div className='header-top'>
-          <a href='' className='main-logo'>
-            <span className='pic'>
-              <img src='/assets/images/logo_mba.svg' alt='' />
-            </span>
-            <span className='text'>
-              <img src='/assets/images/logo_mba_text.svg' alt='' />
-            </span>
-          </a>
+          <Link href='/'>
+            <a className='main-logo'>
+              <span className='pic'>
+                <img src='/assets/images/logo_mba.svg' alt='' />
+              </span>
+              <span className='text'>
+                <img src='/assets/images/logo_mba_text.svg' alt='' />
+              </span>
+            </a>
+          </Link>
           <div className='header-logos'>
-            <a href='' className='rabo'>
+            <span className='rabo'>
               <img src='/assets/images/logo_rabo.png' alt='' />
-            </a>
-            <a href='' className='dep'>
+            </span>
+            <span className='dep'>
               <img src='/assets/images/logo_department.png' alt='' />
-            </a>
+            </span>
           </div>
           <div className='header-place'>
             <img src='/assets/images/marker_black.svg' alt='' />
@@ -45,22 +49,30 @@ const Header = () => {
           </div>
           <ul className='header-menu'>
             <li>
-              <a href=''>О школе</a>
+              <Link href='/about'>
+                <a>О школе</a>
+              </Link>
             </li>
             <li>
-              <a href=''>Преподаватели</a>
+              <Link href='/teachers'>
+                <a>Преподаватели</a>
+              </Link>
             </li>
             <li>
-              <a href=''>Вебинары</a>
+              <Link href='/webinars'>
+                <a>Вебинары</a>
+              </Link>
             </li>
-            <li>
+            {/* <li>
               <a href=''>Журнал</a>
-            </li>
-            <li>
+            </li> */}
+            {/* <li>
               <a href=''>Контакты</a>
-            </li>
+            </li> */}
             <li>
-              <a href=''>Новости</a>
+              <Link href='/articles'>
+                <a>Новости</a>
+              </Link>
             </li>
           </ul>
         </div>
@@ -120,7 +132,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>Дистанционно</span>
                       </div>
@@ -202,7 +217,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>С очными модулями</span>
                       </div>
@@ -271,7 +289,10 @@ const Header = () => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img src='/assets/images/icon_check_circle.svg' alt='' />
+                        <img
+                          src='/assets/images/icon_check_circle.svg'
+                          alt=''
+                        />
                       </div>
                       <span>27 дисциплин специализации</span>
                     </div>
@@ -297,7 +318,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>Дистанционно</span>
                       </div>
@@ -362,7 +386,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>С очными модулями</span>
                       </div>
@@ -431,7 +458,10 @@ const Header = () => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img src='/assets/images/icon_check_circle.svg' alt='' />
+                        <img
+                          src='/assets/images/icon_check_circle.svg'
+                          alt=''
+                        />
                       </div>
                       <span>27 дисциплин специализации</span>
                     </div>
@@ -457,7 +487,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>Дистанционно</span>
                       </div>
@@ -522,7 +555,10 @@ const Header = () => {
                     <div className='info-list'>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>С очными модулями</span>
                       </div>
@@ -579,7 +615,10 @@ const Header = () => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img src='/assets/images/icon_check_circle.svg' alt='' />
+                        <img
+                          src='/assets/images/icon_check_circle.svg'
+                          alt=''
+                        />
                       </div>
                       <span>27 дисциплин специализации</span>
                     </div>
@@ -604,7 +643,9 @@ const Header = () => {
                 </a>
               </li>
               <li>
-                <a href=''>О школе</a>
+                <Link href='/about'>
+                  <a>О школе</a>
+                </Link>
               </li>
               <li>
                 <a href=''>Преподаватели</a>
@@ -699,7 +740,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -753,7 +797,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -807,7 +854,10 @@ const Header = () => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>27 дисциплин специализации</span>
                       </div>
@@ -872,7 +922,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -926,7 +979,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -980,7 +1036,10 @@ const Header = () => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>27 дисциплин специализации</span>
                       </div>
@@ -1045,7 +1104,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -1099,7 +1161,10 @@ const Header = () => {
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img src='/assets/images/icon_monitor.svg' alt='' />
+                                <img
+                                  src='/assets/images/icon_monitor.svg'
+                                  alt=''
+                                />
                               </div>
                               <span>27 дисциплин</span>
                             </div>
@@ -1153,7 +1218,10 @@ const Header = () => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_check_circle.svg' alt='' />
+                          <img
+                            src='/assets/images/icon_check_circle.svg'
+                            alt=''
+                          />
                         </div>
                         <span>27 дисциплин специализации</span>
                       </div>

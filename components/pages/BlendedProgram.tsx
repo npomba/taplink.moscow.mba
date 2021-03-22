@@ -1,6 +1,22 @@
 import Head from 'next/head'
 
-const BlendedProgram = () => {
+// import { useEffect } from 'react'
+// import loadJs from 'loadjs'
+
+const PageBlendedProgram = () => {
+  // useEffect(() => {
+
+  //   loadJs([
+  //     '/assets/js/slick.min.js',
+  //     '/assets/js/lazysizes.min.js',
+  //     '/assets/js/circle-progress.min.js',
+  //     '/assets/js/jquery.magnific-popup.min.js',
+  //     '/assets/js/myjs.js'
+  //   ], {
+  //     async: false
+  //   })
+  // }, [])
+
   return (
     <>
       <Head>
@@ -1335,4 +1351,4 @@ const BlendedProgram = () => {
   )
 }
 
-export default BlendedProgram
+export default PageBlendedProgram

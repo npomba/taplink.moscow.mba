@@ -1,21 +1,22 @@
 import Head from 'next/head'
 
-import { useEffect } from 'react'
-import loadJs from 'loadjs'
+// import { useEffect } from 'react'
+// import loadJs from 'loadjs'
 
 const about = () => {
-
-  useEffect(() => {
-
-    loadJs([
-      '/assets/js/slick.min.js',
-      '/assets/js/lazysizes.min.js',
-      '/assets/js/jquery.magnific-popup.min.js',
-      '/assets/js/myjs.js'
-    ], {
-      async: false
-    })
-  }, [])
+  // useEffect(() => {
+  //   loadJs(
+  //     [
+  //       '/assets/js/slick.min.js',
+  //       '/assets/js/lazysizes.min.js',
+  //       '/assets/js/jquery.magnific-popup.min.js',
+  //       '/assets/js/myjs.js',
+  //     ],
+  //     {
+  //       async: false,
+  //     }
+  //   )
+  // }, [])
 
   return (
     <>
