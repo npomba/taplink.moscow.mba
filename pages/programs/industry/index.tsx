@@ -1,7 +1,7 @@
 import Programs from '../../../components/pages/Programs'
 
-const industry = () => {
+const programsIndustry = () => {
   return <Programs />
 }
 
-export default industry
+export default programsIndustry

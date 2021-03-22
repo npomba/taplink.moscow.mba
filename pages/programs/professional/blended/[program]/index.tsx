@@ -1,7 +1,7 @@
 import BlendedProgram from '../../../../../components/pages/BlendedProgram'
 
-const professionalBlendedProgram = () => {
+const programsProfessionalBlendedProgram = () => {
   return <BlendedProgram />
 }
 
-export default professionalBlendedProgram
+export default programsProfessionalBlendedProgram

@@ -1,7 +1,7 @@
 import Programs from '../../../../components/pages/Programs'
 
-const industryBlended = () => {
+const programsIndustryBlended = () => {
   return <Programs />
 }
 
-export default industryBlended
+export default programsIndustryBlended

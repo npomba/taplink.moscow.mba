@@ -1,7 +1,7 @@
 import OnlineProgram from '../../../../../components/pages/BlendedProgram'
 
-const miniOnlineProgram = () => {
+const programsMiniOnlineProgram = () => {
   return <OnlineProgram />
 }
 
-export default miniOnlineProgram
+export default programsMiniOnlineProgram

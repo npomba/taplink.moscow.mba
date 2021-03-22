@@ -1,7 +1,7 @@
 import Programs from '../../../components/pages/Programs'
 
-const mini = () => {
+const programsMini = () => {
   return <Programs />
 }
 
-export default mini
+export default programsMini
