@@ -1,6 +1,10 @@
 import Link from 'next/link'
+import PopulateWithPrograms from './hooks/populateWithPrograms'
 
-const Header = () => {
+const Header = ({ programs }) => {
+  // const Header = () => {
+  const { data } = programs.programs
+
   return (
     <header>
       <div className='container'>
@@ -84,26 +88,19 @@ const Header = () => {
               <ul className='header-podmenu-tabs'>
                 <li>
                   <Link href='/programs/mini/online'>
-                    <a
-                      data-tab='#header-podmenu-1'
-                      className='active-tab'
-                    >
+                    <a data-tab='#header-podmenu-1' className='active-tab'>
                       Mini MBA
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href='/programs/professional/online'>
-                    <a data-tab='#header-podmenu-2'>
-                      Professional MBA
-                    </a>
+                    <a data-tab='#header-podmenu-2'>Professional MBA</a>
                   </Link>
                 </li>
                 <li>
                   <Link href='/programs/industry/online'>
-                    <a data-tab='#header-podmenu-3'>
-                      Industry MBA
-                    </a>
+                    <a data-tab='#header-podmenu-3'>Industry MBA</a>
                   </Link>
                 </li>
               </ul>
@@ -154,62 +151,23 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>
-                          Управление рекламой и связями собщественностью (PR)
-                        </a>
-                      </li>
-                      <li>
-                        <a href=''>Экономика и управление на предприятии</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
+                      {/* {PopulateWithPrograms(data, 'professional', 'online')} */}
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'mini' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
@@ -239,33 +197,22 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'mini' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
@@ -340,45 +287,22 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'professional' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
@@ -408,33 +332,22 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'professional' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
@@ -509,45 +422,22 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'industry' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
@@ -577,21 +467,22 @@ const Header = () => {
                       </div>
                     </div>
                     <ul className='program-directions-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'industry' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                              >
+                                <a>{item.title}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </li>
