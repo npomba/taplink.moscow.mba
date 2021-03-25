@@ -83,30 +83,37 @@ const Header = () => {
             <div className='header-podmenu-left'>
               <ul className='header-podmenu-tabs'>
                 <li>
-                  <a
-                    href=''
-                    data-tab='#header-podmenu-1'
-                    className='active-tab'
-                  >
-                    Mini MBA
-                  </a>
+                  <Link href='/programs/mini/online'>
+                    <a
+                      data-tab='#header-podmenu-1'
+                      className='active-tab'
+                    >
+                      Mini MBA
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='' data-tab='#header-podmenu-2'>
-                    Professional MBA
-                  </a>
+                  <Link href='/programs/professional/online'>
+                    <a data-tab='#header-podmenu-2'>
+                      Professional MBA
+                    </a>
+                  </Link>
                 </li>
                 <li>
-                  <a href='' data-tab='#header-podmenu-3'>
-                    Industry MBA
-                  </a>
+                  <Link href='/programs/industry/online'>
+                    <a data-tab='#header-podmenu-3'>
+                      Industry MBA
+                    </a>
+                  </Link>
                 </li>
               </ul>
               <div className='header-podmenu-premium'>
                 <div className='label'>
                   <span>Premium</span>
                 </div>
-                <a href=''>Executive MBA</a>
+                <Link href='/programs/executive'>
+                  <a>Executive MBA</a>
+                </Link>
               </div>
             </div>
             <div className='header-podmenu-right'>
@@ -648,28 +655,34 @@ const Header = () => {
                 </Link>
               </li>
               <li>
-                <a href=''>Преподаватели</a>
+                <Link href='/teachers'>
+                  <a>Преподаватели</a>
+                </Link>
               </li>
               <li>
-                <a href=''>Вебинары</a>
+                <Link href='/webinars'>
+                  <a>Вебинары</a>
+                </Link>
               </li>
-              <li>
+              {/* <li>
                 <a href=''>Журнал</a>
               </li>
               <li>
                 <a href=''>Контакты</a>
-              </li>
+              </li> */}
               <li>
-                <a href=''>Новости</a>
+                <Link href='/articles'>
+                  <a>Новости</a>
+                </Link>
               </li>
             </ul>
             <div className='header-logos'>
-              <a href='' className='rabo'>
+              <span className='rabo'>
                 <img src='/assets/images/logo_rabo.png' alt='' />
-              </a>
-              <a href='' className='dep'>
+              </span>
+              <span className='dep'>
                 <img src='/assets/images/logo_department.png' alt='' />
-              </a>
+              </span>
             </div>
             <div className='header-place'>
               <img src='/assets/images/marker_black.svg' alt='' />
