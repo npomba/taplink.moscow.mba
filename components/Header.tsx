@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import PopulateWithPrograms from './hooks/populateWithPrograms'
+// import PopulateWithPrograms from './hooks/populateWithPrograms'
 
 const Header = ({ programs }) => {
   // const Header = () => {
@@ -129,9 +129,8 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -176,8 +175,7 @@ const Header = ({ programs }) => {
                     <div className='name'>Формат BLENDED</div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -218,9 +216,9 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='header-podmenu-info'>
-                    <div className='image'>
+                    {/* <div className='image'>
                       <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div>
+                    </div> */}
                     <div className='name'>Mini MBA</div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -265,9 +263,8 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -311,8 +308,7 @@ const Header = ({ programs }) => {
                     <div className='name'>Формат BLENDED</div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -353,9 +349,9 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='header-podmenu-info'>
-                    <div className='image'>
+                    {/* <div className='image'>
                       <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div>
+                    </div> */}
                     <div className='name'>Professional MBA</div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -400,9 +396,8 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -446,8 +441,7 @@ const Header = ({ programs }) => {
                     <div className='name'>Формат BLENDED</div>
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
-                      Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -488,9 +482,9 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='header-podmenu-info'>
-                    <div className='image'>
+                    {/* <div className='image'>
                       <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div>
+                    </div> */}
                     <div className='name'>Industry MBA</div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -628,9 +622,8 @@ const Header = ({ programs }) => {
                           </div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='new-price'>490 000 Р.</i>
-                            <i className='old-price'>540 000 Р.</i>
+                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -686,8 +679,8 @@ const Header = ({ programs }) => {
                           <div className='name'>Формат BLENDED</div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='simple-price'>540 000 Р.</i>
+                            Стоимость:{' '}
+                            <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -733,9 +726,9 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      <div className='image'>
+                      {/* <div className='image'>
                         <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div>
+                      </div> */}
                       <div className='name'>Mini MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -810,9 +803,8 @@ const Header = ({ programs }) => {
                           </div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='new-price'>490 000 Р.</i>
-                            <i className='old-price'>540 000 Р.</i>
+                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -868,8 +860,8 @@ const Header = ({ programs }) => {
                           <div className='name'>Формат BLENDED</div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='simple-price'>540 000 Р.</i>
+                            Стоимость:{' '}
+                            <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -915,9 +907,9 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      <div className='image'>
+                      {/* <div className='image'>
                         <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div>
+                      </div> */}
                       <div className='name'>Professional MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -992,9 +984,8 @@ const Header = ({ programs }) => {
                           </div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='new-price'>490 000 Р.</i>
-                            <i className='old-price'>540 000 Р.</i>
+                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -1050,8 +1041,8 @@ const Header = ({ programs }) => {
                           <div className='name'>Формат BLENDED</div>
                           <div className='directions-count'>18 направлений</div>
                           <div className='price'>
-                            Стоимость:
-                            <i className='simple-price'>540 000 Р.</i>
+                            Стоимость:{' '}
+                            <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
                             <div className='info-flex'>
@@ -1097,9 +1088,9 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      <div className='image'>
+                      {/* <div className='image'>
                         <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div>
+                      </div> */}
                       <div className='name'>Industry MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>

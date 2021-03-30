@@ -1,4 +1,6 @@
 import Head from 'next/head'
+import Reviews from '../sections/Reviews'
+import Rules from '../sections/Rules'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -61,8 +63,8 @@ const PageBlendedProgram = () => {
               </div>
               <ul className='jumbotron-list'>
                 <li>
-                  <div className='number'>2020</div>
-                  <p>Новейшая программа 2020 года</p>
+                  <div className='number'>2021</div>
+                  <p>Новейшая программа 2021 года</p>
                 </li>
                 <li>
                   <div className='number'>150+</div>
@@ -161,7 +163,7 @@ const PageBlendedProgram = () => {
         {/* top-path-section */}
         <section className='top-path-section'>
           <div className='top-path-content'>
-            <div className='title-pl'>Топ 2020</div>
+            <div className='title-pl'>Топ 2021</div>
             <h2>Mini MBA — путь руководителя к росту</h2>
             <div className='title-desc'>
               MBA mini Blended - смешанная программа MBA: дистанционный формат
@@ -518,7 +520,7 @@ const PageBlendedProgram = () => {
             </div>
             <div className='personal-datas'>
               Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''>персональных данных</a>
+              <a href=''> персональных данных</a>
             </div>
           </form>
         </section>
@@ -803,8 +805,8 @@ const PageBlendedProgram = () => {
           <div className='section-pl'>
             <ul className='actual-content-list'>
               <li>
-                <div className='number'>2020 год</div>
-                <p>Новейшая программа 2020 года</p>
+                <div className='number'>2021 год</div>
+                <p>Новейшая программа 2021 года</p>
               </li>
               <li>
                 <div className='number'>53 эксперта</div>
@@ -953,34 +955,7 @@ const PageBlendedProgram = () => {
           </div>
         </section>
 
-        {/* rules-section */}
-        <section className='rules-section'>
-          <div className='rules-flex'>
-            <h2>Правила приема</h2>
-            <div className='rules-content'>
-              <h3>Что требуется от кандидата</h3>
-              <ul className='rules-list'>
-                <li>
-                  Наличие высшего профессионального образования, подтвержденного
-                  дипломом
-                </li>
-                <li>
-                  Опыт работы не менее 5 лет (управленческая деятельность или
-                  опыт создания и управления собственным бизнесом)
-                </li>
-                <li>
-                  Годовой оборот организации от 300 000 для топ-менеджеров и от
-                  2 000 000 для собственников бизнеса
-                </li>
-                <li>Признанные профессиональные достижения</li>
-                <li>
-                  Уровень владения английским языком не ниже уровня
-                  Pre-Intermediate
-                </li>
-              </ul>
-            </div>
-          </div>
-        </section>
+        <Rules prices={{ lowerPrice: '300 000', higherPrice: '1 500 000' }} />
 
         {/* diplom-section */}
         <section className='diplom-section'>
@@ -1054,105 +1029,7 @@ const PageBlendedProgram = () => {
           </div>
         </section>
 
-        {/* reviews-section */}
-        <section className='reviews-section'>
-          <div className='section-pl'>
-            <h2>О нас говорят</h2>
-          </div>
-          <div className='reviews-text-list'>
-            <div className='reviews-text-block'>
-              <div className='avatar'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_ava_1.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='info'>
-                <div className='text'>
-                  <p>
-                    С каждым занятием все больше понимаешь, что эти знания не
-                    просто можно, а нужно применять на практике. То, что нам
-                    давали на курсе, позволило мне не просто понять, что
-                    нужно...
-                    <a
-                      href='#reviewModal'
-                      className='link popup-open'
-                      data-effect='mfp-zoom-in'
-                    >
-                      Читать
-                    </a>
-                  </p>
-                </div>
-                <div className='name'>Вячеслав Глухов</div>
-                <div className='job'>Генеральный директор «Замбонфарма»</div>
-              </div>
-            </div>
-            <div className='reviews-text-block'>
-              <div className='avatar'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_ava_2.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='info'>
-                <div className='text'>
-                  <p>
-                    Очень удобный формат обучения – раз в месяц по три дня на
-                    выходных. Упор на практику: спикеры – эксперты в своих
-                    отраслях, находящиеся на передовой digital-бизнеса...
-                    <a
-                      href='#reviewModal'
-                      className='link popup-open'
-                      data-effect='mfp-zoom-in'
-                    >
-                      Читать
-                    </a>
-                  </p>
-                </div>
-                <div className='name'>Вячеслав Глухов</div>
-                <div className='job'>Генеральный директор «Замбонфарма»</div>
-              </div>
-            </div>
-          </div>
-          <div className='reviews-preview-list'>
-            <a href='' className='reviews-preview-block'>
-              <div className='image'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_prew_1.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='content'>
-                <div className='type'>Отзыв в формате статьи</div>
-                <div className='name'>
-                  Как Александр увеличил доход цементного завода после
-                  прохождения MBA professional
-                </div>
-              </div>
-            </a>
-            <a
-              href='https://www.youtube.com/watch?v=l6pDOwNeTrg'
-              className='reviews-preview-block video-preview popup-youtube'
-            >
-              <div className='image'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_prew_2.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='content'>
-                <div className='play'>
-                  <i></i>
-                </div>
-                <div className='name'>Видео отзыв</div>
-              </div>
-            </a>
-          </div>
-        </section>
+        <Reviews />
 
         {/* program-price-section */}
         <section className='program-price-section'>
@@ -1189,9 +1066,9 @@ const PageBlendedProgram = () => {
                   Оставить заявку
                 </a>
               </div>
-              <a href='' className='cheaper-link'>
+              {/* <a href='' className='cheaper-link'>
                 Хочу дешевле
-              </a>
+              </a> */}
             </div>
           </div>
         </section>
@@ -1342,7 +1219,7 @@ const PageBlendedProgram = () => {
             </div>
             <div className='personal-datas'>
               Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''>персональных данных</a>
+              <a href=''> персональных данных</a>
             </div>
           </form>
         </section>

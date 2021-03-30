@@ -583,8 +583,8 @@ const about = () => {
           <div className='section-pl'>
             <ul className='actual-content-list'>
               <li>
-                <div className='number'>2020 год</div>
-                <p>Новейшая программа 2020 года</p>
+                <div className='number'>2021 год</div>
+                <p>Новейшая программа 2021 года</p>
               </li>
               <li>
                 <div className='number'>53 эксперта</div>
@@ -662,7 +662,7 @@ const about = () => {
             </div>
             <div className='personal-datas'>
               Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''>персональных данных</a>
+              <a href=''> персональных данных</a>
             </div>
           </form>
         </section>

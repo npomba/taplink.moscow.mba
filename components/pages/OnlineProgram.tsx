@@ -1,9 +1,11 @@
 import Head from 'next/head'
+import Image from 'next/image'
+import Reviews from '../sections/Reviews'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
 
-const PageOnlineProgram = () => {
+const PageOnlineProgram = ({ program }) => {
   // useEffect(() => {
 
   //   loadJs([
@@ -16,6 +18,7 @@ const PageOnlineProgram = () => {
   //     async: false
   //   })
   // }, [])
+  const data = program.data
 
   return (
     <>
@@ -26,7 +29,7 @@ const PageOnlineProgram = () => {
       {/* jumbotron-section */}
       <section className='jumbotron-section'>
         <div className='image'>
-          <img src='/assets/images/jumbotron_2.jpg' alt='' />
+          <img src={`/assets/images/programs-bgs/${data.picture}`} alt='' />
         </div>
         <div className='container'>
           <div className='jumbotron-content'>
@@ -54,7 +57,7 @@ const PageOnlineProgram = () => {
             </div>
             <div className='jumbotron-flex'>
               <div className='jumbotron-text'>
-                <h1>Управление инновационной деятельностью</h1>
+                <h1>{data.title}</h1>
                 <div className='desc'>
                   Оставьте заявку и получите консультацию по программе, а также
                   узнайте возможные варианты скидок и требования к поступлению
@@ -65,8 +68,8 @@ const PageOnlineProgram = () => {
               </div>
               <ul className='jumbotron-list'>
                 <li>
-                  <div className='number'>2020</div>
-                  <p>Новейшая программа 2020 года</p>
+                  <div className='number'>2021</div>
+                  <p>Новейшая программа 2021 года</p>
                 </li>
                 <li>
                   <div className='number'>150+</div>
@@ -108,14 +111,7 @@ const PageOnlineProgram = () => {
         <section className='purpose-section'>
           <div className='section-pl'>
             <h2>Цель программы</h2>
-            <div className='title-desc'>
-              Систематизация знаний в области инноваций, прокачка навыков по
-              запуску инновационных проектов и их продвижению, освоение знаний
-              инновационного менеджмента. Ключевой навык, который Вы получите
-              после освоения программы — это умение выстраивать процесс
-              инновационной деятельности, в том числе с активным привлечением
-              внешних участников инновационного процесса.
-            </div>
+            <div className='title-desc'>{data.goalsOfProgram}</div>
           </div>
         </section>
 
@@ -130,24 +126,9 @@ const PageOnlineProgram = () => {
             </div>
             <div className='floatRight'>
               <ul className='learning-list'>
-                <li>
-                  Получите необходимые знания о различных видах и функциях
-                  современного менеджмента
-                </li>
-                <li>Освоите необходимые навыки в ключевых сферах управления</li>
-                <li>
-                  Узнаете основы инновационного менеджмента и инновационной
-                  политики
-                </li>
-                <li>Разберетесь в особенностях коммерциализации разработок</li>
-                <li>
-                  Научитесь строить бизнес-акселераторы и бизнес-инкубаторы
-                  внутри организации
-                </li>
-                <li>
-                  Сможете эффективно управлять интеллектуальным капиталом и
-                  изменениями в компании
-                </li>
+                {data.whatWillYouLearn.map((item) => {
+                  return <li>{item}</li>
+                })}
               </ul>
             </div>
             <div className='floatLeft'>
@@ -165,7 +146,7 @@ const PageOnlineProgram = () => {
         {/* top-path-section */}
         <section className='top-path-section'>
           <div className='top-path-content'>
-            <div className='title-pl'>Топ 2020</div>
+            <div className='title-pl'>Топ 2021</div>
             <h2>MBA mini online — путь руководителя к росту</h2>
             <div className='title-desc'>
               Программа профессиональной переподготовки Mini MBA разработана для
@@ -753,8 +734,8 @@ const PageOnlineProgram = () => {
           <div className='section-pl'>
             <ul className='actual-content-list'>
               <li>
-                <div className='number'>2020 год</div>
-                <p>Новейшая программа 2020 года</p>
+                <div className='number'>2021 год</div>
+                <p>Новейшая программа 2021 года</p>
               </li>
               <li>
                 <div className='number'>53 эксперта</div>
@@ -975,171 +956,7 @@ const PageOnlineProgram = () => {
           </div>
         </section>
 
-        {/* reviews-section */}
-        <section className='reviews-section'>
-          <div className='section-pl'>
-            <h2>О нас говорят</h2>
-          </div>
-          <div className='reviews-text-list'>
-            <div className='reviews-text-block'>
-              <div className='avatar'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_ava_1.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='info'>
-                <div className='text'>
-                  <p>
-                    С каждым занятием все больше понимаешь, что эти знания не
-                    просто можно, а нужно применять на практике. То, что нам
-                    давали на курсе, позволило мне не просто понять, что
-                    нужно...
-                    <a
-                      href='#reviewModal'
-                      className='link popup-open'
-                      data-effect='mfp-zoom-in'
-                    >
-                      Читать
-                    </a>
-                  </p>
-                </div>
-                <div className='name'>Вячеслав Глухов</div>
-                <div className='job'>Генеральный директор «Замбонфарма»</div>
-              </div>
-            </div>
-            <div className='reviews-text-block'>
-              <div className='avatar'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_ava_2.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='info'>
-                <div className='text'>
-                  <p>
-                    Очень удобный формат обучения – раз в месяц по три дня на
-                    выходных. Упор на практику: спикеры – эксперты в своих
-                    отраслях, находящиеся на передовой digital-бизнеса...
-                    <a
-                      href='#reviewModal'
-                      className='link popup-open'
-                      data-effect='mfp-zoom-in'
-                    >
-                      Читать
-                    </a>
-                  </p>
-                </div>
-                <div className='name'>Вячеслав Глухов</div>
-                <div className='job'>Генеральный директор «Замбонфарма»</div>
-              </div>
-            </div>
-          </div>
-          <div className='reviews-preview-list'>
-            <a href='' className='reviews-preview-block'>
-              <div className='image'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_prew_1.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='content'>
-                <div className='type'>Отзыв в формате статьи</div>
-                <div className='name'>
-                  Как Александр увеличил доход цементного завода после
-                  прохождения MBA professional
-                </div>
-              </div>
-            </a>
-            <a
-              href='https://www.youtube.com/watch?v=l6pDOwNeTrg'
-              className='reviews-preview-block video-preview popup-youtube'
-            >
-              <div className='image'>
-                <img
-                  className='lazyload'
-                  data-src='/assets/images/review_prew_2.jpg'
-                  alt=''
-                />
-              </div>
-              <div className='content'>
-                <div className='play'>
-                  <i></i>
-                </div>
-                <div className='name'>Видео отзыв</div>
-              </div>
-            </a>
-          </div>
-        </section>
-
-        {/* program-price-section */}
-        <section className='program-price-section'>
-          <h2>Стоимость обучения</h2>
-          <ul className='program-price-tabs'>
-            <li>
-              <a className='active' href='#program-price-1'>
-                Professional Intensive
-              </a>
-            </li>
-            <li>
-              <a href='#program-price-2'>Professional</a>
-            </li>
-          </ul>
-          <div className='program-price-flex'>
-            <div id='program-price-1' className='program-price-block'>
-              <div className='name'>
-                Professional Intensive
-                <div className='discount'>
-                  <div className='size'>-30%</div>
-                  <span>до 20 ноября</span>
-                </div>
-              </div>
-              <ul className='simple-list'>
-                <li>От 3 до 6 месяцев обучения</li>
-                <li>Дистанционно</li>
-                <li>Ближайший набор 20 ноября</li>
-                <li>288 часа живого общения с экспертами</li>
-                <li>40 дисциплин об управлении</li>
-              </ul>
-              <div className='note'>*Возможна рассрочка</div>
-              <div className='price'>
-                130 000 Р.
-                <i className='old-price'>490 000 Р.</i>
-              </div>
-              <div className='button-block'>
-                <a href='' className='button empty-button'>
-                  Оставить заявку
-                </a>
-              </div>
-              <a href='' className='cheaper-link'>
-                Хочу дешевле
-              </a>
-            </div>
-            <div id='program-price-2' className='program-price-block'>
-              <div className='name'>Professional</div>
-              <ul className='simple-list'>
-                <li>От 3 до 6 месяцев обучения</li>
-                <li>Дистанционно</li>
-                <li>Ближайший набор 20 ноября</li>
-                <li>288 часа живого общения с экспертами</li>
-                <li>40 дисциплин об управлении</li>
-              </ul>
-              <div className='note'>*Возможна рассрочка</div>
-              <div className='price'>190 000 Р.</div>
-              <div className='button-block'>
-                <a href='' className='button empty-button'>
-                  Оставить заявку
-                </a>
-              </div>
-              <a href='' className='cheaper-link'>
-                Хочу дешевле
-              </a>
-            </div>
-          </div>
-        </section>
+        <Reviews />
 
         {/* faq-section */}
         <section className='faq-section section-pl'>
@@ -1287,7 +1104,7 @@ const PageOnlineProgram = () => {
             </div>
             <div className='personal-datas'>
               Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''>персональных данных</a>
+              <a href=''> персональных данных</a>
             </div>
           </form>
         </section>

@@ -3,7 +3,7 @@ const Teachers = () => {
     <>
       <section className='about-detail-section'>
         <div className='section-pl'>
-          <div className='title-pl'>о компании</div>
+          <div className='title-pl'>Эксперты</div>
           <div className='about-detail-content'>
             <h2>
               Российские и <span className='red'>зарубежные </span>эксперты

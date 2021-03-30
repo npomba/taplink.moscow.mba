@@ -38,7 +38,7 @@ export default function Home() {
                 <h1>Moscow Business Academy</h1>
                 <div className='desc main-desc'>
                   Международное бизнес-образование. У нас есть всё для раскрытия
-                  вашего потенциала!
+                  вашего&nbsp;потенциала!
                 </div>
               </div>
             </div>
@@ -340,7 +340,7 @@ export default function Home() {
                     <span>27 дисциплин </span>
                   </div>
                   <div className='prog-status'>
-                    Новейшие программы 2020 года
+                    Новейшие программы 2021 года
                   </div>
                 </div>
                 <div className='desc'>
@@ -375,8 +375,8 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -436,7 +436,7 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -488,7 +488,7 @@ export default function Home() {
                     <span>20 дисциплин </span>
                   </div>
                   <div className='prog-status'>
-                    Новейшие программы 2020 года
+                    Новейшие программы 2021 года
                   </div>
                 </div>
                 <div className='desc'>
@@ -523,8 +523,8 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -578,7 +578,7 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -627,7 +627,7 @@ export default function Home() {
                     <span>15 дисциплин </span>
                   </div>
                   <div className='prog-status'>
-                    Новейшие программы 2020 года
+                    Новейшие программы 2021 года
                   </div>
                 </div>
                 <div className='desc'>
@@ -662,8 +662,8 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='new-price'>490 000 Р.</i>
-                      <i className='old-price'>540 000 Р.</i>
+                      <i className='new-price'> 490 000 Р.</i>
+                      <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -711,7 +711,7 @@ export default function Home() {
                     <div className='directions-count'>18 направлений</div>
                     <div className='price'>
                       Стоимость:
-                      <i className='simple-price'>540 000 Р.</i>
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -784,8 +784,8 @@ export default function Home() {
               </ul>
               <div className='price'>
                 Стоимость:
-                <i className='new-price'>1 900 000 Р.</i>
-                <i className='old-price'>2 500 000 Р.</i>
+                <i className='new-price'> 1 900 000 Р.</i>
+                <i className='old-price'> 2 500 000 Р.</i>
               </div>
               <a href='' className='button empty-button'>
                 Узнать подробнее
@@ -839,7 +839,7 @@ export default function Home() {
             </div>
             <div className='personal-datas'>
               Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''>персональных данных</a>
+              <a href=''> персональных данных</a>
             </div>
           </form>
         </section>
