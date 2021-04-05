@@ -1,8 +1,8 @@
 import { server } from '../../../../../config'
 
-import OnlineProgram from '../../../../../components/pages/OnlineProgram'
+import OnlineProgram from '../../../../../components/pages/BlendedProgram'
 
-const programsIndustryOnlineProgram = ({ program }) => {
+const programsMiniOnlineProgram = ({ program }) => {
   return <OnlineProgram program={program} />
 }
 
@@ -50,7 +50,7 @@ export const getStaticPaths = async () => {
     .map((program) => {
       if (
         program.mbaFormat === 'online' &&
-        program.mbaTypeOfProgram === 'industry'
+        program.mbaTypeOfProgram === 'mini'
       ) {
         return program._id
       }
@@ -85,4 +85,4 @@ export const getStaticPaths = async () => {
   }
 }
 
-export default programsIndustryOnlineProgram
+export default programsMiniOnlineProgram

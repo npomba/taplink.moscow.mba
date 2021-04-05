@@ -159,7 +159,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -203,7 +203,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -292,7 +292,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -336,7 +336,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -425,7 +425,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -469,7 +469,7 @@ const Header = ({ programs }) => {
                           return (
                             <li>
                               <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                               >
                                 <a>{item.title}</a>
                               </Link>

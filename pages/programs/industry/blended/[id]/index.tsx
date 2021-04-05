@@ -1,9 +1,9 @@
 import { server } from '../../../../../config'
 
-import OnlineProgram from '../../../../../components/pages/OnlineProgram'
+import BlendedProgram from '../../../../../components/pages/BlendedProgram'
 
-const programsIndustryOnlineProgram = ({ program }) => {
-  return <OnlineProgram program={program} />
+const programsIndustryBlendedProgram = ({ program }) => {
+  return <BlendedProgram program={program} />
 }
 
 export const getStaticProps = async (context) => {
@@ -49,7 +49,7 @@ export const getStaticPaths = async () => {
   const urls = programs.data
     .map((program) => {
       if (
-        program.mbaFormat === 'online' &&
+        program.mbaFormat === 'blended' &&
         program.mbaTypeOfProgram === 'industry'
       ) {
         return program._id
@@ -85,4 +85,4 @@ export const getStaticPaths = async () => {
   }
 }
 
-export default programsIndustryOnlineProgram
+export default programsIndustryBlendedProgram

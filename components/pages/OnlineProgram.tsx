@@ -23,7 +23,7 @@ const PageOnlineProgram = ({ program }) => {
   return (
     <>
       <Head>
-        <title>Online MBA</title>
+        <title>{data.title}</title>
       </Head>
 
       {/* jumbotron-section */}
@@ -711,9 +711,10 @@ const PageOnlineProgram = ({ program }) => {
           <div className='actual-content'>
             <div className='actual-content-top'>
               <div className='desc'>
-                MBAcademy записывает контент очных лекций, поэтому это хорошая
-                возможность <strong className='red'>получить MBA </strong>не
-                посящая наши кампусы.
+                Moscow Business Academy записывает контент очных лекций, поэтому
+                это хорошая возможность{' '}
+                <strong className='red'>получить MBA </strong>не посящая наши
+                кампусы.
               </div>
               <div className='right-image'>
                 <img

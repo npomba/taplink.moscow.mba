@@ -5,7 +5,7 @@ import Rules from '../sections/Rules'
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
 
-const PageBlendedProgram = () => {
+const PageBlendedProgram = ({ program }) => {
   // useEffect(() => {
 
   //   loadJs([
@@ -18,17 +18,18 @@ const PageBlendedProgram = () => {
   //     async: false
   //   })
   // }, [])
+  const data = program.data
 
   return (
     <>
       <Head>
-        <title>Blended MBA</title>
+        <title>{data.title}</title>
       </Head>
 
       {/* jumbotron-section */}
       <section className='jumbotron-section'>
         <div className='image'>
-          <img src='/assets/images/jumbotron_2.jpg' alt='' />
+          <img src={`/assets/images/programs-bgs/${data.picture}`} alt='' />
         </div>
         <div className='container'>
           <div className='jumbotron-content'>
@@ -52,7 +53,7 @@ const PageBlendedProgram = () => {
             </div>
             <div className='jumbotron-flex'>
               <div className='jumbotron-text'>
-                <h1>Управление инновационной деятельностью</h1>
+                <h1>{data.title}</h1>
                 <div className='desc'>
                   Оставьте заявку и получите консультацию по программе, а также
                   узнайте возможные варианты скидок и требования к поступлению
@@ -106,14 +107,7 @@ const PageBlendedProgram = () => {
         <section className='purpose-section'>
           <div className='section-pl'>
             <h2>Цель программы</h2>
-            <div className='title-desc'>
-              Систематизация знаний в области инноваций, прокачка навыков
-              по запуску инновационных проектов и их продвижению, освоение
-              знаний инновационного менеджмента. Ключевой навык, который
-              Вы получите после освоения программы — это умение выстраивать
-              процесс инновационной деятельности, в том числе с активным
-              привлечением внешних участников инновационного процесса.
-            </div>
+            <div className='title-desc'>{data.goalsOfProgram}</div>
           </div>
         </section>
 
@@ -128,24 +122,9 @@ const PageBlendedProgram = () => {
             </div>
             <div className='floatRight'>
               <ul className='learning-list'>
-                <li>
-                  Получите необходимые знания о различных видах и функциях
-                  современного менеджмента
-                </li>
-                <li>Освоите необходимые навыки в ключевых сферах управления</li>
-                <li>
-                  Узнаете основы инновационного менеджмента и инновационной
-                  политики
-                </li>
-                <li>Разберетесь в особенностях коммерциализации разработок</li>
-                <li>
-                  Научитесь строить бизнес-акселераторы и бизнес-инкубаторы
-                  внутри организации
-                </li>
-                <li>
-                  Сможете эффективно управлять интеллектуальным капиталом
-                  и изменениями в компании
-                </li>
+                {data.whatWillYouLearn.map((item) => {
+                  return <li>{item}</li>
+                })}
               </ul>
             </div>
             <div className='floatLeft'>
@@ -782,9 +761,10 @@ const PageBlendedProgram = () => {
           <div className='actual-content'>
             <div className='actual-content-top'>
               <div className='desc'>
-                MBAcademy записывает контент очных лекций, поэтому это хорошая
-                возможность <strong className='red'>получить MBA </strong>не
-                посящая наши кампусы.
+                Moscow Business Academy записывает контент очных лекций, поэтому
+                это хорошая возможность{' '}
+                <strong className='red'>получить MBA </strong>не посящая наши
+                кампусы.
               </div>
               <div className='right-image'>
                 <img

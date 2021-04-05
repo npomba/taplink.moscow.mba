@@ -1,4 +1,5 @@
 import Head from 'next/head'
+import Link from 'next/link'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -42,12 +43,14 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <a href='' className='jumbotron-squad'>
-              <p>Подобрать направление</p>
-              <div className='arrow'>
-                <img src='/assets/images/arrow_diagonal.svg' alt='' />
-              </div>
-            </a>
+            <Link href='/programs'>
+              <a className='jumbotron-squad'>
+                <p>Подобрать направление</p>
+                <div className='arrow'>
+                  <img src='/assets/images/arrow_diagonal.svg' alt='' />
+                </div>
+              </a>
+            </Link>
           </div>
         </div>
       </section>
@@ -59,9 +62,10 @@ export default function Home() {
           <div className='about-flex'>
             <div className='title-desc'>
               <p>
-                MBAcademy вляется одной из ведущих бизнес-школ на территории СНГ
-                и одной из немногих бизнес-школ, которая экспортирует
-                отечественные MBA на Запад и работает на глобальном рынке.
+                Moscow Business Academy вляется одной из ведущих бизнес-школ
+                на территории СНГ и одной из немногих бизнес-школ, которая
+                экспортирует отечественные MBA на Запад и работает на глобальном
+                рынке.
               </p>
               <p>
                 Ежегодно сотни топ-менеджеров и владельцев компаний получают
@@ -75,7 +79,7 @@ export default function Home() {
                 <p>На рынке образования</p>
               </li>
               <li>
-                <div className='number'>2000+</div>
+                <div className='number'>9000+</div>
                 <p>Выпускников по всему миру</p>
               </li>
               <li>
@@ -160,7 +164,7 @@ export default function Home() {
               <li>
                 <div className='circle'>
                   <div className='number'>
-                    20 000 м<sup>2</sup>
+                    5 000 м<sup>2</sup>
                   </div>
                   <div className='line'></div>
                   <p>площадь всех кампусов</p>
@@ -183,10 +187,11 @@ export default function Home() {
             <div className='world-mba-text'>
               <h2>MBA за которым едут со всего МИРА</h2>
               <p className='title-desc'>
-                В MBAcademy обучаются студенты из более чем 20 стран мира, среди
-                которых Россия, Великобритания, США, Германия, Бельгия, Франция,
-                Китай, Греция, Швейцария, Италия, Южная Африка, Япония, Канада,
-                Австралия, Чили, Вьетнам и многие другие!
+                В Moscow Business Academy обучаются студенты из более чем 20
+                стран мира, среди которых Россия, Великобритания, США, Германия,
+                Бельгия, Франция, Китай, Греция, Швейцария, Италия, Южная
+                Африка, Япония, Канада, Австралия, Чили, Вьетнам и многие
+                другие!
               </p>
             </div>
             <div className='world-mba-image'>

@@ -111,8 +111,8 @@ const articles = () => {
                 <div className='type'>Новости</div>
                 <div className='title'>
                   <a href=''>
-                    MBAcademy вляется одной из ведущих бизнес-школ на территории
-                    СНГ
+                    Moscow Business Academy вляется одной из ведущих бизнес-школ
+                    на территории СНГ
                   </a>
                 </div>
                 <a className='link' href=''>
@@ -193,8 +193,8 @@ const articles = () => {
                 <div className='type'>Новости</div>
                 <div className='title'>
                   <a href=''>
-                    MBAcademy вляется одной из ведущих бизнес-школ на территории
-                    СНГ
+                    Moscow Business Academy вляется одной из ведущих бизнес-школ
+                    на территории СНГ
                   </a>
                 </div>
                 <a className='link' href=''>
