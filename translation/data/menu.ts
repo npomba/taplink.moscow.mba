@@ -76,4 +76,14 @@ export default {
     en: 'specialized subjects'
   },
 
+  backBtn: {
+    ru: 'Назад',
+    en: 'Back'
+  },
+
+  toProgramsBtn: {
+    ru: 'к программам',
+    en: 'to programs'
+  }
+
 }

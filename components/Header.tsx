@@ -34,10 +34,12 @@ const Header = ({ programs }) => {
     const onClickLangBtn = () => {
       const langBtn = document.getElementById('langBtn')
       const langSelectList = document.getElementById('langSelectList')
-      langBtn.addEventListener('click', () => {
-        langSelectList.classList.toggle('show')
-      })
-      onSwitchLangBtn()
+      if (langBtn) {
+        langBtn.addEventListener('click', () => {
+          langSelectList.classList.toggle('show')
+        })
+        onSwitchLangBtn()
+      }
     }
     onClickLangBtn()
   }, [])
@@ -634,22 +636,22 @@ const Header = ({ programs }) => {
             <ul className='header-mobile-menu'>
               <li>
                 <a href='' className='mobile-second-toggle'>
-                  <strong>Программы</strong>
+                  <strong>{setString(lang.programsBtn)}</strong>
                 </a>
               </li>
               <li>
                 <Link href='/about'>
-                  <a>О школе</a>
+                  <a>{setString(lang.linkAbout)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/teachers' locale='ru'>
-                  <a>Преподаватели</a>
+                  <a>{setString(lang.linkTeachers)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/webinars' locale='ru'>
-                  <a>Вебинары</a>
+                  <a>{setString(lang.linkWebinars)}</a>
                 </Link>
               </li>
               {/* <li>
@@ -660,7 +662,7 @@ const Header = ({ programs }) => {
               </li> */}
               <li>
                 <Link href='/articles' locale='ru'>
-                  <a>Новости</a>
+                  <a>{setString(lang.linkNews)}</a>
                 </Link>
               </li>
             </ul>
@@ -674,7 +676,7 @@ const Header = ({ programs }) => {
             </div>
             <div className='header-place'>
               <img src='/assets/images/marker_black.svg' alt='' />
-              <span>Москва, Дербеневская набережная 11</span>
+              <span>{setString(lang.address)}</span>
             </div>
           </div>
         </div>
@@ -684,9 +686,10 @@ const Header = ({ programs }) => {
         <div className='header-mobile-second js-header-mobile'>
           <div className='container'>
             <div className='menu-back-link'>
-              <i></i>Назад
+              <i></i>
+              {setString(langMenu.backBtn)}
             </div>
-            <h3>Программы</h3>
+            <h3>{setString(lang.programsBtn)}</h3>
             <ul className='header-mobile-menu'>
               <li>
                 <a href='' className='mobile-third-toggle'>
@@ -697,7 +700,8 @@ const Header = ({ programs }) => {
                 <div className='header-mobile-third js-header-mobile'>
                   <div className='container'>
                     <div className='menu-back-link'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Mini MBA</h3>
                     <div className='program-tabs-content'>
@@ -755,30 +759,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'mini' &&
+                                item.mbaFormat === 'online'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                         <div
@@ -792,7 +789,7 @@ const Header = ({ programs }) => {
                             18 {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
-                            Стоимость:{' '}
+                            {setString(langMenu.price)}:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -816,24 +813,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'mini' &&
+                                item.mbaFormat === 'blended'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                       </div>
@@ -852,13 +848,7 @@ const Header = ({ programs }) => {
                           {setString(langMenu.categoryMonth)}
                         </span>
                       </div>
-                      <p>
-                        Программа профессиональной переподготовки Mini MBA
-                        разработана для специалистов и руководителей среднего
-                        звена, которые хотят систематизировать имеющиеся знания
-                        или познакомиться с ключевыми аспектами новой для себя
-                        сферы управленческой деятельности.
-                      </p>
+                      <p>{setString(langMenu.categoryDiscMini)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
@@ -880,7 +870,8 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='menu-back-link last'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                   </div>
                 </div>
@@ -895,7 +886,8 @@ const Header = ({ programs }) => {
                 <div className='header-mobile-third js-header-mobile'>
                   <div className='container'>
                     <div className='menu-back-link'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Professional MBA</h3>
                     <div className='program-tabs-content'>
@@ -953,30 +945,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'professional' &&
+                                item.mbaFormat === 'online'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                         <div
@@ -990,7 +975,7 @@ const Header = ({ programs }) => {
                             18 {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
-                            Стоимость:{' '}
+                            {setString(langMenu.price)}:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -1014,24 +999,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'professional' &&
+                                item.mbaFormat === 'blended'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                       </div>
@@ -1050,13 +1034,7 @@ const Header = ({ programs }) => {
                           {setString(langMenu.categoryMonth)}
                         </span>
                       </div>
-                      <p>
-                        Программа профессиональной переподготовки Mini MBA
-                        разработана для специалистов и руководителей среднего
-                        звена, которые хотят систематизировать имеющиеся знания
-                        или познакомиться с ключевыми аспектами новой для себя
-                        сферы управленческой деятельности.
-                      </p>
+                      <p>{setString(langMenu.categoryDiscProfessional)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
@@ -1078,7 +1056,8 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='menu-back-link last'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                   </div>
                 </div>
@@ -1093,7 +1072,8 @@ const Header = ({ programs }) => {
                 <div className='header-mobile-third js-header-mobile'>
                   <div className='container'>
                     <div className='menu-back-link'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Industry MBA</h3>
                     <div className='program-tabs-content'>
@@ -1151,30 +1131,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'industry' &&
+                                item.mbaFormat === 'online'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                         <div
@@ -1188,7 +1161,7 @@ const Header = ({ programs }) => {
                             18 {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
-                            Стоимость:{' '}
+                            {setString(langMenu.price)}:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -1212,24 +1185,23 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
-                            <li>
-                              <a href=''>Антикризисное управление</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление финансами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление в банковской сфере</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление производством</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление проектами</a>
-                            </li>
-                            <li>
-                              <a href=''>Управление персоналом</a>
-                            </li>
+                            {data.map((item) => {
+                              if (
+                                item.mbaTypeOfProgram === 'mini' &&
+                                item.mbaFormat === 'blended'
+                              ) {
+                                return (
+                                  <li>
+                                    <Link
+                                      href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                      locale='ru'
+                                    >
+                                      <a>{setString(item, true)}</a>
+                                    </Link>
+                                  </li>
+                                )
+                              }
+                            })}
                           </ul>
                         </div>
                       </div>
@@ -1248,13 +1220,7 @@ const Header = ({ programs }) => {
                           {setString(langMenu.categoryMonth)}
                         </span>
                       </div>
-                      <p>
-                        Программа профессиональной переподготовки Mini MBA
-                        разработана для специалистов и руководителей среднего
-                        звена, которые хотят систематизировать имеющиеся знания
-                        или познакомиться с ключевыми аспектами новой для себя
-                        сферы управленческой деятельности.
-                      </p>
+                      <p>{setString(langMenu.categoryDiscIndustry)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
@@ -1276,7 +1242,8 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='menu-back-link last'>
-                      <i></i>к программам
+                      <i></i>
+                      {setString(langMenu.toProgramsBtn)}
                     </div>
                   </div>
                 </div>
