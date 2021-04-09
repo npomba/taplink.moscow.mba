@@ -665,6 +665,14 @@ const Header = ({ programs }) => {
                   <a>{setString(lang.linkNews)}</a>
                 </Link>
               </li>
+
+              <li>
+                <a href='' className='mobile-lang-toggle'>
+                  {router.pathname === '/' || router.pathname === '/about'
+                    ? setString(lang.linkLang)
+                    : ''}
+                </a>
+              </li>
             </ul>
             <div className='header-logos'>
               <span className='rabo'>
@@ -1253,6 +1261,29 @@ const Header = ({ programs }) => {
           </div>
         </div>
         {/* //second */}
+
+        {/* header-mobile-lang */}
+        <div className='header-mobile-lang js-header-mobile'>
+          <div className='container'>
+            <div className='menu-back-link'>
+              <i></i>
+              {setString(langMenu.backBtn)}
+            </div>
+            <ul className='header-mobile-menu'>
+              <li>
+                <Link href={`${router.pathname}`} locale='ru'>
+                  <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
+                </Link>
+              </li>
+              <li>
+                <Link href={`${router.pathname}`} locale='en-US'>
+                  <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
+                </Link>
+              </li>
+            </ul>
+          </div>
+        </div>
+        {/* //header-mobile-lang */}
       </div>
       {/* //Мобильное меню */}
     </header>

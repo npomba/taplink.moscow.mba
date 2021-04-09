@@ -103,6 +103,11 @@ $(document).ready(function () {
     $('.header-mobile-second').addClass('opened')
   })
 
+  $('.mobile-lang-toggle').click(function (e) {
+    e.preventDefault()
+    $('.header-mobile-lang').addClass('opened')
+  })
+
   $('.menu-back-link').click(function () {
     $(this).closest('.js-header-mobile').removeClass('opened')
   })

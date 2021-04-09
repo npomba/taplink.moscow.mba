@@ -6,7 +6,7 @@ export default {
 
   redCubeLink: {
     ru: 'Подобрать направление',
-    en: 'Choose course'
+    en: 'Choose program'
   },
 
   aboutTitle: {

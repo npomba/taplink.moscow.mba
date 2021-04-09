@@ -1,5 +1,7 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import setString from '../components/hooks/setString'
+import lang from '../translation/data/index'
 // import Lang from '../components/hooks/Lang'
 
 // import { useEffect } from 'react'
@@ -40,14 +42,13 @@ export default function Home() {
                 </div>
                 <h1>Moscow Business Academy</h1>
                 <div className='desc main-desc'>
-                  Международное бизнес-образование. У нас есть всё для раскрытия
-                  вашего&nbsp;потенциала!
+                  {setString(lang.headerSubtitle)}
                 </div>
               </div>
             </div>
             <Link href='/programs' locale='ru'>
               <a className='jumbotron-squad'>
-                <p>Подобрать направление</p>
+                <p>{setString(lang.redCubeLink)}</p>
                 <div className='arrow'>
                   <img src='/assets/images/arrow_diagonal.svg' alt='' />
                 </div>
@@ -60,7 +61,7 @@ export default function Home() {
       <div className='container'>
         {/* about-section */}
         <section className='about-section section-pl'>
-          <div className='title-pl'>о компании</div>
+          <div className='title-pl'>{setString(lang.aboutTitle)}</div>
           <div className='about-flex'>
             <div className='title-desc'>
               <p>
