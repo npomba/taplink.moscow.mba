@@ -1,9 +1,45 @@
 import Link from 'next/link'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
+import { useEffect } from 'react'
+import lang from '../translation/data/header'
 
 const Header = ({ programs }) => {
   // const Header = () => {
   const { data } = programs.programs
+
+  console.log(lang.address.en)
+
+  useEffect(() => {
+    const onSwitchLangBtn = () => {
+      const langSelectList = document.getElementById('langSelectList')
+
+      const ruBtn = document.getElementById('switchToRuBtn')
+      const enBtn = document.getElementById('switchToEnBtn')
+
+      ruBtn.addEventListener('click', () => {
+        localStorage.setItem('lang', 'ru')
+        langSelectList.classList.toggle('show')
+      })
+
+      enBtn.addEventListener('click', () => {
+        localStorage.setItem('lang', 'en')
+        langSelectList.classList.toggle('show')
+      })
+    }
+
+    const onClickLangBtn = () => {
+      const langBtn = document.getElementById('langBtn')
+      const langSelectList = document.getElementById('langSelectList')
+
+      langBtn.addEventListener('click', () => {
+        langSelectList.classList.toggle('show')
+      })
+
+      onSwitchLangBtn()
+    }
+
+    onClickLangBtn()
+  }, [])
 
   return (
     <header>
@@ -29,7 +65,7 @@ const Header = ({ programs }) => {
           </div>
           <div className='header-place'>
             <img src='/assets/images/marker_black.svg' alt='' />
-            <span>Москва, Дербеневская набережная 11</span>
+            <span>{lang.address.ru}</span>
           </div>
           <div className='header-phones'>
             <a href='tel:8-495-648-62-26'>+7 (495) 648-62-26</a>
@@ -77,6 +113,19 @@ const Header = ({ programs }) => {
               <Link href='/articles'>
                 <a>Новости</a>
               </Link>
+            </li>
+            <li className='lang'>
+              <a id='langBtn' className='lang__btn'>
+                Язык &#9660;
+              </a>
+              <ul id='langSelectList' className='lang__selectList'>
+                <li className='selectList__item'>
+                  <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
+                </li>
+                <li className='selectList__item'>
+                  <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
+                </li>
+              </ul>
             </li>
           </ul>
         </div>

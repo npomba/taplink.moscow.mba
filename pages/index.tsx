@@ -1,5 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
+import Lang from '../components/hooks/Lang'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -18,6 +19,7 @@ export default function Home() {
   //     }
   //   )
   // }, [])
+  Lang.init('ru')
 
   return (
     <>

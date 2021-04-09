@@ -1,7 +1,7 @@
-$styrene: "Styrene", Arial, Tahoma, sans-serif;
-$visuelt: "Visuelt", Arial, Tahoma, sans-serif;
-$mazzardH: "mazzardH", Arial, Tahoma, sans-serif;
-$mazzardM: "MazzardM", Arial, Tahoma, sans-serif;
+$styrene: 'Styrene', Arial, Tahoma, sans-serif;
+$visuelt: 'Visuelt', Arial, Tahoma, sans-serif;
+$mazzardH: 'mazzardH', Arial, Tahoma, sans-serif;
+$mazzardM: 'MazzardM', Arial, Tahoma, sans-serif;
 $text_color: #262626;
 $red: #ff3535;
 $transition: all 0.3s ease-out;
@@ -41,7 +41,7 @@ $transition: all 0.3s ease-out;
 .clearfix:after,
 .container:before,
 .container:after {
-  content: " ";
+  content: ' ';
   display: table;
 }
 .clearfix:after,
@@ -174,7 +174,7 @@ header {
   align-items: center;
   position: relative;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     bottom: 0;
     left: 50%;
@@ -353,7 +353,7 @@ header {
   margin-left: -28px;
   padding-top: 27px;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     background: #f7f7f7;
@@ -387,7 +387,7 @@ header {
       color: $red;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       background: $red;
       width: 2px;
@@ -401,7 +401,7 @@ header {
       left: 100%;
       top: 50%;
       border: solid transparent;
-      content: "";
+      content: '';
       height: 0;
       width: 0;
       position: absolute;
@@ -661,6 +661,34 @@ header {
   display: none;
 }
 
+.lang {
+  position: relative;
+}
+
+.lang__btn {
+  cursor: pointer;
+}
+
+.lang__selectList {
+  display: none;
+  &.show {
+    display: block;
+    position: absolute;
+    top: 1rem;
+    left: 0;
+    background-color: #fff;
+  }
+}
+
+.header-menu .selectList__item {
+  margin: 0.5rem 0 0 0;
+  padding: 0.6rem;
+}
+
+.selectList__item a {
+  cursor: pointer;
+}
+
 /*jumbotron-section ===================================*/
 .jumbotron-section {
   position: relative;
@@ -675,7 +703,7 @@ header {
     height: 100%;
     width: 100%;
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       z-index: 2;
       left: 0;
@@ -885,7 +913,7 @@ h1 {
     position: relative;
     margin-right: 4px;
     &:after {
-      content: "";
+      content: '';
       width: 110%;
       height: 2px;
       background: #fff;
@@ -910,7 +938,7 @@ h1 {
   color: #808080;
   &:after {
     background: #f7f7f7;
-    content: "";
+    content: '';
     left: 50%;
     top: 0;
     position: absolute;
@@ -933,7 +961,7 @@ h1 {
     position: relative;
     margin-bottom: 10px;
     &:after {
-      content: "";
+      content: '';
       width: 4px;
       height: 4px;
       background: $red;
@@ -1110,7 +1138,7 @@ h2 {
     overflow: hidden;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       display: block;
       padding-top: 100%;
     }
@@ -1172,8 +1200,9 @@ h2 {
 /*world-mba-section ======================================*/
 .world-mba-section {
   margin-bottom: 239px;
-  .title-desc {
-  }
+  // .title-desc {
+
+  // }
 }
 
 .world-mba-flex {
@@ -1254,8 +1283,8 @@ h2 {
     backface-visibility: hidden;
     border-top: 3px solid #40b1fe;
     border-right: 3px solid #40b1fe;
-    &:hover {
-    }
+    // &:hover {
+    // }
     &.slick-prev {
       left: 8px;
       transform: rotate(-135deg);
@@ -1306,7 +1335,7 @@ h2 {
 .clients-slider {
   position: relative;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: 3;
     left: 2px;
@@ -1347,7 +1376,7 @@ h2 {
   position: relative;
   z-index: 3;
   &:after {
-    content: "";
+    content: '';
     left: 50%;
     height: 1px;
     background: #e6e6e6;
@@ -1398,7 +1427,7 @@ h2 {
       color: $red;
     }
     &:before {
-      content: "";
+      content: '';
       position: absolute;
       background: $red;
       width: 2px;
@@ -1566,7 +1595,7 @@ h2 {
     padding-left: 20px;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       width: 4px;
       height: 4px;
       position: absolute;
@@ -1863,7 +1892,7 @@ footer {
   z-index: 3;
   padding-right: 20px;
   &:after {
-    content: "";
+    content: '';
     width: 102vw;
     right: 0;
     top: -100px;
@@ -2003,7 +2032,7 @@ footer {
   padding: 136px 0 100px;
   margin-bottom: 140px;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     left: 50%;
@@ -2148,7 +2177,7 @@ footer {
   padding-bottom: 140px;
   margin-bottom: 130px;
   &:after {
-    content: "";
+    content: '';
     height: 1px;
     background: #e6e6e6;
     width: 100vw;
@@ -2159,7 +2188,7 @@ footer {
     bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     height: 2px;
     background: $red;
     width: 169px;
@@ -2242,7 +2271,7 @@ footer {
     margin-bottom: 70px;
   }
   &:after {
-    content: "";
+    content: '';
     width: 169px;
     height: 2px;
     background: $red;
@@ -2286,7 +2315,7 @@ footer {
     margin-bottom: 9px;
     &:before {
       background: $red;
-      content: "";
+      content: '';
       height: 5px;
       left: 0;
       position: absolute;
@@ -2332,7 +2361,7 @@ footer {
     max-width: 850px;
   }
   &:after {
-    content: "";
+    content: '';
     height: 1px;
     background: #e6e6e6;
     width: 100vw;
@@ -2343,7 +2372,7 @@ footer {
     bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     height: 2px;
     background: $red;
     width: 169px;
@@ -2385,7 +2414,7 @@ footer {
     padding-left: 20px;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       width: 5px;
       height: 5px;
       position: absolute;
@@ -2442,7 +2471,7 @@ footer {
   padding-bottom: 130px;
   margin-bottom: 145px;
   &:after {
-    content: "";
+    content: '';
     height: 1px;
     background: #e6e6e6;
     width: 100vw;
@@ -2453,7 +2482,7 @@ footer {
     bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     height: 2px;
     background: $red;
     width: 169px;
@@ -2524,7 +2553,7 @@ footer {
   margin-bottom: 130px;
   padding-bottom: 130px;
   &:after {
-    content: "";
+    content: '';
     height: 1px;
     background: #e6e6e6;
     width: 100vw;
@@ -2535,7 +2564,7 @@ footer {
     bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     height: 2px;
     background: $red;
     width: 169px;
@@ -2572,7 +2601,7 @@ footer {
   padding-bottom: 18px;
   margin-bottom: 10px;
   &:before {
-    content: "";
+    content: '';
     left: 18px;
     bottom: 0;
     width: 1px;
@@ -2629,7 +2658,7 @@ footer {
     padding-left: 20px;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       width: 5px;
       height: 5px;
       position: absolute;
@@ -2694,7 +2723,7 @@ footer {
   display: flex;
   align-items: flex-start;
   &:before {
-    content: "";
+    content: '';
     width: 145px;
     background: $red;
     height: 2px;
@@ -2800,7 +2829,7 @@ footer {
       }
     }
     &:after {
-      content: "";
+      content: '';
       position: absolute;
       bottom: 0;
       right: 0;
@@ -2924,7 +2953,7 @@ footer {
   height: 345px;
   color: #fff;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -2;
     left: 0;
@@ -3118,7 +3147,7 @@ footer {
     margin-left: 12px;
     display: inline-block;
     &:after {
-      content: "";
+      content: '';
       width: 110%;
       height: 1px;
       background: #808080;
@@ -3466,7 +3495,7 @@ footer {
     position: relative;
     z-index: 2;
     &:after {
-      content: "";
+      content: '';
       width: 225px;
       height: 225px;
       background: $red;
@@ -3502,7 +3531,7 @@ footer {
       z-index: 2;
       height: 317px;
       &:after {
-        content: "";
+        content: '';
         width: 100%;
         height: 100%;
         background: $red;
@@ -3562,7 +3591,7 @@ footer {
     }
     &:before {
       counter-increment: numbers;
-      content: counter(numbers) ".";
+      content: counter(numbers) '.';
       font-weight: 400;
       color: $red;
       position: absolute;
@@ -3578,7 +3607,7 @@ footer {
   padding-bottom: 132px;
   margin-bottom: 130px;
   &:after {
-    content: "";
+    content: '';
     height: 1px;
     background: #e6e6e6;
     width: 100vw;
@@ -3589,7 +3618,7 @@ footer {
     bottom: 0;
   }
   &:before {
-    content: "";
+    content: '';
     height: 2px;
     background: $red;
     width: 169px;
@@ -3684,7 +3713,7 @@ footer {
   color: #fff;
   padding: 50px 190px;
   &:after {
-    content: "";
+    content: '';
     position: absolute;
     z-index: -1;
     left: 0;
@@ -3904,7 +3933,7 @@ footer {
     padding-left: 20px;
     position: relative;
     &:before {
-      content: "";
+      content: '';
       width: 5px;
       height: 5px;
       position: absolute;
@@ -3930,7 +3959,7 @@ footer {
   position: relative;
   z-index: 2;
   &:after {
-    content: "";
+    content: '';
     right: 0;
     top: 0;
     height: 43px;
@@ -3940,7 +3969,7 @@ footer {
     z-index: -2;
   }
   &:before {
-    content: "";
+    content: '';
     right: -30px;
     top: -30px;
     height: 60px;
@@ -4797,7 +4826,7 @@ footer {
     top: 0;
     left: 0;
     &:after {
-      content: "";
+      content: '';
       left: 0;
       top: 0;
       height: 100%;
@@ -4946,7 +4975,7 @@ footer {
         color: $red;
       }
       &:after {
-        content: "";
+        content: '';
         position: absolute;
         top: 50%;
         margin-top: -5px;
@@ -4998,7 +5027,7 @@ footer {
       margin-top: 40px;
     }
     &:after {
-      content: "";
+      content: '';
       top: 0;
       left: 50%;
       height: 100%;
@@ -5186,7 +5215,7 @@ footer {
     position: relative;
     padding-bottom: 120px;
     &:after {
-      content: "";
+      content: '';
       left: 50%;
       height: 1px;
       background: #e6e6e6;
@@ -6608,7 +6637,7 @@ footer {
   }
   .breadcrumbs-outer {
     &:before {
-      content: "";
+      content: '';
       left: 0;
       top: 0;
       position: absolute;
@@ -6867,7 +6896,7 @@ footer {
         font-size: 16px;
         margin-bottom: 15px;
         &:before {
-          content: "";
+          content: '';
           width: 4px;
           height: 4px;
           position: absolute;

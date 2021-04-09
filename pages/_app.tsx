@@ -5,9 +5,27 @@ import PageWrapper from '../components/PageWrapper'
 import '../styles/hugeStyles.sass'
 import '../styles/hugeStyles.scss'
 import { server } from '../config'
+import { useEffect } from 'react'
 
 function MyApp({ Component, pageProps, appProps }) {
   // console.log(appProps)
+
+  useEffect(() => {
+    console.log(appProps)
+    const setInitialLang = () => {
+      const lang = localStorage.getItem('lang')
+
+      // initial load
+      if (lang === null) {
+        localStorage.setItem('lang', 'ru')
+        this.setState({ lang: 'ru' })
+      } else {
+        this.setState({ lang: lang })
+      }
+    }
+    // setInitialLang()
+  }, [])
+
   return (
     <>
       <PageWrapper>
