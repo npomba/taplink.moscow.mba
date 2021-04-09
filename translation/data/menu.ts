@@ -15,22 +15,28 @@ export default {
     en: 'until'
   },
 
-  qtCourses: {
+  qtPrograms: {
     ru: 'направлений',
-    en: 'courses'
+    en: 'programs'
   },
 
   price: {
     ru: 'Стоимость',
-    en: 'Tuition and fees'
+    // en: 'Tuition and fees'
+    en: 'Cost'
   },
 
-  format: {
+  formatRemote: {
     ru: 'Дистанционно',
-    en: 'remotely'
+    en: 'Remotely'
   },
 
-  qtPrograms: {
+  formatBlended: {
+    ru: 'С очными модулями',
+    en: 'Half In-Person'
+  },
+
+  qtSubjects: {
     ru: 'дисциплин',
     en: 'subjects'
   },
@@ -58,6 +64,16 @@ export default {
   categoryDiscIndustry: {
     ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
     en: 'Mini MBA is developed for professionals and middle managers to help them systemize their prior knowledge and get acquainted with the new key aspects of the management field.'
-  }
+  },
+
+  categoryAboutManagement: {
+    ru: 'об управлении',
+    en: 'on management'
+  },
+
+  categorySpecializedSubjects: {
+    ru: 'дисциплин специализации',
+    en: 'specialized subjects'
+  },
 
 }

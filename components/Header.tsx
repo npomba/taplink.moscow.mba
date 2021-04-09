@@ -3,6 +3,8 @@ import { useRouter } from 'next/router'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
 import { useEffect } from 'react'
 import lang from '../translation/data/header'
+import langMenu from '../translation/data/menu'
+import langMonths from '../translation/data/months'
 import setString from '../components/hooks/setString'
 
 const Header = ({ programs }) => {
@@ -83,23 +85,23 @@ const Header = ({ programs }) => {
                 <i></i>
                 <i></i>
               </div>
-              <span>Программы</span>
+              <span>{setString(lang.programsBtn)}</span>
             </div>
           </div>
           <ul className='header-menu'>
             <li>
               <Link href='/about'>
-                <a>О школе</a>
+                <a>{setString(lang.linkAbout)}</a>
               </Link>
             </li>
             <li>
               <Link href='/teachers' locale='ru'>
-                <a>Преподаватели</a>
+                <a>{setString(lang.linkTeachers)}</a>
               </Link>
             </li>
             <li>
               <Link href='/webinars' locale='ru'>
-                <a>Вебинары</a>
+                <a>{setString(lang.linkWebinars)}</a>
               </Link>
             </li>
             {/* <li>
@@ -110,7 +112,7 @@ const Header = ({ programs }) => {
             </li> */}
             <li>
               <Link href='/articles' locale='ru'>
-                <a>Новости</a>
+                <a>{setString(lang.linkNews)}</a>
               </Link>
             </li>
 
@@ -119,7 +121,7 @@ const Header = ({ programs }) => {
             {router.pathname === '/' || router.pathname === '/about' ? (
               <li className='lang'>
                 <a id='langBtn' className='lang__btn'>
-                  Язык &#9660;
+                  {setString(lang.linkLang)} &#9660;
                 </a>
                 <ul id='langSelectList' className='lang__selectList'>
                   <li className='selectList__item'>
@@ -180,15 +182,21 @@ const Header = ({ programs }) => {
                 <li>
                   <div className='program-detail-list'>
                     <div className='name'>
-                      Формат ONLINE
+                      {setString(langMenu.onlineTitle)}
                       <div className='discount'>
                         <div className='size'>-30%</div>
-                        <span>до 20 ноября</span>
+                        <span>
+                          {setString(langMenu.discountUntil)} 20{' '}
+                          {setString(langMonths.april)}
+                        </span>
                       </div>
                     </div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='new-price'> 490 000 Р.</i>{' '}
                       <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
@@ -199,13 +207,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>Дистанционно</span>
+                        <span>{setString(langMenu.formatRemote)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -221,7 +229,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -232,10 +240,15 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='program-detail-list'>
-                    <div className='name'>Формат BLENDED</div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -245,13 +258,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -266,7 +279,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -285,20 +298,19 @@ const Header = ({ programs }) => {
                       <div className='pic'>
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
-                      <span>1 год 6 месяцев</span>
+                      <span>
+                        1 {setString(langMenu.categoryYear)} 6{' '}
+                        {setString(langMenu.categoryMonth)}
+                      </span>
                     </div>
-                    <p>
-                      Программа профессиональной переподготовки Mini MBA
-                      разработана для специалистов и руководителей среднего
-                      звена, которые хотят систематизировать имеющиеся знания
-                      или познакомиться с ключевыми аспектами новой для себя
-                      сферы управленческой деятельности.
-                    </p>
+                    <p>{setString(langMenu.categoryDiscMini)}</p>
                     <div className='info-flex'>
                       <div className='pic'>
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
-                      <span>40 об управлениии</span>
+                      <span>
+                        40 {setString(langMenu.categoryAboutManagement)}
+                      </span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -307,7 +319,9 @@ const Header = ({ programs }) => {
                           alt=''
                         />
                       </div>
-                      <span>27 дисциплин специализации</span>
+                      <span>
+                        27 {setString(langMenu.categorySpecializedSubjects)}
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -316,15 +330,21 @@ const Header = ({ programs }) => {
                 <li>
                   <div className='program-detail-list'>
                     <div className='name'>
-                      Формат ONLINE
+                      {setString(langMenu.onlineTitle)}
                       <div className='discount'>
                         <div className='size'>-25%</div>
-                        <span>до 20 ноября</span>
+                        <span>
+                          {setString(langMenu.discountUntil)} 20{' '}
+                          {setString(langMonths.april)}
+                        </span>
                       </div>
                     </div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='new-price'> 490 000 Р.</i>{' '}
                       <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
@@ -335,13 +355,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>Дистанционно</span>
+                        <span>{setString(langMenu.formatRemote)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -356,7 +376,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -367,10 +387,15 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='program-detail-list'>
-                    <div className='name'>Формат BLENDED</div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -380,13 +405,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -401,7 +426,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -420,20 +445,19 @@ const Header = ({ programs }) => {
                       <div className='pic'>
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
-                      <span>1 год 6 месяцев</span>
+                      <span>
+                        1 {setString(langMenu.categoryYear)} 6{' '}
+                        {setString(langMenu.categoryMonth)}
+                      </span>
                     </div>
-                    <p>
-                      Программа профессиональной переподготовки Mini MBA
-                      разработана для специалистов и руководителей среднего
-                      звена, которые хотят систематизировать имеющиеся знания
-                      или познакомиться с ключевыми аспектами новой для себя
-                      сферы управленческой деятельности.
-                    </p>
+                    <p>{setString(langMenu.categoryDiscProfessional)}</p>
                     <div className='info-flex'>
                       <div className='pic'>
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
-                      <span>40 об управлениии</span>
+                      <span>
+                        40 {setString(langMenu.categoryAboutManagement)}
+                      </span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -442,7 +466,9 @@ const Header = ({ programs }) => {
                           alt=''
                         />
                       </div>
-                      <span>27 дисциплин специализации</span>
+                      <span>
+                        27 {setString(langMenu.categorySpecializedSubjects)}
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -451,15 +477,21 @@ const Header = ({ programs }) => {
                 <li>
                   <div className='program-detail-list'>
                     <div className='name'>
-                      Формат ONLINE
+                      {setString(langMenu.onlineTitle)}
                       <div className='discount'>
                         <div className='size'>-20%</div>
-                        <span>до 20 ноября</span>
+                        <span>
+                          {setString(langMenu.discountUntil)} 20{' '}
+                          {setString(langMonths.april)}
+                        </span>
                       </div>
                     </div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='new-price'> 490 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='new-price'> 490 000 Р.</i>{' '}
                       <i className='old-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
@@ -470,13 +502,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>Дистанционно</span>
+                        <span>{setString(langMenu.formatRemote)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -491,7 +523,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -502,10 +534,15 @@ const Header = ({ programs }) => {
                 </li>
                 <li>
                   <div className='program-detail-list'>
-                    <div className='name'>Формат BLENDED</div>
-                    <div className='directions-count'>18 направлений</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
+                    <div className='directions-count'>
+                      18 {setString(langMenu.qtPrograms)}
+                    </div>
                     <div className='price'>
-                      Стоимость: <i className='simple-price'> 540 000 Р.</i>
+                      {setString(langMenu.price)}:{' '}
+                      <i className='simple-price'> 540 000 Р.</i>
                     </div>
                     <div className='info-list'>
                       <div className='info-flex'>
@@ -515,13 +552,13 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 дисциплин</span>
+                        <span>27 {setString(langMenu.qtSubjects)}</span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -536,7 +573,7 @@ const Header = ({ programs }) => {
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
                               >
-                                <a>{item.title}</a>
+                                <a>{setString(item, true)}</a>
                               </Link>
                             </li>
                           )
@@ -555,20 +592,19 @@ const Header = ({ programs }) => {
                       <div className='pic'>
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
-                      <span>1 год 6 месяцев</span>
+                      <span>
+                        1 {setString(langMenu.categoryYear)} 6{' '}
+                        {setString(langMenu.categoryMonth)}
+                      </span>
                     </div>
-                    <p>
-                      Программа профессиональной переподготовки Mini MBA
-                      разработана для специалистов и руководителей среднего
-                      звена, которые хотят систематизировать имеющиеся знания
-                      или познакомиться с ключевыми аспектами новой для себя
-                      сферы управленческой деятельности.
-                    </p>
+                    <p>{setString(langMenu.categoryDiscIndustry)}</p>
                     <div className='info-flex'>
                       <div className='pic'>
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
-                      <span>40 об управлениии</span>
+                      <span>
+                        40 {setString(langMenu.categoryAboutManagement)}
+                      </span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -577,7 +613,9 @@ const Header = ({ programs }) => {
                           alt=''
                         />
                       </div>
-                      <span>27 дисциплин специализации</span>
+                      <span>
+                        27 {setString(langMenu.categorySpecializedSubjects)}
+                      </span>
                     </div>
                   </div>
                 </li>
@@ -679,15 +717,21 @@ const Header = ({ programs }) => {
                           className='program-options-block'
                         >
                           <div className='name'>
-                            Формат ONLINE
+                            {setString(langMenu.onlineTitle)}
                             <div className='discount'>
                               <div className='size'>-30%</div>
-                              <span>до 20 ноября</span>
+                              <span>
+                                {setString(langMenu.discountUntil)} 20{' '}
+                                {setString(langMonths.april)}
+                              </span>
                             </div>
                           </div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
-                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            {setString(langMenu.price)}:{' '}
+                            <i className='new-price'> 490 000 Р.</i>{' '}
                             <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -698,7 +742,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>Дистанционно</span>
+                              <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -707,7 +751,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -741,8 +785,12 @@ const Header = ({ programs }) => {
                           id='program-mobile-1-2'
                           className='program-options-block'
                         >
-                          <div className='name'>Формат BLENDED</div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='name'>
+                            {setString(langMenu.blendedTitle)}
+                          </div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
                             Стоимость:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
@@ -755,7 +803,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>С очными модулями</span>
+                              <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -764,7 +812,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -799,7 +847,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
-                        <span>1 год 6 месяцев</span>
+                        <span>
+                          1 {setString(langMenu.categoryYear)} 6{' '}
+                          {setString(langMenu.categoryMonth)}
+                        </span>
                       </div>
                       <p>
                         Программа профессиональной переподготовки Mini MBA
@@ -812,7 +863,9 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
-                        <span>40 об управлениии</span>
+                        <span>
+                          40 {setString(langMenu.categoryAboutManagement)}
+                        </span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -821,7 +874,9 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>27 дисциплин специализации</span>
+                        <span>
+                          27 {setString(langMenu.categorySpecializedSubjects)}
+                        </span>
                       </div>
                     </div>
                     <div className='menu-back-link last'>
@@ -860,15 +915,21 @@ const Header = ({ programs }) => {
                           className='program-options-block'
                         >
                           <div className='name'>
-                            Формат ONLINE
+                            {setString(langMenu.onlineTitle)}
                             <div className='discount'>
                               <div className='size'>-30%</div>
-                              <span>до 20 ноября</span>
+                              <span>
+                                {setString(langMenu.discountUntil)} 20{' '}
+                                {setString(langMonths.april)}
+                              </span>
                             </div>
                           </div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
-                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            {setString(langMenu.price)}:{' '}
+                            <i className='new-price'> 490 000 Р.</i>{' '}
                             <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -879,7 +940,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>Дистанционно</span>
+                              <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -888,7 +949,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -922,8 +983,12 @@ const Header = ({ programs }) => {
                           id='program-mobile-2-2'
                           className='program-options-block'
                         >
-                          <div className='name'>Формат BLENDED</div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='name'>
+                            {setString(langMenu.blendedTitle)}
+                          </div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
                             Стоимость:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
@@ -936,7 +1001,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>С очными модулями</span>
+                              <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -945,7 +1010,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -980,7 +1045,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
-                        <span>1 год 6 месяцев</span>
+                        <span>
+                          1 {setString(langMenu.categoryYear)} 6{' '}
+                          {setString(langMenu.categoryMonth)}
+                        </span>
                       </div>
                       <p>
                         Программа профессиональной переподготовки Mini MBA
@@ -993,7 +1061,9 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
-                        <span>40 об управлениии</span>
+                        <span>
+                          40 {setString(langMenu.categoryAboutManagement)}
+                        </span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -1002,7 +1072,9 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>27 дисциплин специализации</span>
+                        <span>
+                          27 {setString(langMenu.categorySpecializedSubjects)}
+                        </span>
                       </div>
                     </div>
                     <div className='menu-back-link last'>
@@ -1041,15 +1113,21 @@ const Header = ({ programs }) => {
                           className='program-options-block'
                         >
                           <div className='name'>
-                            Формат ONLINE
+                            {setString(langMenu.onlineTitle)}
                             <div className='discount'>
                               <div className='size'>-30%</div>
-                              <span>до 20 ноября</span>
+                              <span>
+                                {setString(langMenu.discountUntil)} 20{' '}
+                                {setString(langMonths.april)}
+                              </span>
                             </div>
                           </div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
-                            Стоимость: <i className='new-price'> 490 000 Р.</i>
+                            {setString(langMenu.price)}:{' '}
+                            <i className='new-price'> 490 000 Р.</i>{' '}
                             <i className='old-price'> 540 000 Р.</i>
                           </div>
                           <div className='info-list'>
@@ -1060,7 +1138,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>Дистанционно</span>
+                              <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -1069,7 +1147,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -1103,8 +1181,12 @@ const Header = ({ programs }) => {
                           id='program-mobile-3-2'
                           className='program-options-block'
                         >
-                          <div className='name'>Формат BLENDED</div>
-                          <div className='directions-count'>18 направлений</div>
+                          <div className='name'>
+                            {setString(langMenu.blendedTitle)}
+                          </div>
+                          <div className='directions-count'>
+                            18 {setString(langMenu.qtPrograms)}
+                          </div>
                           <div className='price'>
                             Стоимость:{' '}
                             <i className='simple-price'> 540 000 Р.</i>
@@ -1117,7 +1199,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>С очными модулями</span>
+                              <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
@@ -1126,7 +1208,7 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 дисциплин</span>
+                              <span>27 {setString(langMenu.qtSubjects)}</span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -1161,7 +1243,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
-                        <span>1 год 6 месяцев</span>
+                        <span>
+                          1 {setString(langMenu.categoryYear)} 6{' '}
+                          {setString(langMenu.categoryMonth)}
+                        </span>
                       </div>
                       <p>
                         Программа профессиональной переподготовки Mini MBA
@@ -1174,7 +1259,9 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
-                        <span>40 об управлениии</span>
+                        <span>
+                          40 {setString(langMenu.categoryAboutManagement)}
+                        </span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -1183,7 +1270,9 @@ const Header = ({ programs }) => {
                             alt=''
                           />
                         </div>
-                        <span>27 дисциплин специализации</span>
+                        <span>
+                          27 {setString(langMenu.categorySpecializedSubjects)}
+                        </span>
                       </div>
                     </div>
                     <div className='menu-back-link last'>

@@ -38,6 +38,11 @@ export default {
   linkNews: {
     ru: 'Новости',
     en: 'News'
+  },
+
+  linkLang: {
+    ru: 'Язык',
+    en: 'Language'
   }
 
 
