@@ -1,43 +1,42 @@
 import Link from 'next/link'
+import { useRouter } from 'next/router'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
 import { useEffect } from 'react'
 import lang from '../translation/data/header'
+import setString from '../components/hooks/setString'
 
 const Header = ({ programs }) => {
   // const Header = () => {
   const { data } = programs.programs
 
-  console.log(lang.address.en)
+  const router = useRouter()
+
+  // let loc = router.locale === 'en-US' ? 'en' : 'ru'
+
+  // console.log(lang.address.en)
 
   useEffect(() => {
     const onSwitchLangBtn = () => {
       const langSelectList = document.getElementById('langSelectList')
-
       const ruBtn = document.getElementById('switchToRuBtn')
       const enBtn = document.getElementById('switchToEnBtn')
-
       ruBtn.addEventListener('click', () => {
         localStorage.setItem('lang', 'ru')
         langSelectList.classList.toggle('show')
       })
-
       enBtn.addEventListener('click', () => {
         localStorage.setItem('lang', 'en')
         langSelectList.classList.toggle('show')
       })
     }
-
     const onClickLangBtn = () => {
       const langBtn = document.getElementById('langBtn')
       const langSelectList = document.getElementById('langSelectList')
-
       langBtn.addEventListener('click', () => {
         langSelectList.classList.toggle('show')
       })
-
       onSwitchLangBtn()
     }
-
     onClickLangBtn()
   }, [])
 
@@ -65,7 +64,7 @@ const Header = ({ programs }) => {
           </div>
           <div className='header-place'>
             <img src='/assets/images/marker_black.svg' alt='' />
-            <span>{lang.address.ru}</span>
+            {setString(lang.address)}
           </div>
           <div className='header-phones'>
             <a href='tel:8-495-648-62-26'>+7 (495) 648-62-26</a>
@@ -94,12 +93,12 @@ const Header = ({ programs }) => {
               </Link>
             </li>
             <li>
-              <Link href='/teachers'>
+              <Link href='/teachers' locale='ru'>
                 <a>Преподаватели</a>
               </Link>
             </li>
             <li>
-              <Link href='/webinars'>
+              <Link href='/webinars' locale='ru'>
                 <a>Вебинары</a>
               </Link>
             </li>
@@ -110,23 +109,34 @@ const Header = ({ programs }) => {
               <a href=''>Контакты</a>
             </li> */}
             <li>
-              <Link href='/articles'>
+              <Link href='/articles' locale='ru'>
                 <a>Новости</a>
               </Link>
             </li>
-            <li className='lang'>
-              <a id='langBtn' className='lang__btn'>
-                Язык &#9660;
-              </a>
-              <ul id='langSelectList' className='lang__selectList'>
-                <li className='selectList__item'>
-                  <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
-                </li>
-                <li className='selectList__item'>
-                  <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
-                </li>
-              </ul>
-            </li>
+
+            {/* {} */}
+
+            {router.pathname === '/' || router.pathname === '/about' ? (
+              <li className='lang'>
+                <a id='langBtn' className='lang__btn'>
+                  Язык &#9660;
+                </a>
+                <ul id='langSelectList' className='lang__selectList'>
+                  <li className='selectList__item'>
+                    <Link href={`${router.pathname}`} locale='ru'>
+                      <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
+                    </Link>
+                  </li>
+                  <li className='selectList__item'>
+                    <Link href={`${router.pathname}`} locale='en-US'>
+                      <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
+                    </Link>
+                  </li>
+                </ul>
+              </li>
+            ) : (
+              ''
+            )}
           </ul>
         </div>
       </div>
@@ -136,19 +146,19 @@ const Header = ({ programs }) => {
             <div className='header-podmenu-left'>
               <ul className='header-podmenu-tabs'>
                 <li>
-                  <Link href='/programs/mini/online'>
+                  <Link href='/programs/mini/online' locale='ru'>
                     <a data-tab='#header-podmenu-1' className='active-tab'>
                       Mini MBA
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/programs/professional/online'>
+                  <Link href='/programs/professional/online' locale='ru'>
                     <a data-tab='#header-podmenu-2'>Professional MBA</a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/programs/industry/online'>
+                  <Link href='/programs/industry/online' locale='ru'>
                     <a data-tab='#header-podmenu-3'>Industry MBA</a>
                   </Link>
                 </li>
@@ -157,7 +167,7 @@ const Header = ({ programs }) => {
                 <div className='label'>
                   <span>Premium</span>
                 </div>
-                <Link href='/programs/executive'>
+                <Link href='/programs/executive' locale='ru'>
                   <a>Executive MBA</a>
                 </Link>
               </div>
@@ -209,6 +219,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -253,6 +264,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -342,6 +354,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -386,6 +399,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -475,6 +489,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -519,6 +534,7 @@ const Header = ({ programs }) => {
                             <li>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
                               >
                                 <a>{item.title}</a>
                               </Link>
@@ -589,12 +605,12 @@ const Header = ({ programs }) => {
                 </Link>
               </li>
               <li>
-                <Link href='/teachers'>
+                <Link href='/teachers' locale='ru'>
                   <a>Преподаватели</a>
                 </Link>
               </li>
               <li>
-                <Link href='/webinars'>
+                <Link href='/webinars' locale='ru'>
                   <a>Вебинары</a>
                 </Link>
               </li>
@@ -605,7 +621,7 @@ const Header = ({ programs }) => {
                 <a href=''>Контакты</a>
               </li> */}
               <li>
-                <Link href='/articles'>
+                <Link href='/articles' locale='ru'>
                   <a>Новости</a>
                 </Link>
               </li>

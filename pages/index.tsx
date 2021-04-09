@@ -1,6 +1,6 @@
 import Head from 'next/head'
 import Link from 'next/link'
-import Lang from '../components/hooks/Lang'
+// import Lang from '../components/hooks/Lang'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -19,7 +19,7 @@ export default function Home() {
   //     }
   //   )
   // }, [])
-  Lang.init('ru')
+  // Lang.init('ru')
 
   return (
     <>
@@ -45,7 +45,7 @@ export default function Home() {
                 </div>
               </div>
             </div>
-            <Link href='/programs'>
+            <Link href='/programs' locale='ru'>
               <a className='jumbotron-squad'>
                 <p>Подобрать направление</p>
                 <div className='arrow'>

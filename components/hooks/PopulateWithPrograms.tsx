@@ -8,6 +8,7 @@ const PopulateWithPrograms = (data, type, format) => {
         <li>
           <Link
             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
+            locale='ru'
           >
             <a>{item.title}</a>
           </Link>

@@ -44,7 +44,7 @@ const about = () => {
                 </div>
               </div>
             </div>
-            <Link href='/programs'>
+            <Link href='/programs' locale='ru'>
               <a className='jumbotron-squad'>
                 <p>Подобрать направление</p>
                 <div className='arrow'>

@@ -37,7 +37,8 @@ export const getStaticProps = async (context) => {
   }
 }
 
-export const getStaticPaths = async () => {
+export const getStaticPaths = async (context) => {
+  context.locale = 'ru'
   // const res = await fetch(
   //   `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses?mbaFormat=blended&mbaTypeOfProgram=industry`
   // )

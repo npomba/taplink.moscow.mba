@@ -11,7 +11,6 @@ function MyApp({ Component, pageProps, appProps }) {
   // console.log(appProps)
 
   useEffect(() => {
-    console.log(appProps)
     const setInitialLang = () => {
       const lang = localStorage.getItem('lang')
 

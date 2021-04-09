@@ -16,43 +16,43 @@ const Footer = () => {
           <div className='footer-top-right'>
             <ul className='footer-menu'>
               <li>
-                <Link href='/programs/mini/online'>
+                <Link href='/programs/mini/online' locale='ru'>
                   <a>MBA Mini</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/mini/blended'>
+                <Link href='/programs/mini/blended' locale='ru'>
                   <a>MBA Mini Blended</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/professional/online'>
+                <Link href='/programs/professional/online' locale='ru'>
                   <a>MBA Professional</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/professional/blended'>
+                <Link href='/programs/professional/blended' locale='ru'>
                   <a>MBA Professional Blended</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/industry/online'>
+                <Link href='/programs/industry/online' locale='ru'>
                   <a>MBA Industry</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/industry/blended'>
+                <Link href='/programs/industry/blended' locale='ru'>
                   <a>MBA Industry Blended</a>
                 </Link>
               </li>
               <li>
-                <Link href='/programs/executive'>
+                <Link href='/programs/executive' locale='ru'>
                   <a>Executive MBA</a>
                 </Link>
               </li>
               <li className='empty'></li>
               <li>
-                <Link href='/webinars'>
+                <Link href='/webinars' locale='ru'>
                   <a>Вебинары</a>
                 </Link>
               </li>
