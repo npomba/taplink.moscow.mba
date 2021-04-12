@@ -46,7 +46,7 @@ export default {
 
   october: {
     ru: 'октября',
-    en: 'october'
+    en: 'October'
   },
 
   november: {

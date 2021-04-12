@@ -53,17 +53,17 @@ export default {
 
   categoryDiscMini: {
     ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help them systemize their prior knowledge and get acquainted with the new key aspects of the management field.'
+    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
   },
 
   categoryDiscProfessional: {
     ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help them systemize their prior knowledge and get acquainted with the new key aspects of the management field.'
+    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
   },
 
   categoryDiscIndustry: {
     ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help them systemize their prior knowledge and get acquainted with the new key aspects of the management field.'
+    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
   },
 
   categoryAboutManagement: {
@@ -84,6 +84,16 @@ export default {
   toProgramsBtn: {
     ru: 'к программам',
     en: 'to programs'
+  },
+
+  newestPrograms: {
+    ru: 'Новейшие программы',
+    en: 'Newest programs of'
+  },
+
+  newestProgramsYear: {
+    ru: 'года',
+    en: ''
   }
 
 }
