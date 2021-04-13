@@ -30,6 +30,12 @@ $(document).ready(function () {
     $('.header-podmenu-toggle').removeClass('opened')
   })
 
+  $('.header-podmenu-content .program-directions-list a').click(function () {
+    $('.header-podmenu').fadeOut(300)
+    $('.header-overlay').fadeOut(300)
+    $('.header-podmenu-toggle').removeClass('opened')
+  })
+
   // Слайдер клиентов
   if ($('.clients-slider').length) {
     $('.clients-slider').slick({
