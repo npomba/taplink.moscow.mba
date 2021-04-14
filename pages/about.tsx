@@ -138,7 +138,7 @@ const about = () => {
                 <div className='image'>
                   <img
                     className='lazyload'
-                    data-src='/assets/images/simple_image.jpg'
+                    data-src='/assets/images/campuses/campus-1.jpg'
                     alt=''
                   />
                 </div>
@@ -147,7 +147,7 @@ const about = () => {
                 <div className='image'>
                   <img
                     className='lazyload'
-                    data-src='/assets/images/campuses/simple_image.jpg'
+                    data-src='/assets/images/campuses/campus-2.jpg'
                     alt=''
                   />
                 </div>
@@ -156,7 +156,7 @@ const about = () => {
                 <div className='image'>
                   <img
                     className='lazyload'
-                    data-src='/assets/images/simple_image.jpg'
+                    data-src='/assets/images/campuses/campus-3.jpg'
                     alt=''
                   />
                 </div>
