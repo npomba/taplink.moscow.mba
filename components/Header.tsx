@@ -71,8 +71,8 @@ const Header = ({ programs }) => {
             {setString(lang.address)}
           </div>
           <div className='header-phones'>
-            <a href='tel:8-495-648-62-26'>+7 (495) 648-62-26</a>
-            <a href='tel:8-800-648-62-26'>+7 (800) 648-62-26</a>
+            <a href='tel:+7-800-550-70-19'>+7 (800) 550-70-19</a>
+            <a href='tel:+7-800-550-70-19'>+7 (800) 550-70-19</a>
           </div>
           <div className='header-buter'>
             <i></i>
