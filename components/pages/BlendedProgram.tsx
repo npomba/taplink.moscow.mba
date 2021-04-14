@@ -93,7 +93,7 @@ const PageBlendedProgram = ({ program }) => {
               <li>
                 <p>Стоимость:</p>
                 <div className='detail'>
-                  <span className='old-price'>390 000 &#8381;</span>
+                  <span className='old-price'>390 000 &#8381;</span>{' '}
                   <span className='new-price'>540 000 Р.</span>
                 </div>
               </li>
