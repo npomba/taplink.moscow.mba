@@ -94,7 +94,9 @@ const Footer = () => {
           </div>
         </div>
         <div className='footer-bottom'>
-          <div className='footer-copyright'>&copy; МБА, 2021</div>
+          <div className='footer-copyright'>
+            &copy; Moscow Business Academy, 2021
+          </div>
           <a href='#!' className='footer-links'>
             {setString(lang.offerContract)}
           </a>
