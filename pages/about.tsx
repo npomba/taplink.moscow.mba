@@ -306,10 +306,7 @@ const about = () => {
                 <span className='red'>{setString(lang.teachersTitleRed)} </span>
                 {setString(lang.teachersTitleSecond)}
               </h2>
-              <div className='text'>
-                Перенимайте уникальный опыт международных экспертов,
-                адаптированный под рынок РФ
-              </div>
+              <div className='text'>{setString(lang.teachersDics)}</div>
               <div className='dobble-images about-detail-images'>
                 <div className='image pic-1'>
                   <img
@@ -332,8 +329,8 @@ const about = () => {
                     <img src='/assets/images/icon_check.svg' alt='' />
                   </div>
                   <div>
-                    <h5>Практикующие специалисты</h5>
-                    <p>Реализовывали крупные проекты на рынках Европы и США</p>
+                    <h5>{setString(lang.teachersListItemTitle)}</h5>
+                    <p>{setString(lang.teachersListItemDisc)}</p>
                   </div>
                 </li>
                 <li>
@@ -341,11 +338,8 @@ const about = () => {
                     <img src='/assets/images/icon_check.svg' alt='' />
                   </div>
                   <div>
-                    <h5>Прошли многоэтапную проверку</h5>
-                    <p>
-                      Прошли многоэтапную проверку Moscow Academy и имеют
-                      аккредитацию на преподавание
-                    </p>
+                    <h5>{setString(lang.teachersListItemTitleSecond)}</h5>
+                    <p>{setString(lang.teachersListItemDiscSecond)}</p>
                   </div>
                 </li>
                 <li>
@@ -353,12 +347,12 @@ const about = () => {
                     <img src='/assets/images/icon_check.svg' alt='' />
                   </div>
                   <div>
-                    <h5>Международный опыт преподавания</h5>
-                    <p>Преподают в ведущих бизнес-школах мира</p>
+                    <h5>{setString(lang.teachersListItemTitleThird)}</h5>
+                    <p>{setString(lang.teachersListItemDiscThird)}</p>
                   </div>
                 </li>
               </ul>
-              <h3>Более 150 профессоров международного уровня</h3>
+              <h3>{setString(lang.teachersProsTitle)}</h3>
             </div>
           </div>
           <ul className='about-teachers-list'>
@@ -372,13 +366,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Александр Иванов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherOneTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherOneDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -394,13 +387,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Семен Фролов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherTwoTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherTwoDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -416,13 +408,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Валентин Земин</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherThreeTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherThreeDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -438,13 +429,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Александр Иванов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherFourTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherFourDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -460,13 +450,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Валентин Земин</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherFiveTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherFiveDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -482,13 +471,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Александр Иванов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherSixTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherSixDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -504,13 +492,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Александр Иванов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherSevenTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherSevenDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -526,13 +513,12 @@ const about = () => {
                   />
                 </a>
                 <div>
-                  <div className='name'>Семен Фролов</div>
-                  <p>
-                    Исполнительный директор Центра энергетики Московской школы
-                    управления СКОЛКОВО
-                  </p>
+                  <div className='name'>
+                    {setString(lang.teachersTeacherEightTitle)}
+                  </div>
+                  <p>{setString(lang.teachersTeacherEightDics)}</p>
                   <a href='' className='link'>
-                    <span>Биография</span>
+                    <span>{setString(lang.teachersBiographyLink)}</span>
                     <img src='/assets/images/arrow_right.svg' alt='' />
                   </a>
                 </div>
@@ -541,7 +527,7 @@ const about = () => {
           </ul>
           <div className='about-teachers-link'>
             <a href='' className='button'>
-              запросить полный список
+              {setString(lang.teachersCtaBtn)}
             </a>
           </div>
         </section>
@@ -549,15 +535,16 @@ const about = () => {
         {/* actual-section */}
         <section className='actual-section no-line'>
           <div className='section-pl'>
-            <h2>Только актуальный контент</h2>
+            <h2>{setString(lang.uptodateTitle)}</h2>
           </div>
           <div className='actual-content'>
             <div className='actual-content-top'>
               <div className='desc'>
-                Moscow Business Academy записывает контент очных лекций, поэтому
-                это хорошая возможность{' '}
-                <strong className='red'>получить MBA </strong>не посящая наши
-                кампусы.
+                {setString(lang.uptodateDicsFirst)}{' '}
+                <strong className='red'>
+                  {setString(lang.uptodateDicsRed)}{' '}
+                </strong>
+                {setString(lang.uptodateDicsSecond)}
               </div>
               <div className='right-image'>
                 <img
@@ -578,16 +565,25 @@ const about = () => {
           <div className='section-pl'>
             <ul className='actual-content-list'>
               <li>
-                <div className='number'>2021 год</div>
-                <p>Новейшая программа 2021 года</p>
+                <div className='number'>
+                  2021 {setString(lang.uptodateYear)}
+                </div>
+                <p>
+                  {setString(lang.uptodateBenefitOneDics)} 2021{' '}
+                  {setString(lang.uptodateYearV2)}
+                </p>
               </li>
               <li>
-                <div className='number'>53 эксперта</div>
-                <p>международных экспертов</p>
+                <div className='number'>
+                  53 {setString(lang.uptodateBenefitTwoTitle)}
+                </div>
+                <p>{setString(lang.uptodateBenefitTwoDics)}</p>
               </li>
               <li>
-                <div className='number'>ТОП 3</div>
-                <p>международных экспертов</p>
+                <div className='number'>
+                  {setString(lang.uptodateBenefitThreeTitle)}
+                </div>
+                <p>{setString(lang.uptodateBenefitThreeDics)}</p>
               </li>
             </ul>
           </div>
@@ -603,61 +599,50 @@ const about = () => {
             />
           </div>
           <div className='accreditations-content'>
-            <h2>Аккредитации</h2>
+            <h2>{setString(lang.accreditationTitle)}</h2>
             <div className='title-desc'>
-              В России Moscow Business Academy имеет все лицензии и
-              аккредитации, позволяющие готовить специалистов международного
-              уровня по направлению MBA.
+              {setString(lang.accreditationDics)}
             </div>
             <ul className='accreditations-list'>
-              <li>
-                В частности аккредитацию НАСДОБР — самая престижная национальная
-                аккредитация, учрежденная РАБО, Ассоциацией менеджеров, Деловой
-                Россией при поддержке Государственной Думы РФ. Аккредитацию
-                НАСДОБР имеют не более 10 организаций в России.
-              </li>
-              <li>
-                Также Moscow Business Academy является членом Российской
-                Ассоциации Бизнес Образования и имеет государственной лицензию,
-                что подтверждает полное соответствие всех предоставляемых нами
-                программ с образовательным стандартом РФ.
-              </li>
+              <li>{setString(lang.accreditationItemOne)}</li>
+              <li>{setString(lang.accreditationItemTwo)}</li>
             </ul>
             <a href='' className='accreditations-link'>
               <div className='pic'>
                 <img src='/assets/images/icon_list.svg' alt='' />
               </div>
-              <span>Лицензия Министерства Образования серия ... № ....</span>
+              <span>{setString(lang.accreditationLicenseLink)}</span>
             </a>
           </div>
         </section>
 
         {/* support-section */}
         <section className='support-section'>
-          <h2>Поможем в выборе</h2>
-          <div className='text'>
-            Оставьте заявку и получите консультацию по программам MBA, узнайте
-            их стоимость, возможные варианты скидок и требования к поступлению
-          </div>
+          <h2>{setString(langIndex.helpToChooseTitle)}</h2>
+          <div className='text'>{setString(langIndex.helpToChooseDics)}</div>
           <form action='#' method='post' className='simple-form support-form'>
             <div className='inputs-flex'>
               <div className='input-block width-33'>
                 <input type='text' />
-                <div className='input-placeholder'>Введите имя</div>
+                <div className='input-placeholder'>
+                  {setString(langIndex.inputName)}
+                </div>
               </div>
               <div className='input-block width-33'>
                 <input type='text' />
-                <div className='input-placeholder'>Номер телефона</div>
+                <div className='input-placeholder'>
+                  {setString(langIndex.inputPhone)}
+                </div>
               </div>
               <div className='input-block width-33'>
                 <button type='submit' className='button white-button'>
-                  Оставить заявку
+                  {setString(langIndex.inputSubmit)}
                 </button>
               </div>
             </div>
             <div className='personal-datas'>
-              Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''> персональных данных</a>
+              {setString(langIndex.privacyPolicyFirst)}{' '}
+              <a href=''>{setString(langIndex.privacyPolicySecond)}</a>
             </div>
           </form>
         </section>
