@@ -1,6 +1,13 @@
 import Head from 'next/head'
 import Link from 'next/link'
 
+import setString from '../components/hooks/setString'
+import lang from '../translation/data/about'
+import langIndex from '../translation/data/index'
+import langMenu from '../translation/data/menu'
+import langHeader from '../translation/data/header'
+import langMonths from '../translation/data/months'
+
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
 
@@ -22,7 +29,7 @@ const about = () => {
   return (
     <>
       <Head>
-        <title>О Компании</title>
+        <title>{setString(lang.title)}</title>
       </Head>
 
       {/* jumbotron-section */}
@@ -39,14 +46,13 @@ const about = () => {
                 </div>
                 <h1>Moscow Business Academy</h1>
                 <div className='desc main-desc'>
-                  Международное бизнес-образование. У нас есть всё для раскрытия
-                  вашего потенциала!
+                  {setString(langIndex.headerSubtitle)}
                 </div>
               </div>
             </div>
             <Link href='/programs' locale='ru'>
               <a className='jumbotron-squad'>
-                <p>Подобрать направление</p>
+                <p>{setString(langIndex.redCubeLink)}</p>
                 <div className='arrow'>
                   <img src='/assets/images/arrow_diagonal.svg' alt='' />
                 </div>
@@ -59,37 +65,30 @@ const about = () => {
       <div className='container'>
         {/* about-section */}
         <section className='about-section section-pl'>
-          <div className='title-pl'>о компании</div>
+          <div className='title-pl'>{setString(langIndex.aboutTitle)}</div>
           <div className='about-flex'>
             <div className='title-desc'>
-              <p>
-                Moscow Business Academy вляется одной из ведущих бизнес-школ
-                на территории СНГ и одной из немногих бизнес-школ, которая
-                экспортирует отечественные MBA на Запад и работает на глобальном
-                рынке.
-              </p>
-              <p>
-                Ежегодно сотни топ-менеджеров и владельцев компаний получают
-                здесь образование международного уровня и завязывают новые
-                знакомства.
-              </p>
+              <p>{setString(langIndex.aboutTxtFirst)}</p>
+              <p>{setString(langIndex.aboutTxtSecond)}</p>
             </div>
             <ul className='about-list'>
               <li>
-                <div className='number'>11 лет</div>
-                <p>На рынке образования</p>
+                <div className='number'>
+                  {setString(langIndex.aboutBenefitTitleFirst)}
+                </div>
+                <p>{setString(langIndex.aboutBenefitDicsFirst)}</p>
               </li>
               <li>
                 <div className='number'>9000+</div>
-                <p>Выпускников по всему миру</p>
+                <p>{setString(langIndex.aboutBenefitDicsSecond)}</p>
               </li>
               <li>
                 <div className='number'>25%</div>
-                <p>студентов – это иностранцы из стран дальнего зарубежья.</p>
+                <p>{setString(langIndex.aboutBenefitDicsThird)}</p>
               </li>
               <li>
                 <div className='number'>150+</div>
-                <p>профессоров международного уровня готовят программы</p>
+                <p>{setString(langIndex.aboutBenefitDicsFourth)}</p>
               </li>
             </ul>
           </div>
@@ -101,11 +100,12 @@ const about = () => {
           <div className='organization-flex'>
             <div className='organization-text'>
               <h2>
-                Организация конференций <span className='red'>в Европе</span>
+                {setString(langIndex.orgTitleFirst)}{' '}
+                <span className='red'>
+                  {setString(langIndex.orgTitleSecond)}
+                </span>
               </h2>
-              <p className='title-desc'>
-                Несколько раз в год мы проводим конференции на актуальные темы
-              </p>
+              <p className='title-desc'>{setString(langIndex.orgDisc)}</p>
               <div className='image'>
                 <img
                   className='lazyload'
@@ -128,10 +128,9 @@ const about = () => {
 
         {/* branches-section */}
         <section className='branches-section section-pl'>
-          <h2>Филиалы за рубежом</h2>
+          <h2>{setString(langIndex.foreignAffiliatesTitle)}</h2>
           <p className='title-desc'>
-            У Moscow Business Academy работают филиалы в Барселоне, Берлине и
-            Нью-Йорке
+            {setString(langIndex.foreignAffiliatesDisc)}
           </p>
           <div className='branches-flex'>
             <ul className='branches-images'>
@@ -168,7 +167,7 @@ const about = () => {
                     5 000 м<sup>2</sup>
                   </div>
                   <div className='line'></div>
-                  <p>площадь всех кампусов</p>
+                  <p>{setString(langIndex.foreignAffiliatesSurfaceArea)}</p>
                 </div>
               </li>
             </ul>
@@ -186,14 +185,8 @@ const about = () => {
         <section className='world-mba-section'>
           <div className='world-mba-flex'>
             <div className='world-mba-text'>
-              <h2>MBA за которым едут со всего МИРА</h2>
-              <p className='title-desc'>
-                В Moscow Business Academy обучаются студенты из более чем 20
-                стран мира, среди которых Россия, Великобритания, США, Германия,
-                Бельгия, Франция, Китай, Греция, Швейцария, Италия, Южная
-                Африка, Япония, Канада, Австралия, Чили, Вьетнам и многие
-                другие!
-              </p>
+              <h2>{setString(langIndex.mbaWorldTitle)}</h2>
+              <p className='title-desc'>{setString(langIndex.mbaWorldDics)}</p>
             </div>
             <div className='world-mba-image'>
               <div className='image'>
@@ -204,9 +197,9 @@ const about = () => {
                 />
               </div>
               <div className='info'>
-                <span>более чем </span>
+                <span>{setString(langIndex.mbaWorldMoreThan)} </span>
                 <strong>20</strong>
-                <span>стран мира</span>
+                <span>{setString(langIndex.mbaWorldCountries)}</span>
               </div>
             </div>
           </div>
@@ -217,15 +210,10 @@ const about = () => {
           <div className='section-pl'>
             <div className='clients-text'>
               <h2>
-                Корпоративные <br />
-                клиенты в России
+                {setString(langIndex.corporateClientsTitleTop)} <br />
+                {setString(langIndex.corporateClientsTitleBottom)}
               </h2>
-              <p>
-                Опыт наших экспертов используют многие ведущие компании России и
-                стран СНГ. Наш опыт будет полезен не только гигантам
-                промышленной, добывающей индустрии, крупным сетевикам, но и
-                среднему и малому бизнесу.
-              </p>
+              <p>{setString(langIndex.corporateClientsDics)}</p>
             </div>
           </div>
           <div className='clients-slider js-slick'>
@@ -311,11 +299,12 @@ const about = () => {
         {/* about-detail-section */}
         <section className='about-detail-section'>
           <div className='section-pl'>
-            <div className='title-pl'>о компании</div>
+            <div className='title-pl'>{setString(lang.aboutTitle)}</div>
             <div className='about-detail-content'>
               <h2>
-                Российские и <span className='red'>зарубежные </span>эксперты
-                программы
+                {setString(lang.teachersTitleFirst)}{' '}
+                <span className='red'>{setString(lang.teachersTitleRed)} </span>
+                {setString(lang.teachersTitleSecond)}
               </h2>
               <div className='text'>
                 Перенимайте уникальный опыт международных экспертов,

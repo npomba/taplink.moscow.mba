@@ -24,13 +24,9 @@ $(document).ready(function () {
     }
   })
 
-  $('.header-overlay').click(function () {
-    $('.header-podmenu').fadeOut(300)
-    $('.header-overlay').fadeOut(300)
-    $('.header-podmenu-toggle').removeClass('opened')
-  })
-
-  $('.header-podmenu-content .program-directions-list a').click(function () {
+  $(
+    '.header-overlay, .header-podmenu-content .program-directions-list a, .header-podmenu-premium a'
+  ).click(function () {
     $('.header-podmenu').fadeOut(300)
     $('.header-overlay').fadeOut(300)
     $('.header-podmenu-toggle').removeClass('opened')

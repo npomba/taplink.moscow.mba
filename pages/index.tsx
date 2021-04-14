@@ -10,7 +10,8 @@ import langMonths from '../translation/data/months'
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
 
-export default function Home() {
+export default function Home({ programs }) {
+  const { data } = programs
   // useEffect(() => {
   //   loadJs(
   //     [
@@ -390,43 +391,32 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в сфере коммерции и торговли</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'mini' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                   <div
                     id='program-options-1-2'
                     className='program-options-block'
                   >
-                    <div className='name'>Формат BLENDED</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
                     <div className='directions-count'>
                       18 {setString(langMenu.qtPrograms)}
                     </div>
@@ -442,7 +432,7 @@ export default function Home() {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -452,27 +442,23 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'mini' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -480,7 +466,10 @@ export default function Home() {
               <div id='program-options-2' className='program-tabs-content'>
                 <div className='top-info'>
                   <div className='prog-time'>
-                    <i>2 года 3 месяца </i>
+                    <i>
+                      2 {setString(langMenu.categoryYear)} 3{' '}
+                      {setString(langMenu.categoryMonth)}{' '}
+                    </i>
                     <span>20 {setString(langMenu.qtSubjects)} </span>
                   </div>
                   <div className='prog-status'>
@@ -489,11 +478,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='desc'>
-                  Программа профессиональной переподготовки Mini MBA разработана
-                  для специалистов и руководителей среднего звена, которые хотят
-                  систематизировать имеющиеся знания или познакомиться с
-                  ключевыми аспектами новой для себя сферы управленческой
-                  деятельности.
+                  {setString(langMenu.categoryDiscProfessional)}
                 </div>
                 <ul className='program-options-block-tabs'>
                   <li>
@@ -546,37 +531,32 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'professional' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                   <div
                     id='program-options-2-2'
                     className='program-options-block'
                   >
-                    <div className='name'>Формат BLENDED</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
                     <div className='directions-count'>
                       18 {setString(langMenu.qtPrograms)}
                     </div>
@@ -592,7 +572,7 @@ export default function Home() {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -602,24 +582,23 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'professional' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -627,7 +606,10 @@ export default function Home() {
               <div id='program-options-3' className='program-tabs-content'>
                 <div className='top-info'>
                   <div className='prog-time'>
-                    <i>3 года 4 месяца </i>
+                    <i>
+                      3 {setString(langMenu.categoryYear)} 4{' '}
+                      {setString(langMenu.categoryMonth)}{' '}
+                    </i>
                     <span>15 {setString(langMenu.qtSubjects)} </span>
                   </div>
                   <div className='prog-status'>
@@ -636,11 +618,7 @@ export default function Home() {
                   </div>
                 </div>
                 <div className='desc'>
-                  Программа профессиональной переподготовки Mini MBA разработана
-                  для специалистов и руководителей среднего звена, которые хотят
-                  систематизировать имеющиеся знания или познакомиться с
-                  ключевыми аспектами новой для себя сферы управленческой
-                  деятельности.
+                  {setString(langMenu.categoryDiscIndustry)}
                 </div>
                 <ul className='program-options-block-tabs'>
                   <li>
@@ -693,31 +671,32 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'industry' &&
+                          item.mbaFormat === 'online'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                   <div
                     id='program-options-3-2'
                     className='program-options-block'
                   >
-                    <div className='name'>Формат BLENDED</div>
+                    <div className='name'>
+                      {setString(langMenu.blendedTitle)}
+                    </div>
                     <div className='directions-count'>
                       18 {setString(langMenu.qtPrograms)}
                     </div>
@@ -733,7 +712,7 @@ export default function Home() {
                             alt=''
                           />
                         </div>
-                        <span>С очными модулями</span>
+                        <span>{setString(langMenu.formatBlended)}</span>
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
@@ -743,24 +722,23 @@ export default function Home() {
                       </div>
                     </div>
                     <ul className='program-options-block-list'>
-                      <li>
-                        <a href=''>Антикризисное управление</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление финансами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление в банковской сфере</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление производством</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление проектами</a>
-                      </li>
-                      <li>
-                        <a href=''>Управление персоналом</a>
-                      </li>
+                      {data.map((item) => {
+                        if (
+                          item.mbaTypeOfProgram === 'industry' &&
+                          item.mbaFormat === 'blended'
+                        ) {
+                          return (
+                            <li>
+                              <Link
+                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                                locale='ru'
+                              >
+                                <a>{setString(item, true)}</a>
+                              </Link>
+                            </li>
+                          )
+                        }
+                      })}
                     </ul>
                   </div>
                 </div>
@@ -778,20 +756,17 @@ export default function Home() {
               </div>
               <h2>Executive MBA</h2>
               <p className='title-desc'>
-                Программа Executive MBA разработана для амбициозных
-                предпринимателей и топ-менеджеров крупных компаний, которые
-                привыкли быть лучшими и не готовы останавливаться на
-                достигнутом.
+                {setString(lang.executiveMBADicsFirst)}
               </p>
               <p className='title-desc'>
-                Курс, объединивший лучшие отечественные бизнес-практики с
-                глобальным мировым опытом, поможет вам совершить настоящий
-                прорыв в управлении компанией. Вы построите пошаговую стратегию
-                развития, которая позволит взглянуть на бизнес по-новому.
+                {setString(lang.executiveMBADicsSecond)}
               </p>
               <ul className='count-list'>
-                <li>1 год 6 месяцев</li>
-                <li>2 выездных модуля</li>
+                <li>
+                  1 {setString(lang.executiveMBAYear)} 6{' '}
+                  {setString(lang.executiveMBAMonth)}
+                </li>
+                <li>2 {setString(lang.executiveOfflineModules)}</li>
                 <li>27 {setString(langMenu.qtSubjects)}</li>
               </ul>
               <div className='price'>
@@ -800,7 +775,7 @@ export default function Home() {
                 <i className='old-price'> 2 500 000 Р.</i>
               </div>
               <a href='' className='button empty-button'>
-                Узнать подробнее
+                {setString(lang.learnMoreBtn)}
               </a>
             </div>
             <div className='dobble-images executive-images'>
@@ -820,7 +795,7 @@ export default function Home() {
               </div>
               <div className='count'>
                 <strong>200+</strong>
-                <span>Студентов уже обучились</span>
+                <span>{setString(lang.graduates)}</span>
               </div>
             </div>
           </div>
@@ -828,30 +803,31 @@ export default function Home() {
 
         {/* support-section */}
         <section className='support-section'>
-          <h2>Поможем в выборе</h2>
-          <div className='text'>
-            Оставьте заявку и получите консультацию по программам MBA, узнайте
-            их стоимость, возможные варианты скидок и требования к поступлению
-          </div>
+          <h2>{setString(lang.helpToChooseTitle)}</h2>
+          <div className='text'>{setString(lang.helpToChooseDics)}</div>
           <form action='#' method='post' className='simple-form support-form'>
             <div className='inputs-flex'>
               <div className='input-block width-33'>
                 <input type='text' />
-                <div className='input-placeholder'>Введите имя</div>
+                <div className='input-placeholder'>
+                  {setString(lang.inputName)}
+                </div>
               </div>
               <div className='input-block width-33'>
                 <input type='text' />
-                <div className='input-placeholder'>Номер телефона</div>
+                <div className='input-placeholder'>
+                  {setString(lang.inputPhone)}
+                </div>
               </div>
               <div className='input-block width-33'>
                 <button type='submit' className='button white-button'>
-                  Оставить заявку
+                  {setString(lang.inputSubmit)}
                 </button>
               </div>
             </div>
             <div className='personal-datas'>
-              Нажимая на кнопку, вы даете согласие на обработку своих
-              <a href=''> персональных данных</a>
+              {setString(lang.privacyPolicyFirst)}{' '}
+              <a href=''>{setString(lang.privacyPolicySecond)}</a>
             </div>
           </form>
         </section>

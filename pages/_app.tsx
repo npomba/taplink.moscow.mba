@@ -58,5 +58,8 @@ MyApp.getInitialProps = async (appContext) => {
     appProps: {
       programs,
     },
+    pageProps: {
+      programs,
+    },
   }
 }

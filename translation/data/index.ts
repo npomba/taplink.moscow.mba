@@ -113,4 +113,74 @@ export default {
     ru: 'Опыт наших экспертов используют многие ведущие компании России и стран СНГ. Наш опыт будет полезен не только гигантам промышленной, добывающей индустрии, крупным сетевикам, но и среднему и малому бизнесу',
     en: 'Our experts\' experience is used by many leading companies in Russia and CIS. Nevertheless it\'s valuable not only for large-scale, but also for startups and medium-scale companies'
   },
+
+  executiveMBADicsFirst: {
+    ru: 'Программа Executive MBA разработана для амбициозных предпринимателей и топ-менеджеров крупных компаний, которые привыкли быть лучшими и не готовы останавливаться на достигнутом',
+    en: 'Executive MBA was developed for persistent entrepreneurs and top managers of the large enterprises, who got accustomed to being the best and are not ready to quit now'
+  },
+
+  executiveMBADicsSecond: {
+    ru: 'Курс, объединивший лучшие отечественные бизнес-практики с глобальным мировым опытом, поможет вам совершить настоящий прорыв в управлении компанией. Вы построите пошаговую стратегию развития, которая позволит взглянуть на бизнес по-новому',
+    en: 'This course combines the best homeland business models with the global experience. It will provide you with knowledge needed to achieve a breakthrough in company management. You will make a new step-by-step development strategy which will help you to get a fresh look on your business'
+  },
+
+  executiveMBAYear: {
+    ru: 'год',
+    en: 'year'
+  },
+
+  executiveMBAMonth: {
+    ru: 'месяцев',
+    en: 'months'
+  },
+
+  executiveOfflineModules: {
+    ru: 'выездных модуля',
+    en: 'field courses'
+  },
+
+  learnMoreBtn: {
+    ru: 'УЗНАТЬ ПОДРОБНЕЕ',
+    en: 'LEARN MORE'
+  },
+
+  graduates: {
+    ru: 'Студентов уже обучились',
+    en: 'graduates'
+  },
+
+  helpToChooseTitle: {
+    ru: 'Поможем в выборе',
+    en: 'Contact us to get help'
+  },
+
+  helpToChooseDics: {
+    ru: 'Оставьте заявку и получите консультацию по программам MBA, узнайте их стоимость, возможные варианты скидок и требования к поступлению',
+    en: 'Leave your request for a consultation on the MBA programs, their fees, available discounts and admission requirements'
+  },
+
+  inputName: {
+    ru: 'Введите имя',
+    en: 'Name'
+  },
+
+  inputPhone: {
+    ru: 'Номер телефона',
+    en: 'Phone number'
+  },
+
+  inputSubmit: {
+    ru: 'Оставить заявку',
+    en: 'Submit'
+  },
+
+  privacyPolicyFirst: {
+    ru: 'Нажимая на кнопку, вы даете согласие на обработку своих',
+    en: 'By pressing this button, you agree to'
+  },
+
+  privacyPolicySecond: {
+    ru: 'персональных данных',
+    en: 'Privacy Policy'
+  },
 }

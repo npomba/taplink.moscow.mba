@@ -1,3 +1,11 @@
 export default {
-  
+  offerContract: {
+    ru: 'Договор Оферты',
+    en: 'Offer Contract'
+  },
+
+  privacyPolicy: {
+    ru: 'Политика конфиденциальности',
+    en: 'Privacy Policy'
+  },
 }
