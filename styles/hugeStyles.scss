@@ -4369,6 +4369,9 @@ footer {
   transition: border-color 0.3s ease-in-out;
   border: 1px solid;
   border-color: transparent;
+  &.active {
+    background-color: #ff3535;
+  }
 }
 
 .filter__content {
@@ -4406,6 +4409,15 @@ footer {
   padding: 6px;
   margin-left: 20px;
   transition: border-color 0.3s ease-in-out;
+}
+
+.discount50 {
+  font-size: 12px;
+  line-height: 120%;
+  padding: 6px 10px;
+  margin-left: 15px;
+  background-color: #ff3535;
+  color: #fff;
 }
 
 .jumbotron-text-mini {

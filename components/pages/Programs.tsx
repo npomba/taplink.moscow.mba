@@ -4,7 +4,7 @@ import Link from 'next/link'
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
 
-const PagePrograms = () => {
+const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   // useEffect(() => {
   //   loadJs(
   //     [
@@ -64,21 +64,36 @@ const PagePrograms = () => {
             <li className='filters__filter'>
               <h4 className='filter__title'>Формат обучения</h4>
               <div className='filter__content'>
-                <Link href='/programs/mini'>
+                <Link href={`/programs/mini/${mbaFormat}`}>
                   <a>
-                    <span className='filter-circle'></span> Mini MBA
+                    <span
+                      className={`filter-circle ${
+                        mbaTypeOfProgram === 'mini' ? 'active' : ''
+                      }`}
+                    ></span>{' '}
+                    Mini MBA
                   </a>
                 </Link>
 
-                <Link href='/programs/professional'>
+                <Link href={`/programs/professional/${mbaFormat}`}>
                   <a>
-                    <span className='filter-circle'></span> Professional MBA
+                    <span
+                      className={`filter-circle ${
+                        mbaTypeOfProgram === 'professional' ? 'active' : ''
+                      }`}
+                    ></span>{' '}
+                    Professional MBA
                   </a>
                 </Link>
 
-                <Link href='/programs/industry'>
+                <Link href={`/programs/industry/${mbaFormat}`}>
                   <a>
-                    <span className='filter-circle'></span> Industry MBA
+                    <span
+                      className={`filter-circle ${
+                        mbaTypeOfProgram === 'industry' ? 'active' : ''
+                      }`}
+                    ></span>{' '}
+                    Industry MBA
                   </a>
                 </Link>
 
@@ -92,17 +107,26 @@ const PagePrograms = () => {
             <li className='filters__filter'>
               <h4 className='filter__title'>Формат обучения</h4>
               <div className='filter__content'>
-                <Link href='/programs/mini/blended'>
+                <Link href={`/programs/${mbaTypeOfProgram}/blended`}>
                   <a>
-                    <span className='filter-circle'></span> BLENDED (с очными
-                    модулями)
+                    <span
+                      className={`filter-circle ${
+                        mbaFormat === 'blended' ? 'active' : ''
+                      }`}
+                    ></span>{' '}
+                    BLENDED (с очными модулями)
                   </a>
                 </Link>
 
-                <Link href='/programs/mini/online'>
+                <Link href={`/programs/${mbaTypeOfProgram}/online`}>
                   <a>
-                    <span className='filter-circle'></span> ONLINE
-                    (дистанционно) <span className='discount50'>-50%</span>
+                    <span
+                      className={`filter-circle ${
+                        mbaFormat === 'online' ? 'active' : ''
+                      }`}
+                    ></span>{' '}
+                    ONLINE (дистанционно){' '}
+                    <span className='discount50'>-50%</span>
                   </a>
                 </Link>
               </div>
@@ -140,62 +164,22 @@ const PagePrograms = () => {
               </li>
             </ul>
             <div className='mini-programs-slider'>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>01.</div>
-                <div className='title'>Антикризисное управление</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>02.</div>
-                <div className='title'>Управление финансами</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>03.</div>
-                <div className='title'>Управление маркетингом</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>04.</div>
-                <div className='title'>Управление в нефтегазовой сфере</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>05.</div>
-                <div className='title'>Управление в нефтегазовой сфере</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>06.</div>
-                <div className='title'>Антикризисное управление</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>07.</div>
-                <div className='title'>Управление финансами</div>
-              </a>
-              <a href='' className='mini-programs-block'>
-                <div className='arrow'>
-                  <img alt='' src='/assets/images/arrow_diagonal.svg' />
-                </div>
-                <div className='number'>08.</div>
-                <div className='title'>Управление маркетингом</div>
-              </a>
+              {programs.map((program, idx) => {
+                return (
+                  <Link
+                    href={`/programs/${mbaTypeOfProgram}/${mbaFormat}/${program._id}`}
+                    key={program._id}
+                  >
+                    <a className='mini-programs-block'>
+                      <div className='arrow'>
+                        <img alt='' src='/assets/images/arrow_diagonal.svg' />
+                      </div>
+                      <div className='number'>{idx}.</div>
+                      <div className='title'>{program.title}</div>
+                    </a>
+                  </Link>
+                )
+              })}
             </div>
           </div>
         </div>
