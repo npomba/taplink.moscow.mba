@@ -131,13 +131,6 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                 </Link>
               </div>
             </li>
-            <li className='filters__filter'>
-              <Link href='/programs/executive'>
-                <a className='txt-highlight'>
-                  Executive MBA <span className='premium'>Premium</span>
-                </a>
-              </Link>
-            </li>
           </ul>
 
           {/* mini-programs-section */}
