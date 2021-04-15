@@ -4312,6 +4312,102 @@ footer {
 }
 
 /* mini-programs-section ==================================*/
+.container-programs {
+  display: flex;
+}
+
+.programs-title {
+  margin-bottom: 60px;
+}
+
+.jumbotron-programs {
+  background-color: #f7f7f7;
+  margin-bottom: 60px;
+  & .jumbotron-breadcrumbs {
+    position: relative;
+  }
+  & a {
+    color: #808080;
+  }
+}
+
+.jumbotron-content.jumbotron-content-programs-page {
+  padding: 0;
+  margin: 0;
+}
+
+.jumbotron-red-info.jumbotron-red-info-programs-page {
+  position: relative;
+  bottom: initial;
+  top: 0;
+  margin-top: 0;
+  margin-left: 0;
+  width: 100%;
+  color: #fff;
+}
+
+.filters {
+  margin-right: 61px;
+  width: 100%;
+  min-width: 296px;
+}
+
+.filter__title {
+  margin-bottom: 26px;
+  font-weight: 500;
+  font-size: 20px;
+  line-height: 120%;
+}
+
+.filter-circle {
+  display: inline-block;
+  width: 20px;
+  height: 20px;
+  background-color: #efefef;
+  border-radius: 50%;
+  margin-right: 8px;
+  transition: border-color 0.3s ease-in-out;
+  border: 1px solid;
+  border-color: transparent;
+}
+
+.filter__content {
+  display: flex;
+  flex-direction: column;
+  margin-bottom: 41px;
+  & a {
+    display: flex;
+    align-items: center;
+    margin-bottom: 20px;
+    &:hover .filter-circle {
+      border-color: #ff3535;
+    }
+  }
+}
+
+.txt-highlight {
+  font-weight: 500;
+  font-size: 16px;
+  line-height: 120%;
+  transition: color 0.3s ease-in-out;
+  &:hover {
+    color: #ff3535;
+    & .premium {
+      border-color: #ff3535;
+    }
+  }
+}
+
+.premium {
+  border: 1px solid;
+  border-color: #000;
+  font-size: 10px;
+  line-height: 120%;
+  padding: 6px;
+  margin-left: 20px;
+  transition: border-color 0.3s ease-in-out;
+}
+
 .jumbotron-text-mini {
   padding-top: 56px;
   max-width: 780px;

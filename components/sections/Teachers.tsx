@@ -1,18 +1,19 @@
+import setString from '../../components/hooks/setString'
+import lang from '../../translation/data/about'
+
 const Teachers = () => {
   return (
     <>
       <section className='about-detail-section'>
         <div className='section-pl'>
-          <div className='title-pl'>Эксперты</div>
+          <div className='title-pl'>{setString(lang.aboutTitle)}</div>
           <div className='about-detail-content'>
             <h2>
-              Российские и <span className='red'>зарубежные </span>эксперты
-              программы
+              {setString(lang.teachersTitleFirst)}{' '}
+              <span className='red'>{setString(lang.teachersTitleRed)} </span>
+              {setString(lang.teachersTitleSecond)}
             </h2>
-            <div className='text'>
-              Перенимайте уникальный опыт международных экспертов,
-              адаптированный под рынок РФ
-            </div>
+            <div className='text'>{setString(lang.teachersDics)}</div>
             <div className='dobble-images about-detail-images'>
               <div className='image pic-1'>
                 <img
@@ -35,8 +36,8 @@ const Teachers = () => {
                   <img src='/assets/images/icon_check.svg' alt='' />
                 </div>
                 <div>
-                  <h5>Практикующие специалисты</h5>
-                  <p>Реализовывали крупные проекты на рынках Европы и США</p>
+                  <h5>{setString(lang.teachersListItemTitle)}</h5>
+                  <p>{setString(lang.teachersListItemDisc)}</p>
                 </div>
               </li>
               <li>
@@ -44,11 +45,8 @@ const Teachers = () => {
                   <img src='/assets/images/icon_check.svg' alt='' />
                 </div>
                 <div>
-                  <h5>Прошли многоэтапную проверку</h5>
-                  <p>
-                    Прошли многоэтапную проверку Moscow Academy и имеют
-                    аккредитацию на преподавание
-                  </p>
+                  <h5>{setString(lang.teachersListItemTitleSecond)}</h5>
+                  <p>{setString(lang.teachersListItemDiscSecond)}</p>
                 </div>
               </li>
               <li>
@@ -56,12 +54,12 @@ const Teachers = () => {
                   <img src='/assets/images/icon_check.svg' alt='' />
                 </div>
                 <div>
-                  <h5>Международный опыт преподавания</h5>
-                  <p>Преподают в ведущих бизнес-школах мира</p>
+                  <h5>{setString(lang.teachersListItemTitleThird)}</h5>
+                  <p>{setString(lang.teachersListItemDiscThird)}</p>
                 </div>
               </li>
             </ul>
-            <h3>Более 150 профессоров международного уровня</h3>
+            <h3>{setString(lang.teachersProsTitle)}</h3>
           </div>
         </div>
         <ul className='about-teachers-list'>
@@ -75,13 +73,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Александр Иванов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherOneTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherOneDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -97,13 +94,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Семен Фролов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherTwoTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherTwoDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -119,13 +115,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Валентин Земин</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherThreeTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherThreeDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -141,13 +136,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Александр Иванов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherFourTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherFourDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -163,13 +157,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Валентин Земин</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherFiveTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherFiveDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -185,13 +178,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Александр Иванов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherSixTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherSixDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -207,13 +199,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Александр Иванов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherSevenTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherSevenDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -229,13 +220,12 @@ const Teachers = () => {
                 />
               </a>
               <div>
-                <div className='name'>Семен Фролов</div>
-                <p>
-                  Исполнительный директор Центра энергетики Московской школы
-                  управления СКОЛКОВО
-                </p>
+                <div className='name'>
+                  {setString(lang.teachersTeacherEightTitle)}
+                </div>
+                <p>{setString(lang.teachersTeacherEightDics)}</p>
                 <a href='' className='link'>
-                  <span>Биография</span>
+                  <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
                 </a>
               </div>
@@ -244,7 +234,7 @@ const Teachers = () => {
         </ul>
         <div className='about-teachers-link'>
           <a href='' className='button'>
-            запросить полный список
+            {setString(lang.teachersCtaBtn)}
           </a>
         </div>
       </section>

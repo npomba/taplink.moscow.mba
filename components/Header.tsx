@@ -226,7 +226,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'online'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -276,7 +276,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'blended'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -373,7 +373,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'online'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -423,7 +423,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'blended'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -520,7 +520,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'online'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -570,7 +570,7 @@ const Header = ({ programs }) => {
                           item.mbaFormat === 'blended'
                         ) {
                           return (
-                            <li>
+                            <li key={item._id}>
                               <Link
                                 href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                 locale='ru'
@@ -773,7 +773,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'online'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
@@ -827,7 +827,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'blended'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
@@ -959,7 +959,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'online'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
@@ -1013,7 +1013,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'blended'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
@@ -1145,7 +1145,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'online'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
@@ -1199,7 +1199,7 @@ const Header = ({ programs }) => {
                                 item.mbaFormat === 'blended'
                               ) {
                                 return (
-                                  <li>
+                                  <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
                                       locale='ru'
