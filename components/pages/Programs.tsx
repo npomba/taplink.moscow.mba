@@ -150,7 +150,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                     : ''}{' '}
                   {mbaFormat}
                 </h2>
-                <span>{programs.length} программ</span>
+                <span className='qtPrograms'>{programs.length} программ</span>
               </div>
 
               <p className='programs-info__dics'>

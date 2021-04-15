@@ -4346,6 +4346,25 @@ footer {
   color: #fff;
 }
 
+.programs-info__title {
+  display: flex;
+  align-items: center;
+  margin-bottom: 20px;
+  & h2 {
+    margin: 0;
+  }
+}
+
+.qtPrograms {
+  background-color: #f7f7f7;
+  color: #ff3535;
+  font-size: 13px;
+  line-height: 120%;
+  font-weight: 500;
+  padding: 12px;
+  margin-left: 16px;
+}
+
 .filters {
   margin-right: 61px;
   width: 100%;
@@ -4398,6 +4417,11 @@ footer {
       border-color: #ff3535;
     }
   }
+}
+
+.programs-info__counters {
+  display: flex;
+  align-items: center;
 }
 
 .txt-highlight {
