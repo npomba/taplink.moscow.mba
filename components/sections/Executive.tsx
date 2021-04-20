@@ -1,3 +1,4 @@
+import Link from 'next/link'
 import setString from '../hooks/setString'
 import lang from '../../translation/data/index'
 import langMenu from '../../translation/data/menu'
@@ -26,9 +27,11 @@ const Executive = () => {
             <i className='new-price'> 1 900 000 Р.</i>
             <i className='old-price'> 2 500 000 Р.</i>
           </div>
-          <a href='' className='button empty-button'>
-            {setString(lang.learnMoreBtn)}
-          </a>
+          <Link href='/programs/executive/'>
+            <a className='button empty-button'>
+              {setString(lang.learnMoreBtn)}
+            </a>
+          </Link>
         </div>
         <div className='dobble-images executive-images'>
           <div className='image pic-1'>
