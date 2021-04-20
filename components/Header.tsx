@@ -1,11 +1,12 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
-import { useEffect } from 'react'
 import lang from '../translation/data/header'
 import langMenu from '../translation/data/menu'
 import langMonths from '../translation/data/months'
 import setString from '../components/hooks/setString'
+
+import HeaderLangLink from './HeaderLangLink'
 
 const Header = ({ programs }) => {
   // const Header = () => {
@@ -17,32 +18,8 @@ const Header = ({ programs }) => {
 
   // console.log(lang.address.en)
 
-  useEffect(() => {
-    const onSwitchLangBtn = () => {
-      const langSelectList = document.getElementById('langSelectList')
-      const ruBtn = document.getElementById('switchToRuBtn')
-      const enBtn = document.getElementById('switchToEnBtn')
-      ruBtn.addEventListener('click', () => {
-        localStorage.setItem('lang', 'ru')
-        langSelectList.classList.toggle('show')
-      })
-      enBtn.addEventListener('click', () => {
-        localStorage.setItem('lang', 'en')
-        langSelectList.classList.toggle('show')
-      })
-    }
-    const onClickLangBtn = () => {
-      const langBtn = document.getElementById('langBtn')
-      const langSelectList = document.getElementById('langSelectList')
-      if (langBtn) {
-        langBtn.addEventListener('click', () => {
-          langSelectList.classList.toggle('show')
-        })
-        onSwitchLangBtn()
-      }
-    }
-    onClickLangBtn()
-  }, [])
+  // useEffect(() => {
+  // }, [])
 
   return (
     <header>
@@ -118,29 +95,9 @@ const Header = ({ programs }) => {
               </Link>
             </li>
 
-            {/* {} */}
-
             {router.pathname === '/' || router.pathname === '/about' ? (
-              <li className='lang'>
-                <a id='langBtn' className='lang__btn'>
-                  {setString(lang.linkLang)} &#9660;
-                </a>
-                <ul id='langSelectList' className='lang__selectList'>
-                  <li className='selectList__item'>
-                    <Link href={`${router.pathname}`} locale='ru'>
-                      <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
-                    </Link>
-                  </li>
-                  <li className='selectList__item'>
-                    <Link href={`${router.pathname}`} locale='en-US'>
-                      <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
-                    </Link>
-                  </li>
-                </ul>
-              </li>
-            ) : (
-              ''
-            )}
+              <HeaderLangLink />
+            ) : null}
           </ul>
         </div>
       </div>
