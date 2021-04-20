@@ -3,7 +3,7 @@ const ReviewPopUp = ({ review }) => {
     <>
       {/* Модалка отзыва */}
       <div id={`${review.id}`} className='popup-modal mfp-hide mfp-with-anim'>
-        <div className='popup-content'>
+        <div className='popup-content-origin'>
           <div className='reviews-text-block modal-review'>
             <div className='avatar'>
               <img

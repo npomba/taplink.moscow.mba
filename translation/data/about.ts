@@ -154,6 +154,16 @@ export default {
     en: 'Biography'
   },
 
+  teachersPopupFormTitle:{
+    ru: 'Узнайте своих преподавателей',
+    en: 'Get to know experts '
+  },
+
+  teachersPopupFormDics:{
+    ru: 'Оставьте заявку и получите консультацию по преподавателям, программам MBA, а также узнайте возможные варианты скидок и требования к поступлению',
+    en: 'Submit a request and receive a consultation on experts, programs, discounts, and requirements'
+  },
+
   uptodateTitle: {
     ru: 'Только актуальный контент',
     en: 'Up to Date content only'

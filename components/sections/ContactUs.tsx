@@ -1,6 +1,6 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
-import onSubmitForm from '../hooks/onSubmitForm'
+import setString from '@/components/hooks/setString'
+import lang from '@/translation/data/index'
+import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
 type FormValues = {
@@ -8,19 +8,20 @@ type FormValues = {
   phone: string
 }
 
-const ContactUs = () => {
+const ContactUs = ({
+  title = setString(lang.helpToChooseTitle),
+  disc = setString(lang.helpToChooseDics),
+}) => {
   const {
     register,
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>()
 
-  console.log(errors)
-
   return (
     <section className='support-section'>
-      <h2>{setString(lang.helpToChooseTitle)}</h2>
-      <div className='text'>{setString(lang.helpToChooseDics)}</div>
+      <h2>{title}</h2>
+      <div className='text'>{disc}</div>
       <form
         method='post'
         className='simple-form support-form embedded-form'
@@ -33,7 +34,7 @@ const ContactUs = () => {
               {...register('name', {
                 maxLength: {
                   value: 32,
-                  message: '*Введите имя не длиннее, чем 32 символа',
+                  message: `*${setString(lang.formErrLongName)}`,
                 },
               })}
             />
@@ -44,10 +45,10 @@ const ContactUs = () => {
             <input
               type='tel'
               {...register('phone', {
-                required: '*Пожалуйста, введите Ваш номер телефона',
+                required: `*${setString(lang.formErrEmptyPhone)}`,
                 minLength: {
                   value: 5,
-                  message: '*Номер телефона слишком короткий',
+                  message: `*${setString(lang.formErrShortPhone)}`,
                 },
               })}
             />

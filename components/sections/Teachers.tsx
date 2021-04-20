@@ -1,5 +1,8 @@
-import setString from '../../components/hooks/setString'
-import lang from '../../translation/data/about'
+import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
+import PopUpForm from '@/components/popups/Form'
+import setString from '@/components/hooks/setString'
+import lang from '@/translation/data/about'
 
 const Teachers = () => {
   return (
@@ -65,7 +68,7 @@ const Teachers = () => {
         <ul className='about-teachers-list'>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_1.jpg'
@@ -77,16 +80,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherOneTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherOneDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_2.jpg'
@@ -98,16 +101,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherTwoTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherTwoDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_3.jpg'
@@ -119,16 +122,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherThreeTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherThreeDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_4.jpg'
@@ -140,16 +143,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherFourTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherFourDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_3.jpg'
@@ -161,16 +164,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherFiveTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherFiveDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_4.jpg'
@@ -182,16 +185,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherSixTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherSixDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_1.jpg'
@@ -203,16 +206,16 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherSevenTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherSevenDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='' className='image'>
+              <a href='#' className='image'>
                 <img
                   className='lazyload'
                   data-src='/assets/images/teacher_2.jpg'
@@ -224,18 +227,32 @@ const Teachers = () => {
                   {setString(lang.teachersTeacherEightTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherEightDics)}</p>
-                <a href='' className='link'>
+                {/* <a href='' className='link'>
                   <span>{setString(lang.teachersBiographyLink)}</span>
                   <img src='/assets/images/arrow_right.svg' alt='' />
-                </a>
+                </a> */}
               </div>
             </div>
           </li>
         </ul>
         <div className='about-teachers-link'>
-          <a href='' className='button'>
-            {setString(lang.teachersCtaBtn)}
-          </a>
+          <Popup
+            trigger={
+              <button className='button'>
+                {setString(lang.teachersCtaBtn)}
+              </button>
+            }
+            modal
+            nested
+          >
+            {(close) => (
+              <PopUpForm
+                closePopUp={close}
+                title={setString(lang.teachersPopupFormTitle)}
+                disc={setString(lang.teachersPopupFormDics)}
+              />
+            )}
+          </Popup>
         </div>
       </section>
     </>

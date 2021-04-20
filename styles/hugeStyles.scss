@@ -3327,8 +3327,8 @@ footer {
 
 /*================= МОДАЛКИ ======================*/
 .popup-modal {
-  max-width: 850px;
-  margin: 30px auto;
+  // max-width: 850px;
+  // margin: 30px auto;
   position: relative;
   padding: 0;
   border-radius: 3px;
@@ -3392,7 +3392,7 @@ footer {
   }
 }
 
-.popup-content {
+.popup-content-origin {
   padding: 66px 94px 98px;
   background: #fff;
   &.red-bg {
@@ -3406,13 +3406,13 @@ footer {
   }
 }
 
-#teachersModal {
-  max-width: 1111px;
-}
+// #teachersModal {
+//   max-width: 1111px;
+// }
 
-#thanksModal {
-  max-width: 410px;
-}
+// #thanksModal {
+//   max-width: 410px;
+// }
 
 .thanks-popup-content {
   text-align: center;
@@ -5774,7 +5774,7 @@ footer {
   .faq-content {
     padding-top: 0;
   }
-  .popup-content {
+  .popup-content-origin {
     padding: 60px 50px;
   }
   .blended-info-section {
@@ -6534,7 +6534,7 @@ footer {
       font-size: 17px;
     }
   }
-  .popup-content {
+  .popup-content-origin {
     padding: 40px 30px;
   }
   .reviews-preview-block {
@@ -6835,7 +6835,7 @@ footer {
       margin-bottom: 0;
     }
   }
-  .popup-content {
+  .popup-content-origin {
     .desc {
       margin-bottom: 25px;
     }
@@ -7514,4 +7514,12 @@ footer {
 
 .button.btn-disabled {
   cursor: not-allowed;
+}
+
+div.popup-content {
+  padding-left: 16px;
+  padding-right: 16px;
+  width: auto;
+  border: none;
+  background-color: transparent;
 }

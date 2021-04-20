@@ -183,4 +183,19 @@ export default {
     ru: 'персональных данных',
     en: 'Privacy Policy'
   },
+
+  formErrLongName: {
+    ru: 'Введите имя не длинее, чем 32 символа',
+    en: 'Name should be no longer than 32 symbols'
+  },
+
+  formErrEmptyPhone: {
+    ru: 'Пожалуйста, введите Ваш номер телефона',
+    en: 'Phone number is required'
+  },
+
+  formErrShortPhone: {
+    ru: 'Номер телефона слишком короткий',
+    en: 'Phone number is too short'
+  },
 }
