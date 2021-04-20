@@ -7506,3 +7506,12 @@ footer {
     font-size: 30px;
   }
 }
+
+.inpt-err-msg {
+  font-size: 14px;
+  margin-top: 10px;
+}
+
+.button.btn-disabled {
+  cursor: not-allowed;
+}
