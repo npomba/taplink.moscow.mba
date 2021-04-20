@@ -7,13 +7,8 @@ export default async (req, res) => {
 
   // const testAccount = await nodemailer.createTestAccount()
 
-  //   SMTP_HOST=smtp.jino.ru
-  // SMTP_LOGIN=temp@testmba.ipo.msk.ru
-  // SMTP_PASS=YGgaaz9ruAzKz6Y
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
-    // host: 'smtp.jino.ru',
-    // host: 'smtp.ethereal.email',
     port: 587,
     secure: false, // true for 465, false for other ports
     logger: true,
@@ -24,10 +19,6 @@ export default async (req, res) => {
     auth: {
       user: process.env.SMTP_LOGIN,
       pass: process.env.SMTP_PASS,
-      // user: 'temp@testmba.ipo.msk.ru',
-      // pass: 'YGgaaz9ruAzKz6Y',
-      // user: testAccount.user,
-      // pass: testAccount.pass,
     },
   })
 
