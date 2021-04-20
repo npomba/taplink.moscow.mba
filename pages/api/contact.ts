@@ -1,14 +1,13 @@
 // Next.js API route support: https://nextjs.org/docs/api-routes/introduction
 
 import nodemailer from 'nodemailer'
-import { thisServer } from '@/config/index'
+import { dev } from '@/config/index'
 
 export default async (req, res) => {
   const { name, phone } = req.body
 
   // const testAccount = await nodemailer.createTestAccount()
 
-  console.log(thisServer)
   const transporter = nodemailer.createTransport({
     host: process.env.SMTP_HOST,
     port: 587,
@@ -28,7 +27,7 @@ export default async (req, res) => {
     const emailRes = await transporter.sendMail({
       from: 'temp@testmba.ipo.msk.ru',
       to: `${
-        thisServer === 'http://localhost:3000'
+        dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
           : 'marketing@rosucheba.ru'
       }`,
