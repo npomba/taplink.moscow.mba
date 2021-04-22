@@ -1,11 +1,9 @@
-import { useRouter } from 'next/router'
 import Breadcrumb from '@/components/general/Breadcrumb'
+import useWhere from '@/components/hooks/useWhere'
 
 const Breadcrumbs = ({ pageTitle }) => {
-  const { pathname } = useRouter()
-  const splitedPath = pathname
-    .split('/')
-    .filter((item) => item !== '' && item !== '[id]')
+  const where = useWhere()
+  const splitedPath = where.getSplitedPath
 
   return (
     <div className='breadcrumbs-outer jumbotron-breadcrumbs'>

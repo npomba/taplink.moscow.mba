@@ -1,16 +1,17 @@
 import Link from 'next/link'
+import useWhere from '@/components/hooks/useWhere'
 
 const BreadcrumbsHandler = ({ pathPart, splitedPath, idx }) => {
+  const where = useWhere()
   let linkText = null
   const linkUrl = '/' + splitedPath.join('/').split(pathPart)[0] + pathPart
-  let typeOfProgram =
-    splitedPath[1] === 'mini'
-      ? 'Mini MBA'
-      : splitedPath[1] === 'professional'
-      ? 'Professional MBA'
-      : splitedPath[1] === 'industry'
-      ? 'Industry MBA'
-      : ''
+  const typeOfProgram = where.mini
+    ? 'Mini MBA'
+    : where.professional
+    ? 'Professional MBA'
+    : where.industry
+    ? 'Industry MBA'
+    : ''
 
   // About and index are not here because they're currently the only onces translated
   // Onces I translate more pages, I'd replace just setting the text with setString and add about & index pages here
