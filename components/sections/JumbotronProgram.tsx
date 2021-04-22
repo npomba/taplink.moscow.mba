@@ -1,6 +1,6 @@
-import Link from 'next/link'
 import Until from '@/components/dates/Until'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
+import JumbotronLabel from '@/components/general/JumbotronLabel'
 
 import setString from '@/components/hooks/setString'
 import langMenu from '@/translation/data/menu'
@@ -22,13 +22,7 @@ const JumbotronProgram = ({ data, format = 'online' }) => {
               </span>
             </div>
             <div className='jumbotron-label'>
-              <span>
-                {format === 'online'
-                  ? 'MBA ONLINE'
-                  : format === 'blended'
-                  ? 'MBA BLENDED'
-                  : ''}
-              </span>
+              <JumbotronLabel />
             </div>
           </div>
           <div className='jumbotron-flex'>
