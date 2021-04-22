@@ -71,7 +71,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_1.jpg'
+                  data-src='/assets/images/teachers/teacher-1.jpg'
                   alt=''
                 />
               </a>
@@ -92,7 +92,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_2.jpg'
+                  data-src='/assets/images/teachers/teacher-2.jpg'
                   alt=''
                 />
               </a>
@@ -113,7 +113,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_3.jpg'
+                  data-src='/assets/images/teachers/teacher-3.jpg'
                   alt=''
                 />
               </a>
@@ -134,7 +134,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_4.jpg'
+                  data-src='/assets/images/teachers/teacher-4.jpg'
                   alt=''
                 />
               </a>
@@ -155,7 +155,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_3.jpg'
+                  data-src='/assets/images/teachers/teacher-5.jpg'
                   alt=''
                 />
               </a>
@@ -176,7 +176,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_4.jpg'
+                  data-src='/assets/images/teachers/teacher-6.jpg'
                   alt=''
                 />
               </a>
@@ -197,7 +197,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_1.jpg'
+                  data-src='/assets/images/teachers/teacher-7.jpg'
                   alt=''
                 />
               </a>
@@ -218,7 +218,7 @@ const Teachers = () => {
               <a href='#' className='image'>
                 <img
                   className='lazyload'
-                  data-src='/assets/images/teacher_2.jpg'
+                  data-src='/assets/images/teachers/teacher-8.jpg'
                   alt=''
                 />
               </a>

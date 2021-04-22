@@ -1,99 +1,100 @@
 export default {
-
   onlineTitle: {
     ru: 'Формат ONLINE',
-    en: 'ONLINE'
+    en: 'ONLINE',
   },
 
   blendedTitle: {
     ru: 'Формат BLENDED',
-    en: 'BLENDED'
+    en: 'BLENDED',
   },
 
   discountUntil: {
     ru: 'до',
-    en: 'until'
+    en: 'until',
   },
 
   qtPrograms: {
-    ru: 'направлений',
-    en: 'programs'
+    ru: 'программ',
+    en: 'programs',
   },
 
   price: {
     ru: 'Стоимость',
     // en: 'Tuition and fees'
-    en: 'Cost'
+    en: 'Cost',
   },
 
   formatRemote: {
     ru: 'Дистанционно',
-    en: 'Remotely'
+    en: 'Remotely',
   },
 
   formatBlended: {
     ru: 'С очными модулями',
-    en: 'Half In-Person'
+    en: 'Half In-Person',
   },
 
   qtSubjects: {
     ru: 'дисциплин',
-    en: 'subjects'
+    en: 'subjects',
   },
 
   categoryYear: {
     ru: 'год',
-    en: 'year'
+    en: 'year',
   },
 
   categoryMonth: {
     ru: 'месяцев',
-    en: 'months'
+    en: 'months',
   },
 
   categoryDiscMini: {
-    ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
+    ru:
+      'Дистанционная программа Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
+    en: '',
   },
 
   categoryDiscProfessional: {
-    ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
+    ru:
+      'Дистанционная программа Professional MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
+    en: '',
   },
 
   categoryDiscIndustry: {
-    ru: 'Программа профессиональной переподготовки Mini MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
-    en: 'Mini MBA is developed for professionals and middle managers to help systemize prior knowledge and get acquainted with the new key aspects of the management field.'
+    ru:
+      'Дистанционная программа Industry MBA разработана для специалистов и руководителей среднего звена, которые хотят систематизировать имеющиеся знания или познакомиться с ключевыми аспектами новой для себя сферы управленческой деятельности',
+    en: '',
   },
 
   categoryAboutManagement: {
     ru: 'об управлении',
-    en: 'on management'
+    en: 'on management',
   },
 
   categorySpecializedSubjects: {
     ru: 'дисциплин специализации',
-    en: 'specialized subjects'
+    en: 'specialized subjects',
   },
 
   backBtn: {
     ru: 'Назад',
-    en: 'Back'
+    en: 'Back',
   },
 
   toProgramsBtn: {
     ru: 'к программам',
-    en: 'to programs'
+    en: 'to programs',
   },
 
   newestPrograms: {
     ru: 'Новейшие программы',
-    en: 'Newest programs of'
+    en: 'Newest programs of',
   },
 
   newestProgramsYear: {
     ru: 'года',
-    en: ''
-  }
-
+    en: '',
+  },
 }
