@@ -2,6 +2,7 @@ import Head from 'next/head'
 import Reviews from '@/components/sections/Reviews'
 import Rules from '@/components/sections/Rules'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
+import Until from '@/components/dates/Until'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -947,7 +948,9 @@ const PageBlendedProgram = ({ program }) => {
               <ul className='simple-list'>
                 <li>От 3 до 6 месяцев обучения</li>
                 <li>Дистанционно</li>
-                <li>Ближайший набор 20 ноября</li>
+                <li>
+                  Ближайший набор <Until preposition={false} />
+                </li>
                 <li>432 часа живого общения с экспертами</li>
                 <li>40 дисциплин об управлении</li>
                 <li>12 дисциплин специализации</li>

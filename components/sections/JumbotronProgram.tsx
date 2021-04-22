@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import DiscountUntil from '@/components/dates/discountUntil'
+import Until from '@/components/dates/Until'
 
 const JumbotronProgram = ({ data }) => {
   return (
@@ -25,7 +25,9 @@ const JumbotronProgram = ({ data }) => {
           <div className='jumbotron-top'>
             <div className='jumbotron-discount'>
               <div className='size'>-30%</div>
-              <DiscountUntil />
+              <span>
+                <Until />
+              </span>
             </div>
             <div className='jumbotron-label'>
               <span>MBA ONLINE</span>

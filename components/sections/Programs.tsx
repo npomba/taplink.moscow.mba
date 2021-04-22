@@ -1,9 +1,8 @@
 import setString from '../../components/hooks/setString'
 import langMenu from '../../translation/data/menu'
 import langHeader from '../../translation/data/header'
-import langMonths from '../../translation/data/months'
 import Link from 'next/link'
-import DiscountUntil from '@/components/dates/discountUntil'
+import Until from '@/components/dates/Until'
 
 const Programs = ({ programs }) => {
   const data = programs
@@ -63,7 +62,7 @@ const Programs = ({ programs }) => {
                   <div className='discount'>
                     <div className='size'>-30%</div>
                     <span>
-                      <DiscountUntil />
+                      <Until />
                     </span>
                   </div>
                 </div>
@@ -188,8 +187,7 @@ const Programs = ({ programs }) => {
                   <div className='discount'>
                     <div className='size'>-25%</div>
                     <span>
-                      {setString(langMenu.discountUntil)} 20{' '}
-                      {setString(langMonths.april)}
+                      <Until />
                     </span>
                   </div>
                 </div>
@@ -314,8 +312,7 @@ const Programs = ({ programs }) => {
                   <div className='discount'>
                     <div className='size'>-15%</div>
                     <span>
-                      {setString(langMenu.discountUntil)} 20{' '}
-                      {setString(langMonths.april)}
+                      <Until />
                     </span>
                   </div>
                 </div>
