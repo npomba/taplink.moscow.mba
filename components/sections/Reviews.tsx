@@ -53,7 +53,7 @@ const Reviews = () => {
         <div className='reviews-text-list'>
           {reviews.map((review) => {
             return (
-              <div className='reviews-text-block'>
+              <div className='reviews-text-block' key={review.id}>
                 <div className='avatar'>
                   <img
                     className='lazyload'

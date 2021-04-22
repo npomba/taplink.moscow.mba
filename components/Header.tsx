@@ -1,12 +1,13 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
-import lang from '../translation/data/header'
-import langMenu from '../translation/data/menu'
-import langMonths from '../translation/data/months'
-import setString from '../components/hooks/setString'
+import lang from '@/translation/data/header'
+import langMenu from '@/translation/data/menu'
+import langMonths from '@/translation/data/months'
+import setString from '@/components/hooks/setString'
 
-import HeaderLangLink from './HeaderLangLink'
+import HeaderLangLink from '@/components/HeaderLangLink'
+import DiscountUntil from '@/components/dates/discountUntil'
 
 const Header = ({ programs }) => {
   // const Header = () => {
@@ -145,8 +146,7 @@ const Header = ({ programs }) => {
                       <div className='discount'>
                         <div className='size'>-30%</div>
                         <span>
-                          {setString(langMenu.discountUntil)} 20{' '}
-                          {setString(langMonths.april)}
+                          <DiscountUntil />
                         </span>
                       </div>
                     </div>
@@ -690,8 +690,7 @@ const Header = ({ programs }) => {
                             <div className='discount'>
                               <div className='size'>-30%</div>
                               <span>
-                                {setString(langMenu.discountUntil)} 20{' '}
-                                {setString(langMonths.april)}
+                                <DiscountUntil />
                               </span>
                             </div>
                           </div>
@@ -876,8 +875,7 @@ const Header = ({ programs }) => {
                             <div className='discount'>
                               <div className='size'>-30%</div>
                               <span>
-                                {setString(langMenu.discountUntil)} 20{' '}
-                                {setString(langMonths.april)}
+                                <DiscountUntil />
                               </span>
                             </div>
                           </div>
@@ -1062,8 +1060,7 @@ const Header = ({ programs }) => {
                             <div className='discount'>
                               <div className='size'>-30%</div>
                               <span>
-                                {setString(langMenu.discountUntil)} 20{' '}
-                                {setString(langMonths.april)}
+                                <DiscountUntil />
                               </span>
                             </div>
                           </div>
