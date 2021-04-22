@@ -1,8 +1,11 @@
 import Link from 'next/link'
 import Until from '@/components/dates/Until'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+
+import setString from '@/components/hooks/setString'
+import langMenu from '@/translation/data/menu'
 
 const JumbotronProgram = ({ data, format = 'online' }) => {
-  console.log(format)
   return (
     <section className='jumbotron-section'>
       <div className='image'>
@@ -10,19 +13,7 @@ const JumbotronProgram = ({ data, format = 'online' }) => {
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
-          <div className='breadcrumbs-outer jumbotron-breadcrumbs'>
-            <ul className='breadcrumbs'>
-              <li>
-                <a href=''>Программы MBA</a>
-              </li>
-              <li>
-                <a href=''>Mini MBA</a>
-              </li>
-              <li>
-                <span>Mini MBA</span>
-              </li>
-            </ul>
-          </div>
+          <Breadcrumbs pageTitle={data.title} />
           <div className='jumbotron-top'>
             <div className='jumbotron-discount'>
               <div className='size'>-30%</div>
@@ -73,11 +64,19 @@ const JumbotronProgram = ({ data, format = 'online' }) => {
             </li>
             <li>
               <p>Форма обучения:</p>
-              <div className='detail'>Дистансционное</div>
+              <div className='detail'>
+                {format === 'online'
+                  ? setString(langMenu.formatRemote)
+                  : format === 'blended'
+                  ? setString(langMenu.formatBlended)
+                  : ''}
+              </div>
             </li>
             <li>
               <p>Ближайшее зачисление:</p>
-              <div className='detail'>23 января</div>
+              <div className='detail'>
+                <Until preposition={false} />
+              </div>
             </li>
             <li>
               <p>Стоимость:</p>
