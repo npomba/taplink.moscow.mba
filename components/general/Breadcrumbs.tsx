@@ -1,9 +1,9 @@
 import Breadcrumb from '@/components/general/Breadcrumb'
-import useWhere from '@/components/hooks/useWhere'
+import useAt from '@/components/hooks/useAt'
 
 const Breadcrumbs = ({ pageTitle }) => {
-  const where = useWhere()
-  const splitedPath = where.getSplitedPath
+  const at = useAt()
+  const splitedPath = at.getSplitedPath
 
   return (
     <div className='breadcrumbs-outer jumbotron-breadcrumbs'>

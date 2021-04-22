@@ -1,15 +1,15 @@
 import Link from 'next/link'
-import useWhere from '@/components/hooks/useWhere'
+import useAt from '@/components/hooks/useAt'
 
 const BreadcrumbsHandler = ({ pathPart, splitedPath, idx }) => {
-  const where = useWhere()
+  const at = useAt()
   let linkText = null
   const linkUrl = '/' + splitedPath.join('/').split(pathPart)[0] + pathPart
-  const typeOfProgram = where.mini
+  const typeOfProgram = at.mini
     ? 'Mini MBA'
-    : where.professional
+    : at.professional
     ? 'Professional MBA'
-    : where.industry
+    : at.industry
     ? 'Industry MBA'
     : ''
 

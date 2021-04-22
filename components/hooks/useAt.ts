@@ -1,6 +1,6 @@
 import { useRouter } from 'next/router'
 
-const useWhere = () => {
+const useAt = () => {
   const { pathname } = useRouter()
 
   const getSplitedPath = pathname
@@ -37,4 +37,4 @@ const useWhere = () => {
   }
 }
 
-export default useWhere
+export default useAt

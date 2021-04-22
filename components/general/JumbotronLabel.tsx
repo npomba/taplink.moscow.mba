@@ -1,25 +1,18 @@
-import { useRouter } from 'next/router'
+import useAt from '@/components/hooks/useAt'
 
 const JumbotronLabel = () => {
-  const { pathname } = useRouter()
-  const typeOfProgram = pathname.split('/')[2]
-  const format = pathname.split('/')[3]
+  const at = useAt()
 
-  const txt =
-    typeOfProgram === 'mini'
-      ? 'Mini MBA'
-      : typeOfProgram === 'professional'
-      ? 'Professional MBA'
-      : typeOfProgram === 'industry'
-      ? 'Industry MBA'
-      : ''
+  const txt = at.mini
+    ? 'Mini MBA'
+    : at.professional
+    ? 'Professional MBA'
+    : at.industry
+    ? 'Industry MBA'
+    : ''
   return (
     <span>
-      {format === 'online'
-        ? `${txt} ONLINE`
-        : format === 'blended'
-        ? `${txt} BLENDED`
-        : ''}
+      {at.online ? `${txt} ONLINE` : at.blended ? `${txt} BLENDED` : ''}
     </span>
   )
 }
