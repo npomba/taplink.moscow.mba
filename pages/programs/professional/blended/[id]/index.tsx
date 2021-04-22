@@ -1,6 +1,6 @@
-import { server } from '../../../../../config'
+import { server } from '@/config/index'
 
-import BlendedProgram from '../../../../../components/pages/BlendedProgram'
+import BlendedProgram from '@/components/pages/BlendedProgram'
 
 const programsProfessionalBlendedProgram = ({ program }) => {
   return <BlendedProgram program={program} />

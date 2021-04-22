@@ -1,7 +1,8 @@
 import Link from 'next/link'
 import Until from '@/components/dates/Until'
 
-const JumbotronProgram = ({ data }) => {
+const JumbotronProgram = ({ data, format = 'online' }) => {
+  console.log(format)
   return (
     <section className='jumbotron-section'>
       <div className='image'>
@@ -30,7 +31,13 @@ const JumbotronProgram = ({ data }) => {
               </span>
             </div>
             <div className='jumbotron-label'>
-              <span>MBA ONLINE</span>
+              <span>
+                {format === 'online'
+                  ? 'MBA ONLINE'
+                  : format === 'blended'
+                  ? 'MBA BLENDED'
+                  : ''}
+              </span>
             </div>
           </div>
           <div className='jumbotron-flex'>

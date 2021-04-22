@@ -26,7 +26,7 @@ const PageOnlineProgram = ({ program }) => {
         <title>{data.title}</title>
       </Head>
 
-      <JumbotronProgram data={data} />
+      <JumbotronProgram data={data} format={'online'} />
 
       <div className='container'>
         {/* purpose-section */}

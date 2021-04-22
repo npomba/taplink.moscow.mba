@@ -1,4 +1,4 @@
-import Programs from '../../../../components/pages/Programs'
+import Programs from '@/components/pages/Programs'
 
 const programsIndustryOnline = ({ programs }) => {
   let data = null

@@ -28,7 +28,7 @@ const PageBlendedProgram = ({ program }) => {
         <title>{data.title}</title>
       </Head>
 
-      <JumbotronProgram data={data} />
+      <JumbotronProgram data={data} format={'blended'} />
 
       <div className='container'>
         {/* purpose-section */}

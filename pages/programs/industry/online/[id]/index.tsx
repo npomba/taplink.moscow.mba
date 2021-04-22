@@ -1,6 +1,6 @@
-import { server } from '../../../../../config'
+import { server } from '@/config/index'
 
-import OnlineProgram from '../../../../../components/pages/OnlineProgram'
+import OnlineProgram from '@/components/pages/OnlineProgram'
 
 const programsIndustryOnlineProgram = ({ program }) => {
   return <OnlineProgram program={program} />
