@@ -11,7 +11,12 @@ const Breadcrumbs = ({ pageTitle }) => {
     <div className='breadcrumbs-outer jumbotron-breadcrumbs'>
       <ul className='breadcrumbs'>
         {splitedPath.map((pathPart, idx) => (
-          <Breadcrumb key={idx} pathPart={pathPart} splitedPath={splitedPath} />
+          <Breadcrumb
+            key={idx}
+            pathPart={pathPart}
+            splitedPath={splitedPath}
+            idx={idx}
+          />
         ))}
         <li>
           <span>{pageTitle}</span>

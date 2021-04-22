@@ -1,8 +1,16 @@
 import Link from 'next/link'
 
-const BreadcrumbsHandler = ({ pathPart, splitedPath }) => {
+const BreadcrumbsHandler = ({ pathPart, splitedPath, idx }) => {
   let linkText = null
   const linkUrl = '/' + splitedPath.join('/').split(pathPart)[0] + pathPart
+  let typeOfProgram =
+    splitedPath[1] === 'mini'
+      ? 'Mini MBA'
+      : splitedPath[1] === 'professional'
+      ? 'Professional MBA'
+      : splitedPath[1] === 'industry'
+      ? 'Industry MBA'
+      : ''
 
   // About and index are not here because they're currently the only onces translated
   // Onces I translate more pages, I'd replace just setting the text with setString and add about & index pages here
@@ -16,24 +24,24 @@ const BreadcrumbsHandler = ({ pathPart, splitedPath }) => {
     linkText = 'Executive'
   }
 
-  if (pathPart === 'mini') {
-    linkText = 'Mini MBA'
-  }
+  // if (pathPart === 'mini') {
+  //   linkText = 'Mini MBA'
+  // }
 
-  if (pathPart === 'professional') {
-    linkText = 'Professional MBA'
-  }
+  // if (pathPart === 'professional') {
+  //   linkText = 'Professional MBA'
+  // }
 
-  if (pathPart === 'industry') {
-    linkText = 'Industry MBA'
-  }
+  // if (pathPart === 'industry') {
+  //   linkText = 'Industry MBA'
+  // }
 
   if (pathPart === 'online') {
-    linkText = 'ONLINE'
+    linkText = `${typeOfProgram} ONLINE`
   }
 
   if (pathPart === 'blended') {
-    linkText = 'BLENDED'
+    linkText = `${typeOfProgram} BLENDED`
   }
   // /Programs
 
@@ -56,11 +64,18 @@ const BreadcrumbsHandler = ({ pathPart, splitedPath }) => {
   // /teachers
 
   return (
-    <li>
-      <Link href={linkUrl}>
-        <a>{linkText}</a>
-      </Link>
-    </li>
+    <>
+      {idx !== 1 &&
+        pathPart !== 'mini' &&
+        pathPart !== 'professional' &&
+        pathPart !== 'industry' && (
+          <li>
+            <Link href={linkUrl}>
+              <a>{linkText}</a>
+            </Link>
+          </li>
+        )}
+    </>
   )
 }
 
