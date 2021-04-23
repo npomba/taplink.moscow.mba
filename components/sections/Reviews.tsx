@@ -1,3 +1,4 @@
+import Popup from 'reactjs-popup'
 import ReviewPopUp from '../popups/ReviewPopUp'
 
 const Reviews = () => {
@@ -45,13 +46,12 @@ const Reviews = () => {
   ]
   return (
     <>
-      {/* reviews-section */}
       <section className='reviews-section'>
         <div className='section-pl'>
           <h2>Что о нас говорят</h2>
         </div>
         <div className='reviews-text-list'>
-          {reviews.map((review) => {
+          {reviews.map((review, idx) => {
             return (
               <div className='reviews-text-block' key={review.id}>
                 <div className='avatar'>
@@ -65,13 +65,19 @@ const Reviews = () => {
                   <div className='text'>
                     <p>
                       {review.excerpt + ' '}
-                      <a
-                        href={`#${review.id}`}
-                        className='link popup-open'
-                        data-effect='mfp-zoom-in'
+
+                      <Popup
+                        trigger={<a className='link cursor-pointer'>Читать</a>}
+                        modal
+                        nested
                       >
-                        Читать
-                      </a>
+                        {(close) => (
+                          <ReviewPopUp
+                            closePopUp={close}
+                            review={reviews[idx]}
+                          />
+                        )}
+                      </Popup>
                     </p>
                   </div>
                   <div className='name'>{review.name}</div>
@@ -118,10 +124,6 @@ const Reviews = () => {
           </a>
         </div> */}
       </section>
-      <ReviewPopUp review={reviews[0]} />
-      <ReviewPopUp review={reviews[1]} />
-      <ReviewPopUp review={reviews[2]} />
-      <ReviewPopUp review={reviews[3]} />
     </>
   )
 }

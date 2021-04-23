@@ -1,7 +1,6 @@
-const ReviewPopUp = ({ review }) => {
+const ReviewPopUp = ({ review, closePopUp }) => {
   return (
     <>
-      {/* Модалка отзыва */}
       <div id={`${review.id}`} className='popup-modal mfp-hide mfp-with-anim'>
         <div className='popup-content-origin'>
           <div className='reviews-text-block modal-review'>
@@ -20,7 +19,7 @@ const ReviewPopUp = ({ review }) => {
               <div className='job'>{review.profession}</div>
             </div>
           </div>
-          <button className='mfp-close' type='button'>
+          <button className='mfp-close' type='button' onClick={closePopUp}>
             <img src='/assets/images/close.svg' alt='Закрыть' />
           </button>
         </div>
