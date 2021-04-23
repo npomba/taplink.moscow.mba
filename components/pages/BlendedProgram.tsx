@@ -16,7 +16,7 @@ import RelevantContent from '@/components/sections/RelevantContent'
 import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
 import Accreditation from '@/components/sections/Accreditation'
-import Pros from '../sections/Pros'
+import Pros from '@/components/sections/Pros'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
