@@ -48,7 +48,7 @@ const PageBlendedProgram = ({ program }) => {
       <div className='container'>
         <ProgramGoal data={data} />
         <WhatWillYouLearn data={data} />
-        <ProgramDesc data={data} />
+        <ProgramDesc />
         <BlendedMetups />
         <Pros format={'blended'} />
         <HowProcessGoes />

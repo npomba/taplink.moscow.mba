@@ -1,11 +1,11 @@
 export default {
   title: {
-    ru: 'О Компании',
+    ru: 'Об академии',
     en: 'About',
   },
 
   aboutTitle: {
-    ru: 'О КОМПАНИИ',
+    ru: 'ОБ АКАДЕМИИ',
     en: 'ABOUT',
   },
 
