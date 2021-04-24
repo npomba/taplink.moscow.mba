@@ -2,7 +2,6 @@ import Link from 'next/link'
 
 const PopulateWithPrograms = (data, type, format) => {
   data.map((item) => {
-    console.log('test')
     if (item.mbaTypeOfProgram === type && item.mbaFormat === format) {
       return (
         <li>
