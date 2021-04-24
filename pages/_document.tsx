@@ -31,10 +31,6 @@ class MyDocument extends Document {
             type='text/javascript'
             src='/assets/js/vendors/circle-progress.min.js'
           ></script>
-          {/* <script
-            type='text/javascript'
-            src='/assets/js/jquery.magnific-popup.min.js'
-          ></script> */}
           <script type='text/javascript' src='/assets/js/myjs.js'></script>
         </body>
       </Html>
