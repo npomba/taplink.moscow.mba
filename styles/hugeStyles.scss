@@ -7529,6 +7529,9 @@ div.popup-content {
 }
 
 .about-detailt-section--stand-alone-page {
+  & .about-teachers-list li {
+    margin-bottom: 20px;
+  }
   &.about-detail-section .title-pl,
   &.about-detail-section {
     color: #333;
