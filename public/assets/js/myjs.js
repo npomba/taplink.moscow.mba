@@ -32,25 +32,6 @@ $(document).ready(function () {
     $('.header-podmenu-toggle').removeClass('opened')
   })
 
-  // Слайдер клиентов
-  if ($('.clients-slider').length) {
-    $('.clients-slider').slick({
-      slidesToShow: 2,
-      slidesToScroll: 1,
-      speed: 800,
-      arrows: false,
-      dots: true,
-      responsive: [
-        {
-          breakpoint: 767,
-          settings: {
-            slidesToShow: 1,
-          },
-        },
-      ],
-    })
-  }
-
   /*Табы программ*/
   $('.program-options-tabs a').click(function (e) {
     e.preventDefault()
@@ -80,15 +61,6 @@ $(document).ready(function () {
       .not($searchId)
       .css('display', 'none')
     $searchId.css('display', 'block')
-  })
-
-  // Сдвигание плейсхолдера
-  $('.simple-form input, .simple-form textarea').keyup(function () {
-    if ($(this).val() !== '' && $(this).val().length > 0) {
-      $(this).addClass('texted')
-    } else {
-      $(this).removeClass('texted')
-    }
   })
 
   /*работа подменю в мобилке*/

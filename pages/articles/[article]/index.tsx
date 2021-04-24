@@ -1,19 +1,6 @@
 import Head from 'next/head'
 
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
-
 const article = () => {
-  // useEffect(() => {
-
-  //   loadJs([
-  //     '/assets/js/lazysizes.min.js',
-  //     '/assets/js/myjs.js'
-  //   ], {
-  //     async: false
-  //   })
-  // }, [])
-
   return (
     <>
       <Head>

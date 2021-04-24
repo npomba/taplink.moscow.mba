@@ -1,6 +1,6 @@
-// import { server } from '../../config/'
+// import { server } from '@/config/index'
 
-import Programs from '../../components/pages/Programs'
+import Programs from '@/components/pages/Programs'
 
 const programs = ({ programs }) => {
   let data = null

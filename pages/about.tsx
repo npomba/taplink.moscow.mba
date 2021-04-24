@@ -14,24 +14,7 @@ import ContactUs from '@/components/sections/ContactUs'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/about'
 
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
-
 const about = () => {
-  // useEffect(() => {
-  //   loadJs(
-  //     [
-  //       '/assets/js/slick.min.js',
-  //       '/assets/js/lazysizes.min.js',
-  //       '/assets/js/jquery.magnific-popup.min.js',
-  //       '/assets/js/myjs.js',
-  //     ],
-  //     {
-  //       async: false,
-  //     }
-  //   )
-  // }, [])
-
   return (
     <>
       <Head>

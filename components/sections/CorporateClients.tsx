@@ -1,7 +1,16 @@
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 const CorporateClients = () => {
+  useEffect(() => {
+    loadJs(['/assets/js/corporateClientsSlider.js'], {
+      async: false,
+    })
+  }, [])
+
   return (
     <section className='clients-section'>
       <div className='section-pl'>

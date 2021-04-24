@@ -17,16 +17,19 @@ class MyDocument extends Document {
           <NextScript />
           <script
             type='text/javascript'
-            src='/assets/js/jquery-3.5.1.min.js'
-          ></script>
-          <script type='text/javascript' src='/assets/js/slick.min.js'></script>
-          <script
-            type='text/javascript'
-            src='/assets/js/lazysizes.min.js'
+            src='/assets/js/vendors/jquery-3.5.1.min.js'
           ></script>
           <script
             type='text/javascript'
-            src='/assets/js/circle-progress.min.js'
+            src='/assets/js/vendors/slick.min.js'
+          ></script>
+          <script
+            type='text/javascript'
+            src='/assets/js/vendors/lazysizes.min.js'
+          ></script>
+          <script
+            type='text/javascript'
+            src='/assets/js/vendors/circle-progress.min.js'
           ></script>
           {/* <script
             type='text/javascript'

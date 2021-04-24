@@ -1,29 +1,13 @@
 import App from 'next/app'
-import Header from '../components/Header'
-import Footer from '../components/Footer'
-import PageWrapper from '../components/PageWrapper'
+import Header from '@/components/Header'
+import Footer from '@/components/Footer'
+import PageWrapper from '@/components/PageWrapper'
 import '../styles/hugeStyles.sass'
 import '../styles/hugeStyles.scss'
-import { server } from '../config'
-import { useEffect } from 'react'
+import { server } from '@/config/index'
 
 function MyApp({ Component, pageProps, appProps }) {
   // console.log(appProps)
-
-  useEffect(() => {
-    const setInitialLang = () => {
-      const lang = localStorage.getItem('lang')
-
-      // initial load
-      if (lang === null) {
-        localStorage.setItem('lang', 'ru')
-        this.setState({ lang: 'ru' })
-      } else {
-        this.setState({ lang: lang })
-      }
-    }
-    // setInitialLang()
-  }, [])
 
   return (
     <>
@@ -34,12 +18,6 @@ function MyApp({ Component, pageProps, appProps }) {
         </div>
         <Footer />
       </PageWrapper>
-      {/* <script src='/js/jquery-3.5.1.min.js'></script>
-      <script src='/js/slick.min.js'></script>
-      <script src='/js/lazysizes.min.js'></script>
-      <script src='/js/circle-progress.min.js'></script>
-      <script src='/js/jquery.magnific-popup.min.js'></script>
-      <script src='/js/myjs.js'></script> */}
     </>
   )
 }

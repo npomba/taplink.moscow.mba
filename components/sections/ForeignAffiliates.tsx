@@ -17,7 +17,6 @@ const ForeignAffiliates = () => {
                 alt={setString(imageData.circleOne.alt)}
                 width={191}
                 height={191}
-                layout='responsive'
               />
             </div>
           </li>
@@ -28,7 +27,6 @@ const ForeignAffiliates = () => {
                 alt={setString(imageData.circleTwo.alt)}
                 width={191}
                 height={191}
-                layout='responsive'
               />
             </div>
           </li>
@@ -39,7 +37,6 @@ const ForeignAffiliates = () => {
                 alt={setString(imageData.circleThree.alt)}
                 width={191}
                 height={191}
-                layout='responsive'
               />
             </div>
           </li>
@@ -54,11 +51,13 @@ const ForeignAffiliates = () => {
           </li>
         </ul>
         <div className='branches-map'>
+          {/*TODO: swap fixed layout with default, fix up the css for an image */}
           <Image
             src='/assets/images/branches_map.png'
             alt={setString(lang.foreignAffiliatesDisc)}
             width={659}
             height={394}
+            layout='fixed'
           />
         </div>
       </div>

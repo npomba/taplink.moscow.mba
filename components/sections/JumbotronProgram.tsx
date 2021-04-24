@@ -1,4 +1,5 @@
 import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
 import Until from '@/components/dates/Until'
 import Breadcrumbs from '@/components/general/Breadcrumbs'

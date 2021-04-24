@@ -1,14 +1,14 @@
 import Head from 'next/head'
 
-import JumbotronMain from '../components/sections/JumbotronMain'
-import About from '../components/sections/About'
-import ConferencesInEurope from '../components/sections/ConferencesInEurope'
-import ForeignAffiliates from '../components/sections/ForeignAffiliates'
-import StudentsFromWorld from '../components/sections/StudentsFromWorld'
-import CorporateClients from '../components/sections/CorporateClients'
-import Programs from '../components/sections/Programs'
-import Executive from '../components/sections/Executive'
-import ContactUs from '../components/sections/ContactUs'
+import JumbotronMain from '@/components/sections/JumbotronMain'
+import About from '@/components/sections/About'
+import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
+import ForeignAffiliates from '@/components/sections/ForeignAffiliates'
+import StudentsFromWorld from '@/components/sections/StudentsFromWorld'
+import CorporateClients from '@/components/sections/CorporateClients'
+import Programs from '@/components/sections/Programs'
+import Executive from '@/components/sections/Executive'
+import ContactUs from '@/components/sections/ContactUs'
 
 // import Lang from '../components/hooks/Lang'
 

@@ -1,24 +1,8 @@
 import Head from 'next/head'
-import Reviews from '../../components/sections/Reviews'
-import Rules from '../../components/sections/Rules'
-
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
+import Reviews from '@/components/sections/Reviews'
+import Rules from '@/components/sections/Rules'
 
 const executive = () => {
-  // useEffect(() => {
-
-  //   loadJs([
-  //     '/assets/js/slick.min.js',
-  //     '/assets/js/lazysizes.min.js',
-  //     '/assets/js/circle-progress.min.js',
-  //     '/assets/js/jquery.magnific-popup.min.js',
-  //     '/assets/js/myjs.js'
-  //   ], {
-  //     async: false
-  //   })
-  // }, [])
-
   return (
     <>
       <Head>

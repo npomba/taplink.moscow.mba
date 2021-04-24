@@ -3,6 +3,9 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 type FormValues = {
   name: string
   phone: string
@@ -19,6 +22,12 @@ const Form = ({
     handleSubmit,
     formState: { errors },
   } = useForm<FormValues>()
+
+  useEffect(() => {
+    loadJs(['/assets/js/formPlaceholder.js'], {
+      async: false,
+    })
+  }, [])
 
   return (
     <div id='teachersModal' className='popup-modal mfp-hide mfp-with-anim'>

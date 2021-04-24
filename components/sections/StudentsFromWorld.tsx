@@ -18,7 +18,6 @@ const StudentsFromWorld = () => {
               alt={setString(imageData.image.alt)}
               width={540}
               height={500}
-              layout='responsive'
             />
           </div>
           <div className='info'>
