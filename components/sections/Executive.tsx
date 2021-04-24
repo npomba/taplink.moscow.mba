@@ -1,7 +1,9 @@
 import Link from 'next/link'
+import Image from 'next/image'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import langMenu from '@/data/translation/menu'
+import imageData from '@/data/images/executive'
 
 const Executive = () => {
   return (
@@ -35,17 +37,19 @@ const Executive = () => {
         </div>
         <div className='dobble-images executive-images'>
           <div className='image pic-1'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/executive_pic_1.jpg'
-              alt=''
+            <Image
+              src={imageData.largerCircle.src}
+              alt={setString(imageData.largerCircle.alt)}
+              width={401}
+              height={400}
             />
           </div>
           <div className='image pic-2'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/executive_pic_2.jpg'
-              alt=''
+            <Image
+              src={imageData.smallerCircle.src}
+              alt={setString(imageData.smallerCircle.alt)}
+              width={221}
+              height={221}
             />
           </div>
           <div className='count'>
