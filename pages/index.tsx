@@ -4,7 +4,7 @@ import JumbotronMain from '@/components/sections/JumbotronMain'
 import About from '@/components/sections/About'
 import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
 import ForeignAffiliates from '@/components/sections/ForeignAffiliates'
-import StudentsFromWorld from '@/components/sections/StudentsFromWorld'
+import StudentsInternational from '@/components/sections/StudentsInternational'
 import CorporateClients from '@/components/sections/CorporateClients'
 import Programs from '@/components/sections/Programs'
 import Executive from '@/components/sections/Executive'
@@ -44,7 +44,7 @@ export default function Home({ programs }) {
         <About />
         <ConferencesInEurope />
         <ForeignAffiliates />
-        <StudentsFromWorld />
+        <StudentsInternational />
         <CorporateClients />
 
         <Programs programs={data} />

@@ -1,9 +1,9 @@
 import Image from 'next/image'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
-import imageData from '@/components/images/data/studentsFromWorld'
+import imageData from '@/components/images/data/studentsInternational'
 
-const StudentsFromWorld = () => {
+const StudentsInternational = () => {
   return (
     <section className='world-mba-section'>
       <div className='world-mba-flex'>
@@ -31,4 +31,4 @@ const StudentsFromWorld = () => {
   )
 }
 
-export default StudentsFromWorld
+export default StudentsInternational

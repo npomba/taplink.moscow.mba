@@ -4,7 +4,7 @@ import JumbotronMain from '@/components/sections/JumbotronMain'
 import About from '@/components/sections/About'
 import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
 import ForeignAffiliates from '@/components/sections/ForeignAffiliates'
-import StudentsFromWorld from '@/components/sections/StudentsFromWorld'
+import StudentsInternational from '@/components/sections/StudentsInternational'
 import CorporateClients from '@/components/sections/CorporateClients'
 import Teachers from '@/components/sections/Teachers'
 import UpToDateContent from '@/components/sections/UpToDateContent'
@@ -27,7 +27,7 @@ const about = () => {
         <About />
         <ConferencesInEurope />
         <ForeignAffiliates />
-        <StudentsFromWorld />
+        <StudentsInternational />
         <CorporateClients />
         <Teachers />
         <UpToDateContent />

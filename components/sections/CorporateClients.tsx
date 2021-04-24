@@ -1,3 +1,4 @@
+import Image from 'next/image'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 
