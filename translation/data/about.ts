@@ -9,6 +9,11 @@ export default {
     en: 'ABOUT',
   },
 
+  teachersTitleLabel: {
+    ru: 'ПРЕПОДАВАТЕЛИ',
+    en: 'EXPERTS',
+  },
+
   teachersTitleFirst: {
     ru: 'Российские и',
     en: 'Russian and',

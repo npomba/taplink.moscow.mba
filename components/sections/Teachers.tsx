@@ -13,7 +13,7 @@ const Teachers = ({ bg = 'light' }) => {
         }`}
       >
         <div className='section-pl'>
-          <div className='title-pl'>{setString(lang.aboutTitle)}</div>
+          <div className='title-pl'>{setString(lang.teachersTitleLabel)}</div>
           <div className='about-detail-content'>
             <h2>
               {setString(lang.teachersTitleFirst)}{' '}
