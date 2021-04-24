@@ -91,20 +91,6 @@ $(document).ready(function () {
     $(this).siblings('.header-mobile-third').addClass('opened')
   })
 
-  /*модалка*/
-  // if ($('.popup-open').length) {
-  //   $('.popup-open').magnificPopup({
-  //     removalDelay: 300,
-  //     fixedContentPos: true,
-  //     callbacks: {
-  //       beforeOpen: function () {
-  //         this.st.mainClass = this.st.el.attr('data-effect')
-  //       },
-  //     },
-  //     midClick: true,
-  //   })
-  // }
-
   // Видео
   if ($('.popup-youtube').length) {
     $('.popup-youtube').magnificPopup({
@@ -176,12 +162,6 @@ $(document).ready(function () {
     $(this).toggleClass('opened')
     $(this).next('.training-content').slideToggle(300)
   })
-
-  // /*Закрыть модалку*/
-  // $('.close-popup').click(function (e) {
-  //   e.preventDefault()
-  //   $('.mfp-close').click()
-  // })
 })
 
 var widthScreen = $(window).width()
