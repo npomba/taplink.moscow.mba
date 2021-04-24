@@ -91,17 +91,6 @@ $(document).ready(function () {
     $(this).siblings('.header-mobile-third').addClass('opened')
   })
 
-  // Видео
-  if ($('.popup-youtube').length) {
-    $('.popup-youtube').magnificPopup({
-      type: 'iframe',
-      mainClass: 'mfp-fade',
-      removalDelay: 160,
-      preloader: false,
-      fixedContentPos: true,
-    })
-  }
-
   // Круговая диаграмма
   if ($('.circle-js').length > 0) {
     $('.circle-js').circleProgress({
