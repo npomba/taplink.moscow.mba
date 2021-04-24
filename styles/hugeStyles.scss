@@ -7529,16 +7529,20 @@ div.popup-content {
 }
 
 .about-detailt-section--stand-alone-page {
+  &.about-detail-section .title-pl,
+  &.about-detail-section {
+    color: #333;
+  }
   &.about-detail-section {
     padding-top: 50px;
     padding-bottom: 50px;
     margin-bottom: 0;
   }
   & .about-detail-content h2,
-  .about-detail-content h3,
-  .about-detail-content h5,
-  .about-teachers-block .name {
-    color: #262626;
+  & .about-detail-content h3,
+  & .about-detail-content h5,
+  & .about-teachers-block .name {
+    color: #2d2c2a;
   }
   & .about-detail-images .pic-2 {
     border-color: #fff;
