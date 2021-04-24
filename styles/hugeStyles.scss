@@ -7524,6 +7524,21 @@ div.popup-content {
   background-color: transparent;
 }
 
-.cursor-pointer{
+.cursor-pointer {
   cursor: pointer;
+}
+
+.about-detailt-section--bg-light {
+  & .about-detail-content h2,
+  .about-detail-content h3,
+  .about-detail-content h5,
+  .about-teachers-block .name {
+    color: #262626;
+  }
+  & .about-detail-images .pic-2 {
+    border-color: #fff;
+  }
+  &::after {
+    background-color: #fff;
+  }
 }

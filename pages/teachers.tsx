@@ -27,7 +27,7 @@ const teachers = () => {
         <title>Преподаватели</title>
       </Head>
       <div className='container'>
-        <Teachers />
+        <Teachers bg='light' />
       </div>
     </>
   )

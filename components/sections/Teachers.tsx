@@ -4,10 +4,14 @@ import PopUpForm from '@/components/popups/Form'
 import setString from '@/components/hooks/setString'
 import lang from '@/translation/data/about'
 
-const Teachers = () => {
+const Teachers = ({ bg = 'light' }) => {
   return (
     <>
-      <section className='about-detail-section'>
+      <section
+        className={`about-detail-section ${
+          bg && 'about-detailt-section--bg-light'
+        }`}
+      >
         <div className='section-pl'>
           <div className='title-pl'>{setString(lang.aboutTitle)}</div>
           <div className='about-detail-content'>
