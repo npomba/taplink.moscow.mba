@@ -1,15 +1,12 @@
-import months from '../../translation/data/months'
-import header from '../../translation/data/header'
-import menu from '../../translation/data/menu'
-import footer from '../../translation/data/footer'
-import index from '../../translation/data/index'
-import about from '../../translation/data/about'
+import months from '@/data/translation/months'
+import header from '@/data/translation/header'
+import menu from '@/data/translation/menu'
+import footer from '@/data/translation/footer'
+import index from '@/data/translation/index'
+import about from '@/data/translation/about'
 
 const getInitialLocation = () => {
-
-  return {
-
-  }
+  return {}
 }
 
 const setInitialLocationToLS = () => {
@@ -20,9 +17,7 @@ const setInitialLocationToLS = () => {
   //   localStorage.setItem('lang', 'ru')
   // }
 
-  return {
-    
-  }
+  return {}
 }
 
 const Lang = (() => {
@@ -30,7 +25,7 @@ const Lang = (() => {
     init: (lang) => {
       // console.log(lang)
       setInitialLocationToLS()
-    }
+    },
   }
 })()
 

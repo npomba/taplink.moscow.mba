@@ -27,7 +27,7 @@ const teachers = () => {
         <title>Преподаватели</title>
       </Head>
       <div className='container'>
-        <Teachers bg='light' />
+        <Teachers atStandAlonePage={true} />
       </div>
     </>
   )

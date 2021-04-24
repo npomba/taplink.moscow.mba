@@ -2,7 +2,7 @@ import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
 import setString from '../components/hooks/setString'
-import lang from '../translation/data/header'
+import lang from '@/data/translation/header'
 
 const HeaderLangLink = () => {
   const router = useRouter()

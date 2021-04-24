@@ -1,5 +1,3 @@
-import React from 'react'
-
 const Students = () => {
   return (
     <section className='students-section section-pl'>

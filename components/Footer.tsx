@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import setString from '../components/hooks/setString'
-import langHeader from '../translation/data/header'
-import lang from '../translation/data/footer'
+import setString from '@/components/hooks/setString'
+import langHeader from '@/data/translation/header'
+import lang from '@/data/translation/footer'
 
 const Footer = () => {
   return (

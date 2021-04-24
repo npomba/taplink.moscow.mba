@@ -1,5 +1,5 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/index'
 
 const About = () => {
   return (

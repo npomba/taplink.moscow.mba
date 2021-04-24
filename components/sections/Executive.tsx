@@ -1,7 +1,7 @@
 import Link from 'next/link'
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
-import langMenu from '../../translation/data/menu'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/index'
+import langMenu from '@/data/translation/menu'
 
 const Executive = () => {
   return (

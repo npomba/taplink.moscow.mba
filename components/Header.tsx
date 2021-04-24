@@ -1,8 +1,8 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 // import PopulateWithPrograms from './hooks/populateWithPrograms'
-import lang from '@/translation/data/header'
-import langMenu from '@/translation/data/menu'
+import lang from '@/data/translation/header'
+import langMenu from '@/data/translation/menu'
 import setString from '@/components/hooks/setString'
 
 import HeaderLangLink from '@/components/HeaderLangLink'

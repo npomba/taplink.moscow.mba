@@ -1,5 +1,7 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
+import Image from 'next/image'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/index'
+import imageData from '@/components/images/data/foreignAffiliates'
 
 const ForeignAffiliates = () => {
   return (
@@ -10,28 +12,34 @@ const ForeignAffiliates = () => {
         <ul className='branches-images'>
           <li>
             <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/campuses/campus-1.jpg'
-                alt=''
+              <Image
+                src={imageData.circleOne.src}
+                alt={setString(imageData.circleOne.alt)}
+                width={191}
+                height={191}
+                layout='responsive'
               />
             </div>
           </li>
           <li>
             <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/campuses/campus-2.jpg'
-                alt=''
+              <Image
+                src={imageData.circleTwo.src}
+                alt={setString(imageData.circleTwo.alt)}
+                width={191}
+                height={191}
+                layout='responsive'
               />
             </div>
           </li>
           <li>
             <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/campuses/campus-3.jpg'
-                alt=''
+              <Image
+                src={imageData.circleThree.src}
+                alt={setString(imageData.circleThree.alt)}
+                width={191}
+                height={191}
+                layout='responsive'
               />
             </div>
           </li>
@@ -46,10 +54,11 @@ const ForeignAffiliates = () => {
           </li>
         </ul>
         <div className='branches-map'>
-          <img
-            className='lazyload'
-            data-src='/assets/images/branches_map.png'
-            alt=''
+          <Image
+            src='/assets/images/branches_map.png'
+            alt={setString(lang.foreignAffiliatesDisc)}
+            width={659}
+            height={394}
           />
         </div>
       </div>

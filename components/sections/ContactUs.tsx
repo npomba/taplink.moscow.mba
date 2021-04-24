@@ -1,5 +1,5 @@
 import setString from '@/components/hooks/setString'
-import lang from '@/translation/data/index'
+import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 

@@ -1,5 +1,5 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/about'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/about'
 
 const Accreditation = () => {
   return (

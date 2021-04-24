@@ -1,5 +1,7 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
+import Image from 'next/image'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/index'
+import imageData from '@/components/images/data/conferencesInEurope'
 
 const ConferencesInEurope = () => {
   return (
@@ -13,19 +15,23 @@ const ConferencesInEurope = () => {
           </h2>
           <p className='title-desc'>{setString(lang.orgDisc)}</p>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/organization_1.jpg'
-              alt=''
+            <Image
+              src={imageData.shorterImage.src}
+              alt={setString(imageData.shorterImage.alt)}
+              width={623}
+              height={364}
+              layout='responsive'
             />
           </div>
         </div>
         <div className='organization-image'>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/organization_2.jpg'
-              alt=''
+            <Image
+              src={imageData.higherImage.src}
+              alt={setString(imageData.higherImage.alt)}
+              width={415}
+              height={690}
+              layout='responsive'
             />
           </div>
         </div>

@@ -1,7 +1,7 @@
-import setString from '../../components/hooks/setString'
-import langMenu from '../../translation/data/menu'
-import langHeader from '../../translation/data/header'
 import Link from 'next/link'
+import setString from '@/components/hooks/setString'
+import langMenu from '@/data/translation/menu'
+import langHeader from '@/data/translation/header'
 import Until from '@/components/dates/Until'
 
 const Programs = ({ programs }) => {

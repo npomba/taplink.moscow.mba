@@ -1,5 +1,7 @@
-import setString from '../hooks/setString'
-import lang from '../../translation/data/index'
+import Image from 'next/image'
+import setString from '@/components/hooks/setString'
+import lang from '@/data/translation/index'
+import imageData from '@/components/images/data/studentsFromWorld'
 
 const StudentsFromWorld = () => {
   return (
@@ -11,10 +13,12 @@ const StudentsFromWorld = () => {
         </div>
         <div className='world-mba-image'>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/world_mba_1.jpg'
-              alt=''
+            <Image
+              src={imageData.image.src}
+              alt={setString(imageData.image.alt)}
+              width={540}
+              height={500}
+              layout='responsive'
             />
           </div>
           <div className='info'>

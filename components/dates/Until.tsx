@@ -1,5 +1,5 @@
-import langMenu from '@/translation/data/menu'
-import langMonths from '@/translation/data/months'
+import langMenu from '@/data/translation/menu'
+import langMonths from '@/data/translation/months'
 import setString from '@/components/hooks/setString'
 
 const Until = ({ preposition = true }) => {
