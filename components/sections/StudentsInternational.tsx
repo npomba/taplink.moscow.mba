@@ -16,8 +16,8 @@ const StudentsInternational = () => {
             <Image
               src={imageData.image.src}
               alt={setString(imageData.image.alt)}
-              width={540}
-              height={500}
+              width={769}
+              height={597}
             />
           </div>
           <div className='info'>
