@@ -1,4 +1,5 @@
 import Popup from 'reactjs-popup'
+import Image from 'next/image'
 import Until from '@/components/dates/Until'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import JumbotronLabel from '@/components/general/JumbotronLabel'
@@ -11,7 +12,11 @@ const JumbotronProgram = ({ data, format = 'online' }) => {
 	return (
 		<section className='jumbotron-section'>
 			<div className='image'>
-				<img src={`/assets/images/programs-bgs/${data.picture}`} alt='' />
+				<Image
+					src={`/assets/images/programs-bgs/${data.picture}`}
+					alt='Ваш будущий диплом'
+					layout='fill'
+				/>
 			</div>
 			<div className='container'>
 				<div className='jumbotron-content'>
