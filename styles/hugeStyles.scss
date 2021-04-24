@@ -7528,7 +7528,12 @@ div.popup-content {
   cursor: pointer;
 }
 
-.about-detailt-section--bg-light {
+.about-detailt-section--stand-alone-page {
+  &.about-detail-section {
+    padding-top: 50px;
+    padding-bottom: 50px;
+    margin-bottom: 0;
+  }
   & .about-detail-content h2,
   .about-detail-content h3,
   .about-detail-content h5,

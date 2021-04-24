@@ -9,7 +9,7 @@ const Teachers = ({ bg = 'light' }) => {
     <>
       <section
         className={`about-detail-section ${
-          bg && 'about-detailt-section--bg-light'
+          bg && 'about-detailt-section--stand-alone-page'
         }`}
       >
         <div className='section-pl'>
