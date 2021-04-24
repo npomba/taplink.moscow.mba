@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
-import imageData from '@/components/images/data/studentsInternational'
+import imageData from '@/data/images/studentsInternational'
 
 const StudentsInternational = () => {
   return (

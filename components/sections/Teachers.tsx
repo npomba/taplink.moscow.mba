@@ -4,7 +4,7 @@ import Image from 'next/image'
 import PopUpForm from '@/components/popups/Form'
 import setString from '@/components/hooks/setString'
 import lang from 'data/translation/about'
-import imagesData from '@/components/images/data/teachers'
+import imagesData from '@/data/images/teachers'
 
 const Teachers = ({ atStandAlonePage = false }) => {
   return (
