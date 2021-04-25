@@ -20,52 +20,52 @@ import Pros from '@/components/sections/Pros'
 // import loadJs from 'loadjs'
 
 const PageOnlineProgram = ({ program }) => {
-  // useEffect(() => {
+	// useEffect(() => {
 
-  //   loadJs([
-  //     '/assets/js/slick.min.js',
-  //     '/assets/js/lazysizes.min.js',
-  //     '/assets/js/circle-progress.min.js',
-  //     '/assets/js/jquery.magnific-popup.min.js',
-  //     '/assets/js/myjs.js'
-  //   ], {
-  //     async: false
-  //   })
-  // }, [])
-  const data = program.data
+	//   loadJs([
+	//     '/assets/js/slick.min.js',
+	//     '/assets/js/lazysizes.min.js',
+	//     '/assets/js/circle-progress.min.js',
+	//     '/assets/js/jquery.magnific-popup.min.js',
+	//     '/assets/js/myjs.js'
+	//   ], {
+	//     async: false
+	//   })
+	// }, [])
+	const data = program
 
-  return (
-    <>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
+	return (
+		<>
+			<Head>
+				<title>{data.title}</title>
+			</Head>
 
-      <JumbotronProgram data={data} format={'online'} />
+			<JumbotronProgram data={data} format={'online'} />
 
-      <div className='container'>
-        <ProgramGoal data={data} />
-        <WhatWillYouLearn data={data} />
-        <ProgramDesc />
-        <Pros format={'online'} />
-        <HowProcessGoes />
-        <ProgramModules />
-        <Teachers />
-        <RelevantContent />
-        <CorporateClients />
-        <Accreditation />
-        <Diploma />
-        <Students />
-        <Reviews />
-        <Faq />
+			<div className='container'>
+				<ProgramGoal data={data} />
+				<WhatWillYouLearn data={data} />
+				<ProgramDesc />
+				<Pros format={'online'} />
+				<HowProcessGoes />
+				<ProgramModules />
+				<Teachers />
+				<RelevantContent />
+				<CorporateClients />
+				<Accreditation />
+				<Diploma />
+				<Students />
+				<Reviews />
+				<Faq />
 
-        <ContactUs
-          title={
-            'Не знаете что выбрать? Получите консультацию по программам MBA'
-          }
-        />
-      </div>
-    </>
-  )
+				<ContactUs
+					title={
+						'Не знаете что выбрать? Получите консультацию по программам MBA'
+					}
+				/>
+			</div>
+		</>
+	)
 }
 
 export default PageOnlineProgram

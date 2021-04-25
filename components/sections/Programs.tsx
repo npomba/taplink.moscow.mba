@@ -97,7 +97,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>
@@ -140,7 +140,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>
@@ -222,7 +222,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>
@@ -265,7 +265,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>
@@ -347,7 +347,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>
@@ -390,7 +390,7 @@ const Programs = ({ programs }) => {
                       return (
                         <li key={item._id}>
                           <Link
-                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item._id}`}
+                            href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                             locale='ru'
                           >
                             <a>{setString(item, true)}</a>

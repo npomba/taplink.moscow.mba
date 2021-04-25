@@ -5,7 +5,7 @@ const useAt = () => {
 
   const getSplitedPath = pathname
     .split('/')
-    .filter((item) => item !== '' && item !== '[id]')
+    .filter((item) => item !== '' && item !== '[url]')
 
   const mini = () => {
     return getSplitedPath[1] === 'mini'
