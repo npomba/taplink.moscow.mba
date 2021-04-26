@@ -175,6 +175,7 @@ if ($('.mini-programs-slider').length) {
     })
 }
 
+// Hide some jQuery slgs
 jQuery.event.special.touchstart = {
   setup: function( _, ns, handle ) {
       this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') });
