@@ -27,7 +27,7 @@ const JumbotronCta = () => {
   }, [])
 
   return (
-    <section className='jumbotron-section'>
+    <section className='jumbotron-section jumbotron-section--cta'>
       <div className='image'>
         <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
       </div>
@@ -35,7 +35,7 @@ const JumbotronCta = () => {
         <div className='jumbotron-content jumbotron-content-cta'>
           <div className='jumbotron-flex'>
             <div className='jumbotron-text'>
-              <ul className='jumCta-links'>
+              <ul className='jumCta-links desktop'>
                 <li>
                   <Link href='/programs/industry'>
                     <a>INDUSTRY MBA</a>
@@ -51,6 +51,14 @@ const JumbotronCta = () => {
                 <li>
                   <Link href='/programs/mini'>
                     <a>MINI MBA</a>
+                  </Link>
+                </li>
+              </ul>
+
+              <ul className='jumCta-links mobile'>
+                <li>
+                  <Link href='/programs'>
+                    <a>{setString(lang.programsMbaMobileLink)}</a>
                   </Link>
                 </li>
               </ul>

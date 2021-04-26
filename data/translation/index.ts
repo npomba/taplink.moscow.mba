@@ -11,6 +11,11 @@ export default {
     en: 'Choose program',
   },
 
+  programsMbaMobileLink: {
+    ru: 'Программы MBA',
+    en: 'MBA Programs',
+  },
+
   headerTitlePreHighlight: {
     ru: 'Получите',
     en: 'Concur',
