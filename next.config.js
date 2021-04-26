@@ -27,7 +27,6 @@ module.exports = {
 							styleSrc: ["'self'"],
 						},
 					},
-					expectCT: 'true',
 					referrerPolicy: 'no-referrer',
 				}),
 			},
