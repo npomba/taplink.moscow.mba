@@ -6,6 +6,7 @@ import '../styles/hugeStyles.sass'
 import '../styles/hugeStyles.scss'
 import { server } from '@/config/index'
 import { motion, AnimatePresence } from 'framer-motion'
+import { withSecureHeaders } from 'next-secure-headers'
 
 function MyApp({ Component, pageProps, appProps, router }) {
   // console.log(appProps)
@@ -42,7 +43,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
   )
 }
 
-export default MyApp
+export default withSecureHeaders()(MyApp)
 
 MyApp.getInitialProps = async (appContext) => {
   const appProps = await App.getInitialProps(appContext)

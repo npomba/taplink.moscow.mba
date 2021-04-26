@@ -22,6 +22,11 @@ module.exports = {
             { maxAge: 60 * 60 * 24 * 4, includeSubDomains: true },
           ],
           referrerPolicy: 'same-origin',
+          frameGuard: 'deny',
+          noopen: 'noopen',
+          nosniff: 'nosniff',
+          xssProtection: 'sanitize',
+          referrerPolicy: 'no-referrer',
         }),
       },
     ]
