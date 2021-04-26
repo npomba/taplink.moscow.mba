@@ -36,7 +36,6 @@ const PageBlendedProgram = ({ program }) => {
   //   })
   // }, [])
   const data = program
-  console.log(data)
 
   return (
     <>
