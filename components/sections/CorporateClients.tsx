@@ -11,7 +11,7 @@ const CorporateClients = () => {
     loadJs(['/assets/js/corporateClientsSlider.js'], {
       async: false,
     })
-  }, [])
+  })
 
   return (
     <section className='clients-section'>

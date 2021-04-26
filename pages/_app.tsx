@@ -5,7 +5,7 @@ import PageWrapper from '@/components/PageWrapper'
 import '../styles/hugeStyles.sass'
 import '../styles/hugeStyles.scss'
 import { server } from '@/config/index'
-import { motion } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 
 function MyApp({ Component, pageProps, appProps, router }) {
   // console.log(appProps)
@@ -14,23 +14,29 @@ function MyApp({ Component, pageProps, appProps, router }) {
     <>
       <PageWrapper>
         <Header programs={appProps} />
-        <motion.div
-          key={router.route}
-          initial='pageInitial'
-          animate='pageAnimate'
-          variants={{
-            pageInitial: {
-              opacity: 0,
-            },
-            pageAnimate: {
-              opacity: 1,
-            },
-          }}
-        >
-          <div className='main-content'>
-            <Component {...pageProps} />
-          </div>
-        </motion.div>
+        <AnimatePresence>
+          <motion.div
+            key={router.route}
+            initial='pageInitial'
+            animate='pageAnimate'
+            exit='pageExit'
+            variants={{
+              pageInitial: {
+                opacity: 0,
+              },
+              pageAnimate: {
+                opacity: 1,
+              },
+              pageExit: {
+                opacity: 0,
+              },
+            }}
+          >
+            <div className='main-content'>
+              <Component {...pageProps} />
+            </div>
+          </motion.div>
+        </AnimatePresence>
         <Footer />
       </PageWrapper>
     </>
