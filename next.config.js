@@ -1,6 +1,7 @@
 const { createSecureHeaders } = require('next-secure-headers')
 
 module.exports = {
+	poweredByHeader: false,
 	i18n: {
 		locales: ['ru', 'en-US'],
 		defaultLocale: 'ru',
