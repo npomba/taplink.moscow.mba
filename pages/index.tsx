@@ -1,6 +1,6 @@
 import Head from 'next/head'
 
-import JumbotronMain from '@/components/sections/JumbotronMain'
+import JumbotronCta from '@/components/sections/JumbotronCta'
 import About from '@/components/sections/About'
 import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
 import ForeignAffiliates from '@/components/sections/ForeignAffiliates'
@@ -38,7 +38,7 @@ export default function Home({ programs }) {
         <title>Moscow Business Academy</title>
       </Head>
 
-      <JumbotronMain />
+      <JumbotronCta />
 
       <div className='container'>
         <About />

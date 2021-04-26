@@ -11,6 +11,73 @@ export default {
     en: 'Choose program',
   },
 
+  headerTitlePreHighlight: {
+    ru: 'Получите',
+    en: 'Concur',
+  },
+
+  headerTitleHighlight: {
+    ru: 'современное',
+    en: 'relevant',
+  },
+
+  headerTitlePostHighlight: {
+    ru: 'бизнес образование от международных экспертов',
+    en: 'business education from international experts',
+  },
+
+  headerDescTopHightlight: {
+    ru: 'Скидка 45%',
+    en: '45% discount',
+  },
+
+  headerDescTop: {
+    ru: 'на все программы ONLINE до конца месяца!',
+    en: 'on all ONLINE programs this month',
+  },
+
+  headerDescription: {
+    ru:
+      'Оставьте заявку и получите консультацию по программам, а также узнайте возможные варианты скидок и требования к поступлению',
+    en:
+      'Get a consultation, discounts information, and requirements by submitting a form',
+  },
+
+  benefitOneDisc: {
+    ru: 'Программ MBA и курсов',
+    en: 'MBA Programs and courses',
+  },
+
+  benefitTwoDisc: {
+    ru: 'Новейшие программы 2021 года',
+    en: 'Newest programs of 2021',
+  },
+
+  benefitThreeDisc: {
+    ru: 'международных экспертов',
+    en: 'international experts',
+  },
+
+  benefitFourDisc: {
+    ru: 'студентов по всему миру',
+    en: 'students from all over the world',
+  },
+
+  jumInfoOne: {
+    ru: 'Международные дипломы',
+    en: 'International diplomas',
+  },
+
+  jumInfoTwo: {
+    ru: 'ONLINE и очные форматы обучения',
+    en: 'Online and offline formats',
+  },
+
+  jumInfoThree: {
+    ru: 'Разборы практических бизнес-кейсов',
+    en: 'Practical examples',
+  },
+
   aboutTitle: {
     ru: 'ОБ АКАДЕМИИ',
     en: 'ABOUT',
@@ -188,6 +255,11 @@ export default {
 
   inputSubmit: {
     ru: 'Оставить заявку',
+    en: 'Submit',
+  },
+
+  inputSubmitAlt: {
+    ru: 'Отправить',
     en: 'Submit',
   },
 

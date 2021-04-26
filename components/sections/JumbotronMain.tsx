@@ -31,7 +31,7 @@ const JumbotronMain = () => {
             <a className='jumbotron-squad'>
               <p>{setString(lang.redCubeLink)}</p>
               <div className='arrow'>
-                <img src='/assets/images/arrow_diagonal.svg' alt='' />
+                <img src='/assets/images/arrow_diagonal.svg' />
               </div>
             </a>
           </Link>
