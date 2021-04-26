@@ -8,11 +8,15 @@ import setString from '@/components/hooks/setString'
 import HeaderLangLink from '@/components/HeaderLangLink'
 import Until from '@/components/dates/Until'
 
+import useAt from '@/components/hooks/useAt'
+
 const Header = ({ programs }) => {
   // const Header = () => {
   const { data } = programs.programs
 
   const router = useRouter()
+
+  const at = useAt()
 
   // let loc = router.locale === 'en-US' ? 'en' : 'ru'
 
@@ -70,17 +74,23 @@ const Header = ({ programs }) => {
           <ul className='header-menu'>
             <li>
               <Link href='/about'>
-                <a>{setString(lang.linkAbout)}</a>
+                <a className={at.about ? 'red' : ''}>
+                  {setString(lang.linkAbout)}
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/teachers' locale='ru'>
-                <a>{setString(lang.linkTeachers)}</a>
+                <a className={at.teachers ? 'red' : ''}>
+                  {setString(lang.linkTeachers)}
+                </a>
               </Link>
             </li>
             <li>
               <Link href='/webinars' locale='ru'>
-                <a>{setString(lang.linkWebinars)}</a>
+                <a className={at.webinars ? 'red' : ''}>
+                  {setString(lang.linkWebinars)}
+                </a>
               </Link>
             </li>
             {/* <li>
@@ -91,13 +101,13 @@ const Header = ({ programs }) => {
             </li> */}
             <li>
               <Link href='/articles' locale='ru'>
-                <a>{setString(lang.linkNews)}</a>
+                <a className={at.articles ? 'red' : ''}>
+                  {setString(lang.linkNews)}
+                </a>
               </Link>
             </li>
 
-            {router.pathname === '/' || router.pathname === '/about' ? (
-              <HeaderLangLink />
-            ) : null}
+            {at.index || at.about ? <HeaderLangLink /> : null}
           </ul>
         </div>
       </div>
