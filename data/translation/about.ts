@@ -265,7 +265,7 @@ export default {
   },
 
   accreditationLicenseLink: {
-    ru: 'Лицензия Министерства Образования серия ... № ....',
-    en: 'License of the Ministry of Education ... № ....',
+    ru: 'Лицензия Министерства Образования',
+    en: 'License of the Ministry of Education',
   },
 }

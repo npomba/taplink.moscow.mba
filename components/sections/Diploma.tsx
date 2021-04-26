@@ -7,7 +7,15 @@ const Diploma = () => {
     <section className='diplom-section'>
       <div className='image'>
         <Image
-          src='/assets/images/diploma.jpg'
+          src={
+            at.mini
+              ? '/assets/images/diplomas/mba-mini-diploma.jpg'
+              : at.professional
+              ? '/assets/images/diplomas/mba-professional-diploma.jpg'
+              : at.industry
+              ? '/assets/images/diplomas/mba-industry-diploma.jpg'
+              : '/assets/images/diplomas/mba-mini-diploma.jpg'
+          }
           alt='Ваш будущий диплом'
           width={532}
           height={376}
