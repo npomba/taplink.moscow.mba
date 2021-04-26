@@ -2,7 +2,9 @@ const Pros = ({ format = 'online' }) => {
   if (format === 'online') {
     return (
       <section className='advantages-section section-pl'>
-        <div className='title-pl red'>online</div>
+        <div className='title-pl red'>
+          online <br /> модули
+        </div>
         <h2>На MBA mini мы обучаем онлайн. И делаем это качественно</h2>
         <div className='advantages-content'>
           <ul className='advantages-list'>
@@ -76,7 +78,9 @@ const Pros = ({ format = 'online' }) => {
   if (format === 'blended') {
     return (
       <section className='advantages-section blended-advantages section-pl'>
-        <div className='title-pl red'>online</div>
+        <div className='title-pl red'>
+          online <br /> модули
+        </div>
         <h2>
           Также на MBA blended мы обучаем онлайн. И делаем это качественно
         </h2>
