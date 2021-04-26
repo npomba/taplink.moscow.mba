@@ -8,7 +8,7 @@ import ProgramDesc from '@/components/sections/ProgramDesc'
 import HowProcessGoes from '@/components/sections/HowProcessGoes'
 import ProgramsModules from '@/components/sections/ProgramsModules'
 import ContactUs from '@/components/sections/ContactUs'
-import Faq from '@/components/sections/Faq'
+import Qna from '@/components/sections/Qna'
 import Students from '@/components/sections/Students'
 import Teachers from '@/components/sections/Teachers'
 import RelevantContent from '@/components/sections/RelevantContent'
@@ -63,7 +63,7 @@ const PageBlendedProgram = ({ program }) => {
         <Students />
         <Reviews />
         <CostOfStudy />
-        <Faq />
+        <Qna />
         <ContactUs
           title={
             'Не знаете что выбрать? Получите консультацию по программам MBA'

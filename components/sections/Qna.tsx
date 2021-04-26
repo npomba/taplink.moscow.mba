@@ -1,4 +1,13 @@
-const Faq = () => {
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
+const Qna = () => {
+  useEffect(() => {
+    loadJs(['/assets/js/qna.js'], {
+      async: false,
+    })
+  }, [])
+
   return (
     <section className='faq-section section-pl'>
       <div className='title-pl red'>Узнай все</div>
@@ -148,4 +157,4 @@ const Faq = () => {
   )
 }
 
-export default Faq
+export default Qna
