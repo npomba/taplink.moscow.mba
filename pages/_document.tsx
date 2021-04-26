@@ -17,7 +17,7 @@ class MyDocument extends Document {
           <NextScript />
           <script
             type='text/javascript'
-            src='/assets/js/vendors/jquery-3.5.1.min.js'
+            src='/assets/js/vendors/jquery-3.6.0.min.js'
           ></script>
           <script
             type='text/javascript'
