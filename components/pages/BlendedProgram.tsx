@@ -42,7 +42,7 @@ const PageBlendedProgram = ({ program }) => {
     <>
       <NextSeo
         title={data.title}
-        description={truncate(program.goalsOfProgram, 155)}
+        description={truncate(program.goalsOfProgram, 120)}
       />
 
       <JumbotronProgram data={data} format={'blended'} />

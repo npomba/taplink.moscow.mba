@@ -39,7 +39,7 @@ const PageOnlineProgram = ({ program }) => {
     <>
       <NextSeo
         title={data.title}
-        description={truncate(program.goalsOfProgram, 175)}
+        description={truncate(program.goalsOfProgram, 120)}
       />
 
       <JumbotronProgram data={data} format={'online'} />
