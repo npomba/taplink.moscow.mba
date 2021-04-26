@@ -21,9 +21,11 @@ function MyApp({ Component, pageProps, appProps, router }) {
           // exit='pageExit'
           variants={{
             pageInitial: {
-              opacity: 0,
+              scale: 0.96,
+              opacity: 0.4,
             },
             pageAnimate: {
+              scale: 1,
               opacity: 1,
             },
             // pageExit: {
