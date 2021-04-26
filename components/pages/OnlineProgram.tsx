@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
 import Reviews from '@/components/sections/Reviews'
 import ProgramGoal from '@/components/sections/ProgramGoal'
@@ -36,9 +37,10 @@ const PageOnlineProgram = ({ program }) => {
 
   return (
     <>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
+      <NextSeo
+        title={data.title}
+        description={truncate(program.goalsOfProgram, 175)}
+      />
 
       <JumbotronProgram data={data} format={'online'} />
 

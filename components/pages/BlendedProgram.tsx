@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Reviews from '@/components/sections/Reviews'
 import Rules from '@/components/sections/Rules'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
@@ -39,9 +40,10 @@ const PageBlendedProgram = ({ program }) => {
 
   return (
     <>
-      <Head>
-        <title>{data.title}</title>
-      </Head>
+      <NextSeo
+        title={data.title}
+        description={truncate(program.goalsOfProgram, 155)}
+      />
 
       <JumbotronProgram data={data} format={'blended'} />
 
