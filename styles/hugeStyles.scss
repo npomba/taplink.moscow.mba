@@ -7723,10 +7723,14 @@ div.popup-content {
     width: 100%;
     justify-content: space-evenly;
     & li:nth-child(1) {
-      max-width: 185px;
+      max-width: 277px;
+      padding-right: 57px;
+      border-right: 1px solid rgb(#fff, 0.3);
     }
     & li:nth-child(2) {
-      max-width: 240px;
+      max-width: 297px;
+      padding-right: 57px;
+      border-right: 1px solid rgb(#fff, 0.3);
     }
     & li:nth-child(3) {
       max-width: 287px;
