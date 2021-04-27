@@ -1,4 +1,6 @@
 import App from 'next/app'
+import { DefaultSeo } from 'next-seo'
+import SEO from '../seo.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper'
@@ -12,6 +14,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
   // console.log(appProps)
   return (
     <>
+      <DefaultSeo {...SEO} />
       <PageWrapper>
         <Header programs={appProps} />
         {/* <AnimatePresence> */}
