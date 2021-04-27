@@ -1,0 +1,5 @@
+{
+  "collectMetrics": true,
+  "cleanUrls": true,
+  "trailingSlash": false
+}
