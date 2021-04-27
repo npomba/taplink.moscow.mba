@@ -29,7 +29,7 @@ module.exports = {
               ],
               defaultSrc: ["'self'", 'https://ipo-cp.ru'],
               scriptSrc: ["'self'"],
-              styleSrc: ["'self'", 'unsafe-inline'],
+              styleSrc: 'unsafe-inline',
             },
           },
           referrerPolicy: 'no-referrer',
