@@ -20,18 +20,18 @@ module.exports = {
           noopen: 'noopen',
           nosniff: 'nosniff',
           xssProtection: 'sanitize',
-          contentSecurityPolicy: {
-            directives: {
-              connectSrc: [
-                "'self'",
-                'https://ipo-cp.ru',
-                'vitals.vercel-insights.com',
-              ],
-              defaultSrc: ["'self'", 'https://ipo-cp.ru'],
-              scriptSrc: ["'self'"],
-              styleSrc: 'unsafe-inline',
-            },
-          },
+          // contentSecurityPolicy: {
+          //   directives: {
+          //     connectSrc: [
+          //       "'self'",
+          //       'https://ipo-cp.ru',
+          //       'vitals.vercel-insights.com',
+          //     ],
+          //     defaultSrc: ["'self'", 'https://ipo-cp.ru'],
+          //     scriptSrc: ["'self'"],
+          //     styleSrc: 'unsafe-inline',
+          //   },
+          // },
           referrerPolicy: 'no-referrer',
         }),
       },
