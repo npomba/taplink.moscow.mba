@@ -10,7 +10,7 @@ export default {
   },
 
   teachersTitleLabel: {
-    ru: 'ПРЕПОДАВАТЕЛИ',
+    ru: 'ЭКСПЕРТЫ',
     en: 'EXPERTS',
   },
 
@@ -170,7 +170,7 @@ export default {
   },
 
   teachersPopupFormTitle: {
-    ru: 'Узнайте своих преподавателей',
+    ru: 'Узнайте своих экспертов',
     en: 'Get to know experts ',
   },
 

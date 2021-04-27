@@ -6,7 +6,7 @@ const teachers = () => {
   return (
     <>
       <Head>
-        <title>Преподаватели</title>
+        <title>Эксперты</title>
       </Head>
       <div className='container'>
         <Teachers atStandAlonePage={true} />

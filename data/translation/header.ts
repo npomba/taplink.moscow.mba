@@ -15,7 +15,7 @@ export default {
   },
 
   linkTeachers: {
-    ru: 'Преподаватели',
+    ru: 'Эксперты',
     en: 'Experts',
   },
 

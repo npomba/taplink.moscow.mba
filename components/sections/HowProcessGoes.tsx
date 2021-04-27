@@ -67,9 +67,7 @@ const HowProcessGoes = () => {
           </div>
           <div id='process-step-3' className='process-step-block'>
             <div className='number'>3</div>
-            <div className='title'>
-              Помощь и обратная связь от преподавателей
-            </div>
+            <div className='title'>Помощь и обратная связь от экспертов</div>
             <ul className='simple-list'>
               <li>
                 Вы будете получать обратную связь по решению кейсов, проектным

@@ -928,7 +928,7 @@ const executive = () => {
                   <i></i>
                   <i></i>
                 </div>
-                <div className='faq-question'>Кто наши преподаватели?</div>
+                <div className='faq-question'>Кто наши эксперты?</div>
                 <div className='faq-answer'>
                   <p>
                     Программа профессиональной переподготовки Mini MBA
