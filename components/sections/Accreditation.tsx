@@ -1,3 +1,5 @@
+import Image from 'next/image'
+import imgData from '@/data/images/accreditation'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/about'
 
@@ -5,10 +7,11 @@ const Accreditation = () => {
   return (
     <section className='accreditations-section small-mb'>
       <div className='image'>
-        <img
-          className='lazyload'
-          data-src='/assets/images/accreditations_pic_1.jpg'
-          alt=''
+        <Image
+          src={imgData.accreditationImageAlt.src}
+          alt={setString(imgData.accreditationImageAlt.alt)}
+          width={644}
+          height={664}
         />
       </div>
       <div className='accreditations-content'>
@@ -18,7 +21,12 @@ const Accreditation = () => {
           <li>{setString(lang.accreditationItemOne)}</li>
           <li>{setString(lang.accreditationItemTwo)}</li>
         </ul>
-        <a href='' className='accreditations-link'>
+        <a
+          href='https://isga.obrnadzor.gov.ru/rlic/details/2df11621-2d30-4173-9389-2fecc24a7639/'
+          target='_blank'
+          rel='noopener noreferrer'
+          className='accreditations-link'
+        >
           <div className='pic'>
             <img src='/assets/images/icon_list.svg' alt='' />
           </div>
