@@ -25,7 +25,7 @@ export default async (req, res) => {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: 'temp@testmba.ipo.msk.ru',
+      from: 'info@moscow.mba',
       to: `${
         dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'

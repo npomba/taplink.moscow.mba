@@ -28,37 +28,9 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
         <title>Mini MBA</title>
       </Head>
 
-      {/* jumbotron-section */}
       <section className='jumbotron-section jumbotron-programs'>
         <div className='container'>
           <Breadcrumbs />
-          {/* <div className='jumbotron-content jumbotron-content-programs-page'>
-            <div className='breadcrumbs-outer jumbotron-breadcrumbs'>
-              <ul className='breadcrumbs'>
-                <li>
-                  <a href=''>Программы MBA</a>
-                </li>
-                <li>
-                  <a href=''>Mini MBA</a>
-                </li>
-                <li>
-                  <span>Mini MBA</span>
-                </li>
-              </ul>
-            </div> */}
-          {/* <div className='jumbotron-flex'>
-              <div className='jumbotron-text jumbotron-text-mini'>
-                <h1>Mini MBA online</h1>
-                <div className='desc'>
-                  Программа профессиональной переподготовки Mini MBA разработана
-                  для специалистов и руководителей среднего звена, которые хотят
-                  систематизировать имеющиеся знания или познакомиться с
-                  ключевыми аспектами новой для себя сферы управленческой
-                  деятельности.
-                </div>
-              </div>
-            </div> */}
-          {/* </div> */}
         </div>
       </section>
       <div className='container'>
@@ -138,7 +110,6 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
             </li>
           </ul>
 
-          {/* mini-programs-section */}
           <div className='mini-programs-section'>
             <div className='mini-programs-section__programs-info'>
               <div className='programs-info__title'>
