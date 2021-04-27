@@ -2287,11 +2287,6 @@ footer {
     top: -1px;
     position: absolute;
     z-index: 2;
-    img {
-      height: 100%;
-      object-fit: cover;
-      width: 100%;
-    }
   }
 }
 
@@ -5559,12 +5554,12 @@ footer {
     }
     .image {
       width: calc(100% + 2px);
-      height: 400px;
+      // height: 400px;
     }
   }
   .accreditations-content {
     margin-left: 0;
-    margin-top: 400px;
+    margin-top: 701px;
     min-height: 1px;
     padding: 40px 50px 30px;
   }
@@ -7315,9 +7310,9 @@ footer {
       min-height: 260px;
     }
   }
-  .accreditations-section .image {
-    height: 300px;
-  }
+  // .accreditations-section .image {
+  //   height: 300px;
+  // }
   .jumbotron-top {
     margin-bottom: 25px;
   }
@@ -7764,4 +7759,12 @@ div.popup-content {
 
 .popup-content-origin {
   max-width: 1024px;
+}
+
+.training-content__title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 17px;
+  line-height: 120%;
+  margin-bottom: 17px;
 }

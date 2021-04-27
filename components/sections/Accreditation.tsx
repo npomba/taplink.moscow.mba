@@ -12,6 +12,7 @@ const Accreditation = () => {
           alt={setString(imgData.accreditationImageAlt.alt)}
           width={644}
           height={664}
+          layout='responsive'
         />
       </div>
       <div className='accreditations-content'>

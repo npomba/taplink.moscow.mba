@@ -1,0 +1,9 @@
+.container
+  display: flex
+
+  @supports (gap: 30px)
+    gap: 30px
+
+  @supports not (gap: 30px)
+    & > *:not(:last-child)
+      margin-right: 30px
