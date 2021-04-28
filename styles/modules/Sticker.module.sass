@@ -1,0 +1,95 @@
+.sheet
+  &.short,
+  &.long
+    position: relative
+    padding: 56px 71px
+    width: 100%
+    @media(max-width: 767px)
+      padding: 45px 50px
+
+  &.short
+    flex: 1
+
+  &.long
+    display: flex
+    @media (min-width: 767px)
+      & > *:nth-last-child(1)
+        display: flex
+        flex-direction: column
+        align-items: center
+
+      &::before
+        content: '',
+        width: 1px
+        height: 50%
+        position: absolute
+        top: 50%
+        right: 50%
+        transform: translate(-50%, -50%)
+        background-color: rgb(#fff, 0.3)
+
+    @media (min-width: 767px) and (max-width: 1329px)
+      @supports (gap: 160px)
+        gap: 160px
+
+      // @supports not (gap: 30px)
+      //   & > *:not(:last-child)
+      //     margin-right: 30px
+
+    @media (max-width: 767px)
+      flex-direction: column
+
+    & > *
+      flex: 1
+
+  &.red,
+  &.dark
+    color: #fff
+    &::after
+      content: ''
+      position: absolute
+      top: 0
+      right: 0
+      border-bottom: 43px solid
+      border-right: 43px solid #fff
+  &.red
+    background-color: #FF3535
+    &::after
+      border-bottom-color: #CD1800
+  &.dark
+    background-color: #2D2C2A
+    &::after
+      border-bottom-color: #000
+
+.title
+  padding-bottom: 24px
+  font-style: normal
+  font-weight: bold
+  font-size: 36px
+  line-height: 120%
+  @media(max-width: 767px)
+    font-size: 24px
+    padding-bottom: 16px
+
+.listItem
+  &.many
+    @supports (display: list-item)
+      display: list-item
+      list-style: circle inside
+      &::marker
+        content: '\2022'
+        color: #FF3535
+      & p
+        padding-left: 18px
+
+  &:not(:last-child)
+    padding-bottom: 10px
+  & p
+    margin-top: -21px
+    font-style: normal
+    font-weight: normal
+    font-size: 20px
+    line-height: 130%
+    @media(max-width: 767px)
+      font-size: 14px
+      margin-top: -16px

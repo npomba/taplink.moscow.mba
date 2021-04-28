@@ -1,7 +1,7 @@
 import useAt from '@/components/hooks/useAt'
 import ProgramsModule from '@/components/general/ProgramsModule'
-import TwisterCornerBlocks from '@/components/general/TwisterCornerBlocks'
-import TwisterCornerBlock from '@/components/general/TwisterCornerBlock'
+import Stickers from '@/components/general/Stickers'
+import Sticker from '@/components/general/Sticker'
 
 const ProgramsModules = () => {
   const at = useAt()
@@ -133,23 +133,40 @@ const ProgramsModules = () => {
             />
           </>
         )}
-        <TwisterCornerBlocks>
-          <TwisterCornerBlock
-            clr={'red'}
-            title={'Практические модули'}
-            listItems={[
-              'Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе',
-            ]}
-          />
-          <TwisterCornerBlock
+        {at.online && (
+          <Stickers>
+            <Sticker
+              type={'short'}
+              clr={'red'}
+              title={'Практические модули'}
+              listItems={[
+                'Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе',
+              ]}
+            />
+            <Sticker
+              type={'short'}
+              clr={'dark'}
+              title={'Итоговая аттестация'}
+              listItems={[
+                'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
+                'Защита итоговой аттестационной работы',
+              ]}
+            />
+          </Stickers>
+        )}
+        {at.blended && (
+          <Sticker
+            type={'long'}
             clr={'dark'}
-            title={'Итоговая аттестация'}
+            title={'Очный модуль в Москве'}
             listItems={[
-              'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
-              'Защита итоговой аттестационной работы',
+              'Живое общение со спикерами',
+              'Групповые проекты и разбор кейсов',
+              'Домашние задания и курсовая работа',
+              'Защита проектов и выпускной вечер',
             ]}
           />
-        </TwisterCornerBlocks>
+        )}
       </div>
     </section>
   )

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/TwisterCornerBlocks.module.sass'
+import stls from '@/styles/modules/Stickers.module.sass'
 
 const TwisterCornerBlocks = ({ children }) => {
   return <div className={stls.container}>{children}</div>
