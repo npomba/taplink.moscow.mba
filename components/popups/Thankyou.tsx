@@ -7,7 +7,7 @@ const Thankyou = () => {
             <img src='images/icon_check_red.svg' alt='' />
           </div>
           <h3>Спасибо!</h3>
-          <p>Наш менеджера свяжется с Вами в течении дня</p>
+          <p>Наш менеджера свяжется с Вами в ближайшее время</p>
           <a href='' className='button white-button close-popup'>
             Ok!
           </a>
