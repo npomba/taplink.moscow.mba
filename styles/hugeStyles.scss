@@ -737,6 +737,55 @@ header {
   display: flex;
 }
 
+.jumbotron-content-cta {
+  & .jumbotron-flex {
+    display: flex;
+    @media (max-width: 1329px) and (min-width: 1019px) {
+      flex-direction: column;
+      & .jumbotron-list {
+        display: flex;
+        margin: 0;
+        width: 100%;
+        & li {
+          margin-bottom: 0;
+          padding-bottom: 0;
+          border-bottom: 0;
+          &:not(:last-child) {
+            border-right: 1px solid rgb(#fff, 0.3);
+            margin-right: 20px;
+          }
+          &:not(:first-child) {
+            padding-left: 20px;
+          }
+        }
+      }
+    }
+  }
+  @media (max-width: 1019px) {
+    & ul.jumbotron-red-info {
+      display: block;
+      & li:nth-child(1) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border-right: 0;
+      }
+      & li:nth-child(2) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border-right: 0;
+      }
+      & li:nth-child(3) {
+        display: block;
+        width: 100%;
+        max-width: 100%;
+        border-right: 0;
+      }
+    }
+  }
+}
+
 .jumbotron-text {
   flex-shrink: 0;
   max-width: 620px;
@@ -7673,7 +7722,9 @@ div.popup-content {
 
   & .jumCta-links.desktop {
     display: flex;
+    flex-wrap: wrap;
     margin-bottom: 17px;
+    font-size: 23px;
     & a {
       cursor: pointer;
     }
@@ -7688,7 +7739,9 @@ div.popup-content {
   & .jumbotron-text {
     max-width: 950px;
     flex-shrink: 1;
-    margin-right: 40px;
+    @media (min-width: 768px) {
+      margin-right: 40px;
+    }
   }
   & .jumbotron-list {
     width: 272px;
@@ -7767,4 +7820,18 @@ div.popup-content {
   font-size: 17px;
   line-height: 120%;
   margin-bottom: 17px;
+}
+
+.inputs-flex--alt {
+  & .input-block {
+    & :not(:last-child) {
+      margin-top: 27px;
+    }
+    & .input-placeholder {
+      top: 6px;
+    }
+  }
+  & .input-block button {
+    height: 83px;
+  }
 }

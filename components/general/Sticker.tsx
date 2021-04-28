@@ -1,6 +1,6 @@
 import stls from '@/styles/modules/Sticker.module.sass'
 
-const TwisterCornerBlock = ({
+const Sticker = ({
   type = 'short',
   clr = 'red',
   title = '',
@@ -34,4 +34,4 @@ const TwisterCornerBlock = ({
   }
 }
 
-export default TwisterCornerBlock
+export default Sticker

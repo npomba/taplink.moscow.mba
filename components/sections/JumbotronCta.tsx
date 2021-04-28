@@ -37,22 +37,27 @@ const JumbotronCta = () => {
             <div className='jumbotron-text'>
               <ul className='jumCta-links desktop'>
                 <li>
-                  <Link href='/programs/industry'>
+                  {/* <Link href='/programs/industry'>
                     <a>INDUSTRY MBA</a>
-                  </Link>
+                  </Link> */}
+                  INDUSTRY MBA
                 </li>
                 <li className='jumCta-links__border'></li>
                 <li>
-                  <Link href='/programs/professional'>
+                  {/* <Link href='/programs/professional'>
                     <a>PROFESSIONAL MBA</a>
-                  </Link>
+                  </Link> */}
+                  PROFESSIONAL MBA
                 </li>
                 <li className='jumCta-links__border'></li>
                 <li>
-                  <Link href='/programs/mini'>
+                  {/* <Link href='/programs/mini'>
                     <a>MINI MBA</a>
-                  </Link>
+                  </Link> */}
+                  MINI MBA
                 </li>
+                <li className='jumCta-links__border'></li>
+                <li>{setString(lang.courses)}</li>
               </ul>
 
               <ul className='jumCta-links mobile'>
@@ -84,7 +89,7 @@ const JumbotronCta = () => {
                   className='simple-form support-form embedded-form'
                   onSubmit={handleSubmit(onSubmitForm)}
                 >
-                  <div className='inputs-flex'>
+                  <div className='inputs-flex inputs-flex--alt'>
                     <div className='input-block width-33'>
                       <input
                         type='text'

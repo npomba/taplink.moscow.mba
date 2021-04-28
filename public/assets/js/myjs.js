@@ -91,28 +91,6 @@ $(document).ready(function () {
     $(this).siblings('.header-mobile-third').addClass('opened')
   })
 
-  // Круговая диаграмма
-  if ($('.circle-js').length > 0) {
-    $('.circle-js').circleProgress({
-      startAngle: (-Math.PI / 4) * -8,
-      size: 124,
-      thickness: 3,
-      emptyFill: '#E6E6E6',
-      fill: '#FF3535',
-    })
-  }
-
-  // Круговая диаграмма большая
-  if ($('.circle-js-big').length > 0) {
-    $('.circle-js-big').circleProgress({
-      startAngle: (-Math.PI / 4) * -8,
-      size: 302,
-      thickness: 3,
-      emptyFill: '#333230',
-      fill: '#FF3535',
-    })
-  }
-
   /*Табы цен программ для мобилки*/
   $('.program-price-tabs a').click(function (e) {
     e.preventDefault()
@@ -178,12 +156,16 @@ if ($('.mini-programs-slider').length) {
 // Hide some jQuery slgs
 // https://stackoverflow.com/questions/39152877/consider-marking-event-handler-as-passive-to-make-the-page-more-responsive
 jQuery.event.special.touchstart = {
-  setup: function( _, ns, handle ) {
-      this.addEventListener('touchstart', handle, { passive: !ns.includes('noPreventDefault') });
-  }
-};
+  setup: function (_, ns, handle) {
+    this.addEventListener('touchstart', handle, {
+      passive: !ns.includes('noPreventDefault'),
+    })
+  },
+}
 jQuery.event.special.touchmove = {
-  setup: function( _, ns, handle ) {
-      this.addEventListener('touchmove', handle, { passive: !ns.includes('noPreventDefault') });
-  }
-};
+  setup: function (_, ns, handle) {
+    this.addEventListener('touchmove', handle, {
+      passive: !ns.includes('noPreventDefault'),
+    })
+  },
+}

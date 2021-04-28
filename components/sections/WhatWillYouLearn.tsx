@@ -5,7 +5,7 @@ const WhatWillYouLearn = ({ data }) => {
         <div className='section-pl floatLeft'>
           <h2>
             Чему <br />
-            вы научитесь?
+            Вы научитесь?
           </h2>
         </div>
         <div className='floatRight'>

@@ -1,4 +1,12 @@
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 const Students = () => {
+  useEffect(() => {
+    loadJs(['/assets/js/circle.js'], {
+      async: false,
+    })
+  }, [])
   return (
     <section className='students-section section-pl'>
       <div className='title-pl red'>Более 2000</div>

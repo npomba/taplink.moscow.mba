@@ -16,6 +16,11 @@ export default {
     en: 'MBA Programs',
   },
 
+  courses: {
+    ru: 'КУРСЫ',
+    en: 'COURSES',
+  },
+
   headerTitlePreHighlight: {
     ru: 'Получите',
     en: 'Concur',
@@ -206,7 +211,7 @@ export default {
 
   executiveMBADicsSecond: {
     ru:
-      'Курс, объединивший лучшие отечественные бизнес-практики с глобальным мировым опытом, поможет вам совершить настоящий прорыв в управлении компанией. Вы построите пошаговую стратегию развития, которая позволит взглянуть на бизнес по-новому',
+      'Курс, объединивший лучшие отечественные бизнес-практики с глобальным мировым опытом, поможет Вам совершить настоящий прорыв в управлении компанией. Вы построите пошаговую стратегию развития, которая позволит взглянуть на бизнес по-новому',
     en:
       'This course combines the best homeland business models with the global experience. It will provide you with knowledge needed to achieve a breakthrough in company management. You will make a new step-by-step development strategy which will help you to get a fresh look on your business',
   },
@@ -269,7 +274,7 @@ export default {
   },
 
   privacyPolicyFirst: {
-    ru: 'Нажимая на кнопку, вы даете согласие на обработку своих',
+    ru: 'Нажимая на кнопку, Вы даете согласие на обработку своих',
     en: 'By pressing this button, you agree to',
   },
 

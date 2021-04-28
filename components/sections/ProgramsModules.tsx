@@ -11,11 +11,29 @@ const ProgramsModules = () => {
         <h2>Программа обучения</h2>
         <ul className='training-red-list'>
           <li>
-            <div className='number'>20</div>
+            <div className='number'>
+              {at.mini && at.online && '15'}
+              {at.mini && at.blended && '15'}
+
+              {at.professional && at.online && '37'}
+              {at.professional && at.blended && '37'}
+
+              {at.industry && at.online && '37'}
+              {at.industry && at.blended && '37'}
+            </div>
             <p>дисциплин базовой части</p>
           </li>
           <li>
-            <div className='number'>7</div>
+            <div className='number'>
+              {at.mini && at.online && '5'}
+              {at.mini && at.blended && '5'}
+
+              {at.professional && at.online && '10'}
+              {at.professional && at.blended && '10'}
+
+              {at.industry && at.online && '10'}
+              {at.industry && at.blended && '10'}
+            </div>
             <p>дисциплин специализации</p>
           </li>
         </ul>
@@ -137,7 +155,6 @@ const ProgramsModules = () => {
           <>
             <ProgramsModule
               title='Практика'
-              subTitle=''
               items={[
                 'Работа над собственным проектом',
                 'Групповые задания и нетворкинг',
@@ -147,7 +164,6 @@ const ProgramsModules = () => {
             />
             <ProgramsModule
               title='Защита диплома'
-              subTitle=''
               items={[
                 'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
                 'Защита итоговой дипломной работы',
