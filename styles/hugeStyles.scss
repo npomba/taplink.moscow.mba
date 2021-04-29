@@ -1664,7 +1664,8 @@ h2 {
   }
 }
 
-.program-options-block-tabs {
+.program-options-block-tabs,
+.program-options-block-tabs--sctn-programs {
   display: none;
   margin-bottom: 30px;
   font-weight: bold;
@@ -6085,7 +6086,8 @@ footer {
   html {
     font-size: 14px;
   }
-  .program-options-block-tabs {
+  .program-options-block-tabs,
+  .program-options-block-tabs--sctn-programs {
     display: flex;
   }
   .program-options-block {

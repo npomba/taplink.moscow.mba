@@ -4,8 +4,18 @@ import Stickers from '@/components/general/Stickers'
 import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 const ProgramsModules = () => {
   const at = useAt()
+
+  useEffect(() => {
+    loadJs(['/assets/js/programsModules.js'], {
+      async: false,
+    })
+  }, [])
+
   return (
     <section className='training-section'>
       <div className='section-pl'>

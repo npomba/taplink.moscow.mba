@@ -13,12 +13,21 @@ import useAt from '@/components/hooks/useAt'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 const Header = ({ programs }) => {
   const { data } = programs.programs
 
   const router = useRouter()
 
   const at = useAt()
+
+  useEffect(() => {
+    loadJs(['/assets/js/header.js'], {
+      async: false,
+    })
+  }, [])
 
   return (
     <header>

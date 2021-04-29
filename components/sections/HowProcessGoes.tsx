@@ -1,7 +1,17 @@
 import useAt from '@/components/hooks/useAt'
 
+import { useEffect } from 'react'
+import loadJs from 'loadjs'
+
 const HowProcessGoes = () => {
   const at = useAt()
+
+  useEffect(() => {
+    loadJs(['/assets/js/howProcessGoes.js'], {
+      async: false,
+    })
+  }, [])
+
   return (
     <section className='process-section'>
       <div className='process-content'>

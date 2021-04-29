@@ -4,14 +4,19 @@ import SEO from '../seo.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
 import PageWrapper from '@/components/PageWrapper'
-import '../styles/hugeStyles.sass'
-import '../styles/hugeStyles.scss'
+import '@/styles/hugeStyles.sass'
+import '@/styles/hugeStyles.scss'
 import { server } from '@/config/index'
 import { motion, AnimatePresence } from 'framer-motion'
 import { withSecureHeaders } from 'next-secure-headers'
+import { dev } from '@/config/index'
 
 function MyApp({ Component, pageProps, appProps, router }) {
   // console.log(appProps)
+  if (!dev) {
+    console.log = function () {}
+  }
+
   return (
     <>
       <DefaultSeo {...SEO} />
