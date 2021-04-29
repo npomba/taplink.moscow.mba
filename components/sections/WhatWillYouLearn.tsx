@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const WhatWillYouLearn = ({ data }) => {
   return (
     <section className='learning-section'>
@@ -17,10 +19,11 @@ const WhatWillYouLearn = ({ data }) => {
         </div>
         <div className='floatLeft'>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/learning_pic_1.jpg'
-              alt=''
+            <Image
+              src='/assets/images/learning_pic_1.jpg'
+              width='651'
+              height='389'
+              alt='Слушатели во время конференции'
             />
           </div>
         </div>
@@ -28,5 +31,6 @@ const WhatWillYouLearn = ({ data }) => {
     </section>
   )
 }
+// 651 x 389
 
 export default WhatWillYouLearn

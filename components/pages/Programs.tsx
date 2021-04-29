@@ -11,7 +11,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   return (
     <>
       <Head>
-        <title>Mini MBA</title>
+        <title>Программы</title>
       </Head>
 
       <section className='jumbotron-section jumbotron-programs'>
