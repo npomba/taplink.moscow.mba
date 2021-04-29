@@ -42,7 +42,7 @@ const PageOnlineProgram = ({ program }) => {
         description={truncate(program.goalsOfProgram, 120)}
       />
 
-      <JumbotronProgram data={data} format={'online'} />
+      <JumbotronProgram data={data} />
 
       <div className='container'>
         <ProgramGoal data={data} />

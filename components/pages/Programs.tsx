@@ -2,26 +2,12 @@ import Head from 'next/head'
 import Link from 'next/link'
 import langMenu from '@/data/translation/menu'
 import setString from '@/components/hooks/setString'
-// import data from '../../data/data'
-import Breadcrumbs from '../general/Breadcrumbs'
-
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import InfoRectangle from '@/components/general/InfoRectangle'
+import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import ProgramsQt from '@/components/hooks/ProgramsQt'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
-  // useEffect(() => {
-  //   loadJs(
-  //     [
-  //       '/assets/js/slick.min.js',
-  //       '/assets/js/lazysizes.min.js',
-  //       '/assets/js/myjs.js',
-  //     ],
-  //     {
-  //       async: false,
-  //     }
-  //   )
-  // }, [])
-
   return (
     <>
       <Head>
@@ -123,7 +109,9 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                     : ''}{' '}
                   {mbaFormat}
                 </h2>
-                <span className='qtPrograms'>{programs.length} программ</span>
+                <span className='qtPrograms'>
+                  <ProgramsQt programs={programs} /> программ
+                </span>
               </div>
 
               <p className='programs-info__dics'>
@@ -150,7 +138,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                       fill='#D9D9D9'
                     />
                   </svg>
-                  40 дисциплин об управлениии
+                  <ProgramSubjects subjects='base' /> дисциплин об управлениии
                 </p>
                 <p>
                   <svg
@@ -165,31 +153,12 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                       fill='#D9D9D9'
                     />
                   </svg>
-                  27 дисциплин специализации
+                  <ProgramSubjects subjects='specialty' /> дисциплин
+                  специализации
                 </p>
               </div>
             </div>
-            <ul className='jumbotron-red-info jumbotron-red-info-programs-page'>
-              <li>
-                <p>Срок обучения:</p>
-                <div className='detail'>3 года 6 месяцев</div>
-              </li>
-              <li>
-                <p>Форма обучения:</p>
-                <div className='detail'>Дистансционное</div>
-              </li>
-              <li>
-                <p>Ближайшее зачисление:</p>
-                <div className='detail'>23 января</div>
-              </li>
-              <li>
-                <p>Стоимость:</p>
-                <div className='detail'>
-                  <span className='old-price'>390 000 &#8381;</span>
-                  <span className='new-price'>540 000 Р.</span>
-                </div>
-              </li>
-            </ul>
+            <InfoRectangle programPage={true} />
             <div className='mini-programs-slider'>
               {programs.map((program, idx) => {
                 return (
@@ -201,7 +170,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                       <div className='arrow'>
                         <img alt='' src='/assets/images/arrow_diagonal.svg' />
                       </div>
-                      <div className='number'>{idx}.</div>
+                      <div className='number'>{idx + 1}.</div>
                       <div className='title'>{program.title}</div>
                     </a>
                   </Link>

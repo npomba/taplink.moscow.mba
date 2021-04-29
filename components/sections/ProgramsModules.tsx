@@ -2,6 +2,7 @@ import useAt from '@/components/hooks/useAt'
 import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'
 import Sticker from '@/components/general/Sticker'
+import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 
 const ProgramsModules = () => {
   const at = useAt()
@@ -12,27 +13,13 @@ const ProgramsModules = () => {
         <ul className='training-red-list'>
           <li>
             <div className='number'>
-              {at.mini && at.online && '15'}
-              {at.mini && at.blended && '15'}
-
-              {at.professional && at.online && '37'}
-              {at.professional && at.blended && '37'}
-
-              {at.industry && at.online && '37'}
-              {at.industry && at.blended && '37'}
+              <ProgramSubjects subjects='base' />
             </div>
             <p>дисциплин базовой части</p>
           </li>
           <li>
             <div className='number'>
-              {at.mini && at.online && '5'}
-              {at.mini && at.blended && '5'}
-
-              {at.professional && at.online && '10'}
-              {at.professional && at.blended && '10'}
-
-              {at.industry && at.online && '10'}
-              {at.industry && at.blended && '10'}
+              <ProgramSubjects subjects='specialty' />
             </div>
             <p>дисциплин специализации</p>
           </li>
@@ -44,11 +31,10 @@ const ProgramsModules = () => {
           <>
             <ProgramsModule
               title='1 модуль'
-              subTitle=''
+              subTitle='Современный менеджмент'
               items={[
                 'Основы менеджмента',
                 'Операционный менеджмент',
-                'Стратегический менеджмент',
                 'Инновационный менеджмент',
                 'Стратегический менеджмент',
                 'Антикризисный менеджмент',
@@ -57,11 +43,13 @@ const ProgramsModules = () => {
             />
             <ProgramsModule
               title='2 модуль'
-              subTitle=''
+              subTitle='Основные сферы управления'
               items={[
                 'Управление проектами',
                 'Управление качеством',
                 'Управление человеческими ресурсами',
+                'Управление логистикой',
+                'Управление изменениями',
                 'Управление безопасностью организации',
                 'Управление знаниями и интеллектуальным капиталом',
                 'Управление маркетингом',
@@ -71,7 +59,7 @@ const ProgramsModules = () => {
             />
             <ProgramsModule
               title='3 модуль'
-              subTitle='Основные сферы управления компании'
+              subTitle='Руководитель в современном бизнесе'
               items={[
                 'Профессиональные навыки и личностное развитие',
                 'Деловой английский язык',
@@ -83,17 +71,18 @@ const ProgramsModules = () => {
             />
             <ProgramsModule
               title='4 модуль'
-              subTitle='Современный менеджмент'
+              subTitle='Экономика и финансы'
               items={[
                 'Управленческая экономика',
                 'Финансовый менеджмент',
                 'Финансовые угрозы и риск-менеджмент',
                 'Инвестиционное финансирование и кредитование',
+                'Эккаутинг',
               ]}
             />
             <ProgramsModule
               title='5 модуль'
-              subTitle='Руководитель в современном бизнесе'
+              subTitle='Продвинутый маркетинг'
               items={[
                 'Стратегический маркетинг',
                 'Маркетинговые исследования',
@@ -105,7 +94,7 @@ const ProgramsModules = () => {
             />
             <ProgramsModule
               title='6 модуль'
-              subTitle='Современный менеджмент'
+              subTitle='Предпринимательство'
               items={[
                 'Основы предпринимательской деятельности',
                 'Правовые основы бизнеса',

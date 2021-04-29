@@ -5,7 +5,7 @@ const ProgramDesc = () => {
   return (
     <section className='top-path-section'>
       <div className='top-path-content'>
-        <div className='title-pl'>О программе</div>
+        <div className='title-pl'>О&nbsp;программе</div>
         <h2>
           {at.mini && at.online && 'MBA Mini ONLINE'}
           {at.professional && at.online && 'MBA Professional ONLINE'}

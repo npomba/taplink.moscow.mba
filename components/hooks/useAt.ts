@@ -41,6 +41,9 @@ const useAt = () => {
 
   const online = () => {
     return getSplitedPath[2] === 'online'
+    // return (
+    //   getSplitedPath.filter((pathPart) => pathPart === 'online')[0] === 'online'
+    // )
   }
 
   const blended = () => {

@@ -45,7 +45,7 @@ const PageBlendedProgram = ({ program }) => {
         description={truncate(program.goalsOfProgram, 120)}
       />
 
-      <JumbotronProgram data={data} format={'blended'} />
+      <JumbotronProgram data={data} />
 
       <div className='container'>
         <ProgramGoal data={data} />

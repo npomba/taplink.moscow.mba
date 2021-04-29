@@ -3,6 +3,7 @@ import setString from '@/components/hooks/setString'
 import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
 import Until from '@/components/dates/Until'
+import ProgramsQt from '@/components/hooks/ProgramsQt'
 
 const Programs = ({ programs }) => {
   const data = programs
@@ -37,7 +38,10 @@ const Programs = ({ programs }) => {
                   1 {setString(langMenu.categoryYear)} 6{' '}
                   {setString(langMenu.categoryMonth)}{' '}
                 </i>
-                <span>27 {setString(langMenu.qtSubjects)} </span>
+                <span>
+                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  {setString(langMenu.qtSubjects)}{' '}
+                </span>
               </div>
               <div className='prog-status'>
                 {setString(langMenu.newestPrograms)} 2021{' '}

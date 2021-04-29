@@ -10,20 +10,15 @@ import Until from '@/components/dates/Until'
 
 import useAt from '@/components/hooks/useAt'
 
+import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import ProgramsQt from '@/components/hooks/ProgramsQt'
+
 const Header = ({ programs }) => {
-  // const Header = () => {
   const { data } = programs.programs
 
   const router = useRouter()
 
   const at = useAt()
-
-  // let loc = router.locale === 'en-US' ? 'en' : 'ru'
-
-  // console.log(lang.address.en)
-
-  // useEffect(() => {
-  // }, [])
 
   return (
     <header>
@@ -160,7 +155,12 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'mini'}
+                        format={'online'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -181,7 +181,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='mini' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -212,7 +215,12 @@ const Header = ({ programs }) => {
                       {setString(langMenu.blendedTitle)}
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'mini'}
+                        format={'blended'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -232,7 +240,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='mini' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -277,7 +288,8 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
-                        40 {setString(langMenu.categoryAboutManagement)}
+                        <ProgramSubjects type='mini' subjects='base' />{' '}
+                        {setString(langMenu.categoryAboutManagement)}
                       </span>
                     </div>
                     <div className='info-flex'>
@@ -288,7 +300,8 @@ const Header = ({ programs }) => {
                         />
                       </div>
                       <span>
-                        27 {setString(langMenu.categorySpecializedSubjects)}
+                        <ProgramSubjects type='mini' subjects='specialty' />{' '}
+                        {setString(langMenu.categorySpecializedSubjects)}
                       </span>
                     </div>
                   </div>
@@ -307,7 +320,12 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'professional'}
+                        format={'online'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -328,7 +346,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='professional' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -358,7 +379,12 @@ const Header = ({ programs }) => {
                       {setString(langMenu.blendedTitle)}
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'professional'}
+                        format={'blended'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -378,7 +404,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='professional' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -423,7 +452,8 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
-                        40 {setString(langMenu.categoryAboutManagement)}
+                        <ProgramSubjects type='professional' subjects='base' />{' '}
+                        {setString(langMenu.categoryAboutManagement)}
                       </span>
                     </div>
                     <div className='info-flex'>
@@ -434,7 +464,11 @@ const Header = ({ programs }) => {
                         />
                       </div>
                       <span>
-                        27 {setString(langMenu.categorySpecializedSubjects)}
+                        <ProgramSubjects
+                          type='professional'
+                          subjects='specialty'
+                        />{' '}
+                        {setString(langMenu.categorySpecializedSubjects)}
                       </span>
                     </div>
                   </div>
@@ -453,7 +487,12 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'industry'}
+                        format={'online'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -474,7 +513,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='industry' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -504,7 +546,12 @@ const Header = ({ programs }) => {
                       {setString(langMenu.blendedTitle)}
                     </div>
                     <div className='directions-count'>
-                      18 {setString(langMenu.qtPrograms)}
+                      <ProgramsQt
+                        programs={data}
+                        type={'industry'}
+                        format={'blended'}
+                      />{' '}
+                      {setString(langMenu.qtPrograms)}
                     </div>
                     <div className='price'>
                       {setString(langMenu.price)}:{' '}
@@ -524,7 +571,10 @@ const Header = ({ programs }) => {
                         <div className='pic'>
                           <img src='/assets/images/icon_monitor.svg' alt='' />
                         </div>
-                        <span>27 {setString(langMenu.qtSubjects)}</span>
+                        <span>
+                          <ProgramSubjects type='industry' sum={true} />{' '}
+                          {setString(langMenu.qtSubjects)}
+                        </span>
                       </div>
                     </div>
                     <ul className='program-directions-list'>
@@ -569,7 +619,8 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
-                        40 {setString(langMenu.categoryAboutManagement)}
+                        <ProgramSubjects type='industry' subjects='base' />{' '}
+                        {setString(langMenu.categoryAboutManagement)}
                       </span>
                     </div>
                     <div className='info-flex'>
@@ -580,7 +631,8 @@ const Header = ({ programs }) => {
                         />
                       </div>
                       <span>
-                        27 {setString(langMenu.categorySpecializedSubjects)}
+                        <ProgramSubjects type='industry' subjects='specialty' />{' '}
+                        {setString(langMenu.categorySpecializedSubjects)}
                       </span>
                     </div>
                   </div>
@@ -702,7 +754,12 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'mini'}
+                              format={'online'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -726,7 +783,10 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects type='mini' sum={true} />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -757,7 +817,12 @@ const Header = ({ programs }) => {
                             {setString(langMenu.blendedTitle)}
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'mini'}
+                              format={'blended'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -780,7 +845,10 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects type='mini' sum={true} />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -825,7 +893,8 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
-                          40 {setString(langMenu.categoryAboutManagement)}
+                          <ProgramSubjects type='mini' subjects='base' />{' '}
+                          {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
                       <div className='info-flex'>
@@ -836,7 +905,8 @@ const Header = ({ programs }) => {
                           />
                         </div>
                         <span>
-                          27 {setString(langMenu.categorySpecializedSubjects)}
+                          <ProgramSubjects type='mini' subjects='specialty' />{' '}
+                          {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
@@ -887,7 +957,12 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'professional'}
+                              format={'online'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -911,7 +986,13 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects
+                                  type='professional'
+                                  sum={true}
+                                />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -942,7 +1023,12 @@ const Header = ({ programs }) => {
                             {setString(langMenu.blendedTitle)}
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'professional'}
+                              format={'blended'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -965,7 +1051,13 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects
+                                  type='professional'
+                                  sum={true}
+                                />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -1010,7 +1102,11 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
-                          40 {setString(langMenu.categoryAboutManagement)}
+                          <ProgramSubjects
+                            type='professional'
+                            subjects='base'
+                          />{' '}
+                          {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
                       <div className='info-flex'>
@@ -1021,7 +1117,11 @@ const Header = ({ programs }) => {
                           />
                         </div>
                         <span>
-                          27 {setString(langMenu.categorySpecializedSubjects)}
+                          <ProgramSubjects
+                            type='professional'
+                            subjects='specialty'
+                          />{' '}
+                          {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
@@ -1072,7 +1172,12 @@ const Header = ({ programs }) => {
                             </div>
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'industry'}
+                              format={'online'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -1096,7 +1201,10 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects type='industry' sum={true} />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
@@ -1127,7 +1235,12 @@ const Header = ({ programs }) => {
                             {setString(langMenu.blendedTitle)}
                           </div>
                           <div className='directions-count'>
-                            18 {setString(langMenu.qtPrograms)}
+                            <ProgramsQt
+                              programs={data}
+                              type={'industry'}
+                              format={'blended'}
+                            />{' '}
+                            {setString(langMenu.qtPrograms)}
                           </div>
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
@@ -1150,13 +1263,16 @@ const Header = ({ programs }) => {
                                   alt=''
                                 />
                               </div>
-                              <span>27 {setString(langMenu.qtSubjects)}</span>
+                              <span>
+                                <ProgramSubjects type='industry' sum={true} />{' '}
+                                {setString(langMenu.qtSubjects)}
+                              </span>
                             </div>
                           </div>
                           <ul className='program-options-block-list'>
                             {data.map((item) => {
                               if (
-                                item.mbaTypeOfProgram === 'mini' &&
+                                item.mbaTypeOfProgram === 'industry' &&
                                 item.mbaFormat === 'blended'
                               ) {
                                 return (
@@ -1195,7 +1311,8 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
-                          40 {setString(langMenu.categoryAboutManagement)}
+                          <ProgramSubjects type='industry' subjects='base' />{' '}
+                          {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
                       <div className='info-flex'>
@@ -1206,7 +1323,11 @@ const Header = ({ programs }) => {
                           />
                         </div>
                         <span>
-                          27 {setString(langMenu.categorySpecializedSubjects)}
+                          <ProgramSubjects
+                            type='industry'
+                            subjects='specialty'
+                          />{' '}
+                          {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
