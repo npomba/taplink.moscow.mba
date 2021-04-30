@@ -1882,6 +1882,7 @@ h2 {
     display: flex;
     flex-wrap: wrap;
     align-items: flex-start;
+    justify-content: space-between;
     margin: 0 -15px;
     .input-block {
       margin-left: 15px;
@@ -4684,7 +4685,7 @@ footer {
     min-height: 600px;
   }
   h1 {
-    font-size: 60px;
+    font-size: 58px;
   }
   h2 {
     font-size: 44px;
@@ -7717,6 +7718,10 @@ div.popup-content {
 
 .jumbotron-content-cta {
   padding-left: 0;
+
+  h1 {
+    font-size: 58px;
+  }
 
   & .jumCta-links.mobile {
     display: none;
