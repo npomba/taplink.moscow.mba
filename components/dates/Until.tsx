@@ -5,7 +5,7 @@ import setString from '@/components/hooks/setString'
 const Until = ({ preposition = true }) => {
   return (
     <>
-      {preposition && setString(langMenu.discountUntil)} 5{' '}
+      {preposition && setString(langMenu.discountUntil)} 20{' '}
       {setString(langMonths.may)}
     </>
   )

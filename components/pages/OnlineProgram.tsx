@@ -50,7 +50,7 @@ const PageOnlineProgram = ({ program }) => {
         <ProgramDesc />
         <Pros format={'online'} />
         <HowProcessGoes />
-        <ProgramModules />
+        <ProgramModules data={data} />
         <Teachers />
         <RelevantContent />
         <CorporateClients />

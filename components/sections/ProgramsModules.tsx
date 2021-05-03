@@ -7,7 +7,7 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
 
-const ProgramsModules = () => {
+const ProgramsModules = ({ data }) => {
   const at = useAt()
 
   useEffect(() => {
@@ -155,29 +155,12 @@ const ProgramsModules = () => {
             <ProgramsModule
               title='1 модуль'
               subTitle=''
-              items={[
-                'Основы менеджмента',
-                'Операционный менеджмент',
-                'Стратегический менеджмент',
-                'Инновационный менеджмент',
-                'Стратегический менеджмент',
-                'Антикризисный менеджмент',
-                'Корпоративная социальная ответственность',
-              ]}
+              items={data.specializedSubjects.filter((item, idx) => idx < 5)}
             />
             <ProgramsModule
               title='2 модуль'
               subTitle=''
-              items={[
-                'Управление проектами',
-                'Управление качеством',
-                'Управление человеческими ресурсами',
-                'Управление безопасностью организации',
-                'Управление знаниями и интеллектуальным капиталом',
-                'Управление маркетингом',
-                'IT-технологии в управлении',
-                'Управление бизнес-процессами',
-              ]}
+              items={data.specializedSubjects.filter((item, idx) => idx >= 5)}
             />
           </>
         )}
