@@ -7,7 +7,7 @@ import PageWrapper from '@/components/PageWrapper'
 import '@/styles/hugeStyles.sass'
 import '@/styles/hugeStyles.scss'
 import { server } from '@/config/index'
-import { motion, AnimatePresence, transform } from 'framer-motion'
+import { motion, AnimatePresence } from 'framer-motion'
 import { withSecureHeaders } from 'next-secure-headers'
 import { dev } from '@/config/index'
 
