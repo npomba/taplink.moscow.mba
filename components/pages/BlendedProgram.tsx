@@ -54,7 +54,7 @@ const PageBlendedProgram = ({ program }) => {
         <BlendedMetups />
         <Pros format={'blended'} />
         <HowProcessGoes />
-        <ProgramsModules />
+        <ProgramsModules data={data} />
         <ContactUs title={'Получите консультацию по программе'} />
         <Teachers />
         <RelevantContent />

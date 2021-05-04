@@ -164,7 +164,48 @@ const ProgramsModules = ({ data }) => {
             />
           </>
         )}
-        {at.blended && (
+
+        {at.mini && at.online && (
+          <>
+            <ProgramsModule
+              title='1 модуль'
+              subTitle=''
+              items={data.specializedSubjects.filter((item, idx) => idx <= 5)}
+            />
+            <ProgramsModule
+              title='Практика'
+              subTitle=''
+              items={[
+                'Работа над собственным проектом',
+                'Групповые задания и нетворкинг',
+                'Кейс-методы',
+                'Эссе',
+              ]}
+            />
+          </>
+        )}
+
+        {at.mini && at.blended && (
+          <>
+            <ProgramsModule
+              title='1 модуль'
+              subTitle=''
+              items={data.specializedSubjects.filter((item, idx) => idx <= 5)}
+            />
+            <ProgramsModule
+              title='Очный модуль'
+              subTitle=''
+              items={[
+                'Живое общение со спикерами',
+                'Групповые проекты и разбор кейсов',
+                'Домашние задания и курсовая работа',
+                'Защита проектов и выпускной вечер',
+              ]}
+            />
+          </>
+        )}
+
+        {at.blended && !at.mini && (
           <>
             <ProgramsModule
               title='Практика'
@@ -184,7 +225,7 @@ const ProgramsModules = ({ data }) => {
             />
           </>
         )}
-        {at.online && (
+        {at.online && !at.mini && (
           <Stickers>
             <Sticker
               type={'short'}
@@ -205,7 +246,18 @@ const ProgramsModules = ({ data }) => {
             />
           </Stickers>
         )}
-        {at.blended && (
+        {at.online && at.mini && (
+          <Sticker
+            type={'long'}
+            clr={'dark'}
+            title={'Итоговая аттестация'}
+            listItems={[
+              'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
+              'Защита итоговой аттестационной работы',
+            ]}
+          />
+        )}
+        {at.blended && !at.mini && (
           <Sticker
             type={'long'}
             clr={'dark'}
@@ -217,6 +269,27 @@ const ProgramsModules = ({ data }) => {
               'Защита проектов и выпускной вечер',
             ]}
           />
+        )}
+        {at.blended && at.mini && (
+          <Stickers>
+            <Sticker
+              type={'short'}
+              clr={'red'}
+              title={'Практические модули'}
+              listItems={[
+                'Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе',
+              ]}
+            />
+            <Sticker
+              type={'short'}
+              clr={'dark'}
+              title={'Итоговая аттестация'}
+              listItems={[
+                'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
+                'Защита итоговой аттестационной работы',
+              ]}
+            />
+          </Stickers>
         )}
       </div>
     </section>
