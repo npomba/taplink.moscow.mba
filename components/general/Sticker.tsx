@@ -16,7 +16,7 @@ const Sticker = ({
       >
         <h4 className={stls.title}>{title}</h4>
         <div>
-          <ul>
+          <ul className={stls.listItems}>
             {listItems.map((item, idx) => (
               <li
                 key={idx}
