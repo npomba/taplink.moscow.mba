@@ -1,7 +1,3 @@
-if (jQuery) {
-  console.log('test')
-}
-
 $(document).ready(function () {
   /*Табы программ в шапке*/
   $('.header-podmenu-tabs a').mouseenter(function () {

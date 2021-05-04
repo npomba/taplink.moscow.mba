@@ -22,29 +22,29 @@ function MyApp({ Component, pageProps, appProps, router }) {
       <DefaultSeo {...SEO} />
       <PageWrapper>
         <Header programs={appProps} />
-        {/* <AnimatePresence> */}
-        <motion.div
-          key={router.route}
-          initial='pageInitial'
-          animate='pageAnimate'
-          // exit='pageExit'
-          variants={{
-            pageInitial: {
-              opacity: 0.4,
-            },
-            pageAnimate: {
-              opacity: 1,
-            },
-            // pageExit: {
-            //   opacity: 0,
-            // },
-          }}
-        >
-          <div className='main-content'>
-            <Component {...pageProps} />
-          </div>
-        </motion.div>
-        {/* </AnimatePresence> */}
+        <AnimatePresence>
+          <motion.div
+            key={router.route}
+            initial='pageInitial'
+            animate='pageAnimate'
+            exit='pageExit'
+            variants={{
+              pageInitial: {
+                opacity: 0.4,
+              },
+              pageAnimate: {
+                opacity: 1,
+              },
+              pageExit: {
+                opacity: 0,
+              },
+            }}
+          >
+            <div className='main-content'>
+              <Component {...pageProps} />
+            </div>
+          </motion.div>
+        </AnimatePresence>
         <Footer />
       </PageWrapper>
     </>
