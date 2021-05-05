@@ -35,7 +35,6 @@ const Form = ({
     })
 
     const tagManagerArgs = {
-      gtmId: gtmId,
       dataLayer: {
         format: at.online ? 'online' : at.blended ? 'blended' : null,
         type: at.mini
@@ -46,8 +45,9 @@ const Form = ({
           ? 'industry'
           : null,
       },
+      dataLayerName: 'LeadDataLayer',
     }
-    TagManager.initialize(tagManagerArgs)
+    TagManager.dataLayer(tagManagerArgs)
   }, [])
 
   return (

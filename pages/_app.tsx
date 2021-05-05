@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
   // }
 
   useEffect(() => {
-    TagManager.initialize({ gtmId })
+    TagManager.initialize({ gtmId, dataLayerName: 'LeadDataLayer' })
   }, [])
 
   return (
@@ -35,9 +35,11 @@ function MyApp({ Component, pageProps, appProps, router }) {
             exit='pageExit'
             variants={{
               pageInitial: {
-                opacity: 0.4,
+                opacity: 0,
+                scale: 0.98,
               },
               pageAnimate: {
+                scale: 1,
                 opacity: 1,
               },
               pageExit: {
