@@ -3,6 +3,10 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
+import TagManager from 'react-gtm-module'
+import { gtmId } from '@/config/index'
+import useAt from '@/components/hooks/useAt'
+
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
 
@@ -17,6 +21,8 @@ const Form = ({
   disc = setString(lang.helpToChooseDics),
   discProgram = null,
 }) => {
+  const at = useAt()
+
   const {
     register,
     handleSubmit,
@@ -27,6 +33,21 @@ const Form = ({
     loadJs(['/assets/js/formPlaceholder.js'], {
       async: false,
     })
+
+    const tagManagerArgs = {
+      gtmId: gtmId,
+      dataLayer: {
+        format: at.online ? 'online' : at.blended ? 'blended' : null,
+        type: at.mini
+          ? 'mini'
+          : at.professional
+          ? 'professional'
+          : at.industry
+          ? 'industry'
+          : null,
+      },
+    }
+    TagManager.initialize(tagManagerArgs)
   }, [])
 
   return (
