@@ -6,7 +6,11 @@ import setString from '@/components/hooks/setString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
 
-const Teachers = ({ programTitle = null, atStandAlonePage = false }) => {
+const Teachers = ({
+  programTitle = null,
+  programId = null,
+  atStandAlonePage = false,
+}) => {
   return (
     <>
       <section
@@ -273,6 +277,7 @@ const Teachers = ({ programTitle = null, atStandAlonePage = false }) => {
           >
             {(close) => (
               <PopUpForm
+                programId={programId}
                 programTitle={programTitle}
                 closePopUp={close}
                 title={setString(lang.teachersPopupFormTitle)}

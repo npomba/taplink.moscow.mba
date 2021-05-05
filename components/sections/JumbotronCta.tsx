@@ -18,7 +18,7 @@ type FormValues = {
   phone: string
 }
 
-const JumbotronCta = ({ programTitle = null }) => {
+const JumbotronCta = ({ programTitle = null, programId = null }) => {
   const at = useAt()
 
   const {
@@ -34,15 +34,27 @@ const JumbotronCta = ({ programTitle = null }) => {
 
     const tagManagerArgs = {
       dataLayer: {
-        programFormat: at.online ? 'online' : at.blended ? 'blended' : null,
-        programType: at.mini
-          ? 'mini'
-          : at.professional
-          ? 'professional'
-          : at.industry
-          ? 'industry'
-          : null,
-        programTitle,
+        event: 'generate_lead',
+        ecommerce: {
+          items: [
+            {
+              id: programId,
+              name: programTitle,
+              programFormat: at.online
+                ? 'online'
+                : at.blended
+                ? 'blended'
+                : null,
+              programType: at.mini
+                ? 'mini'
+                : at.professional
+                ? 'professional'
+                : at.industry
+                ? 'industry'
+                : null,
+            },
+          ],
+        },
       },
       dataLayerName: 'dataLayer',
     }

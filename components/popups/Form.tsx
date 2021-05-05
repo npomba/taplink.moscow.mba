@@ -18,6 +18,7 @@ type FormValues = {
 const Form = ({
   closePopUp,
   programTitle = null,
+  programId = null,
   title = setString(lang.helpToChooseTitle),
   disc = setString(lang.helpToChooseDics),
 }) => {
@@ -36,15 +37,27 @@ const Form = ({
 
     const tagManagerArgs = {
       dataLayer: {
-        programFormat: at.online ? 'online' : at.blended ? 'blended' : null,
-        programType: at.mini
-          ? 'mini'
-          : at.professional
-          ? 'professional'
-          : at.industry
-          ? 'industry'
-          : null,
-        programTitle,
+        event: 'generate_lead',
+        ecommerce: {
+          items: [
+            {
+              id: programId,
+              name: programTitle,
+              programFormat: at.online
+                ? 'online'
+                : at.blended
+                ? 'blended'
+                : null,
+              programType: at.mini
+                ? 'mini'
+                : at.professional
+                ? 'professional'
+                : at.industry
+                ? 'industry'
+                : null,
+            },
+          ],
+        },
       },
       dataLayerName: 'dataLayer',
     }
