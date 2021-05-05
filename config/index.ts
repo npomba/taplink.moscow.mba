@@ -4,4 +4,6 @@ const server = dev ? 'http://localhost:5000' : 'https://ipo-cp.ru'
 
 const thisServer = dev ? 'http://localhost:3000' : 'https://moscow.mba'
 
-export { dev, server, thisServer }
+const gtmId = 'GTM-M4JLQXM'
+
+export { dev, server, thisServer, gtmId }

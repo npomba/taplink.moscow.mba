@@ -11,7 +11,7 @@ import '@/styles/hugeStyles.scss'
 import { server } from '@/config/index'
 import { motion, AnimatePresence } from 'framer-motion'
 import { withSecureHeaders } from 'next-secure-headers'
-import { dev } from '@/config/index'
+import { dev, gtmId } from '@/config/index'
 
 function MyApp({ Component, pageProps, appProps, router }) {
   // if (!dev) {
@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
   // }
 
   useEffect(() => {
-    TagManager.initialize({ gtmId: 'GTM-M4JLQXM' })
+    TagManager.initialize({ gtmId })
   }, [])
 
   return (
