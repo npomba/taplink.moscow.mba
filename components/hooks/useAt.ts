@@ -50,6 +50,14 @@ const useAt = () => {
     return getSplitedPath[2] === 'blended'
   }
 
+  const programChunk = () => {
+    return getSplitedPath[3] ? true : false
+  }
+
+  const programTitle = () => {
+    return getSplitedPath[3].toString()
+  }
+
   return {
     index: index(),
     about: about(),
@@ -62,6 +70,8 @@ const useAt = () => {
     webinars: webinars(),
     articles: articles(),
     getSplitedPath,
+    programChunk,
+    programTitle,
   }
 }
 

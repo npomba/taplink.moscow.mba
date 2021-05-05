@@ -34,14 +34,15 @@ const ContactUs = ({
 
     const tagManagerArgs = {
       dataLayer: {
-        format: at.online ? 'online' : at.blended ? 'blended' : null,
-        type: at.mini
+        programFormat: at.online ? 'online' : at.blended ? 'blended' : null,
+        programType: at.mini
           ? 'mini'
           : at.professional
           ? 'professional'
           : at.industry
           ? 'industry'
           : null,
+        programTitle: at.programChunk ? at.programTitle : null,
       },
       dataLayerName: 'LeadDataLayer',
     }
