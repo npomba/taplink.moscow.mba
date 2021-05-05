@@ -51,7 +51,7 @@ const PageOnlineProgram = ({ program }) => {
         <Pros format={'online'} />
         <HowProcessGoes />
         <ProgramModules data={data} />
-        <Teachers />
+        <Teachers programTitle={data.title} />
         <RelevantContent />
         <CorporateClients />
         <Accreditation />
@@ -61,6 +61,7 @@ const PageOnlineProgram = ({ program }) => {
         <Qna />
 
         <ContactUs
+          programTitle={data.title}
           title={
             'Не знаете что выбрать? Получите консультацию по программам MBA'
           }

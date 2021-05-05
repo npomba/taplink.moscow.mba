@@ -55,8 +55,11 @@ const PageBlendedProgram = ({ program }) => {
         <Pros format={'blended'} />
         <HowProcessGoes />
         <ProgramsModules data={data} />
-        <ContactUs title={'Получите консультацию по программе'} />
-        <Teachers />
+        <ContactUs
+          programTitle={data.title}
+          title={'Получите консультацию по программе'}
+        />
+        <Teachers programTitle={data.title} />
         <RelevantContent />
         <CorporateClients />
         <Accreditation />
@@ -64,9 +67,10 @@ const PageBlendedProgram = ({ program }) => {
         <Diploma />
         <Students />
         <Reviews />
-        <CostOfStudy />
+        <CostOfStudy programTitle={data.title} />
         <Qna />
         <ContactUs
+          programTitle={data.title}
           title={
             'Не знаете что выбрать? Получите консультацию по программам MBA'
           }

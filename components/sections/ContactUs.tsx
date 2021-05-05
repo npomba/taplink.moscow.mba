@@ -16,6 +16,7 @@ type FormValues = {
 }
 
 const ContactUs = ({
+  programTitle = null,
   title = setString(lang.helpToChooseTitle),
   disc = setString(lang.helpToChooseDics),
 }) => {
@@ -42,7 +43,7 @@ const ContactUs = ({
           : at.industry
           ? 'industry'
           : null,
-        programTitle: at.programChunk ? at.programTitle : null,
+        programTitle,
       },
       dataLayerName: 'LeadDataLayer',
     }

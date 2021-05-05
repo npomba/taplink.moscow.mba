@@ -17,9 +17,9 @@ type FormValues = {
 
 const Form = ({
   closePopUp,
+  programTitle = null,
   title = setString(lang.helpToChooseTitle),
   disc = setString(lang.helpToChooseDics),
-  discProgram = null,
 }) => {
   const at = useAt()
 
@@ -44,7 +44,7 @@ const Form = ({
           : at.industry
           ? 'industry'
           : null,
-        programTitle: at.programChunk ? at.programTitle : null,
+        programTitle,
       },
       dataLayerName: 'LeadDataLayer',
     }
@@ -56,9 +56,9 @@ const Form = ({
       <div className='popup-content-origin red-bg'>
         <h2>{title}</h2>
         <div className='desc'>
-          {!discProgram && disc}{' '}
-          {discProgram &&
-            `Оставьте заявку и получите консультацию по программе ${discProgram}, узнайте возможные варианты скидок и требования к поступлению`}
+          {!programTitle && disc}{' '}
+          {programTitle &&
+            `Оставьте заявку и получите консультацию по программе ${programTitle}, узнайте возможные варианты скидок и требования к поступлению`}
         </div>
         <form
           method='post'

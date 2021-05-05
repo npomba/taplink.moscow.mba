@@ -3,7 +3,7 @@ import 'reactjs-popup/dist/index.css'
 import Until from '@/components/dates/Until'
 import PopUpForm from '@/components/popups/Form'
 
-const CostOfStudy = () => {
+const CostOfStudy = ({ programTitle }) => {
   return (
     <section className='program-price-section'>
       <h2>Стоимость обучения</h2>
@@ -43,7 +43,11 @@ const CostOfStudy = () => {
               nested
             >
               {(close) => (
-                <PopUpForm title={'Получите консультацию'} closePopUp={close} />
+                <PopUpForm
+                  programTitle={programTitle}
+                  title={'Получите консультацию'}
+                  closePopUp={close}
+                />
               )}
             </Popup>
           </div>

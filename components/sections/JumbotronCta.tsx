@@ -4,6 +4,11 @@ import Link from 'next/link'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
+
+import TagManager from 'react-gtm-module'
+import { gtmId } from '@/config/index'
+import useAt from '@/components/hooks/useAt'
+
 import { useForm } from 'react-hook-form'
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
@@ -13,7 +18,9 @@ type FormValues = {
   phone: string
 }
 
-const JumbotronCta = () => {
+const JumbotronCta = ({ programTitle = null }) => {
+  const at = useAt()
+
   const {
     register,
     handleSubmit,
@@ -24,6 +31,22 @@ const JumbotronCta = () => {
     loadJs(['/assets/js/formPlaceholder.js'], {
       async: false,
     })
+
+    const tagManagerArgs = {
+      dataLayer: {
+        programFormat: at.online ? 'online' : at.blended ? 'blended' : null,
+        programType: at.mini
+          ? 'mini'
+          : at.professional
+          ? 'professional'
+          : at.industry
+          ? 'industry'
+          : null,
+        programTitle,
+      },
+      dataLayerName: 'LeadDataLayer',
+    }
+    TagManager.dataLayer(tagManagerArgs)
   }, [])
 
   return (

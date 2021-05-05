@@ -50,8 +50,8 @@ const JumbotronProgram = ({ data }) => {
               >
                 {(close) => (
                   <PopUpForm
+                    programTitle={data.title}
                     title={'Получите консультацию'}
-                    discProgram={data.title}
                     closePopUp={close}
                   />
                 )}

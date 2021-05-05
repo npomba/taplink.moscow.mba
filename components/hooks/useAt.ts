@@ -1,11 +1,13 @@
 import { useRouter } from 'next/router'
 
 const useAt = () => {
-  const { pathname } = useRouter()
+  const { pathname, asPath } = useRouter()
 
   const getSplitedPath = pathname
     .split('/')
     .filter((item) => item !== '' && item !== '[url]')
+
+  const getProgramTitle = asPath.split('/')[4]
 
   const index = () => {
     return getSplitedPath[0] === undefined
@@ -51,11 +53,7 @@ const useAt = () => {
   }
 
   const programChunk = () => {
-    return getSplitedPath[3] ? true : false
-  }
-
-  const programTitle = () => {
-    return getSplitedPath[3].toString()
+    return getProgramTitle ? true : false
   }
 
   return {
@@ -69,9 +67,8 @@ const useAt = () => {
     blended: blended(),
     webinars: webinars(),
     articles: articles(),
+    programChunk: programChunk(),
     getSplitedPath,
-    programChunk,
-    programTitle,
   }
 }
 
