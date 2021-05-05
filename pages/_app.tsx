@@ -1,4 +1,6 @@
 import App from 'next/app'
+import { useEffect } from 'react'
+import TagManager from 'react-gtm-module'
 import { DefaultSeo } from 'next-seo'
 import SEO from '../seo.config'
 import Header from '@/components/Header'
@@ -12,10 +14,13 @@ import { withSecureHeaders } from 'next-secure-headers'
 import { dev } from '@/config/index'
 
 function MyApp({ Component, pageProps, appProps, router }) {
-  // console.log(appProps)
-  if (!dev) {
-    console.log = function () {}
-  }
+  // if (!dev) {
+  //   console.log = function () {}
+  // }
+
+  useEffect(() => {
+    TagManager.initialize({ gtmId: 'GTM-M4JLQXM' })
+  }, [])
 
   return (
     <>
