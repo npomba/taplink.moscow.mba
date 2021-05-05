@@ -7566,3 +7566,9 @@ div.popup-content {
     height: 83px;
   }
 }
+
+@media (max-width: 480px) {
+  .jumbotron-content-cta h1 {
+    font-size: 21px;
+  }
+}
