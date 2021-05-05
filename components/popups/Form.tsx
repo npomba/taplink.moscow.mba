@@ -46,7 +46,7 @@ const Form = ({
           : null,
         programTitle,
       },
-      dataLayerName: 'LeadDataLayer',
+      dataLayerName: 'dataLayer',
     }
     TagManager.dataLayer(tagManagerArgs)
   }, [])

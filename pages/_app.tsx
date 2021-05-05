@@ -19,7 +19,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
   // }
 
   useEffect(() => {
-    TagManager.initialize({ gtmId, dataLayerName: 'LeadDataLayer' })
+    TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
   }, [])
 
   return (
