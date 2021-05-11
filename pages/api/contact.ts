@@ -266,27 +266,27 @@ export default async (req, res) => {
     }
   })
 
-  // try {
-  //   const emailRes = await transporter.sendMail({
-  //     from: 'lead@moscow.mba',
-  //     to: `${
-  //       dev
-  //         ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-  //         : 'marketing@rosucheba.ru'
-  //     }`,
-  //     subject: 'Новая заявка с moscow.mba', // Subject line
-  //     text: `
-  //     ${name}, \n
-  //     ${phone}
-  //     `, // plain text body
-  //     html
-  //   })
+  try {
+    const emailRes = await transporter.sendMail({
+      from: 'lead@moscow.mba',
+      to: `${
+        dev
+          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
+          : 'marketing@rosucheba.ru'
+      }`,
+      subject: 'Новая заявка с moscow.mba', // Subject line
+      text: `
+      ${name}, \n
+      ${phone}
+      `, // plain text body
+      html
+    })
 
-  //   console.log('Message sent: %s', emailRes.messageId)
-  //   res.status(200).json({ status: 200, msg: 'Email is sent' })
-  // } catch (err) {
-  //   res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
+    console.log('Message sent: %s', emailRes.messageId)
+    res.status(200).json({ status: 200, msg: 'Email is sent' })
+  } catch (err) {
+    res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
 
-  //   console.error(err)
-  // }
+    console.error(err)
+  }
 }
