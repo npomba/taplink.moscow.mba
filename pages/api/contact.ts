@@ -2,9 +2,20 @@
 
 import nodemailer from 'nodemailer'
 import { dev } from '@/config/index'
+import url from 'url'
+import http from 'http'
+import { v4 as uuidv4 } from 'uuid'
+import moment from 'moment'
 
 export default async (req, res) => {
   const { name, phone } = req.body
+
+  const rn = moment()
+  const now = {
+    date: rn.format('DD-MM-YYYY'),
+    time: rn.format('HH:mm:ss'),
+    utc: rn.format('Z')
+  }
 
   const html = /* html */ `
   <!DOCTYPE html>
@@ -70,114 +81,126 @@ export default async (req, res) => {
           <tr>
             <td class="counterCell">1</td>
             <td>ID</td>
-            <td></td>
+            <td>${uuidv4()}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">2</td>
             <td>Дата</td>
-            <td></td>
+            <td>${now.date}</td>
           </tr>
           <tr>
             <td class="counterCell">3</td>
             <td>Время</td>
-            <td></td>
+            <td>${now.time}</td>
           </tr>
           <tr class="bgOnEven">
+            <td class="counterCell">3</td>
+            <td>UTC</td>
+            <td>${now.utc}</td>
+          </tr>
+          <tr>
             <td class="counterCell">4</td>
             <td>Имя</td>
             <td>${name ? name : '-'}</td>
           </tr>
-          <tr class="active-row">
+          <tr class="active-row bgOnEven">
             <td class="counterCell">5</td>
             <td>Телефон</td>
             <td>${phone ? phone : '-'}</td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">6</td>
             <td>Почта</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">7</td>
             <td>Способ связи</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">8</td>
             <td>Лид сайт</td>
-            <td></td>
-          </tr>
-          <tr>
-            <td class="counterCell">9</td>
-            <td>Лид страница</td>
-            <td></td>
+            <td>${
+              (req.connection.encrypted ? ' https' : 'http' + '://') +
+              req.headers.host
+            }</td>
           </tr>
           <tr class="bgOnEven">
+            <td class="counterCell">9</td>
+            <td>Лид страница</td>
+            <td>${
+              (req.connection.encrypted ? ' https' : 'http' + '://') +
+              req.headers.host +
+              req.url
+            }</td>
+          </tr>
+          <tr>
             <td class="counterCell">10</td>
             <td>Город</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">11</td>
             <td>Страна</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">12</td>
             <td>Направление</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">13</td>
             <td>Университет</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">14</td>
             <td>Вопрос</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">15</td>
             <td>Google Client ID</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">16</td>
             <td>Yandex Metrics ID</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">17</td>
             <td>Устройство пользователя</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">18</td>
             <td>Источник рекламы</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">19</td>
             <td>Тип трафика</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">20</td>
             <td>Название РК</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">21</td>
             <td>Объявление</td>
             <td></td>
           </tr>
-          <tr class="bgOnEven">
+          <tr>
             <td class="counterCell">22</td>
             <td>Ключевое слово</td>
             <td></td>
           </tr>
-          <tr class="bgBorderHighlight">
+          <tr class="bgOnEven bgBorderHighlight">
             <td class="counterCell">23</td>
             <td>Дубль</td>
             <td></td>
@@ -216,7 +239,7 @@ export default async (req, res) => {
       }`,
       subject: 'Новая заявка с moscow.mba', // Subject line
       text: `
-      ${name}, \n 
+      ${name}, \n
       ${phone}
       `, // plain text body
       html
