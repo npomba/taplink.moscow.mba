@@ -77,118 +77,118 @@ export default async (req, res) => {
         </thead>
         <tbody>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">1</td>
             <td>ID</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">2</td>
             <td>Дата</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">3</td>
             <td>Время</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">4</td>
             <td>Имя</td>
             <td>${name ? name : '-'}</td>
           </tr>
           <tr class="active-row">
-            <td class="counterCell"></td>
+            <td class="counterCell">5</td>
             <td>Телефон</td>
             <td>${phone ? phone : '-'}</td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">6</td>
             <td>Почта</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">7</td>
             <td>Способ связи</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">8</td>
             <td>Лид сайт</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">9</td>
             <td>Лид страница</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">10</td>
             <td>Город</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">11</td>
             <td>Страна</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">12</td>
             <td>Направление</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">13</td>
             <td>Университет</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">14</td>
             <td>Вопрос</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">15</td>
             <td>Google Client ID</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">16</td>
             <td>Yandex Metrics ID</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">17</td>
             <td>Устройство пользователя</td>
             <td></td>
           </tr>
   
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">18</td>
             <td>Источник рекламы</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">19</td>
             <td>Тип трафика</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">20</td>
             <td>Название РК</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">21</td>
             <td>Объявление</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">22</td>
             <td>Ключевое слово</td>
             <td></td>
           </tr>
           <tr>
-            <td class="counterCell"></td>
+            <td class="counterCell">23</td>
             <td>Дубль</td>
             <td></td>
           </tr>
