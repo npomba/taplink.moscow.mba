@@ -112,7 +112,7 @@ export default async (req, res) => {
         <tr class="${idx % 2 === 0 ? 'bgOnEven' : ''} ${
         item.trKey === 'Телефон' ? 'active-row' : ''
       }">
-          <td class="counterCell">${idx}</td>
+          <td class="counterCell">${idx + 1}</td>
           <td>${item.tdKey}</td>
           <td>${item.tdVal}</td>
         </tr>
