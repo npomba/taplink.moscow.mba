@@ -35,7 +35,7 @@ export default async (req, res) => {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
           counter-reset: tableCount;
         }
-        .counterCell:before {
+        .counterCell::before {
           content: counter(tableCount);
           counter-increment: tableCount;
         }
