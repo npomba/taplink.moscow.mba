@@ -9,38 +9,73 @@ import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 
 export default async (req, res) => {
+  // data from the client
   const { name, phone } = req.body
-  const client = new WebServiceClient('550199', 'FYEUxrplTADCW39V', {
+
+  // geoip2 init
+  const geoip2 = new WebServiceClient('550199', 'FYEUxrplTADCW39V', {
     host: 'geolite.info'
   })
+
+  // moment init
   const now = moment()
+
+  // get protocol
+  const protocol = req.headers['x-forwarded-proto']
+
+  // get root path
+  const root = protocol + '://' + req.headers.host
+
+  // get full client path
+  const path = ''
+
+  // get ip
   const ip =
     req.headers['x-forwarded-for'] ||
     // req.socket.remoteAddress ||
     req.connection.remoteAddress ||
     null
 
-  const getUserCountry = async () => {
+  const getUserLocation = async () => {
     try {
-      const res = await client.country(ip.toString())
-      return res.country.isoCode
+      const res = await geoip2.city(ip.toString())
+      const output = {
+        continent: {
+          code: res.continent.code,
+          names: {
+            ru: res.continent.names.ru,
+            en: res.continent.names.en
+          }
+        },
+        country: {
+          code: res.country.isoCode,
+          names: {
+            ru: res.country.names.ru,
+            en: res.country.names.en
+          }
+        },
+        city: {
+          names: {
+            en: res.city.names.en,
+            ru: res.city.names.ru
+          }
+        },
+        coordinates: {
+          accuracyRadius: res.location.accuracyRadius,
+          latitude: res.location.latitude,
+          longitude: res.location.longitude
+        },
+        timeZone: res.location.timeZone,
+        postalCode: res.postal.code
+      }
+      return output
     } catch (err) {
       console.log(err)
       return null
     }
   }
 
-  const getUserCity = async () => {
-    try {
-      const res = await client.city(ip.toString())
-      console.log(res)
-      // return res.postal.code
-      return JSON.stringify(res)
-    } catch (err) {
-      console.log(err)
-      return null
-    }
-  }
+  const locationData = await getUserLocation()
 
   const data = {
     id: uuidv4(),
@@ -50,15 +85,22 @@ export default async (req, res) => {
     date: now.format('DD-MM-YYYY'),
     time: now.format('HH:mm:ss'),
     utc: now.format('Z'),
-    root:
-      (req.connection.encrypted ? ' https' : 'http' + '://') + req.headers.host,
-    path:
-      (req.connection.encrypted ? ' https' : 'http' + '://') +
-      req.headers.host +
-      req.url,
+    root,
+    path,
     ip,
-    city: await getUserCity(),
-    country: await getUserCountry()
+    cityEn: locationData.city.names.en,
+    cityRu: locationData.city.names.ru,
+    countryCode: locationData.country.code,
+    countryEn: locationData.country.names.en,
+    countryRu: locationData.country.names.ru,
+    continentCode: locationData.continent.code,
+    continentEn: locationData.continent.names.en,
+    continentRu: locationData.continent.names.ru,
+    accuracyRadius: locationData.coordinates.accuracyRadius,
+    latitude: locationData.coordinates.latitude,
+    longitude: locationData.coordinates.longitude,
+    timeZone: locationData.timeZone,
+    postalCode: locationData.postalCode
   }
 
   const html = /* html */ `
@@ -174,13 +216,74 @@ export default async (req, res) => {
           </tr>
           <tr>
             <td class="counterCell">10</td>
-            <td>Город</td>
-            <td>${data.city}</td>
+            <td>IP</td>
+            <td>${data.ip}</td>
+          </tr>
+          <tr class="bgOnEven">
+            <td class="counterCell">10</td>
+            <td>Город (en)</td>
+            <td>${data.cityEn}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">10</td>
+            <td>Город (ru)</td>
+            <td>${data.cityRu}</td>
+          </tr>
+
+          <tr class="bgOnEven">
+            <td class="counterCell">11</td>
+            <td>Код страны</td>
+            <td>${data.countryCode}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">11</td>
+            <td>Страна (en)</td>
+            <td>${data.countryEn}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">11</td>
-            <td>Страна</td>
-            <td>${data.country}</td>
+            <td>Страна (ru)</td>
+            <td>${data.countryRu}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">11</td>
+            <td>Континент код</td>
+            <td>${data.continentCode}</td>
+          </tr>
+          <tr class="bgOnEven">
+            <td class="counterCell">11</td>
+            <td>Континент (en)</td>
+            <td>${data.continentEn}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">11</td>
+            <td>Континент (ru)</td>
+            <td>${data.continentRu}</td>
+          </tr>
+          <tr class="bgOnEven">
+            <td class="counterCell">11</td>
+            <td>Погрешность (м)</td>
+            <td>${data.accuracyRadius}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">11</td>
+            <td>Широта</td>
+            <td>${data.latitude}</td>
+          </tr>
+          <tr class="bgOnEven">
+            <td class="counterCell">11</td>
+            <td>Долгота</td>
+            <td>${data.longitude}</td>
+          </tr>
+          <tr>
+            <td class="counterCell">11</td>
+            <td>Часовой пояс</td>
+            <td>${data.timeZone}</td>
+          </tr>
+          <tr class="bgOnEven">
+            <td class="counterCell">11</td>
+            <td>Зип код</td>
+            <td>${data.postalCode}</td>
           </tr>
           <tr>
             <td class="counterCell">12</td>
