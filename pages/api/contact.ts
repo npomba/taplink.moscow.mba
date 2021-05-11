@@ -319,6 +319,8 @@ export default async (req, res) => {
           <title>${subject}</title>
         </head>
         <body>
+          <h1>${subject}</h1>
+          <p>🎉🥳🎉 Ура! Новая заявка с ${root}! 🎉🥳🎉</p>
           <table class="styled-table">
             <thead>
               <tr>
