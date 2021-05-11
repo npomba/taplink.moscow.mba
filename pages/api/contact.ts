@@ -6,15 +6,59 @@ import url from 'url'
 import http from 'http'
 import { v4 as uuidv4 } from 'uuid'
 import moment from 'moment'
+import { WebServiceClient } from '@maxmind/geoip2-node'
 
 export default async (req, res) => {
   const { name, phone } = req.body
+  const client = new WebServiceClient('550199', 'FYEUxrplTADCW39V', {
+    host: 'geolite.info'
+  })
+  const now = moment()
+  const ip =
+    req.headers['x-forwarded-for'] ||
+    // req.socket.remoteAddress ||
+    req.connection.remoteAddress ||
+    null
 
-  const rn = moment()
-  const now = {
-    date: rn.format('DD-MM-YYYY'),
-    time: rn.format('HH:mm:ss'),
-    utc: rn.format('Z')
+  const getUserCountry = async () => {
+    try {
+      const res = await client.country(ip.toString())
+      return res.country.isoCode
+    } catch (err) {
+      console.log(err)
+      return null
+    }
+  }
+
+  const getUserCity = async () => {
+    try {
+      const res = await client.city(ip.toString())
+      console.log(res)
+      // return res.postal.code
+      return JSON.stringify(res)
+    } catch (err) {
+      console.log(err)
+      return null
+    }
+  }
+
+  const data = {
+    id: uuidv4(),
+    name: name || '',
+    phone: phone || '',
+    email: '',
+    date: now.format('DD-MM-YYYY'),
+    time: now.format('HH:mm:ss'),
+    utc: now.format('Z'),
+    root:
+      (req.connection.encrypted ? ' https' : 'http' + '://') + req.headers.host,
+    path:
+      (req.connection.encrypted ? ' https' : 'http' + '://') +
+      req.headers.host +
+      req.url,
+    ip,
+    city: await getUserCity(),
+    country: await getUserCountry()
   }
 
   const html = /* html */ `
@@ -81,37 +125,37 @@ export default async (req, res) => {
           <tr>
             <td class="counterCell">1</td>
             <td>ID</td>
-            <td>${uuidv4()}</td>
+            <td>${data.id}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">2</td>
             <td>Дата</td>
-            <td>${now.date}</td>
+            <td>${data.date}</td>
           </tr>
           <tr>
             <td class="counterCell">3</td>
             <td>Время</td>
-            <td>${now.time}</td>
+            <td>${data.time}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">3</td>
             <td>UTC</td>
-            <td>${now.utc}</td>
+            <td>${data.utc}</td>
           </tr>
           <tr>
             <td class="counterCell">4</td>
             <td>Имя</td>
-            <td>${name ? name : '-'}</td>
+            <td>${data.name}</td>
           </tr>
           <tr class="active-row bgOnEven">
             <td class="counterCell">5</td>
             <td>Телефон</td>
-            <td>${phone ? phone : '-'}</td>
+            <td>${data.phone}</td>
           </tr>
           <tr>
             <td class="counterCell">6</td>
             <td>Почта</td>
-            <td></td>
+            <td>${data.email}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">7</td>
@@ -121,29 +165,22 @@ export default async (req, res) => {
           <tr>
             <td class="counterCell">8</td>
             <td>Лид сайт</td>
-            <td>${
-              (req.connection.encrypted ? ' https' : 'http' + '://') +
-              req.headers.host
-            }</td>
+            <td>${data.root}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">9</td>
             <td>Лид страница</td>
-            <td>${
-              (req.connection.encrypted ? ' https' : 'http' + '://') +
-              req.headers.host +
-              req.url
-            }</td>
+            <td>${data.path}</td>
           </tr>
           <tr>
             <td class="counterCell">10</td>
             <td>Город</td>
-            <td></td>
+            <td>${data.city}</td>
           </tr>
           <tr class="bgOnEven">
             <td class="counterCell">11</td>
             <td>Страна</td>
-            <td></td>
+            <td>${data.country}</td>
           </tr>
           <tr>
             <td class="counterCell">12</td>
@@ -229,27 +266,27 @@ export default async (req, res) => {
     }
   })
 
-  try {
-    const emailRes = await transporter.sendMail({
-      from: 'lead@moscow.mba',
-      to: `${
-        dev
-          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
-          : 'marketing@rosucheba.ru'
-      }`,
-      subject: 'Новая заявка с moscow.mba', // Subject line
-      text: `
-      ${name}, \n
-      ${phone}
-      `, // plain text body
-      html
-    })
+  // try {
+  //   const emailRes = await transporter.sendMail({
+  //     from: 'lead@moscow.mba',
+  //     to: `${
+  //       dev
+  //         ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
+  //         : 'marketing@rosucheba.ru'
+  //     }`,
+  //     subject: 'Новая заявка с moscow.mba', // Subject line
+  //     text: `
+  //     ${name}, \n
+  //     ${phone}
+  //     `, // plain text body
+  //     html
+  //   })
 
-    console.log('Message sent: %s', emailRes.messageId)
-    res.status(200).json({ status: 200, msg: 'Email is sent' })
-  } catch (err) {
-    res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
+  //   console.log('Message sent: %s', emailRes.messageId)
+  //   res.status(200).json({ status: 200, msg: 'Email is sent' })
+  // } catch (err) {
+  //   res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
 
-    console.error(err)
-  }
+  //   console.error(err)
+  // }
 }
