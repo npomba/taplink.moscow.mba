@@ -111,7 +111,7 @@ export default async (req, res) => {
       const output = /* html */ `
         <tr class="${idx % 2 === 0 && 'bgOnEven'} ${
         item.tdKey === 'Телефон' && 'active-row'
-      } ${idx + 1 && 'bgBorderHighlight'}">
+      } ${!(idx + 1) && 'bgBorderHighlight'}">
           <td class="counterCell">${idx + 1}</td>
           <td>${item.tdKey}</td>
           <td>${item.tdVal}</td>
