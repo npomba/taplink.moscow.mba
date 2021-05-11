@@ -8,17 +8,6 @@ export default async (req, res) => {
 
   const html = /* html */ `
   <!DOCTYPE html>
-  <html lang="en">
-    <head>
-      <meta charset="UTF-8" />
-      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      <title>Document</title>
-    </head>
-    <body></body>
-  </html>
-  
-  <!DOCTYPE html>
   <html lang="ru">
     <head>
       <meta charset="UTF-8" />
@@ -52,12 +41,14 @@ export default async (req, res) => {
           border-bottom: thin solid #dddddd;
         }
   
-        .styled-table tbody tr:nth-of-type(even) {
+        .styled-table tbody tr:nth-of-type(even),
+        .bgOnEven {
           background-color: #f3f3f3;
         }
   
-        .styled-table tbody tr:last-of-type {
-          border-bottom: thin solid #ff3535;
+        .styled-table tbody tr:last-of-type,
+        .bgBorderHighlight {
+          border-bottom: 2px solid #ff3535;
         }
         .styled-table tbody tr.active-row {
           font-weight: bold;
@@ -76,7 +67,7 @@ export default async (req, res) => {
           </tr>
         </thead>
         <tbody>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">1</td>
             <td>ID</td>
             <td></td>
@@ -86,7 +77,7 @@ export default async (req, res) => {
             <td>Дата</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">3</td>
             <td>Время</td>
             <td></td>
@@ -96,7 +87,7 @@ export default async (req, res) => {
             <td>Имя</td>
             <td>${name ? name : '-'}</td>
           </tr>
-          <tr class="active-row">
+          <tr class="bgOnEven active-row">
             <td class="counterCell">5</td>
             <td>Телефон</td>
             <td>${phone ? phone : '-'}</td>
@@ -106,7 +97,7 @@ export default async (req, res) => {
             <td>Почта</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">7</td>
             <td>Способ связи</td>
             <td></td>
@@ -116,7 +107,7 @@ export default async (req, res) => {
             <td>Лид сайт</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">9</td>
             <td>Лид страница</td>
             <td></td>
@@ -126,7 +117,7 @@ export default async (req, res) => {
             <td>Город</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">11</td>
             <td>Страна</td>
             <td></td>
@@ -136,7 +127,7 @@ export default async (req, res) => {
             <td>Направление</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">13</td>
             <td>Университет</td>
             <td></td>
@@ -146,7 +137,7 @@ export default async (req, res) => {
             <td>Вопрос</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">15</td>
             <td>Google Client ID</td>
             <td></td>
@@ -156,18 +147,17 @@ export default async (req, res) => {
             <td>Yandex Metrics ID</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">17</td>
             <td>Устройство пользователя</td>
             <td></td>
           </tr>
-  
           <tr>
             <td class="counterCell">18</td>
             <td>Источник рекламы</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">19</td>
             <td>Тип трафика</td>
             <td></td>
@@ -177,7 +167,7 @@ export default async (req, res) => {
             <td>Название РК</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven">
             <td class="counterCell">21</td>
             <td>Объявление</td>
             <td></td>
@@ -187,7 +177,7 @@ export default async (req, res) => {
             <td>Ключевое слово</td>
             <td></td>
           </tr>
-          <tr>
+          <tr class="bgOnEven bgBorderHighlight">
             <td class="counterCell">23</td>
             <td>Дубль</td>
             <td></td>
