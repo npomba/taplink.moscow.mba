@@ -8,13 +8,24 @@ export default async (req, res) => {
 
   const html = /* html */ `
   <!DOCTYPE html>
+  <html lang="en">
+    <head>
+      <meta charset="UTF-8" />
+      <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+      <title>Document</title>
+    </head>
+    <body></body>
+  </html>
+  
+  <!DOCTYPE html>
   <html lang="ru">
     <head>
-      <meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+      <meta charset="UTF-8" />
       <meta http-equiv="X-UA-Compatible" content="IE=edge" />
       <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-      <style type="text/css">
+      <style>
         .styled-table {
           border-collapse: collapse;
           margin: 25px 0;
@@ -24,7 +35,7 @@ export default async (req, res) => {
           box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
           counter-reset: tableCount;
         }
-        .counterCell::before {
+        .counterCell:before {
           content: counter(tableCount);
           counter-increment: tableCount;
         }
@@ -160,6 +171,7 @@ export default async (req, res) => {
       </table>
     </body>
   </html>
+  
   `
 
   // const testAccount = await nodemailer.createTestAccount()
