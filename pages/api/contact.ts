@@ -109,9 +109,9 @@ export default async (req, res) => {
   const createEmailBody = () => {
     const createTr = (item, idx) => {
       const output = /* html */ `
-        <tr class="${idx % 2 === 0 ? 'bgOnEven' : ''} ${
-        item.trKey === 'Телефон' ? 'active-row' : ''
-      }">
+        <tr class="${idx % 2 === 0 && 'bgOnEven'} ${
+        item.tdKey === 'Телефон' && 'active-row'
+      } ${idx + 1 && 'bgBorderHighlight'}">
           <td class="counterCell">${idx + 1}</td>
           <td>${item.tdKey}</td>
           <td>${item.tdVal}</td>
