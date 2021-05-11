@@ -78,6 +78,21 @@ export default async (req, res) => {
         <tbody>
           <tr>
             <td class="counterCell"></td>
+            <td>ID</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="counterCell"></td>
+            <td>Дата</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="counterCell"></td>
+            <td>Время</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="counterCell"></td>
             <td>Имя</td>
             <td>${name ? name : '-'}</td>
           </tr>
@@ -94,6 +109,11 @@ export default async (req, res) => {
           <tr>
             <td class="counterCell"></td>
             <td>Способ связи</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="counterCell"></td>
+            <td>Лид сайт</td>
             <td></td>
           </tr>
           <tr>
@@ -129,6 +149,11 @@ export default async (req, res) => {
           <tr>
             <td class="counterCell"></td>
             <td>Google Client ID</td>
+            <td></td>
+          </tr>
+          <tr>
+            <td class="counterCell"></td>
+            <td>Yandex Metrics ID</td>
             <td></td>
           </tr>
           <tr>
