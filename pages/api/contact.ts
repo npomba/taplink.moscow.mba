@@ -13,7 +13,7 @@ export default async (req, res) => {
   const { name, phone } = req.body
 
   // geoip2 init
-  const geoip2 = new WebServiceClient('550199', 'FYEUxrplTADCW39V', {
+  const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
     host: 'geolite.info'
   })
 
