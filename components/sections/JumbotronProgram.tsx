@@ -13,7 +13,7 @@ const JumbotronProgram = ({ data }) => {
       <div className='image'>
         <Image
           src={`/assets/images/programs-bgs/${data.picture}`}
-          alt='Ваш будущий диплом'
+          alt='Студенты обучаются'
           layout='fill'
         />
       </div>
@@ -46,9 +46,8 @@ const JumbotronProgram = ({ data }) => {
                   </a>
                 }
                 modal
-                nested
-              >
-                {(close) => (
+                nested>
+                {close => (
                   <PopUpForm
                     programId={data._id}
                     programTitle={data.title}

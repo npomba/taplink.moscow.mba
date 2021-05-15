@@ -9,10 +9,18 @@ const JumbotronLabel = () => {
     ? 'Professional MBA'
     : at.industry
     ? 'Industry MBA'
+    : at.executive
+    ? 'Executive MBA'
     : ''
   return (
     <span>
-      {at.online ? `${txt} ONLINE` : at.blended ? `${txt} BLENDED` : ''}
+      {at.online
+        ? `${txt} ONLINE`
+        : at.blended
+        ? `${txt} BLENDED`
+        : at.executive
+        ? txt
+        : ''}
     </span>
   )
 }

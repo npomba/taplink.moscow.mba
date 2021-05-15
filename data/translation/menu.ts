@@ -35,6 +35,11 @@ export default {
     en: 'Half In-Person',
   },
 
+  formatExecutive: {
+    ru: 'Очно',
+    en: 'In person',
+  },
+
   qtSubjects: {
     ru: 'дисциплин',
     en: 'subjects',

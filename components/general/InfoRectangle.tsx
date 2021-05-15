@@ -11,8 +11,7 @@ const InfoRectangle = ({ programPage = false }) => {
     <ul
       className={`jumbotron-red-info ${
         programPage ? 'jumbotron-red-info-programs-page' : ''
-      }`}
-    >
+      }`}>
       <li>
         <p>Срок обучения:</p>
         <div className='detail'>3 года 6 месяцев</div>
@@ -24,6 +23,8 @@ const InfoRectangle = ({ programPage = false }) => {
             ? setString(langMenu.formatRemote)
             : at.blended
             ? setString(langMenu.formatBlended)
+            : at.executive
+            ? setString(langMenu.formatExecutive)
             : ''}
         </div>
       </li>

@@ -5,7 +5,7 @@ module.exports = {
   i18n: {
     locales: ['ru', 'en-US'],
     defaultLocale: 'ru',
-    localeDetection: false,
+    localeDetection: false
   },
   async headers() {
     return [
@@ -14,7 +14,7 @@ module.exports = {
         headers: createSecureHeaders({
           forceHTTPSRedirect: [
             true,
-            { maxAge: 60 * 60 * 24 * 30 * 12 * 2, includeSubDomains: true },
+            { maxAge: 60 * 60 * 24 * 30 * 12 * 2, includeSubDomains: true }
           ],
           frameGuard: 'deny',
           noopen: 'noopen',
@@ -32,11 +32,35 @@ module.exports = {
           //     styleSrc: 'unsafe-inline',
           //   },
           // },
-          referrerPolicy: 'no-referrer',
-        }),
-      },
+          referrerPolicy: 'no-referrer'
+        })
+      }
     ]
   },
+  async redirects() {
+    return [
+      {
+        source: '/programs',
+        destination: '/programs/mini/online',
+        permanent: true
+      },
+      {
+        source: '/programs/mini',
+        destination: '/programs/mini/online',
+        permanent: true
+      },
+      {
+        source: '/programs/professional',
+        destination: '/programs/professional/online',
+        permanent: true
+      },
+      {
+        source: '/programs/industry',
+        destination: '/programs/industry/online',
+        permanent: true
+      }
+    ]
+  }
   // async headers() {
   //   return [
   //     {

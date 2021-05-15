@@ -41,6 +41,10 @@ const useAt = () => {
     return getSplitedPath[1] === 'industry'
   }
 
+  const executive = () => {
+    return getSplitedPath[1] === 'executive'
+  }
+
   const online = () => {
     return getSplitedPath[2] === 'online'
     // return (
@@ -63,6 +67,7 @@ const useAt = () => {
     mini: mini(),
     professional: professional(),
     industry: industry(),
+    executive: executive(),
     online: online(),
     blended: blended(),
     webinars: webinars(),
