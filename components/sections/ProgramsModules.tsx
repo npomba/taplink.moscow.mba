@@ -24,14 +24,12 @@ const ProgramsModules = ({ data }) => {
           <li>
             <div className='number'>
               <ProgramSubjects subjects='base' />
-              <ProgramSubjects subjects='base' type='executive' />
             </div>
             <p>дисциплин базовой части</p>
           </li>
           <li>
             <div className='number'>
               <ProgramSubjects subjects='specialty' />
-              <ProgramSubjects subjects='specialty' type='executive' />
             </div>
             <p>дисциплин специализации</p>
           </li>
