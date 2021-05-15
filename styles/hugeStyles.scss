@@ -7573,3 +7573,27 @@ div.popup-content {
     font-size: 21px;
   }
 }
+
+.red-rectangle-price{
+  & .old-price{
+    &::after{
+      display: none;
+    }
+  }
+  & .new-price{
+    position: relative;
+    &::after{
+      content: '';
+      width: 110%;
+      height: 2px;
+      background: #fff;
+      top: 50%;
+      left: 0;
+      margin-left: -5%;
+      margin-top: -1px;
+      position: absolute;
+      z-index: 3;
+      transform: rotate(9deg);
+    }
+  }
+}

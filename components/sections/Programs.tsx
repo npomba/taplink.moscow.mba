@@ -8,13 +8,14 @@ import ProgramsQt from '@/components/hooks/ProgramsQt'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
+import Price from '../prices/Price'
 
 const Programs = ({ programs }) => {
   const data = programs
 
   useEffect(() => {
     loadJs(['/assets/js/programs.js'], {
-      async: false,
+      async: false
     })
   }, [])
   return (
@@ -86,8 +87,19 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='new-price'> 490 000 Р.</i>
-                  <i className='old-price'> 540 000 Р.</i>
+                  <i className='new-price'>
+                    {' '}
+                    <Price discount={true} type={'mini'} format={'online'} /> Р.
+                  </i>
+                  <i className='old-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'mini'}
+                      format={'online'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -107,7 +119,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'mini' &&
                       item.mbaFormat === 'online'
@@ -116,8 +128,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -134,7 +145,15 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='simple-price'> 540 000 Р.</i>
+                  <i className='simple-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'mini'}
+                      format={'blended'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -154,7 +173,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'mini' &&
                       item.mbaFormat === 'blended'
@@ -163,8 +182,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -222,8 +240,24 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='new-price'> 490 000 Р.</i>
-                  <i className='old-price'> 540 000 Р.</i>
+                  <i className='new-price'>
+                    {' '}
+                    <Price
+                      discount={true}
+                      type={'professional'}
+                      format={'online'}
+                    />{' '}
+                    &#8381;
+                  </i>
+                  <i className='old-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'professional'}
+                      format={'online'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -243,7 +277,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'professional' &&
                       item.mbaFormat === 'online'
@@ -252,8 +286,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -270,7 +303,15 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='simple-price'> 540 000 Р.</i>
+                  <i className='simple-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'professional'}
+                      format={'blended'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -290,7 +331,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'professional' &&
                       item.mbaFormat === 'blended'
@@ -299,8 +340,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -358,8 +398,24 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='new-price'> 490 000 Р.</i>
-                  <i className='old-price'> 540 000 Р.</i>
+                  <i className='new-price'>
+                    {' '}
+                    <Price
+                      discount={true}
+                      type={'industry'}
+                      format={'online'}
+                    />{' '}
+                    &#8381;
+                  </i>
+                  <i className='old-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'industry'}
+                      format={'online'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -379,7 +435,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'industry' &&
                       item.mbaFormat === 'online'
@@ -388,8 +444,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -406,7 +461,15 @@ const Programs = ({ programs }) => {
                 </div>
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
-                  <i className='simple-price'> 540 000 Р.</i>
+                  <i className='simple-price'>
+                    {' '}
+                    <Price
+                      discount={false}
+                      type={'industry'}
+                      format={'blended'}
+                    />{' '}
+                    &#8381;
+                  </i>
                 </div>
                 <div className='info-list'>
                   <div className='info-flex'>
@@ -426,7 +489,7 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <ul className='program-options-block-list'>
-                  {data.map((item) => {
+                  {data.map(item => {
                     if (
                       item.mbaTypeOfProgram === 'industry' &&
                       item.mbaFormat === 'blended'
@@ -435,8 +498,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>

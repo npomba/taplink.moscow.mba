@@ -4,6 +4,7 @@ import setString from '@/components/hooks/setString'
 import langMenu from '@/data/translation/menu'
 
 import useAt from '@/components/hooks/useAt'
+import Price from '../prices/Price'
 
 const InfoRectangle = ({ programPage = false }) => {
   const at = useAt()
@@ -36,9 +37,47 @@ const InfoRectangle = ({ programPage = false }) => {
       </li>
       <li>
         <p>Стоимость:</p>
-        <div className='detail'>
-          <span className='old-price'>390 000 &#8381;</span>{' '}
-          <span className='new-price'>540 000 Р.</span>
+        <div className='detail red-rectangle-price'>
+          <span className='old-price'>
+            {at.mini && at.online && (
+              <Price discount={true} type='mini' format='online' />
+            )}
+            {at.mini && at.blended && (
+              <Price discount={false} type='mini' format='blended' />
+            )}{' '}
+            {at.professional && at.online && (
+              <Price discount={true} type='professional' format='online' />
+            )}{' '}
+            {at.professional && at.blended && (
+              <Price discount={false} type='professional' format='blended' />
+            )}{' '}
+            {at.industry && at.online && (
+              <Price discount={true} type='industry' format='online' />
+            )}{' '}
+            {at.industry && at.blended && (
+              <Price discount={false} type='industry' format='blended' />
+            )}{' '}
+            &#8381;
+          </span>{' '}
+          <span className='new-price'>
+            {at.mini && at.online && (
+              <>
+                <Price discount={false} type='mini' format='online' /> &#8381;
+              </>
+            )}
+            {at.professional && at.online && (
+              <>
+                <Price discount={false} type='professional' format='online' />{' '}
+                &#8381;
+              </>
+            )}
+            {at.industry && at.online && (
+              <>
+                <Price discount={false} type='industry' format='online' />{' '}
+                &#8381;
+              </>
+            )}{' '}
+          </span>
         </div>
       </li>
     </ul>
