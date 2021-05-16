@@ -86,8 +86,8 @@ export default {
   },
 
   categoryAboutManagement: {
-    ru: 'об управлении',
-    en: 'on management'
+    ru: 'дисциплин об управлении',
+    en: 'management subjects'
   },
 
   categorySpecializedSubjects: {
