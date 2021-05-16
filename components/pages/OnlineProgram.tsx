@@ -14,6 +14,7 @@ import Teachers from '@/components/sections/Teachers'
 import RelevantContent from '@/components/sections/RelevantContent'
 import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
+import CostOfStudy from '../sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
 
@@ -58,8 +59,8 @@ const PageOnlineProgram = ({ program }) => {
         <Diploma />
         <Students />
         <Reviews />
+        <CostOfStudy programId={data._id} programTitle={data.title} />
         <Qna />
-
         <ContactUs
           programId={data._id}
           programTitle={data.title}
