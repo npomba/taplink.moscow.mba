@@ -1,11 +1,26 @@
+import useAt from '@/components/hooks/useAt'
+
 const Pros = ({ format = 'online' }) => {
+  const at = useAt()
   if (format === 'online') {
     return (
       <section className='advantages-section section-pl'>
         <div className='title-pl red'>
           online <br /> модули
         </div>
-        <h2>На MBA mini мы обучаем онлайн. И делаем это качественно</h2>
+        <h2>
+          На MBA{' '}
+          {at.mini
+            ? 'mini'
+            : at.professional
+            ? 'professional'
+            : at.industry
+            ? 'industry'
+            : at.executive
+            ? 'executive'
+            : null}{' '}
+          мы обучаем онлайн. И делаем это качественно
+        </h2>
         <div className='advantages-content'>
           <ul className='advantages-list'>
             <li>
@@ -43,9 +58,18 @@ const Pros = ({ format = 'online' }) => {
               <div>
                 <h5>Получаете престижные дипломы</h5>
                 <p>
-                  Дипломы MBA mini online не отличается от дипломов очных
-                  программ за счет того, что преподают те же спикеры по тем же
-                  учебным прграммам
+                  Дипломы MBA{' '}
+                  {at.mini
+                    ? 'mini'
+                    : at.professional
+                    ? 'professional'
+                    : at.industry
+                    ? 'industry'
+                    : at.executive
+                    ? 'executive'
+                    : null}{' '}
+                  online не отличается от дипломов очных программ за счет того,
+                  что преподают те же спикеры по тем же учебным прграммам
                 </p>
               </div>
             </li>
@@ -130,9 +154,19 @@ const Pros = ({ format = 'online' }) => {
               <div>
                 <h5>Общайтесь с экспертами online</h5>
                 <p>
-                  На MBA mini online у Вас есть возможность задавать вопросы
-                  экспертам во время видео-встреч, а также через нашу
-                  образовательную платформу
+                  На MBA{' '}
+                  {at.mini
+                    ? 'mini'
+                    : at.professional
+                    ? 'professional'
+                    : at.industry
+                    ? 'industry'
+                    : at.executive
+                    ? 'executive'
+                    : null}{' '}
+                  online у Вас есть возможность задавать вопросы экспертам во
+                  время видео-встреч, а также через нашу образовательную
+                  платформу
                 </p>
               </div>
             </li>
