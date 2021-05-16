@@ -9,7 +9,7 @@ const Until = ({ preposition = true, executive = false }) => {
   if (executive) currentMonth = currentMonth + 7
   return (
     <>
-      {preposition && setString(langMenu.discountUntil)}
+      {preposition && setString(langMenu.discountUntil) + ' '}
       {currentDay < 20 ? '20' : '5'}{' '}
       {currentMonth === 1
         ? setString(langMonths.january)
