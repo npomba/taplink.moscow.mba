@@ -2,10 +2,11 @@ import langMenu from '@/data/translation/menu'
 import langMonths from '@/data/translation/months'
 import setString from '@/components/hooks/setString'
 
-const Until = ({ preposition = true }) => {
+const Until = ({ preposition = true, executive = false }) => {
   const currentDate = new Date()
-  const currentMonth = currentDate.getMonth() + 1
   const currentDay = currentDate.getDate()
+  let currentMonth = currentDate.getMonth() + 1
+  if (executive) currentMonth = currentMonth + 7
   return (
     <>
       {preposition && setString(langMenu.discountUntil)}

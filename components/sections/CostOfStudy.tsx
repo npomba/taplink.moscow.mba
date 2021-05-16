@@ -3,6 +3,9 @@ import 'reactjs-popup/dist/index.css'
 import Until from '@/components/dates/Until'
 import PopUpForm from '@/components/popups/Form'
 import useAt from '@/components/hooks/useAt'
+import Price from '@/components/prices/Price'
+import TrainingPeriod from '../dates/TrainingPeriod'
+import ProgramSubjects from '../hooks/ProgramSubjects'
 
 const CostOfStudy = ({ programTitle = null, programId = null }) => {
   const at = useAt()
@@ -11,16 +14,79 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
       <h2>Стоимость обучения</h2>
       <div className='program-price-block single-program-price'>
         <div className='inner-block'>
-          <div className='name'>MBA Professional</div>
+          <div className='name'>
+            MBA{' '}
+            {at.mini
+              ? 'Mini'
+              : at.professional
+              ? 'Professional'
+              : at.industry
+              ? 'Industry'
+              : at.executive
+              ? 'Executive'
+              : null}
+          </div>
           <ul className='simple-list'>
-            <li>От 3 до 6 месяцев обучения</li>
-            <li>Дистанционно</li>
+            <li>
+              <TrainingPeriod
+                type={
+                  at.mini
+                    ? 'mini'
+                    : at.professional
+                    ? 'professional'
+                    : at.industry
+                    ? 'industry'
+                    : at.executive
+                    ? 'executive'
+                    : null
+                }
+              />
+            </li>
+            <li>
+              {at.online
+                ? 'Дистанционно'
+                : at.blended
+                ? 'С очными модулями'
+                : 'Очно'}
+            </li>
             <li>
               Ближайший набор <Until preposition={false} />
             </li>
             <li>432 часа живого общения с экспертами</li>
-            <li>40 дисциплин об управлении</li>
-            <li>12 дисциплин специализации</li>
+            <li>
+              <ProgramSubjects
+                type={
+                  at.mini
+                    ? 'mini'
+                    : at.professional
+                    ? 'professional'
+                    : at.industry
+                    ? 'industry'
+                    : at.executive
+                    ? 'executive'
+                    : null
+                }
+                subjects={'base'}
+              />{' '}
+              дисциплин об управлении
+            </li>
+            <li>
+              <ProgramSubjects
+                type={
+                  at.mini
+                    ? 'mini'
+                    : at.professional
+                    ? 'professional'
+                    : at.industry
+                    ? 'industry'
+                    : at.executive
+                    ? 'executive'
+                    : null
+                }
+                subjects={'specialty'}
+              />{' '}
+              дисциплин специализации
+            </li>
             <li>3 выезднных модуля в Москве</li>
           </ul>
           <div className='note'>*Возможна рассрочка</div>
@@ -37,7 +103,31 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
             </p>
             <p className='red'>Запишитесь на MBA сегодня:</p>
           </div>
-          <div className='price'>130 000 Р.</div>
+          <div className='price'>
+            <Price
+              discount={
+                at.mini && at.online
+                  ? true
+                  : at.professional && at.online
+                  ? true
+                  : at.industry && at.online
+                  ? true
+                  : false
+              }
+              type={
+                at.mini
+                  ? 'mini'
+                  : at.professional
+                  ? 'professional'
+                  : at.industry
+                  ? 'industry'
+                  : at.executive
+                  ? 'executive'
+                  : null
+              }
+              format={at.online ? 'online' : at.blended ? 'blended' : null}
+            />
+          </div>
           <div className='button-block'>
             <Popup
               trigger={<a className='button empty-button'>Оставить заявку</a>}
