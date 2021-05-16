@@ -124,19 +124,30 @@ const Header = ({ programs }) => {
               <ul className='header-podmenu-tabs'>
                 <li>
                   <Link href='/programs/mini/online' locale='ru'>
-                    <a data-tab='#header-podmenu-1' className='active-tab'>
+                    <a
+                      data-tab='#header-podmenu-1'
+                      className='active-tab headerMenuTabs'>
                       Mini MBA
                     </a>
                   </Link>
                 </li>
                 <li>
                   <Link href='/programs/professional/online' locale='ru'>
-                    <a data-tab='#header-podmenu-2'>Professional MBA</a>
+                    <a data-tab='#header-podmenu-2' className='headerMenuTabs'>
+                      Professional MBA
+                    </a>
                   </Link>
                 </li>
                 <li>
                   <Link href='/programs/industry/online' locale='ru'>
-                    <a data-tab='#header-podmenu-3'>Industry MBA</a>
+                    <a data-tab='#header-podmenu-3' className='headerMenuTabs'>
+                      Industry MBA
+                    </a>
+                  </Link>
+                </li>
+                <li>
+                  <Link href='/programs/mini/online' locale='ru'>
+                    <a>{setString(langMenu.allPrograms)}</a>
                   </Link>
                 </li>
               </ul>
@@ -730,17 +741,23 @@ const Header = ({ programs }) => {
               </li>
               <li>
                 <Link href='/about'>
-                  <a>{setString(lang.linkAbout)}</a>
+                  <a className='onClickCloseMobileMenu'>
+                    {setString(lang.linkAbout)}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href='/teachers' locale='ru'>
-                  <a>{setString(lang.linkTeachers)}</a>
+                  <a className='onClickCloseMobileMenu'>
+                    {setString(lang.linkTeachers)}
+                  </a>
                 </Link>
               </li>
               <li>
                 <Link href='/webinars' locale='ru'>
-                  <a>{setString(lang.linkWebinars)}</a>
+                  <a className='onClickCloseMobileMenu'>
+                    {setString(lang.linkWebinars)}
+                  </a>
                 </Link>
               </li>
               {/* <li>
@@ -751,7 +768,9 @@ const Header = ({ programs }) => {
               </li> */}
               <li>
                 <Link href='/articles' locale='ru'>
-                  <a>{setString(lang.linkNews)}</a>
+                  <a className='onClickCloseMobileMenu'>
+                    {setString(lang.linkNews)}
+                  </a>
                 </Link>
               </li>
 
@@ -1468,6 +1487,13 @@ const Header = ({ programs }) => {
                   </div>
                 </div>
                 {/* //third */}
+              </li>
+              <li>
+                <Link href='/programs/mini/online' locale='ru'>
+                  <a className='mobileAllProgramsLink'>
+                    {setString(langMenu.allPrograms)}
+                  </a>
+                </Link>
               </li>
             </ul>
           </div>

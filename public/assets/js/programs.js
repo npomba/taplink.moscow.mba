@@ -1,5 +1,5 @@
 $(document).ready(function () {
-  $('.program-options-tabs a').click(function (e) {
+  $('.program-options-tabs a.headerMenuTabs').click(function (e) {
     e.preventDefault()
     var $searchId = $($(this).data('tab'))
     $('.program-options-tabs a').not($(this)).removeClass('active-tab')
@@ -46,7 +46,7 @@ if ($('.mini-programs-slider').length) {
           dots: true,
           rows: 5,
           slidesPerRow: 1,
-          adaptiveHeight: true,
+          adaptiveHeight: true
         })
       }
     } else {

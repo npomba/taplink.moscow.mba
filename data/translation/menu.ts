@@ -1,4 +1,9 @@
 export default {
+  allPrograms: {
+    ru: 'Все программы',
+    en: 'All programs'
+  },
+
   onlineTitle: {
     ru: 'Формат ONLINE',
     en: 'ONLINE'

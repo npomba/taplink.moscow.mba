@@ -27,19 +27,33 @@ const Programs = ({ programs }) => {
           <h2>{setString(langHeader.programsBtn)}</h2>
           <ul className='program-options-tabs'>
             <li>
-              <a href='' data-tab='#program-options-1' className='active-tab'>
+              <a
+                href=''
+                data-tab='#program-options-1'
+                className='active-tab headerMenuTabs'>
                 Mini MBA
               </a>
             </li>
             <li>
-              <a href='' data-tab='#program-options-2'>
+              <a
+                href=''
+                data-tab='#program-options-2'
+                className='headerMenuTabs'>
                 Professional MBA
               </a>
             </li>
             <li>
-              <a href='' data-tab='#program-options-3'>
+              <a
+                href=''
+                data-tab='#program-options-3'
+                className='headerMenuTabs'>
                 Industry MBA
               </a>
+            </li>
+            <li>
+              <Link href='/programs/mini/online' locale='ru'>
+                <a>{setString(langMenu.allPrograms)}</a>
+              </Link>
             </li>
           </ul>
         </div>
