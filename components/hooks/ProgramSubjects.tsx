@@ -44,7 +44,7 @@ const ProgramSubjects = ({ sum = false, type = '', subjects = '' }) => {
           ? '37'
           : subjects === 'specialty' && sum === false
           ? '10'
-          : '47'}
+          : '49'}
       </span>
     )
   }

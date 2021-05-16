@@ -98,8 +98,8 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               бизнес-образования.
             </p>
             <p>
-              Свяжите ближайшие полгода с Moscow Business Academy и кратно
-              увеличьте запас знаний
+              Инвестируйте своё время в образование с Moscow Business Academy и
+              кратно увеличьте свой запас знаний и доход
             </p>
             <p className='red'>Запишитесь на MBA сегодня:</p>
           </div>
@@ -126,7 +126,8 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
                   : null
               }
               format={at.online ? 'online' : at.blended ? 'blended' : null}
-            />
+            />{' '}
+            &#8381;
           </div>
           <div className='button-block'>
             <Popup

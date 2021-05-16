@@ -6,6 +6,7 @@ import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
 import Price from '@/components/prices/Price'
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import ProgramSubjects from '../hooks/ProgramSubjects'
 
 const Executive = () => {
   return (
@@ -23,7 +24,10 @@ const Executive = () => {
               <TrainingPeriod type={'executive'} />
             </li>
             <li>2 {setString(lang.executiveOfflineModules)}</li>
-            <li>27 {setString(langMenu.qtSubjects)}</li>
+            <li>
+              <ProgramSubjects sum={true} type={'executive'} />{' '}
+              {setString(langMenu.qtSubjects)}
+            </li>
           </ul>
           <div className='price'>
             {setString(langMenu.price)}:{' '}
