@@ -16,6 +16,7 @@ import ProgramsQt from '@/components/hooks/ProgramsQt'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
+import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 const Header = ({ programs }) => {
   const { data } = programs.programs
@@ -309,8 +310,7 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
                       <span>
-                        1 {setString(langMenu.categoryYear)} 6{' '}
-                        {setString(langMenu.categoryMonth)}
+                        <TrainingPeriod type={'mini'} />
                       </span>
                     </div>
                     <p>{setString(langMenu.categoryDiscMini)}</p>
@@ -495,8 +495,7 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
                       <span>
-                        1 {setString(langMenu.categoryYear)} 6{' '}
-                        {setString(langMenu.categoryMonth)}
+                        <TrainingPeriod type='professional' />
                       </span>
                     </div>
                     <p>{setString(langMenu.categoryDiscProfessional)}</p>
@@ -684,8 +683,7 @@ const Header = ({ programs }) => {
                         <img src='/assets/images/icon_clock.svg' alt='' />
                       </div>
                       <span>
-                        1 {setString(langMenu.categoryYear)} 6{' '}
-                        {setString(langMenu.categoryMonth)}
+                        <TrainingPeriod type='industry' />
                       </span>
                     </div>
                     <p>{setString(langMenu.categoryDiscIndustry)}</p>
@@ -978,8 +976,7 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
                         <span>
-                          1 {setString(langMenu.categoryYear)} 6{' '}
-                          {setString(langMenu.categoryMonth)}
+                          <TrainingPeriod type='mini' />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscMini)}</p>
@@ -1207,8 +1204,7 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
                         <span>
-                          1 {setString(langMenu.categoryYear)} 6{' '}
-                          {setString(langMenu.categoryMonth)}
+                          <TrainingPeriod type='professional' />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscProfessional)}</p>
@@ -1436,8 +1432,7 @@ const Header = ({ programs }) => {
                           <img src='/assets/images/icon_clock.svg' alt='' />
                         </div>
                         <span>
-                          1 {setString(langMenu.categoryYear)} 6{' '}
-                          {setString(langMenu.categoryMonth)}
+                          <TrainingPeriod type='industry' />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscIndustry)}</p>

@@ -6,9 +6,11 @@ import Until from '@/components/dates/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 
+import Price from '@/components/prices/Price'
+import TrainingPeriod from '@/components/dates/TrainingPeriod'
+
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
-import Price from '../prices/Price'
 
 const Programs = ({ programs }) => {
   const data = programs
@@ -46,8 +48,7 @@ const Programs = ({ programs }) => {
             <div className='top-info'>
               <div className='prog-time'>
                 <i>
-                  1 {setString(langMenu.categoryYear)} 6{' '}
-                  {setString(langMenu.categoryMonth)}{' '}
+                  <TrainingPeriod type='mini' />
                 </i>
                 <span>
                   <ProgramSubjects type='mini' sum={true} />{' '}
@@ -197,8 +198,7 @@ const Programs = ({ programs }) => {
             <div className='top-info'>
               <div className='prog-time'>
                 <i>
-                  2 {setString(langMenu.categoryYear)} 3{' '}
-                  {setString(langMenu.categoryMonth)}{' '}
+                  <TrainingPeriod type='professional' />
                 </i>
                 <span>
                   <ProgramSubjects type='professional' sum={true} />{' '}
@@ -355,8 +355,7 @@ const Programs = ({ programs }) => {
             <div className='top-info'>
               <div className='prog-time'>
                 <i>
-                  3 {setString(langMenu.categoryYear)} 4{' '}
-                  {setString(langMenu.categoryMonth)}{' '}
+                  <TrainingPeriod type='industry' />
                 </i>
                 <span>
                   <ProgramSubjects type='industry' sum={true} />{' '}

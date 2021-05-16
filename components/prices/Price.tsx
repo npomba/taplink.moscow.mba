@@ -13,7 +13,7 @@ const Price = ({ discount = false, type = null, format = null }) => {
         online: '110 990',
         blended: '144 000'
       },
-      executive: '490 000'
+      executive: '1 120 000'
     },
     discounted: {
       mini: {
@@ -24,7 +24,8 @@ const Price = ({ discount = false, type = null, format = null }) => {
       },
       industry: {
         online: '99 990'
-      }
+      },
+      executive: '1 540 000'
     }
   }
 
@@ -43,6 +44,7 @@ const Price = ({ discount = false, type = null, format = null }) => {
         type === 'industry' &&
         format === 'online' &&
         price.discounted.industry.online}
+      {discount && type === 'executive' && price.discounted.executive}
 
       {/* Regular */}
       {!discount &&

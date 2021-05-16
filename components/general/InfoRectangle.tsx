@@ -1,4 +1,5 @@
 import Until from '@/components/dates/Until'
+import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 import setString from '@/components/hooks/setString'
 import langMenu from '@/data/translation/menu'
@@ -15,7 +16,21 @@ const InfoRectangle = ({ programPage = false }) => {
       }`}>
       <li>
         <p>Срок обучения:</p>
-        <div className='detail'>3 года 6 месяцев</div>
+        <div className='detail'>
+          <TrainingPeriod
+            type={
+              at.mini
+                ? 'mini'
+                : at.professional
+                ? 'professional'
+                : at.industry
+                ? 'industry'
+                : at.executive
+                ? 'executive'
+                : null
+            }
+          />
+        </div>
       </li>
       <li>
         <p>Форма обучения:</p>
@@ -57,6 +72,7 @@ const InfoRectangle = ({ programPage = false }) => {
             {at.industry && at.blended && (
               <Price discount={false} type='industry' format='blended' />
             )}{' '}
+            {at.executive && <Price discount={false} type='executive' />}{' '}
             &#8381;
           </span>{' '}
           <span className='new-price'>

@@ -4,6 +4,8 @@ import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
+import Price from '@/components/prices/Price'
+import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 const Executive = () => {
   return (
@@ -18,16 +20,21 @@ const Executive = () => {
           <p className='title-desc'>{setString(lang.executiveMBADicsSecond)}</p>
           <ul className='count-list'>
             <li>
-              1 {setString(lang.executiveMBAYear)} 6{' '}
-              {setString(lang.executiveMBAMonth)}
+              <TrainingPeriod type={'executive'} />
             </li>
             <li>2 {setString(lang.executiveOfflineModules)}</li>
             <li>27 {setString(langMenu.qtSubjects)}</li>
           </ul>
           <div className='price'>
             {setString(langMenu.price)}:{' '}
-            <i className='new-price'> 1 900 000 Р.</i>
-            <i className='old-price'> 2 500 000 Р.</i>
+            <i className='new-price'>
+              {' '}
+              <Price discount={false} type={'executive'} /> &#8381;
+            </i>
+            <i className='old-price'>
+              {' '}
+              <Price discount={true} type={'executive'} /> &#8381;
+            </i>
           </div>
           <Link href='/programs/executive/'>
             <a className='button empty-button'>
