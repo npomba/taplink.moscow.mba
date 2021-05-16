@@ -31,10 +31,10 @@ const Executive = () => {
               {' '}
               <Price discount={false} type={'executive'} /> &#8381;
             </i>
-            <i className='old-price'>
+            {/* <i className='old-price'>
               {' '}
               <Price discount={true} type={'executive'} /> &#8381;
-            </i>
+            </i> */}
           </div>
           <Link href='/programs/executive/'>
             <a className='button empty-button'>

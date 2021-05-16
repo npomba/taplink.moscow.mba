@@ -22,7 +22,7 @@ const StudentsInternational = () => {
           </div>
           <div className='info'>
             <span>{setString(lang.mbaWorldMoreThan)}</span>
-            <strong>20</strong>
+            <strong>15</strong>
             <span>{setString(lang.mbaWorldCountries)}</span>
           </div>
         </div>
