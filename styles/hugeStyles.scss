@@ -478,7 +478,7 @@ header {
       width: 20px;
       text-align: center;
       flex-shrink: 0;
-      margin-right: 12px;
+      margin-right: 8px;
     }
     img {
       filter: grayscale(1);
@@ -486,6 +486,7 @@ header {
     }
     span {
       line-height: 1.2;
+      font-size: 14px
     }
   }
   .info-flex {
@@ -523,10 +524,11 @@ header {
       width: 20px;
       text-align: center;
       flex-shrink: 0;
-      margin-right: 12px;
+      margin-right: 8px;
     }
     span {
       line-height: 1.2;
+      font-size: 14px;
     }
   }
 }

@@ -1,48 +1,48 @@
 export default {
   address: {
     ru: 'Москва, Дербеневская набережная 11',
-    en: 'Moscow, Derbenevskaya Naberezhnaya 11',
+    en: 'Moscow, Derbenevskaya Naberezhnaya 11'
   },
 
   programsBtn: {
     ru: 'Программы',
-    en: 'Programs',
+    en: 'Programs'
   },
 
   linkAbout: {
     ru: 'Об академии',
-    en: 'About',
+    en: 'About'
   },
 
   linkTeachers: {
     ru: 'Эксперты',
-    en: 'Experts',
+    en: 'Experts'
   },
 
   linkWebinars: {
     ru: 'Вебинары',
-    en: 'Webinars',
+    en: 'Webinars'
   },
 
   linkJournal: {
     ru: 'Журнал',
-    en: 'Journal',
+    en: 'Journal'
   },
 
   linkContacts: {
     ru: 'Контакты',
-    en: 'Contact us',
+    en: 'Contact'
   },
 
   linkNews: {
     ru: 'Новости',
-    en: 'News',
+    en: 'News'
   },
 
   linkLang: {
     ru: 'Язык',
-    en: 'Language',
-  },
+    en: 'Language'
+  }
 
   //! D O N ' T D O T H I S
   //* don't even think

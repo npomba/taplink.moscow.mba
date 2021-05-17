@@ -12,6 +12,7 @@ import loadJs from 'loadjs'
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Popup from 'reactjs-popup'
 import Loader from '../popups/Loader'
+import Until from '../dates/Until'
 
 type FormValues = {
   name: string
@@ -111,7 +112,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                 <span className='red'>
                   {setString(lang.headerDescTopHightlight)}
                 </span>{' '}
-                {setString(lang.headerDescTop)}
+                {setString(lang.headerDescTop)} <Until preposition={true} />!
               </div>
               <div className='jumCta-form-desc'>
                 <p className='jumCta-desc-bottom'>

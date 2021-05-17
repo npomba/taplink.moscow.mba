@@ -105,10 +105,18 @@ const Header = ({ programs }) => {
             {/* <li>
               <a href=''>Контакты</a>
             </li> */}
-            <li>
+            {/* <li>
               <Link href='/articles' locale='ru'>
                 <a className={at.articles ? 'red' : ''}>
                   {setString(lang.linkNews)}
+                </a>
+              </Link>
+            </li> */}
+
+            <li>
+              <Link href='/contact' locale='ru'>
+                <a className={at.articles ? 'red' : ''}>
+                  {setString(lang.linkContacts)}
                 </a>
               </Link>
             </li>
@@ -336,10 +344,7 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img
-                          src='/assets/images/icon_check_circle.svg'
-                          alt=''
-                        />
+                        <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
                         <ProgramSubjects type='mini' subjects='specialty' />{' '}
@@ -521,10 +526,7 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img
-                          src='/assets/images/icon_check_circle.svg'
-                          alt=''
-                        />
+                        <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
                         <ProgramSubjects
@@ -709,10 +711,7 @@ const Header = ({ programs }) => {
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <img
-                          src='/assets/images/icon_check_circle.svg'
-                          alt=''
-                        />
+                        <img src='/assets/images/icon_list.svg' alt='' />
                       </div>
                       <span>
                         <ProgramSubjects type='industry' subjects='specialty' />{' '}
@@ -766,10 +765,17 @@ const Header = ({ programs }) => {
               <li>
                 <a href=''>Контакты</a>
               </li> */}
-              <li>
+              {/* <li>
                 <Link href='/articles' locale='ru'>
                   <a className='onClickCloseMobileMenu'>
                     {setString(lang.linkNews)}
+                  </a>
+                </Link>
+              </li> */}
+              <li>
+                <Link href='/contact' locale='ru'>
+                  <a className='onClickCloseMobileMenu'>
+                    {setString(lang.linkContacts)}
                   </a>
                 </Link>
               </li>
@@ -1010,10 +1016,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
+                          <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
                           <ProgramSubjects type='mini' subjects='specialty' />{' '}
@@ -1241,10 +1244,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
+                          <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
                           <ProgramSubjects
@@ -1466,10 +1466,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
+                          <img src='/assets/images/icon_list.svg' alt='' />
                         </div>
                         <span>
                           <ProgramSubjects
