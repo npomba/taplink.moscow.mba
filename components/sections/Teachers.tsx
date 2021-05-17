@@ -9,15 +9,14 @@ import imagesData from '@/data/images/teachers'
 const Teachers = ({
   programTitle = null,
   programId = null,
-  atStandAlonePage = false,
+  atStandAlonePage = false
 }) => {
   return (
     <>
       <section
         className={`about-detail-section ${
           atStandAlonePage && 'about-detailt-section--stand-alone-page'
-        }`}
-      >
+        }`}>
         <div className='section-pl'>
           <div className='title-pl'>{setString(lang.teachersTitleLabel)}</div>
           <div className='about-detail-content'>
@@ -273,13 +272,12 @@ const Teachers = ({
               </button>
             }
             modal
-            nested
-          >
-            {(close) => (
+            nested>
+            {close => (
               <PopUpForm
                 programId={programId}
                 programTitle={programTitle}
-                closePopUp={close}
+                closePopUpForm={close}
                 title={setString(lang.teachersPopupFormTitle)}
                 disc={setString(lang.teachersPopupFormDics)}
               />

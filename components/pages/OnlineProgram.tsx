@@ -17,7 +17,6 @@ import CorporateClients from '@/components/sections/CorporateClients'
 import CostOfStudy from '../sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
-import Thankyou from '../popups/Thankyou'
 
 // import { useEffect } from 'react'
 // import loadJs from 'loadjs'
@@ -43,8 +42,6 @@ const PageOnlineProgram = ({ program }) => {
         title={data.title}
         description={truncate(program.goalsOfProgram, 120)}
       />
-
-      <Thankyou />
 
       <JumbotronProgram data={data} />
 

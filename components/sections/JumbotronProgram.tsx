@@ -52,7 +52,7 @@ const JumbotronProgram = ({ data }) => {
                     programId={data._id}
                     programTitle={data.title}
                     title={'Получите консультацию'}
-                    closePopUp={close}
+                    closePopUpForm={close}
                   />
                 )}
               </Popup>

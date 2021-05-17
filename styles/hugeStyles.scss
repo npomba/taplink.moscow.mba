@@ -7597,3 +7597,21 @@ div.popup-content {
     }
   }
 }
+
+.thankyou-modal{
+  max-width: 410px;
+  padding: 50px 50px 70px 50px;
+  background-color: $red;
+  color: #fff;
+}
+
+.loader-modal{
+  max-width: 410px;
+  padding: 50px 50px 70px 50px;
+  background-color: $red;
+  color: #fff;
+}
+
+.loader-content p{
+  margin-top: 30px;
+}

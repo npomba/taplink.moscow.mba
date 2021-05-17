@@ -3,12 +3,12 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
-import TagManager from 'react-gtm-module'
-import { gtmId } from '@/config/index'
-import useAt from '@/components/hooks/useAt'
-
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import loadJs from 'loadjs'
+import Popup from 'reactjs-popup'
+
+import ThankyouPopup from '@/components/popups/Thankyou'
+import Loader from '../popups/Loader'
 
 type FormValues = {
   name: string
@@ -19,64 +19,56 @@ const ContactUs = ({
   programTitle = null,
   programId = null,
   title = setString(lang.helpToChooseTitle),
-  disc = setString(lang.helpToChooseDics),
+  disc = setString(lang.helpToChooseDics)
 }) => {
-  const at = useAt()
-
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors }
   } = useForm<FormValues>()
 
   useEffect(() => {
     loadJs(['/assets/js/formPlaceholder.js'], {
-      async: false,
+      async: false
     })
-
-    const tagManagerArgs = {
-      dataLayer: {
-        event: 'generate_lead',
-        ecommerce: {
-          add: {
-            actionField: {
-              id: programId,
-            },
-            products: [
-              {
-                id: programId,
-                name: programTitle,
-                programFormat: at.online
-                  ? 'online'
-                  : at.blended
-                  ? 'blended'
-                  : null,
-                programType: at.mini
-                  ? 'mini'
-                  : at.professional
-                  ? 'professional'
-                  : at.industry
-                  ? 'industry'
-                  : null,
-              },
-            ],
-          },
-        },
-      },
-      dataLayerName: 'dataLayer',
-    }
-    TagManager.dataLayer(tagManagerArgs)
   }, [])
+
+  const [open, setOpen] = useState(false)
+  const closeModal = () => setOpen(false)
+  const [openLoader, setOpenLoader] = useState(false)
+  const closeLoadingModal = () => setOpenLoader(false)
+
+  const onSubmitFormThis = async values => {
+    setOpenLoader(o => !o)
+    const req = await onSubmitForm(values)
+    if (req === 200) {
+      closeLoadingModal()
+      setOpen(o => !o)
+      reset()
+    } else {
+      console.log('err')
+    }
+  }
 
   return (
     <section className='support-section'>
+      <Popup open={openLoader} onClose={closeLoadingModal}>
+        <Loader closePopUp={closeLoadingModal} />
+      </Popup>
+      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+        <ThankyouPopup
+          closePopUp={closeModal}
+          programId={programId}
+          programTitle={programTitle}
+        />
+      </Popup>
       <h2>{title}</h2>
       <div className='text'>{disc}</div>
       <form
         method='post'
         className='simple-form support-form embedded-form'
-        onSubmit={handleSubmit(onSubmitForm)}
-      >
+        onSubmit={handleSubmit(onSubmitFormThis)}>
         <div className='inputs-flex'>
           <div className='input-block width-33'>
             <input
@@ -84,8 +76,8 @@ const ContactUs = ({
               {...register('name', {
                 maxLength: {
                   value: 32,
-                  message: `*${setString(lang.formErrLongName)}`,
-                },
+                  message: `*${setString(lang.formErrLongName)}`
+                }
               })}
             />
             <div className='input-placeholder'>{setString(lang.inputName)}</div>
@@ -98,8 +90,8 @@ const ContactUs = ({
                 required: `*${setString(lang.formErrEmptyPhone)}`,
                 minLength: {
                   value: 5,
-                  message: `*${setString(lang.formErrShortPhone)}`,
-                },
+                  message: `*${setString(lang.formErrShortPhone)}`
+                }
               })}
             />
             <div className='input-placeholder'>
@@ -115,8 +107,7 @@ const ContactUs = ({
               className={`button white-button ${
                 errors.name || errors.phone ? 'btn-disabled' : ''
               }`}
-              disabled={errors.name || errors.phone ? true : false}
-            >
+              disabled={errors.name || errors.phone ? true : false}>
               {setString(lang.inputSubmit)}
             </button>
           </div>

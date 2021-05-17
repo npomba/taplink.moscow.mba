@@ -5,13 +5,13 @@ import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 
-import TagManager from 'react-gtm-module'
-import { gtmId } from '@/config/index'
-import useAt from '@/components/hooks/useAt'
-
 import { useForm } from 'react-hook-form'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import loadJs from 'loadjs'
+
+import ThankyouPopup from '@/components/popups/Thankyou'
+import Popup from 'reactjs-popup'
+import Loader from '../popups/Loader'
 
 type FormValues = {
   name: string
@@ -19,55 +19,48 @@ type FormValues = {
 }
 
 const JumbotronCta = ({ programTitle = null, programId = null }) => {
-  const at = useAt()
-
   const {
     register,
     handleSubmit,
-    formState: { errors },
+    reset,
+    formState: { errors }
   } = useForm<FormValues>()
 
   useEffect(() => {
     loadJs(['/assets/js/formPlaceholder.js'], {
-      async: false,
+      async: false
     })
-
-    const tagManagerArgs = {
-      dataLayer: {
-        event: 'generate_lead',
-        ecommerce: {
-          add: {
-            actionField: {
-              id: programId,
-            },
-            products: [
-              {
-                id: programId,
-                name: programTitle,
-                programFormat: at.online
-                  ? 'online'
-                  : at.blended
-                  ? 'blended'
-                  : null,
-                programType: at.mini
-                  ? 'mini'
-                  : at.professional
-                  ? 'professional'
-                  : at.industry
-                  ? 'industry'
-                  : null,
-              },
-            ],
-          },
-        },
-      },
-      dataLayerName: 'dataLayer',
-    }
-    TagManager.dataLayer(tagManagerArgs)
   }, [])
+
+  const [open, setOpen] = useState(false)
+  const closeModal = () => setOpen(false)
+  const [openLoader, setOpenLoader] = useState(false)
+  const closeLoadingModal = () => setOpenLoader(false)
+
+  const onSubmitFormThis = async values => {
+    setOpenLoader(o => !o)
+    const req = await onSubmitForm(values)
+    if (req === 200) {
+      closeLoadingModal()
+      setOpen(o => !o)
+      reset()
+    } else {
+      console.log('err')
+    }
+  }
 
   return (
     <section className='jumbotron-section jumbotron-section--cta'>
+      <Popup open={openLoader} onClose={closeLoadingModal}>
+        <Loader closePopUp={closeLoadingModal} />
+      </Popup>
+      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+        <ThankyouPopup
+          closePopUp={closeModal}
+          programId={programId}
+          programTitle={programTitle}
+        />
+      </Popup>
       <div className='image'>
         <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
       </div>
@@ -127,8 +120,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                 <form
                   method='post'
                   className='simple-form support-form embedded-form'
-                  onSubmit={handleSubmit(onSubmitForm)}
-                >
+                  onSubmit={handleSubmit(onSubmitFormThis)}>
                   <div className='inputs-flex inputs-flex--alt'>
                     <div className='input-block width-33'>
                       <input
@@ -136,8 +128,8 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                         {...register('name', {
                           maxLength: {
                             value: 32,
-                            message: `*${setString(lang.formErrLongName)}`,
-                          },
+                            message: `*${setString(lang.formErrLongName)}`
+                          }
                         })}
                       />
                       <div className='input-placeholder'>
@@ -154,8 +146,8 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                           required: `*${setString(lang.formErrEmptyPhone)}`,
                           minLength: {
                             value: 5,
-                            message: `*${setString(lang.formErrShortPhone)}`,
-                          },
+                            message: `*${setString(lang.formErrShortPhone)}`
+                          }
                         })}
                       />
                       <div className='input-placeholder'>
@@ -171,8 +163,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                         className={`button red-button ${
                           errors.name || errors.phone ? 'btn-disabled' : ''
                         }`}
-                        disabled={errors.name || errors.phone ? true : false}
-                      >
+                        disabled={errors.name || errors.phone ? true : false}>
                         {setString(lang.inputSubmitAlt)}
                         <div className='arrow'>
                           <img

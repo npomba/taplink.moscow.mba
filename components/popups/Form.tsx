@@ -3,12 +3,13 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
-import TagManager from 'react-gtm-module'
-import { gtmId } from '@/config/index'
-import useAt from '@/components/hooks/useAt'
-
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import loadJs from 'loadjs'
+
+import Popup from 'reactjs-popup'
+
+import ThankyouPopup from '@/components/popups/Thankyou'
+import Loader from '../popups/Loader'
 
 type FormValues = {
   name: string
@@ -16,65 +17,54 @@ type FormValues = {
 }
 
 const Form = ({
-  closePopUp,
+  closePopUpForm,
   programTitle = null,
   programId = null,
   title = setString(lang.helpToChooseTitle),
   disc = setString(lang.helpToChooseDics)
 }) => {
-  const at = useAt()
-
   const {
     register,
     handleSubmit,
+    reset,
     formState: { errors }
   } = useForm<FormValues>()
-
-  const onSubmitFormThis = () => {
-    console.log('test')
-  }
 
   useEffect(() => {
     loadJs(['/assets/js/formPlaceholder.js'], {
       async: false
     })
-
-    const tagManagerArgs = {
-      dataLayer: {
-        event: 'generate_lead',
-        ecommerce: {
-          add: {
-            actionField: {
-              id: programId
-            },
-            products: [
-              {
-                id: programId,
-                name: programTitle,
-                programFormat: at.online
-                  ? 'online'
-                  : at.blended
-                  ? 'blended'
-                  : null,
-                programType: at.mini
-                  ? 'mini'
-                  : at.professional
-                  ? 'professional'
-                  : at.industry
-                  ? 'industry'
-                  : null
-              }
-            ]
-          }
-        }
-      },
-      dataLayerName: 'dataLayer'
-    }
-    TagManager.dataLayer(tagManagerArgs)
   }, [])
+
+  const [open, setOpen] = useState(false)
+  const closeModal = () => setOpen(false)
+  const [openLoader, setOpenLoader] = useState(false)
+  const closeLoadingModal = () => setOpenLoader(false)
+
+  const onSubmitFormThis = async values => {
+    setOpenLoader(o => !o)
+    const req = await onSubmitForm(values)
+    if (req === 200) {
+      closeLoadingModal()
+      setOpen(o => !o)
+      reset()
+    } else {
+      console.log('err')
+    }
+  }
 
   return (
     <div id='teachersModal' className='popup-modal mfp-hide mfp-with-anim'>
+      <Popup open={openLoader} onClose={closeLoadingModal}>
+        <Loader closePopUp={closeLoadingModal} />
+      </Popup>
+      <Popup open={open} closeOnDocumentClick onClose={closeModal}>
+        <ThankyouPopup
+          closePopUp={closeModal}
+          programId={programId}
+          programTitle={programTitle}
+        />
+      </Popup>
       <div className='popup-content-origin red-bg'>
         <h2>{title}</h2>
         <div className='desc'>
@@ -85,7 +75,7 @@ const Form = ({
         <form
           method='post'
           className='simple-form support-form'
-          onSubmit={handleSubmit(onSubmitForm)}>
+          onSubmit={handleSubmit(onSubmitFormThis)}>
           <div className='inputs-flex'>
             <div className='input-block width-33'>
               <input
@@ -139,7 +129,7 @@ const Form = ({
             {setString(lang.privacyPolicySecond)}
           </div>
         </form>
-        <button className='mfp-close' type='button' onClick={closePopUp}>
+        <button className='mfp-close' type='button' onClick={closePopUpForm}>
           <img src='/assets/images/close.svg' alt='' />
         </button>
       </div>

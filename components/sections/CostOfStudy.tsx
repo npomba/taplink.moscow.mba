@@ -139,7 +139,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
                   programId={programId}
                   programTitle={programTitle}
                   title={'Получите консультацию'}
-                  closePopUp={close}
+                  closePopUpForm={close}
                 />
               )}
             </Popup>

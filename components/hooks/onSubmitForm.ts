@@ -7,19 +7,13 @@ import ThankyouPopup from '@/components/popups/Thankyou'
 const onSubmitForm = async values => {
   try {
     const res = await axios.post(`${thisServer}/api/contact`, values)
-    res.status === 200 && console.log('Success')
-
-    // res.status === 500 && console.log('Error')
-    return (
-      <div>
-        test
-        <Popup defaultOpen={true}>
-          {close => <ThankyouPopup closePopUp={close} />}
-        </Popup>
-      </div>
-    )
+    let output
+    res.status === 200 && (output = 200)
+    res.status === 500 && (output = 500)
+    return output
   } catch (err) {
     console.log(err)
+    return err
   }
 }
 
