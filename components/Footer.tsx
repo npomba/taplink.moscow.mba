@@ -10,7 +10,7 @@ const Footer = () => {
         <div className='footer-top'>
           <div className='footer-top-left'>
             <div className='footer-tel'>
-              <a href='tel:+7-800-550-70-19'>+7 (800) 550 70 19</a>
+              <a href='tel:+7-800-500-27-47'>+7 (800) 500-27-47</a>
             </div>
             <div className='footer-mail'>
               <a href='mailto:info@moscow.mba'>info@moscow.mba</a>

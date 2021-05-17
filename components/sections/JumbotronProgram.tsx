@@ -22,7 +22,7 @@ const JumbotronProgram = ({ data }) => {
           <Breadcrumbs pageTitle={data.title} />
           <div className='jumbotron-top'>
             <div className='jumbotron-discount'>
-              <div className='size'>-30%</div>
+              <div className='size'>-45%</div>
               <span>
                 <Until />
               </span>
