@@ -5,24 +5,9 @@ const TrainingPeriod = ({ type = null }) => {
   return (
     <>
       {type === 'mini' && <>9 {setString(langMenu.categoryMonth)}</>}
-      {type === 'professional' && (
-        <>
-          1 {setString(langMenu.categoryYear)} 6{' '}
-          {setString(langMenu.categoryMonth)}
-        </>
-      )}
-      {type === 'industry' && (
-        <>
-          1 {setString(langMenu.categoryYear)} 6{' '}
-          {setString(langMenu.categoryMonth)}
-        </>
-      )}
-      {type === 'executive' && (
-        <>
-          2 {setString(langMenu.categoryYearAlt)} 3{' '}
-          {setString(langMenu.categoryMonthAlt)}
-        </>
-      )}
+      {type === 'professional' && <>18 {setString(langMenu.categoryMonth)}</>}
+      {type === 'industry' && <>18 {setString(langMenu.categoryMonth)}</>}
+      {type === 'executive' && <>26 {setString(langMenu.categoryMonth)}</>}
     </>
   )
 }
