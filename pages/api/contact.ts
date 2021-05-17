@@ -12,6 +12,8 @@ export default async (req, res) => {
   // data from the client
   const { name, phone } = req.body
 
+  const promocode = null
+
   // geoip2 init
   const geoip2 = new WebServiceClient('550199', process.env.GEO2_APIKEY, {
     host: 'geolite.info'
@@ -85,6 +87,7 @@ export default async (req, res) => {
     name: name || '',
     phone: phone || '',
     email: '',
+    promocode,
     contactWay: '',
     root,
     path,
@@ -148,6 +151,10 @@ export default async (req, res) => {
       {
         tdKey: 'Почта',
         tdVal: data.email
+      },
+      {
+        tdKey: 'Промокод',
+        tdVal: data.promocode
       },
       {
         tdKey: 'Способ связи',
