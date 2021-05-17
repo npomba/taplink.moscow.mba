@@ -5,23 +5,22 @@ import 'reactjs-popup/dist/index.css'
 import ThankyouPopup from '@/components/popups/Thankyou'
 
 const onSubmitForm = async values => {
-	try {
-		const res = await axios.post(`${thisServer}/api/contact`, values)
-		res.status === 200 && console.log('Success')
+  try {
+    const res = await axios.post(`${thisServer}/api/contact`, values)
+    res.status === 200 && console.log('Success')
 
-		// res.status === 500 && console.log('Error')
-	} catch (err) {
-		console.log(err)
-	}
-
-	return (
-		<div>
-			test
-			<Popup defaultOpen={true}>
-				{close => <ThankyouPopup closePopUp={close} />}
-			</Popup>
-		</div>
-	)
+    // res.status === 500 && console.log('Error')
+    return (
+      <div>
+        test
+        <Popup defaultOpen={true}>
+          {close => <ThankyouPopup closePopUp={close} />}
+        </Popup>
+      </div>
+    )
+  } catch (err) {
+    console.log(err)
+  }
 }
 
 export default onSubmitForm
