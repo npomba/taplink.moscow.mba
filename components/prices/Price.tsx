@@ -13,7 +13,7 @@ const Price = ({ discount = false, type = null, format = null }) => {
         online: '289 000',
         blended: '299 000'
       },
-      executive: '1 120 000'
+      executive: '1 400 000'
     },
     discounted: {
       mini: {
