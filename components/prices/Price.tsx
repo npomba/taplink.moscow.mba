@@ -2,30 +2,30 @@ const Price = ({ discount = false, type = null, format = null }) => {
   const price = {
     regular: {
       mini: {
-        online: '79 000',
-        blended: '99 000'
+        online: '107 000',
+        blended: '149 000'
       },
       professional: {
-        online: '110 990',
-        blended: '144 000'
+        online: '289 000',
+        blended: '299 000'
       },
       industry: {
-        online: '110 990',
-        blended: '144 000'
+        online: '289 000',
+        blended: '299 000'
       },
       executive: '1 120 000'
     },
     discounted: {
       mini: {
-        online: '69 000'
+        online: '59 000'
       },
       professional: {
-        online: '99 990'
+        online: '159 000'
       },
       industry: {
-        online: '99 990'
+        online: '159 000'
       },
-      executive: '1 540 000'
+      executive: '1 400 000'
     }
   }
 
