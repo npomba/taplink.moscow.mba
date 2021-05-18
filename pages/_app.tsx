@@ -30,20 +30,18 @@ function MyApp({ Component, pageProps, appProps, router }) {
         <AnimatePresence>
           <motion.div
             key={router.route}
-            initial='pageInitial'
-            animate='pageAnimate'
-            exit='pageExit'
+            initial='initial'
+            animate='animate'
+            transition={{ ease: 'easeInOut', duration: 0.4 }}
+            exit='exit'
             variants={{
-              pageInitial: {
-                opacity: 0,
-                scale: 0.98
+              initial: {
+                opacity: 0
               },
-              pageAnimate: {
-                scale: 1,
+              animate: {
                 opacity: 1
               },
-              pageExit: {
-                scale: 0.98,
+              exit: {
                 opacity: 0
               }
             }}>
