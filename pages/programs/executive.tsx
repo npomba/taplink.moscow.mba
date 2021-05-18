@@ -58,7 +58,8 @@ const executive = () => {
         <ContactUs
           programId={data._id}
           programTitle={data.title}
-          title={'Получите консультацию по программе'}
+          title={'Получите консультацию'}
+          titleNewStr={'по программе обучения'}
         />
         <Accreditation />
         <Teachers programId={data._id} programTitle={data.title} />
@@ -71,9 +72,8 @@ const executive = () => {
         <ContactUs
           programId={data._id}
           programTitle={data.title}
-          title={
-            'Не знаете что выбрать? Получите консультацию по программам MBA'
-          }
+          title={'Не знаете что выбрать?'}
+          titleNewStr={'Получите консультацию по программам MBA'}
         />
       </div>
     </>

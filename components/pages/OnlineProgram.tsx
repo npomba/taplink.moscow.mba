@@ -52,6 +52,12 @@ const PageOnlineProgram = ({ program }) => {
         <Pros format={'online'} />
         <HowProcessGoes />
         <ProgramModules data={data} />
+        <ContactUs
+          programId={data._id}
+          programTitle={data.title}
+          title={'Получите консультацию'}
+          titleNewStr={'по программе обучения'}
+        />
         <Teachers programId={data._id} programTitle={data.title} />
         <RelevantContent />
         <CorporateClients />
@@ -64,9 +70,8 @@ const PageOnlineProgram = ({ program }) => {
         <ContactUs
           programId={data._id}
           programTitle={data.title}
-          title={
-            'Не знаете что выбрать? Получите консультацию по программам MBA'
-          }
+          title={'Не знаете что выбрать?'}
+          titleNewStr={'Получите консультацию по программам MBA'}
         />
       </div>
     </>

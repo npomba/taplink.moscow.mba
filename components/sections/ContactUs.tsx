@@ -19,6 +19,7 @@ const ContactUs = ({
   programTitle = null,
   programId = null,
   title = setString(lang.helpToChooseTitle),
+  titleNewStr = null,
   disc = setString(lang.helpToChooseDics)
 }) => {
   const {
@@ -63,7 +64,14 @@ const ContactUs = ({
           programTitle={programTitle}
         />
       </Popup>
-      <h2>{title}</h2>
+      <h2>
+        {title}
+        {titleNewStr && (
+          <>
+            <br /> {titleNewStr}
+          </>
+        )}
+      </h2>
       <div className='text'>{disc}</div>
       <form
         method='post'
