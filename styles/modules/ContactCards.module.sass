@@ -1,0 +1,15 @@
+@import @/styles/utils/mixins
+
+.locations
+  display: flex
+  margin-bottom: 30px
+  @include media(phone, tablet)
+    flex-direction: column
+
+.col
+  &:nth-child(1)
+    margin-right: 100px
+  & > *
+    margin-bottom: 39px
+    @include media(desktop, laptop, tablet)
+      font-size: 20px

@@ -4,6 +4,11 @@ export default {
     en: 'Moscow, Derbenevskaya Naberezhnaya 11'
   },
 
+  addressStreet: {
+    ru: 'Дербеневская набережная 11',
+    en: 'Derbenevskaya Naberezhnaya 11'
+  },
+
   programsBtn: {
     ru: 'Программы',
     en: 'Programs'
