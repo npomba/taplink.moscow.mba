@@ -369,7 +369,7 @@ const Header = ({ programs }) => {
                     <div className='name'>
                       {setString(langMenu.onlineTitle)}
                       <div className='discount'>
-                        <div className='size'>-25%</div>
+                        <div className='size'>-45%</div>
                         <span>
                           <Until />
                         </span>
@@ -554,7 +554,7 @@ const Header = ({ programs }) => {
                     <div className='name'>
                       {setString(langMenu.onlineTitle)}
                       <div className='discount'>
-                        <div className='size'>-20%</div>
+                        <div className='size'>-45%</div>
                         <span>
                           <Until />
                         </span>

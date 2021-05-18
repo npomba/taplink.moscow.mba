@@ -242,7 +242,7 @@ const Programs = ({ programs }) => {
                 <div className='name'>
                   {setString(langMenu.onlineTitle)}
                   <div className='discount'>
-                    <div className='size'>-25%</div>
+                    <div className='size'>-45%</div>
                     <span>
                       <Until />
                     </span>
@@ -399,7 +399,7 @@ const Programs = ({ programs }) => {
                 <div className='name'>
                   {setString(langMenu.onlineTitle)}
                   <div className='discount'>
-                    <div className='size'>-15%</div>
+                    <div className='size'>-45%</div>
                     <span>
                       <Until />
                     </span>
