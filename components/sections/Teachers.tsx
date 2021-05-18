@@ -81,7 +81,7 @@ const Teachers = ({
         <ul className='about-teachers-list'>
           <li>
             <div className='about-teachers-block'>
-              <a className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-1.jpg'
                   alt={setString(lang.teachersTeacherOneTitle)}
@@ -89,7 +89,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherOneTitle)}
@@ -104,7 +104,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-2.jpg'
                   alt={setString(lang.teachersTeacherTwoTitle)}
@@ -112,7 +112,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherTwoTitle)}
@@ -127,7 +127,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-3.jpg'
                   alt={setString(lang.teachersTeacherThreeTitle)}
@@ -135,7 +135,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherThreeTitle)}
@@ -150,7 +150,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-4.jpg'
                   alt={setString(lang.teachersTeacherFourTitle)}
@@ -158,7 +158,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherFourTitle)}
@@ -173,7 +173,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-5.jpg'
                   alt={setString(lang.teachersTeacherFiveTitle)}
@@ -181,7 +181,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherFiveTitle)}
@@ -196,7 +196,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-6.jpg'
                   alt={setString(lang.teachersTeacherSixTitle)}
@@ -204,7 +204,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherSixTitle)}
@@ -219,7 +219,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-7.jpg'
                   alt={setString(lang.teachersTeacherSevenTitle)}
@@ -227,7 +227,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherSevenTitle)}
@@ -242,7 +242,7 @@ const Teachers = ({
           </li>
           <li>
             <div className='about-teachers-block'>
-              <a href='#' className='image'>
+              <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-8.jpg'
                   alt={setString(lang.teachersTeacherEightTitle)}
@@ -250,7 +250,7 @@ const Teachers = ({
                   height={322}
                   layout='responsive'
                 />
-              </a>
+              </div>
               <div>
                 <div className='name'>
                   {setString(lang.teachersTeacherEightTitle)}
