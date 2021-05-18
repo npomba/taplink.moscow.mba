@@ -6,7 +6,7 @@ import loadJs from 'loadjs'
 const Qna = () => {
   useEffect(() => {
     loadJs(['/assets/js/qna.js'], {
-      async: false,
+      async: false
     })
   }, [])
 
@@ -47,7 +47,7 @@ const Qna = () => {
               <i></i>
             </div>
             <div className='faq-question'>
-              Что будет, если я не уложусь в сроки обучения программы?
+              Что будет, если я не уложусь в сроки обучения?
             </div>
             <div className='faq-answer'>
               <p className={stls.mb}>

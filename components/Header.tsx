@@ -124,7 +124,7 @@ const Header = ({ programs }) => {
 
             <li>
               <Link href='/contact' locale='ru'>
-                <a className={at.articles ? 'red' : ''}>
+                <a className={at.contact ? 'red' : ''}>
                   {setString(lang.linkContacts)}
                 </a>
               </Link>

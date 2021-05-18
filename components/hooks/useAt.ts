@@ -5,7 +5,7 @@ const useAt = () => {
 
   const getSplitedPath = pathname
     .split('/')
-    .filter((item) => item !== '' && item !== '[url]')
+    .filter(item => item !== '' && item !== '[url]')
 
   const getProgramTitle = asPath.split('/')[4]
 
@@ -27,6 +27,10 @@ const useAt = () => {
 
   const articles = () => {
     return getSplitedPath[0] === 'articles'
+  }
+
+  const contact = () => {
+    return getSplitedPath[0] === 'contact'
   }
 
   const mini = () => {
@@ -72,8 +76,9 @@ const useAt = () => {
     blended: blended(),
     webinars: webinars(),
     articles: articles(),
+    contact: contact(),
     programChunk: programChunk(),
-    getSplitedPath,
+    getSplitedPath
   }
 }
 

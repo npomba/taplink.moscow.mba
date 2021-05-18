@@ -28,8 +28,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -58,8 +57,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -88,8 +86,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -118,8 +115,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -148,8 +144,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -178,8 +173,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -208,8 +202,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -238,8 +231,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -268,8 +260,7 @@ const webinars = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -296,12 +287,12 @@ const webinars = () => {
               </div>
             </a>
           </div>
-          <div className='vebinars-more'>
+          {/* <div className='vebinars-more'>
             <a href='' className='button'>
               <img src='/assets/images/icon_rotate.svg' alt='' /> Еще 10
               вебинаров
             </a>
-          </div>
+          </div> */}
         </section>
       </div>
     </>
