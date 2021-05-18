@@ -82,7 +82,8 @@ const ContactInfo = () => {
         }
       }
     ],
-    email: 'info@moscow.mba'
+    email: 'info@moscow.mba',
+    emailTo: 'mailto:info@moscow.mba'
   }
 }
 

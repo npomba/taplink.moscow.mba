@@ -18,8 +18,12 @@ import { useEffect } from 'react'
 import loadJs from 'loadjs'
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
+import contactData from '@/data/contactData'
+
 const Header = ({ programs }) => {
   const { data } = programs.programs
+
+  const contactInfo = contactData()
 
   const router = useRouter()
 
@@ -55,11 +59,16 @@ const Header = ({ programs }) => {
           </div>
           <div className='header-place'>
             <img src='/assets/images/marker_black.svg' alt='' />
-            {setString(lang.address)}
+            {setString(contactInfo.addresses[0].data.city)},{' '}
+            {setString(contactInfo.addresses[0].data.street)}
           </div>
           <div className='header-phones'>
-            <a href='tel:+7-800-500-27-47'>+7 (800) 500-27-47</a>
-            <a href='tel:+7-495-149-00-20'>+7 (495) 149-00-20</a>
+            <a href={contactInfo.tels[0].data.href}>
+              {contactInfo.tels[0].data.val}
+            </a>
+            <a href={contactInfo.tels[1].data.href}>
+              {contactInfo.tels[1].data.val}
+            </a>
           </div>
           <div className='header-buter'>
             <i></i>

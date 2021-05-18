@@ -3,17 +3,23 @@ import setString from '@/components/hooks/setString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 
+import contactData from '@/data/contactData'
+
 const Footer = () => {
+  const contactInfo = contactData()
+
   return (
     <footer>
       <div className='container'>
         <div className='footer-top'>
           <div className='footer-top-left'>
             <div className='footer-tel'>
-              <a href='tel:+7-800-500-27-47'>+7 (800) 500-27-47</a>
+              <a href={contactInfo.tels[0].data.href}>
+                {contactInfo.tels[0].data.val}
+              </a>
             </div>
             <div className='footer-mail'>
-              <a href='mailto:info@moscow.mba'>info@moscow.mba</a>
+              <a href={contactInfo.emailTo}>{contactInfo.email}</a>
             </div>
           </div>
           <div className='footer-top-right'>
@@ -71,7 +77,10 @@ const Footer = () => {
             <div className='footer-contacts'>
               <div className='footer-place'>
                 <img src='/assets/images/marker_black.svg' alt='' />
-                <span>{setString(langHeader.address)}</span>
+                <span>
+                  {setString(contactInfo.addresses[0].data.city)},{' '}
+                  {setString(contactInfo.addresses[0].data.street)}
+                </span>
               </div>
               <ul className='footer-socials'>
                 <li>

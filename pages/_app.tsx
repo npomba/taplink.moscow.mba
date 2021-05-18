@@ -36,18 +36,17 @@ function MyApp({ Component, pageProps, appProps, router }) {
             variants={{
               pageInitial: {
                 opacity: 0,
-                scale: 0.98,
+                scale: 0.98
               },
               pageAnimate: {
                 scale: 1,
-                opacity: 1,
+                opacity: 1
               },
               pageExit: {
                 scale: 0.98,
-                opacity: 0,
-              },
-            }}
-          >
+                opacity: 0
+              }
+            }}>
             <div className='main-content'>
               <Component {...pageProps} />
             </div>
@@ -61,7 +60,7 @@ function MyApp({ Component, pageProps, appProps, router }) {
 
 export default withSecureHeaders()(MyApp)
 
-MyApp.getInitialProps = async (appContext) => {
+MyApp.getInitialProps = async appContext => {
   const appProps = await App.getInitialProps(appContext)
 
   const res = await fetch(
@@ -71,10 +70,10 @@ MyApp.getInitialProps = async (appContext) => {
 
   return {
     appProps: {
-      programs,
+      programs
     },
     pageProps: {
-      programs,
-    },
+      programs
+    }
   }
 }
