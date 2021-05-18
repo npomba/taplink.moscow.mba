@@ -52,7 +52,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
             <li>
               Ближайший набор <Until preposition={false} />
             </li>
-            <li>432 часа живого общения с экспертами</li>
+            <li>Живое общение с экспертами</li>
             <li>
               <ProgramSubjects
                 type={
@@ -87,15 +87,14 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               />{' '}
               дисциплин специализации
             </li>
-            <li>3 выезднных модуля в Москве</li>
+            <li>{!at.online && '3 выезднных модуля в Москве'}</li>
           </ul>
           <div className='note'>*Возможна рассрочка</div>
         </div>
         <div className='inner-block'>
           <div className='text'>
             <p>
-              Успех в бизнесе напрямую связывают с получением
-              бизнес-образования.
+              Успех в бизнесе напрямую связывают с получением бизнес-образования
             </p>
             <p>
               Инвестируйте своё время в образование с Moscow Business Academy и
