@@ -17,6 +17,7 @@ const ForeignAffiliates = () => {
                 alt={setString(imageData.circleOne.alt)}
                 width={191}
                 height={191}
+                priority={true}
               />
             </div>
           </li>
@@ -27,6 +28,7 @@ const ForeignAffiliates = () => {
                 alt={setString(imageData.circleTwo.alt)}
                 width={191}
                 height={191}
+                priority={true}
               />
             </div>
           </li>
@@ -58,6 +60,7 @@ const ForeignAffiliates = () => {
             width={659}
             height={394}
             layout='fixed'
+            priority={true}
           />
         </div>
       </div>

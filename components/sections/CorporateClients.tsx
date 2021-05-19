@@ -9,7 +9,7 @@ import loadJs from 'loadjs'
 const CorporateClients = () => {
   useEffect(() => {
     loadJs(['/assets/js/corporateClientsSlider.js'], {
-      async: false,
+      async: false
     })
   })
 
@@ -33,6 +33,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.hh.alt)}
                 width={141}
                 height={106}
+                priority={true}
               />
             </div>
           </li>
@@ -43,6 +44,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.rzd.alt)}
                 width={141}
                 height={107}
+                priority={true}
               />
             </div>
           </li>
@@ -53,6 +55,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.tatenergo.alt)}
                 width={240}
                 height={107}
+                priority={true}
               />
             </div>
           </li>
@@ -63,6 +66,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.toms.alt)}
                 width={163}
                 height={54}
+                priority={true}
               />
             </div>
           </li>
@@ -75,6 +79,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.rosneft.alt)}
                 width={142}
                 height={107}
+                priority={true}
               />
             </div>
           </li>
@@ -85,6 +90,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.rosseti.alt)}
                 width={142}
                 height={107}
+                priority={true}
               />
             </div>
           </li>
@@ -95,6 +101,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.sberbankLeasing.alt)}
                 width={168}
                 height={67}
+                priority={true}
               />
             </div>
           </li>
@@ -105,6 +112,7 @@ const CorporateClients = () => {
                 alt={setString(imageData.lukomA.alt)}
                 width={165}
                 height={43}
+                priority={true}
               />
             </div>
           </li>

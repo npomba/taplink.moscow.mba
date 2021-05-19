@@ -15,6 +15,7 @@ const JumbotronProgram = ({ data }) => {
           src={`/assets/images/programs-bgs/${data.picture}`}
           alt='Студенты обучаются'
           layout='fill'
+          priority={true}
         />
       </div>
       <div className='container'>

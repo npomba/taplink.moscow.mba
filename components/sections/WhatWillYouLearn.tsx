@@ -24,6 +24,7 @@ const WhatWillYouLearn = ({ data }) => {
               width='651'
               height='389'
               alt='Слушатели во время конференции'
+              priority={true}
             />
           </div>
         </div>

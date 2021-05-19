@@ -53,6 +53,7 @@ const Executive = () => {
               alt={setString(imageData.largerCircle.alt)}
               width={401}
               height={400}
+              priority={true}
             />
           </div>
           <div className='image pic-2'>
@@ -61,6 +62,7 @@ const Executive = () => {
               alt={setString(imageData.smallerCircle.alt)}
               width={221}
               height={221}
+              priority={true}
             />
           </div>
           <div className='count'>

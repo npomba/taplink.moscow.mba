@@ -34,6 +34,7 @@ const Teachers = ({
                   width={425}
                   height={422}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div className='image pic-2'>
@@ -43,6 +44,7 @@ const Teachers = ({
                   width={236}
                   height={236}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
             </div>
@@ -88,6 +90,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -111,6 +114,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -134,6 +138,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -157,6 +162,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -180,6 +186,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -203,6 +210,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -226,6 +234,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>
@@ -249,6 +258,7 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
+                  priority={true}
                 />
               </div>
               <div>

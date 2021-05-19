@@ -20,6 +20,7 @@ const Diploma = () => {
           width={532}
           height={376}
           layout={'responsive'}
+          priority={true}
         />
       </div>
       <div className='content'>

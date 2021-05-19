@@ -7,7 +7,11 @@ const JumbotronMain = () => {
   return (
     <section className='jumbotron-section main-jumbotron'>
       <div className='image'>
-        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
+        <Image
+          src='/assets/images/jumbotron_1.jpg'
+          layout='fill'
+          priority={true}
+        />
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
@@ -19,6 +23,7 @@ const JumbotronMain = () => {
                   alt='Moscow Business Academy'
                   width={482}
                   height={146}
+                  priority={true}
                 />
               </div>
               <h1>Moscow Business Academy</h1>

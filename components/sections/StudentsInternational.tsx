@@ -18,6 +18,7 @@ const StudentsInternational = () => {
               alt={setString(imageData.image.alt)}
               width={769}
               height={597}
+              priority={true}
             />
           </div>
           <div className='info'>

@@ -63,7 +63,11 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
         />
       </Popup>
       <div className='image'>
-        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
+        <Image
+          src='/assets/images/jumbotron_1.jpg'
+          layout='fill'
+          priority={true}
+        />
       </div>
       <div className='container'>
         <div className='jumbotron-content jumbotron-content-cta'>
