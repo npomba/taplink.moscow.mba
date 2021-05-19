@@ -39,6 +39,11 @@ export default {
     en: 'Contact'
   },
 
+  linkLegal: {
+    ru: 'Нормативные документы',
+    en: 'Legal'
+  },
+
   linkNews: {
     ru: 'Новости',
     en: 'News'

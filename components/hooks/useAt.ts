@@ -21,6 +21,10 @@ const useAt = () => {
     return getSplitedPath[0] === 'teachers'
   }
 
+  const legal = () => {
+    return getSplitedPath[0] === 'legal'
+  }
+
   const webinars = () => {
     return getSplitedPath[0] === 'webinars'
   }
@@ -80,6 +84,7 @@ const useAt = () => {
     index: index(),
     about: about(),
     teachers: teachers(),
+    legal: legal(),
     mini: mini(),
     professional: professional(),
     industry: industry(),

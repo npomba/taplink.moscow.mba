@@ -60,17 +60,27 @@ const Footer = () => {
                 </Link>
               </li>
               <li className='empty'></li>
-              <li>
-                <Link href='/webinars' locale='ru'>
-                  <a>{setString(langHeader.linkWebinars)}</a>
-                </Link>
-              </li>
               {/* <li>
                 <a>Оплата обучения</a>
               </li> */}
               <li>
                 <Link href='/about'>
                   <a>{setString(langHeader.linkAbout)}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/teachers' locale='ru'>
+                  <a>{setString(langHeader.linkTeachers)}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/webinars' locale='ru'>
+                  <a>{setString(langHeader.linkWebinars)}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/contact' locale='ru'>
+                  <a>{setString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
             </ul>

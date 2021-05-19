@@ -70,6 +70,7 @@ const Header = ({ programs }) => {
               {contactInfo.tels[1].data.val}
             </a>
           </div>
+          {at.index || at.about ? <HeaderLangLink /> : null}
           <div className='header-buter'>
             <i></i>
             <i></i>
@@ -130,7 +131,13 @@ const Header = ({ programs }) => {
               </Link>
             </li>
 
-            {at.index || at.about ? <HeaderLangLink /> : null}
+            <li className='widescreen-only'>
+              <Link href='/legal' locale='ru'>
+                <a className={at.legal ? 'red' : ''}>
+                  {setString(lang.linkLegal)}
+                </a>
+              </Link>
+            </li>
           </ul>
         </div>
       </div>
