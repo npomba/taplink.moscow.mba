@@ -25,14 +25,14 @@ const Webinars = ({ title, heading, timeframe = 'all' }) => {
             </li>
             <li>
               <Link href='/webinars/upcoming' locale='ru'>
-                <a href='' className={`${at.webinarsUpcoming && 'active'}`}>
+                <a className={`${at.webinarsUpcoming && 'active'}`}>
                   Ближайшие вебинары
                 </a>
               </Link>
             </li>
             <li>
               <Link href='/webinars/archive' locale='ru'>
-                <a href='' className={`${at.webinarsArchive && 'active'}`}>
+                <a className={`${at.webinarsArchive && 'active'}`}>
                   Прошедшие вебинары
                 </a>
               </Link>
