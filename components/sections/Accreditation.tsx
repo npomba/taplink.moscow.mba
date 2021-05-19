@@ -12,6 +12,7 @@ const Accreditation = () => {
           alt={setString(imgData.accreditationImageAlt.alt)}
           width={644}
           height={664}
+          priority={true}
           layout='responsive'
         />
       </div>
@@ -26,8 +27,7 @@ const Accreditation = () => {
           href='https://isga.obrnadzor.gov.ru/rlic/details/2df11621-2d30-4173-9389-2fecc24a7639/'
           target='_blank'
           rel='noopener noreferrer'
-          className='accreditations-link'
-        >
+          className='accreditations-link'>
           <div className='pic'>
             <img src='/assets/images/icon_list.svg' alt='' />
           </div>

@@ -25,6 +25,18 @@ const useAt = () => {
     return getSplitedPath[0] === 'webinars'
   }
 
+  const webinarsIndex = () => {
+    return getSplitedPath[0] === 'webinars' && !getSplitedPath[1]
+  }
+
+  const webinarsUpcoming = () => {
+    return getSplitedPath[0] === 'webinars' && getSplitedPath[1] === 'upcoming'
+  }
+
+  const webinarsArchive = () => {
+    return getSplitedPath[0] === 'webinars' && getSplitedPath[1] === 'archive'
+  }
+
   const articles = () => {
     return getSplitedPath[0] === 'articles'
   }
@@ -75,6 +87,9 @@ const useAt = () => {
     online: online(),
     blended: blended(),
     webinars: webinars(),
+    webinarsUpcoming: webinarsUpcoming(),
+    webinarsArchive: webinarsArchive(),
+    webinarsIndex: webinarsIndex(),
     articles: articles(),
     contact: contact(),
     programChunk: programChunk(),

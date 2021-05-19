@@ -20,6 +20,7 @@ const ConferencesInEurope = () => {
               alt={setString(imageData.shorterImage.alt)}
               width={623}
               height={364}
+              priority={true}
               layout='responsive'
             />
           </div>
@@ -31,6 +32,7 @@ const ConferencesInEurope = () => {
               alt={setString(imageData.higherImage.alt)}
               width={415}
               height={690}
+              priority={true}
               layout='responsive'
             />
           </div>
