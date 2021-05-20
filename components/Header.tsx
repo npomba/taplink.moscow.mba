@@ -741,7 +741,7 @@ const Header = ({ programs }) => {
           </div>
         </div>
       </div>
-      <div className='header-overlay'></div>
+      {/* <div className='header-overlay'></div> */}
 
       {/* mobile menu */}
       <div className='header-mobile-podmenu'>

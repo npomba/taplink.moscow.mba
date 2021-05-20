@@ -95,6 +95,19 @@ a {
   flex: 1 1 auto;
   position: relative;
   z-index: 5;
+  &.show-overlay{
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.5);
+      z-index: 5
+    }
+  }
+  
 }
 
 .floatLeft {
@@ -287,9 +300,9 @@ header {
   text-transform: uppercase;
   transition: $transition;
   &.opened {
-    color: #fff !important;
+    color: #000 !important;
     i {
-      background: #fff !important;
+      background: #000 !important;
     }
     i {
       transform: rotate(45deg);
@@ -335,7 +348,8 @@ header {
   left: 0;
   background: #fff;
   width: 100%;
-  box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  // box-shadow: 0px 4px 8px rgba(0, 0, 0, 0.2);
+  border-top: 1px solid rgba(0, 0, 0, 0.1);
   overflow: hidden;
   .container {
     padding: 0;
@@ -645,17 +659,17 @@ header {
   }
 }
 
-.header-overlay {
-  position: absolute;
-  left: 0;
-  top: 0;
-  width: 100%;
-  height: 100%;
-  background: #000000;
-  opacity: 0.5;
-  z-index: 31;
-  display: none;
-}
+// .header-overlay {
+//   position: absolute;
+//   left: 0;
+//   top: 0;
+//   width: 100%;
+//   height: 100%;
+//   background: transparent;
+//   opacity: 0.5;
+//   z-index: 31;
+//   display: none;
+// }
 
 .header-buter {
   display: none;
@@ -4887,7 +4901,7 @@ footer {
     }
   }
   .header-bottom,
-  .header-overlay,
+  // .header-overlay,
   .header-podmenu {
     display: none !important;
   }
