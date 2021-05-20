@@ -50,8 +50,8 @@ export default {
   },
 
   linkLang: {
-    ru: 'Язык',
-    en: 'Language'
+    ru: 'RU',
+    en: 'EN'
   }
 
   //! D O N ' T D O T H I S

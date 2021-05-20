@@ -172,6 +172,7 @@ header {
   padding: 16px 0 12px;
   display: flex;
   align-items: center;
+  justify-content: space-between;
   position: relative;
   &:after {
     content: '';
@@ -188,7 +189,7 @@ header {
 .main-logo {
   display: inline-flex;
   align-items: center;
-  margin-right: 82px;
+  // margin-right: 82px;
   span {
     flex-shrink: 0;
   }
@@ -201,10 +202,14 @@ header {
   display: flex;
   align-items: center;
   font-weight: 500;
+  & a:nth-child(1){
+    margin-right: 20px;
+  }
   a {
     display: inline-block;
-    margin-left: 60px;
+    // margin-left: 60px;
     flex-shrink: 0;
+    
   }
 }
 
@@ -213,8 +218,8 @@ header {
   font-size: 14px;
   display: flex;
   align-items: center;
-  margin-left: auto;
-  margin-right: -5px;
+  // margin-left: auto;
+  // margin-right: -5px;
   line-height: 1.2;
   img {
     flex-shrink: 0;
@@ -673,9 +678,44 @@ header {
   &.show {
     display: block;
     position: absolute;
-    top: 1rem;
-    left: 0;
+    padding: 15px;
+    top: 2.5rem;
+    right: 0;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
     background-color: #fff;
+    z-index: 2;
+    &::after{
+      content: '';
+      position: absolute;
+      top: -10px;
+      right: 1.45rem;
+      width: 0; 
+      height: 0; 
+      border-left: 10px solid transparent;
+      border-right: 10px solid transparent;
+      border-bottom: 10px solid #fff;
+    }
+    & li{
+      font-style: normal;
+      font-weight: normal;
+      font-size: 12px;
+      line-height: 120%;
+      display: flex;
+      align-items: center;
+      &:nth-child(1){
+        padding-bottom: 8px;
+        margin-bottom: 8px;
+        border-bottom: 1px solid #E5E5E5;
+      }
+      & a{
+        display: flex;
+        align-items: center;
+        & span{
+          display: flex;
+          align-items: center;
+        }
+      }
+    }
   }
 }
 
@@ -4417,8 +4457,11 @@ footer {
   }
   .header-phones {
     font-size: 14px;
-    a {
-      margin-left: 20px;
+    display: flex;
+    flex-direction: column;
+    & a:nth-child(1){
+      margin-bottom: 7px;
+      margin-right: 0;
     }
   }
   .jumbotron-content {
@@ -4842,7 +4885,7 @@ footer {
   .header-buter {
     display: block;
     cursor: pointer;
-    margin-left: 30px;
+    margin-left: 40px;
     &:hover {
       i {
         background: $red;
@@ -4883,10 +4926,17 @@ footer {
       }
     }
   }
+  .lang{
+    display: none;
+  }
   .header-phones {
+    flex-direction: row;
     font-size: 16px;
+    & a:nth-child(1){
+      margin-bottom: 0;
+    }
     a {
-      margin-left: 25px;
+      margin-left: 30px;
     }
   }
   .header-top {
@@ -5899,7 +5949,7 @@ footer {
   }
   .header-phones {
     a {
-      &:first-child {
+      &:nth-child(2) {
         display: none;
       }
     }

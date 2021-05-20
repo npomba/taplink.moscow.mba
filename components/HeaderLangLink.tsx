@@ -8,28 +8,30 @@ const HeaderLangLink = () => {
   const router = useRouter()
   const [showMe, setShowMe] = useState(false)
 
-  const showLangMenu = () => {
-    setShowMe(!showMe)
-  }
+  const showLangMenu = () => setShowMe(!showMe)
 
   return (
-    <li className='lang'>
+    <div className='lang'>
       <a className='lang__btn' onClick={showLangMenu}>
         {setString(lang.linkLang)} &#9660;
       </a>
       <ul className={`lang__selectList ${showMe && 'show'}`}>
         <li className='selectList__item'>
           <Link href={`${router.pathname}`} locale='ru'>
-            <a onClick={showLangMenu}>🇷🇺&nbsp;Русский</a>
+            <a onClick={showLangMenu}>
+              <span>🇷🇺</span>&nbsp;РУССКИЙ
+            </a>
           </Link>
         </li>
         <li className='selectList__item'>
           <Link href={`${router.pathname}`} locale='en-US'>
-            <a onClick={showLangMenu}>🇺🇸&nbsp;English</a>
+            <a onClick={showLangMenu}>
+              <span>🇺🇸</span>&nbsp;ENGLISH
+            </a>
           </Link>
         </li>
       </ul>
-    </li>
+    </div>
   )
 }
 
