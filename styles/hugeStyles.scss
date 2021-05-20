@@ -667,6 +667,11 @@ header {
 
 .lang {
   position: relative;
+  &.lang-red-highlight{
+    & .lang__btn{
+      color: $red;
+    }
+  }
 }
 
 .lang__btn {
@@ -715,6 +720,10 @@ header {
       & a{
         display: flex;
         align-items: center;
+        transition: color 0.2s ease-in-out;
+        &:hover{
+          color: $red
+        }
         & span{
           display: flex;
           align-items: center;

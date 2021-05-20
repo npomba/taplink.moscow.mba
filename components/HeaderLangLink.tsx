@@ -12,9 +12,10 @@ const HeaderLangLink = () => {
   const showLangMenu = () => setShowMe(!showMe)
 
   return (
-    <div className='lang'>
+    <div className={`${showMe && 'lang-red-highlight'} lang`}>
       <a className='lang__btn' onClick={showLangMenu}>
-        {setString(lang.linkLang)} <SVGTriangleBottom />
+        {setString(lang.linkLang)}{' '}
+        <SVGTriangleBottom fill={`${showMe ? '#FF3535' : '#000'}`} />
       </a>
       <ul className={`lang__selectList ${showMe && 'show'}`}>
         <li className='selectList__item'>
