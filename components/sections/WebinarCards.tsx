@@ -6,7 +6,7 @@ const WebinarCards = ({ timeframe }) => {
       id: '5c171fb3-ff67-4ece-b11d-9223b03e6f0a',
       title: 'Сквозная аналитика в Российском ретейле',
       portrait: '/assets/images/speakers/speaker-1.jpg',
-      speaker: 'Ирина Мартынова',
+      speaker: 'Эдуард Тихонов',
       date: new Date(2021, 5, 4, 17, 0),
       dur: '40:00'
     },

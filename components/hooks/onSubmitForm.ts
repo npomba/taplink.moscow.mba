@@ -1,8 +1,6 @@
 import axios from 'axios'
 import { thisServer } from '@/config/index'
-import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import ThankyouPopup from '@/components/popups/Thankyou'
 
 const onSubmitForm = async values => {
   try {

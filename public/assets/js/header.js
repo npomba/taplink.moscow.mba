@@ -14,6 +14,7 @@ $(document).ready(function () {
     $('.header-podmenu').fadeToggle(300)
     // $('.header-overlay').fadeToggle(300)
     $('.main-content').toggleClass('show-overlay')
+    $('.sticky-bottom-part').toggleClass('show-overlay')
   })
 
   $(document).mouseup(function (e) {
@@ -22,7 +23,8 @@ $(document).ready(function () {
       $('.header-podmenu').fadeOut(300)
       // $('.header-overlay').fadeOut(300)
       $('.header-podmenu-toggle').removeClass('opened')
-      $('.main-content').toggleClass('show-overlay')
+      $('.main-content').removeClass('show-overlay')
+      $('.sticky-bottom-part').removeClass('show-overlay')
     }
   })
 
@@ -34,10 +36,20 @@ $(document).ready(function () {
     $('.header-overlay').fadeOut(300)
     $('.header-podmenu-toggle').removeClass('opened')
     $('.main-content').toggleClass('show-overlay')
+    $('.sticky-bottom-part').toggleClass('show-overlay')
+  })
+
+  $('.main-logo, .header-menu a').click(function () {
+    $('.header-podmenu').fadeOut(300)
+    $('.header-mobile-podmenu').fadeOut(300)
+    $('.header-overlay').fadeOut(300)
+    $('.header-podmenu-toggle').removeClass('opened')
+    $('.main-content').removeClass('show-overlay')
+    $('.sticky-bottom-part').removeClass('show-overlay')
   })
 
   $(
-    '.mobileAllProgramsLink, .main-logo, .program-options-block-list a, #switchToRuBtn, #switchToEnBtn, .onClickCloseMobileMenu'
+    '.mobileAllProgramsLink, .main-logo, .header-menu a, .program-options-block-list a, #switchToRuBtn, #switchToEnBtn, .onClickCloseMobileMenu'
   ).click(function () {
     $('.header-mobile-podmenu').fadeOut(300)
     $('.header-buter').removeClass('opened')

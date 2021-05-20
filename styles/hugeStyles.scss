@@ -104,12 +104,31 @@ a {
       width: 100%;
       height: 100%;
       background-color: rgba(#000, 0.5);
-      z-index: 5
+      z-index: 6;
     }
   }
-  
 }
 
+.sticky-bottom-part{
+  &.show-overlay{
+    &::after{
+      content: '';
+      position: absolute;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(#000, 0.5);
+      z-index: 6;
+    }
+  }
+  &.show{
+    transform: translateY(0)
+  }
+  &.hide{
+    display: none;
+  }
+}
 .floatLeft {
   float: left;
 }
@@ -4686,7 +4705,24 @@ footer {
   .jumbotron-red-info {
     margin-left: 0;
     width: 100%;
+    flex-wrap: wrap;
+    height: auto;
+    min-height: 112px;
+    padding: 30px;
+    justify-content: space-evenly;
+    li {
+      padding: 0 8px;
+      width: 40%;
+      margin-bottom: 20px;
+      &:nth-last-child(1){
+        margin-bottom: 0;
+      }
+      &:nth-last-child(2){
+        margin-bottom: 0;
+      }
+    }
   }
+
   .process-section,
   .purpose-section,
   .actual-section {
@@ -4883,11 +4919,11 @@ footer {
     overflow: hidden;
   }
   header {
-    position: fixed;
+    // position: fixed;
     z-index: 50;
     width: 100%;
-    top: 0;
-    left: 0;
+    // top: 0;
+    // left: 0;
     &:after {
       content: '';
       left: 0;
@@ -4976,9 +5012,9 @@ footer {
       display: none;
     }
   }
-  .main-content {
-    padding-top: 74px;
-  }
+  // .main-content {
+  //   padding-top: 74px;
+  // }
   .header-mobile-podmenu {
     display: none;
     position: absolute;
@@ -5525,10 +5561,7 @@ footer {
     flex-wrap: wrap;
     height: auto;
     min-height: 112px;
-    bottom: auto;
-    top: 100%;
-    margin-top: -56px;
-    padding: 30px 35px 10px;
+    padding: 30px;
     li {
       padding: 0 8px;
       width: 50%;
@@ -6960,10 +6993,14 @@ footer {
       font-size: 32px;
     }
   }
-  .jumbotron-red-info {
+  ul.jumbotron-red-info {
     margin-top: -150px;
     li {
       width: 100%;
+      &:nth-last-child(2){
+        margin-bottom: 20px;
+      }
+      
     }
     .detail {
       font-size: 20px;
