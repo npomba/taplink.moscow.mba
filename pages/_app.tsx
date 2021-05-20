@@ -56,8 +56,6 @@ function MyApp({ Component, pageProps, appProps, router }) {
   )
 }
 
-export default withSecureHeaders()(MyApp)
-
 MyApp.getInitialProps = async appContext => {
   const appProps = await App.getInitialProps(appContext)
 
@@ -75,3 +73,5 @@ MyApp.getInitialProps = async appContext => {
     }
   }
 }
+
+export default withSecureHeaders()(MyApp)
