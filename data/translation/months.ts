@@ -25,7 +25,7 @@ export default {
   },
 
   june: {
-    ru: 'июля',
+    ru: 'июня',
     en: 'June'
   },
 

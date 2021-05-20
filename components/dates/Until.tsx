@@ -10,8 +10,8 @@ const Until = ({ preposition = true, executive = false }) => {
   return (
     <>
       {preposition && setString(langMenu.discountUntil) + ' '}
-      {currentDay < 20 ? '20' : '5'}{' '}
-      {currentMonth === 1
+      {currentDay < 20 ? '20' : '5'} {setString(langMonths.june)}
+      {/* {currentMonth === 1
         ? setString(langMonths.january)
         : currentMonth === 2
         ? setString(langMonths.february)
@@ -35,7 +35,7 @@ const Until = ({ preposition = true, executive = false }) => {
         ? setString(langMonths.november)
         : currentMonth === 12
         ? setString(langMonths.december)
-        : null}
+        : null} */}
     </>
   )
 }
