@@ -19,6 +19,7 @@ import loadJs from 'loadjs'
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 import contactData from '@/data/contactData'
+import SVGLocation from '@/components/svgs/SVGLocation'
 
 const Header = ({ programs }) => {
   const { data } = programs.programs
@@ -58,7 +59,7 @@ const Header = ({ programs }) => {
             </span>
           </div>
           <div className='header-place'>
-            <img src='/assets/images/marker_black.svg' alt='' />
+            <SVGLocation />
             {setString(contactInfo.addresses[0].data.city)},{' '}
             {setString(contactInfo.addresses[0].data.street)}
           </div>
@@ -813,7 +814,7 @@ const Header = ({ programs }) => {
               </span>
             </div>
             <div className='header-place'>
-              <img src='/assets/images/marker_black.svg' alt='' />
+              <SVGLocation />
               <span>{setString(lang.address)}</span>
             </div>
           </div>

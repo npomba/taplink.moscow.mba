@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const ReviewPopUp = ({ review, closePopUp }) => {
   return (
     <>
@@ -5,10 +7,12 @@ const ReviewPopUp = ({ review, closePopUp }) => {
         <div className='popup-content-origin popup-content-origin--review'>
           <div className='reviews-text-block modal-review'>
             <div className='avatar'>
-              <img
-                className='lazyload'
-                data-src={`/assets/images/reviews/${review.picUrl}`}
-                alt=''
+              <Image
+                src={`/assets/images/reviews/${review.picUrl}`}
+                alt={review.name}
+                height={185}
+                width={185}
+                priority={true}
               />
             </div>
             <div className='info'>

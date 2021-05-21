@@ -1,3 +1,5 @@
+import SVGDecorativeLines from '@/components/svgs/SVGDecorativeLines'
+
 const WhoStudies = () => {
   return (
     <section className='who-training-section'>
@@ -17,7 +19,7 @@ const WhoStudies = () => {
         </li>
       </ul>
       <div className='lines'>
-        <img src='/assets/images/who_training_lines.svg' alt='' />
+        <SVGDecorativeLines />
       </div>
     </section>
   )

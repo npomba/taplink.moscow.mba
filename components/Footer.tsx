@@ -4,6 +4,7 @@ import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 
 import contactData from '@/data/contactData'
+import SVGLocation from '@/components/svgs/SVGLocation'
 
 const Footer = () => {
   const contactInfo = contactData()
@@ -86,7 +87,7 @@ const Footer = () => {
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>
-                <img src='/assets/images/marker_black.svg' alt='' />
+                <SVGLocation />
                 <span>
                   {setString(contactInfo.addresses[0].data.city)},{' '}
                   {setString(contactInfo.addresses[0].data.street)}

@@ -253,7 +253,7 @@ header {
   // margin-left: auto;
   // margin-right: -5px;
   line-height: 1.2;
-  img {
+  svg {
     flex-shrink: 0;
     margin-right: 8px;
   }
@@ -2125,7 +2125,7 @@ footer {
   display: flex;
   line-height: 1.2;
   margin-right: 20px;
-  img {
+  svg {
     flex-shrink: 0;
     margin-right: 10px;
     filter: invert(58%) sepia(3%) saturate(7%) hue-rotate(348deg)
@@ -3040,11 +3040,6 @@ footer {
     overflow: hidden;
     margin-right: 35px;
     border-radius: 50%;
-    img {
-      width: 100%;
-      height: 100%;
-      object-fit: cover;
-    }
   }
   .text {
     font-size: 20px;

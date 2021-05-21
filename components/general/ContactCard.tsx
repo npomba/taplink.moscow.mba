@@ -7,7 +7,7 @@ const ContactCard = ({ city, address, number, email }) => {
       <address className='vcard'>
         <span className='adr'>
           <h2 className={`locality ${stls.h2}`}>
-            <SVGLocation />
+            <SVGLocation large={true} />
             {city}
           </h2>
         </span>

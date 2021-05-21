@@ -9,7 +9,8 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 import Filters from '@/components/general/Filters'
 import stls from '@/styles/modules/ProgramsPage.module.sass'
-import { CheckCircle, ArrowTopRight } from '@/components/general/Svgs'
+import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
+import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
@@ -58,12 +59,12 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
 
               <div className={stls.counters}>
                 <p>
-                  <CheckCircle />
+                  <SVGCheckCircle />
                   <ProgramSubjects subjects='base' />
                   &nbsp;дисциплин об управлениии
                 </p>
                 <p>
-                  <CheckCircle />
+                  <SVGCheckCircle />
                   <ProgramSubjects subjects='specialty' />
                   &nbsp;дисциплин специализации
                 </p>
@@ -75,11 +76,10 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                 return (
                   <Link
                     href={`/programs/${mbaTypeOfProgram}/${mbaFormat}/${program.url}`}
-                    key={program._id}
-                  >
+                    key={program._id}>
                     <a className={stls.program}>
                       <div className={stls.arrow}>
-                        <ArrowTopRight />
+                        <SVGArrowTopRight />
                       </div>
                       <div className={stls.number}>{idx + 1}.</div>
                       <div className={stls.programTitle}>{program.title}</div>
