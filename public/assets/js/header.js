@@ -25,6 +25,7 @@ $(document).ready(function () {
       $('.header-podmenu-toggle').removeClass('opened')
       $('.main-content').removeClass('show-overlay')
       $('.sticky-bottom-part').removeClass('show-overlay')
+      $('html').removeClass('non-overflow')
     }
   })
 
@@ -46,6 +47,7 @@ $(document).ready(function () {
     $('.header-podmenu-toggle').removeClass('opened')
     $('.main-content').removeClass('show-overlay')
     $('.sticky-bottom-part').removeClass('show-overlay')
+    $('html').removeClass('non-overflow')
   })
 
   $(
@@ -53,6 +55,7 @@ $(document).ready(function () {
   ).click(function () {
     $('.header-mobile-podmenu').fadeOut(300)
     $('.header-buter').removeClass('opened')
+    $('html').removeClass('non-overflow')
   })
 
   /*работа подменю в мобилке*/

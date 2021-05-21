@@ -1026,6 +1026,9 @@ h1 {
   align-items: center;
   justify-content: space-between;
   bottom: -56px;
+  @media(max-width: 767px) {
+    bottom: -139px;
+  }
   background: $red;
   padding: 5px 35px;
   line-height: 1.2;
@@ -1065,6 +1068,14 @@ h1 {
   .new-price {
     font-weight: 300;
     font-size: 16px;
+  }
+}
+
+.jumbotron-content-cta{
+  & .jumbotron-red-info{
+    @media(max-width: 767px) {
+      bottom: -106px;
+    }
   }
 }
 
@@ -6841,9 +6852,9 @@ footer {
   .header-top {
     height: auto;
   }
-  .main-content {
-    padding-top: 62px;
-  }
+  // .main-content {
+  //   padding-top: 62px;
+  // }
   .header-phones {
     font-size: 15px;
     a {
@@ -6994,7 +7005,7 @@ footer {
     }
   }
   ul.jumbotron-red-info {
-    margin-top: -150px;
+    // margin-top: -130px;
     li {
       width: 100%;
       &:nth-last-child(2){
