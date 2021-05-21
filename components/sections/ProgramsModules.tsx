@@ -6,7 +6,6 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
-import { exception } from 'console'
 import executive from '@/data/images/executive'
 
 const ProgramsModules = ({ data }) => {

@@ -32,7 +32,7 @@ const JumbotronMain = () => {
               </div>
             </div>
           </div>
-          <Link href='/programs' locale='ru'>
+          <Link href='/programs/mini/online' locale='ru'>
             <a className='jumbotron-squad'>
               <p>{setString(lang.redCubeLink)}</p>
               <div className='arrow'>

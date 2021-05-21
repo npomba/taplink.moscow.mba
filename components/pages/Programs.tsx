@@ -75,8 +75,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                 return (
                   <Link
                     href={`/programs/${mbaTypeOfProgram}/${mbaFormat}/${program.url}`}
-                    key={program._id}
-                  >
+                    key={program._id}>
                     <a className={stls.program}>
                       <div className={stls.arrow}>
                         <ArrowTopRight />

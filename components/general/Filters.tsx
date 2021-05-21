@@ -12,8 +12,9 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
           <Link href={`/programs/mini/${mbaFormat}`}>
             <a>
               <span
-                className={`${stls.circle} ${at.mini ? stls.active : ''}`}
-              ></span>{' '}
+                className={`${stls.circle} ${
+                  at.mini ? stls.active : ''
+                }`}></span>{' '}
               Mini MBA
             </a>
           </Link>
@@ -23,8 +24,7 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
               <span
                 className={`${stls.circle} ${
                   at.professional ? stls.active : ''
-                }`}
-              ></span>{' '}
+                }`}></span>{' '}
               Professional MBA
             </a>
           </Link>
@@ -32,13 +32,14 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
           <Link href={`/programs/industry/${mbaFormat}`}>
             <a>
               <span
-                className={`${stls.circle} ${at.industry ? stls.active : ''}`}
-              ></span>{' '}
+                className={`${stls.circle} ${
+                  at.industry ? stls.active : ''
+                }`}></span>{' '}
               Industry MBA
             </a>
           </Link>
 
-          <Link href='/programs/executive'>
+          <Link href='/programs/executive' locale='ru'>
             <a className={stls.highlight}>
               Executive MBA <span className={stls.premium}>Premium</span>
             </a>
@@ -51,8 +52,9 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
           <Link href={`/programs/${mbaTypeOfProgram}/blended`}>
             <a>
               <span
-                className={`${stls.circle} ${at.blended ? stls.active : ''}`}
-              ></span>{' '}
+                className={`${stls.circle} ${
+                  at.blended ? stls.active : ''
+                }`}></span>{' '}
               BLENDED (с очными модулями)
             </a>
           </Link>
@@ -60,8 +62,9 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
           <Link href={`/programs/${mbaTypeOfProgram}/online`}>
             <a>
               <span
-                className={`${stls.circle} ${at.online ? stls.active : ''}`}
-              ></span>{' '}
+                className={`${stls.circle} ${
+                  at.online ? stls.active : ''
+                }`}></span>{' '}
               ONLINE (дистанционно){' '}
               <span className={stls.discount50}>-50%</span>
             </a>

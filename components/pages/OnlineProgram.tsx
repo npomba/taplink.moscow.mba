@@ -25,7 +25,6 @@ const PageOnlineProgram = ({ program }) => {
   // useEffect(() => {
 
   //   loadJs([
-  //     '/assets/js/slick.min.js',
   //     '/assets/js/lazysizes.min.js',
   //     '/assets/js/circle-progress.min.js',
   //     '/assets/js/jquery.magnific-popup.min.js',
