@@ -1,5 +1,9 @@
 @import @/styles/utils/mixins
 
+$mobileView: '1069px'
+$lineBrakeView: '1163px'
+$mobileViewLineBrakeView: '625px'
+
 .sticky
   width: 100%
   height: 82px
@@ -27,15 +31,20 @@
   // width: 100%
   display: flex
   justify-content: center
-  @media(max-width: 1163px)
+  @media(max-width: $lineBrakeView)
     display: block
     line-height: 120%
 
 .btns
   display: flex
   align-items: center
-  & > *:not(:nth-last-child(1))
-    margin-right: 32px
+  @media(min-width: $mobileView)
+    & > *:not(:nth-last-child(1))
+      margin-right: 32px
+  & > *:nth-child(1),
+  & > *:nth-child(2)
+    @media(max-width: $mobileView)
+      display: none
 
 .btn
   padding: 19px 33px
@@ -55,20 +64,35 @@
   right: 24px
   @media(max-width: 1216px)
     display: none
+  @media(max-width: $mobileView)
+    display: none
 
 .crossIn
   @media(min-width: 1217px)
+    display: none
+  @media(max-width: $mobileView)
     display: none
 
 .pointer
   cursor: pointer
 
 .responsiveSpace
-  @media(max-width: 1163px)
+  @media(max-width: $lineBrakeView)
+    display: none
+  @media(max-width: $mobileView)
+    display: inline
+  @media(max-width: $mobileViewLineBrakeView)
     display: none
 
 .responsiveBr
   @media(min-width: 1164px)
     display: none
+  @media(max-width: $mobileView)
+    display: none
+  @media(max-width: $mobileViewLineBrakeView)
+    display: block
 
-// 1105px
+.learnMore
+  display: none
+  @media(max-width: $mobileView)
+    display: block

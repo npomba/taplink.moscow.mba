@@ -40,7 +40,7 @@ const Executive = () => {
               <Price discount={true} type={'executive'} /> &#8381;
             </i> */}
           </div>
-          <Link href='/programs/executive/'>
+          <Link href='/programs/executive/' locale='ru'>
             <a className='button empty-button'>
               {setString(lang.learnMoreBtn)}
             </a>

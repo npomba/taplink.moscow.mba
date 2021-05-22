@@ -30,36 +30,3 @@ $(document).ready(function () {
 })
 
 var widthScreen = $(window).width()
-
-// Слайдер програм для мобилки
-if ($('.mini-programs-slider').length) {
-  var $carousel = $('.mini-programs-slider')
-
-  function showSlider($widthScreen) {
-    if ($widthScreen <= '480') {
-      if (!$carousel.hasClass('slick-initialized')) {
-        $carousel.slick({
-          slidesToShow: 1,
-          slidesToScroll: 1,
-          speed: 800,
-          arrows: false,
-          dots: true,
-          rows: 5,
-          slidesPerRow: 1,
-          adaptiveHeight: true
-        })
-      }
-    } else {
-      if ($carousel.hasClass('slick-initialized')) {
-        $carousel.slick('unslick')
-      }
-    }
-  }
-
-  $(window)
-    .ready(showSlider(widthScreen))
-    .resize(function () {
-      var widthScreen = $(window).width()
-      showSlider(widthScreen)
-    })
-}

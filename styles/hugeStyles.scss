@@ -1026,6 +1026,9 @@ h1 {
   align-items: center;
   justify-content: space-between;
   bottom: -56px;
+  @media(max-width: 767px) {
+    bottom: -139px;
+  }
   background: $red;
   padding: 5px 35px;
   line-height: 1.2;
@@ -1065,6 +1068,14 @@ h1 {
   .new-price {
     font-weight: 300;
     font-size: 16px;
+  }
+}
+
+.jumbotron-content-cta{
+  & .jumbotron-red-info{
+    @media(max-width: 767px) {
+      bottom: -106px;
+    }
   }
 }
 
@@ -5355,6 +5366,7 @@ footer {
     }
     .active-tab {
       border-bottom-color: $red;
+      transition: opacity 0.3s ease-in-out;
     }
   }
   .program-tabs-content {
@@ -6836,9 +6848,9 @@ footer {
   .header-top {
     height: auto;
   }
-  .main-content {
-    padding-top: 62px;
-  }
+  // .main-content {
+  //   padding-top: 62px;
+  // }
   .header-phones {
     font-size: 15px;
     a {
@@ -6989,7 +7001,7 @@ footer {
     }
   }
   ul.jumbotron-red-info {
-    margin-top: -150px;
+    // margin-top: -130px;
     li {
       width: 100%;
       &:nth-last-child(2){
@@ -7748,4 +7760,8 @@ div.popup-content {
 .popup-content {
   -webkit-animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
   animation: anvil 0.3s cubic-bezier(0.38, 0.1, 0.36, 0.9) forwards;
+}
+
+.popup-overlay{
+  overflow-y: auto;
 }

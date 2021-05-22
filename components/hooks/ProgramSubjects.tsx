@@ -73,8 +73,8 @@ const ProgramSubjects = ({ sum = false, type = '', subjects = '' }) => {
         {at.executive && subjects === 'base' && sum === false
           ? '37'
           : at.executive && subjects === 'specialty' && sum === false
-          ? '10'
-          : at.executive && '47'}
+          ? '14'
+          : at.executive && '51'}
       </span>
     )
   }

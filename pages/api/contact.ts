@@ -9,7 +9,7 @@ import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 
 export default async (req, res) => {
-  process.env.TZ = 'Europe/Amsterdam'
+  process.env.TZ = 'Europe/Moscow'
   // data from the client
   const { name, phone } = req.body
 

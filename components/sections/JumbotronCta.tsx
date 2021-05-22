@@ -100,7 +100,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
 
               <ul className='jumCta-links mobile'>
                 <li>
-                  <Link href='/programs'>
+                  <Link href='/programs' locale='ru'>
                     <a>{setString(lang.programsMbaMobileLink)}</a>
                   </Link>
                 </li>

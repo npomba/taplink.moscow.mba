@@ -49,7 +49,7 @@ const StickyBottom = () => {
           на все Online программы <Until />!
         </p>
         <div className={stls.btns}>
-          <Link href='/programs/mini/online'>
+          <Link href='/programs/mini/online' locale='ru'>
             <a className={stls.btn}>СМОТРЕТЬ&nbsp;ПРОГРАММЫ</a>
           </Link>
 
@@ -68,6 +68,22 @@ const StickyBottom = () => {
               />
             )}
           </Popup>
+
+          <div className={`${stls.learnMore}`}>
+            <Popup
+              trigger={
+                <a className={`${stls.btn} ${stls.pointer}`}>ПОДРОБНЕЕ</a>
+              }
+              modal
+              nested>
+              {close => (
+                <PopUpForm
+                  title={'Получите консультацию'}
+                  closePopUpForm={close}
+                />
+              )}
+            </Popup>
+          </div>
 
           <a
             className={`${stls.pointer} close-bottom-module-btn ${stls.crossIn}`}>

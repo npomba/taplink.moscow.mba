@@ -155,7 +155,11 @@ const Programs = ({ programs }) => {
               <div id='program-options-1-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
                 <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  <ProgramsQt
+                    programs={data}
+                    type={'mini'}
+                    format={'blended'}
+                  />{' '}
                   {setString(langMenu.qtPrograms)}
                 </div>
                 <div className='price'>
@@ -249,7 +253,11 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  <ProgramsQt
+                    programs={data}
+                    type={'professional'}
+                    format={'online'}
+                  />{' '}
                   {setString(langMenu.qtPrograms)}
                 </div>
                 <div className='price'>
@@ -312,7 +320,11 @@ const Programs = ({ programs }) => {
               <div id='program-options-2-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
                 <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  <ProgramsQt
+                    programs={data}
+                    type={'professional'}
+                    format={'blended'}
+                  />{' '}
                   {setString(langMenu.qtPrograms)}
                 </div>
                 <div className='price'>
@@ -406,7 +418,11 @@ const Programs = ({ programs }) => {
                   </div>
                 </div>
                 <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  <ProgramsQt
+                    programs={data}
+                    type={'industry'}
+                    format={'online'}
+                  />{' '}
                   {setString(langMenu.qtPrograms)}
                 </div>
                 <div className='price'>
@@ -469,7 +485,11 @@ const Programs = ({ programs }) => {
               <div id='program-options-3-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
                 <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
+                  <ProgramsQt
+                    programs={data}
+                    type={'industry'}
+                    format={'blended'}
+                  />{' '}
                   {setString(langMenu.qtPrograms)}
                 </div>
                 <div className='price'>

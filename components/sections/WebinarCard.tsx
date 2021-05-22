@@ -35,7 +35,7 @@ const WebinarCard = ({
             <div className='info'>
               <div className='author'>
                 <div className='avatar'>
-                  <Image src={portrait} alt={speaker} width={50} height={59} />
+                  <Image src={portrait} alt={speaker} width={50} height={50} />
                 </div>
                 <div>
                   Спикер: <span className='name'>{speaker}</span>

@@ -60,26 +60,22 @@ class MyDocument extends Document {
             as='font'
             crossOrigin="'self'"
           />
+          <script
+            type='text/javascript'
+            src='/assets/js/vendors/jquery-3.6.0.min.js'
+            async></script>
+          <script
+            type='text/javascript'
+            src='/assets/js/vendors/lazysizes.min.js'
+            async></script>
+          <script
+            type='text/javascript'
+            src='/assets/js/vendors/circle-progress.min.js'
+            async></script>
         </Head>
         <body>
           <Main />
           <NextScript />
-          <script
-            type='text/javascript'
-            src='/assets/js/vendors/jquery-3.6.0.min.js'
-          ></script>
-          <script
-            type='text/javascript'
-            src='/assets/js/vendors/slick.min.js'
-          ></script>
-          <script
-            type='text/javascript'
-            src='/assets/js/vendors/lazysizes.min.js'
-          ></script>
-          <script
-            type='text/javascript'
-            src='/assets/js/vendors/circle-progress.min.js'
-          ></script>
           <script type='text/javascript' src='/assets/js/myjs.js'></script>
         </body>
       </Html>

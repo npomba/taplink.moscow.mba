@@ -6,6 +6,7 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
+import executive from '@/data/images/executive'
 
 const ProgramsModules = ({ data }) => {
   const at = useAt()
@@ -34,7 +35,7 @@ const ProgramsModules = ({ data }) => {
             <p>дисциплин специализации</p>
           </li>
         </ul>
-        <h3>Базовые дисциплины</h3>
+        <h3>{!executive && 'Базовые дисциплины'}</h3>
       </div>
       <div className='training-list'>
         {at.mini && (
@@ -151,34 +152,18 @@ const ProgramsModules = ({ data }) => {
             <ProgramsModule
               title='1 модуль'
               subTitle=''
-              items={data.specializedSubjects.filter((item, idx) => idx < 4)}
+              items={data.specializedSubjects.filter((item, idx) => idx < 7)}
             />
             <ProgramsModule
               title='2 модуль'
               subTitle=''
-              items={data.specializedSubjects.filter(
-                (item, idx) => idx >= 4 && idx <= 7
-              )}
-            />
-            <ProgramsModule
-              title='3 модуль'
-              subTitle=''
-              items={data.specializedSubjects.filter(
-                (item, idx) => idx > 7 && idx <= 10
-              )}
-            />
-            <ProgramsModule
-              title='4 модуль'
-              subTitle=''
-              items={data.specializedSubjects.filter(
-                (item, idx) => idx > 10 && idx <= 14
-              )}
+              items={data.specializedSubjects.filter((item, idx) => idx >= 7)}
             />
           </>
         )}
       </div>
       <div className='section-pl'>
-        <h3>Специализированные дисциплины</h3>
+        <h3>{!executive && 'Специализированные дисциплины'}</h3>
       </div>
       <div className='training-list'>
         {(at.industry || at.professional) && (

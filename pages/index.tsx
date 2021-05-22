@@ -20,7 +20,6 @@ export default function Home({ programs }) {
   // useEffect(() => {
   //   loadJs(
   //     [
-  //       '/assets/js/slick.min.js',
   //       '/assets/js/lazysizes.min.js',
   //       '/assets/js/jquery.magnific-popup.min.js',
   //       '/assets/js/myjs.js',
