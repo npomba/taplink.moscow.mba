@@ -26,7 +26,6 @@ const PageOnlineProgram = ({ program }) => {
 
   //   loadJs([
   //     '/assets/js/lazysizes.min.js',
-  //     '/assets/js/circle-progress.min.js',
   //     '/assets/js/jquery.magnific-popup.min.js',
   //     '/assets/js/myjs.js'
   //   ], {

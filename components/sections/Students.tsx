@@ -1,12 +1,9 @@
-import { useEffect } from 'react'
-import loadJs from 'loadjs'
+import { CircularProgressbar } from 'react-circular-progressbar'
+// import 'react-circular-progressbar/dist/styles.css'
+
+import circleStls from '@/styles/modules/CircularProgressBar.module.sass'
 
 const Students = () => {
-  useEffect(() => {
-    loadJs(['/assets/js/circle.js'], {
-      async: false,
-    })
-  }, [])
   return (
     <section className='students-section section-pl'>
       <div className='title-pl red'>Более 2000</div>
@@ -19,21 +16,27 @@ const Students = () => {
           <h4>Согласно опросу 2000 наших студентов:</h4>
           <ul className='students-list'>
             <li>
-              <div className='students-circle circle-js' data-value='0.96'>
-                <strong>96%</strong>
-              </div>
+              <CircularProgressbar
+                className={circleStls.circle}
+                value={96}
+                text={'96%'}
+              />
               <p>остались довольны обучением</p>
             </li>
             <li>
-              <div className='students-circle circle-js' data-value='0.92'>
-                <strong>92%</strong>
-              </div>
+              <CircularProgressbar
+                className={circleStls.circle}
+                value={92}
+                text={'92%'}
+              />
               <p>повысили показатели своих проектов</p>
             </li>
             <li>
-              <div className='students-circle circle-js' data-value='0.72'>
-                <strong>72%</strong>
-              </div>
+              <CircularProgressbar
+                className={circleStls.circle}
+                value={72}
+                text={'72%'}
+              />
               <p>продвинулись по карьерной лестнице</p>
             </li>
           </ul>

@@ -19,7 +19,6 @@ const WebinarCard = ({
       <Popup
         trigger={
           <a
-            href='#vebinarModal'
             className={`vebinars-block ${disabled && 'disabled'} popup-open`}
             data-effect='mfp-zoom-in'>
             <div className='bell'>

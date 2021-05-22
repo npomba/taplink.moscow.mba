@@ -4,18 +4,8 @@ import Stickers from '@/components/general/Stickers'
 import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 
-import { useEffect } from 'react'
-import loadJs from 'loadjs'
-import executive from '@/data/images/executive'
-
 const ProgramsModules = ({ data }) => {
   const at = useAt()
-
-  useEffect(() => {
-    loadJs(['/assets/js/programsModules.js'], {
-      async: false
-    })
-  }, [])
 
   return (
     <section className='training-section'>
@@ -35,7 +25,7 @@ const ProgramsModules = ({ data }) => {
             <p>дисциплин специализации</p>
           </li>
         </ul>
-        <h3>{!executive && 'Базовые дисциплины'}</h3>
+        <h3>{!at.executive && 'Базовые дисциплины'}</h3>
       </div>
       <div className='training-list'>
         {at.mini && (
@@ -47,24 +37,19 @@ const ProgramsModules = ({ data }) => {
                 'Основы менеджмента',
                 'Операционный менеджмент',
                 'Стратегический менеджмент',
-                'Корпоративная социальная ответственность',
                 'Управление проектами',
-                'Управление человеческими ресурсами',
-                'Управление маркетингом'
+                'Управление человеческими ресурсами'
               ]}
             />
             <ProgramsModule
               title='2 модуль'
               subTitle=''
               items={[
+                'Управление маркетингом',
                 'Профессиональные навыки и личностное развитие руководителя',
-                'Организационное поведение',
                 'Управление конфликтами',
                 'Финансовый менеджмент',
-                'Стратегический маркетинг',
-                'Интернет-маркетинг',
-                'IT-технологии в управлении',
-                'Основы предпринимательской деятельности'
+                'Стратегический маркетинг'
               ]}
             />
           </>
@@ -163,7 +148,7 @@ const ProgramsModules = ({ data }) => {
         )}
       </div>
       <div className='section-pl'>
-        <h3>{!executive && 'Специализированные дисциплины'}</h3>
+        <h3>{!at.executive && 'Специализированные дисциплины'}</h3>
       </div>
       <div className='training-list'>
         {(at.industry || at.professional) && (

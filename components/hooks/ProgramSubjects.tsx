@@ -7,10 +7,10 @@ const ProgramSubjects = ({ sum = false, type = '', subjects = '' }) => {
     return (
       <span>
         {subjects === 'base' && sum === false
-          ? '15'
+          ? '10'
           : subjects === 'specialty' && sum === false
           ? '5'
-          : '20'}
+          : '15'}
       </span>
     )
   }
@@ -53,10 +53,10 @@ const ProgramSubjects = ({ sum = false, type = '', subjects = '' }) => {
     return (
       <span>
         {at.mini && subjects === 'base' && sum === false
-          ? '15'
+          ? '10'
           : at.mini && subjects === 'specialty' && sum === false
           ? '5'
-          : at.mini && '20'}
+          : at.mini && '15'}
 
         {at.professional && subjects === 'base' && sum === false
           ? '37'

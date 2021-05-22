@@ -3,8 +3,9 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 
-import { useEffect, useState } from 'react'
-import loadJs from 'loadjs'
+import { useState } from 'react'
+
+import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 
 import Popup from 'reactjs-popup'
 
@@ -30,12 +31,6 @@ const Form = ({
     formState: { errors }
   } = useForm<FormValues>()
 
-  useEffect(() => {
-    loadJs(['/assets/js/formPlaceholder.js'], {
-      async: false
-    })
-  }, [])
-
   const [open, setOpen] = useState(false)
   const closeModal = () => setOpen(false)
   const [openLoader, setOpenLoader] = useState(false)
@@ -51,6 +46,10 @@ const Form = ({
     } else {
       console.log('err')
     }
+  }
+
+  const handleKeyUp = e => {
+    handlePlaceholder(e)
   }
 
   return (
@@ -86,6 +85,7 @@ const Form = ({
                     message: `*${setString(lang.formErrLongName)}`
                   }
                 })}
+                onKeyUp={handleKeyUp}
               />
               <div className='input-placeholder'>
                 {setString(lang.inputName)}
@@ -104,6 +104,7 @@ const Form = ({
                     message: `*${setString(lang.formErrShortPhone)}`
                   }
                 })}
+                onKeyUp={handleKeyUp}
               />
               <div className='input-placeholder'>
                 {setString(lang.inputPhone)}

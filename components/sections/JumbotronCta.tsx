@@ -6,8 +6,9 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 
 import { useForm } from 'react-hook-form'
-import { useEffect, useState } from 'react'
-import loadJs from 'loadjs'
+import { useState } from 'react'
+
+import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Popup from 'reactjs-popup'
@@ -27,12 +28,6 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
     formState: { errors }
   } = useForm<FormValues>()
 
-  useEffect(() => {
-    loadJs(['/assets/js/formPlaceholder.js'], {
-      async: false
-    })
-  }, [])
-
   const [open, setOpen] = useState(false)
   const closeModal = () => setOpen(false)
   const [openLoader, setOpenLoader] = useState(false)
@@ -48,6 +43,10 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
     } else {
       console.log('err')
     }
+  }
+
+  const handleKeyUp = e => {
+    handlePlaceholder(e)
   }
 
   return (
@@ -136,6 +135,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                             message: `*${setString(lang.formErrLongName)}`
                           }
                         })}
+                        onKeyUp={handleKeyUp}
                       />
                       <div className='input-placeholder'>
                         {setString(lang.inputName)}
@@ -154,6 +154,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                             message: `*${setString(lang.formErrShortPhone)}`
                           }
                         })}
+                        onKeyUp={handleKeyUp}
                       />
                       <div className='input-placeholder'>
                         {setString(lang.inputPhone)}
