@@ -45,6 +45,7 @@ const Webinars = ({ title, heading, timeframe = 'all' }) => {
               вебинаров
             </a>
           </div> */}
+          {/* */}
         </section>
       </div>
     </>
