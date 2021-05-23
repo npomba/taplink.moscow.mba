@@ -1,4 +1,5 @@
 import useAt from '@/components/hooks/useAt'
+import Image from 'next/image'
 
 const Pros = ({ format = 'online' }) => {
   const at = useAt()
@@ -88,10 +89,11 @@ const Pros = ({ format = 'online' }) => {
             </li>
           </ul>
           <div className='right-image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/advantages_pic_1.jpg'
-              alt=''
+            <Image
+              src='/assets/images/advantages_pic_1.jpg'
+              alt='Студент MBA'
+              width={357}
+              height={558}
             />
           </div>
         </div>
@@ -111,10 +113,11 @@ const Pros = ({ format = 'online' }) => {
         <div className='advantages-content'>
           <div className='left-image'>
             <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/advantages_pic_1.jpg'
-                alt=''
+              <Image
+                src='/assets/images/advantages_pic_1.jpg'
+                alt='Студент MBA'
+                width={265}
+                height={317}
               />
             </div>
           </div>

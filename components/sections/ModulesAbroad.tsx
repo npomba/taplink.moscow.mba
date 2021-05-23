@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const ModulesAbroad = () => {
   return (
     <section className='abroad-modules-section'>
@@ -16,10 +18,11 @@ const ModulesAbroad = () => {
       <ul className='abroad-modules-list'>
         <li>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/abroad_modules_pic_1.jpg'
-              alt=''
+            <Image
+              src='/assets/images/abroad_modules_pic_1.jpg'
+              alt={'Студенты на конференции MBA'}
+              width={550}
+              height={225}
             />
           </div>
           <div className='text'>
@@ -36,10 +39,11 @@ const ModulesAbroad = () => {
         </li>
         <li>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/abroad_modules_pic_2.jpg'
-              alt=''
+            <Image
+              src='/assets/images/abroad_modules_pic_2.jpg'
+              alt={'Встреча студентов MBA в Китае'}
+              width={550}
+              height={225}
             />
           </div>
           <div className='text'>
