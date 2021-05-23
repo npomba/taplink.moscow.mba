@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import SVGClose from '../svgs/SVGClose'
 
 const ReviewPopUp = ({ review, closePopUp }) => {
   return (
@@ -24,7 +25,7 @@ const ReviewPopUp = ({ review, closePopUp }) => {
             </div>
           </div>
           <button className='mfp-close' type='button' onClick={closePopUp}>
-            <img src='/assets/images/close.svg' alt='Закрыть' />
+            <SVGClose />
           </button>
         </div>
       </div>

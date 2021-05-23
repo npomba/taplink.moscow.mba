@@ -1,4 +1,5 @@
 import SVGLoader from '@/components/svgs/SVGLoader'
+import SVGClose from '../svgs/SVGClose'
 
 const Loader = ({ closePopUp = null }) => {
   return (
@@ -9,7 +10,7 @@ const Loader = ({ closePopUp = null }) => {
           <p>Ваша заявка отправляется, пожалуйста, подождите</p>
         </div>
         <button className='mfp-close' type='button' onClick={closePopUp}>
-          <img src='/assets/images/close.svg' alt='Закрыть модуль загрузки' />
+          <SVGClose />
         </button>
       </div>
     </div>

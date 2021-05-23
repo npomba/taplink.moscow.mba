@@ -6,6 +6,7 @@ import Breadcrumbs from '@/components/general/Breadcrumbs'
 import JumbotronLabel from '@/components/general/JumbotronLabel'
 import PopUpForm from '@/components/popups/Form'
 import InfoRectangle from '@/components/general/InfoRectangle'
+import Discount from '../prices/Discount'
 
 const JumbotronProgram = ({ data }) => {
   return (
@@ -23,7 +24,9 @@ const JumbotronProgram = ({ data }) => {
           <Breadcrumbs pageTitle={data.title} />
           <div className='jumbotron-top'>
             <div className='jumbotron-discount'>
-              <div className='size'>-45%</div>
+              <div className='size'>
+                <Discount />
+              </div>
               <span>
                 <Until />
               </span>

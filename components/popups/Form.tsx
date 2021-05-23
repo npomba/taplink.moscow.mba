@@ -11,6 +11,7 @@ import Popup from 'reactjs-popup'
 
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Loader from '../popups/Loader'
+import SVGClose from '../svgs/SVGClose'
 
 type FormValues = {
   name: string
@@ -131,7 +132,7 @@ const Form = ({
           </div>
         </form>
         <button className='mfp-close' type='button' onClick={closePopUpForm}>
-          <img src='/assets/images/close.svg' alt='' />
+          <SVGClose />
         </button>
       </div>
     </div>

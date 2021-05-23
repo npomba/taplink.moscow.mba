@@ -11,6 +11,9 @@ import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
+import Discount from '../prices/Discount'
+import SVGCheckCircle from '../svgs/SVGCheckCircle'
+import SVGScreen from '../svgs/SVGScreen'
 
 const Programs = ({ programs }) => {
   const data = programs
@@ -90,7 +93,9 @@ const Programs = ({ programs }) => {
                 <div className='name'>
                   {setString(langMenu.onlineTitle)}
                   <div className='discount'>
-                    <div className='size'>-45%</div>
+                    <div className='size'>
+                      <Discount />
+                    </div>
                     <span>
                       <Until />
                     </span>
@@ -119,13 +124,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatRemote)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='mini' sum={true} />{' '}
@@ -177,13 +182,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatBlended)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='mini' sum={true} />{' '}
@@ -246,7 +251,9 @@ const Programs = ({ programs }) => {
                 <div className='name'>
                   {setString(langMenu.onlineTitle)}
                   <div className='discount'>
-                    <div className='size'>-45%</div>
+                    <div className='size'>
+                      <Discount />
+                    </div>
                     <span>
                       <Until />
                     </span>
@@ -284,13 +291,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatRemote)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='professional' sum={true} />{' '}
@@ -342,13 +349,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatBlended)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='professional' sum={true} />{' '}
@@ -411,7 +418,9 @@ const Programs = ({ programs }) => {
                 <div className='name'>
                   {setString(langMenu.onlineTitle)}
                   <div className='discount'>
-                    <div className='size'>-45%</div>
+                    <div className='size'>
+                      <Discount />
+                    </div>
                     <span>
                       <Until />
                     </span>
@@ -449,13 +458,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatRemote)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='industry' sum={true} />{' '}
@@ -507,13 +516,13 @@ const Programs = ({ programs }) => {
                 <div className='info-list'>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_check_circle.svg' alt='' />
+                      <SVGCheckCircle fill={'#C7C7C7'} />
                     </div>
                     <span>{setString(langMenu.formatBlended)}</span>
                   </div>
                   <div className='info-flex'>
                     <div className='pic'>
-                      <img src='/assets/images/icon_monitor.svg' alt='' />
+                      <SVGScreen fill={'#C7C7C7'} />
                     </div>
                     <span>
                       <ProgramSubjects type='industry' sum={true} />{' '}

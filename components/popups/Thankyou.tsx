@@ -1,6 +1,7 @@
 import { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import useAt from '@/components/hooks/useAt'
+import SVGClose from '../svgs/SVGClose'
 
 const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
   const at = useAt()
@@ -54,7 +55,7 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
           </button>
         </div>
         <button className='mfp-close' type='button' onClick={closePopUp}>
-          <img src='/assets/images/close.svg' alt='' />
+          <SVGClose />
         </button>
       </div>
     </div>

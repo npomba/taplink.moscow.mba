@@ -23,6 +23,12 @@ import SVGLocation from '@/components/svgs/SVGLocation'
 import SVGLogo from '@/components/svgs/SVGLogo'
 import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
 import Image from 'next/image'
+import ProgramsColumn from './general/ProgramsColumn'
+import Discount from './prices/Discount'
+import SVGCheckCircle from './svgs/SVGCheckCircle'
+import SVGScreen from './svgs/SVGScreen'
+import SVGPaperCorner from './svgs/SVGPaperCorner'
+import SVGClock from './svgs/SVGClock'
 
 const Header = ({ programs }) => {
   const { data } = programs.programs
@@ -199,558 +205,21 @@ const Header = ({ programs }) => {
               </div>
             </div>
             <div className='header-podmenu-right'>
-              <ul
-                id='header-podmenu-1'
-                className='header-podmenu-content visible'>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.onlineTitle)}
-                      <div className='discount'>
-                        <div className='size'>-45%</div>
-                        <span>
-                          <Until />
-                        </span>
-                      </div>
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'mini'}
-                        format={'online'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='new-price'>
-                        {' '}
-                        <Price
-                          discount={true}
-                          type={'mini'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>{' '}
-                      <i className='old-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'mini'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatRemote)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='mini' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {/* {PopulateWithPrograms(data, 'professional', 'online')} */}
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'mini' &&
-                          item.mbaFormat === 'online'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.blendedTitle)}
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'mini'}
-                        format={'blended'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='simple-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'mini'}
-                          format={'blended'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatBlended)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='mini' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'mini' &&
-                          item.mbaFormat === 'blended'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='header-podmenu-info'>
-                    {/* <div className='image'>
-                      <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div> */}
-                    <div className='name'>Mini MBA</div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_clock.svg' alt='' />
-                      </div>
-                      <span>
-                        <TrainingPeriod type={'mini'} />
-                      </span>
-                    </div>
-                    <p>{setString(langMenu.categoryDiscMini)}</p>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects type='mini' subjects='base' />{' '}
-                        {setString(langMenu.categoryAboutManagement)}
-                      </span>
-                    </div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects type='mini' subjects='specialty' />{' '}
-                        {setString(langMenu.categorySpecializedSubjects)}
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <ul id='header-podmenu-2' className='header-podmenu-content'>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.onlineTitle)}
-                      <div className='discount'>
-                        <div className='size'>-45%</div>
-                        <span>
-                          <Until />
-                        </span>
-                      </div>
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'professional'}
-                        format={'online'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='new-price'>
-                        {' '}
-                        <Price
-                          discount={true}
-                          type={'professional'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>{' '}
-                      <i className='old-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'professional'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatRemote)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='professional' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'professional' &&
-                          item.mbaFormat === 'online'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.blendedTitle)}
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'professional'}
-                        format={'blended'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='simple-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'professional'}
-                          format={'blended'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatBlended)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='professional' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'professional' &&
-                          item.mbaFormat === 'blended'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='header-podmenu-info'>
-                    {/* <div className='image'>
-                      <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div> */}
-                    <div className='name'>Professional MBA</div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_clock.svg' alt='' />
-                      </div>
-                      <span>
-                        <TrainingPeriod type='professional' />
-                      </span>
-                    </div>
-                    <p>{setString(langMenu.categoryDiscProfessional)}</p>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects type='professional' subjects='base' />{' '}
-                        {setString(langMenu.categoryAboutManagement)}
-                      </span>
-                    </div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects
-                          type='professional'
-                          subjects='specialty'
-                        />{' '}
-                        {setString(langMenu.categorySpecializedSubjects)}
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
-              <ul id='header-podmenu-3' className='header-podmenu-content'>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.onlineTitle)}
-                      <div className='discount'>
-                        <div className='size'>-45%</div>
-                        <span>
-                          <Until />
-                        </span>
-                      </div>
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'industry'}
-                        format={'online'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='new-price'>
-                        {' '}
-                        <Price
-                          discount={true}
-                          type={'industry'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>{' '}
-                      <i className='old-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'industry'}
-                          format={'online'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatRemote)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='industry' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'industry' &&
-                          item.mbaFormat === 'online'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='program-detail-list'>
-                    <div className='name'>
-                      {setString(langMenu.blendedTitle)}
-                    </div>
-                    <div className='directions-count'>
-                      <ProgramsQt
-                        programs={data}
-                        type={'industry'}
-                        format={'blended'}
-                      />{' '}
-                      {setString(langMenu.qtPrograms)}
-                    </div>
-                    <div className='price'>
-                      {setString(langMenu.price)}:{' '}
-                      <i className='simple-price'>
-                        {' '}
-                        <Price
-                          discount={false}
-                          type={'industry'}
-                          format={'blended'}
-                        />{' '}
-                        &#8381;
-                      </i>
-                    </div>
-                    <div className='info-list'>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img
-                            src='/assets/images/icon_check_circle.svg'
-                            alt=''
-                          />
-                        </div>
-                        <span>{setString(langMenu.formatBlended)}</span>
-                      </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
-                          <img src='/assets/images/icon_monitor.svg' alt='' />
-                        </div>
-                        <span>
-                          <ProgramSubjects type='industry' sum={true} />{' '}
-                          {setString(langMenu.qtSubjects)}
-                        </span>
-                      </div>
-                    </div>
-                    <ul className='program-directions-list'>
-                      {data.map(item => {
-                        if (
-                          item.mbaTypeOfProgram === 'industry' &&
-                          item.mbaFormat === 'blended'
-                        ) {
-                          return (
-                            <li key={item._id}>
-                              <Link
-                                href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                locale='ru'>
-                                <a>{setString(item, true)}</a>
-                              </Link>
-                            </li>
-                          )
-                        }
-                      })}
-                    </ul>
-                  </div>
-                </li>
-                <li>
-                  <div className='header-podmenu-info'>
-                    {/* <div className='image'>
-                      <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                    </div> */}
-                    <div className='name'>Industry MBA</div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_clock.svg' alt='' />
-                      </div>
-                      <span>
-                        <TrainingPeriod type='industry' />
-                      </span>
-                    </div>
-                    <p>{setString(langMenu.categoryDiscIndustry)}</p>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects type='industry' subjects='base' />{' '}
-                        {setString(langMenu.categoryAboutManagement)}
-                      </span>
-                    </div>
-                    <div className='info-flex'>
-                      <div className='pic'>
-                        <img src='/assets/images/icon_list.svg' alt='' />
-                      </div>
-                      <span>
-                        <ProgramSubjects type='industry' subjects='specialty' />{' '}
-                        {setString(langMenu.categorySpecializedSubjects)}
-                      </span>
-                    </div>
-                  </div>
-                </li>
-              </ul>
+              <ProgramsColumn
+                data={data}
+                id={'header-podmenu-1'}
+                type={'mini'}
+              />
+              <ProgramsColumn
+                data={data}
+                id={'header-podmenu-2'}
+                type={'professional'}
+              />
+              <ProgramsColumn
+                data={data}
+                id={'header-podmenu-3'}
+                type={'industry'}
+              />
             </div>
           </div>
         </div>
@@ -884,7 +353,9 @@ const Header = ({ programs }) => {
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
-                              <div className='size'>-45%</div>
+                              <div className='size'>
+                                <Discount />
+                              </div>
                               <span>
                                 <Until />
                               </span>
@@ -922,19 +393,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects type='mini' sum={true} />{' '}
@@ -990,19 +455,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects type='mini' sum={true} />{' '}
@@ -1032,13 +491,10 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      {/* <div className='image'>
-                        <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div> */}
                       <div className='name'>Mini MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_clock.svg' alt='' />
+                          <SVGClock fill={'C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='mini' />
@@ -1047,7 +503,7 @@ const Header = ({ programs }) => {
                       <p>{setString(langMenu.categoryDiscMini)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects type='mini' subjects='base' />{' '}
@@ -1056,7 +512,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects type='mini' subjects='specialty' />{' '}
@@ -1103,7 +559,9 @@ const Header = ({ programs }) => {
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
-                              <div className='size'>-45%</div>
+                              <div className='size'>
+                                <Discount />
+                              </div>
                               <span>
                                 <Until />
                               </span>
@@ -1141,19 +599,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects
@@ -1212,19 +664,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects
@@ -1257,13 +703,10 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      {/* <div className='image'>
-                        <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div> */}
                       <div className='name'>Professional MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_clock.svg' alt='' />
+                          <SVGClock fill={'C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='professional' />
@@ -1272,7 +715,7 @@ const Header = ({ programs }) => {
                       <p>{setString(langMenu.categoryDiscProfessional)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
@@ -1284,7 +727,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
@@ -1334,7 +777,9 @@ const Header = ({ programs }) => {
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
-                              <div className='size'>-45%</div>
+                              <div className='size'>
+                                <Discount />
+                              </div>
                               <span>
                                 <Until />
                               </span>
@@ -1372,19 +817,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects type='industry' sum={true} />{' '}
@@ -1440,19 +879,13 @@ const Header = ({ programs }) => {
                           <div className='info-list'>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_check_circle.svg'
-                                  alt=''
-                                />
+                                <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
                             <div className='info-flex'>
                               <div className='pic'>
-                                <img
-                                  src='/assets/images/icon_monitor.svg'
-                                  alt=''
-                                />
+                                <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects type='industry' sum={true} />{' '}
@@ -1482,13 +915,10 @@ const Header = ({ programs }) => {
                       </div>
                     </div>
                     <div className='header-podmenu-info'>
-                      {/* <div className='image'>
-                        <img src='/assets/images/podmenu_info_1.jpg' alt='' />
-                      </div> */}
                       <div className='name'>Industry MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_clock.svg' alt='' />
+                          <SVGClock fill={'C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='industry' />
@@ -1497,7 +927,7 @@ const Header = ({ programs }) => {
                       <p>{setString(langMenu.categoryDiscIndustry)}</p>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects type='industry' subjects='base' />{' '}
@@ -1506,7 +936,7 @@ const Header = ({ programs }) => {
                       </div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <img src='/assets/images/icon_list.svg' alt='' />
+                          <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
@@ -1560,7 +990,7 @@ const Header = ({ programs }) => {
         </div>
         {/* //header-mobile-lang */}
       </div>
-      {/* //Мобильное меню */}
+      {/* //mobile menu */}
     </header>
   )
 }
