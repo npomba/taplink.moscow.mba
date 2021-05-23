@@ -39,13 +39,6 @@ const Webinars = ({ title, heading, timeframe = 'all' }) => {
             </li>
           </ul>
           <WebinarCards timeframe={timeframe} />
-          {/* <div className='vebinars-more'>
-            <a href='' className='button'>
-              <img src='/assets/images/icon_rotate.svg' alt='' /> Еще 10
-              вебинаров
-            </a>
-          </div> */}
-          {/* */}
         </section>
       </div>
     </>
