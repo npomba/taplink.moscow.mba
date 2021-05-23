@@ -2,6 +2,7 @@ import { CircularProgressbar } from 'react-circular-progressbar'
 // import 'react-circular-progressbar/dist/styles.css'
 
 import circleStls from '@/styles/modules/CircularProgressBar.module.sass'
+import Image from 'next/image'
 
 const Students = () => {
   return (
@@ -43,17 +44,19 @@ const Students = () => {
         </div>
         <div className='dobble-images students-images'>
           <div className='image pic-1'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/students_pic_1.jpg'
-              alt=''
+            <Image
+              src='/assets/images/students_pic_1.jpg'
+              alt='Группа счастливых выпускников'
+              width={481}
+              height={473}
             />
           </div>
           <div className='image pic-2'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/students_pic_2.jpg'
-              alt=''
+            <Image
+              src='/assets/images/students_pic_2.jpg'
+              alt='Счастливый выпускник'
+              width={199}
+              height={199}
             />
           </div>
         </div>
