@@ -98,10 +98,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherOneTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherOneDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -122,10 +118,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherTwoTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherTwoDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -146,10 +138,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherThreeTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherThreeDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -170,10 +158,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherFourTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherFourDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -194,10 +178,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherFiveTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherFiveDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -218,10 +198,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherSixTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherSixDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -242,10 +218,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherSevenTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherSevenDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
@@ -266,10 +238,6 @@ const Teachers = ({
                   {setString(lang.teachersTeacherEightTitle)}
                 </div>
                 <p>{setString(lang.teachersTeacherEightDics)}</p>
-                {/* <a href='' className='link'>
-                  <span>{setString(lang.teachersBiographyLink)}</span>
-                  <img src='/assets/images/arrow_right.svg' alt='' />
-                </a> */}
               </div>
             </div>
           </li>
