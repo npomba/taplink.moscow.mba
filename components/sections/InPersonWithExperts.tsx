@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const InPersonWithExperts = () => {
   return (
     <section className='intramural-moduls-section'>
@@ -19,10 +21,11 @@ const InPersonWithExperts = () => {
         </div>
       </div>
       <div className='image'>
-        <img
-          className='lazyload'
-          data-src='/assets/images/intramural_moduls_pic_1.jpg'
-          alt=''
+        <Image
+          src='/assets/images/intramural_moduls_pic_1.jpg'
+          alt='Слушатели на конференции MBA'
+          width={467}
+          height={467}
         />
       </div>
     </section>

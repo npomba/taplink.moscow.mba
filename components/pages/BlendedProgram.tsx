@@ -12,7 +12,7 @@ import ContactUs from '@/components/sections/ContactUs'
 import Qna from '@/components/sections/Qna'
 import Students from '@/components/sections/Students'
 import Teachers from '@/components/sections/Teachers'
-import RelevantContent from '@/components/sections/RelevantContent'
+import UpToDateContent from '@/components/sections/UpToDateContent'
 import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
 import Accreditation from '@/components/sections/Accreditation'
@@ -60,7 +60,7 @@ const PageBlendedProgram = ({ program }) => {
           titleNewStr={'по программе обучения'}
         />
         <Teachers programId={data._id} programTitle={data.title} />
-        <RelevantContent />
+        <UpToDateContent />
         <CorporateClients />
         <Accreditation />
         <Rules prices={{ lowerPrice: '300 000', higherPrice: '1 500 000' }} />

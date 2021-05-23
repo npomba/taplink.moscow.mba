@@ -1,4 +1,5 @@
 import useAt from '@/components/hooks/useAt'
+import Image from 'next/image'
 
 const ProgramDesc = () => {
   const at = useAt()
@@ -37,10 +38,11 @@ const ProgramDesc = () => {
         </div>
       </div>
       <div className='image'>
-        <img
-          className='lazyload'
-          data-src='/assets/images/top_path_pic_1.jpg'
-          alt=''
+        <Image
+          src='/assets/images/top_path_pic_1.jpg'
+          alt='Слушатели на конференции'
+          width={503}
+          height={503}
         />
       </div>
     </section>
