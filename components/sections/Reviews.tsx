@@ -84,42 +84,6 @@ const Reviews = () => {
             )
           })}
         </div>
-        {/* <div className='reviews-preview-list'>
-          <a href='' className='reviews-preview-block'>
-            <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/review_prew_1.jpg'
-                alt=''
-              />
-            </div>
-            <div className='content'>
-              <div className='type'>Отзыв в формате статьи</div>
-              <div className='name'>
-                Как Александр увеличил доход цементного завода после прохождения
-                MBA professional
-              </div>
-            </div>
-          </a>
-          <a
-            href='https://www.youtube.com/watch?v=l6pDOwNeTrg'
-            className='reviews-preview-block video-preview popup-youtube'
-          >
-            <div className='image'>
-              <img
-                className='lazyload'
-                data-src='/assets/images/review_prew_2.jpg'
-                alt=''
-              />
-            </div>
-            <div className='content'>
-              <div className='play'>
-                <i></i>
-              </div>
-              <div className='name'>Видео отзыв</div>
-            </div>
-          </a>
-        </div> */}
       </section>
     </>
   )
