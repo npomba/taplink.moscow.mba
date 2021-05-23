@@ -12,23 +12,8 @@ import ContactUs from '@/components/sections/ContactUs'
 
 // import Lang from '../components/hooks/Lang'
 
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
-
 export default function Home({ programs }) {
   const { data } = programs
-  // useEffect(() => {
-  //   loadJs(
-  //     [
-  //       '/assets/js/jquery.magnific-popup.min.js',
-  //       '/assets/js/myjs.js',
-  //     ],
-  //     {
-  //       async: false,
-  //     }
-  //   )
-  // }, [])
-  // Lang.init('ru')
 
   return (
     <>
