@@ -1,5 +1,6 @@
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/about'
+import Image from 'next/image'
 
 const UpToDateContent = () => {
   return (
@@ -15,18 +16,20 @@ const UpToDateContent = () => {
             {setString(lang.uptodateDicsSecond)}
           </div>
           <div className='right-image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/actual_pic_2.jpg'
-              alt=''
+            <Image
+              src={'/assets/images/actual_pic_2.jpg'}
+              alt='Оператор снимает конференцию'
+              width={410}
+              height={635}
             />
           </div>
         </div>
         <div className='actual-bottom-image'>
-          <img
-            className='lazyload'
-            data-src='/assets/images/actual_pic_1.jpg'
-            alt=''
+          <Image
+            src={'/assets/images/actual_pic_1.jpg'}
+            alt='Студенты обучаются на конференции'
+            width={850}
+            height={366}
           />
         </div>
       </div>
