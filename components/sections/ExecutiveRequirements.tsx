@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const ExecutiveRequirements = () => {
   return (
     <section className='requirements-section'>
@@ -9,10 +11,13 @@ const ExecutiveRequirements = () => {
           предъявляются особые требования.
         </p>
         <div className='image'>
-          <img
-            className='lazyload'
-            data-src='/assets/images/requirements_pic_1.jpg'
-            alt=''
+          <Image
+            src='/assets/images/requirements_pic_1.jpg'
+            alt='Студенты Executive на конференции'
+            // width={1290}
+            // height={293}
+            layout={'fill'}
+            objectFit={'cover'}
           />
         </div>
       </div>

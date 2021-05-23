@@ -1,3 +1,5 @@
+import Image from 'next/image'
+
 const AboutExecutive = () => {
   return (
     <section className='executive-about-section'>
@@ -23,7 +25,12 @@ const AboutExecutive = () => {
         </div>
         <div className='dobble-images executive-about-images'>
           <div className='image pic-1'>
-            <img src='/assets/images/executive_about_1.jpg' alt='' />
+            <Image
+              src='/assets/images/executive_about_1.jpg'
+              alt='Слушатели на конференции'
+              width={466}
+              height={466}
+            />
           </div>
           <div className='image pic-2'>
             <div className='number'>

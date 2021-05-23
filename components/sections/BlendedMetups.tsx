@@ -1,8 +1,22 @@
+import Image from 'next/image'
+import useAt from '@/components/hooks/useAt'
+
 const BlendedMetups = () => {
+  const at = useAt()
+
   return (
     <section className='blended-info-section section-pl'>
       <div className='title-pl red'>3 очных модуля</div>
-      <h2>MBA mini blended это очные встречи с экспертами в Москве</h2>
+      <h2>
+        {at.mini
+          ? 'MBA mini'
+          : at.professional
+          ? 'MBA professional'
+          : at.industry
+          ? 'MBA industry'
+          : null}{' '}
+        blended это очные встречи с экспертами в Москве
+      </h2>
       <div className='blended-info-flex'>
         <div className='blended-info-content'>
           <h4>3 очных модуля в Москве длительностью 14 дней</h4>
@@ -21,10 +35,11 @@ const BlendedMetups = () => {
         </div>
         <div className='blended-info-images'>
           <div className='image'>
-            <img
-              className='lazyload'
-              data-src='/assets/images/top_path_pic_1.jpg'
-              alt=''
+            <Image
+              src='/assets/images/top_path_pic_1.jpg'
+              alt='Полный зал слушателей во время конференции'
+              width={315}
+              height={315}
             />
           </div>
         </div>
