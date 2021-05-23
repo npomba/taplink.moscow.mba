@@ -7,11 +7,7 @@ const JumbotronMain = () => {
   return (
     <section className='jumbotron-section main-jumbotron'>
       <div className='image'>
-        <Image
-          src='/assets/images/jumbotron_1.jpg'
-          layout='fill'
-          priority={true}
-        />
+        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
