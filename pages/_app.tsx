@@ -1,5 +1,5 @@
 import App from 'next/app'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
 import { DefaultSeo } from 'next-seo'
 import SEO from '../seo.config'
@@ -13,13 +13,44 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { withSecureHeaders } from 'next-secure-headers'
 import { dev, gtmId } from '@/config/index'
 
+import NProgress from 'nprogress'
+import Router from 'next/router'
+import 'nprogress/nprogress.css'
 function MyApp({ Component, pageProps, appProps, router }) {
   // if (!dev) {
   //   console.log = function () {}
   // }
 
+  const [loading, setLoading] = useState(false)
+
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
+
+    NProgress.configure({
+      // minimum: 0.3,
+      // easing: 'ease',
+      // speed: 800,
+      // showSpinner: false
+    })
+
+    const start = () => {
+      console.log('start')
+      NProgress.start()
+      setLoading(true)
+    }
+    const end = () => {
+      console.log('findished')
+      NProgress.done()
+      setLoading(false)
+    }
+    Router.events.on('routeChangeStart', start)
+    Router.events.on('routeChangeComplete', end)
+    Router.events.on('routeChangeError', end)
+    return () => {
+      Router.events.off('routeChangeStart', start)
+      Router.events.off('routeChangeComplete', end)
+      Router.events.off('routeChangeError', end)
+    }
   }, [])
 
   return (

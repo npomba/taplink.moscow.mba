@@ -20,6 +20,9 @@ import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
 import contactData from '@/data/contactData'
 import SVGLocation from '@/components/svgs/SVGLocation'
+import SVGLogo from '@/components/svgs/SVGLogo'
+import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
+import Image from 'next/image'
 
 const Header = ({ programs }) => {
   const { data } = programs.programs
@@ -43,19 +46,29 @@ const Header = ({ programs }) => {
           <Link href='/'>
             <a className='main-logo'>
               <span className='pic'>
-                <img src='/assets/images/logo_mba.svg' alt='' />
+                <SVGLogo />
               </span>
               <span className='text'>
-                <img src='/assets/images/logo_mba_text.svg' alt='' />
+                <SVGLogoTitle />
               </span>
             </a>
           </Link>
           <div className='header-logos'>
             <span className='rabo'>
-              <img src='/assets/images/logo_rabo.png' alt='' />
+              <Image
+                src='/assets/images/logo_rabo.png'
+                alt='Российская ассоциация бизнес-образования'
+                width={117}
+                height={30}
+              />
             </span>
             <span className='dep'>
-              <img src='/assets/images/logo_department.png' alt='' />
+              <Image
+                src='/assets/images/logo_department.png'
+                alt='Департамент образования города Москва'
+                width={105}
+                height={31}
+              />
             </span>
           </div>
           <div className='header-place'>
@@ -807,10 +820,20 @@ const Header = ({ programs }) => {
             </ul>
             <div className='header-logos'>
               <span className='rabo'>
-                <img src='/assets/images/logo_rabo.png' alt='' />
+                <Image
+                  src='/assets/images/logo_rabo.png'
+                  alt='Российская ассоциация бизнес-образования'
+                  width={117}
+                  height={30}
+                />
               </span>
               <span className='dep'>
-                <img src='/assets/images/logo_department.png' alt='' />
+                <Image
+                  src='/assets/images/logo_department.png'
+                  alt='Департамент образования города Москва'
+                  width={105}
+                  height={31}
+                />
               </span>
             </div>
             <div className='header-place'>

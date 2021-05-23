@@ -5,6 +5,9 @@ import lang from '@/data/translation/footer'
 
 import contactData from '@/data/contactData'
 import SVGLocation from '@/components/svgs/SVGLocation'
+import SVGVK from '@/components/svgs/SVGVK'
+import SVGTelegram from '@/components/svgs/SVGTelegram'
+import SVGWhatsapp from '@/components/svgs/SVGWhatsapp'
 
 const Footer = () => {
   const contactInfo = contactData()
@@ -96,17 +99,17 @@ const Footer = () => {
               <ul className='footer-socials'>
                 <li>
                   <a href='#!'>
-                    <img src='/assets/images/vk.svg' alt='' />
+                    <SVGVK />
                   </a>
                 </li>
                 <li>
                   <a href='#!'>
-                    <img src='/assets/images/telegram.svg' alt='' />
+                    <SVGTelegram />
                   </a>
                 </li>
                 <li>
                   <a href='#!'>
-                    <img src='/assets/images/whatsapp.svg' alt='' />
+                    <SVGWhatsapp />
                   </a>
                 </li>
               </ul>
