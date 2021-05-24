@@ -16,7 +16,7 @@ import { dev, gtmId } from '@/config/index'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'nprogress/nprogress.css'
-function MyApp({ Component, pageProps, appProps, router }) {
+function MyApp({ Component, pageProps, router }) {
   if (!dev) {
     console.log = function () {}
   }
@@ -26,20 +26,18 @@ function MyApp({ Component, pageProps, appProps, router }) {
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
 
-    NProgress.configure({
-      // minimum: 0.3,
-      // easing: 'ease',
-      // speed: 800,
-      // showSpinner: false
-    })
+    // NProgress.configure({
+    //   // minimum: 0.3,
+    //   // easing: 'ease',
+    //   // speed: 800,
+    //   // showSpinner: false
+    // })
 
     const start = () => {
-      console.log('start')
       NProgress.start()
       setLoading(true)
     }
     const end = () => {
-      console.log('findished')
       NProgress.done()
       setLoading(false)
     }
@@ -55,9 +53,10 @@ function MyApp({ Component, pageProps, appProps, router }) {
 
   return (
     <>
+      {console.log(pageProps)}
       <DefaultSeo {...SEO} />
       <PageWrapper>
-        <Header programs={appProps} />
+        <Header programs={pageProps} />
         <AnimatePresence>
           <motion.div
             key={router.route}
@@ -87,18 +86,13 @@ function MyApp({ Component, pageProps, appProps, router }) {
   )
 }
 
-MyApp.getInitialProps = async appContext => {
-  const appProps = await App.getInitialProps(appContext)
-
+MyApp.getInitialProps = async () => {
   const res = await fetch(
     `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses`
   )
   const programs = await res.json()
 
   return {
-    appProps: {
-      programs
-    },
     pageProps: {
       programs
     }

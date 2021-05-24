@@ -29,6 +29,7 @@ import SVGCheckCircle from './svgs/SVGCheckCircle'
 import SVGScreen from './svgs/SVGScreen'
 import SVGPaperCorner from './svgs/SVGPaperCorner'
 import SVGClock from './svgs/SVGClock'
+import { server } from '../config'
 
 const Header = ({ programs }) => {
   const { data } = programs.programs
@@ -993,6 +994,56 @@ const Header = ({ programs }) => {
       {/* //mobile menu */}
     </header>
   )
+}
+
+export const getStaticProps = async context => {
+  const res = await fetch(
+    `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses`
+  )
+  const { data } = await res.json()
+
+  const programs = data.filter(
+    item =>
+      item.url === context.params.url &&
+      item.mbaFormat === 'blended' &&
+      item.mbaTypeOfProgram === 'industry'
+  )
+
+  const program = programs[0]
+
+  return {
+    props: {
+      program
+    },
+    revalidate: 1
+  }
+}
+
+export const getStaticPaths = async () => {
+  const res = await fetch(
+    `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses`
+  )
+  const programs = await res.json()
+
+  const urls = programs.data
+    .map(program => {
+      if (
+        program.mbaFormat === 'blended' &&
+        program.mbaTypeOfProgram === 'industry'
+      ) {
+        return { id: program._id, url: program.url && program.url }
+      }
+    })
+    .filter(program => program !== undefined)
+
+  const paths = urls.map(item => ({
+    params: { url: item.url.toString() }
+  }))
+
+  return {
+    paths,
+    fallback: false
+  }
 }
 
 export default Header

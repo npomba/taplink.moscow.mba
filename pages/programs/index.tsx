@@ -3,10 +3,8 @@
 import Programs from '@/components/pages/Programs'
 
 const programs = ({ programs }) => {
-  let data = null
-
-  data = programs.data.filter(
-    (program) =>
+  const data = programs.data.filter(
+    program =>
       program.mbaFormat === 'online' && program.mbaTypeOfProgram === 'mini'
   )
 

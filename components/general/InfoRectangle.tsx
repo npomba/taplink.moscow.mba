@@ -47,7 +47,7 @@ const InfoRectangle = ({ programPage = false }) => {
       <li>
         <p>Ближайшее зачисление:</p>
         <div className='detail'>
-          <Until preposition={false} executive={true} />
+          <Until preposition={false} executive={at.executive ? true : false} />
         </div>
       </li>
       <li>

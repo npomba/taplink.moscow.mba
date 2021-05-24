@@ -1,10 +1,8 @@
 import Programs from '@/components/pages/Programs'
 
 const programsMiniOnline = ({ programs }) => {
-  let data = null
-
-  data = programs.data.filter(
-    (program) =>
+  const data = programs.data.filter(
+    program =>
       program.mbaFormat === 'online' && program.mbaTypeOfProgram === 'mini'
   )
 
