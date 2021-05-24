@@ -50,7 +50,6 @@ const PageBlendedProgram = ({ program }) => {
         <UpToDateContent />
         <CorporateClients />
         <Accreditation />
-        <Rules prices={{ lowerPrice: '300 000', higherPrice: '1 500 000' }} />
         <Diploma />
         <Students />
         <Reviews />
