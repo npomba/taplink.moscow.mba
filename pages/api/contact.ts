@@ -512,12 +512,12 @@ a[x-apple-data-detectors] {
                     <tbody> 
                      <tr style='border-collapse:collapse;'> 
                       <td align='left' style='padding:0;Margin:0;'>
-					  		<p>Имя: ${''}.</p>
+					  		<p>Имя: ${data.name}.</p>
 					<p>E-mail: ${''}.</p>
 					<p>Телефон: ${data.phone}.</p>
 					<p><b>Комментарий:</b> ${''}.</p>
-					<b><p>"${''}.</p></b>
-					<b><p>"${''}.</p></b>
+					<b><p>"${null}.</p></b>
+					<b><p>"${null}.</p></b>
 					<b><p>Дата и время заявки: ${data.date} ${data.time} ${data.utc}.</p></b>
 					<b><p>Город: ${data.cityRu}.</p></b>
 					<b><p>Страна: ${data.countryRu}</p></b>
@@ -724,7 +724,7 @@ a[x-apple-data-detectors] {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: 'lead@moscow.mba',
+      from: 'info@ipo.msk.ru',
       to: `${
         dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
