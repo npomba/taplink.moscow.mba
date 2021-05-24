@@ -368,7 +368,7 @@ export default async (req, res) => {
 
   try {
     const emailRes = await transporter.sendMail({
-      from: 'info@ipo.msk.ru',
+      from: 'lead@moscow.mba',
       to: `${
         dev
           ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
