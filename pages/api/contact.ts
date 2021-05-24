@@ -512,34 +512,32 @@ a[x-apple-data-detectors] {
                     <tbody> 
                      <tr style='border-collapse:collapse;'> 
                       <td align='left' style='padding:0;Margin:0;'>
-					  		<p>Имя: ${data.name}.</p>
-					<p>E-mail: ${''}.</p>
-					<p>Телефон: ${data.phone}.</p>
-					<p><b>Комментарий:</b> ${''}.</p>
-					<b><p>"${null}.</p></b>
-					<b><p>"${null}.</p></b>
-					<b><p>Дата и время заявки: ${data.date} ${data.time} ${data.utc}.</p></b>
-					<b><p>Город: ${data.cityRu}.</p></b>
+					  		<p>Имя: ${data.name}</p>
+					<p>E-mail: ${''}</p>
+					<p>Телефон: ${data.phone}</p>
+					<p><b>Комментарий:</b> ${''}</p>
+					<b><p>Дата и время заявки: ${data.date} в ${data.time}</p></b>
+					<b><p>Город: ${data.cityRu}</p></b>
 					<b><p>Страна: ${data.countryRu}</p></b>
-					  <b><p>Страница с которой отправлена заявка: ${data.root}.</p></b>
-            <b><p>UTM метка: ${''}.</p></b>
-             <b><p>Устройство: ${''}.<p></b>
-            <b><p>UTM ссылка перехода: ${''}.</p></b>
-            <b><p>Новая UTM ссылка перехода: ${''}.</p></b>
-            <b><p>Промокод: ${''}.</p></b>
-            <b><p>Заявка id: ${''}.</p></b>
-            <b><p>Вопрос: ${''}.</p></b>
-            <b><p>Способ связи: ${''}.</p></b>
-            <b><p>Личная страница ВК: ${''}.</p></b>
-            <b><p>Уч.план: ${''}.</p></b>
-            <b><p>Google Client ID: ${''}.</p></b>
-            <b><p>Yandex Metrics ID: ${''}.</p></b>
-            <b><p>utm_source: ${''}.</p></b>
-            <b><p>utm_medium: ${''}.</p></b>
-            <b><p>utm_campaign: ${''}.</p></b>
-            <b><p>utm_content: ${''}.</p></b>
-            <b><p>utm_term: ${''}.</p></b>
-            <b><p>utm_worker: ${''}.</p></b>
+					  <b><p>Страница с которой отправлена заявка: ${data.root}</p></b>
+            <b><p>UTM метка: ${''}</p></b>
+             <b><p>Устройство: ${''}<p></b>
+            <b><p>UTM ссылка перехода: ${''}</p></b>
+            <b><p>Новая UTM ссылка перехода: ${''}</p></b>
+            <b><p>Промокод: ${''}</p></b>
+            <b><p>Заявка id: ${''}</p></b>
+            <b><p>Вопрос: ${''}</p></b>
+            <b><p>Способ связи: ${''}</p></b>
+            <b><p>Личная страница ВК: ${''}</p></b>
+            <b><p>Уч.план: ${''}</p></b>
+            <b><p>Google Client ID: ${''}</p></b>
+            <b><p>Yandex Metrics ID: ${''}</p></b>
+            <b><p>utm_source: ${''}</p></b>
+            <b><p>utm_medium: ${''}</p></b>
+            <b><p>utm_campaign: ${''}</p></b>
+            <b><p>utm_content: ${''}</p></b>
+            <b><p>utm_term: ${''}</p></b>
+            <b><p>utm_worker: ${''}</p></b>
 					 </tr> 
                     </tbody> 
                    </table> </td>
