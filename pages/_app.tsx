@@ -49,8 +49,10 @@ function MyApp({ Component, pageProps, router }) {
   if (!dev) {
     console.log = function () {}
   }
-
-  const { programs } = pageProps
+  let programs
+  if (pageProps) {
+    programs = pageProps.programs
+  }
 
   return (
     <>
