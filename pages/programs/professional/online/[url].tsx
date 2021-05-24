@@ -1,42 +1,39 @@
-import { server } from '@/config/index'
+import { apiProgramsReqUrl, server } from '@/config/index'
 
 import OnlineProgram from '@/components/pages/OnlineProgram'
 
-const programsProfessionalOnlineProgram = ({ program }) => {
+const programsProfessionalOnlineProgram = ({ program, programs }) => {
   return <OnlineProgram program={program} />
 }
 
-export const getStaticProps = async (context) => {
-  const res = await fetch(
-    `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses`
-  )
+export const getStaticProps = async context => {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
-  const programs = data.filter(
-    (item) =>
+  const programsFiltered = data.filter(
+    item =>
       item.url === context.params.url &&
       item.mbaFormat === 'online' &&
       item.mbaTypeOfProgram === 'professional'
   )
 
-  const program = programs[0]
+  const program = programsFiltered[0]
 
   return {
     props: {
       program,
+      programs: data
     },
-    revalidate: 1,
+    revalidate: 1
   }
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(
-    `${server}/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses`
-  )
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
   const programs = await res.json()
 
   const urls = programs.data
-    .map((program) => {
+    .map(program => {
       if (
         program.mbaFormat === 'online' &&
         program.mbaTypeOfProgram === 'professional'
@@ -44,15 +41,15 @@ export const getStaticPaths = async () => {
         return { id: program._id, url: program.url && program.url }
       }
     })
-    .filter((program) => program !== undefined)
+    .filter(program => program !== undefined)
 
-  const paths = urls.map((item) => ({
-    params: { url: item.url.toString() },
+  const paths = urls.map(item => ({
+    params: { url: item.url.toString() }
   }))
 
   return {
     paths,
-    fallback: false,
+    fallback: false
   }
 }
 

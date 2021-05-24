@@ -1,7 +1,8 @@
 import Programs from '@/components/pages/Programs'
+import { server, apiProgramsReqUrl } from '@/config/index'
 
 const programsProfessionalOnline = ({ programs }) => {
-  const data = programs.data.filter(
+  const data = programs.filter(
     program =>
       program.mbaFormat === 'online' &&
       program.mbaTypeOfProgram === 'professional'
@@ -14,6 +15,17 @@ const programsProfessionalOnline = ({ programs }) => {
       mbaFormat={'online'}
     />
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default programsProfessionalOnline

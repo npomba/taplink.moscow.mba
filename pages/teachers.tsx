@@ -1,8 +1,9 @@
 import Head from 'next/head'
 
 import Teachers from '../components/sections/Teachers'
+import { apiProgramsReqUrl, server } from '@/config/index'
 
-const teachers = () => {
+const teachers = ({ programs }) => {
   return (
     <>
       <Head>
@@ -13,6 +14,17 @@ const teachers = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default teachers

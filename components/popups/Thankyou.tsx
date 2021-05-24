@@ -4,8 +4,6 @@ import useAt from '@/components/hooks/useAt'
 import SVGClose from '../svgs/SVGClose'
 
 const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
-  const at = useAt()
-
   useEffect(() => {
     const tagManagerArgs = {
       dataLayer: {
@@ -40,6 +38,8 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
     }
     TagManager.dataLayer(tagManagerArgs)
   }, [])
+
+  const at = useAt()
 
   return (
     <div id='thanksModal' className='popup-modal thankyou-modal mfp-with-anim'>

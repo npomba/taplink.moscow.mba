@@ -16,13 +16,13 @@ import SVGCheckCircle from '../svgs/SVGCheckCircle'
 import SVGScreen from '../svgs/SVGScreen'
 
 const Programs = ({ programs }) => {
-  const data = programs
-
   useEffect(() => {
     loadJs(['/assets/js/programs.js'], {
       async: false
     })
   }, [])
+
+  const data = programs
   return (
     <section className='program-options-section'>
       <div className='program-options-flex'>

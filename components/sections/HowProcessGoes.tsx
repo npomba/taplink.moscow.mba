@@ -4,13 +4,13 @@ import { useEffect } from 'react'
 import loadJs from 'loadjs'
 
 const HowProcessGoes = () => {
-  const at = useAt()
-
   useEffect(() => {
     loadJs(['/assets/js/howProcessGoes.js'], {
-      async: false,
+      async: false
     })
   }, [])
+
+  const at = useAt()
 
   return (
     <section className='process-section'>

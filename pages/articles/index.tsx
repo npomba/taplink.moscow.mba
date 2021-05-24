@@ -1,6 +1,7 @@
+import { server, apiProgramsReqUrl } from '@/config/index'
 import Head from 'next/head'
 
-const articles = () => {
+const articles = ({ programs }) => {
   return (
     <>
       <Head>
@@ -207,6 +208,17 @@ const articles = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default articles

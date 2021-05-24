@@ -1,6 +1,7 @@
+import { server, apiProgramsReqUrl } from '@/config/index'
 import Head from 'next/head'
 
-const webinar = () => {
+const webinar = ({ programs }) => {
   return (
     <>
       <Head>
@@ -42,8 +43,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -72,8 +72,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -102,8 +101,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -132,8 +130,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -162,8 +159,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -192,8 +188,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -222,8 +217,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -252,8 +246,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -282,8 +275,7 @@ const webinar = () => {
             <a
               href='#vebinarModal'
               className='vebinars-block disabled popup-open'
-              data-effect='mfp-zoom-in'
-            >
+              data-effect='mfp-zoom-in'>
               <div className='bell'>
                 <img src='/assets/images/icon_bell.svg' alt='' />
               </div>
@@ -320,6 +312,17 @@ const webinar = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default webinar

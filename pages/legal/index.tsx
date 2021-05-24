@@ -1,6 +1,7 @@
+import { server, apiProgramsReqUrl } from '@/config/index'
 import stls from '@/styles/modules/LegalPage.module.sass'
 
-const legal = () => {
+const legal = ({ programs }) => {
   return (
     <div className='container'>
       <h1 className={stls.h1}>НОРМАТИВНЫЕ ДОКУМЕНТЫ</h1>
@@ -171,6 +172,17 @@ const legal = () => {
       </ul>
     </div>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default legal

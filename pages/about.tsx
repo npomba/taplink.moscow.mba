@@ -13,8 +13,9 @@ import ContactUs from '@/components/sections/ContactUs'
 
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/about'
+import { apiProgramsReqUrl, server } from '@/config/index'
 
-const about = () => {
+const about = ({ programs }) => {
   return (
     <>
       <Head>
@@ -36,6 +37,17 @@ const about = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default about

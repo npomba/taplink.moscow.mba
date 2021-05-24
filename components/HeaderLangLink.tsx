@@ -6,10 +6,9 @@ import lang from '@/data/translation/header'
 import SVGTriangleBottom from '@/components/svgs/SVGTriangleBottom'
 
 const HeaderLangLink = () => {
-  const router = useRouter()
   const [showMe, setShowMe] = useState(false)
-
   const showLangMenu = () => setShowMe(!showMe)
+  const router = useRouter()
 
   return (
     <div className={`${showMe && 'lang-red-highlight'} lang`}>

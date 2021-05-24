@@ -33,8 +33,8 @@ const Form = ({
   } = useForm<FormValues>()
 
   const [open, setOpen] = useState(false)
-  const closeModal = () => setOpen(false)
   const [openLoader, setOpenLoader] = useState(false)
+  const closeModal = () => setOpen(false)
   const closeLoadingModal = () => setOpenLoader(false)
 
   const onSubmitFormThis = async values => {

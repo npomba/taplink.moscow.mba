@@ -6,4 +6,6 @@ const thisServer = dev ? 'http://localhost:3000' : 'https://moscow.mba'
 
 const gtmId = 'GTM-M4JLQXM'
 
-export { dev, server, thisServer, gtmId }
+const apiProgramsReqUrl = '/api/v1/bootcamps/605c5f71bc557b46b4f42a56/courses'
+
+export { dev, server, thisServer, gtmId, apiProgramsReqUrl }

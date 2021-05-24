@@ -9,12 +9,11 @@ import CorporateClients from '@/components/sections/CorporateClients'
 import Programs from '@/components/sections/Programs'
 import Executive from '@/components/sections/Executive'
 import ContactUs from '@/components/sections/ContactUs'
+import { apiProgramsReqUrl, server } from '@/config/index'
 
 // import Lang from '../components/hooks/Lang'
 
-export default function Home({ programs }) {
-  const { data } = programs
-
+const Home = ({ programs }) => {
   return (
     <>
       <Head>
@@ -30,7 +29,7 @@ export default function Home({ programs }) {
         <StudentsInternational />
         <CorporateClients />
 
-        <Programs programs={data} />
+        <Programs programs={programs} />
         <Executive />
 
         <ContactUs />
@@ -38,3 +37,16 @@ export default function Home({ programs }) {
     </>
   )
 }
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
+}
+
+export default Home

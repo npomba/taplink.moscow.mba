@@ -1,8 +1,9 @@
 import stls from '@/styles/modules/ContactPage.module.sass'
 import Head from 'next/head'
 import ContactCards from '@/components/general/ContactCards'
+import { apiProgramsReqUrl, server } from '@/config/index'
 
-const contact = () => {
+const contact = ({ programs }) => {
   return (
     <>
       <Head>
@@ -15,6 +16,17 @@ const contact = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default contact

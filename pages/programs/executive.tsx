@@ -16,8 +16,9 @@ import Students from '@/components/sections/Students'
 import Reviews from '@/components/sections/Reviews'
 import CostOfStudy from '@/components/sections/CostOfStudy'
 import Qna from '@/components/sections/Qna'
+import { server, apiProgramsReqUrl } from '@/config/index'
 
-const executive = () => {
+const executive = ({ programs }) => {
   const data = {
     picture: 'bg-executive.jpg',
     title: 'Executive MBA',
@@ -77,6 +78,17 @@ const executive = () => {
       </div>
     </>
   )
+}
+
+export async function getStaticProps() {
+  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const { data } = await res.json()
+
+  return {
+    props: {
+      programs: data
+    }
+  }
 }
 
 export default executive
