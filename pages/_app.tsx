@@ -49,7 +49,7 @@ function MyApp({ Component, pageProps, router }) {
   if (!dev) {
     console.log = function () {}
   }
-  let programs
+  let programs = []
   if (pageProps) {
     programs = pageProps.programs
   }
