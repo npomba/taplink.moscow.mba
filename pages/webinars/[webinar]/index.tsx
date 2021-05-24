@@ -1,7 +1,7 @@
 import { server, apiProgramsReqUrl } from '@/config/index'
 import Head from 'next/head'
 
-const webinar = ({ programs }) => {
+const webinar = () => {
   return (
     <>
       <Head>
@@ -314,15 +314,15 @@ const webinar = ({ programs }) => {
   )
 }
 
-export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
-  const { data } = await res.json()
+// export async function getStaticProps() {
+//   const res = await fetch(`${server}${apiProgramsReqUrl}`)
+//   const { data } = await res.json()
 
-  return {
-    props: {
-      programs: data
-    }
-  }
-}
+//   return {
+//     props: {
+//       programs: data
+//     }
+//   }
+// }
 
 export default webinar
