@@ -20,19 +20,7 @@ import Pros from '@/components/sections/Pros'
 import BlendedMetups from '@/components/sections/BlendedMetups'
 import CostOfStudy from '@/components/sections/CostOfStudy'
 
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
-
 const PageBlendedProgram = ({ program }) => {
-  // useEffect(() => {
-
-  //   loadJs([
-  //     '/assets/js/jquery.magnific-popup.min.js',
-  //     '/assets/js/myjs.js'
-  //   ], {
-  //     async: false
-  //   })
-  // }, [])
   const data = program
 
   return (

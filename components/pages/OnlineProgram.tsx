@@ -18,19 +18,7 @@ import CostOfStudy from '../sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
 
-// import { useEffect } from 'react'
-// import loadJs from 'loadjs'
-
 const PageOnlineProgram = ({ program }) => {
-  // useEffect(() => {
-
-  //   loadJs([
-  //     '/assets/js/jquery.magnific-popup.min.js',
-  //     '/assets/js/myjs.js'
-  //   ], {
-  //     async: false
-  //   })
-  // }, [])
   const data = program
 
   return (

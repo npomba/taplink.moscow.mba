@@ -148,7 +148,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </div>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGClock fill={'C7C7C7'} />
+              <SVGClock fill={'#C7C7C7'} />
             </div>
             <span>
               <TrainingPeriod type={type} />

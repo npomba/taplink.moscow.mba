@@ -494,7 +494,7 @@ const Header = ({ programs }) => {
                       <div className='name'>Mini MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <SVGClock fill={'C7C7C7'} />
+                          <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='mini' />
@@ -706,7 +706,7 @@ const Header = ({ programs }) => {
                       <div className='name'>Professional MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <SVGClock fill={'C7C7C7'} />
+                          <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='professional' />
@@ -918,7 +918,7 @@ const Header = ({ programs }) => {
                       <div className='name'>Industry MBA</div>
                       <div className='info-flex'>
                         <div className='pic'>
-                          <SVGClock fill={'C7C7C7'} />
+                          <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <TrainingPeriod type='industry' />
