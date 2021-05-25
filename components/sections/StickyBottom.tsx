@@ -7,6 +7,7 @@ import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
 import useAt from '@/components/hooks/useAt'
+import PopupLearnMore from '../popups/PopupLearnMore'
 
 const StickyBottom = () => {
   useEffect(() => {
@@ -76,12 +77,7 @@ const StickyBottom = () => {
               }
               modal
               nested>
-              {close => (
-                <PopUpForm
-                  title={'Получите консультацию'}
-                  closePopUpForm={close}
-                />
-              )}
+              {close => <PopupLearnMore close={close} />}
             </Popup>
           </div>
 

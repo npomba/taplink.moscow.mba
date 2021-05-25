@@ -18,6 +18,10 @@ $mobileViewLineBrakeView: '625px'
   z-index: 5
   & > *
     display: flex
+  @media(max-width: $mobileView)
+    height: 60px
+  @media(max-width: $mobileViewLineBrakeView)
+    height: 50px
 
 .content
   width: 100%
@@ -34,6 +38,10 @@ $mobileViewLineBrakeView: '625px'
   @media(max-width: $lineBrakeView)
     display: block
     line-height: 120%
+  @media(max-width: $mobileView)
+    font-size: 14px
+  @media(max-width: $mobileViewLineBrakeView)
+    font-size: 12px
 
 .btns
   display: flex
@@ -47,6 +55,7 @@ $mobileViewLineBrakeView: '625px'
       display: none
 
 .btn
+  display: inline-block
   padding: 19px 33px
   text-transform: uppercase
   background-color: #fff
@@ -58,6 +67,14 @@ $mobileViewLineBrakeView: '625px'
   text-align: center
   letter-spacing: 0.1em
   text-transform: uppercase
+  @media(max-width: $mobileView)
+    padding: 11px 17px
+    font-size: 12px
+  @media(max-width: $mobileViewLineBrakeView)
+    padding: 10px 16px
+    font-size: 11px
+  @media(max-width: 763px)
+    margin-right: 30px
 
 .crossOut
   position: absolute
@@ -65,6 +82,8 @@ $mobileViewLineBrakeView: '625px'
   @media(max-width: 1216px)
     display: none
   @media(max-width: $mobileView)
+    display: block
+  @media(max-width: 763px)
     display: none
 
 .crossIn
@@ -72,6 +91,8 @@ $mobileViewLineBrakeView: '625px'
     display: none
   @media(max-width: $mobileView)
     display: none
+  @media(max-width: 763px)
+    display: block
 
 .pointer
   cursor: pointer
