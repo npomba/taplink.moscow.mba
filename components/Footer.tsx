@@ -104,7 +104,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href='#!'>
-                    <SVGTelegram aria-label='MBA Telegra,' />
+                    <SVGTelegram aria-label='MBA Telegram' />
                   </a>
                 </li>
                 <li>
