@@ -1,4 +1,4 @@
-const SVGClose = () => {
+const SVGClose = ({ stroke = 'black' }) => {
   return (
     <svg
       width='14'
@@ -8,13 +8,13 @@ const SVGClose = () => {
       xmlns='http://www.w3.org/2000/svg'>
       <path
         d='M1 1L13 13'
-        stroke='black'
+        stroke={stroke}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
       <path
         d='M13 1L1 13'
-        stroke='black'
+        stroke={stroke}
         strokeLinecap='round'
         strokeLinejoin='round'
       />
