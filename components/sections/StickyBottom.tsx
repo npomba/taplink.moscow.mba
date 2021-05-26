@@ -10,9 +10,6 @@ import PopupLearnMore from '../popups/PopupLearnMore'
 import SVGClose from '@/components/svgs/SVGClose'
 
 const StickyBottom = () => {
-  const [stickyModule, setStickyModule] = useState(false)
-  const closeStickyModule = () => setStickyModule(o => !o)
-
   useEffect(() => {
     const stickyBottomPart = document.querySelector('.sticky-bottom-part')
 
@@ -36,6 +33,9 @@ const StickyBottom = () => {
       }
     })
   }, [])
+
+  const [stickyModule, setStickyModule] = useState(false)
+  const closeStickyModule = () => setStickyModule(o => !o)
 
   return (
     <div

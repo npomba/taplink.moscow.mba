@@ -50,7 +50,8 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
                 : 'Очно'}
             </li>
             <li>
-              Ближайший набор <Until preposition={false} executive={true} />
+              Ближайший набор{' '}
+              <Until preposition={false} executive={at.executive && true} />
             </li>
             <li>Живое общение с экспертами</li>
             <li>
