@@ -7,8 +7,10 @@ import JumbotronLabel from '@/components/general/JumbotronLabel'
 import PopUpForm from '@/components/popups/Form'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import Discount from '../prices/Discount'
+import useAt from '@/components/hooks/useAt'
 
 const JumbotronProgram = ({ data }) => {
+  const at = useAt()
   return (
     <section className='jumbotron-section'>
       <div className='image'>
@@ -22,14 +24,16 @@ const JumbotronProgram = ({ data }) => {
         <div className='jumbotron-content'>
           <Breadcrumbs pageTitle={data.title} />
           <div className='jumbotron-top'>
-            <div className='jumbotron-discount'>
-              <div className='size'>
-                <Discount />
+            {at.online && (
+              <div className='jumbotron-discount'>
+                <div className='size'>
+                  <Discount />
+                </div>
+                <span>
+                  <Until />
+                </span>
               </div>
-              <span>
-                <Until />
-              </span>
-            </div>
+            )}
             <div className='jumbotron-label'>
               <JumbotronLabel />
             </div>
