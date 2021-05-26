@@ -80,6 +80,7 @@ const ContactUs = ({
           <div className='input-block width-33'>
             <input
               type='text'
+              aria-label={setString(lang.inputName)}
               {...register('name', {
                 maxLength: {
                   value: 32,
@@ -94,6 +95,7 @@ const ContactUs = ({
           <div className='input-block width-33'>
             <input
               type='tel'
+              aria-label={setString(lang.inputPhone)}
               {...register('phone', {
                 required: `*${setString(lang.formErrEmptyPhone)}`,
                 minLength: {
