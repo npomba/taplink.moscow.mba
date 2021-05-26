@@ -12,8 +12,8 @@ import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Popup from 'reactjs-popup'
-import Loader from '../popups/Loader'
-import Until from '../dates/Until'
+import Loader from '@/components/popups/Loader'
+import Until from '@/components/dates/Until'
 
 type FormValues = {
   name: string
@@ -62,7 +62,11 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
         />
       </Popup>
       <div className='image'>
-        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
+        <Image
+          src='/assets/images/jumbotron_1.jpg'
+          alt={'Аудитория MBA'}
+          layout='fill'
+        />
       </div>
       <div className='container'>
         <div className='jumbotron-content jumbotron-content-cta'>
@@ -171,6 +175,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                           <img
                             src='/assets/images/arrow_diagonal.svg'
                             width='17px'
+                            alt={'стрелка'}
                           />
                         </div>
                       </button>

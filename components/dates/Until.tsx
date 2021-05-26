@@ -22,7 +22,7 @@ const Until = ({ preposition = true, executive = false }) => {
   ]
   if (executive)
     currentMonth =
-      currentMonth + 7 > 12 ? currentMonth + 7 - 12 : currentMonth + 7
+      currentMonth + 7 > 11 ? currentMonth + 7 - 11 : currentMonth + 7
   return (
     <>
       {preposition && setString(langMenu.discountUntil) + ' '}

@@ -1,5 +1,5 @@
 import stls from '@/styles/modules/StickyBottom.module.sass'
-import { useEffect } from 'react'
+import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Until from '../dates/Until'
 import SVGCross from '../svgs/SVGCross'
@@ -7,11 +7,15 @@ import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
 import useAt from '@/components/hooks/useAt'
+import PopupLearnMore from '../popups/PopupLearnMore'
+import SVGClose from '@/components/svgs/SVGClose'
 
 const StickyBottom = () => {
+  const [stickyModule, setStickyModule] = useState(false)
+  const closeStickyModule = () => setStickyModule(o => !o)
+
   useEffect(() => {
     const stickyBottomPart = document.querySelector('.sticky-bottom-part')
-    const closeModuleBtn = document.querySelector('.close-bottom-module-btn')
 
     document.addEventListener('scroll', () => {
       // check if on programs page
@@ -32,14 +36,11 @@ const StickyBottom = () => {
           : stickyBottomPart.classList.remove('show')
       }
     })
-
-    closeModuleBtn.addEventListener('click', () =>
-      stickyBottomPart.classList.add('hide')
-    )
   }, [])
 
   return (
-    <div className={`${stls.sticky} sticky-bottom-part`}>
+    <div
+      className={`${stls.sticky} sticky-bottom-part ${stickyModule && 'hide'}`}>
       {/* <div className='container'> */}
       <div className={stls.content}>
         <p className={stls.p}>
@@ -76,23 +77,25 @@ const StickyBottom = () => {
               }
               modal
               nested>
-              {close => (
-                <PopUpForm
-                  title={'Получите консультацию'}
-                  closePopUpForm={close}
-                />
-              )}
+              {close => <PopupLearnMore close={close} />}
             </Popup>
           </div>
 
           <a
-            className={`${stls.pointer} close-bottom-module-btn ${stls.crossIn}`}>
+            className={`${stls.pointer} close-bottom-module-btn ${stls.crossIn}`}
+            onClick={closeStickyModule}>
             <SVGCross />
           </a>
         </div>
         <a
-          className={`${stls.pointer} close-bottom-module-btn ${stls.crossOut}`}>
+          className={`${stls.pointer} close-bottom-module-btn ${stls.crossOut}`}
+          onClick={closeStickyModule}>
           <SVGCross />
+        </a>
+        <a
+          className={`${stls.pointer} ${stls.crossTop}`}
+          onClick={closeStickyModule}>
+          <SVGClose />
         </a>
       </div>
       {/* </div> */}
