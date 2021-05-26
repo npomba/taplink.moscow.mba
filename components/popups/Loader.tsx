@@ -1,5 +1,5 @@
 import SVGLoader from '@/components/svgs/SVGLoader'
-import SVGClose from '../svgs/SVGClose'
+import SVGClose from '@/components/svgs/SVGClose'
 
 const Loader = ({ closePopUp = null }) => {
   return (

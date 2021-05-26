@@ -6,14 +6,10 @@ import SVGCross from '../svgs/SVGCross'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
-import useAt from '@/components/hooks/useAt'
 import PopupLearnMore from '../popups/PopupLearnMore'
 import SVGClose from '@/components/svgs/SVGClose'
 
 const StickyBottom = () => {
-  const [stickyModule, setStickyModule] = useState(false)
-  const closeStickyModule = () => setStickyModule(o => !o)
-
   useEffect(() => {
     const stickyBottomPart = document.querySelector('.sticky-bottom-part')
 
@@ -37,6 +33,9 @@ const StickyBottom = () => {
       }
     })
   }, [])
+
+  const [stickyModule, setStickyModule] = useState(false)
+  const closeStickyModule = () => setStickyModule(o => !o)
 
   return (
     <div
