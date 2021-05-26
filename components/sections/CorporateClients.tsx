@@ -45,7 +45,7 @@ const CorporateClients = () => {
                 src={imageData.tatenergo.src}
                 alt={setString(imageData.tatenergo.alt)}
                 width={240}
-                height={107}
+                height={92}
                 priority={true}
               />
             </div>

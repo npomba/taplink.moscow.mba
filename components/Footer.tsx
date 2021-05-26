@@ -98,18 +98,18 @@ const Footer = () => {
               </div>
               <ul className='footer-socials'>
                 <li>
-                  <a href='#!'>
+                  <a href='#!' aria-label='MBA VK'>
                     <SVGVK />
                   </a>
                 </li>
                 <li>
                   <a href='#!'>
-                    <SVGTelegram />
+                    <SVGTelegram aria-label='MBA Telegram' />
                   </a>
                 </li>
                 <li>
                   <a href='#!'>
-                    <SVGWhatsapp />
+                    <SVGWhatsapp aria-label='MBA Whatsapp' />
                   </a>
                 </li>
               </ul>

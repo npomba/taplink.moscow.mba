@@ -50,7 +50,7 @@ const Header = ({ programs }) => {
       <div className='container'>
         <div className='header-top'>
           <Link href='/'>
-            <a className='main-logo'>
+            <a className='main-logo' aria-label='Moscow Business Academy'>
               <span className='pic'>
                 <SVGLogo />
               </span>

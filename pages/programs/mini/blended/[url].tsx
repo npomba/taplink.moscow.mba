@@ -23,8 +23,7 @@ export const getStaticProps = async context => {
     props: {
       program,
       programs: data
-    },
-    revalidate: 1
+    }
   }
 }
 
