@@ -15,7 +15,7 @@ const BlendedMetups = () => {
           : at.industry
           ? 'MBA industry'
           : null}{' '}
-        blended это очные встречи с экспертами в Москве
+        blended - это очные встречи с экспертами в Москве
       </h2>
       <div className='blended-info-flex'>
         <div className='blended-info-content'>
