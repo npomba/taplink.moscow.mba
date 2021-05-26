@@ -21,12 +21,12 @@ function MyApp({ Component, pageProps, router }) {
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
 
-    // NProgress.configure({
-    //   // minimum: 0.3,
-    //   // easing: 'ease',
-    //   // speed: 800,
-    //   // showSpinner: false
-    // })
+    NProgress.configure({
+      // minimum: 0.3,
+      // easing: 'ease',
+      // speed: 800,
+      showSpinner: false
+    })
 
     const start = () => {
       NProgress.start()
