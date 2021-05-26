@@ -103,13 +103,13 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#!'>
-                    <SVGTelegram aria-label='MBA Telegram' />
+                  <a href='#!' aria-label='MBA Telegram'>
+                    <SVGTelegram />
                   </a>
                 </li>
                 <li>
-                  <a href='#!'>
-                    <SVGWhatsapp aria-label='MBA Whatsapp' />
+                  <a href='#!' aria-label='MBA Whatsapp'>
+                    <SVGWhatsapp />
                   </a>
                 </li>
               </ul>
