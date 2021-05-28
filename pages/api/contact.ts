@@ -11,7 +11,7 @@ import { WebServiceClient } from '@maxmind/geoip2-node'
 export default async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  const { name, phone, programTitle } = req.body
+  const { name, phone, programTitle, leadPage } = req.body
 
   const promocode = null
 
@@ -28,9 +28,6 @@ export default async (req, res) => {
 
   // get root path
   const root = protocol + '://' + req.headers.host
-
-  // get full client path
-  const path = ''
 
   // get ip
   const ip =
@@ -91,7 +88,7 @@ export default async (req, res) => {
     promocode,
     contactWay: '',
     root,
-    path,
+    leadPage,
     ip,
     cityEn: locationData && locationData.city.names.en,
     cityRu: locationData && locationData.city.names.ru,
@@ -168,7 +165,7 @@ export default async (req, res) => {
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.path
+        tdVal: data.leadPage
       },
       {
         tdKey: 'IP',

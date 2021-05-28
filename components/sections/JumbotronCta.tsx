@@ -4,7 +4,7 @@ import Link from 'next/link'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
-
+import useAt from '@/components/hooks/useAt'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 
@@ -33,9 +33,12 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
   const closeModal = () => setOpen(false)
   const closeLoadingModal = () => setOpenLoader(false)
 
+  const at = useAt()
+
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
+    values.leadPage = at.getFullUrl
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()

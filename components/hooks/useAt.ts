@@ -7,6 +7,8 @@ const useAt = () => {
     .split('/')
     .filter(item => item !== '' && item !== '[url]')
 
+  const getFullUrl = pathname
+
   const getProgramTitle = asPath.split('/')[4]
 
   const index = () => {
@@ -103,7 +105,8 @@ const useAt = () => {
     articles: articles(),
     contact: contact(),
     programChunk: programChunk(),
-    getSplitedPath
+    getSplitedPath,
+    getFullUrl
   }
 }
 
