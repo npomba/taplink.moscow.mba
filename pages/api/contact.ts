@@ -11,7 +11,12 @@ import { WebServiceClient } from '@maxmind/geoip2-node'
 export default async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  const { name, phone, programTitle, leadPage } = req.body
+  let { name, phone, email, programTitle, leadPage } = req.body
+
+  if (name.includes('@')) {
+    email = name
+    name = ''
+  }
 
   const promocode = null
 
@@ -84,11 +89,11 @@ export default async (req, res) => {
     utc: now.format('Z'),
     name: name || '',
     phone: phone || '',
-    email: '',
+    email: email || '',
     promocode,
     contactWay: '',
-    root,
-    leadPage: root + leadPage,
+    root: root || '',
+    leadPage: root + leadPage || '',
     ip,
     cityEn: locationData && locationData.city.names.en,
     cityRu: locationData && locationData.city.names.ru,
