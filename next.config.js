@@ -25,6 +25,7 @@ module.exports = {
               connectSrc: [
                 "'self'",
                 'https://ipo-cp.ru',
+                'https://moscow.mba',
                 'vitals.vercel-insights.com'
               ],
               defaultSrc: ["'self'", 'https://ipo-cp.ru'],
