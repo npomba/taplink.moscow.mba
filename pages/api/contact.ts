@@ -88,7 +88,7 @@ export default async (req, res) => {
     promocode,
     contactWay: '',
     root,
-    leadPage,
+    leadPage: root + leadPage,
     ip,
     cityEn: locationData && locationData.city.names.en,
     cityRu: locationData && locationData.city.names.ru,
