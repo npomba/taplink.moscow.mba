@@ -37,7 +37,7 @@ const Header = ({ programs }) => {
     })
   }, [])
 
-  const data = programs
+  let data = programs || []
 
   const contactInfo = contactData()
 
