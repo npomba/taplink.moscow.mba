@@ -10,6 +10,7 @@ import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Loader from '../popups/Loader'
+import { useRouter } from 'next/router'
 
 type FormValues = {
   name: string
@@ -35,12 +36,12 @@ const ContactUs = ({
   const closeModal = () => setOpen(false)
   const closeLoadingModal = () => setOpenLoader(false)
 
-  const at = useAt()
+  const { asPath } = useRouter()
 
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
-    values.leadPage = at.getFullUrl
+    values.leadPage = asPath
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()

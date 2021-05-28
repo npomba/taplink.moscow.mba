@@ -14,6 +14,7 @@ import ThankyouPopup from '@/components/popups/Thankyou'
 import Popup from 'reactjs-popup'
 import Loader from '@/components/popups/Loader'
 import Until from '@/components/dates/Until'
+import { useRouter } from 'next/router'
 
 type FormValues = {
   name: string
@@ -33,12 +34,12 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
   const closeModal = () => setOpen(false)
   const closeLoadingModal = () => setOpenLoader(false)
 
-  const at = useAt()
+  const { asPath } = useRouter()
 
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
-    values.leadPage = at.getFullUrl
+    values.leadPage = asPath
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()
