@@ -10,30 +10,31 @@ module.exports = {
   async headers() {
     return [
       {
-        source: '/(.*)',
-        headers: createSecureHeaders({
-          forceHTTPSRedirect: [
-            true,
-            { maxAge: 60 * 60 * 24 * 30 * 12 * 2, includeSubDomains: true }
-          ],
-          frameGuard: 'deny',
-          noopen: 'noopen',
-          nosniff: 'nosniff',
-          xssProtection: 'sanitize',
-          // contentSecurityPolicy: {
-          //   directives: {
-          //     connectSrc: [
-          //       "'self'",
-          //       'https://ipo-cp.ru',
-          //       'vitals.vercel-insights.com',
-          //     ],
-          //     defaultSrc: ["'self'", 'https://ipo-cp.ru'],
-          //     scriptSrc: ["'self'"],
-          //     styleSrc: 'unsafe-inline',
-          //   },
-          // },
-          referrerPolicy: 'no-referrer'
-        })
+        source: '/:path*',
+        headers: createSecureHeaders()
+        // headers: createSecureHeaders({
+        //   forceHTTPSRedirect: [
+        //     true,
+        //     { maxAge: 60 * 60 * 24 * 30 * 12 * 2, includeSubDomains: true }
+        //   ],
+        //   frameGuard: 'deny',
+        //   noopen: 'noopen',
+        //   nosniff: 'nosniff',
+        //   xssProtection: 'sanitize',
+        //   contentSecurityPolicy: {
+        //     directives: {
+        //       connectSrc: [
+        //         "'self'",
+        //         'https://ipo-cp.ru',
+        //         'vitals.vercel-insights.com'
+        //       ],
+        //       defaultSrc: ["'self'", 'https://ipo-cp.ru', 'data:'],
+        //       // scriptSrc: "'unsafe-inline'",
+        //       styleSrc: "'unsafe-inline'"
+        //     }
+        //   },
+        //   referrerPolicy: 'no-referrer'
+        // })
       }
     ]
   },
