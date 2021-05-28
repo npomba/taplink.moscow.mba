@@ -7,7 +7,7 @@ const useAt = () => {
     .split('/')
     .filter(item => item !== '' && item !== '[url]')
 
-  const getFullUrl = pathname
+  const getFullUrl = asPath
 
   const getProgramTitle = asPath.split('/')[4]
 
