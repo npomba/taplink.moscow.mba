@@ -2,8 +2,8 @@ import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
-
 import { useState } from 'react'
+import useAt from '@/components/hooks/useAt'
 
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 
@@ -36,10 +36,12 @@ const Form = ({
   const [openLoader, setOpenLoader] = useState(false)
   const closeModal = () => setOpen(false)
   const closeLoadingModal = () => setOpenLoader(false)
+  const at = useAt()
 
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
+    values.leadPage = at.getFullUrl
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()
