@@ -3,7 +3,7 @@ export default {
     type: 'website',
     locale: 'ru',
     url: 'https://moscow.mba/',
-    site_name: 'Moscow Business Academy',
+    site_name: 'Moscow Business Academy'
   },
   // twitter: {
   //   handle: '@handle',
@@ -13,7 +13,5 @@ export default {
   defaultTitle: 'Moscow Business Academy',
   description:
     'Moscow Business Academy является одной из ведущих бизнес-школ на территории СНГ и одной из немногих бизнес-школ, которая...',
-  // noindex: false,
-  // nofollow: false,
-  canonical: 'https://moscow.mba/',
+  canonical: 'https://moscow.mba/'
 }
