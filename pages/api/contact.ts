@@ -11,7 +11,7 @@ import { WebServiceClient } from '@maxmind/geoip2-node'
 export default async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  const { name, phone } = req.body
+  const { name, phone, programTitle } = req.body
 
   const promocode = null
 
@@ -105,7 +105,8 @@ export default async (req, res) => {
     latitude: locationData && locationData.coordinates.latitude,
     longitude: locationData && locationData.coordinates.longitude,
     timeZone: locationData && locationData.timeZone,
-    postalCode: locationData && locationData.postalCode
+    postalCode: locationData && locationData.postalCode,
+    programTitle: programTitle || ''
   }
 
   const subject = 'Новая заявка с moscow.mba'
@@ -227,7 +228,7 @@ export default async (req, res) => {
       },
       {
         tdKey: 'Направление',
-        tdVal: ''
+        tdVal: data.programTitle
       },
       {
         tdKey: 'Университет',
@@ -386,7 +387,6 @@ export default async (req, res) => {
     res.status(200).json({ status: 200, msg: 'Email is sent' })
   } catch (err) {
     res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })
-
     console.error(err)
   }
 }

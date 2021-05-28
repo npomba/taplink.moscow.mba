@@ -39,6 +39,7 @@ const Form = ({
 
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
+    values.programTitle = programTitle
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()
