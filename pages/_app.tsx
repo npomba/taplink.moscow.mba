@@ -10,7 +10,6 @@ import '@/styles/hugeStyles.sass'
 import '@/styles/hugeStyles.scss'
 import { apiProgramsReqUrl, server } from '@/config/index'
 import { motion, AnimatePresence } from 'framer-motion'
-import { withSecureHeaders } from 'next-secure-headers'
 import { dev, gtmId } from '@/config/index'
 
 import NProgress from 'nprogress'
@@ -88,4 +87,4 @@ function MyApp({ Component, pageProps, router }) {
   )
 }
 
-export default withSecureHeaders()(MyApp)
+export default MyApp
