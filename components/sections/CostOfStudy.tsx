@@ -88,7 +88,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               />{' '}
               дисциплин специализации
             </li>
-            <li>{!at.online && '3 выезднных модуля в Москве'}</li>
+            {!at.online && <li>3 выездных модуля в Москве</li>}
           </ul>
           <div className='note'>*Возможна рассрочка</div>
         </div>
