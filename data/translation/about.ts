@@ -130,12 +130,12 @@ export default {
   },
 
   teachersTeacherSevenTitle: {
-    ru: 'Александр Иванов',
-    en: 'Aleksandr Ivanov'
+    ru: 'Ицхак Пинтосевич',
+    en: 'Itskhak Pintosevich'
   },
 
   teachersTeacherSevenDics: {
-    ru: 'ОПТИМУМ, генеральный директор. HEINZ, региональный директор по производству (7 заводов)',
+    ru: 'Эксперт по личностному росту и развитию бизнеса, почетный профессор университета «Синергия»',
     en: ''
   },
 
