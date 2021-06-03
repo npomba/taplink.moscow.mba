@@ -1,4 +1,5 @@
 const { createSecureHeaders } = require('next-secure-headers')
+const dev = process.env.NODE_ENV !== 'production'
 
 module.exports = {
   poweredByHeader: false,
@@ -11,7 +12,57 @@ module.exports = {
     return [
       {
         source: '/:path*',
-        headers: createSecureHeaders()
+        // headers: createSecureHeaders()
+        headers: createSecureHeaders({
+          contentSecurityPolicy: {
+            directives: {
+              defaultSrc: [
+                "'self'",
+                'data:',
+                'https://ssl.gstatic.com',
+                'https://www.gstatic.com',
+                'https://fonts.gstatic.com',
+                'data:',
+                'https://www.google-analytics.com',
+                'https://www.google-analytics.com',
+                'https://googleads.g.doubleclick.net',
+                'https://www.google.com',
+                'https://bid.g.doubleclick.net'
+              ],
+              scriptSrc: [
+                "'self'",
+                `${dev && "'unsafe-eval'"}`,
+                'https://www.googletagmanager.com',
+                "'sha256-dR9r2B/SmDDIQ6AkSRP1HcZOn6lncQaF7JWgTTTLGTY='",
+                "'sha256-kxlLwzh8f+NZ3uNSXSPKI+KoxSBTS4AxdH+dXubYARw='",
+                'http://www.googletagmanager.com',
+                'https://mc.yandex.ru',
+                'data:',
+                'https://tagmanager.google.com',
+                'https://www.google-analytics.com',
+                'https://ssl.google-analytics.com',
+                'https://www.googleadservices.com',
+                'https://www.google.com',
+                'https://www.googleadservices.com',
+                'https://googleads.g.doubleclick.net',
+                'https://www.google.com'
+              ],
+              // scriptSrcElem: [
+              //   "'self'",
+              //   "'sha256-dR9r2B/SmDDIQ6AkSRP1HcZOn6lncQaF7JWgTTTLGTY='",
+              //   "'sha256-kxlLwzh8f+NZ3uNSXSPKI+KoxSBTS4AxdH+dXubYARw='",
+              //   'https://www.googletagmanager.com'
+              // ],
+              styleSrc: [
+                "'self'",
+                "'unsafe-inline'",
+                'https://tagmanager.google.com',
+                'https://fonts.googleapis.com'
+              ]
+            }
+          },
+          referrerPolicy: 'origin'
+        })
         // headers: createSecureHeaders({
         //   forceHTTPSRedirect: [
         //     true,
