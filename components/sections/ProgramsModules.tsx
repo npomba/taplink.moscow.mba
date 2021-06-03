@@ -230,7 +230,7 @@ const ProgramsModules = ({ data }) => {
           <Stickers>
             <Sticker
               type={'short'}
-              clr={'red'}
+              clr={'light'}
               title={'Практические модули'}
               listItems={[
                 'Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе'
@@ -238,7 +238,7 @@ const ProgramsModules = ({ data }) => {
             />
             <Sticker
               type={'short'}
-              clr={'dark'}
+              clr={'light'}
               title={'Итоговая аттестация'}
               listItems={[
                 'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
@@ -250,7 +250,7 @@ const ProgramsModules = ({ data }) => {
         {at.online && at.mini && (
           <Sticker
             type={'long'}
-            clr={'dark'}
+            clr={'light'}
             title={'Итоговая аттестация'}
             listItems={[
               'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',
@@ -261,7 +261,7 @@ const ProgramsModules = ({ data }) => {
         {at.blended && !at.mini && (
           <Sticker
             type={'long'}
-            clr={'dark'}
+            clr={'light'}
             title={'Очный модуль в Москве'}
             listItems={[
               'Живое общение со спикерами',
@@ -275,7 +275,7 @@ const ProgramsModules = ({ data }) => {
           <Stickers>
             <Sticker
               type={'short'}
-              clr={'red'}
+              clr={'light'}
               title={'Практические модули'}
               listItems={[
                 'Работа над собственными проектами: практика групповых взаимодействий, кейс-методы, эссе'
@@ -283,7 +283,7 @@ const ProgramsModules = ({ data }) => {
             />
             <Sticker
               type={'short'}
-              clr={'dark'}
+              clr={'light'}
               title={'Итоговая аттестация'}
               listItems={[
                 'Бизнес-проектирование (подготовка итоговой аттестационной работы, консультирование по бизнес-проектированию)',

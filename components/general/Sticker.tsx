@@ -4,16 +4,15 @@ const Sticker = ({
   type = 'short',
   clr = 'red',
   title = '',
-  listItems = [],
+  listItems = []
 }) => {
   if (title && listItems.length !== 0) {
     return (
       <div
         className={`${stls.sheet}  
-        ${clr === 'dark' ? stls.dark : stls.red} ${
+        ${clr === 'dark' ? stls.dark : clr === 'red' ? stls.red : stls.light} ${
           type === 'short' ? stls.short : stls.long
-        }`}
-      >
+        }`}>
         <h4 className={stls.title}>{title}</h4>
         <div>
           <ul className={stls.listItems}>
@@ -22,8 +21,7 @@ const Sticker = ({
                 key={idx}
                 className={`${stls.listItem} ${
                   listItems.length > 1 ? stls.many : ''
-                }`}
-              >
+                }`}>
                 <p>{item}</p>
               </li>
             ))}
