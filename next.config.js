@@ -27,7 +27,8 @@ module.exports = {
                 'https://www.google-analytics.com',
                 'https://googleads.g.doubleclick.net',
                 'https://www.google.com',
-                'https://bid.g.doubleclick.net'
+                'https://bid.g.doubleclick.net',
+                'https://mc.yandex.ru'
               ],
               scriptSrc: [
                 "'self'",
