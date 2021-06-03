@@ -32,10 +32,11 @@ module.exports = {
               ],
               scriptSrc: [
                 "'self'",
-                `${dev && "'unsafe-eval'"}`,
+                `${dev ? "'unsafe-eval'" : ''}`,
                 'https://www.googletagmanager.com',
                 "'sha256-dR9r2B/SmDDIQ6AkSRP1HcZOn6lncQaF7JWgTTTLGTY='",
                 "'sha256-kxlLwzh8f+NZ3uNSXSPKI+KoxSBTS4AxdH+dXubYARw='",
+                "'sha256-6g/y+M3Jov37nPvp0FF1vktpRuyTb8EoU5XYgBiqpQY='",
                 'http://www.googletagmanager.com',
                 'https://mc.yandex.ru',
                 'data:',
@@ -45,7 +46,8 @@ module.exports = {
                 'https://www.googleadservices.com',
                 'https://www.google.com',
                 'https://googleads.g.doubleclick.net',
-                'https://moscow.mba'
+                'https://moscow.mba',
+                'http://www.googleadservices.com'
               ],
               // scriptSrcElem: [
               //   "'self'",
