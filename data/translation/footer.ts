@@ -8,4 +8,9 @@ export default {
     ru: 'Политика конфиденциальности',
     en: 'Privacy Policy'
   },
+
+  paymentLink: {
+    ru: 'Оплата',
+    en: 'Payment'
+  }
 }
