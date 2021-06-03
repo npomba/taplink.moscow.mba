@@ -22,7 +22,6 @@ module.exports = {
                 'https://ssl.gstatic.com',
                 'https://www.gstatic.com',
                 'https://fonts.gstatic.com',
-                'data:',
                 'https://www.google-analytics.com',
                 'https://googleads.g.doubleclick.net',
                 'https://www.google.com',
