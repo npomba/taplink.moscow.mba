@@ -87,6 +87,11 @@ const Footer = () => {
                   <a>{setString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
+              <li>
+                <Link href='/payment' locale='ru'>
+                  <a>{setString(lang.paymentLink)}</a>
+                </Link>
+              </li>
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>
