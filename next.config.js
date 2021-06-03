@@ -24,7 +24,6 @@ module.exports = {
                 'https://fonts.gstatic.com',
                 'data:',
                 'https://www.google-analytics.com',
-                'https://www.google-analytics.com',
                 'https://googleads.g.doubleclick.net',
                 'https://www.google.com',
                 'https://bid.g.doubleclick.net',
@@ -45,9 +44,8 @@ module.exports = {
                 'https://ssl.google-analytics.com',
                 'https://www.googleadservices.com',
                 'https://www.google.com',
-                'https://www.googleadservices.com',
                 'https://googleads.g.doubleclick.net',
-                'https://www.google.com'
+                'https://moscow.mba'
               ],
               // scriptSrcElem: [
               //   "'self'",
@@ -57,7 +55,7 @@ module.exports = {
               // ],
               styleSrc: [
                 "'self'",
-                `${dev && "'unsafe-inline'"}`,
+                "'unsafe-inline'",
                 'https://tagmanager.google.com',
                 'https://fonts.googleapis.com'
               ]
