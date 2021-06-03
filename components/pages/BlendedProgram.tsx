@@ -19,6 +19,7 @@ import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
 import BlendedMetups from '@/components/sections/BlendedMetups'
 import CostOfStudy from '@/components/sections/CostOfStudy'
+import GetStudyPlan from '@/components/sections/GetStudyPlan'
 
 const PageBlendedProgram = ({ program }) => {
   const data = program
@@ -40,12 +41,13 @@ const PageBlendedProgram = ({ program }) => {
         <Pros format={'blended'} />
         <HowProcessGoes />
         <ProgramsModules data={data} />
-        <ContactUs
+        {/* <ContactUs
           programId={data._id}
           programTitle={data.title}
           title={'Получите консультацию'}
           titleNewStr={'по программе обучения'}
-        />
+        /> */}
+        <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
         <UpToDateContent />
         <CorporateClients />

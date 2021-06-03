@@ -17,6 +17,7 @@ import CorporateClients from '@/components/sections/CorporateClients'
 import CostOfStudy from '../sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
+import GetStudyPlan from '@/components/sections/GetStudyPlan'
 
 const PageOnlineProgram = ({ program }) => {
   const data = program
@@ -37,12 +38,13 @@ const PageOnlineProgram = ({ program }) => {
         <Pros format={'online'} />
         <HowProcessGoes />
         <ProgramModules data={data} />
-        <ContactUs
+        {/* <ContactUs
           programId={data._id}
           programTitle={data.title}
           title={'Получите консультацию'}
           titleNewStr={'по программе обучения'}
-        />
+        /> */}
+        <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
         <UpToDateContent />
         <CorporateClients />

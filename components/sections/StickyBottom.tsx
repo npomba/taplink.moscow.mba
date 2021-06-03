@@ -6,7 +6,7 @@ import SVGCross from '../svgs/SVGCross'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
-import PopupLearnMore from '../popups/PopupLearnMore'
+import PopupLearnMore from '@/components/popups/PopupLearnMore'
 import SVGClose from '@/components/svgs/SVGClose'
 
 const StickyBottom = () => {
