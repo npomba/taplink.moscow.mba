@@ -28,7 +28,8 @@ module.exports = {
                 'https://googleads.g.doubleclick.net',
                 'https://www.google.com',
                 'https://bid.g.doubleclick.net',
-                'https://mc.yandex.ru'
+                'https://mc.yandex.ru',
+                'https://moscow.mba'
               ],
               scriptSrc: [
                 "'self'",
@@ -56,13 +57,13 @@ module.exports = {
               // ],
               styleSrc: [
                 "'self'",
-                "'unsafe-inline'",
+                `${dev && "'unsafe-inline'"}`,
                 'https://tagmanager.google.com',
                 'https://fonts.googleapis.com'
               ]
             }
           },
-          referrerPolicy: 'origin'
+          referrerPolicy: 'no-referrer-when-downgrade'
         })
         // headers: createSecureHeaders({
         //   forceHTTPSRedirect: [
