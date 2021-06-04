@@ -29,7 +29,8 @@ module.exports = {
                 'https://mc.yandex.ru',
                 'https://moscow.mba',
                 'https://www.googleadservices.com',
-                'https://www.google.ru'
+                'https://www.google.ru',
+                'https://www.googletagmanager.com'
               ],
               scriptSrc: [
                 "'self'",
