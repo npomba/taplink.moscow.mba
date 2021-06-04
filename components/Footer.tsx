@@ -110,7 +110,11 @@ const Footer = () => {
                   </a>
                 </li>
                 <li>
-                  <a href='#!' aria-label='MBA Whatsapp'>
+                  <a
+                    href='https://api.whatsapp.com/message/DSPLWVLIMR66E1'
+                    aria-label='MBA Whatsapp'
+                    target='_blank'
+                    rel='noopener noreferrer'>
                     <SVGWhatsapp />
                   </a>
                 </li>
