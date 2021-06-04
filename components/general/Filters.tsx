@@ -1,6 +1,7 @@
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import stls from '@/styles/modules/Filters.module.sass'
+import Discount from '@/components/prices/Discount'
 
 const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
@@ -66,7 +67,9 @@ const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
                   at.online ? stls.active : ''
                 }`}></span>{' '}
               ONLINE (дистанционно){' '}
-              <span className={stls.discount50}>-50%</span>
+              <span className={stls.discount50}>
+                <Discount />
+              </span>
             </a>
           </Link>
         </div>
