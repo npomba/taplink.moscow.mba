@@ -64,9 +64,6 @@ const Footer = () => {
                 </Link>
               </li>
               <li className='empty'></li>
-              {/* <li>
-                <a>Оплата обучения</a>
-              </li> */}
               <li>
                 <Link href='/about'>
                   <a>{setString(langHeader.linkAbout)}</a>
@@ -87,11 +84,11 @@ const Footer = () => {
                   <a>{setString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/payment' locale='ru'>
                   <a>{setString(lang.paymentLink)}</a>
                 </Link>
-              </li>
+              </li> */}
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>
