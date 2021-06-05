@@ -1,3 +1,5 @@
+@import @/styles/utils/mixins
+  
 .title
   margin-bottom: 60px
   font-style: normal
@@ -135,14 +137,15 @@
   position: relative
   padding: 120px 27px 30px
   line-height: 1.2
-  &:hover
-    background: #ffffff
-    box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.09)
-    & .arrow
-      background: #ff3535
-      svg
-        filter: none
-        opacity: 1
+  @include media(desktop, laptop)
+    &:hover
+      background: #ffffff
+      box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.09)
+      & .arrow
+        background: #ff3535
+        svg
+          filter: none
+          opacity: 1
 
   @media (max-width: 1329px)
     margin: 0 10px 20px
