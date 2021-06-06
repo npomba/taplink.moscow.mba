@@ -9,10 +9,10 @@ const Loader = ({ closePopUp = null }) => {
           <SVGLoader />
           <p>Ваша заявка отправляется, пожалуйста, подождите</p>
         </div>
-        <button className='mfp-close' type='button' onClick={closePopUp}>
-          <SVGClose />
-        </button>
       </div>
+      <button className='mfp-close' type='button' onClick={closePopUp}>
+        <SVGClose />
+      </button>
     </div>
   )
 }
