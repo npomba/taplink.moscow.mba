@@ -16,7 +16,14 @@ const UpToDateContent = () => {
             <strong className='red'>{setString(lang.uptodateDicsRed)} </strong>
             {setString(lang.uptodateDicsSecond)}
           </div>
-          
+          <div className={stls.actualBottomImage}>
+            <Image
+              src={'/assets/images/actual_pic_1.jpg'}
+              alt='Студенты обучаются на конференции'
+              width={850}
+              height={366}
+            />
+          </div>
         </div>
         <div className={stls.rightImage}>
             <Image
@@ -26,14 +33,6 @@ const UpToDateContent = () => {
               height={635}
             />
           </div>
-        <div className={stls.actualBottomImage}>
-          <Image
-            src={'/assets/images/actual_pic_1.jpg'}
-            alt='Студенты обучаются на конференции'
-            width={850}
-            height={366}
-          />
-        </div>
       </div>
       <div className='section-pl'>
         <ul className={stls.actualContentList}>
