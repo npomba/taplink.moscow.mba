@@ -2301,96 +2301,6 @@ footer {
   }
 }
 
-/*actual-section =========================================*/
-.actual-section {
-  position: relative;
-  padding-bottom: 140px;
-  margin-bottom: 130px;
-  &:after {
-    content: '';
-    height: 1px;
-    background: #e6e6e6;
-    width: 100vw;
-    left: 50%;
-    margin-left: -50vw;
-    position: absolute;
-    z-index: 2;
-    bottom: 0;
-  }
-  &:before {
-    content: '';
-    height: 2px;
-    background: $red;
-    width: 169px;
-    left: 220px;
-    position: absolute;
-    z-index: 3;
-    bottom: 0;
-  }
-  &.no-line {
-    margin-bottom: 140px;
-    padding-bottom: 0;
-    &:after,
-    &:before {
-      display: none;
-    }
-  }
-}
-
-.actual-content {
-  position: relative;
-  padding-right: 440px;
-  margin-top: 33px;
-  margin-bottom: 36px;
-  .right-image {
-    position: absolute;
-    top: 19px;
-    right: 0;
-    width: 410px;
-    height: calc(100% - 19px);
-    img {
-      height: 100%;
-      object-fit: cover;
-      object-position: top left;
-      width: 100%;
-    }
-  }
-  .desc {
-    font-size: 35px;
-    line-height: 1.2;
-    margin-bottom: 76px;
-    max-width: 580px;
-    color: #000;
-  }
-}
-
-.actual-content-top {
-  padding-left: 220px;
-}
-
-.actual-bottom-image {
-  img {
-    width: 100%;
-  }
-}
-
-.actual-content-list {
-  display: flex;
-  margin: 0 -15px;
-  line-height: 1.2;
-  padding-right: 109px;
-  li {
-    padding: 0 15px;
-    width: 33.333%;
-  }
-  .number {
-    font-weight: bold;
-    font-size: 36px;
-    color: $red;
-    margin-bottom: 10px;
-  }
-}
-
 /*accreditations-section =================================*/
 .accreditations-section {
   margin-bottom: 130px;
@@ -4612,12 +4522,6 @@ footer {
       padding: 0 15px;
     }
   }
-  .actual-content-top {
-    padding-left: 0;
-  }
-  .actual-content-list {
-    padding-right: 0;
-  }
   .accreditations-section::after {
     margin-left: 50px;
   }
@@ -4670,8 +4574,7 @@ footer {
   }
 
   .process-section,
-  .purpose-section,
-  .actual-section {
+  .purpose-section {
     &:before {
       left: 0;
     }
@@ -5431,34 +5334,6 @@ footer {
       display: none;
     }
   }
-  .actual-content {
-    padding-right: 0;
-    .desc {
-      width: 50%;
-      padding-right: 30px;
-      margin-bottom: 38px;
-    }
-    .right-image {
-      width: 50%;
-    }
-  }
-  .actual-content-top {
-    position: relative;
-  }
-  .actual-content-list {
-    justify-content: space-between;
-    li {
-      width: auto;
-      max-width: 235px;
-      &:nth-last-of-type(1) {
-        max-width: 175px;
-      }
-    }
-    .number {
-      font-size: 28px;
-      margin-bottom: 5px;
-    }
-  }
   .accreditations-section {
     margin-bottom: 80px;
     &.small-mb {
@@ -5513,19 +5388,6 @@ footer {
       padding: 0 8px;
       width: 50%;
       margin-bottom: 20px;
-    }
-  }
-  .actual-section {
-    padding-bottom: 70px;
-    margin-bottom: 70px;
-    &.no-line {
-      margin-bottom: 80px;
-      padding-bottom: 0;
-    }
-  }
-  .support-section {
-    h3 {
-      font-size: 30px;
     }
   }
   .purpose-section {
@@ -6091,25 +5953,6 @@ footer {
       font-size: 20px;
     }
   }
-  .actual-content {
-    margin-bottom: 25px;
-    .desc {
-      font-size: 25px;
-      padding-right: 20px;
-      min-height: 350px;
-      margin-bottom: 25px;
-    }
-    .right-image {
-      top: 0;
-      height: 100%;
-    }
-  }
-  .actual-content-list {
-    text-align: center;
-    .number {
-      font-size: 24px;
-    }
-  }
   .accreditations-section {
     border: none;
     &.small-mb {
@@ -6180,16 +6023,7 @@ footer {
       font-size: 14px;
     }
   }
-  .actual-section {
-    padding-bottom: 60px;
-    margin-bottom: 60px;
-    &:before {
-      width: 110px;
-    }
-    &.no-line {
-      margin-bottom: 60px;
-    }
-  }
+
   .support-section {
     h3 {
       font-size: 25px;
@@ -7111,21 +6945,7 @@ footer {
   .title-pl {
     font-size: 18px;
   }
-  .actual-content-list {
-    display: block;
-    text-align: left;
-    li {
-      width: 100%;
-      max-width: 100%;
-      margin-bottom: 22px;
-      &:nth-last-of-type(1) {
-        max-width: 100%;
-      }
-    }
-    .number {
-      font-weight: 500;
-    }
-  }
+
   .about-detail-list {
     margin-bottom: 60px;
     li {
@@ -7195,12 +7015,7 @@ footer {
       padding: 19px;
     }
   }
-  .actual-content {
-    .desc {
-      font-size: 18px;
-      min-height: 260px;
-    }
-  }
+
   // .accreditations-section .image {
   //   height: 300px;
   // }
@@ -7215,9 +7030,6 @@ footer {
     & ~ .jumbotron-label {
       margin-right: 110px;
     }
-  }
-  .actual-section {
-    padding-bottom: 40px;
   }
   .support-section {
     h3 {
