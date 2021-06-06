@@ -25,7 +25,7 @@ const UpToDateContent = () => {
             />
           </div>
         </div>
-        <div className={stls.rightImage}>
+        <div className={stls.actualRightImage}>
             <Image
               src={'/assets/images/actual_pic_2.jpg'}
               alt='Оператор снимает конференцию'

@@ -58,7 +58,7 @@
     padding-right: 0
   @include media(tablet, phone)
     margin-bottom: 25px
-  .rightImage
+  .actualRightImage
     margin-top: 19px
     width: 410px
     height: calc(100% - 19px)
@@ -114,10 +114,10 @@
     @include media(tablet, phone)
       font-size: 25px
       width: 50%
-      min-height: 310px
+      min-height: calc(310px - 3vw)
     @include media(phone)
       font-size: 18px
-      min-height: 260px
+      min-height: calc(260px - 2vw)
   .actualBottomImage
     @include media(phone)
       margin-top: -50px
