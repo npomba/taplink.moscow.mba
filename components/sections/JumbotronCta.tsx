@@ -4,12 +4,9 @@ import Link from 'next/link'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
-import useAt from '@/components/hooks/useAt'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
-
 import ThankyouPopup from '@/components/popups/Thankyou'
 import Popup from 'reactjs-popup'
 import Loader from '@/components/popups/Loader'

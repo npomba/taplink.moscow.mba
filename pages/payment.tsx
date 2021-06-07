@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Image from 'next/image'
 import stls from '@/styles/modules/PaymentPage.module.sass'
 import { server, apiProgramsReqUrl } from '@/config/index'
@@ -9,9 +10,14 @@ import PopUpForm from '@/components/popups/Form'
 const payment = ({ programs }) => {
   return (
     <>
-      <Head>
-        <title>MBA | Оплата</title>
-      </Head>
+      <NextSeo
+        title={'Оплата обучения в Moscow Business Academy'}
+        description={truncate(
+          'Оплата банковской картой через ПАО СБЕРБАНК',
+          120
+        )}
+        canonical={'https://moscow.mba/payment'}
+      />
       <div className='container'>
         <div className={stls.content}>
           <h1 className={stls.h1}>Оплата</h1>

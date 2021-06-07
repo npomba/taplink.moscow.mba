@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import truncate from 'truncate'
 import Reviews from '@/components/sections/Reviews'
-import Rules from '@/components/sections/Rules'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
 import ProgramGoal from '@/components/sections/ProgramGoal'
 import WhatWillYouLearn from '@/components/sections/WhatWillYouLearn'
@@ -24,11 +24,14 @@ import GetStudyPlan from '@/components/sections/GetStudyPlan'
 const PageBlendedProgram = ({ program }) => {
   const data = program
 
+  const router = useRouter()
+
   return (
     <>
       <NextSeo
-        title={data.title}
+        title={`${data.title} MBA - Moscow Business Academy`}
         description={truncate(program.goalsOfProgram, 120)}
+        canonical={`https://moscow.mba${router.asPath}`}
       />
 
       <JumbotronProgram data={data} />

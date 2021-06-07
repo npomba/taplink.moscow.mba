@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import langMenu from '@/data/translation/menu'
@@ -14,11 +15,32 @@ import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
+
   return (
     <>
-      <Head>
-        <title>Программы</title>
-      </Head>
+      <NextSeo
+        title={`Программы обучения ${
+          at.mini
+            ? 'Mini MBA'
+            : at.professional
+            ? 'Professional MBA'
+            : at.industry
+            ? 'Industry MBA'
+            : ''
+        } ${
+          at.online ? 'Online' : at.blended ? 'Blended' : ''
+        } - Moscow Business Academy`}
+        description={
+          at.mini
+            ? truncate(setString(langMenu.categoryDiscMini), 120)
+            : at.professional
+            ? truncate(setString(langMenu.categoryDiscProfessional), 120)
+            : at.industry
+            ? truncate(setString(langMenu.categoryDiscIndustry), 120)
+            : ''
+        }
+        canonical={'https://moscow.mba/programs/professional/online'}
+      />
 
       <section className={`jumbotron-section ${stls.jumbotronPrograms}`}>
         <div className='container'>

@@ -1,4 +1,5 @@
 import { NextSeo } from 'next-seo'
+import { useRouter } from 'next/router'
 import truncate from 'truncate'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
 import Reviews from '@/components/sections/Reviews'
@@ -14,7 +15,7 @@ import Teachers from '@/components/sections/Teachers'
 import UpToDateContent from '@/components/sections/UpToDateContent'
 import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
-import CostOfStudy from '../sections/CostOfStudy'
+import CostOfStudy from '@/components/sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
 import GetStudyPlan from '@/components/sections/GetStudyPlan'
@@ -22,11 +23,14 @@ import GetStudyPlan from '@/components/sections/GetStudyPlan'
 const PageOnlineProgram = ({ program }) => {
   const data = program
 
+  const router = useRouter()
+
   return (
     <>
       <NextSeo
-        title={data.title}
+        title={`${data.title} MBA - Moscow Business Academy`}
         description={truncate(program.goalsOfProgram, 120)}
+        canonical={`https://moscow.mba${router.asPath}`}
       />
 
       <JumbotronProgram data={data} />
