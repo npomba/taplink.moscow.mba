@@ -54,10 +54,10 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
             Ok!
           </button>
         </div>
-        <button className='mfp-close' type='button' onClick={closePopUp}>
-          <SVGClose />
-        </button>
       </div>
+      <button className='mfp-close' type='button' onClick={closePopUp}>
+        <SVGClose />
+      </button>
     </div>
   )
 }
