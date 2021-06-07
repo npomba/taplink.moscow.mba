@@ -44,7 +44,11 @@ const executive = ({ programs }) => {
 
   return (
     <>
-      <NextSeo title={data.title} description={truncate(data.desc, 120)} />
+      <NextSeo
+        title={`${data.title} - Moscow Business Academy`}
+        description={truncate(data.desc, 120)}
+        canonical={'https://moscow.mba/programs/executive'}
+      />
 
       <JumbotronProgram data={data} />
       <div className='container'>

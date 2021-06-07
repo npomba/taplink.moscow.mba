@@ -1,5 +1,5 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import JumbotronMain from '@/components/sections/JumbotronMain'
 import About from '@/components/sections/About'
 import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
@@ -10,17 +10,19 @@ import Teachers from '@/components/sections/Teachers'
 import UpToDateContent from '@/components/sections/UpToDateContent'
 import Accreditation from '@/components/sections/Accreditation'
 import ContactUs from '@/components/sections/ContactUs'
-
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/about'
+import langIndex from '@/data/translation/index'
 import { apiProgramsReqUrl, server } from '@/config/index'
 
 const about = ({ programs }) => {
   return (
     <>
-      <Head>
-        <title>{setString(lang.title)}</title>
-      </Head>
+      <NextSeo
+        title={`${setString(lang.title)} MBA`}
+        description={truncate(`${setString(langIndex.headerSubtitle)}`, 120)}
+        canonical={'https://moscow.mba/about'}
+      />
 
       <JumbotronMain />
 
