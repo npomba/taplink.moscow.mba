@@ -18,7 +18,9 @@ import SVGClock from '../svgs/SVGClock'
 
 const ProgramsColumn = ({ data, id, type }) => {
   return (
-    <ul id={id} className='header-podmenu-content visible'>
+    <ul
+      id={id}
+      className={`header-podmenu-content ${id === 1 ? 'visible' : ''}`}>
       <li>
         <div className='program-detail-list'>
           <div className='name'>
