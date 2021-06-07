@@ -34,3 +34,6 @@ yarn-error.log*
 .vercel
 
 snipet-for-dns-records.jpg
+
+robots.txt
+sitemap.xml
