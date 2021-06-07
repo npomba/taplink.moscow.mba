@@ -20,7 +20,9 @@ const ProgramsColumn = ({ data, id, type }) => {
   return (
     <ul
       id={id}
-      className={`header-podmenu-content ${id === 1 ? 'visible' : ''}`}>
+      className={`header-podmenu-content ${
+        id === 'header-podmenu-1' ? 'visible' : ''
+      }`}>
       <li>
         <div className='program-detail-list'>
           <div className='name'>

@@ -7,7 +7,7 @@ const WebinarCards = ({ timeframe }) => {
       title: 'Сквозная аналитика в Российском ретейле',
       portrait: '/assets/images/speakers/speaker-1.jpg',
       speaker: 'Эдуард Тихонов',
-      date: new Date(2021, 5, 4, 17, 0),
+      date: new Date(2021, 6, 4, 17, 0),
       dur: '40:00'
     },
     {
@@ -15,7 +15,7 @@ const WebinarCards = ({ timeframe }) => {
       title: 'Power BI: изучаем азы работы с данными',
       portrait: '/assets/images/speakers/speaker-2.jpg',
       speaker: 'Антон Гвоздев',
-      date: new Date(2021, 5, 7, 19, 0),
+      date: new Date(2021, 6, 7, 19, 0),
       dur: '40:00'
     },
     {
