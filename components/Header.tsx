@@ -90,7 +90,7 @@ const Header = ({ programs }) => {
               {contactInfo.tels[1].data.val}
             </a>
           </div>
-          {at.index || at.about ? <HeaderLangLink /> : null}
+          {at.index || at.about || at.contact ? <HeaderLangLink /> : null}
           <div className='header-buter'>
             <i></i>
             <i></i>
@@ -144,7 +144,7 @@ const Header = ({ programs }) => {
             </li> */}
 
             <li>
-              <Link href='/contact' locale='ru'>
+              <Link href='/contact'>
                 <a className={at.contact ? 'red' : ''}>
                   {setString(lang.linkContacts)}
                 </a>
@@ -272,22 +272,22 @@ const Header = ({ programs }) => {
                 </Link>
               </li> */}
               <li>
-                <Link href='/contact' locale='ru'>
+                <Link href='/contact'>
                   <a className='onClickCloseMobileMenu'>
                     {setString(lang.linkContacts)}
                   </a>
                 </Link>
               </li>
 
-              {router.pathname === '/' || router.pathname === '/about' || router.pathname === '/contact' ? 
+              {router.pathname === '/' ||
+              router.pathname === '/about' ||
+              router.pathname === '/contact' ? (
                 <li>
                   <a href='' className='mobile-lang-toggle'>
                     {setString(lang.linkLang)}
                   </a>
                 </li>
-                :
-                null
-              }
+              ) : null}
             </ul>
             <div className='header-logos'>
               <span className='rabo'>
