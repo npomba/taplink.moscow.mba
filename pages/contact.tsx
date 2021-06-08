@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo, CorporateContactJsonLd } from 'next-seo'
 import truncate from 'truncate'
 import stls from '@/styles/modules/ContactPage.module.sass'
 import setString from '@/components/hooks/setString'
@@ -21,6 +21,19 @@ const contact = ({ programs }) => {
           120
         )}
         canonical={'https://moscow.mba/contact'}
+      />
+
+      <CorporateContactJsonLd
+        url='https://moscow.mba'
+        logo='https://moscow.mba/logo.jpg'
+        contactPoint={[
+          {
+            telephone: '+7-800-500-27-47',
+            contactType: 'customer service',
+            areaServed: 'RU',
+            availableLanguage: ['Russian']
+          }
+        ]}
       />
 
       <div className='container'>

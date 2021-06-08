@@ -1,7 +1,7 @@
 import App from 'next/app'
 import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
-import { DefaultSeo } from 'next-seo'
+import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -56,6 +56,10 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <DefaultSeo {...SEO} />
+      <LogoJsonLd
+        logo='https://moscow.mba/logo.jpg'
+        url='https://moscow.mba/'
+      />
       <PageWrapper>
         <Header programs={programs} />
         <AnimatePresence>
