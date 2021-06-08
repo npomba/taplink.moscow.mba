@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo, CourseJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
 import truncate from 'truncate'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
@@ -31,6 +31,12 @@ const PageOnlineProgram = ({ program }) => {
         title={`${data.title} MBA - Moscow Business Academy`}
         description={truncate(program.goalsOfProgram, 120)}
         canonical={`https://moscow.mba${router.asPath}`}
+      />
+      <CourseJsonLd
+        courseName={`${data.title} MBA`}
+        providerName='Moscow Business Academy'
+        providerUrl={`https://moscow.mba${router.asPath}`}
+        description={truncate(program.goalsOfProgram, 120)}
       />
 
       <JumbotronProgram data={data} />
