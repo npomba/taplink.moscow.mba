@@ -33,31 +33,31 @@ const Footer = () => {
                   <a>MBA Mini</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/mini/blended' locale='ru'>
                   <a>MBA Mini Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/professional/online' locale='ru'>
                   <a>MBA Professional</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/professional/blended' locale='ru'>
                   <a>MBA Professional Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/industry/online' locale='ru'>
                   <a>MBA Industry</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/industry/blended' locale='ru'>
                   <a>MBA Industry Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/executive' locale='ru'>
                   <a>Executive MBA</a>
@@ -80,15 +80,25 @@ const Footer = () => {
                 </Link>
               </li>
               <li>
-                <Link href='/contact' locale='ru'>
+                <Link href='/contact'>
                   <a>{setString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
-              {/* <li>
+              <li>
+                <Link href='/legal' locale='ru'>
+                  <a>{setString(langHeader.linkLegal)}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/legal/about' locale='ru'>
+                  <a>{setString(lang.legalAboutLink)}</a>
+                </Link>
+              </li>
+              <li>
                 <Link href='/payment' locale='ru'>
                   <a>{setString(lang.paymentLink)}</a>
                 </Link>
-              </li> */}
+              </li>
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>

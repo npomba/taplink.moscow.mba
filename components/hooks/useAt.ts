@@ -22,7 +22,7 @@ const useAt = () => {
   }
 
   const legal = () => {
-    return getSplitedPath[0] === 'legal'
+    return getSplitedPath[0] === 'legal' && !getSplitedPath[1]
   }
 
   const webinars = () => {
