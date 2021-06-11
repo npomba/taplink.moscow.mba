@@ -6,8 +6,11 @@ import { server, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
+import contactData from '@/data/contactData'
 
 const payment = ({ programs }) => {
+  const contactInfo = contactData()
+
   return (
     <>
       <NextSeo
@@ -72,6 +75,21 @@ const payment = ({ programs }) => {
             Проведение платежей по банковским картам осуществляется в строгом
             соответствии с требованиями платёжных систем МИР, Visa Int.,
             MasterCard Europe Sprl, JCB
+          </p>
+
+          <p className={stls.p}>
+            В случае возврата, срок возврата составляет 30 дней с момента
+            получения образовательных материалов. Возврат переведённых средств
+            производится на Ваш банковский счёт в течение 5-30 рабочих дней
+            (срок зависит от банка, который выдал Вашу банковскую карту)
+          </p>
+
+          <p className={stls.p}>
+            В случае возникновения проблем с оплатой, свяжитесь с нами, в
+            рабочие часы (09:00-19:00 МСК), по телефону{' '}
+            <em className={stls.em}>{contactInfo.tels[0].data.val}</em>, с
+            помощью email <em className={stls.em}>{contactInfo.email}</em> или
+            оставьте заявку, нажав на кнопку <strong>Помощь</strong> ниже
           </p>
 
           <p className={stls.p}>

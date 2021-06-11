@@ -12,5 +12,10 @@ export default {
   paymentLink: {
     ru: 'Оплата',
     en: 'Payment'
+  },
+
+  legalAboutLink: {
+    ru: 'Карточка организации',
+    en: 'Legal information'
   }
 }
