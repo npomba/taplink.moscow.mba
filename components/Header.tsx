@@ -13,6 +13,7 @@ import useAt from '@/components/hooks/useAt'
 
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsNumber from '@/components/sections/ProgramsNumber'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
@@ -33,7 +34,7 @@ import SVGClock from './svgs/SVGClock'
 const Header = ({ programs }) => {
   useEffect(() => {
     loadJs(['/assets/js/header.js'], {
-      async: false
+      async: false,
     })
   }, [])
 
@@ -47,42 +48,42 @@ const Header = ({ programs }) => {
 
   return (
     <header>
-      <div className='container'>
-        <div className='header-top'>
-          <Link href='/'>
-            <a className='main-logo' aria-label='Moscow Business Academy'>
-              <span className='pic'>
+      <div className="container">
+        <div className="header-top">
+          <Link href="/">
+            <a className="main-logo" aria-label="Moscow Business Academy">
+              <span className="pic">
                 <SVGLogo />
               </span>
-              <span className='text'>
+              <span className="text">
                 <SVGLogoTitle />
               </span>
             </a>
           </Link>
-          <div className='header-logos'>
-            <span className='rabo'>
+          <div className="header-logos">
+            <span className="rabo">
               <Image
-                src='/assets/images/logo_rabo.png'
-                alt='Российская ассоциация бизнес-образования'
+                src="/assets/images/logo_rabo.png"
+                alt="Российская ассоциация бизнес-образования"
                 width={117}
                 height={30}
               />
             </span>
-            <span className='dep'>
+            <span className="dep">
               <Image
-                src='/assets/images/logo_department.png'
-                alt='Департамент образования города Москва'
+                src="/assets/images/logo_department.png"
+                alt="Департамент образования города Москва"
                 width={105}
                 height={31}
               />
             </span>
           </div>
-          <div className='header-place'>
+          <div className="header-place">
             <SVGLocation />
             {setString(contactInfo.addresses[0].data.city)},{' '}
             {setString(contactInfo.addresses[0].data.street)}
           </div>
-          <div className='header-phones'>
+          <div className="header-phones">
             <a href={contactInfo.tels[0].data.href}>
               {contactInfo.tels[0].data.val}
             </a>
@@ -91,39 +92,39 @@ const Header = ({ programs }) => {
             </a>
           </div>
           {at.index || at.about || at.contact ? <HeaderLangLink /> : null}
-          <div className='header-buter'>
+          <div className="header-buter">
             <i></i>
             <i></i>
             <i></i>
           </div>
         </div>
-        <div className='header-bottom'>
-          <div className='header-podmenu-outer'>
-            <div className='header-podmenu-toggle'>
-              <div className='pic'>
+        <div className="header-bottom">
+          <div className="header-podmenu-outer">
+            <div className="header-podmenu-toggle">
+              <div className="pic">
                 <i></i>
                 <i></i>
               </div>
               <span>{setString(lang.programsBtn)}</span>
             </div>
           </div>
-          <ul className='header-menu'>
+          <ul className="header-menu">
             <li>
-              <Link href='/about'>
+              <Link href="/about">
                 <a className={at.about ? 'red' : ''}>
                   {setString(lang.linkAbout)}
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='/teachers' locale='ru'>
+              <Link href="/teachers" locale="ru">
                 <a className={at.teachers ? 'red' : ''}>
                   {setString(lang.linkTeachers)}
                 </a>
               </Link>
             </li>
             <li>
-              <Link href='/webinars' locale='ru'>
+              <Link href="/webinars" locale="ru">
                 <a className={at.webinars ? 'red' : ''}>
                   {setString(lang.linkWebinars)}
                 </a>
@@ -144,15 +145,15 @@ const Header = ({ programs }) => {
             </li> */}
 
             <li>
-              <Link href='/contact'>
+              <Link href="/contact">
                 <a className={at.contact ? 'red' : ''}>
                   {setString(lang.linkContacts)}
                 </a>
               </Link>
             </li>
 
-            <li className='widescreen-only'>
-              <Link href='/legal' locale='ru'>
+            <li className="widescreen-only">
+              <Link href="/legal" locale="ru">
                 <a className={at.legal ? 'red' : ''}>
                   {setString(lang.linkLegal)}
                 </a>
@@ -161,50 +162,51 @@ const Header = ({ programs }) => {
           </ul>
         </div>
       </div>
-      <div className='header-podmenu'>
-        <div className='container'>
-          <div className='header-podmenu-flex'>
-            <div className='header-podmenu-left'>
-              <ul className='header-podmenu-tabs'>
+      <div className="header-podmenu">
+        <div className="container">
+          <div className="header-podmenu-flex">
+            <div className="header-podmenu-left">
+              <ul className="header-podmenu-tabs">
                 <li>
-                  <Link href='/programs/mini/online' locale='ru'>
+                  <Link href="/programs/mini/online" locale="ru">
                     <a
-                      data-tab='#header-podmenu-1'
-                      className='active-tab headerMenuTabs'>
+                      data-tab="#header-podmenu-1"
+                      className="active-tab headerMenuTabs"
+                    >
                       Mini MBA
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/programs/professional/online' locale='ru'>
-                    <a data-tab='#header-podmenu-2' className='headerMenuTabs'>
+                  <Link href="/programs/professional/online" locale="ru">
+                    <a data-tab="#header-podmenu-2" className="headerMenuTabs">
                       Professional MBA
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/programs/industry/online' locale='ru'>
-                    <a data-tab='#header-podmenu-3' className='headerMenuTabs'>
+                  <Link href="/programs/industry/online" locale="ru">
+                    <a data-tab="#header-podmenu-3" className="headerMenuTabs">
                       Industry MBA
                     </a>
                   </Link>
                 </li>
                 <li>
-                  <Link href='/programs/mini/online' locale='ru'>
+                  <Link href="/programs/mini/online" locale="ru">
                     <a>{setString(langMenu.allPrograms)}</a>
                   </Link>
                 </li>
               </ul>
-              <div className='header-podmenu-premium'>
-                <div className='label'>
+              <div className="header-podmenu-premium">
+                <div className="label">
                   <span>Premium</span>
                 </div>
-                <Link href='/programs/executive' locale='ru'>
+                <Link href="/programs/executive" locale="ru">
                   <a>Executive MBA</a>
                 </Link>
               </div>
             </div>
-            <div className='header-podmenu-right'>
+            <div className="header-podmenu-right">
               <ProgramsColumn
                 data={data}
                 id={'header-podmenu-1'}
@@ -227,33 +229,33 @@ const Header = ({ programs }) => {
       {/* <div className='header-overlay'></div> */}
 
       {/* mobile menu */}
-      <div className='header-mobile-podmenu'>
+      <div className="header-mobile-podmenu">
         {/* first */}
-        <div className='header-mobile-first'>
-          <div className='container'>
-            <ul className='header-mobile-menu'>
+        <div className="header-mobile-first">
+          <div className="container">
+            <ul className="header-mobile-menu">
               <li>
-                <a href='' className='mobile-second-toggle'>
+                <a href="" className="mobile-second-toggle">
                   <strong>{setString(lang.programsBtn)}</strong>
                 </a>
               </li>
               <li>
-                <Link href='/about'>
-                  <a className='onClickCloseMobileMenu'>
+                <Link href="/about">
+                  <a className="onClickCloseMobileMenu">
                     {setString(lang.linkAbout)}
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='/teachers' locale='ru'>
-                  <a className='onClickCloseMobileMenu'>
+                <Link href="/teachers" locale="ru">
+                  <a className="onClickCloseMobileMenu">
                     {setString(lang.linkTeachers)}
                   </a>
                 </Link>
               </li>
               <li>
-                <Link href='/webinars' locale='ru'>
-                  <a className='onClickCloseMobileMenu'>
+                <Link href="/webinars" locale="ru">
+                  <a className="onClickCloseMobileMenu">
                     {setString(lang.linkWebinars)}
                   </a>
                 </Link>
@@ -272,15 +274,15 @@ const Header = ({ programs }) => {
                 </Link>
               </li> */}
               <li>
-                <Link href='/contact'>
-                  <a className='onClickCloseMobileMenu'>
+                <Link href="/contact">
+                  <a className="onClickCloseMobileMenu">
                     {setString(lang.linkContacts)}
                   </a>
                 </Link>
               </li>
 
               <li>
-                <Link href='/legal' locale='ru'>
+                <Link href="/legal" locale="ru">
                   <a className={at.legal ? 'red' : ''}>
                     {setString(lang.linkLegal)}
                   </a>
@@ -291,31 +293,31 @@ const Header = ({ programs }) => {
               router.pathname === '/about' ||
               router.pathname === '/contact' ? (
                 <li>
-                  <a href='' className='mobile-lang-toggle'>
+                  <a href="" className="mobile-lang-toggle">
                     {setString(lang.linkLang)}
                   </a>
                 </li>
               ) : null}
             </ul>
-            <div className='header-logos'>
-              <span className='rabo'>
+            <div className="header-logos">
+              <span className="rabo">
                 <Image
-                  src='/assets/images/logo_rabo.png'
-                  alt='Российская ассоциация бизнес-образования'
+                  src="/assets/images/logo_rabo.png"
+                  alt="Российская ассоциация бизнес-образования"
                   width={117}
                   height={30}
                 />
               </span>
-              <span className='dep'>
+              <span className="dep">
                 <Image
-                  src='/assets/images/logo_department.png'
-                  alt='Департамент образования города Москва'
+                  src="/assets/images/logo_department.png"
+                  alt="Департамент образования города Москва"
                   width={105}
                   height={31}
                 />
               </span>
             </div>
-            <div className='header-place'>
+            <div className="header-place">
               <SVGLocation />
               <span>{setString(lang.address)}</span>
             </div>
@@ -324,46 +326,47 @@ const Header = ({ programs }) => {
         {/* //first */}
 
         {/* second */}
-        <div className='header-mobile-second js-header-mobile'>
-          <div className='container'>
-            <div className='menu-back-link'>
+        <div className="header-mobile-second js-header-mobile">
+          <div className="container">
+            <div className="menu-back-link">
               <i></i>
               {setString(langMenu.backBtn)}
             </div>
             <h3>{setString(lang.programsBtn)}</h3>
-            <ul className='header-mobile-menu'>
+            <ul className="header-mobile-menu">
               <li>
-                <a href='' className='mobile-third-toggle'>
+                <a href="" className="mobile-third-toggle">
                   Mini MBA
                 </a>
 
                 {/* third */}
-                <div className='header-mobile-third js-header-mobile'>
-                  <div className='container'>
-                    <div className='menu-back-link'>
+                <div className="header-mobile-third js-header-mobile">
+                  <div className="container">
+                    <div className="menu-back-link">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Mini MBA</h3>
-                    <div className='program-tabs-content'>
-                      <ul className='program-options-block-tabs'>
+                    <div className="program-tabs-content">
+                      <ul className="program-options-block-tabs">
                         <li>
-                          <a href='#program-mobile-1-1' className='active'>
+                          <a href="#program-mobile-1-1" className="active">
                             ONLINE
                           </a>
                         </li>
                         <li>
-                          <a href='#program-mobile-1-2'>BLENDED</a>
+                          <a href="#program-mobile-1-2">BLENDED</a>
                         </li>
                       </ul>
-                      <div className='program-options-detail'>
+                      <div className="program-options-detail">
                         <div
-                          id='program-mobile-1-1'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-1-1"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.onlineTitle)}
-                            <div className='discount'>
-                              <div className='size'>
+                            <div className="discount">
+                              <div className="size">
                                 <Discount />
                               </div>
                               <span>
@@ -371,17 +374,14 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'mini'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'mini'}
+                            format={'online'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='new-price'>
+                            <i className="new-price">
                               {' '}
                               <Price
                                 discount={true}
@@ -390,7 +390,7 @@ const Header = ({ programs }) => {
                               />{' '}
                               &#8381;
                             </i>{' '}
-                            <i className='old-price'>
+                            <i className="old-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -400,24 +400,24 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
-                                <ProgramSubjects type='mini' sum={true} />{' '}
+                                <ProgramSubjects type="mini" sum={true} />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'mini' &&
@@ -427,7 +427,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -437,22 +438,20 @@ const Header = ({ programs }) => {
                           </ul>
                         </div>
                         <div
-                          id='program-mobile-1-2'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-1-2"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'mini'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'mini'}
+                            format={'blended'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='simple-price'>
+                            <i className="simple-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -462,24 +461,24 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
-                                <ProgramSubjects type='mini' sum={true} />{' '}
+                                <ProgramSubjects type="mini" sum={true} />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'mini' &&
@@ -489,7 +488,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -500,37 +500,37 @@ const Header = ({ programs }) => {
                         </div>
                       </div>
                     </div>
-                    <div className='header-podmenu-info'>
-                      <div className='name'>Mini MBA</div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                    <div className="header-podmenu-info">
+                      <div className="name">Mini MBA</div>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <TrainingPeriod type='mini' />
+                          <TrainingPeriod type="mini" />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscMini)}</p>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <ProgramSubjects type='mini' subjects='base' />{' '}
+                          <ProgramSubjects type="mini" subjects="base" />{' '}
                           {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <ProgramSubjects type='mini' subjects='specialty' />{' '}
+                          <ProgramSubjects type="mini" subjects="specialty" />{' '}
                           {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
-                    <div className='menu-back-link last'>
+                    <div className="menu-back-link last">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
@@ -539,37 +539,38 @@ const Header = ({ programs }) => {
                 {/* //third */}
               </li>
               <li>
-                <a href='' className='mobile-third-toggle'>
+                <a href="" className="mobile-third-toggle">
                   Professional MBA
                 </a>
 
                 {/*third */}
-                <div className='header-mobile-third js-header-mobile'>
-                  <div className='container'>
-                    <div className='menu-back-link'>
+                <div className="header-mobile-third js-header-mobile">
+                  <div className="container">
+                    <div className="menu-back-link">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Professional MBA</h3>
-                    <div className='program-tabs-content'>
-                      <ul className='program-options-block-tabs'>
+                    <div className="program-tabs-content">
+                      <ul className="program-options-block-tabs">
                         <li>
-                          <a href='#program-mobile-2-1' className='active'>
+                          <a href="#program-mobile-2-1" className="active">
                             ONLINE
                           </a>
                         </li>
                         <li>
-                          <a href='#program-mobile-2-2'>BLENDED</a>
+                          <a href="#program-mobile-2-2">BLENDED</a>
                         </li>
                       </ul>
-                      <div className='program-options-detail'>
+                      <div className="program-options-detail">
                         <div
-                          id='program-mobile-2-1'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-2-1"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.onlineTitle)}
-                            <div className='discount'>
-                              <div className='size'>
+                            <div className="discount">
+                              <div className="size">
                                 <Discount />
                               </div>
                               <span>
@@ -577,17 +578,14 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'professional'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'professional'}
+                            format={'online'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='new-price'>
+                            <i className="new-price">
                               {' '}
                               <Price
                                 discount={true}
@@ -596,7 +594,7 @@ const Header = ({ programs }) => {
                               />{' '}
                               &#8381;
                             </i>{' '}
-                            <i className='old-price'>
+                            <i className="old-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -606,27 +604,27 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects
-                                  type='professional'
+                                  type="professional"
                                   sum={true}
                                 />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'professional' &&
@@ -636,7 +634,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -646,22 +645,20 @@ const Header = ({ programs }) => {
                           </ul>
                         </div>
                         <div
-                          id='program-mobile-2-2'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-2-2"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'professional'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'professional'}
+                            format={'blended'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='simple-price'>
+                            <i className="simple-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -671,27 +668,27 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
                                 <ProgramSubjects
-                                  type='professional'
+                                  type="professional"
                                   sum={true}
                                 />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'professional' &&
@@ -701,7 +698,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -712,43 +710,43 @@ const Header = ({ programs }) => {
                         </div>
                       </div>
                     </div>
-                    <div className='header-podmenu-info'>
-                      <div className='name'>Professional MBA</div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                    <div className="header-podmenu-info">
+                      <div className="name">Professional MBA</div>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <TrainingPeriod type='professional' />
+                          <TrainingPeriod type="professional" />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscProfessional)}</p>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
-                            type='professional'
-                            subjects='base'
+                            type="professional"
+                            subjects="base"
                           />{' '}
                           {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
-                            type='professional'
-                            subjects='specialty'
+                            type="professional"
+                            subjects="specialty"
                           />{' '}
                           {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
-                    <div className='menu-back-link last'>
+                    <div className="menu-back-link last">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
@@ -757,37 +755,38 @@ const Header = ({ programs }) => {
                 {/* //third */}
               </li>
               <li>
-                <a href='' className='mobile-third-toggle'>
+                <a href="" className="mobile-third-toggle">
                   Industry MBA
                 </a>
 
                 {/* third */}
-                <div className='header-mobile-third js-header-mobile'>
-                  <div className='container'>
-                    <div className='menu-back-link'>
+                <div className="header-mobile-third js-header-mobile">
+                  <div className="container">
+                    <div className="menu-back-link">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
                     <h3>Industry MBA</h3>
-                    <div className='program-tabs-content'>
-                      <ul className='program-options-block-tabs'>
+                    <div className="program-tabs-content">
+                      <ul className="program-options-block-tabs">
                         <li>
-                          <a href='#program-mobile-3-1' className='active'>
+                          <a href="#program-mobile-3-1" className="active">
                             ONLINE
                           </a>
                         </li>
                         <li>
-                          <a href='#program-mobile-3-2'>BLENDED</a>
+                          <a href="#program-mobile-3-2">BLENDED</a>
                         </li>
                       </ul>
-                      <div className='program-options-detail'>
+                      <div className="program-options-detail">
                         <div
-                          id='program-mobile-3-1'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-3-1"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.onlineTitle)}
-                            <div className='discount'>
-                              <div className='size'>
+                            <div className="discount">
+                              <div className="size">
                                 <Discount />
                               </div>
                               <span>
@@ -795,17 +794,14 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'industry'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'industry'}
+                            format={'online'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='new-price'>
+                            <i className="new-price">
                               {' '}
                               <Price
                                 discount={true}
@@ -814,7 +810,7 @@ const Header = ({ programs }) => {
                               />{' '}
                               &#8381;
                             </i>{' '}
-                            <i className='old-price'>
+                            <i className="old-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -824,24 +820,24 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatRemote)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
-                                <ProgramSubjects type='industry' sum={true} />{' '}
+                                <ProgramSubjects type="industry" sum={true} />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'industry' &&
@@ -851,7 +847,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -861,22 +858,20 @@ const Header = ({ programs }) => {
                           </ul>
                         </div>
                         <div
-                          id='program-mobile-3-2'
-                          className='program-options-block'>
-                          <div className='name'>
+                          id="program-mobile-3-2"
+                          className="program-options-block"
+                        >
+                          <div className="name">
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'industry'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
-                          <div className='price'>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'industry'}
+                            format={'blended'}
+                          />
+                          <div className="price">
                             {setString(langMenu.price)}:{' '}
-                            <i className='simple-price'>
+                            <i className="simple-price">
                               {' '}
                               <Price
                                 discount={false}
@@ -886,24 +881,24 @@ const Header = ({ programs }) => {
                               &#8381;
                             </i>
                           </div>
-                          <div className='info-list'>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                          <div className="info-list">
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGCheckCircle fill={'#C7C7C7'} />
                               </div>
                               <span>{setString(langMenu.formatBlended)}</span>
                             </div>
-                            <div className='info-flex'>
-                              <div className='pic'>
+                            <div className="info-flex">
+                              <div className="pic">
                                 <SVGScreen fill={'#C7C7C7'} />
                               </div>
                               <span>
-                                <ProgramSubjects type='industry' sum={true} />{' '}
+                                <ProgramSubjects type="industry" sum={true} />{' '}
                                 {setString(langMenu.qtSubjects)}
                               </span>
                             </div>
                           </div>
-                          <ul className='program-options-block-list'>
+                          <ul className="program-options-block-list">
                             {data.map(item => {
                               if (
                                 item.mbaTypeOfProgram === 'industry' &&
@@ -913,7 +908,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale="ru"
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -924,40 +920,40 @@ const Header = ({ programs }) => {
                         </div>
                       </div>
                     </div>
-                    <div className='header-podmenu-info'>
-                      <div className='name'>Industry MBA</div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                    <div className="header-podmenu-info">
+                      <div className="name">Industry MBA</div>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGClock fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <TrainingPeriod type='industry' />
+                          <TrainingPeriod type="industry" />
                         </span>
                       </div>
                       <p>{setString(langMenu.categoryDiscIndustry)}</p>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
-                          <ProgramSubjects type='industry' subjects='base' />{' '}
+                          <ProgramSubjects type="industry" subjects="base" />{' '}
                           {setString(langMenu.categoryAboutManagement)}
                         </span>
                       </div>
-                      <div className='info-flex'>
-                        <div className='pic'>
+                      <div className="info-flex">
+                        <div className="pic">
                           <SVGPaperCorner fill={'#C7C7C7'} />
                         </div>
                         <span>
                           <ProgramSubjects
-                            type='industry'
-                            subjects='specialty'
+                            type="industry"
+                            subjects="specialty"
                           />{' '}
                           {setString(langMenu.categorySpecializedSubjects)}
                         </span>
                       </div>
                     </div>
-                    <div className='menu-back-link last'>
+                    <div className="menu-back-link last">
                       <i></i>
                       {setString(langMenu.toProgramsBtn)}
                     </div>
@@ -966,8 +962,8 @@ const Header = ({ programs }) => {
                 {/* //third */}
               </li>
               <li>
-                <Link href='/programs/mini/online' locale='ru'>
-                  <a className='mobileAllProgramsLink'>
+                <Link href="/programs/mini/online" locale="ru">
+                  <a className="mobileAllProgramsLink">
                     {setString(langMenu.allPrograms)}
                   </a>
                 </Link>
@@ -978,21 +974,21 @@ const Header = ({ programs }) => {
         {/* //second */}
 
         {/* header-mobile-lang */}
-        <div className='header-mobile-lang js-header-mobile'>
-          <div className='container'>
-            <div className='menu-back-link'>
+        <div className="header-mobile-lang js-header-mobile">
+          <div className="container">
+            <div className="menu-back-link">
               <i></i>
               {setString(langMenu.backBtn)}
             </div>
-            <ul className='header-mobile-menu'>
+            <ul className="header-mobile-menu">
               <li>
-                <Link href={`${router.pathname}`} locale='ru'>
-                  <a id='switchToRuBtn'>🇷🇺&nbsp;Русский</a>
+                <Link href={`${router.pathname}`} locale="ru">
+                  <a id="switchToRuBtn">🇷🇺&nbsp;Русский</a>
                 </Link>
               </li>
               <li>
-                <Link href={`${router.pathname}`} locale='en-US'>
-                  <a id='switchToEnBtn'>🇺🇸&nbsp;English</a>
+                <Link href={`${router.pathname}`} locale="en-US">
+                  <a id="switchToEnBtn">🇺🇸&nbsp;English</a>
                 </Link>
               </li>
             </ul>

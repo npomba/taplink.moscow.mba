@@ -1,24 +1,26 @@
 import { useRouter } from 'next/router'
 
-const setString = (str, programTitle = false) => {
+const setString = (str, programTitle = false, stringDeclensionNumber = -1) => {
   const router = useRouter()
 
   let output = ''
 
-  if(programTitle === false){
-    if(router.locale === 'en-US'){
+  if (programTitle === false) {
+    if (router.locale === 'en-US') {
       output = str.en
-    }else{
+    } else {
       output = str.ru
     }
-  }else{
-    if(router.locale === 'en-US'){
+  } else {
+    if (router.locale === 'en-US') {
       output = str.titleEng
-    }else{
+    } else {
       output = str.title
     }
   }
-  
+
+  if (stringDeclensionNumber >= 0 && router.locale === 'ru')
+    output = str.ru[stringDeclensionNumber]
 
   return output
 }
