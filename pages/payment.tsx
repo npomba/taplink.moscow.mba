@@ -100,7 +100,7 @@ const payment = ({ programs }) => {
           <div className={stls.btns}>
             <a
               className={stls.btn}
-              href='https://3dsec.sberbank.ru/shortlink/LBuBzCqY'
+              href='https://securepayments.sberbank.ru/shortlink/xT3ztGET'
               target='_blank'
               rel='noopener noreferrer'>
               Оплата банковской картой
