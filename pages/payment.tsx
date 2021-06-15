@@ -100,7 +100,7 @@ const payment = ({ programs }) => {
           <div className={stls.btns}>
             <a
               className={stls.btn}
-              href='https://securepayments.sberbank.ru/shortlink/xT3ztGET'
+              href='https://securepayments.sberbank.ru/shortlink/O5FZls3k'
               target='_blank'
               rel='noopener noreferrer'>
               Оплата банковской картой
