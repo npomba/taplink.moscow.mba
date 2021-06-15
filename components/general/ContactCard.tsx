@@ -1,7 +1,7 @@
 import stls from '@/styles/modules/ContactCard.module.sass'
 import SVGLocation from '@/components/svgs/SVGLocation'
 
-const ContactCard = ({ city, address, number, email }) => {
+const ContactCard = ({ city, address, numbers, email }) => {
   return (
     <div>
       <address className='vcard'>
@@ -18,22 +18,12 @@ const ContactCard = ({ city, address, number, email }) => {
             </span>
           </li>
           <li>
-            {number[0] && (
-              <>
-                <a href={number[0].href} className='tel'>
-                  {number[0].val}
-                </a>
-                ,{' '}
-                <a href={number[1].href} className='tel'>
-                  {number[1].val}
-                </a>
-              </>
-            )}
-            {!number[0] && (
-              <>
-                <a className='tel'>{number.val}</a>
-              </>
-            )}
+            {numbers.map((number, idx) => (
+              <a key={idx} href={number.href} className='tel'>
+                {idx > 0 && ', '}
+                {number.val}
+              </a>
+            ))}
           </li>
           <li>
             <span className='email'>{email}</span>

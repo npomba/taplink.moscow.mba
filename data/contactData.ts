@@ -1,89 +1,137 @@
 import lang from '@/data/translation/header'
+import langContact from '@/data/translation/contact'
 import langCities from '@/data/translation/cities'
 
 const ContactInfo = () => {
   return {
-    tels: [
-      {
-        location: 'ru1',
-        data: {
+    ru: {
+      tels: [
+        {
           href: 'tel:+7-800-500-27-47',
           val: '+7 (800) 500-27-47'
+        },
+        { href: 'tel:+7-495-149-00-20', val: '+7 (495) 149-00-20' }
+      ],
+      address: {
+        city: langCities.moscow,
+        street: lang.addressStreet
+      },
+      email: { val: 'info@moscow.mba', mailTo: 'mailto:info@moscow.mba' }
+    },
+
+    kz: [
+      {
+        tels: [
+          {
+            href: 'tel:+7-777-398-97-40',
+            val: '+7 (777) 398-97-40'
+          },
+          {
+            href: 'tel:+7-771-766-22-24',
+            val: '+7 (771) 766-22-24'
+          },
+          {
+            href: 'tel:+7-727-311-15-00',
+            val: '+7 (727) 311-15-00'
+          }
+        ],
+        address: {
+          city: langCities.almaty,
+          street: langContact.almatyAddressStreet
+        },
+        email: {
+          val: 'almaty@moscow.mba',
+          mailTo: 'mailto:almaty@moscow.mba'
         }
       },
       {
-        location: 'ru2',
-        data: {
-          href: 'tel:+7-495-149-00-20',
-          val: '+7 (495) 149-00-20'
+        tels: [
+          {
+            href: 'tel:+7-777-670-53-15',
+            val: '+7 (777) 670-53-15'
+          },
+          {
+            href: 'tel:+7-777-670-53-11',
+            val: '+7 (777) 670-53-11'
+          }
+        ],
+        address: {
+          city: langCities.shymkent,
+          street: langContact.shymkentAddressStreet
+        },
+        email: {
+          val: 'shymkent@moscow.mba',
+          mailTo: 'mailto:shymkent@moscow.mba'
         }
+      }
+    ],
+
+    uz: {
+      tels: [
+        {
+          href: 'tel:+998-71-256-01-48',
+          val: '+998-71-256-01-48'
+        },
+        {
+          href: 'tel:+998-98-125-85-53',
+          val: '+998-98-125-85-53'
+        },
+        {
+          href: 'tel:+998-98-125-85-54',
+          val: '+998-98-125-85-54'
+        }
+      ],
+      address: {
+        city: langCities.tashkent,
+        street: langContact.tashkentAddressStreet
       },
-      {
-        location: 'us',
-        data: {
+      email: {
+        val: 'tashkent@moscow.mba',
+        mailTo: 'mailto:tashkent@moscow.mba'
+      }
+    },
+
+    us: {
+      tels: [
+        {
           href: 'tel:+1-631-694-27-84',
           val: '+1 (631) 694-27-84'
         }
+      ],
+      address: {
+        city: langCities.newYork,
+        street: langContact.newyorkAddressStreet
       },
-      {
-        location: 'es',
-        data: {
+      email: { val: 'info@moscow.mba', mailTo: 'mailto:info@moscow.mba' }
+    },
+
+    es: {
+      tels: [
+        {
           href: 'tel:+34-93-273-64-90',
           val: '+34 (93) 273-64-90'
         }
+      ],
+      address: {
+        city: langCities.barcelona,
+        street: langContact.barcelonaAddressStreet
       },
-      {
-        location: 'de',
-        data: {
+      email: { val: 'info@moscow.mba', mailTo: 'mailto:info@moscow.mba' }
+    },
+
+    de: {
+      tels: [
+        {
           href: 'tel:+49-30-436-23-98',
           val: '+49 (30) 436-23-98'
         }
-      }
-    ],
-    addresses: [
-      {
-        location: 'ru',
-        data: {
-          city: langCities.moscow,
-          street: {
-            ru: lang.addressStreet.ru,
-            en: lang.addressStreet.en
-          }
-        }
+      ],
+      address: {
+        city: langCities.berlin,
+        street: langContact.berlinAddressStreet
       },
-      {
-        location: 'us',
-        data: {
-          city: langCities.newYork,
-          street: {
-            ru: 'Loisaida Ave 55',
-            en: 'Loisaida Ave 55'
-          }
-        }
-      },
-      {
-        location: 'es',
-        data: {
-          city: langCities.barcelona,
-          street: {
-            ru: 'Carrer de Gongora 68',
-            en: 'Carrer de Gongora 68'
-          }
-        }
-      },
-      {
-        location: 'de',
-        data: {
-          city: langCities.berlin,
-          street: {
-            ru: 'Goltzstrabe 50',
-            en: 'Goltzstrabe 50'
-          }
-        }
-      }
-    ],
-    email: 'info@moscow.mba',
-    emailTo: 'mailto:info@moscow.mba'
+      email: { val: 'info@moscow.mba', mailTo: 'mailto:info@moscow.mba' }
+    }
   }
 }
 

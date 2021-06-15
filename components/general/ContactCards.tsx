@@ -5,35 +5,48 @@ import setString from '@/components/hooks/setString'
 
 const ContactCards = () => {
   const contactInfo = contactData()
-  const ruNumbers = [contactInfo.tels[0].data, contactInfo.tels[1].data]
   return (
     <div className={stls.locations}>
       <div className={stls.col}>
         <ContactCard
-          city={setString(contactInfo.addresses[0].data.city)}
-          address={setString(contactInfo.addresses[0].data.street)}
-          number={ruNumbers}
-          email={contactInfo.email}
+          city={setString(contactInfo.ru.address.city)}
+          address={setString(contactInfo.ru.address.street)}
+          numbers={contactInfo.ru.tels}
+          email={contactInfo.ru.email.val}
         />
         <ContactCard
-          city={setString(contactInfo.addresses[2].data.city)}
-          address={setString(contactInfo.addresses[2].data.street)}
-          number={contactInfo.tels[3].data}
-          email={contactInfo.email}
+          city={setString(contactInfo.uz.address.city)}
+          address={setString(contactInfo.uz.address.street)}
+          numbers={contactInfo.uz.tels}
+          email={contactInfo.uz.email.val}
         />
       </div>
       <div className={stls.col}>
         <ContactCard
-          city={setString(contactInfo.addresses[1].data.city)}
-          address={setString(contactInfo.addresses[1].data.street)}
-          number={contactInfo.tels[2].data}
-          email={contactInfo.email}
+          city={setString(contactInfo.kz[0].address.city)}
+          address={setString(contactInfo.kz[0].address.street)}
+          numbers={contactInfo.kz[0].tels}
+          email={contactInfo.kz[0].email.val}
         />
         <ContactCard
-          city={setString(contactInfo.addresses[3].data.city)}
-          address={setString(contactInfo.addresses[3].data.street)}
-          number={contactInfo.tels[4].data}
-          email={contactInfo.email}
+          city={setString(contactInfo.kz[1].address.city)}
+          address={setString(contactInfo.kz[1].address.street)}
+          numbers={contactInfo.kz[1].tels}
+          email={contactInfo.kz[1].email.val}
+        />
+      </div>
+      <div className={stls.col}>
+        <ContactCard
+          city={setString(contactInfo.us.address.city)}
+          address={setString(contactInfo.us.address.street)}
+          numbers={contactInfo.us.tels}
+          email={contactInfo.us.email.val}
+        />
+        <ContactCard
+          city={setString(contactInfo.de.address.city)}
+          address={setString(contactInfo.de.address.street)}
+          numbers={contactInfo.de.tels}
+          email={contactInfo.de.email.val}
         />
       </div>
     </div>

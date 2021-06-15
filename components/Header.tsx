@@ -79,15 +79,15 @@ const Header = ({ programs }) => {
           </div>
           <div className='header-place'>
             <SVGLocation />
-            {setString(contactInfo.addresses[0].data.city)},{' '}
-            {setString(contactInfo.addresses[0].data.street)}
+            {setString(contactInfo.ru.address.city)},{' '}
+            {setString(contactInfo.ru.address.street)}
           </div>
           <div className='header-phones'>
-            <a href={contactInfo.tels[0].data.href}>
-              {contactInfo.tels[0].data.val}
+            <a href={contactInfo.ru.tels[0].href}>
+              {contactInfo.ru.tels[0].val}
             </a>
-            <a href={contactInfo.tels[1].data.href}>
-              {contactInfo.tels[1].data.val}
+            <a href={contactInfo.ru.tels[1].href}>
+              {contactInfo.ru.tels[1].val}
             </a>
           </div>
           {at.index || at.about || at.contact ? <HeaderLangLink /> : null}

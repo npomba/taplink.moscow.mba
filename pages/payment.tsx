@@ -87,8 +87,8 @@ const payment = ({ programs }) => {
           <p className={stls.p}>
             В случае возникновения проблем с оплатой, свяжитесь с нами, в
             рабочие часы (09:00-19:00 МСК), по телефону{' '}
-            <em className={stls.em}>{contactInfo.tels[0].data.val}</em>, с
-            помощью email <em className={stls.em}>{contactInfo.email}</em> или
+            <em className={stls.em}>{contactInfo.ru.tels[0].val}</em>, с помощью
+            email <em className={stls.em}>{contactInfo.ru.email.val}</em> или
             оставьте заявку, нажав на кнопку <strong>Помощь</strong> ниже
           </p>
 

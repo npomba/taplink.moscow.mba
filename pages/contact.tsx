@@ -9,15 +9,14 @@ import { apiProgramsReqUrl, server } from '@/config/index'
 
 const contact = ({ programs }) => {
   const contactInfo = contactData()
-  const ruNumbers = [contactInfo.tels[0].data, contactInfo.tels[1].data]
   return (
     <>
       <NextSeo
         title={`${setString(lang.linkContacts)} - Moscow Business Academy`}
         description={truncate(
-          `${setString(contactInfo.addresses[0].data.city)}, ${setString(
-            contactInfo.addresses[0].data.street
-          )}, ${ruNumbers[0].val}, ${contactInfo.email}`,
+          `${setString(contactInfo.ru.address.city)}, ${setString(
+            contactInfo.ru.address.street
+          )}, ${contactInfo.ru.tels[0].val}, ${contactInfo.ru.email.val}`,
           120
         )}
         canonical={'https://moscow.mba/contact'}
