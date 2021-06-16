@@ -1,7 +1,14 @@
 import stls from '@/styles/modules/ContactCard.module.sass'
 import SVGLocation from '@/components/svgs/SVGLocation'
+import { Fragment } from 'react'
 
-const ContactCard = ({ city, address, numbers, email }) => {
+const ContactCard = ({
+  city,
+  address,
+  numbers,
+  email,
+  numNonClickable = false
+}) => {
   return (
     <div>
       <address className='vcard'>
@@ -14,16 +21,39 @@ const ContactCard = ({ city, address, numbers, email }) => {
         <ul className={stls.list}>
           <li>
             <span className='adr'>
-              <span className='street-address'>{address}</span>
+              <span className='street-address'>
+                {address.split(',').map((str, idx) =>
+                  idx > 0 ? (
+                    <Fragment key={idx}>
+                      ,<br />
+                      {str}
+                    </Fragment>
+                  ) : (
+                    str
+                  )
+                )}
+              </span>
             </span>
           </li>
           <li>
-            {numbers.map((number, idx) => (
-              <a key={idx} href={number.href} className='tel'>
-                {idx > 0 && ', '}
-                {number.val}
-              </a>
-            ))}
+            <span>
+              {numbers.map((number, idx) => (
+                <Fragment key={idx}>
+                  {idx > 0 && (
+                    <>
+                      ,<br />
+                    </>
+                  )}
+                  {numNonClickable ? (
+                    number.val
+                  ) : (
+                    <a key={idx} href={number.href} className='tel'>
+                      {number.val}
+                    </a>
+                  )}
+                </Fragment>
+              ))}
+            </span>
           </li>
           <li>
             <span className='email'>{email}</span>
