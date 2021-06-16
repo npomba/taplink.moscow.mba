@@ -51,12 +51,12 @@ const about = ({ programs }) => {
           </li>
           <li className={stls.listItem}>
             <p>
-              <strong>Телефон:</strong> {contactInfo.tels[1].data.val}
+              <strong>Телефон:</strong> {contactInfo.ru.tels[0].val}
             </p>
           </li>
           <li className={stls.listItem}>
             <p>
-              <strong>Email:</strong> {contactInfo.email}
+              <strong>Email:</strong> {contactInfo.ru.email.val}
             </p>
           </li>
           <li className={stls.listItem}>

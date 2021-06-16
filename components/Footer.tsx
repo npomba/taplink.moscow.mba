@@ -18,12 +18,14 @@ const Footer = () => {
         <div className='footer-top'>
           <div className='footer-top-left'>
             <div className='footer-tel'>
-              <a href={contactInfo.tels[0].data.href}>
-                {contactInfo.tels[0].data.val}
+              <a href={contactInfo.ru.tels[0].href}>
+                {contactInfo.ru.tels[0].val}
               </a>
             </div>
             <div className='footer-mail'>
-              <a href={contactInfo.emailTo}>{contactInfo.email}</a>
+              <a href={contactInfo.ru.email.mailTo}>
+                {contactInfo.ru.email.val}
+              </a>
             </div>
           </div>
           <div className='footer-top-right'>
@@ -104,8 +106,8 @@ const Footer = () => {
               <div className='footer-place'>
                 <SVGLocation />
                 <span>
-                  {setString(contactInfo.addresses[0].data.city)},{' '}
-                  {setString(contactInfo.addresses[0].data.street)}
+                  {setString(contactInfo.ru.address.city)},{' '}
+                  {setString(contactInfo.ru.address.street)}
                 </span>
               </div>
               <ul className='footer-socials'>
