@@ -1,0 +1,48 @@
+.whoItIsForSection
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 130px
+
+  h2
+    flex: 1 0 100%
+    padding-left: 220px
+
+.whoItIsForModule
+  flex: 1 1 calc(50% - 75px)
+  display: flex
+  align-items: flex-start
+  margin: 85px 0 59px
+  padding-top: 38px
+  border-top: 1px solid rgba(0, 0, 0, 0.11)
+  color: #262626
+
+  &:nth-of-type(odd)
+    margin-right: 75px
+
+  .mainHeading
+    position: relative
+    margin-right: 50px
+    font-size: 150px
+    font-weight: 300
+    line-height: 65%
+    color: #FF3535
+
+    &::before
+      content: ''
+      position: absolute
+      top: -39px
+      left: 0
+      width: 168px
+      height: 2px
+      background-color: #FF3535
+
+  .titleHeading
+    margin-bottom: 10px
+    font-size: 24px
+    font-weight: 500
+    line-height: 120%
+
+  .description
+    font-size: 20px
+    font-weight: 300
+    line-height: 130%
