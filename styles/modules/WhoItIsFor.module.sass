@@ -1,7 +1,13 @@
+@import @/styles/utils/mixins
+  
 .whoItIsForSection
   display: flex
   flex-wrap: wrap
-  margin-bottom: 130px
+  margin: 130px 0
+
+  @include media(laptop, tablet, phone)
+    flex-direction: column
+    margin: 65px 0
 
   h2
     flex: 1 0 100%
@@ -16,8 +22,18 @@
   border-top: 1px solid rgba(0, 0, 0, 0.11)
   color: #262626
 
+  @include media(laptop, tablet, phone)
+    flex: 1 1 50%
+
+  @include media(tablet, phone)
+    flex-direction: column
+    margin: 40px 0 0
+
   &:nth-of-type(odd)
     margin-right: 75px
+
+    @include media(laptop, tablet, phone)
+      margin-right: 0
 
   .mainHeading
     position: relative
@@ -27,12 +43,18 @@
     line-height: 65%
     color: #FF3535
 
+    @include media(laptop, tablet, phone)
+      font-size: 120px
+    
+    @include media(tablet, phone)
+      margin-bottom: 30px
+
     &::before
       content: ''
       position: absolute
       top: -39px
       left: 0
-      width: 168px
+      width: 100%
       height: 2px
       background-color: #FF3535
 
@@ -42,7 +64,13 @@
     font-weight: 500
     line-height: 120%
 
+    @include media(laptop, tablet, phone)
+      font-size: 17px
+
   .description
     font-size: 20px
     font-weight: 300
     line-height: 130%
+
+    @include media(laptop, tablet, phone)
+      font-size: 16px
