@@ -1,8 +1,9 @@
 import { NextSeo } from 'next-seo'
 import { server, apiProgramsReqUrl } from '@/config/index'
 import contactData from '@/data/contactData'
-
 import stls from '@/styles/modules/LegalAboutPage.module.sass'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const about = ({ programs }) => {
   const contactInfo = contactData()
@@ -17,6 +18,13 @@ const about = ({ programs }) => {
         canonical={'https://moscow.mba/legal'}
       />
 
+      <section
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
+      >
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <h1 className={stls.h1}>Карточка организации</h1>
         <ul className={stls.list}>
@@ -76,8 +84,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data
-    }
+      programs: data,
+    },
   }
 }
 

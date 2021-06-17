@@ -2,6 +2,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import setString from '@/components/hooks/setString'
 import lang from '@/data/translation/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
 
 const JumbotronMain = () => {
   return (
@@ -11,6 +12,7 @@ const JumbotronMain = () => {
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
+          <Breadcrumbs />
           <div className='jumbotron-flex'>
             <div className='jumbotron-text'>
               <div className='image-text'>

@@ -6,6 +6,8 @@ import lang from '@/data/translation/header'
 import ContactCards from '@/components/general/ContactCards'
 import contactData from '@/data/contactData'
 import { apiProgramsReqUrl, server } from '@/config/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const contact = ({ programs }) => {
   const contactInfo = contactData()
@@ -30,11 +32,17 @@ const contact = ({ programs }) => {
             telephone: '+7-800-500-27-47',
             contactType: 'customer service',
             areaServed: 'RU',
-            availableLanguage: ['Russian']
-          }
+            availableLanguage: ['Russian'],
+          },
         ]}
       />
-
+      <section
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
+      >
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <h1 className={stls.h1}>{setString(lang.linkContacts)}</h1>
         <ContactCards />
@@ -49,8 +57,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data
-    }
+      programs: data,
+    },
   }
 }
 
