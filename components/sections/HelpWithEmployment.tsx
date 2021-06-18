@@ -1,0 +1,42 @@
+import stls from '@/styles/modules/HelpWithEmployment.module.sass'
+import HelpWithEmploymentBlock from '@/components/general/HelpWIthEmploymentBlock'
+
+const employmentMeasures = [
+  {
+    title: 'Оформите резюме',
+    description:
+      'Научитесь выгодно презентовать свои сильные стороны и узнаете правильную структуру резюме',
+  },
+  {
+    title: 'Узнаете, как найти работу',
+    description:
+      'Познакомитесь с площадками для поиска работы и получите доступ к бирже проектов',
+  },
+  {
+    title: 'Соберёте портфолио',
+    description:
+      'Оформите портфолио так, чтобы работодатель убедился в ваших навыках',
+  },
+  {
+    title: 'Подготовитесь к собеседованию',
+    description:
+      'Расскажем как подготовиться к собеседованию в компаниях-партнёрах',
+  },
+]
+
+const HelpWithEmployment = () => {
+  return (
+    <section className={stls.helpWithEmploymentSection}>
+      <h2>Мы помогаем в трудоустройстве</h2>
+      {employmentMeasures.map(({ title, description }, idx) => (
+        <HelpWithEmploymentBlock
+          key={title + idx}
+          title={title}
+          description={description}
+        />
+      ))}
+    </section>
+  )
+}
+
+export default HelpWithEmployment
