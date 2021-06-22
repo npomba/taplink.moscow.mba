@@ -145,8 +145,8 @@ export default {
   },
 
   foreignAffiliatesDisc: {
-    ru: 'Филиалы Moscow Business Academy работают в Барселоне, Берлине и Нью-Йорке',
-    en: 'MBA affiliates work in Barcelona, Berlin and New-York'
+    ru: 'У Moscow Business Academy работают филиалы в Москве, Берлине, Нью-Йорке, Ташкенте и Алматы',
+    en: 'MBA affiliates work in Moscow, Berlin, New-York, Tashkent, and Almaty'
   },
 
   foreignAffiliatesSurfaceArea: {

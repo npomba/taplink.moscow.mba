@@ -55,7 +55,7 @@ const ForeignAffiliates = () => {
         <div className='branches-map'>
           {/*TODO: swap fixed layout with default, fix up the css for an image */}
           <Image
-            src='/assets/images/branches_map.png'
+            src='/assets/images/branches_map-alt.png'
             alt={setString(lang.foreignAffiliatesDisc)}
             width={659}
             height={394}
