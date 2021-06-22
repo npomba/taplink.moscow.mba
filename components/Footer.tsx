@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 
@@ -68,37 +68,37 @@ const Footer = () => {
               <li className='empty'></li>
               <li>
                 <Link href='/about'>
-                  <a>{setString(langHeader.linkAbout)}</a>
+                  <a>{SetString(langHeader.linkAbout)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/teachers' locale='ru'>
-                  <a>{setString(langHeader.linkTeachers)}</a>
+                  <a>{SetString(langHeader.linkTeachers)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/webinars' locale='ru'>
-                  <a>{setString(langHeader.linkWebinars)}</a>
+                  <a>{SetString(langHeader.linkWebinars)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/contact'>
-                  <a>{setString(langHeader.linkContacts)}</a>
+                  <a>{SetString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/legal' locale='ru'>
-                  <a>{setString(langHeader.linkLegal)}</a>
+                  <a>{SetString(langHeader.linkLegal)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/legal/about' locale='ru'>
-                  <a>{setString(lang.legalAboutLink)}</a>
+                  <a>{SetString(lang.legalAboutLink)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/payment' locale='ru'>
-                  <a>{setString(lang.paymentLink)}</a>
+                  <a>{SetString(lang.paymentLink)}</a>
                 </Link>
               </li>
             </ul>
@@ -106,8 +106,8 @@ const Footer = () => {
               <div className='footer-place'>
                 <SVGLocation />
                 <span>
-                  {setString(contactInfo.ru.address.city)},{' '}
-                  {setString(contactInfo.ru.address.street)}
+                  {SetString(contactInfo.ru.address.city)},{' '}
+                  {SetString(contactInfo.ru.address.street)}
                 </span>
               </div>
               <ul className='footer-socials'>
@@ -139,10 +139,10 @@ const Footer = () => {
             &copy; Moscow Business Academy, 2021
           </div>
           <a href='#!' className='footer-links'>
-            {setString(lang.offerContract)}
+            {SetString(lang.offerContract)}
           </a>
           <a href='#!' className='footer-links'>
-            {setString(lang.privacyPolicy)}
+            {SetString(lang.privacyPolicy)}
           </a>
         </div>
       </div>

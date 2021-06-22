@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
 import Until from '@/components/dates/Until'
@@ -22,7 +22,7 @@ const Programs = ({ programs }) => {
       <section className='program-options-section'>
         <div className='program-options-flex'>
           <div className='program-options-left'>
-            <h2>{setString(langHeader.programsBtn)}</h2>
+            <h2>{SetString(langHeader.programsBtn)}</h2>
             <ul className='program-options-tabs'>
               <li>
                 <a
@@ -50,7 +50,7 @@ const Programs = ({ programs }) => {
               </li>
               <li>
                 <Link href='/programs/mini/online' locale='ru'>
-                  <a>{setString(langMenu.allPrograms)}</a>
+                  <a>{SetString(langMenu.allPrograms)}</a>
                 </Link>
               </li>
             </ul>
@@ -66,15 +66,15 @@ const Programs = ({ programs }) => {
                   </i>
                   <span>
                     <ProgramSubjects type='mini' sum={true} />{' '}
-                    {setString(langMenu.qtSubjects)}{' '}
+                    {SetString(langMenu.qtSubjects)}{' '}
                   </span>
                 </div>
                 <div className='prog-status'>
-                  {setString(langMenu.newestPrograms)} 2021{' '}
-                  {setString(langMenu.newestProgramsYear)}
+                  {SetString(langMenu.newestPrograms)} 2021{' '}
+                  {SetString(langMenu.newestProgramsYear)}
                 </div>
               </div>
-              <div className='desc'>{setString(langMenu.categoryDiscMini)}</div>
+              <div className='desc'>{SetString(langMenu.categoryDiscMini)}</div>
               <ul className='program-options-block-tabs--sctn-programs'>
                 <li>
                   <a href='#program-options-1-1' className='active'>
@@ -88,7 +88,7 @@ const Programs = ({ programs }) => {
               <div className='program-options-detail'>
                 <div id='program-options-1-1' className='program-options-block'>
                   <div className='name'>
-                    {setString(langMenu.onlineTitle)}
+                    {SetString(langMenu.onlineTitle)}
                     <div className='discount'>
                       <div className='size'>
                         <Discount />
@@ -104,10 +104,10 @@ const Programs = ({ programs }) => {
                       type={'mini'}
                       format={'online'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='new-price'>
                       {' '}
                       <Price
@@ -132,7 +132,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatRemote)}</span>
+                      <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -140,7 +140,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='mini' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -155,7 +155,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )
@@ -164,17 +164,17 @@ const Programs = ({ programs }) => {
                   </ul>
                 </div>
                 <div id='program-options-1-2' className='program-options-block'>
-                  <div className='name'>{setString(langMenu.blendedTitle)}</div>
+                  <div className='name'>{SetString(langMenu.blendedTitle)}</div>
                   <div className='directions-count'>
                     <ProgramsQt
                       programs={data}
                       type={'mini'}
                       format={'blended'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='simple-price'>
                       {' '}
                       <Price
@@ -190,7 +190,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatBlended)}</span>
+                      <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -198,7 +198,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='mini' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -213,7 +213,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )
@@ -231,16 +231,16 @@ const Programs = ({ programs }) => {
                   </i>
                   <span>
                     <ProgramSubjects type='professional' sum={true} />{' '}
-                    {setString(langMenu.qtSubjects)}{' '}
+                    {SetString(langMenu.qtSubjects)}{' '}
                   </span>
                 </div>
                 <div className='prog-status'>
-                  {setString(langMenu.newestPrograms)} 2021{' '}
-                  {setString(langMenu.newestProgramsYear)}
+                  {SetString(langMenu.newestPrograms)} 2021{' '}
+                  {SetString(langMenu.newestProgramsYear)}
                 </div>
               </div>
               <div className='desc'>
-                {setString(langMenu.categoryDiscProfessional)}
+                {SetString(langMenu.categoryDiscProfessional)}
               </div>
               <ul className='program-options-block-tabs--sctn-programs'>
                 <li>
@@ -255,7 +255,7 @@ const Programs = ({ programs }) => {
               <div className='program-options-detail'>
                 <div id='program-options-2-1' className='program-options-block'>
                   <div className='name'>
-                    {setString(langMenu.onlineTitle)}
+                    {SetString(langMenu.onlineTitle)}
                     <div className='discount'>
                       <div className='size'>
                         <Discount />
@@ -271,10 +271,10 @@ const Programs = ({ programs }) => {
                       type={'professional'}
                       format={'online'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='new-price'>
                       {' '}
                       <Price
@@ -299,7 +299,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatRemote)}</span>
+                      <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -307,7 +307,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='professional' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -322,7 +322,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )
@@ -331,17 +331,17 @@ const Programs = ({ programs }) => {
                   </ul>
                 </div>
                 <div id='program-options-2-2' className='program-options-block'>
-                  <div className='name'>{setString(langMenu.blendedTitle)}</div>
+                  <div className='name'>{SetString(langMenu.blendedTitle)}</div>
                   <div className='directions-count'>
                     <ProgramsQt
                       programs={data}
                       type={'professional'}
                       format={'blended'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='simple-price'>
                       {' '}
                       <Price
@@ -357,7 +357,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatBlended)}</span>
+                      <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -365,7 +365,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='professional' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -380,7 +380,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )
@@ -398,16 +398,16 @@ const Programs = ({ programs }) => {
                   </i>
                   <span>
                     <ProgramSubjects type='industry' sum={true} />{' '}
-                    {setString(langMenu.qtSubjects)}{' '}
+                    {SetString(langMenu.qtSubjects)}{' '}
                   </span>
                 </div>
                 <div className='prog-status'>
-                  {setString(langMenu.newestPrograms)} 2021{' '}
-                  {setString(langMenu.newestProgramsYear)}
+                  {SetString(langMenu.newestPrograms)} 2021{' '}
+                  {SetString(langMenu.newestProgramsYear)}
                 </div>
               </div>
               <div className='desc'>
-                {setString(langMenu.categoryDiscIndustry)}
+                {SetString(langMenu.categoryDiscIndustry)}
               </div>
               <ul className='program-options-block-tabs--sctn-programs'>
                 <li>
@@ -422,7 +422,7 @@ const Programs = ({ programs }) => {
               <div className='program-options-detail'>
                 <div id='program-options-3-1' className='program-options-block'>
                   <div className='name'>
-                    {setString(langMenu.onlineTitle)}
+                    {SetString(langMenu.onlineTitle)}
                     <div className='discount'>
                       <div className='size'>
                         <Discount />
@@ -438,10 +438,10 @@ const Programs = ({ programs }) => {
                       type={'industry'}
                       format={'online'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='new-price'>
                       {' '}
                       <Price
@@ -466,7 +466,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatRemote)}</span>
+                      <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -474,7 +474,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='industry' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -489,7 +489,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )
@@ -498,17 +498,17 @@ const Programs = ({ programs }) => {
                   </ul>
                 </div>
                 <div id='program-options-3-2' className='program-options-block'>
-                  <div className='name'>{setString(langMenu.blendedTitle)}</div>
+                  <div className='name'>{SetString(langMenu.blendedTitle)}</div>
                   <div className='directions-count'>
                     <ProgramsQt
                       programs={data}
                       type={'industry'}
                       format={'blended'}
                     />{' '}
-                    {setString(langMenu.qtPrograms)}
+                    {SetString(langMenu.qtPrograms)}
                   </div>
                   <div className='price'>
-                    {setString(langMenu.price)}:{' '}
+                    {SetString(langMenu.price)}:{' '}
                     <i className='simple-price'>
                       {' '}
                       <Price
@@ -524,7 +524,7 @@ const Programs = ({ programs }) => {
                       <div className='pic'>
                         <SVGCheckCircle fill={'#C7C7C7'} />
                       </div>
-                      <span>{setString(langMenu.formatBlended)}</span>
+                      <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
@@ -532,7 +532,7 @@ const Programs = ({ programs }) => {
                       </div>
                       <span>
                         <ProgramSubjects type='industry' sum={true} />{' '}
-                        {setString(langMenu.qtSubjects)}
+                        {SetString(langMenu.qtSubjects)}
                       </span>
                     </div>
                   </div>
@@ -547,7 +547,7 @@ const Programs = ({ programs }) => {
                             <Link
                               href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
                               locale='ru'>
-                              <a>{setString(item, true)}</a>
+                              <a>{SetString(item, true)}</a>
                             </Link>
                           </li>
                         )

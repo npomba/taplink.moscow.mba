@@ -10,7 +10,7 @@ import Teachers from '@/components/sections/Teachers'
 import UpToDateContent from '@/components/sections/UpToDateContent'
 import Accreditation from '@/components/sections/Accreditation'
 import ContactUs from '@/components/sections/ContactUs'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import langIndex from '@/data/translation/index'
 import { apiProgramsReqUrl, server } from '@/config/index'
@@ -19,8 +19,8 @@ const about = ({ programs }) => {
   return (
     <>
       <NextSeo
-        title={`${setString(lang.title)} MBA`}
-        description={truncate(`${setString(langIndex.headerSubtitle)}`, 120)}
+        title={`${SetString(lang.title)} MBA`}
+        description={truncate(`${SetString(langIndex.headerSubtitle)}`, 120)}
         canonical={'https://moscow.mba/about'}
       />
 

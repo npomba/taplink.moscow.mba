@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import setString from '../components/hooks/setString'
+import SetString from './hooks/SetString'
 import lang from '@/data/translation/header'
 import SVGTriangleBottom from '@/components/svgs/SVGTriangleBottom'
 
@@ -13,7 +13,7 @@ const HeaderLangLink = () => {
   return (
     <div className={`${showMe && 'lang-red-highlight'} lang`}>
       <a className='lang__btn' onClick={showLangMenu}>
-        {setString(lang.linkLang)}{' '}
+        {SetString(lang.linkLang)}{' '}
         <SVGTriangleBottom fill={`${showMe ? '#FF3535' : '#000'}`} />
       </a>
       <ul className={`lang__selectList ${showMe && 'show'}`}>

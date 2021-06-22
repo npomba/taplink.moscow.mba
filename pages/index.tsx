@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import JumbotronCta from '@/components/sections/JumbotronCta'
 import About from '@/components/sections/About'
@@ -22,9 +22,9 @@ const Home = ({ programs }) => {
       <NextSeo
         title={'Moscow Business Academy'}
         description={truncate(
-          `${setString(lang.headerTitlePreHighlight)} ${setString(
+          `${SetString(lang.headerTitlePreHighlight)} ${SetString(
             lang.headerTitleHighlight
-          )} ${setString(lang.headerTitlePostHighlight)}`,
+          )} ${SetString(lang.headerTitlePostHighlight)}`,
           120
         )}
         canonical={'https://moscow.mba/'}

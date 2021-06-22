@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/corporateClients'
 
@@ -9,10 +9,10 @@ const CorporateClients = () => {
       <div className='section-pl'>
         <div className='clients-text'>
           <h2>
-            {setString(lang.corporateClientsTitleTop)} <br />
-            {setString(lang.corporateClientsTitleBottom)}
+            {SetString(lang.corporateClientsTitleTop)} <br />
+            {SetString(lang.corporateClientsTitleBottom)}
           </h2>
-          <p>{setString(lang.corporateClientsDics)}</p>
+          <p>{SetString(lang.corporateClientsDics)}</p>
         </div>
       </div>
       <div className='clients-slider js-slick'>
@@ -21,7 +21,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.hh.src}
-                alt={setString(imageData.hh.alt)}
+                alt={SetString(imageData.hh.alt)}
                 width={141}
                 height={106}
                 priority={true}
@@ -32,7 +32,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.rzd.src}
-                alt={setString(imageData.rzd.alt)}
+                alt={SetString(imageData.rzd.alt)}
                 width={141}
                 height={107}
                 priority={true}
@@ -43,7 +43,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.tatenergo.src}
-                alt={setString(imageData.tatenergo.alt)}
+                alt={SetString(imageData.tatenergo.alt)}
                 width={240}
                 height={92}
                 priority={true}
@@ -54,7 +54,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.toms.src}
-                alt={setString(imageData.toms.alt)}
+                alt={SetString(imageData.toms.alt)}
                 width={163}
                 height={54}
                 priority={true}
@@ -67,7 +67,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.rosneft.src}
-                alt={setString(imageData.rosneft.alt)}
+                alt={SetString(imageData.rosneft.alt)}
                 width={142}
                 height={107}
                 priority={true}
@@ -78,7 +78,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.rosseti.src}
-                alt={setString(imageData.rosseti.alt)}
+                alt={SetString(imageData.rosseti.alt)}
                 width={142}
                 height={107}
                 priority={true}
@@ -89,7 +89,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.sberbankLeasing.src}
-                alt={setString(imageData.sberbankLeasing.alt)}
+                alt={SetString(imageData.sberbankLeasing.alt)}
                 width={168}
                 height={67}
                 priority={true}
@@ -100,7 +100,7 @@ const CorporateClients = () => {
             <div className='image'>
               <Image
                 src={imageData.lukomA.src}
-                alt={setString(imageData.lukomA.alt)}
+                alt={SetString(imageData.lukomA.alt)}
                 width={165}
                 height={43}
                 priority={true}

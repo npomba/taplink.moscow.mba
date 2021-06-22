@@ -1,7 +1,7 @@
 import Until from '@/components/dates/Until'
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
 
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
 
 import useAt from '@/components/hooks/useAt'
@@ -36,11 +36,11 @@ const InfoRectangle = ({ programPage = false }) => {
         <p>Форма обучения:</p>
         <div className='detail'>
           {at.online
-            ? setString(langMenu.formatRemote)
+            ? SetString(langMenu.formatRemote)
             : at.blended
-            ? setString(langMenu.formatBlended)
+            ? SetString(langMenu.formatBlended)
             : at.executive
-            ? setString(langMenu.formatExecutive)
+            ? SetString(langMenu.formatExecutive)
             : ''}
         </div>
       </li>
