@@ -15,6 +15,9 @@ import { dev, gtmId } from '@/config/index'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'nprogress/nprogress.css'
+
+import Script from 'next/script'
+
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
@@ -60,6 +63,11 @@ function MyApp({ Component, pageProps, router }) {
         logo='https://moscow.mba/logo.jpg'
         url='https://moscow.mba/'
       />
+      <Script
+        src='/assets/js/vendors/jquery-3.6.0.min.js'
+        strategy='beforeInteractive'
+      />
+      <Script src='/assets/js/myjs.js' />
       <PageWrapper>
         <Header programs={programs} />
         <AnimatePresence>
