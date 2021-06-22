@@ -1,4 +1,4 @@
-import { NextSeo } from 'next-seo'
+import { NextSeo, CourseJsonLd } from 'next-seo'
 import truncate from 'truncate'
 import JumbotronProgram from '@/components/sections/JumbotronProgram'
 import AboutExecutive from '@/components/sections/AboutExecutive'
@@ -44,7 +44,17 @@ const executive = ({ programs }) => {
 
   return (
     <>
-      <NextSeo title={data.title} description={truncate(data.desc, 120)} />
+      <NextSeo
+        title={`${data.title} - Moscow Business Academy`}
+        description={truncate(data.desc, 120)}
+        canonical={'https://moscow.mba/programs/executive'}
+      />
+      <CourseJsonLd
+        courseName={`${data.title} MBA`}
+        providerName='Moscow Business Academy'
+        providerUrl={'https://moscow.mba/programs/executive'}
+        description={truncate(data.desc, 120)}
+      />
 
       <JumbotronProgram data={data} />
       <div className='container'>

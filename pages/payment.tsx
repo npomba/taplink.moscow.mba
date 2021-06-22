@@ -1,17 +1,26 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Image from 'next/image'
 import stls from '@/styles/modules/PaymentPage.module.sass'
 import { server, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopUpForm from '@/components/popups/Form'
+import contactData from '@/data/contactData'
 
 const payment = ({ programs }) => {
+  const contactInfo = contactData()
+
   return (
     <>
-      <Head>
-        <title>MBA | Оплата</title>
-      </Head>
+      <NextSeo
+        title={'Оплата обучения в Moscow Business Academy'}
+        description={truncate(
+          'Оплата банковской картой через ПАО СБЕРБАНК',
+          120
+        )}
+        canonical={'https://moscow.mba/payment'}
+      />
       <div className='container'>
         <div className={stls.content}>
           <h1 className={stls.h1}>Оплата</h1>
@@ -69,6 +78,21 @@ const payment = ({ programs }) => {
           </p>
 
           <p className={stls.p}>
+            В случае возврата, срок возврата составляет 30 дней с момента
+            получения образовательных материалов. Возврат переведённых средств
+            производится на Ваш банковский счёт в течение 5-30 рабочих дней
+            (срок зависит от банка, который выдал Вашу банковскую карту)
+          </p>
+
+          <p className={stls.p}>
+            В случае возникновения проблем с оплатой, свяжитесь с нами, в
+            рабочие часы (09:00-19:00 МСК), по телефону{' '}
+            <em className={stls.em}>{contactInfo.ru.tels[0].val}</em>, с помощью
+            email <em className={stls.em}>{contactInfo.ru.email.val}</em> или
+            оставьте заявку, нажав на кнопку <strong>Помощь</strong> ниже
+          </p>
+
+          <p className={stls.p}>
             Пожалуйста, не забудьте указать ФИО и номер договора на странице с
             оплатой
           </p>
@@ -76,7 +100,7 @@ const payment = ({ programs }) => {
           <div className={stls.btns}>
             <a
               className={stls.btn}
-              href='https://3dsec.sberbank.ru/shortlink/LBuBzCqY'
+              href='https://securepayments.sberbank.ru/shortlink/O5FZls3k'
               target='_blank'
               rel='noopener noreferrer'>
               Оплата банковской картой

@@ -1,5 +1,7 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
+import SetString from '@/components/hooks/SetString'
+import lang from '@/data/translation/index'
 import JumbotronCta from '@/components/sections/JumbotronCta'
 import About from '@/components/sections/About'
 import ConferencesInEurope from '@/components/sections/ConferencesInEurope'
@@ -12,13 +14,21 @@ import ContactUs from '@/components/sections/ContactUs'
 import { apiProgramsReqUrl, server } from '@/config/index'
 
 // import Lang from '../components/hooks/Lang'
+//
 
 const Home = ({ programs }) => {
   return (
     <>
-      <Head>
-        <title>Moscow Business Academy</title>
-      </Head>
+      <NextSeo
+        title={'Moscow Business Academy'}
+        description={truncate(
+          `${SetString(lang.headerTitlePreHighlight)} ${SetString(
+            lang.headerTitleHighlight
+          )} ${SetString(lang.headerTitlePostHighlight)}`,
+          120
+        )}
+        canonical={'https://moscow.mba/'}
+      />
 
       <JumbotronCta />
 

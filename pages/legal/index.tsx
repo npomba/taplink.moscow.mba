@@ -1,13 +1,18 @@
+import { NextSeo } from 'next-seo'
 import { server, apiProgramsReqUrl } from '@/config/index'
 import stls from '@/styles/modules/LegalPage.module.sass'
-import Head from 'next/head'
 
 const legal = ({ programs }) => {
   return (
     <>
-      <Head>
-        <title>Нормативные документы</title>
-      </Head>
+      <NextSeo
+        title={'Нормативные документы - Moscow Business Academy'}
+        description={
+          'Лицензия на осуществление образовательной деятельности, приложение к...'
+        }
+        canonical={'https://moscow.mba/legal'}
+      />
+
       <div className='container'>
         <h1 className={stls.h1}>НОРМАТИВНЫЕ ДОКУМЕНТЫ</h1>
         <ul className={stls.list}>

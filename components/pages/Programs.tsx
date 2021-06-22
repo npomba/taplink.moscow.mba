@@ -1,8 +1,9 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import langMenu from '@/data/translation/menu'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
@@ -14,11 +15,32 @@ import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
+
   return (
     <>
-      <Head>
-        <title>Программы</title>
-      </Head>
+      <NextSeo
+        title={`Программы обучения ${
+          at.mini
+            ? 'Mini MBA'
+            : at.professional
+            ? 'Professional MBA'
+            : at.industry
+            ? 'Industry MBA'
+            : ''
+        } ${
+          at.online ? 'Online' : at.blended ? 'Blended' : ''
+        } - Moscow Business Academy`}
+        description={
+          at.mini
+            ? truncate(SetString(langMenu.categoryDiscMini), 120)
+            : at.professional
+            ? truncate(SetString(langMenu.categoryDiscProfessional), 120)
+            : at.industry
+            ? truncate(SetString(langMenu.categoryDiscIndustry), 120)
+            : ''
+        }
+        canonical={'https://moscow.mba/programs/professional/online'}
+      />
 
       <section className={`jumbotron-section ${stls.jumbotronPrograms}`}>
         <div className='container'>
@@ -49,11 +71,11 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
 
               <p className={stls.desc}>
                 {at.mini
-                  ? setString(langMenu.categoryDiscMini)
+                  ? SetString(langMenu.categoryDiscMini)
                   : at.professional
-                  ? setString(langMenu.categoryDiscProfessional)
+                  ? SetString(langMenu.categoryDiscProfessional)
                   : at.industry
-                  ? setString(langMenu.categoryDiscIndustry)
+                  ? SetString(langMenu.categoryDiscIndustry)
                   : ''}
               </p>
 

@@ -1,6 +1,6 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 
 const JumbotronMain = () => {
@@ -24,13 +24,13 @@ const JumbotronMain = () => {
               </div>
               <h1>Moscow Business Academy</h1>
               <div className='desc main-desc'>
-                {setString(lang.headerSubtitle)}
+                {SetString(lang.headerSubtitle)}
               </div>
             </div>
           </div>
           <Link href='/programs/mini/online' locale='ru'>
             <a className='jumbotron-squad'>
-              <p>{setString(lang.redCubeLink)}</p>
+              <p>{SetString(lang.redCubeLink)}</p>
               <div className='arrow'>
                 <img src='/assets/images/arrow_diagonal.svg' />
               </div>

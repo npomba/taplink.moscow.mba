@@ -1,4 +1,4 @@
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
@@ -20,9 +20,9 @@ type FormValues = {
 const ContactUs = ({
   programTitle = null,
   programId = null,
-  title = setString(lang.helpToChooseTitle),
+  title = SetString(lang.helpToChooseTitle),
   titleNewStr = null,
-  disc = setString(lang.helpToChooseDics)
+  disc = SetString(lang.helpToChooseDics)
 }) => {
   const {
     register,
@@ -85,33 +85,33 @@ const ContactUs = ({
           <div className='input-block width-33'>
             <input
               type='text'
-              aria-label={setString(lang.inputName)}
+              aria-label={SetString(lang.inputName)}
               {...register('name', {
                 maxLength: {
                   value: 32,
-                  message: `*${setString(lang.formErrLongName)}`
+                  message: `*${SetString(lang.formErrLongName)}`
                 }
               })}
               onKeyUp={handleKeyUp}
             />
-            <div className='input-placeholder'>{setString(lang.inputName)}</div>
+            <div className='input-placeholder'>{SetString(lang.inputName)}</div>
             <p className='inpt-err-msg'>{errors.name && errors.name.message}</p>
           </div>
           <div className='input-block width-33'>
             <input
               type='tel'
-              aria-label={setString(lang.inputPhone)}
+              aria-label={SetString(lang.inputPhone)}
               {...register('phone', {
-                required: `*${setString(lang.formErrEmptyPhone)}`,
+                required: `*${SetString(lang.formErrEmptyPhone)}`,
                 minLength: {
                   value: 5,
-                  message: `*${setString(lang.formErrShortPhone)}`
+                  message: `*${SetString(lang.formErrShortPhone)}`
                 }
               })}
               onKeyUp={handleKeyUp}
             />
             <div className='input-placeholder'>
-              {setString(lang.inputPhone)}
+              {SetString(lang.inputPhone)}
             </div>
             <p className='inpt-err-msg'>
               {errors.phone && errors.phone.message}
@@ -124,14 +124,14 @@ const ContactUs = ({
                 errors.name || errors.phone ? 'btn-disabled' : ''
               }`}
               disabled={errors.name || errors.phone ? true : false}>
-              {setString(lang.inputSubmit)}
+              {SetString(lang.inputSubmit)}
             </button>
           </div>
         </div>
         <div className='personal-datas'>
-          {setString(lang.privacyPolicyFirst)}{' '}
-          {/* <a href=''>{setString(lang.privacyPolicySecond)}</a> */}
-          {setString(lang.privacyPolicySecond)}
+          {SetString(lang.privacyPolicyFirst)}{' '}
+          {/* <a href=''>{SetString(lang.privacyPolicySecond)}</a> */}
+          {SetString(lang.privacyPolicySecond)}
         </div>
       </form>
     </section>

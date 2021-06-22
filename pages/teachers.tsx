@@ -1,16 +1,21 @@
-import Head from 'next/head'
-
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import Teachers from '../components/sections/Teachers'
 import { apiProgramsReqUrl, server } from '@/config/index'
 
 const teachers = ({ programs }) => {
   return (
     <>
-      <Head>
-        <title>Эксперты</title>
-      </Head>
+      <NextSeo
+        title={'Российские и зарубежные эксперты MBA - Moscow Business Academy'}
+        description={truncate(
+          'Перенимайте уникальный опыт международных экспертов, адаптированный под рынок РФ',
+          120
+        )}
+        canonical={'https://moscow.mba/teachers'}
+      />
       <div className='container'>
-        <Teachers atStandAlonePage={true} />
+        <Teachers atStandAlonePage />
       </div>
     </>
   )

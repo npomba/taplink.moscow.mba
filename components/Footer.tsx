@@ -1,5 +1,5 @@
 import Link from 'next/link'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 
@@ -18,12 +18,14 @@ const Footer = () => {
         <div className='footer-top'>
           <div className='footer-top-left'>
             <div className='footer-tel'>
-              <a href={contactInfo.tels[0].data.href}>
-                {contactInfo.tels[0].data.val}
+              <a href={contactInfo.ru.tels[0].href}>
+                {contactInfo.ru.tels[0].val}
               </a>
             </div>
             <div className='footer-mail'>
-              <a href={contactInfo.emailTo}>{contactInfo.email}</a>
+              <a href={contactInfo.ru.email.mailTo}>
+                {contactInfo.ru.email.val}
+              </a>
             </div>
           </div>
           <div className='footer-top-right'>
@@ -33,31 +35,31 @@ const Footer = () => {
                   <a>MBA Mini</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/mini/blended' locale='ru'>
                   <a>MBA Mini Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/professional/online' locale='ru'>
                   <a>MBA Professional</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/professional/blended' locale='ru'>
                   <a>MBA Professional Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/industry/online' locale='ru'>
                   <a>MBA Industry</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/programs/industry/blended' locale='ru'>
                   <a>MBA Industry Blended</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/programs/executive' locale='ru'>
                   <a>Executive MBA</a>
@@ -66,36 +68,46 @@ const Footer = () => {
               <li className='empty'></li>
               <li>
                 <Link href='/about'>
-                  <a>{setString(langHeader.linkAbout)}</a>
+                  <a>{SetString(langHeader.linkAbout)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/teachers' locale='ru'>
-                  <a>{setString(langHeader.linkTeachers)}</a>
+                  <a>{SetString(langHeader.linkTeachers)}</a>
                 </Link>
               </li>
               <li>
                 <Link href='/webinars' locale='ru'>
-                  <a>{setString(langHeader.linkWebinars)}</a>
+                  <a>{SetString(langHeader.linkWebinars)}</a>
                 </Link>
               </li>
               <li>
-                <Link href='/contact' locale='ru'>
-                  <a>{setString(langHeader.linkContacts)}</a>
+                <Link href='/contact'>
+                  <a>{SetString(langHeader.linkContacts)}</a>
                 </Link>
               </li>
-              {/* <li>
-                <Link href='/payment' locale='ru'>
-                  <a>{setString(lang.paymentLink)}</a>
+              <li>
+                <Link href='/legal' locale='ru'>
+                  <a>{SetString(langHeader.linkLegal)}</a>
                 </Link>
-              </li> */}
+              </li>
+              <li>
+                <Link href='/legal/about' locale='ru'>
+                  <a>{SetString(lang.legalAboutLink)}</a>
+                </Link>
+              </li>
+              <li>
+                <Link href='/payment' locale='ru'>
+                  <a>{SetString(lang.paymentLink)}</a>
+                </Link>
+              </li>
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>
                 <SVGLocation />
                 <span>
-                  {setString(contactInfo.addresses[0].data.city)},{' '}
-                  {setString(contactInfo.addresses[0].data.street)}
+                  {SetString(contactInfo.ru.address.city)},{' '}
+                  {SetString(contactInfo.ru.address.street)}
                 </span>
               </div>
               <ul className='footer-socials'>
@@ -127,10 +139,10 @@ const Footer = () => {
             &copy; Moscow Business Academy, 2021
           </div>
           <a href='#!' className='footer-links'>
-            {setString(lang.offerContract)}
+            {SetString(lang.offerContract)}
           </a>
           <a href='#!' className='footer-links'>
-            {setString(lang.privacyPolicy)}
+            {SetString(lang.privacyPolicy)}
           </a>
         </div>
       </div>

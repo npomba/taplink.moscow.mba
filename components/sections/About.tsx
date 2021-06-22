@@ -1,33 +1,33 @@
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 
 const About = () => {
   return (
     <section className='about-section section-pl'>
-      <div className='title-pl'>{setString(lang.aboutTitle)}</div>
+      <div className='title-pl'>{SetString(lang.aboutTitle)}</div>
       <div className='about-flex'>
         <div className='title-desc'>
-          <p>{setString(lang.aboutTxtFirst)}</p>
-          <p>{setString(lang.aboutTxtSecond)}</p>
+          <p>{SetString(lang.aboutTxtFirst)}</p>
+          <p>{SetString(lang.aboutTxtSecond)}</p>
         </div>
         <ul className='about-list'>
           <li>
             <div className='number'>
-              {setString(lang.aboutBenefitTitleFirst)}
+              {SetString(lang.aboutBenefitTitleFirst)}
             </div>
-            <p>{setString(lang.aboutBenefitDicsFirst)}</p>
+            <p>{SetString(lang.aboutBenefitDicsFirst)}</p>
           </li>
           <li>
             <div className='number'>9000+</div>
-            <p>{setString(lang.aboutBenefitDicsSecond)}</p>
+            <p>{SetString(lang.aboutBenefitDicsSecond)}</p>
           </li>
           <li>
             <div className='number'>25%</div>
-            <p>{setString(lang.aboutBenefitDicsThird)}</p>
+            <p>{SetString(lang.aboutBenefitDicsThird)}</p>
           </li>
           <li>
             <div className='number'>150+</div>
-            <p>{setString(lang.aboutBenefitDicsFourth)}</p>
+            <p>{SetString(lang.aboutBenefitDicsFourth)}</p>
           </li>
         </ul>
       </div>

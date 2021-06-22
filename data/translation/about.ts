@@ -220,8 +220,8 @@ export default {
   },
 
   uptodateBenefitThreeDics: {
-    ru: 'международных экспертов',
-    en: 'international experts'
+    ru: 'входим в топ 3 бизнес-школ РФ по актуальности контента',
+    en: "we're in TOP 3 relevance of Russian business schools"
   },
 
   accreditationTitle: {

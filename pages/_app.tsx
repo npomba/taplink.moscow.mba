@@ -1,7 +1,7 @@
 import App from 'next/app'
 import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
-import { DefaultSeo } from 'next-seo'
+import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
 import Header from '@/components/Header'
 import Footer from '@/components/Footer'
@@ -15,6 +15,9 @@ import { dev, gtmId } from '@/config/index'
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'nprogress/nprogress.css'
+
+import Script from 'next/script'
+
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
@@ -56,6 +59,12 @@ function MyApp({ Component, pageProps, router }) {
   return (
     <>
       <DefaultSeo {...SEO} />
+      <LogoJsonLd
+        logo='https://moscow.mba/logo.jpg'
+        url='https://moscow.mba/'
+      />
+      <Script src='/assets/js/vendors/jquery-3.6.0.min.js' />
+      <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
       <PageWrapper>
         <Header programs={programs} />
         <AnimatePresence>

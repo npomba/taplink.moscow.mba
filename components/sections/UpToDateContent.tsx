@@ -1,5 +1,5 @@
 import stls from '@/styles/modules/UpToDateContent.module.sass'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import Image from 'next/image'
 
@@ -7,14 +7,14 @@ const UpToDateContent = () => {
   return (
     <section className={[stls.actualSection, stls.noLine].join(' ')}>
       <div className='section-pl'>
-        <h2>{setString(lang.uptodateTitle)}</h2>
+        <h2>{SetString(lang.uptodateTitle)}</h2>
       </div>
       <div className={stls.actualContent}>
         <div className={stls.actualContentTop}>
           <div className={stls.desc}>
-            {setString(lang.uptodateDicsFirst)}{' '}
+            {SetString(lang.uptodateDicsFirst)}{' '}
             <strong className='red'>{setString(lang.uptodateDicsRed)} </strong>
-            {setString(lang.uptodateDicsSecond)}
+            {SetString(lang.uptodateDicsSecond)}
           </div>
           <div className={stls.actualBottomImage}>
             <Image
@@ -37,23 +37,23 @@ const UpToDateContent = () => {
       <div className='section-pl'>
         <ul className={stls.actualContentList}>
           <li>
-            <div className={stls.number}>2021 {setString(lang.uptodateYear)}</div>
+            <div className={stls.number}>2021 {SetString(lang.uptodateYear)}</div>
             <p>
-              {setString(lang.uptodateBenefitOneDics)} 2021{' '}
-              {setString(lang.uptodateYearV2)}
+              {SetString(lang.uptodateBenefitOneDics)} 2021{' '}
+              {SetString(lang.uptodateYearV2)}
             </p>
           </li>
           <li>
             <div className={stls.number}>
-              53 {setString(lang.uptodateBenefitTwoTitle)}
+              53 {SetString(lang.uptodateBenefitTwoTitle)}
             </div>
-            <p>{setString(lang.uptodateBenefitTwoDics)}</p>
+            <p>{SetString(lang.uptodateBenefitTwoDics)}</p>
           </li>
           <li>
             <div className={stls.number}>
-              {setString(lang.uptodateBenefitThreeTitle)}
+             {SetString(lang.uptodateBenefitThreeTitle)}
             </div>
-            <p>{setString(lang.uptodateBenefitThreeDics)}</p>
+            <p>{SetString(lang.uptodateBenefitThreeDics)}</p>
           </li>
         </ul>
       </div>

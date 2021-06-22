@@ -1,4 +1,5 @@
-import Head from 'next/head'
+import { NextSeo } from 'next-seo'
+import truncate from 'truncate'
 import WebinarCards from '@/components/sections/WebinarCards'
 import useAt from '@/components/hooks/useAt'
 import Link from 'next/link'
@@ -7,9 +8,11 @@ const Webinars = ({ title, heading, timeframe = 'all' }) => {
   const at = useAt()
   return (
     <>
-      <Head>
-        <title>{title}</title>
-      </Head>
+      <NextSeo
+        title={`${title} MBA - Moscow Business Academy`}
+        description={truncate('Узнайте даты и время вебинаров MBA', 120)}
+        canonical={'https://moscow.mba/webinars'}
+      />
 
       <div className='container'>
         {/* vebinars-section */}
