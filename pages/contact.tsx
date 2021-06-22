@@ -27,7 +27,7 @@ const contact = ({ programs }) => {
         logo='https://moscow.mba/logo.jpg'
         contactPoint={[
           {
-            telephone: '+7-800-500-27-47',
+            telephone: contactInfo.ru.tels[0].valDashes,
             contactType: 'customer service',
             areaServed: 'RU',
             availableLanguage: ['Russian']
