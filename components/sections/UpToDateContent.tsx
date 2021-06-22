@@ -13,7 +13,7 @@ const UpToDateContent = () => {
         <div className={stls.actualContentTop}>
           <div className={stls.desc}>
             {SetString(lang.uptodateDicsFirst)}{' '}
-            <strong className='red'>{setString(lang.uptodateDicsRed)} </strong>
+            <strong className='red'>{SetString(lang.uptodateDicsRed)} </strong>
             {SetString(lang.uptodateDicsSecond)}
           </div>
           <div className={stls.actualBottomImage}>
@@ -26,18 +26,20 @@ const UpToDateContent = () => {
           </div>
         </div>
         <div className={stls.actualRightImage}>
-            <Image
-              src={'/assets/images/actual_pic_2.jpg'}
-              alt='Оператор снимает конференцию'
-              width={410}
-              height={635}
-            />
-          </div>
+          <Image
+            src={'/assets/images/actual_pic_2.jpg'}
+            alt='Оператор снимает конференцию'
+            width={410}
+            height={635}
+          />
+        </div>
       </div>
       <div className='section-pl'>
         <ul className={stls.actualContentList}>
           <li>
-            <div className={stls.number}>2021 {SetString(lang.uptodateYear)}</div>
+            <div className={stls.number}>
+              2021 {SetString(lang.uptodateYear)}
+            </div>
             <p>
               {SetString(lang.uptodateBenefitOneDics)} 2021{' '}
               {SetString(lang.uptodateYearV2)}
@@ -51,7 +53,7 @@ const UpToDateContent = () => {
           </li>
           <li>
             <div className={stls.number}>
-             {SetString(lang.uptodateBenefitThreeTitle)}
+              {SetString(lang.uptodateBenefitThreeTitle)}
             </div>
             <p>{SetString(lang.uptodateBenefitThreeDics)}</p>
           </li>

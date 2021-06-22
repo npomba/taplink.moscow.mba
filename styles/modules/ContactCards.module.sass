@@ -16,12 +16,12 @@
     max-width: 390px
     @media(max-width: 1330px)
       max-width: 279px
-    @include media(desktop, laptop, tablet)
+    @include media(widescreen,desktop, laptop, tablet)
       font-size: 20px
     @include media(phone, tablet)
       flex: 1 1 100%
     &:not(:nth-last-child(1))
-      @include media(desktop, laptop, tablet)
+      @include media(widescreen, desktop, laptop, tablet)
         margin-right: 3%
 
 // .col
