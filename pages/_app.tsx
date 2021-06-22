@@ -63,11 +63,8 @@ function MyApp({ Component, pageProps, router }) {
         logo='https://moscow.mba/logo.jpg'
         url='https://moscow.mba/'
       />
-      <Script
-        src='/assets/js/vendors/jquery-3.6.0.min.js'
-        strategy='beforeInteractive'
-      />
-      <Script src='/assets/js/myjs.js' />
+      <Script src='/assets/js/vendors/jquery-3.6.0.min.js' />
+      <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
       <PageWrapper>
         <Header programs={programs} />
         <AnimatePresence>

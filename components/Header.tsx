@@ -1000,7 +1000,7 @@ const Header = ({ programs }) => {
         </div>
         {/* //mobile menu */}
       </header>
-      <Script src='/assets/js/header.js' />
+      <Script src='/assets/js/header.js' strategy='lazyOnload' />
     </>
   )
 }

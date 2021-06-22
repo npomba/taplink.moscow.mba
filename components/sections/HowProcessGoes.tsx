@@ -119,7 +119,7 @@ const HowProcessGoes = () => {
           </div>
         </div>
       </section>
-      <Script src='/assets/js/howProcessGoes.js' />
+      <Script src='/assets/js/howProcessGoes.js' strategy='lazyOnload' />
     </>
   )
 }

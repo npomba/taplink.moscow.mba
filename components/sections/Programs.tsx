@@ -560,7 +560,7 @@ const Programs = ({ programs }) => {
           </div>
         </div>
       </section>
-      <Script src='/assets/js/programs.js' />
+      <Script src='/assets/js/programs.js' strategy='lazyOnload'/>
     </>
   )
 }

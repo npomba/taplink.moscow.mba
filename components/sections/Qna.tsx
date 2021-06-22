@@ -137,7 +137,7 @@ const Qna = () => {
           </div>
         </div>
       </section>
-      <Script src='/assets/js/qna.js' />
+      <Script src='/assets/js/qna.js' strategy='lazyOnload' />
     </>
   )
 }
