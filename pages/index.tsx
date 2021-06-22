@@ -14,6 +14,7 @@ import ContactUs from '@/components/sections/ContactUs'
 import { apiProgramsReqUrl, server } from '@/config/index'
 
 // import Lang from '../components/hooks/Lang'
+//
 
 const Home = ({ programs }) => {
   return (
