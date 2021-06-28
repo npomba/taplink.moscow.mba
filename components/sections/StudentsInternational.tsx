@@ -2,6 +2,7 @@ import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/studentsInternational'
+import { base64pixel } from '@/config/index'
 
 const StudentsInternational = () => {
   return (
@@ -18,7 +19,8 @@ const StudentsInternational = () => {
               alt={SetString(imageData.image.alt)}
               width={769}
               height={597}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='info'>

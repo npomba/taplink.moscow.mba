@@ -2,12 +2,18 @@ import Link from 'next/link'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
+import { base64pixel } from '@/config/index'
 
 const JumbotronMain = () => {
   return (
     <section className='jumbotron-section main-jumbotron'>
       <div className='image'>
-        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
+        {/* should replace following alt with english supported version */}
+        <Image
+          src='/assets/images/jumbotron_1.jpg'
+          layout='fill'
+          alt={'Студенты обучаются'}
+        />
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
@@ -19,7 +25,8 @@ const JumbotronMain = () => {
                   alt='Moscow Business Academy'
                   width={482}
                   height={146}
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <h1>Moscow Business Academy</h1>

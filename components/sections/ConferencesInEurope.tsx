@@ -2,6 +2,7 @@ import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/conferencesInEurope'
+import { base64pixel } from '@/config/index'
 
 const ConferencesInEurope = () => {
   return (
@@ -20,8 +21,9 @@ const ConferencesInEurope = () => {
               alt={SetString(imageData.shorterImage.alt)}
               width={623}
               height={364}
-              priority={true}
               layout='responsive'
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
         </div>
@@ -32,8 +34,9 @@ const ConferencesInEurope = () => {
               alt={SetString(imageData.higherImage.alt)}
               width={415}
               height={690}
-              priority={true}
               layout='responsive'
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
         </div>

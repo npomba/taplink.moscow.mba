@@ -1,4 +1,5 @@
 import Image from 'next/image'
+import { base64pixel } from '@/config/index'
 
 const WhatWillYouLearn = ({ data }) => {
   return (
@@ -24,7 +25,8 @@ const WhatWillYouLearn = ({ data }) => {
               width='651'
               height='389'
               alt='Слушатели во время конференции'
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
         </div>

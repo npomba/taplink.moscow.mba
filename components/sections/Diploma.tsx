@@ -1,5 +1,6 @@
 import Image from 'next/image'
 import useAt from '@/components/hooks/useAt'
+import { base64pixel } from '@/config/index'
 
 const Diploma = () => {
   const at = useAt()
@@ -20,7 +21,8 @@ const Diploma = () => {
           width={532}
           height={376}
           layout={'responsive'}
-          priority={true}
+          placeholder='blur'
+          blurDataURL={base64pixel}
         />
       </div>
       <div className='content'>

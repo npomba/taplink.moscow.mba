@@ -6,7 +6,8 @@ import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-import ProgramSubjects from '../hooks/ProgramSubjects'
+import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import { base64pixel } from '@/config/index'
 
 const Executive = () => {
   return (
@@ -53,7 +54,8 @@ const Executive = () => {
               alt={SetString(imageData.largerCircle.alt)}
               width={401}
               height={400}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='image pic-2'>
@@ -62,7 +64,8 @@ const Executive = () => {
               alt={SetString(imageData.smallerCircle.alt)}
               width={221}
               height={221}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='count'>
