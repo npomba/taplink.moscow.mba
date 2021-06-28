@@ -1,71 +1,15 @@
 @import @/styles/utils/mixins
 
-.helpWithEmploymentSection
+.section
   display: flex
   flex-wrap: wrap
   margin: 130px 0 50px
-
   @include media(laptop, tablet, phone)
     flex-direction: column
     margin: 60px 0 30px
 
-  h2
-    flex: 1 0 100%
-    margin-bottom: 80px
-
-    @include media(tablet, phone)
-      margin-bottom: 40px
-
-.helpWithEmploymentBlock
-  flex: 1 1 calc(50% - 55px)
-  display: flex
-  align-items: flex-start
-  margin: 0 0 30px
-  color: #2D2C2A
-
-  &:nth-of-type(odd)
-    margin-rigth: 55px
-
-  @include media(laptop, tablet, phone)
-    flex: 1 1 50%
-
+.h2
+  flex: 1 0 100%
+  margin-bottom: 80px
   @include media(tablet, phone)
-    margin: 0 0 30px
-
-  .content
-    line-height: 120%
-
-    .titleHeading
-      margin-bottom: 10px
-      font-size: 24px
-      font-weight: 500
-
-      @include media(tablet, phone)
-        font-size: 20px
-
-    .description
-      font-weight: 300
-      font-size: 16px
-
-      @include media(tablet, phone)
-        font-size: 15px
-
-.redCircle
-  width: 57px
-  height: 57px
-  border-radius: 50%
-  display: flex
-  align-items: center
-  justify-content: center
-  text-align: center
-  background: #FF3535
-  flex-shrink: 0
-  margin-right: 43px
-
-  @include media(tablet, phone)
-    width: 26px
-    height: 26px
-    margin-right: 17px
-
-    img
-      transform: scale(.55)
+    margin-bottom: 40px
