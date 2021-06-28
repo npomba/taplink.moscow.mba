@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
-import SetString from './hooks/SetString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
 import SVGTriangleBottom from '@/components/svgs/SVGTriangleBottom'
 

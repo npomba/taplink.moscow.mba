@@ -3,9 +3,9 @@ import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
 import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import PageWrapper from '@/components/PageWrapper'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Wrapper from '@/components/layout/Wrapper'
 import '@/styles/hugeStyles.sass'
 import '@/styles/hugeStyles.scss'
 import { apiProgramsReqUrl, server } from '@/config/index'
@@ -65,7 +65,7 @@ function MyApp({ Component, pageProps, router }) {
       />
       <Script src='/assets/js/vendors/jquery-3.6.0.min.js' />
       <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
-      <PageWrapper>
+      <Wrapper>
         <Header programs={programs} />
         <AnimatePresence>
           <motion.div
@@ -91,7 +91,7 @@ function MyApp({ Component, pageProps, router }) {
           </motion.div>
         </AnimatePresence>
         <Footer />
-      </PageWrapper>
+      </Wrapper>
     </>
   )
 }

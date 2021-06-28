@@ -1,11 +1,10 @@
 import Link from 'next/link'
 import { useRouter } from 'next/router'
-// import PopulateWithPrograms from './hooks/populateWithPrograms'
 import lang from '@/data/translation/header'
 import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
 
-import HeaderLangLink from '@/components/HeaderLangLink'
+import HeaderLangLink from '@/components/btns/HeaderLangLink'
 import Until from '@/components/dates/Until'
 import Price from '@/components/prices/Price'
 
@@ -22,12 +21,12 @@ import SVGLocation from '@/components/svgs/SVGLocation'
 import SVGLogo from '@/components/svgs/SVGLogo'
 import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
 import Image from 'next/image'
-import ProgramsColumn from './general/ProgramsColumn'
-import Discount from './prices/Discount'
-import SVGCheckCircle from './svgs/SVGCheckCircle'
-import SVGScreen from './svgs/SVGScreen'
-import SVGPaperCorner from './svgs/SVGPaperCorner'
-import SVGClock from './svgs/SVGClock'
+import ProgramsColumn from '@/components/general/ProgramsColumn'
+import Discount from '@/components/prices/Discount'
+import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
+import SVGScreen from '@/components/svgs/SVGScreen'
+import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
+import SVGClock from '@/components/svgs/SVGClock'
 
 const Header = ({ programs }) => {
   let data = programs || []
