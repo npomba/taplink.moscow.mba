@@ -1,4 +1,4 @@
-import Accordion from '../general/Accordion'
+import Accordion from '@/components/general/Accordion'
 
 import Script from 'next/script'
 
