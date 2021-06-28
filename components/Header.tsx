@@ -34,7 +34,7 @@ import SVGClock from './svgs/SVGClock'
 const Header = ({ programs }) => {
   useEffect(() => {
     loadJs(['/assets/js/header.js'], {
-      async: false,
+      async: false
     })
   }, [])
 
@@ -171,8 +171,7 @@ const Header = ({ programs }) => {
                   <Link href='/programs/mini/online' locale='ru'>
                     <a
                       data-tab='#header-podmenu-1'
-                      className='active-tab headerMenuTabs'
-                    >
+                      className='active-tab headerMenuTabs'>
                       Mini MBA
                     </a>
                   </Link>
@@ -361,8 +360,7 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-1-1'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -427,8 +425,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -439,8 +436,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-1-2'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
@@ -488,8 +484,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -565,8 +560,7 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-2-1'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -634,8 +628,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -646,8 +639,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-2-2'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
@@ -698,8 +690,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -781,8 +772,7 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-3-1'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -847,8 +837,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -859,8 +848,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-3-2'
-                          className='program-options-block'
-                        >
+                          className='program-options-block'>
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
@@ -908,8 +896,7 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'
-                                    >
+                                      locale='ru'>
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>

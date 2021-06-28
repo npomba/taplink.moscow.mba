@@ -7,7 +7,7 @@ import Until from '@/components/dates/Until'
 import Price from '@/components/prices/Price'
 
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+
 import ProgramsNumber from '@/components/sections/ProgramsNumber'
 
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
@@ -23,8 +23,7 @@ const ProgramsColumn = ({ data, id, type }) => {
       id={id}
       className={`header-podmenu-content ${
         id === 'header-podmenu-1' ? 'visible' : ''
-      }`}
-    >
+      }`}>
       <li>
         <div className='program-detail-list'>
           <div className='name'>
@@ -77,8 +76,7 @@ const ProgramsColumn = ({ data, id, type }) => {
                   <li key={item._id}>
                     <Link
                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                      locale='ru'
-                    >
+                      locale='ru'>
                       <a>{setString(item, true)}</a>
                     </Link>
                   </li>
@@ -126,8 +124,7 @@ const ProgramsColumn = ({ data, id, type }) => {
                   <li key={item._id}>
                     <Link
                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                      locale='ru'
-                    >
+                      locale='ru'>
                       <a>{setString(item, true)}</a>
                     </Link>
                   </li>

@@ -19,7 +19,7 @@ import SVGScreen from '../svgs/SVGScreen'
 const Programs = ({ programs }) => {
   useEffect(() => {
     loadJs(['/assets/js/programs.js'], {
-      async: false,
+      async: false
     })
   }, [])
 
@@ -34,8 +34,7 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-1'
-                className='active-tab headerMenuTabs'
-              >
+                className='active-tab headerMenuTabs'>
                 Mini MBA
               </a>
             </li>
@@ -43,8 +42,7 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-2'
-                className='headerMenuTabs'
-              >
+                className='headerMenuTabs'>
                 Professional MBA
               </a>
             </li>
@@ -52,8 +50,7 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-3'
-                className='headerMenuTabs'
-              >
+                className='headerMenuTabs'>
                 Industry MBA
               </a>
             </li>
@@ -153,8 +150,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -209,8 +205,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -316,8 +311,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -372,8 +366,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -479,8 +472,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -535,8 +527,7 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'
-                          >
+                            locale='ru'>
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>

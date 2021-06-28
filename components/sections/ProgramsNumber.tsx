@@ -23,7 +23,7 @@ const ProgramsNumber = ({ programs, type = '', format = '' }) => {
   else programsNumber = programs.length
 
   return (
-    <div className="directions-count">
+    <div className='directions-count'>
       <span>{programsNumber} </span>
       {setString(
         langMenu.qtPrograms,
