@@ -5,6 +5,7 @@ import langHeader from '@/data/translation/header'
 import Until from '@/components/dates/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsNumber from '@/components/sections/ProgramsNumber'
 
 import Price from '@/components/prices/Price'
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
@@ -18,7 +19,7 @@ import SVGScreen from '../svgs/SVGScreen'
 const Programs = ({ programs }) => {
   useEffect(() => {
     loadJs(['/assets/js/programs.js'], {
-      async: false
+      async: false,
     })
   }, [])
 
@@ -33,7 +34,8 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-1'
-                className='active-tab headerMenuTabs'>
+                className='active-tab headerMenuTabs'
+              >
                 Mini MBA
               </a>
             </li>
@@ -41,7 +43,8 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-2'
-                className='headerMenuTabs'>
+                className='headerMenuTabs'
+              >
                 Professional MBA
               </a>
             </li>
@@ -49,7 +52,8 @@ const Programs = ({ programs }) => {
               <a
                 href=''
                 data-tab='#program-options-3'
-                className='headerMenuTabs'>
+                className='headerMenuTabs'
+              >
                 Industry MBA
               </a>
             </li>
@@ -101,10 +105,11 @@ const Programs = ({ programs }) => {
                     </span>
                   </div>
                 </div>
-                <div className='directions-count'>
-                  <ProgramsQt programs={data} type={'mini'} format={'online'} />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'mini'}
+                  format={'online'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='new-price'>
@@ -148,7 +153,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -159,14 +165,11 @@ const Programs = ({ programs }) => {
               </div>
               <div id='program-options-1-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
-                <div className='directions-count'>
-                  <ProgramsQt
-                    programs={data}
-                    type={'mini'}
-                    format={'blended'}
-                  />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'mini'}
+                  format={'blended'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='simple-price'>
@@ -206,7 +209,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -259,14 +263,11 @@ const Programs = ({ programs }) => {
                     </span>
                   </div>
                 </div>
-                <div className='directions-count'>
-                  <ProgramsQt
-                    programs={data}
-                    type={'professional'}
-                    format={'online'}
-                  />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'professional'}
+                  format={'online'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='new-price'>
@@ -315,7 +316,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -326,14 +328,11 @@ const Programs = ({ programs }) => {
               </div>
               <div id='program-options-2-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
-                <div className='directions-count'>
-                  <ProgramsQt
-                    programs={data}
-                    type={'professional'}
-                    format={'blended'}
-                  />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'professional'}
+                  format={'blended'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='simple-price'>
@@ -373,7 +372,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -426,14 +426,11 @@ const Programs = ({ programs }) => {
                     </span>
                   </div>
                 </div>
-                <div className='directions-count'>
-                  <ProgramsQt
-                    programs={data}
-                    type={'industry'}
-                    format={'online'}
-                  />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'industry'}
+                  format={'online'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='new-price'>
@@ -482,7 +479,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>
@@ -493,14 +491,11 @@ const Programs = ({ programs }) => {
               </div>
               <div id='program-options-3-2' className='program-options-block'>
                 <div className='name'>{setString(langMenu.blendedTitle)}</div>
-                <div className='directions-count'>
-                  <ProgramsQt
-                    programs={data}
-                    type={'industry'}
-                    format={'blended'}
-                  />{' '}
-                  {setString(langMenu.qtPrograms)}
-                </div>
+                <ProgramsNumber
+                  programs={data}
+                  type={'industry'}
+                  format={'blended'}
+                />
                 <div className='price'>
                   {setString(langMenu.price)}:{' '}
                   <i className='simple-price'>
@@ -540,7 +535,8 @@ const Programs = ({ programs }) => {
                         <li key={item._id}>
                           <Link
                             href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                            locale='ru'>
+                            locale='ru'
+                          >
                             <a>{setString(item, true)}</a>
                           </Link>
                         </li>

@@ -13,6 +13,7 @@ import useAt from '@/components/hooks/useAt'
 
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsNumber from '@/components/sections/ProgramsNumber'
 
 import { useEffect } from 'react'
 import loadJs from 'loadjs'
@@ -33,7 +34,7 @@ import SVGClock from './svgs/SVGClock'
 const Header = ({ programs }) => {
   useEffect(() => {
     loadJs(['/assets/js/header.js'], {
-      async: false
+      async: false,
     })
   }, [])
 
@@ -170,7 +171,8 @@ const Header = ({ programs }) => {
                   <Link href='/programs/mini/online' locale='ru'>
                     <a
                       data-tab='#header-podmenu-1'
-                      className='active-tab headerMenuTabs'>
+                      className='active-tab headerMenuTabs'
+                    >
                       Mini MBA
                     </a>
                   </Link>
@@ -359,7 +361,8 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-1-1'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -371,14 +374,11 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'mini'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'mini'}
+                            format={'online'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='new-price'>
@@ -427,7 +427,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -438,18 +439,16 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-1-2'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'mini'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'mini'}
+                            format={'blended'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='simple-price'>
@@ -489,7 +488,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -565,7 +565,8 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-2-1'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -577,14 +578,11 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'professional'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'professional'}
+                            format={'online'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='new-price'>
@@ -636,7 +634,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -647,18 +646,16 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-2-2'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'professional'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'professional'}
+                            format={'blended'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='simple-price'>
@@ -701,7 +698,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -783,7 +781,8 @@ const Header = ({ programs }) => {
                       <div className='program-options-detail'>
                         <div
                           id='program-mobile-3-1'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.onlineTitle)}
                             <div className='discount'>
@@ -795,14 +794,11 @@ const Header = ({ programs }) => {
                               </span>
                             </div>
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'industry'}
-                              format={'online'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'industry'}
+                            format={'online'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='new-price'>
@@ -851,7 +847,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
@@ -862,18 +859,16 @@ const Header = ({ programs }) => {
                         </div>
                         <div
                           id='program-mobile-3-2'
-                          className='program-options-block'>
+                          className='program-options-block'
+                        >
                           <div className='name'>
                             {setString(langMenu.blendedTitle)}
                           </div>
-                          <div className='directions-count'>
-                            <ProgramsQt
-                              programs={data}
-                              type={'industry'}
-                              format={'blended'}
-                            />{' '}
-                            {setString(langMenu.qtPrograms)}
-                          </div>
+                          <ProgramsNumber
+                            programs={data}
+                            type={'industry'}
+                            format={'blended'}
+                          />
                           <div className='price'>
                             {setString(langMenu.price)}:{' '}
                             <i className='simple-price'>
@@ -913,7 +908,8 @@ const Header = ({ programs }) => {
                                   <li key={item._id}>
                                     <Link
                                       href={`/programs/${item.mbaTypeOfProgram}/${item.mbaFormat}/${item.url}`}
-                                      locale='ru'>
+                                      locale='ru'
+                                    >
                                       <a>{setString(item, true)}</a>
                                     </Link>
                                   </li>
