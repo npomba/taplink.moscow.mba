@@ -1,5 +1,5 @@
 import stls from '@/styles/modules/HelpWithEmployment.module.sass'
-import HelpWithEmploymentBlock from '@/components/general/HelpWIthEmploymentBlock'
+import HelpWithEmploymentItem from '@/components/general/HelpWIthEmploymentItem'
 
 const employmentMeasures = [
   {
@@ -29,7 +29,7 @@ const HelpWithEmployment = () => {
     <section className={stls.section}>
       <h2 className={stls.h2}>Мы помогаем в трудоустройстве</h2>
       {employmentMeasures.map(({ title, description }, idx) => (
-        <HelpWithEmploymentBlock
+        <HelpWithEmploymentItem
           key={title + idx}
           title={title}
           description={description}

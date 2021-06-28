@@ -3,14 +3,14 @@ import Link from 'next/link'
 import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
 
-import Until from '@/components/dates/Until'
-import Price from '@/components/prices/Price'
+import Until from '@/components/costs/Until'
+import Price from '@/components/costs/Price'
 
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
-import Discount from '../prices/Discount'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
+import Discount from '../costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'
 import SVGScreen from '../svgs/SVGScreen'
 import SVGPaperCorner from '../svgs/SVGPaperCorner'

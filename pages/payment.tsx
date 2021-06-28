@@ -5,7 +5,7 @@ import stls from '@/styles/modules/PaymentPage.module.sass'
 import { server, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import contactData from '@/data/contactData'
 
 const payment = ({ programs }) => {
@@ -108,7 +108,7 @@ const payment = ({ programs }) => {
 
             <Popup trigger={<a className={stls.btnAlt}>Помощь</a>} modal nested>
               {close => (
-                <PopUpForm
+                <PopupForm
                   title={'Помощь с оплатой'}
                   disc={
                     'Оставьте заявку, наш менеджер свяжется с Вами и поможет по вопросам оплаты'

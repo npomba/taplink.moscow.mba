@@ -1,10 +1,10 @@
-import Discount from '@/components/prices/Discount'
+import Discount from '@/components/costs/Discount'
 import SVGClose from '@/components/svgs/SVGClose'
-import Until from '@/components/dates/Until'
+import Until from '@/components/costs/Until'
 import stls from '@/styles/modules/PopUpLearnMore.module.sass'
 import learmMoreStls from '@/styles/modules/StickyBottom.module.sass'
 import Popup from 'reactjs-popup'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import Link from 'next/link'
 
 const PopupLearnMore = ({ close }) => {
@@ -29,7 +29,7 @@ const PopupLearnMore = ({ close }) => {
           modal
           nested>
           {close => (
-            <PopUpForm title={'Поможем в выборе!'} closePopUpForm={close} />
+            <PopupForm title={'Поможем в выборе!'} closePopUpForm={close} />
           )}
         </Popup>
 

@@ -2,16 +2,16 @@ import Link from 'next/link'
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
-import Until from '@/components/dates/Until'
+import Until from '@/components/costs/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 
-import Price from '@/components/prices/Price'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import Price from '@/components/costs/Price'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
 
 import Script from 'next/script'
 
-import Discount from '../prices/Discount'
+import Discount from '../costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'
 import SVGScreen from '../svgs/SVGScreen'
 
@@ -560,7 +560,7 @@ const Programs = ({ programs }) => {
           </div>
         </div>
       </section>
-      <Script src='/assets/js/programs.js' strategy='lazyOnload'/>
+      <Script src='/assets/js/programs.js' strategy='lazyOnload' />
     </>
   )
 }

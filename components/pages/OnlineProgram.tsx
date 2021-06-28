@@ -17,8 +17,6 @@ import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
 import CostOfStudy from '@/components/sections/CostOfStudy'
 import Accreditation from '@/components/sections/Accreditation'
-import WhoItIsFor from '@/components/sections/WhoItIsFor'
-import HelpWithEmployment from '@/components/sections/HelpWithEmployment'
 import Pros from '@/components/sections/Pros'
 import GetStudyPlan from '@/components/sections/GetStudyPlan'
 

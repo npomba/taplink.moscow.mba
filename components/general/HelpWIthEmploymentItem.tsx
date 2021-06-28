@@ -1,6 +1,6 @@
-import stls from '@/styles/modules/HelpWithEmploymentBlock.module.sass'
+import stls from '@/styles/modules/HelpWithEmploymentItem.module.sass'
 
-const HelpWithEmploymentBlock = ({ title, description }) => {
+const HelpWithEmploymentItem = ({ title, description }) => {
   return (
     <div className={stls.block}>
       <div className={stls.iconCheck}>
@@ -14,4 +14,4 @@ const HelpWithEmploymentBlock = ({ title, description }) => {
   )
 }
 
-export default HelpWithEmploymentBlock
+export default HelpWithEmploymentItem

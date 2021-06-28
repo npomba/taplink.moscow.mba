@@ -4,8 +4,8 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
-import Price from '@/components/prices/Price'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import Price from '@/components/costs/Price'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import ProgramSubjects from '../hooks/ProgramSubjects'
 
 const Executive = () => {

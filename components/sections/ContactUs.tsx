@@ -2,14 +2,11 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
-import useAt from '@/components/hooks/useAt'
 import { useState } from 'react'
 import Popup from 'reactjs-popup'
-
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
-
-import ThankyouPopup from '@/components/popups/Thankyou'
-import Loader from '../popups/Loader'
+import PopupThankyou from '@/components/popups/PopupThankyou'
+import PopupLoader from '@/components/popups/PopupLoader'
 import { useRouter } from 'next/router'
 
 type FormValues = {
@@ -59,10 +56,10 @@ const ContactUs = ({
   return (
     <section className='support-section'>
       <Popup open={openLoader} onClose={closeLoadingModal}>
-        <Loader closePopUp={closeLoadingModal} />
+        <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <ThankyouPopup
+        <PopupThankyou
           closePopUp={closeModal}
           programId={programId}
           programTitle={programTitle}

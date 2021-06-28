@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import ReviewPopUp from '../popups/ReviewPopUp'
+import PopupReview from '@/components/popups/PopupReview'
 
 const Reviews = () => {
   const reviews = [
@@ -69,7 +69,7 @@ const Reviews = () => {
                         modal
                         nested>
                         {close => (
-                          <ReviewPopUp
+                          <PopupReview
                             closePopUp={close}
                             review={reviews[idx]}
                           />

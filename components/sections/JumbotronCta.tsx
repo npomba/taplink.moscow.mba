@@ -7,10 +7,10 @@ import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
-import ThankyouPopup from '@/components/popups/Thankyou'
+import PopupThankyou from '@/components/popups/PopupThankyou'
 import Popup from 'reactjs-popup'
-import Loader from '@/components/popups/Loader'
-import Until from '@/components/dates/Until'
+import PopupLoader from '@/components/popups/PopupLoader'
+import Until from '@/components/costs/Until'
 import { useRouter } from 'next/router'
 
 type FormValues = {
@@ -54,10 +54,10 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
   return (
     <section className='jumbotron-section jumbotron-section--cta'>
       <Popup open={openLoader} onClose={closeLoadingModal}>
-        <Loader closePopUp={closeLoadingModal} />
+        <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <ThankyouPopup
+        <PopupThankyou
           closePopUp={closeModal}
           programId={programId}
           programTitle={programTitle}

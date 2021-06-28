@@ -1,6 +1,6 @@
 import stls from '@/styles/modules/GetStudyPlan.module.sass'
 import Popup from 'reactjs-popup'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 
 const GetStudyPlan = () => {
   return (
@@ -13,7 +13,7 @@ const GetStudyPlan = () => {
             modal
             nested>
             {close => (
-              <PopUpForm
+              <PopupForm
                 title={'Получите полный учебный план'}
                 disc={
                   'Оставьте заявку, менеджер пришлет Вам полный учебный план, а также расскажет о программе и возможных скидках'

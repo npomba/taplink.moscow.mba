@@ -1,7 +1,7 @@
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
@@ -252,7 +252,7 @@ const Teachers = ({
             modal
             nested>
             {close => (
-              <PopUpForm
+              <PopupForm
                 programId={programId}
                 programTitle={programTitle}
                 closePopUpForm={close}

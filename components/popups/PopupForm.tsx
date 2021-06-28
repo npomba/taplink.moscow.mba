@@ -3,15 +3,11 @@ import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import useAt from '@/components/hooks/useAt'
-
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
-
 import Popup from 'reactjs-popup'
-
-import ThankyouPopup from '@/components/popups/Thankyou'
-import Loader from '../popups/Loader'
-import SVGClose from '../svgs/SVGClose'
+import PopupThankyou from '@/components/popups/PopupThankyou'
+import PopupLoader from '@/components/popups/PopupLoader'
+import SVGClose from '@/components/svgs/SVGClose'
 import { useRouter } from 'next/router'
 
 type FormValues = {
@@ -60,10 +56,10 @@ const Form = ({
   return (
     <div id='teachersModal' className='popup-modal mfp-hide mfp-with-anim'>
       <Popup open={openLoader} onClose={closeLoadingModal}>
-        <Loader closePopUp={closeLoadingModal} />
+        <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
       <Popup open={open} closeOnDocumentClick onClose={closeModal}>
-        <ThankyouPopup
+        <PopupThankyou
           closePopUp={closeModal}
           programId={programId}
           programTitle={programTitle}

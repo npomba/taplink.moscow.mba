@@ -1,10 +1,10 @@
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import Until from '@/components/dates/Until'
-import PopUpForm from '@/components/popups/Form'
+import Until from '@/components/costs/Until'
+import PopupForm from '@/components/popups/PopupForm'
 import useAt from '@/components/hooks/useAt'
-import Price from '@/components/prices/Price'
-import TrainingPeriod from '../dates/TrainingPeriod'
+import Price from '@/components/costs/Price'
+import TrainingPeriod from '../costs/TrainingPeriod'
 import ProgramSubjects from '../hooks/ProgramSubjects'
 
 const CostOfStudy = ({ programTitle = null, programId = null }) => {
@@ -135,7 +135,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               modal
               nested>
               {close => (
-                <PopUpForm
+                <PopupForm
                   programId={programId}
                   programTitle={programTitle}
                   title={'Получите консультацию'}

@@ -5,8 +5,8 @@ import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
 
 import HeaderLangLink from '@/components/btns/HeaderLangLink'
-import Until from '@/components/dates/Until'
-import Price from '@/components/prices/Price'
+import Until from '@/components/costs/Until'
+import Price from '@/components/costs/Price'
 
 import useAt from '@/components/hooks/useAt'
 
@@ -14,7 +14,7 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 
 import Script from 'next/script'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
 
 import contactData from '@/data/contactData'
 import SVGLocation from '@/components/svgs/SVGLocation'
@@ -22,7 +22,7 @@ import SVGLogo from '@/components/svgs/SVGLogo'
 import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
 import Image from 'next/image'
 import ProgramsColumn from '@/components/general/ProgramsColumn'
-import Discount from '@/components/prices/Discount'
+import Discount from '@/components/costs/Discount'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGScreen from '@/components/svgs/SVGScreen'
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'

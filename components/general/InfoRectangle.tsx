@@ -1,11 +1,11 @@
-import Until from '@/components/dates/Until'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import Until from '@/components/costs/Until'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
 
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
 
 import useAt from '@/components/hooks/useAt'
-import Price from '../prices/Price'
+import Price from '@/components/costs/Price'
 
 const InfoRectangle = ({ programPage = false }) => {
   const at = useAt()

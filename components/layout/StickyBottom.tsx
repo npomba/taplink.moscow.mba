@@ -1,13 +1,13 @@
 import stls from '@/styles/modules/StickyBottom.module.sass'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
-import Until from '../dates/Until'
-import SVGCross from '../svgs/SVGCross'
+import Until from '@/components/costs/Until'
+import SVGCross from '@/components/svgs/SVGCross'
+import SVGClose from '@/components/svgs/SVGClose'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import PopupLearnMore from '@/components/popups/PopupLearnMore'
-import SVGClose from '@/components/svgs/SVGClose'
 
 const StickyBottom = () => {
   useEffect(() => {
@@ -62,7 +62,7 @@ const StickyBottom = () => {
             modal
             nested>
             {close => (
-              <PopUpForm
+              <PopupForm
                 title={'Получите консультацию'}
                 closePopUpForm={close}
               />
