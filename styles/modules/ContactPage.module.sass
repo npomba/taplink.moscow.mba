@@ -1,8 +1,8 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .h1
   text-transform: uppercase
-  @include media(desktop, tablet, laptop)
+  @include m.media(widescreen, desktop, tablet, laptop)
     margin: 54px 0
-  @include media(phone)
+  @include m.media(phone)
     margin: 30px 0

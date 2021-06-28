@@ -1,7 +1,7 @@
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import stls from '@/styles/modules/Filters.module.sass'
-import Discount from '@/components/prices/Discount'
+import Discount from '@/components/costs/Discount'
 
 const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()

@@ -1,4 +1,4 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 $mobileView: '1069px'
 $lineBrakeView: '1163px'
@@ -34,7 +34,7 @@ $mobileViewLineBrakeView: '625px'
   position: relative
 
 .p
-  // @include media(desktop, tablet, laptop)
+  // @include m.media(desktop, tablet, laptop)
   // width: 100%
   display: flex
   justify-content: center

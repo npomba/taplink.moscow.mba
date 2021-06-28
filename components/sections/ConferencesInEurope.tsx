@@ -1,5 +1,5 @@
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/conferencesInEurope'
 
@@ -10,14 +10,14 @@ const ConferencesInEurope = () => {
       <div className='organization-flex'>
         <div className='organization-text'>
           <h2>
-            {setString(lang.orgTitleFirst)}{' '}
-            <span className='red'>{setString(lang.orgTitleSecond)}</span>
+            {SetString(lang.orgTitleFirst)}{' '}
+            <span className='red'>{SetString(lang.orgTitleSecond)}</span>
           </h2>
-          <p className='title-desc'>{setString(lang.orgDisc)}</p>
+          <p className='title-desc'>{SetString(lang.orgDisc)}</p>
           <div className='image'>
             <Image
               src={imageData.shorterImage.src}
-              alt={setString(imageData.shorterImage.alt)}
+              alt={SetString(imageData.shorterImage.alt)}
               width={623}
               height={364}
               priority={true}
@@ -29,7 +29,7 @@ const ConferencesInEurope = () => {
           <div className='image'>
             <Image
               src={imageData.higherImage.src}
-              alt={setString(imageData.higherImage.alt)}
+              alt={SetString(imageData.higherImage.alt)}
               width={415}
               height={690}
               priority={true}

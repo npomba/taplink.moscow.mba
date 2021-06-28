@@ -1,8 +1,8 @@
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
-import PopUpForm from '@/components/popups/Form'
-import setString from '@/components/hooks/setString'
+import PopupForm from '@/components/popups/PopupForm'
+import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
 
@@ -18,19 +18,19 @@ const Teachers = ({
           atStandAlonePage && 'about-detailt-section--stand-alone-page'
         }`}>
         <div className='section-pl'>
-          <div className='title-pl'>{setString(lang.teachersTitleLabel)}</div>
+          <div className='title-pl'>{SetString(lang.teachersTitleLabel)}</div>
           <div className='about-detail-content'>
             <h2>
-              {setString(lang.teachersTitleFirst)}{' '}
-              <span className='red'>{setString(lang.teachersTitleRed)} </span>
-              {setString(lang.teachersTitleSecond)}
+              {SetString(lang.teachersTitleFirst)}{' '}
+              <span className='red'>{SetString(lang.teachersTitleRed)} </span>
+              {SetString(lang.teachersTitleSecond)}
             </h2>
-            <div className='text'>{setString(lang.teachersDics)}</div>
+            <div className='text'>{SetString(lang.teachersDics)}</div>
             <div className='dobble-images about-detail-images'>
               <div className='image pic-1'>
                 <Image
                   src={imagesData.circleSpeakerOne.src}
-                  alt={setString(imagesData.circleSpeakerOne.alt)}
+                  alt={SetString(imagesData.circleSpeakerOne.alt)}
                   width={425}
                   height={422}
                   layout='responsive'
@@ -40,7 +40,7 @@ const Teachers = ({
               <div className='image pic-2'>
                 <Image
                   src={imagesData.circleSpeakerTwo.src}
-                  alt={setString(imagesData.circleSpeakerTwo.alt)}
+                  alt={SetString(imagesData.circleSpeakerTwo.alt)}
                   width={236}
                   height={236}
                   layout='responsive'
@@ -54,8 +54,8 @@ const Teachers = ({
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
-                  <h5>{setString(lang.teachersListItemTitle)}</h5>
-                  <p>{setString(lang.teachersListItemDisc)}</p>
+                  <h5>{SetString(lang.teachersListItemTitle)}</h5>
+                  <p>{SetString(lang.teachersListItemDisc)}</p>
                 </div>
               </li>
               <li>
@@ -63,8 +63,8 @@ const Teachers = ({
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
-                  <h5>{setString(lang.teachersListItemTitleSecond)}</h5>
-                  <p>{setString(lang.teachersListItemDiscSecond)}</p>
+                  <h5>{SetString(lang.teachersListItemTitleSecond)}</h5>
+                  <p>{SetString(lang.teachersListItemDiscSecond)}</p>
                 </div>
               </li>
               <li>
@@ -72,12 +72,12 @@ const Teachers = ({
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
-                  <h5>{setString(lang.teachersListItemTitleThird)}</h5>
-                  <p>{setString(lang.teachersListItemDiscThird)}</p>
+                  <h5>{SetString(lang.teachersListItemTitleThird)}</h5>
+                  <p>{SetString(lang.teachersListItemDiscThird)}</p>
                 </div>
               </li>
             </ul>
-            <h3>{setString(lang.teachersProsTitle)}</h3>
+            <h3>{SetString(lang.teachersProsTitle)}</h3>
           </div>
         </div>
         <ul className='about-teachers-list'>
@@ -86,7 +86,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-1.jpg'
-                  alt={setString(lang.teachersTeacherOneTitle)}
+                  alt={SetString(lang.teachersTeacherOneTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -95,9 +95,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherOneTitle)}
+                  {SetString(lang.teachersTeacherOneTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherOneDics)}</p>
+                <p>{SetString(lang.teachersTeacherOneDics)}</p>
               </div>
             </div>
           </li>
@@ -106,7 +106,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-2.jpg'
-                  alt={setString(lang.teachersTeacherTwoTitle)}
+                  alt={SetString(lang.teachersTeacherTwoTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -115,9 +115,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherTwoTitle)}
+                  {SetString(lang.teachersTeacherTwoTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherTwoDics)}</p>
+                <p>{SetString(lang.teachersTeacherTwoDics)}</p>
               </div>
             </div>
           </li>
@@ -126,7 +126,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-3.jpg'
-                  alt={setString(lang.teachersTeacherThreeTitle)}
+                  alt={SetString(lang.teachersTeacherThreeTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -135,9 +135,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherThreeTitle)}
+                  {SetString(lang.teachersTeacherThreeTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherThreeDics)}</p>
+                <p>{SetString(lang.teachersTeacherThreeDics)}</p>
               </div>
             </div>
           </li>
@@ -146,7 +146,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-4.jpg'
-                  alt={setString(lang.teachersTeacherFourTitle)}
+                  alt={SetString(lang.teachersTeacherFourTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -155,9 +155,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherFourTitle)}
+                  {SetString(lang.teachersTeacherFourTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherFourDics)}</p>
+                <p>{SetString(lang.teachersTeacherFourDics)}</p>
               </div>
             </div>
           </li>
@@ -166,7 +166,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-5.jpg'
-                  alt={setString(lang.teachersTeacherFiveTitle)}
+                  alt={SetString(lang.teachersTeacherFiveTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -175,9 +175,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherFiveTitle)}
+                  {SetString(lang.teachersTeacherFiveTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherFiveDics)}</p>
+                <p>{SetString(lang.teachersTeacherFiveDics)}</p>
               </div>
             </div>
           </li>
@@ -186,7 +186,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-6.jpg'
-                  alt={setString(lang.teachersTeacherSixTitle)}
+                  alt={SetString(lang.teachersTeacherSixTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -195,9 +195,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherSixTitle)}
+                  {SetString(lang.teachersTeacherSixTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherSixDics)}</p>
+                <p>{SetString(lang.teachersTeacherSixDics)}</p>
               </div>
             </div>
           </li>
@@ -206,7 +206,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-7.jpg'
-                  alt={setString(lang.teachersTeacherSevenTitle)}
+                  alt={SetString(lang.teachersTeacherSevenTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -215,9 +215,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherSevenTitle)}
+                  {SetString(lang.teachersTeacherSevenTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherSevenDics)}</p>
+                <p>{SetString(lang.teachersTeacherSevenDics)}</p>
               </div>
             </div>
           </li>
@@ -226,7 +226,7 @@ const Teachers = ({
               <div className='image'>
                 <Image
                   src='/assets/images/teachers/teacher-8.jpg'
-                  alt={setString(lang.teachersTeacherEightTitle)}
+                  alt={SetString(lang.teachersTeacherEightTitle)}
                   width={269}
                   height={322}
                   layout='responsive'
@@ -235,9 +235,9 @@ const Teachers = ({
               </div>
               <div>
                 <div className='name'>
-                  {setString(lang.teachersTeacherEightTitle)}
+                  {SetString(lang.teachersTeacherEightTitle)}
                 </div>
-                <p>{setString(lang.teachersTeacherEightDics)}</p>
+                <p>{SetString(lang.teachersTeacherEightDics)}</p>
               </div>
             </div>
           </li>
@@ -246,18 +246,18 @@ const Teachers = ({
           <Popup
             trigger={
               <button className='button'>
-                {setString(lang.teachersCtaBtn)}
+                {SetString(lang.teachersCtaBtn)}
               </button>
             }
             modal
             nested>
             {close => (
-              <PopUpForm
+              <PopupForm
                 programId={programId}
                 programTitle={programTitle}
                 closePopUpForm={close}
-                title={setString(lang.teachersPopupFormTitle)}
-                disc={setString(lang.teachersPopupFormDics)}
+                title={SetString(lang.teachersPopupFormTitle)}
+                disc={SetString(lang.teachersPopupFormDics)}
               />
             )}
           </Popup>

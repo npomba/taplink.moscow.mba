@@ -1,11 +1,11 @@
 import Link from 'next/link'
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
-import Price from '@/components/prices/Price'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
+import Price from '@/components/costs/Price'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import ProgramSubjects from '../hooks/ProgramSubjects'
 
 const Executive = () => {
@@ -17,20 +17,20 @@ const Executive = () => {
             <span>Premium</span>
           </div>
           <h2>Executive MBA</h2>
-          <p className='title-desc'>{setString(lang.executiveMBADicsFirst)}</p>
-          <p className='title-desc'>{setString(lang.executiveMBADicsSecond)}</p>
+          <p className='title-desc'>{SetString(lang.executiveMBADicsFirst)}</p>
+          <p className='title-desc'>{SetString(lang.executiveMBADicsSecond)}</p>
           <ul className='count-list'>
             <li>
               <TrainingPeriod type={'executive'} />
             </li>
-            <li>2 {setString(lang.executiveOfflineModules)}</li>
+            <li>2 {SetString(lang.executiveOfflineModules)}</li>
             <li>
               <ProgramSubjects sum={true} type={'executive'} />{' '}
-              {setString(langMenu.qtSubjects)}
+              {SetString(langMenu.qtSubjects)}
             </li>
           </ul>
           <div className='price'>
-            {setString(langMenu.price)}:{' '}
+            {SetString(langMenu.price)}:{' '}
             <i className='new-price'>
               {' '}
               <Price discount={false} type={'executive'} /> &#8381;
@@ -42,7 +42,7 @@ const Executive = () => {
           </div>
           <Link href='/programs/executive/' locale='ru'>
             <a className='button empty-button'>
-              {setString(lang.learnMoreBtn)}
+              {SetString(lang.learnMoreBtn)}
             </a>
           </Link>
         </div>
@@ -50,7 +50,7 @@ const Executive = () => {
           <div className='image pic-1'>
             <Image
               src={imageData.largerCircle.src}
-              alt={setString(imageData.largerCircle.alt)}
+              alt={SetString(imageData.largerCircle.alt)}
               width={401}
               height={400}
               priority={true}
@@ -59,7 +59,7 @@ const Executive = () => {
           <div className='image pic-2'>
             <Image
               src={imageData.smallerCircle.src}
-              alt={setString(imageData.smallerCircle.alt)}
+              alt={SetString(imageData.smallerCircle.alt)}
               width={221}
               height={221}
               priority={true}
@@ -67,7 +67,7 @@ const Executive = () => {
           </div>
           <div className='count'>
             <strong>200+</strong>
-            <span>{setString(lang.graduates)}</span>
+            <span>{SetString(lang.graduates)}</span>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import Image from 'next/image'
 import SVGClose from '../svgs/SVGClose'
 
-const ReviewPopUp = ({ review, closePopUp }) => {
+const PopupReview = ({ review, closePopUp }) => {
   return (
     <>
       <div id={`${review.id}`} className='popup-modal'>
@@ -33,4 +33,4 @@ const ReviewPopUp = ({ review, closePopUp }) => {
   )
 }
 
-export default ReviewPopUp
+export default PopupReview

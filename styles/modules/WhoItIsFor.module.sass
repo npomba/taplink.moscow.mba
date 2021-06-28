@@ -1,0 +1,13 @@
+@use '@/styles/utils/mixin' as m
+
+.container
+  display: flex
+  flex-wrap: wrap
+  margin: 130px 0
+
+  @include m.media(laptop, tablet, phone)
+    flex-direction: column
+    margin: 65px 0
+
+.title
+  flex: 1 0 100%

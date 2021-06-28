@@ -1,4 +1,4 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .container
   display: flex
@@ -7,7 +7,7 @@
   margin-bottom: 110px
   background-color: #FF3535
   color: #fff
-  // @include media(laptop, tablet, phone)
+  // @include m.media(laptop, tablet, phone)
   //   justify-content: space-evenly
   @media(max-width: 1019px)
     margin-bottom: 50px

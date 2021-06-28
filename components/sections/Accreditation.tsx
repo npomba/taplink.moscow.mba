@@ -1,6 +1,6 @@
 import Image from 'next/image'
 import imgData from '@/data/images/accreditation'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import SVGPaperCorner from '../svgs/SVGPaperCorner'
 
@@ -10,7 +10,7 @@ const Accreditation = () => {
       <div className='image'>
         <Image
           src={imgData.accreditationImageAlt.src}
-          alt={setString(imgData.accreditationImageAlt.alt)}
+          alt={SetString(imgData.accreditationImageAlt.alt)}
           width={644}
           height={664}
           priority={true}
@@ -18,11 +18,11 @@ const Accreditation = () => {
         />
       </div>
       <div className='accreditations-content'>
-        <h2>{setString(lang.accreditationTitle)}</h2>
-        <div className='title-desc'>{setString(lang.accreditationDics)}</div>
+        <h2>{SetString(lang.accreditationTitle)}</h2>
+        <div className='title-desc'>{SetString(lang.accreditationDics)}</div>
         <ul className='accreditations-list'>
-          <li>{setString(lang.accreditationItemOne)}</li>
-          <li>{setString(lang.accreditationItemTwo)}</li>
+          <li>{SetString(lang.accreditationItemOne)}</li>
+          <li>{SetString(lang.accreditationItemTwo)}</li>
         </ul>
         <a
           href='https://isga.obrnadzor.gov.ru/rlic/details/2df11621-2d30-4173-9389-2fecc24a7639/'
@@ -32,7 +32,7 @@ const Accreditation = () => {
           <div className='pic'>
             <SVGPaperCorner fill={'#C7C7C7'} />
           </div>
-          <span>{setString(lang.accreditationLicenseLink)}</span>
+          <span>{SetString(lang.accreditationLicenseLink)}</span>
         </a>
       </div>
     </section>

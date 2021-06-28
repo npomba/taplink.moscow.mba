@@ -1,4 +1,4 @@
-import { apiProgramsReqUrl, server } from '@/config/index'
+import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 
 import OnlineProgram from '@/components/pages/OnlineProgram'
 
@@ -7,7 +7,7 @@ const programsProfessionalOnlineProgram = ({ program, programs }) => {
 }
 
 export const getStaticProps = async context => {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   const programsFiltered = data.filter(
@@ -28,7 +28,7 @@ export const getStaticProps = async context => {
 }
 
 export const getStaticPaths = async () => {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const programs = await res.json()
 
   const urls = programs.data
