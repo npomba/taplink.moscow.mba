@@ -5,7 +5,7 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
 import ContactCards from '@/components/general/ContactCards'
 import contactData from '@/data/contactData'
-import { apiProgramsReqUrl, server } from '@/config/index'
+import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 
 const contact = ({ programs }) => {
   const contactInfo = contactData()
@@ -44,7 +44,7 @@ const contact = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

@@ -1,5 +1,5 @@
 import { NextSeo } from 'next-seo'
-import { server, apiProgramsReqUrl } from '@/config/index'
+import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import contactData from '@/data/contactData'
 
 import stls from '@/styles/modules/LegalAboutPage.module.sass'
@@ -71,7 +71,7 @@ const about = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

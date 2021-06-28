@@ -8,7 +8,6 @@ import Footer from '@/components/layout/Footer'
 import Wrapper from '@/components/layout/Wrapper'
 import '@/styles/hugeStyles.sass'
 import '@/styles/hugeStyles.scss'
-import { apiProgramsReqUrl, server } from '@/config/index'
 import { motion, AnimatePresence } from 'framer-motion'
 import { dev, gtmId } from '@/config/index'
 
