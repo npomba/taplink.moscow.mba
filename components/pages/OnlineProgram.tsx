@@ -46,9 +46,6 @@ const PageOnlineProgram = ({ program }) => {
       <div className='container'>
         <ProgramGoal data={data} />
         <WhatWillYouLearn data={data} />
-        <HelpWithEmployment />
-
-        <WhoItIsFor />
         <ProgramDesc />
         <Pros format={'online'} />
         <HowProcessGoes />
