@@ -44,11 +44,11 @@ const ProgramsColumn = ({ data, id, type }) => {
             {setString(langMenu.price)}:{' '}
             <i className='new-price'>
               {' '}
-              <Price discount={true} type={type} format={'online'} /> &#8381;
+              <Price discount={true} type={type} format={'online'} /> Р.
             </i>{' '}
             <i className='old-price'>
               {' '}
-              <Price discount={false} type={type} format={'online'} /> &#8381;
+              <Price discount={false} type={type} format={'online'} /> Р.
             </i>
           </div>
           <div className='info-list'>
@@ -99,7 +99,7 @@ const ProgramsColumn = ({ data, id, type }) => {
             {setString(langMenu.price)}:{' '}
             <i className='simple-price'>
               {' '}
-              <Price discount={false} type={type} format={'blended'} /> &#8381;
+              <Price discount={false} type={type} format={'blended'} /> Р.
             </i>
           </div>
           <div className='info-list'>

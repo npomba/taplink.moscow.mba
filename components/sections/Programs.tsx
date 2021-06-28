@@ -118,7 +118,7 @@ const Programs = ({ programs }) => {
                       type={'mini'}
                       format={'online'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>
@@ -176,7 +176,7 @@ const Programs = ({ programs }) => {
                       type={'mini'}
                       format={'blended'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>
@@ -276,7 +276,7 @@ const Programs = ({ programs }) => {
                       type={'professional'}
                       format={'online'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                   <i className='old-price'>
                     {' '}
@@ -285,7 +285,7 @@ const Programs = ({ programs }) => {
                       type={'professional'}
                       format={'online'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>
@@ -343,7 +343,7 @@ const Programs = ({ programs }) => {
                       type={'professional'}
                       format={'blended'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>
@@ -443,7 +443,7 @@ const Programs = ({ programs }) => {
                       type={'industry'}
                       format={'online'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                   <i className='old-price'>
                     {' '}
@@ -452,7 +452,7 @@ const Programs = ({ programs }) => {
                       type={'industry'}
                       format={'online'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>
@@ -510,7 +510,7 @@ const Programs = ({ programs }) => {
                       type={'industry'}
                       format={'blended'}
                     />{' '}
-                    &#8381;
+                    Р.
                   </i>
                 </div>
                 <div className='info-list'>

@@ -127,7 +127,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               }
               format={at.online ? 'online' : at.blended ? 'blended' : null}
             />{' '}
-            &#8381;
+            Р.
           </div>
           <div className='button-block'>
             <Popup

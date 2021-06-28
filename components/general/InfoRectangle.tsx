@@ -72,25 +72,23 @@ const InfoRectangle = ({ programPage = false }) => {
             {at.industry && at.blended && (
               <Price discount={false} type='industry' format='blended' />
             )}{' '}
-            {at.executive && <Price discount={false} type='executive' />}{' '}
-            &#8381;
+            {at.executive && <Price discount={false} type='executive' />} Р.
           </span>{' '}
           <span className='new-price'>
             {at.mini && at.online && (
               <>
-                <Price discount={false} type='mini' format='online' /> &#8381;
+                <Price discount={false} type='mini' format='online' /> Р.
               </>
             )}
             {at.professional && at.online && (
               <>
                 <Price discount={false} type='professional' format='online' />{' '}
-                &#8381;
+                Р.
               </>
             )}
             {at.industry && at.online && (
               <>
-                <Price discount={false} type='industry' format='online' />{' '}
-                &#8381;
+                <Price discount={false} type='industry' format='online' /> Р.
               </>
             )}{' '}
           </span>
