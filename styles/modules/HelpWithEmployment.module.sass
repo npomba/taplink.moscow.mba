@@ -31,7 +31,7 @@
 
   @include media(tablet, phone)
     margin: 0 0 30px
-  
+
   .content
     line-height: 120%
 
@@ -49,3 +49,23 @@
 
       @include media(tablet, phone)
         font-size: 15px
+
+.redCircle
+  width: 57px
+  height: 57px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  background: #FF3535
+  flex-shrink: 0
+  margin-right: 43px
+
+  @include media(tablet, phone)
+    width: 26px
+    height: 26px
+    margin-right: 17px
+
+    img
+      transform: scale(.55)
