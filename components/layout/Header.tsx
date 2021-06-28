@@ -381,7 +381,7 @@ const Header = ({ programs }) => {
                                   type={'mini'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>{' '}
                               <i className='old-price'>
                                 {' '}
@@ -390,7 +390,7 @@ const Header = ({ programs }) => {
                                   type={'mini'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
@@ -452,7 +452,7 @@ const Header = ({ programs }) => {
                                   type={'mini'}
                                   format={'blended'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
@@ -587,7 +587,7 @@ const Header = ({ programs }) => {
                                   type={'professional'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>{' '}
                               <i className='old-price'>
                                 {' '}
@@ -596,7 +596,7 @@ const Header = ({ programs }) => {
                                   type={'professional'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
@@ -661,7 +661,7 @@ const Header = ({ programs }) => {
                                   type={'professional'}
                                   format={'blended'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
@@ -805,7 +805,7 @@ const Header = ({ programs }) => {
                                   type={'industry'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>{' '}
                               <i className='old-price'>
                                 {' '}
@@ -814,7 +814,7 @@ const Header = ({ programs }) => {
                                   type={'industry'}
                                   format={'online'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
@@ -876,7 +876,7 @@ const Header = ({ programs }) => {
                                   type={'industry'}
                                   format={'blended'}
                                 />{' '}
-                                &#8381;
+                                Р.
                               </i>
                             </div>
                             <div className='info-list'>
