@@ -1,14 +1,11 @@
+import stls from '@/styles/modules/general/ProgramsColumn.module.sass'
 import Link from 'next/link'
-
 import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
-
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
-
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
-
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Discount from '../costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'

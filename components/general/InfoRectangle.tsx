@@ -1,9 +1,8 @@
+import stls from '@/styles/modules/general/InfoRectangle.module.sass'
 import Until from '@/components/costs/Until'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
-
 import useAt from '@/components/hooks/useAt'
 import Price from '@/components/costs/Price'
 

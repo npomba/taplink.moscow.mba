@@ -1,21 +1,17 @@
+import stls from '@/styles/modules/layout/Header.module.sass'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import lang from '@/data/translation/header'
 import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
-
 import HeaderLangLink from '@/components/btns/HeaderLangLink'
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
-
 import useAt from '@/components/hooks/useAt'
-
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
-
 import Script from 'next/script'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-
 import contactData from '@/data/contactData'
 import SVGLocation from '@/components/svgs/SVGLocation'
 import SVGLogo from '@/components/svgs/SVGLogo'

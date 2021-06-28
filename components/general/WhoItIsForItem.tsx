@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/WhoItIsForItem.module.sass'
+import stls from '@/styles/modules/general/WhoItIsForItem.module.sass'
 
 const WhoItIsForItem = ({ title, description, moduleIndex }) => {
   const itemIdx =

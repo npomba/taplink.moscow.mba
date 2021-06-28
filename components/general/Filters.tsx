@@ -1,6 +1,6 @@
+import stls from '@/styles/modules/general/Filters.module.sass'
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
-import stls from '@/styles/modules/Filters.module.sass'
 import Discount from '@/components/costs/Discount'
 
 const Filters = ({ mbaTypeOfProgram, mbaFormat }) => {

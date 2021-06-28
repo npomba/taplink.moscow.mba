@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/popups/PopupReview.module.sass'
 import Image from 'next/image'
 import SVGClose from '../svgs/SVGClose'
 
