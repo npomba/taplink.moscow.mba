@@ -1,0 +1,21 @@
+@import @/styles/utils/mixins
+
+.redCircle
+  width: 57px
+  height: 57px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  background: #FF3535
+  flex-shrink: 0
+  margin-right: 43px
+
+  @include media(tablet, phone)
+    width: 26px
+    height: 26px
+    margin-right: 17px
+
+    img 
+      transform: scale(.55)
