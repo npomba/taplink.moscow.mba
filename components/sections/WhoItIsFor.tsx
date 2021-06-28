@@ -1,4 +1,4 @@
-import WhoItIsForModule from '@/components/general/WhoItIsForModule'
+import WhoItIsForItem from '@/components/general/WhoItIsForItem'
 import stls from '@/styles/modules/WhoItIsFor.module.sass'
 
 const whatCanBeLearned = [
@@ -16,10 +16,10 @@ const whatCanBeLearned = [
 
 const WhoItIsFor = ({ whatCanYouLearn = whatCanBeLearned }) => {
   return (
-    <section className={stls.whoItIsForSection}>
-      <h2>Кому подойдет эта программа?</h2>
+    <section className={stls.container}>
+      <h2 className={stls.title}>Кому подойдет эта программа?</h2>
       {whatCanYouLearn.map(({ title, description }, idx) => (
-        <WhoItIsForModule
+        <WhoItIsForItem
           key={title + idx}
           title={title}
           description={description}
