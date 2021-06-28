@@ -1,16 +1,16 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .actualSection
   position: relative
   padding-bottom: 140px
   margin-bottom: 130px
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     padding-bottom: 70px
     margin-bottom: 70px
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     padding-bottom: 60px
     margin-bottom: 60px
-  @include media(phone)
+  @include m.media(phone)
     padding-bottom: 40px
   &:after
     content: ''
@@ -32,18 +32,18 @@
     position: absolute
     z-index: 3
     bottom: 0
-    @include media(desktop, laptop, tablet, phone)
+    @include m.media(desktop, laptop, tablet, phone)
       left: 0
-    @include media(tablet, phone)
+    @include m.media(tablet, phone)
       width: 110px
 
   &.noLine
     margin-bottom: 140px
     padding-bottom: 0
-    @include media(laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       margin-bottom: 80px
       padding-bottom: 0
-    @include media(tablet, phone)
+    @include m.media(tablet, phone)
       margin-bottom: 60px
     &:after,
     &:before
@@ -54,31 +54,31 @@
   display: flex
   margin-top: 33px
   margin-bottom: 36px
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     padding-right: 0
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     margin-bottom: 25px
   .actualRightImage
     margin-top: 19px
     width: 410px
     height: calc(100% - 19px)
-    @include media(desktop)
+    @include m.media(desktop)
       position: absolute
       right: 0
       top: 0
       width: 410px
-    @include media(laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       position: absolute
       right: 0
       top: 0
       width: 345px
       height: 378px
-    @include media(tablet, phone)
+    @include m.media(tablet, phone)
       top: 0
       height: 50%
       width: calc(50% - 30px)
       margin-top: 0
-    @include media(phone)
+    @include m.media(phone)
       width: calc(50% - 20px)
     & > *
       max-height: 100%
@@ -91,12 +91,12 @@
 .actualContentTop
   width: 850px
   margin-right: 30px
-  @include media(desktop, tablet, phone)
+  @include m.media(desktop, tablet, phone)
     width: 540px
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     position: relative
     margin-right: 0
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     width: 100%
   .desc
     font-size: 35px
@@ -106,20 +106,20 @@
     max-width: 580px
     box-sizing: content-box
     color: #000
-    @include media(desktop, laptop, tablet, phone)
+    @include m.media(desktop, laptop, tablet, phone)
       padding-left: 0
-    @include media(laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       width: 315px
       margin-bottom: 38px
-    @include media(tablet, phone)
+    @include m.media(tablet, phone)
       font-size: 25px
       width: 50%
       min-height: calc(310px - 3vw)
-    @include media(phone)
+    @include m.media(phone)
       font-size: 18px
       min-height: calc(260px - 2vw)
   .actualBottomImage
-    @include media(phone)
+    @include m.media(phone)
       margin-top: -50px
     img
       width: 100%
@@ -129,24 +129,24 @@
   margin: 0 -15px
   line-height: 1.2
   padding-right: 109px
-  @include media(desktop, laptop, tablet, phone)
+  @include m.media(desktop, laptop, tablet, phone)
     padding-right: 0
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     justify-content: space-between
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     text-align: center
-  @include media(phone)
+  @include m.media(phone)
     display: block
     text-align: left
   li
     padding: 0 15px
     width: 33.333%
-    @include media(laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       width: auto
       max-width: 235px
       &:nth-last-of-type(1)
         max-width: 175px
-    @include media(phone)
+    @include m.media(phone)
       width: 100%
       max-width: 100%
       margin-bottom: 22px
@@ -157,10 +157,10 @@
     font-size: 36px
     color: #ff3535
     margin-bottom: 10px
-    @include media(laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       font-size: 28px
       margin-bottom: 5px
-    @include media(tablet, phone)
+    @include m.media(tablet, phone)
       font-size: 24px
-    @include media(phone)
+    @include m.media(phone)
       font-weight: 500

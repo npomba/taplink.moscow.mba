@@ -1,4 +1,4 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .title
   margin-bottom: 60px
@@ -28,7 +28,7 @@
     font-size: 30px
     line-height: 100%
     margin: 0
-  @include media(phone)
+  @include m.media(phone)
     flex-direction: column
     align-items: flex-start
     & > *:nth-child(1)
@@ -138,7 +138,7 @@
   position: relative
   padding: 120px 27px 30px
   line-height: 1.2
-  @include media(widescreen, desktop, laptop)
+  @include m.media(widescreen, desktop, laptop)
     &:hover
       background: #ffffff
       box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.09)

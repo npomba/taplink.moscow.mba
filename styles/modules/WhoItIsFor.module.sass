@@ -1,11 +1,11 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .container
   display: flex
   flex-wrap: wrap
   margin: 130px 0
 
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     flex-direction: column
     margin: 65px 0
 

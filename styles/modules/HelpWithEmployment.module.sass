@@ -1,15 +1,15 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .section
   display: flex
   flex-wrap: wrap
   margin: 130px 0 50px
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     flex-direction: column
     margin: 60px 0 30px
 
 .h2
   flex: 1 0 100%
   margin-bottom: 80px
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     margin-bottom: 40px

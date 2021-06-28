@@ -1,4 +1,4 @@
-@import @/styles/utils/mixins
+@use '@/styles/utils/mixin' as m
 
 .block
   flex: 1 1 calc(50% - 55px)
@@ -10,10 +10,10 @@
   &:nth-of-type(odd)
     margin-rigth: 55px
 
-  @include media(laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     flex: 1 1 50%
 
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     margin: 0 0 30px
 
   .content
@@ -25,14 +25,14 @@
       font-weight: 500
       line-height: 120%
 
-      @include media(tablet, phone)
+      @include m.media(tablet, phone)
         font-size: 20px
 
     .description
       font-weight: 300
       font-size: 16px
 
-      @include media(tablet, phone)
+      @include m.media(tablet, phone)
         font-size: 15px
 
 .iconCheck
@@ -47,7 +47,7 @@
   flex-shrink: 0
   margin-right: 43px
 
-  @include media(tablet, phone)
+  @include m.media(tablet, phone)
     width: 26px
     height: 26px
     margin-right: 17px
