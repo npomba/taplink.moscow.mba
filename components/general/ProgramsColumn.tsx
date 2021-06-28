@@ -7,7 +7,6 @@ import Until from '@/components/dates/Until'
 import Price from '@/components/prices/Price'
 
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-
 import ProgramsNumber from '@/components/sections/ProgramsNumber'
 
 import TrainingPeriod from '@/components/dates/TrainingPeriod'
