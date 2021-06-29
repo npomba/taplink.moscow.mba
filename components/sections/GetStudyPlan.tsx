@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/GetStudyPlan.module.sass'
+import stls from '@/styles/modules/MoreInfo.module.sass'
 import Popup from 'reactjs-popup'
 import PopupForm from '@/components/popups/PopupForm'
 
