@@ -3,7 +3,7 @@ import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import PopupLoader from '@/components/popups/PopupLoader'
 import SVGClose from '@/components/svgs/SVGClose'
-import stls from '@/styles/modules/LegalPage.module.sass'
+import stls from '@/styles/modules/PdfDocument.module.sass'
 
 const PopupPdf = ({ closePdfPopup, pdfFile, pageNum }) => {
   const pdfPageClasses = [stls.pdfPage, stls.pdfFullScreen]

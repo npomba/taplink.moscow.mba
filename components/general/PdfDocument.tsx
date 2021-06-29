@@ -4,12 +4,14 @@ pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import Popup from 'reactjs-popup'
 import PopupPdf from '@/components/popups/PopupPdf'
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
-import stls from '@/styles/modules/LegalPage.module.sass'
+import stls from '@/styles/modules/PdfDocument.module.sass'
 
 const PdfDocument = ({ fileSrc, fileName, pageNum }) => {
+  const pdfDocumentClasses = [stls.pdfDocument, 'pdf-document']
+
   return (
     <Document
-      className={stls.pdfDocument}
+      className={pdfDocumentClasses.join(' ')}
       file={fileSrc}
       loading='Подождите, идет загрузка...'>
       <Popup

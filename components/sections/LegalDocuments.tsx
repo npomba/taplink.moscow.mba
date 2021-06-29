@@ -1,5 +1,6 @@
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
 import stls from '@/styles/modules/LegalPage.module.sass'
+import pdfStls from '@/styles/modules/PdfDocument.module.sass'
 
 const legalDocuments = [
   'Лицензия на осуществление образовательной деятельности',
@@ -32,7 +33,7 @@ const LegalDocuments = () => {
   const legalDocumentsClasses = [stls.legalSection, stls.legalDocuments]
   const legalDocumentLinkClasses = [
     stls.listItem,
-    stls.pdfDocumentLinkContainer
+    pdfStls.pdfDocumentLinkContainer
   ]
 
   return (
