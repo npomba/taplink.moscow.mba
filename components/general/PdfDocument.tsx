@@ -17,12 +17,8 @@ const PdfDocument = ({ fileSrc, fileName, pageNum }) => {
       <Popup
         trigger={
           <div className={`${stls.popupPdfTrigger} trigger`}>
-            <Page
-              className={`${stls.pdfPage} pdf-page`}
-              width={320}
-              pageNumber={pageNum}
-            />
-            <div className={`${stls.pdfDocumentLinkContainer} link-container`}>
+            <Page className={stls.pdfPage} width={320} pageNumber={pageNum} />
+            <div className={stls.pdfDocumentLinkContainer}>
               <SVGPaperCorner fill='#000' />
               <a>{fileName}</a>
             </div>

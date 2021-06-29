@@ -25,22 +25,99 @@ const placeholderDiplomas = [
   }
 ]
 
+const profIndDiplomas = [
+  {
+    fileSrc: '/assets/diplomas/pro-ind/doc-1.pdf',
+    fileName: 'Диплом академии',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/pro-ind/doc-2.pdf',
+    fileName: 'Диплом уст. образца',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/pro-ind/doc-3.pdf',
+    fileName: 'Приложение к диплому',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/pro-ind/doc-4.pdf',
+    fileName: 'Diploma Supplement',
+    pageNum: 1
+  }
+]
+
+const miniDiplomas = [
+  {
+    fileSrc: '/assets/diplomas/mini/doc-1.pdf',
+    fileName: 'Диплом академии',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/mini/doc-2.pdf',
+    fileName: 'Диплом уст. образца',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/mini/doc-3.pdf',
+    fileName: 'Приложение к диплому',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/mini/doc-4.pdf',
+    fileName: 'Diploma Supplement',
+    pageNum: 1
+  }
+]
+
+const professionDiplomas = [
+  {
+    fileSrc: '/assets/diplomas/prof/doc-1.pdf',
+    fileName: 'Диплом академии',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/prof/doc-2.pdf',
+    fileName: 'Диплом уст. образца',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/prof/doc-3.pdf',
+    fileName: 'Приложение к диплому',
+    pageNum: 1
+  }
+]
+
+const courseDiplomas = [
+  {
+    fileSrc: '/assets/diplomas/mini/doc-1.pdf',
+    fileName: 'Диплом академии',
+    pageNum: 1
+  },
+  {
+    fileSrc: '/assets/diplomas/mini/doc-2.pdf',
+    fileName: 'Удостоверение о повышении квалификации',
+    pageNum: 1
+  }
+]
+
 const diplomasBasedOnProgram = [
   {
     programType: 'MBA Professional / Industry',
-    diplomas: placeholderDiplomas
+    diplomas: profIndDiplomas
   },
   {
     programType: 'MBA Mini',
-    diplomas: placeholderDiplomas
+    diplomas: miniDiplomas
   },
   {
     programType: 'Профессия',
-    diplomas: placeholderDiplomas
+    diplomas: professionDiplomas
   },
   {
     programType: 'Курс',
-    diplomas: placeholderDiplomas
+    diplomas: courseDiplomas
   }
 ]
 
