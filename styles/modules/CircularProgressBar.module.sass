@@ -1,23 +1,4 @@
-.circle
-  flex-shrink: 0
-  margin-right: 20px
-  position: relative
-  font-size: 25px
-  font-weight: 700
-  width: 124px
-  height: 124px
-  border-radius: 50%
-  transition: 'stroke-dashoffset 0.5s ease 0s',
-  & path:nth-child(1)
-    stroke: #E6E6E6
-    stroke-width: 3px
-    transition: stroke-dashoffset 0.5s ease 0s
-  & path:nth-child(2)
-    stroke: #ff3535
-    stroke-width: 3px
-  & text
-    transform: translate(-25%, 8%)
-    fill: #262626
+@use '@/styles/utils/mixin' as m
 
 .strong
   position: absolute
@@ -25,10 +6,15 @@
   left: 0
   width: 100%
   height: 100%
+  font-size: 90px
+  transform: translateY(-40px)
   display: flex
   align-items: center
   text-align: center
   justify-content: center
+  @include m.media(tablet, phone)
+    font-size: 50px
+    transform: translateY(-30px)
 
 .circleLg
   margin: 0 auto 20px
@@ -53,7 +39,3 @@
     width: 150px
     height: 150px
     font-size: 46px
-
-.strongLg
-  display: block
-  margin: 0 auto

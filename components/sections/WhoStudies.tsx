@@ -10,12 +10,12 @@ const WhoStudies = () => {
       <ul className='who-training-list'>
         <li>
           <CircularProgressbar className={circleStls.circleLg} value={45} />
-          <strong className={circleStls.strongLg}>45%</strong>
+          <strong className={circleStls.strong}>45%</strong>
           <p>Владельцев крупного бизнеса</p>
         </li>
         <li>
           <CircularProgressbar className={circleStls.circleLg} value={55} />
-          <strong className={circleStls.strongLg}>55%</strong>
+          <strong className={circleStls.strong}>55%</strong>
           <p>SEO и руководителей</p>
         </li>
       </ul>
