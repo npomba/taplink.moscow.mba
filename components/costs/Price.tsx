@@ -1,4 +1,8 @@
+import useAt from '@/components/hooks/useAt'
+
 const Price = ({ discount = false, type = null, format = null }) => {
+  const at = useAt()
+
   const price = {
     regular: {
       mini: {
@@ -31,7 +35,7 @@ const Price = ({ discount = false, type = null, format = null }) => {
 
   const regularOrDiscounted = discount ? 'discounted' : 'regular'
 
-  if (type === 'executive') return <>price[regularOrDiscounted].executive</>
+  if (at.executive) return <>{price[regularOrDiscounted].executive} Р.</>
 
   return (
     <>
