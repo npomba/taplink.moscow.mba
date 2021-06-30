@@ -4,13 +4,34 @@ import Until from '@/components/costs/Until'
 import PopupForm from '@/components/popups/PopupForm'
 import useAt from '@/components/hooks/useAt'
 import Price from '@/components/costs/Price'
+import Discount from '@/components/costs/Discount'
 import TrainingPeriod from '../costs/TrainingPeriod'
 import ProgramSubjects from '../hooks/ProgramSubjects'
 
-const CostOfStudy = ({ programTitle = null, programId = null }) => {
+const CostOfStudy = ({
+  programTitle = null,
+  programId = null,
+  programFormat = null,
+  programType = null
+}) => {
   const at = useAt()
+  const isDiscounted =
+    (at.mini && at.online) ||
+    (at.professional && at.online) ||
+    (at.industry && at.online)
+
   return (
     <section className='program-price-section'>
+      {isDiscounted && (
+        <div className='discount-sticker right-corner'>
+          <div className='size'>
+            <Discount />
+          </div>
+          <span>
+            <Until />
+          </span>
+        </div>
+      )}
       <h2>Стоимость обучения</h2>
       <div className='program-price-block single-program-price'>
         <div className='inner-block'>
@@ -105,29 +126,10 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
           </div>
           <div className='price'>
             <Price
-              discount={
-                at.mini && at.online
-                  ? true
-                  : at.professional && at.online
-                  ? true
-                  : at.industry && at.online
-                  ? true
-                  : false
-              }
-              type={
-                at.mini
-                  ? 'mini'
-                  : at.professional
-                  ? 'professional'
-                  : at.industry
-                  ? 'industry'
-                  : at.executive
-                  ? 'executive'
-                  : null
-              }
-              format={at.online ? 'online' : at.blended ? 'blended' : null}
+              discount={isDiscounted}
+              type={programType}
+              format={programFormat}
             />{' '}
-            Р.
           </div>
           <div className='button-block'>
             <Popup

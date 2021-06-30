@@ -92,7 +92,11 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                 </p>
               </div>
             </div>
-            <InfoRectangle programPage={true} />
+            <InfoRectangle
+              programPage={true}
+              type={mbaTypeOfProgram}
+              format={mbaFormat}
+            />
             <div className={`mini-programs-slider ${stls.programs}`}>
               {programs.map((program, idx) => {
                 return (

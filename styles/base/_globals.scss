@@ -927,7 +927,7 @@ h1 {
   }
 }
 
-.jumbotron-discount {
+.discount-sticker {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -938,10 +938,12 @@ h1 {
   background: $red;
   color: #fff;
   text-align: center;
-  left: 30px;
-  top: 150px;
   line-height: 1;
-  transform: rotate(20deg);
+  &.left-corner {
+    left: 30px;
+    top: 150px;
+    transform: rotate(20deg);
+  }
   .size {
     font-weight: bold;
     font-size: 35px;
@@ -3063,9 +3065,16 @@ footer {
 
 /* program-price-section ==============================*/
 .program-price-section {
+  position: relative;
   margin-bottom: 130px;
   background: #f7f7f7;
   padding: 130px;
+
+  .discount-sticker.right-corner {
+    top: 66px;
+    right: 66px;
+    transform: rotate(15deg);
+  }
 }
 
 .program-price-tabs {
@@ -3157,7 +3166,7 @@ footer {
     color: #808080;
     font-size: 24px;
     position: relative;
-    margin-left: 12px;
+    margin-left: 28px;
     display: inline-block;
     &:after {
       content: '';
@@ -4537,7 +4546,7 @@ footer {
     align-items: center;
     position: relative;
   }
-  .jumbotron-discount {
+  .discount-sticker {
     left: auto;
     right: 0;
     top: 0;
@@ -5996,7 +6005,7 @@ footer {
       white-space: nowrap;
     }
   }
-  .jumbotron-discount {
+  .discount-sticker {
     left: auto;
     right: 0;
     top: 0;
@@ -7028,7 +7037,7 @@ footer {
   .jumbotron-label {
     font-size: 12px;
   }
-  .jumbotron-discount {
+  .discount-sticker {
     margin-top: -23px;
     & ~ .jumbotron-label {
       margin-right: 110px;
@@ -7438,12 +7447,12 @@ div.popup-content {
 }
 
 .red-rectangle-price {
-  & .old-price {
+  & .new-price {
     &::after {
       display: none;
     }
   }
-  & .new-price {
+  & .old-price {
     position: relative;
     &::after {
       content: '';

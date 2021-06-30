@@ -26,7 +26,7 @@ const JumbotronProgram = ({ data }) => {
           <Breadcrumbs pageTitle={data.title} />
           <div className='jumbotron-top'>
             {at.online && (
-              <div className='jumbotron-discount'>
+              <div className='discount-sticker left-corner'>
                 <div className='size'>
                   <Discount />
                 </div>
@@ -80,7 +80,7 @@ const JumbotronProgram = ({ data }) => {
               </li>
             </ul>
           </div>
-          <InfoRectangle />
+          <InfoRectangle type={data.mbaTypeOfProgram} format={data.mbaFormat} />
         </div>
       </div>
     </section>

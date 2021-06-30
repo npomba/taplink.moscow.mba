@@ -63,7 +63,12 @@ const PageOnlineProgram = ({ program }) => {
         <Diploma />
         <Students />
         <Reviews />
-        <CostOfStudy programId={data._id} programTitle={data.title} />
+        <CostOfStudy
+          programId={data._id}
+          programTitle={data.title}
+          programFormat={data.mbaFormat}
+          programType={data.mbaTypeOfProgram}
+        />
         <Qna />
         <ContactUs
           programId={data._id}

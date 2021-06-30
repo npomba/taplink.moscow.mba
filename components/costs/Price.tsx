@@ -29,52 +29,18 @@ const Price = ({ discount = false, type = null, format = null }) => {
     }
   }
 
+  const regularOrDiscounted = discount ? 'discounted' : 'regular'
+
+  if (type === 'executive') return <>price[regularOrDiscounted].executive</>
+
   return (
     <>
-      {/* Discounts */}
-      {discount &&
-        type === 'mini' &&
-        format === 'online' &&
-        price.discounted.mini.online}
-      {discount &&
-        type === 'professional' &&
-        format === 'online' &&
-        price.discounted.professional.online}
-      {discount &&
-        type === 'industry' &&
-        format === 'online' &&
-        price.discounted.industry.online}
-      {discount && type === 'executive' && price.discounted.executive}
-
-      {/* Regular */}
-      {!discount &&
-        type === 'mini' &&
-        format === 'online' &&
-        price.regular.mini.online}
-      {!discount &&
-        type === 'mini' &&
-        format === 'blended' &&
-        price.regular.mini.blended}
-
-      {!discount &&
-        type === 'professional' &&
-        format === 'online' &&
-        price.regular.professional.online}
-      {!discount &&
-        type === 'professional' &&
-        format === 'blended' &&
-        price.regular.professional.blended}
-
-      {!discount &&
-        type === 'industry' &&
-        format === 'online' &&
-        price.regular.industry.online}
-      {!discount &&
-        type === 'industry' &&
-        format === 'blended' &&
-        price.regular.industry.blended}
-
-      {!discount && type === 'executive' && price.regular.executive}
+      <i className={discount ? 'new-price' : 'simple-price'}>
+        {price[regularOrDiscounted][type][format]} Р.
+      </i>
+      {discount && (
+        <i className='old-price'>{price.regular[type][format]} Р.</i>
+      )}
     </>
   )
 }

@@ -6,8 +6,13 @@ import langMenu from '@/data/translation/menu'
 import useAt from '@/components/hooks/useAt'
 import Price from '@/components/costs/Price'
 
-const InfoRectangle = ({ programPage = false }) => {
+const InfoRectangle = ({ programPage = false, type = null, format = null }) => {
   const at = useAt()
+  const isDiscounted =
+    (at.mini && at.online) ||
+    (at.professional && at.online) ||
+    (at.industry && at.online)
+
   return (
     <ul
       className={`jumbotron-red-info ${
@@ -16,19 +21,7 @@ const InfoRectangle = ({ programPage = false }) => {
       <li>
         <p>Срок обучения:</p>
         <div className='detail'>
-          <TrainingPeriod
-            type={
-              at.mini
-                ? 'mini'
-                : at.professional
-                ? 'professional'
-                : at.industry
-                ? 'industry'
-                : at.executive
-                ? 'executive'
-                : null
-            }
-          />
+          <TrainingPeriod type={type} />
         </div>
       </li>
       <li>
@@ -52,45 +45,7 @@ const InfoRectangle = ({ programPage = false }) => {
       <li>
         <p>Стоимость:</p>
         <div className='detail red-rectangle-price'>
-          <span className='old-price'>
-            {at.mini && at.online && (
-              <Price discount={true} type='mini' format='online' />
-            )}
-            {at.mini && at.blended && (
-              <Price discount={false} type='mini' format='blended' />
-            )}{' '}
-            {at.professional && at.online && (
-              <Price discount={true} type='professional' format='online' />
-            )}{' '}
-            {at.professional && at.blended && (
-              <Price discount={false} type='professional' format='blended' />
-            )}{' '}
-            {at.industry && at.online && (
-              <Price discount={true} type='industry' format='online' />
-            )}{' '}
-            {at.industry && at.blended && (
-              <Price discount={false} type='industry' format='blended' />
-            )}{' '}
-            {at.executive && <Price discount={false} type='executive' />} Р.
-          </span>{' '}
-          <span className='new-price'>
-            {at.mini && at.online && (
-              <>
-                <Price discount={false} type='mini' format='online' /> Р.
-              </>
-            )}
-            {at.professional && at.online && (
-              <>
-                <Price discount={false} type='professional' format='online' />{' '}
-                Р.
-              </>
-            )}
-            {at.industry && at.online && (
-              <>
-                <Price discount={false} type='industry' format='online' /> Р.
-              </>
-            )}{' '}
-          </span>
+          <Price discount={isDiscounted} type={type} format={format} />
         </div>
       </li>
     </ul>
