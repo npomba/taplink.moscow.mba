@@ -35,7 +35,8 @@ const Price = ({ discount = false, type = null, format = null }) => {
 
   const regularOrDiscounted = discount ? 'discounted' : 'regular'
 
-  if (at.executive) return <>{price[regularOrDiscounted].executive} Р.</>
+  if ((!format && at.executive) || (!format && type === 'executive'))
+    return <>{price[regularOrDiscounted].executive} Р.</>
 
   return (
     <>

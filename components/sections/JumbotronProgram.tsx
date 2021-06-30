@@ -11,7 +11,6 @@ import useAt from '@/components/hooks/useAt'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
-  console.log(data.mbaTypeOfProgram)
 
   return (
     <section className='jumbotron-section'>
