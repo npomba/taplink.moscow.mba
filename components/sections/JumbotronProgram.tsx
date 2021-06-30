@@ -11,6 +11,7 @@ import useAt from '@/components/hooks/useAt'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
+  console.log(data.mbaTypeOfProgram)
 
   return (
     <section className='jumbotron-section'>
@@ -80,7 +81,10 @@ const JumbotronProgram = ({ data }) => {
               </li>
             </ul>
           </div>
-          <InfoRectangle type={data.mbaTypeOfProgram} format={data.mbaFormat} />
+          <InfoRectangle
+            type={data.mbaTypeOfProgram ?? 'executive'}
+            format={data.mbaFormat}
+          />
         </div>
       </div>
     </section>
