@@ -5,8 +5,11 @@ import PopupLoader from '@/components/popups/PopupLoader'
 import SVGClose from '@/components/svgs/SVGClose'
 import stls from '@/styles/modules/PdfDocument.module.sass'
 
-const PopupPdf = ({ closePdfPopup, pdfFile, pageNum }) => {
-  const pdfPageClasses = [stls.pdfPage, stls.pdfFullScreen]
+const PopupPdf = ({ closePdfPopup, pdfFile, pageNum, landscape }) => {
+  const pdfPageClasses = [stls.pdfPage]
+
+  if (landscape) pdfPageClasses.push(stls.pdfModalLandscape)
+  else pdfPageClasses.push(stls.pdfModalPortrait)
 
   return (
     <div className='popup-modal popup-pdf mfp-with-anim'>

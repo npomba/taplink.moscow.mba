@@ -6,8 +6,11 @@ import PopupPdf from '@/components/popups/PopupPdf'
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
 import stls from '@/styles/modules/PdfDocument.module.sass'
 
-const PdfDocument = ({ fileSrc, fileName, pageNum }) => {
+const PdfDocument = ({ fileSrc, fileName, pageNum, landscape }) => {
   const pdfDocumentClasses = [stls.pdfDocument, 'pdf-document']
+
+  if (landscape) pdfDocumentClasses.push(stls.pdfDocumentLandscape)
+  else pdfDocumentClasses.push(stls.pdfDocumentPortrait)
 
   return (
     <Document
@@ -28,7 +31,12 @@ const PdfDocument = ({ fileSrc, fileName, pageNum }) => {
         modal
         nested>
         {close => (
-          <PopupPdf closePdfPopup={close} pdfFile={fileSrc} pageNum={pageNum} />
+          <PopupPdf
+            closePdfPopup={close}
+            pdfFile={fileSrc}
+            pageNum={pageNum}
+            landscape={landscape}
+          />
         )}
       </Popup>
     </Document>

@@ -42,14 +42,17 @@ const Accordion = ({
   }
 
   if (isPdf && Array.isArray(accordionContent)) {
-    content = accordionContent.map(({ fileSrc, fileName, pageNum }, idx) => (
-      <PdfDocument
-        key={idx}
-        fileSrc={fileSrc}
-        fileName={fileName}
-        pageNum={pageNum}
-      />
-    ))
+    content = accordionContent.map(
+      ({ fileSrc, fileName, pageNum, landscape }, idx) => (
+        <PdfDocument
+          key={idx}
+          fileSrc={fileSrc}
+          fileName={fileName}
+          pageNum={pageNum}
+          landscape={landscape}
+        />
+      )
+    )
   }
 
   return (

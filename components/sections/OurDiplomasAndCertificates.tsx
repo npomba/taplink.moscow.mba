@@ -2,49 +2,30 @@ import Script from 'next/script'
 import Accordion from '@/components/general/Accordion'
 import stls from '@/styles/modules/LegalPage.module.sass'
 
-const placeholderDiplomas = [
-  {
-    fileSrc: '/legaldocuments/doc-1.pdf',
-    fileName: 'Диплом академии',
-    pageNum: 1
-  },
-  {
-    fileSrc: '/legaldocuments/doc-2.pdf',
-    fileName: 'Диплом уст. образца',
-    pageNum: 1
-  },
-  {
-    fileSrc: '/legaldocuments/doc-3.pdf',
-    fileName: 'Приложение к диплому',
-    pageNum: 1
-  },
-  {
-    fileSrc: '/legaldocuments/doc-4.pdf',
-    fileName: 'Диплом Supplement',
-    pageNum: 1
-  }
-]
-
 const profIndDiplomas = [
   {
     fileSrc: '/assets/diplomas/pro-ind/doc-1.pdf',
     fileName: 'Диплом академии',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/pro-ind/doc-2.pdf',
     fileName: 'Диплом уст. образца',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/pro-ind/doc-3.pdf',
     fileName: 'Приложение к диплому',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/pro-ind/doc-4.pdf',
     fileName: 'Diploma Supplement',
-    pageNum: 1
+    pageNum: 1,
+    landscape: false
   }
 ]
 
@@ -52,22 +33,26 @@ const miniDiplomas = [
   {
     fileSrc: '/assets/diplomas/mini/doc-1.pdf',
     fileName: 'Диплом академии',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/mini/doc-2.pdf',
     fileName: 'Диплом уст. образца',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/mini/doc-3.pdf',
     fileName: 'Приложение к диплому',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/mini/doc-4.pdf',
     fileName: 'Diploma Supplement',
-    pageNum: 1
+    pageNum: 1,
+    landscape: false
   }
 ]
 
@@ -75,17 +60,20 @@ const professionDiplomas = [
   {
     fileSrc: '/assets/diplomas/prof/doc-1.pdf',
     fileName: 'Диплом академии',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/prof/doc-2.pdf',
     fileName: 'Диплом уст. образца',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/prof/doc-3.pdf',
     fileName: 'Приложение к диплому',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   }
 ]
 
@@ -93,12 +81,14 @@ const courseDiplomas = [
   {
     fileSrc: '/assets/diplomas/mini/doc-1.pdf',
     fileName: 'Диплом академии',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   },
   {
     fileSrc: '/assets/diplomas/mini/doc-2.pdf',
     fileName: 'Удостоверение о повышении квалификации',
-    pageNum: 1
+    pageNum: 1,
+    landscape: true
   }
 ]
 
