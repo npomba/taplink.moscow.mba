@@ -3865,6 +3865,11 @@ footer {
     &:last-child {
       border-right: none;
     }
+    &:first-of-type {
+      .image {
+        margin-bottom: 74px;
+      }
+    }
     &:nth-of-type(2) {
       .image {
         margin-top: 35px;
@@ -4735,6 +4740,11 @@ footer {
     margin: 0 -40px;
     li {
       padding: 0 40px 120px;
+      &:first-of-type {
+        .image {
+          margin-bottom: 57px;
+        }
+      }
       &:nth-of-type(2) {
         .image {
           margin-top: 17px;
@@ -5747,9 +5757,14 @@ footer {
       width: 100%;
       border-right: none;
       margin-bottom: 40px;
+      &:first-of-type,
+      &:nth-of-type(2) {
+        .image {
+          margin-bottom: 20px;
+        }
+      }
     }
     .image {
-      margin-bottom: 20px;
       .red-offset {
         display: none;
       }
