@@ -2,6 +2,8 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Teachers from '../components/sections/Teachers'
 import { apiProgramsReqUrl, backendUrl } from '@/config/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import stls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const teachers = ({ programs }) => {
   return (
@@ -14,6 +16,11 @@ const teachers = ({ programs }) => {
         )}
         canonical={'https://moscow.mba/teachers'}
       />
+      <section className={`jumbotron-section ${stls.jumbotronGeneral}`}>
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <Teachers atStandAlonePage />
       </div>
@@ -27,8 +34,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data
-    }
+      programs: data,
+    },
   }
 }
 

@@ -24,7 +24,7 @@ const JumbotronProgram = ({ data }) => {
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
-          <Breadcrumbs pageTitle={data.title} />
+          <Breadcrumbs programChunkData={data} />
           <div className='jumbotron-top'>
             {at.online && (
               <div className='jumbotron-discount'>
@@ -55,7 +55,8 @@ const JumbotronProgram = ({ data }) => {
                   </a>
                 }
                 modal
-                nested>
+                nested
+              >
                 {close => (
                   <PopupForm
                     programId={data._id}

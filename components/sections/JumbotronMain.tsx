@@ -3,6 +3,7 @@ import Link from 'next/link'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
 import { base64pixel } from '@/config/index'
 
 const JumbotronMain = () => {
@@ -18,6 +19,7 @@ const JumbotronMain = () => {
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
+          <Breadcrumbs />
           <div className='jumbotron-flex'>
             <div className='jumbotron-text'>
               <div className='image-text'>

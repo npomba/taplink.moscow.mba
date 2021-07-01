@@ -7,6 +7,8 @@ import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopupForm from '@/components/popups/PopupForm'
 import contactData from '@/data/contactData'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const payment = ({ programs }) => {
   const contactInfo = contactData()
@@ -21,6 +23,13 @@ const payment = ({ programs }) => {
         )}
         canonical={'https://moscow.mba/payment'}
       />
+      <section
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
+      >
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <div className={stls.content}>
           <h1 className={stls.h1}>Оплата</h1>
@@ -102,7 +111,8 @@ const payment = ({ programs }) => {
               className={stls.btn}
               href='https://securepayments.sberbank.ru/shortlink/O5FZls3k'
               target='_blank'
-              rel='noopener noreferrer'>
+              rel='noopener noreferrer'
+            >
               Оплата банковской картой
             </a>
 
@@ -130,8 +140,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data
-    }
+      programs: data,
+    },
   }
 }
 
