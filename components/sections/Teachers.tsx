@@ -6,29 +6,33 @@ import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
 import { base64pixel } from '@/config/index'
+import stls from '@/styles/modules/Teachers.module.sass'
 
 const Teachers = ({
   programTitle = null,
   programId = null,
   atStandAlonePage = false
 }) => {
+  const detailSectionClasses = [stls.aboutDetailSection]
+
+  if (atStandAlonePage) detailSectionClasses.push(stls.standalonePage)
+
   return (
     <>
-      <section
-        className={`about-detail-section ${
-          atStandAlonePage && 'about-detailt-section--stand-alone-page'
-        }`}>
-        <div className='section-pl'>
-          <div className='title-pl'>{SetString(lang.teachersTitleLabel)}</div>
-          <div className='about-detail-content'>
+      <section className={detailSectionClasses.join(' ')}>
+        <div className={stls.sectionPl}>
+          <div className={stls.titlePl}>
+            {SetString(lang.teachersTitleLabel)}
+          </div>
+          <div className={stls.aboutDetailContent}>
             <h2>
               {SetString(lang.teachersTitleFirst)}{' '}
               <span className='red'>{SetString(lang.teachersTitleRed)} </span>
               {SetString(lang.teachersTitleSecond)}
             </h2>
-            <div className='text'>{SetString(lang.teachersDics)}</div>
-            <div className='dobble-images about-detail-images'>
-              <div className='image pic-1'>
+            <div className={stls.text}>{SetString(lang.teachersDics)}</div>
+            <div className={`${stls.dobbleImages} ${stls.aboutDetailImages}`}>
+              <div className={`${stls.image} ${stls.pic1}`}>
                 <Image
                   src={imagesData.circleSpeakerOne.src}
                   alt={SetString(imagesData.circleSpeakerOne.alt)}
@@ -39,7 +43,7 @@ const Teachers = ({
                   blurDataURL={base64pixel}
                 />
               </div>
-              <div className='image pic-2'>
+              <div className={`${stls.image} ${stls.pic2}`}>
                 <Image
                   src={imagesData.circleSpeakerTwo.src}
                   alt={SetString(imagesData.circleSpeakerTwo.alt)}
@@ -51,9 +55,9 @@ const Teachers = ({
                 />
               </div>
             </div>
-            <ul className='about-detail-list'>
+            <ul className={stls.aboutDetailList}>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
@@ -62,7 +66,7 @@ const Teachers = ({
                 </div>
               </li>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
@@ -71,7 +75,7 @@ const Teachers = ({
                 </div>
               </li>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
@@ -83,10 +87,10 @@ const Teachers = ({
             <h3>{SetString(lang.teachersProsTitle)}</h3>
           </div>
         </div>
-        <ul className='about-teachers-list'>
+        <ul className={stls.aboutTeachersList}>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-1.jpg'
                   alt={SetString(lang.teachersTeacherOneTitle)}
@@ -98,7 +102,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherOneTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherOneDics)}</p>
@@ -106,8 +110,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-2.jpg'
                   alt={SetString(lang.teachersTeacherTwoTitle)}
@@ -119,7 +123,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherTwoTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherTwoDics)}</p>
@@ -127,8 +131,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-3.jpg'
                   alt={SetString(lang.teachersTeacherThreeTitle)}
@@ -140,7 +144,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherThreeTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherThreeDics)}</p>
@@ -148,8 +152,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-4.jpg'
                   alt={SetString(lang.teachersTeacherFourTitle)}
@@ -161,7 +165,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherFourTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherFourDics)}</p>
@@ -169,8 +173,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-5.jpg'
                   alt={SetString(lang.teachersTeacherFiveTitle)}
@@ -182,7 +186,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherFiveTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherFiveDics)}</p>
@@ -190,8 +194,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-6.jpg'
                   alt={SetString(lang.teachersTeacherSixTitle)}
@@ -203,7 +207,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherSixTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherSixDics)}</p>
@@ -211,8 +215,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-7.jpg'
                   alt={SetString(lang.teachersTeacherSevenTitle)}
@@ -224,7 +228,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherSevenTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherSevenDics)}</p>
@@ -232,8 +236,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-8.jpg'
                   alt={SetString(lang.teachersTeacherEightTitle)}
@@ -245,7 +249,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherEightTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherEightDics)}</p>
