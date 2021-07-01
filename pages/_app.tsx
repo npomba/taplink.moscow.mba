@@ -25,7 +25,7 @@ function MyApp({ Component, pageProps, router }) {
       // minimum: 0.3,
       // easing: 'ease',
       // speed: 800,
-      showSpinner: false,
+      showSpinner: false
     })
 
     const start = () => {
@@ -74,16 +74,15 @@ function MyApp({ Component, pageProps, router }) {
             exit='exit'
             variants={{
               initial: {
-                opacity: 0,
+                opacity: 0
               },
               animate: {
-                opacity: 1,
+                opacity: 1
               },
               exit: {
-                opacity: 0,
-              },
-            }}
-          >
+                opacity: 0
+              }
+            }}>
             <div className='main-content'>
               <Component {...pageProps} />
             </div>

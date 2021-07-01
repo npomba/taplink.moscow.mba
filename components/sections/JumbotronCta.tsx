@@ -25,7 +25,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
     register,
     handleSubmit,
     reset,
-    formState: { errors },
+    formState: { errors }
   } = useForm<FormValues>()
 
   const [open, setOpen] = useState(false)
@@ -129,8 +129,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                 <form
                   method='post'
                   className='simple-form support-form embedded-form'
-                  onSubmit={handleSubmit(onSubmitFormThis)}
-                >
+                  onSubmit={handleSubmit(onSubmitFormThis)}>
                   <div className='inputs-flex inputs-flex--alt'>
                     <div className='input-block width-33'>
                       <input

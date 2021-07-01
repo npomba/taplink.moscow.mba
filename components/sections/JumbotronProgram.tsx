@@ -55,8 +55,7 @@ const JumbotronProgram = ({ data }) => {
                   </a>
                 }
                 modal
-                nested
-              >
+                nested>
                 {close => (
                   <PopupForm
                     programId={data._id}

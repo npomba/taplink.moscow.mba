@@ -5,7 +5,6 @@ import WebinarCards from '@/components/sections/WebinarCards'
 import useAt from '@/components/hooks/useAt'
 import Link from 'next/link'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
-import stls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const Webinars = ({ title, heading, timeframe = 'all' }) => {
   const at = useAt()

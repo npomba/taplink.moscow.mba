@@ -1,7 +1,6 @@
 import stls from '@/styles/pages/legal/Index.module.sass'
 import { NextSeo } from 'next-seo'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
-import stls from '@/styles/modules/LegalPage.module.sass'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
 
@@ -17,8 +16,7 @@ const legal = ({ programs }) => {
       />
 
       <section
-        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
-      >
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}>
         <div className='container'>
           <Breadcrumbs />
         </div>
@@ -187,8 +185,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data,
-    },
+      programs: data
+    }
   }
 }
 

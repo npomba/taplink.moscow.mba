@@ -24,8 +24,7 @@ const payment = ({ programs }) => {
         canonical={'https://moscow.mba/payment'}
       />
       <section
-        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
-      >
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}>
         <div className='container'>
           <Breadcrumbs />
         </div>
@@ -111,8 +110,7 @@ const payment = ({ programs }) => {
               className={stls.btn}
               href='https://securepayments.sberbank.ru/shortlink/O5FZls3k'
               target='_blank'
-              rel='noopener noreferrer'
-            >
+              rel='noopener noreferrer'>
               Оплата банковской картой
             </a>
 
@@ -140,8 +138,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data,
-    },
+      programs: data
+    }
   }
 }
 

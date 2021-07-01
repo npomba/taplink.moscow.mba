@@ -1,88 +1,87 @@
-import stls from '@/styles/modules/general/Breadcrumbs.module.sass'        
+import stls from '@/styles/modules/general/Breadcrumbs.module.sass'
 import { useEffect, useState } from 'react'
 import BreadcrumbItem from '@/components/general/BreadcrumbItem'
 import useAt from '@/components/hooks/useAt'
 import { useRouter } from 'next/router'
-import stls from '@/styles/modules/Breadcrumbs.module.sass'
 
 const mainRoutes = [
   {
     label: {
       ru: 'Главная',
-      'en-US': 'Home',
+      'en-US': 'Home'
     },
-    path: '/',
+    path: '/'
   },
   {
     label: {
       ru: 'Программы',
-      'en-US': 'Programs',
+      'en-US': 'Programs'
     },
-    path: '/programs',
+    path: '/programs'
   },
   {
     label: {
       ru: 'Об академии',
-      'en-US': 'About',
+      'en-US': 'About'
     },
-    path: '/about',
+    path: '/about'
   },
   {
     label: {
       ru: 'Эксперты',
-      'en-US': 'Experts',
+      'en-US': 'Experts'
     },
-    path: '/teachers',
+    path: '/teachers'
   },
   {
     label: {
       ru: 'Вебинары',
-      'en-US': 'Webinars',
+      'en-US': 'Webinars'
     },
-    path: '/webinars',
+    path: '/webinars'
   },
   {
     label: {
       ru: 'Ближайшие вебинары',
-      'en-US': 'Upcoming webinars',
+      'en-US': 'Upcoming webinars'
     },
-    path: '/webinars/upcoming',
+    path: '/webinars/upcoming'
   },
   {
     label: {
       ru: 'Прошедшие вебинары',
-      'en-US': 'Archived webinars',
+      'en-US': 'Archived webinars'
     },
-    path: '/webinars/archive',
+    path: '/webinars/archive'
   },
   {
     label: {
       ru: 'Контакты',
-      'en-US': 'Contact',
+      'en-US': 'Contact'
     },
-    path: '/contact',
+    path: '/contact'
   },
   {
     label: {
       ru: 'Нормативные документы',
-      'en-US': 'Legal',
+      'en-US': 'Legal'
     },
-    path: '/legal',
+    path: '/legal'
   },
   {
     label: {
       ru: 'Карточка организации',
-      'en-US': 'Company Card',
+      'en-US': 'Company Card'
     },
-    path: '/legal/about',
+    path: '/legal/about'
   },
   {
     label: {
       ru: 'Оплата',
-      'en-US': 'Payment',
+      'en-US': 'Payment'
     },
-    path: '/payment',
-  },
+    path: '/payment'
+  }
 ]
 
 const homeRoute = mainRoutes.find(route => route.path === '/')
@@ -103,9 +102,9 @@ const addProgramsRoute = (splitedPath, additionalRoutes, router) => {
     {
       label: {
         ru: '',
-        'en-US': '',
+        'en-US': ''
       },
-      path: splitedPath.join('/'),
+      path: splitedPath.join('/')
     }
   )
 
@@ -122,9 +121,9 @@ const addProgramChunkRoute = (
   const programChunkRoute = {
     label: {
       ru: title,
-      'en-US': titleEng,
+      'en-US': titleEng
     },
-    path: splitedPath.join('/') + '/' + programChunkUrl,
+    path: splitedPath.join('/') + '/' + programChunkUrl
   }
 
   additionalRoutes.push(programChunkRoute)
@@ -155,7 +154,7 @@ const Breadcrumbs = ({ programChunkData = {} }) => {
     setBreadcrumbsList([
       ...breadcrumbsList,
       ...matchingMainRoutes,
-      ...additionalRoutes,
+      ...additionalRoutes
     ])
   }, [])
 
@@ -166,8 +165,7 @@ const Breadcrumbs = ({ programChunkData = {} }) => {
 
   return (
     <div
-      className={[stls.breadcrumbsOuter, stls.jumbotronBreadcrumbs].join(' ')}
-    >
+      className={[stls.breadcrumbsOuter, stls.jumbotronBreadcrumbs].join(' ')}>
       <ul className={stls.breadcrumbs}>
         {breadcrumbsList.map((route, idx) => {
           return (

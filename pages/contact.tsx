@@ -32,13 +32,12 @@ const contact = ({ programs }) => {
             telephone: contactInfo.ru.tels[0].valDashes,
             contactType: 'customer service',
             areaServed: 'RU',
-            availableLanguage: ['Russian'],
-          },
+            availableLanguage: ['Russian']
+          }
         ]}
       />
       <section
-        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}
-      >
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}>
         <div className='container'>
           <Breadcrumbs />
         </div>
@@ -57,8 +56,8 @@ export async function getStaticProps() {
 
   return {
     props: {
-      programs: data,
-    },
+      programs: data
+    }
   }
 }
 
