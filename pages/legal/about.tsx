@@ -3,7 +3,7 @@ import { NextSeo } from 'next-seo'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import contactData from '@/data/contactData'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
-import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
+import breadcrumbsStls from '@/styles/modules/general/Breadcrumbs.module.sass'
 
 const about = ({ programs }) => {
   const contactInfo = contactData()

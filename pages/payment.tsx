@@ -8,7 +8,7 @@ import 'reactjs-popup/dist/index.css'
 import PopupForm from '@/components/popups/PopupForm'
 import contactData from '@/data/contactData'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
-import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
+import breadcrumbsStls from '@/styles/modules/general/Breadcrumbs.module.sass'
 
 const payment = ({ programs }) => {
   const contactInfo = contactData()
