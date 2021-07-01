@@ -11,10 +11,10 @@
     padding-top: 50px
     padding-bottom: 50px
     margin-bottom: 0
-  @include m.media(laptop, tablet, phone)
+  @include m.media(laptop)
     padding: 90px 0 40px
     margin-bottom: 80px
-  @include m.media(tablet)
+  @include m.media(tablet, phone)
     margin-bottom: 60px
     padding-top: 60px
     padding-bottom: 30px
@@ -51,12 +51,12 @@
   padding-right: 500px
   @include m.media(desktop)
     padding-right: 435px
-  @include m.media(desktop, laptop, tablet, phone)
+  @include m.media(laptop, tablet, phone)
     padding-right: 0
   h2
     margin-right: -160px
     color: #fff
-    @include m.media(desktop, laptop, tablet, phone)
+    @include m.media(laptop, tablet, phone)
       margin-right: 0
   h3
     color: #fff
@@ -64,7 +64,7 @@
     font-size: 36px
     line-height: 1.2
     margin-bottom: 52px
-    @include m.media(desktop, laptop)
+    @include m.media(laptop, tablet, phone)
       font-size: 32px
       margin-bottom: 40px
     @include m.media(tablet)
@@ -126,7 +126,7 @@
   margin-bottom: 30px
   text-align: center
   @include m.media(phone)
-    .button
+    button
       width: 100%
 
 .aboutTeachersList
@@ -164,36 +164,9 @@
       &:nth-of-type(n + 5)
         display: none
 
-.aboutDetailImages
-  width: 425px
-  position: absolute
-  z-index: -1
-  right: 0
-  top: 59px
-  @include m.media(desktop)
-    width: 380px
-  @include m.media(laptop, tablet, phone)
-    max-width: 425px
-    position: static
-    top: 0
-    margin-bottom: 30px
-  .pic2
-    width: 236px
-    border: 10px solid #2d2c2a
-    margin-top: -140px
-    @include m.media(phone)
-      width: 160px
-      margin-top: -100px
-
 .dobbleImages
   position: relative
   max-width: 500px
-  @include m.media(laptop, tablet, phone)
-    width: auto
-    margin: 0 auto
-    max-width: 425px
-    box-sizing: content-box
-    padding-left: 50px
   .image
     border-radius: 50%
     overflow: hidden
@@ -212,9 +185,34 @@
     box-sizing: content-box
     margin-top: -67px
     margin-left: -56px
+
+.aboutDetailImages
+  width: 425px
+  position: absolute
+  z-index: -1
+  right: 0
+  top: 59px
+  @include m.media(desktop)
+    width: 380px
+  @include m.media(laptop, tablet, phone)
+    max-width: 425px
+    position: static
+    top: 0
+  &.dobbleImages
+    @include m.media(laptop, tablet, phone)
+      width: auto
+      margin: 0 auto 30px
+      max-width: 425px
+      box-sizing: content-box
+      padding-left: 50px
+  .pic2
+    width: 236px
+    border: 10px solid #2d2c2a
+    margin-top: -140px
     @include m.media(phone)
+      width: 160px
+      margin-top: -100px
       border-width: 5px
-      margin-top: -65px
 
 .aboutTeachersBlock
   line-height: 1.2

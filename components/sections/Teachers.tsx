@@ -62,7 +62,9 @@ const Teachers = ({
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitle)}</h5>
-                  <p>{SetString(lang.teachersListItemDisc)}</p>
+                  <p style={{ maxWidth: '39ch' }}>
+                    {SetString(lang.teachersListItemDisc)}
+                  </p>
                 </div>
               </li>
               <li>
@@ -257,7 +259,7 @@ const Teachers = ({
             </div>
           </li>
         </ul>
-        <div className='about-teachers-link'>
+        <div className={stls.aboutTeachersLink}>
           <Popup
             trigger={
               <button className='button'>
