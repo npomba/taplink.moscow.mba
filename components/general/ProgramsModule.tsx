@@ -2,23 +2,19 @@ import stls from '@/styles/components/general/ProgramsModule.module.sass'
 import { useState } from 'react'
 
 const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {
-  const [moduleIsOpen, setModuleIsOpen] = useState(false)
-  const [showContent, setShowContent] = useState(false)
-
-  const openModule = () => {
-    setModuleIsOpen(o => !o)
-    setShowContent(o => !o)
-  }
+  const [isOpen, setIsOpen] = useState(false)
 
   const trainingModuleClasses = [stls.trainingModule]
-  if (moduleIsOpen) trainingModuleClasses.push(stls.opened)
+  if (isOpen) trainingModuleClasses.push(stls.opened)
 
   const trainingContentClasses = [stls.trainingContent]
-  if (showContent) trainingContentClasses.push(stls.showTrainingContent)
+  if (isOpen) trainingContentClasses.push(stls.showTrainingContent)
 
   return (
     <div className={stls.trainingBlock}>
-      <div className={trainingModuleClasses.join(' ')} onClick={openModule}>
+      <div
+        className={trainingModuleClasses.join(' ')}
+        onClick={() => setIsOpen(prevState => !prevState)}>
         <div className={stls.plus}>
           <i></i>
           <i></i>
