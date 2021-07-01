@@ -71,10 +71,11 @@
       font-size: 28px
     @include m.media(phone)
       font-size: 24px
-  .text
-    margin-bottom: 36px
-    line-height: 1.2
-    margin-top: -5px
+
+.text
+  margin-bottom: 36px
+  line-height: 1.2
+  margin-top: -5px
 
 .aboutDetailList
   line-height: 1.2
@@ -234,33 +235,40 @@
     img
       max-width: 100%
       max-height: 322px
-  .name
-    font-weight: 500
-    font-size: 20px
-    color: #fff
-    margin-bottom: 13px
-    @include m.media(tablet)
-      font-size: 18px
-    @include m.media(phone)
-      font-size: 16px
-      margin-bottom: 5px
   p
     font-size: 13px
     margin-bottom: 20px
     @include m.media(phone)
       margin-bottom: 15px
-  .link
-    display: inline-block
-    color: #fff
-    transition: all 0.3s ease-out
-    &:hover
-      color: #ff3535
-    span
-      margin-right: 10px
-    img
-      flex-shrink: 0
-      position: relative
-      top: 1px
+
+.link
+  display: inline-block
+  color: #fff
+  transition: all 0.3s ease-out
+  &:hover
+    color: #ff3535
+  span
+    margin-right: 10px
+  img
+    flex-shrink: 0
+    position: relative
+    top: 1px
+
+.name
+  font-weight: 500
+  font-size: 20px
+  color: #fff
+  margin-bottom: 13px
+  @include m.media(tablet)
+    font-size: 18px
+  @include m.media(phone)
+    font-size: 16px
+    margin-bottom: 5px
+
+.breakLine
+  display: inline
+  @include m.media(widescreen, desktop)
+    display: block
 
 .sectionPl
   position: relative

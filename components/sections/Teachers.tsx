@@ -1,5 +1,6 @@
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import PopupForm from '@/components/popups/PopupForm'
 import SetString from '@/components/hooks/SetString'
@@ -8,14 +9,49 @@ import imagesData from '@/data/images/teachers'
 import { base64pixel } from '@/config/index'
 import stls from '@/styles/modules/Teachers.module.sass'
 
+const splitParaText = (string, splitBy) => {
+  const indexOfWordToSplitBy = string.indexOf(splitBy)
+
+  if (indexOfWordToSplitBy === -1) return [string, '']
+
+  const firstPartOfString = string.slice(0, indexOfWordToSplitBy)
+  const secondPartOfString = string.slice(indexOfWordToSplitBy)
+
+  return [firstPartOfString, secondPartOfString]
+}
+
 const Teachers = ({
   programTitle = null,
   programId = null,
   atStandAlonePage = false
 }) => {
+  const router = useRouter()
   const detailSectionClasses = [stls.aboutDetailSection]
 
   if (atStandAlonePage) detailSectionClasses.push(stls.standalonePage)
+
+  const firstParaText = SetString(lang.teachersListItemDisc)
+  const secondParaText = SetString(lang.teachersListItemDiscSecond)
+
+  const wordToSplitBy = {
+    europe: {
+      ru: 'Европы',
+      'en-US': 'Europe'
+    },
+    and: {
+      ru: ' и ',
+      'en-US': ' and '
+    }
+  }
+
+  const [firstParaPartOne, firstParaPartTwo] = splitParaText(
+    firstParaText,
+    wordToSplitBy.europe[router.locale]
+  )
+  const [secondParaPartOne, secondParaPartTwo] = splitParaText(
+    secondParaText,
+    wordToSplitBy.and[router.locale]
+  )
 
   return (
     <>
@@ -62,8 +98,9 @@ const Teachers = ({
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitle)}</h5>
-                  <p style={{ maxWidth: '39ch' }}>
-                    {SetString(lang.teachersListItemDisc)}
+                  <p>
+                    {firstParaPartOne}
+                    <span className={stls.breakLine}>{firstParaPartTwo}</span>
                   </p>
                 </div>
               </li>
@@ -73,7 +110,10 @@ const Teachers = ({
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitleSecond)}</h5>
-                  <p>{SetString(lang.teachersListItemDiscSecond)}</p>
+                  <p>
+                    {secondParaPartOne}
+                    <span className={stls.breakLine}>{secondParaPartTwo}</span>
+                  </p>
                 </div>
               </li>
               <li>
