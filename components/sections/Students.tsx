@@ -1,8 +1,8 @@
-import stls from '@/styles/modules/sections/Students.module.sass'
+import stls from '@/styles/components/sections/Students.module.sass'
 import { CircularProgressbar } from 'react-circular-progressbar'
 // import 'react-circular-progressbar/dist/styles.css'
 
-import circleStls from '@/styles/modules/CircularProgressBar.module.sass'
+import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import Image from 'next/image'
 
 const Students = () => {

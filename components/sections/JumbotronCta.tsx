@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/JumbotronCta.module.sass'
+import stls from '@/styles/components/sections/JumbotronCta.module.sass'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
 import Link from 'next/link'

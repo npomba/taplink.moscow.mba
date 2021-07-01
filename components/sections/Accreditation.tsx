@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Accreditation.module.sass'
+import stls from '@/styles/components/sections/Accreditation.module.sass'
 import Image from 'next/image'
 import imgData from '@/data/images/accreditation'
 import SetString from '@/components/hooks/SetString'

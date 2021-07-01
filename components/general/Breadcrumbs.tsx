@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/Breadcrumbs.module.sass'
+import stls from '@/styles/components/general/Breadcrumbs.module.sass'
 import { useEffect, useState } from 'react'
 import BreadcrumbItem from '@/components/general/BreadcrumbItem'
 import useAt from '@/components/hooks/useAt'

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/btns/HeaderLangLink.module.sass'
+import stls from '@/styles/components/btns/HeaderLangLink.module.sass'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'

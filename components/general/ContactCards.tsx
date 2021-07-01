@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/ContactCards.module.sass'
+import stls from '@/styles/components/general/ContactCards.module.sass'
 import ContactCard from '@/components/general/ContactCard'
 import contactData from '@/data/contactData'
 import SetString from '@/components/hooks/SetString'

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/layout/Header.module.sass'
+import stls from '@/styles/components/layout/Header.module.sass'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import lang from '@/data/translation/header'

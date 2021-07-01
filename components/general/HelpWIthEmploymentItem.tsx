@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/HelpWithEmploymentItem.module.sass'
+import stls from '@/styles/components/general/HelpWithEmploymentItem.module.sass'
 
 const HelpWithEmploymentItem = ({ title, description }) => {
   return (

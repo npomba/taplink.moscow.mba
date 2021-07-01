@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Pros.module.sass'
+import stls from '@/styles/components/sections/Pros.module.sass'
 import useAt from '@/components/hooks/useAt'
 import Image from 'next/image'
 

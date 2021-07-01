@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/Sticker.module.sass'
+import stls from '@/styles/components/general/Sticker.module.sass'
 
 const Sticker = ({
   type = 'short',

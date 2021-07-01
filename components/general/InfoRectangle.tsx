@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/InfoRectangle.module.sass'
+import stls from '@/styles/components/general/InfoRectangle.module.sass'
 import Until from '@/components/costs/Until'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import SetString from '@/components/hooks/SetString'

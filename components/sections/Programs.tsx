@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Programs.module.sass'
+import stls from '@/styles/components/sections/Programs.module.sass'
 import Link from 'next/link'
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/Filters.module.sass'
+import stls from '@/styles/components/general/Filters.module.sass'
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import Discount from '@/components/costs/Discount'

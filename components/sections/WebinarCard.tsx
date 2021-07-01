@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/WebinarCard.module.sass'
+import stls from '@/styles/components/sections/WebinarCard.module.sass'
 import Image from 'next/image'
 import PopupForm from '@/components/popups/PopupForm'
 import Popup from 'reactjs-popup'

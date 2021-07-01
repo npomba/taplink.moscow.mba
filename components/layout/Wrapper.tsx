@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/layout/Wrapper.module.sass'
+import stls from '@/styles/components/layout/Wrapper.module.sass'
 import StickyBottom from '@/components/layout/StickyBottom'
 
 const Wrapper = ({ children }) => {

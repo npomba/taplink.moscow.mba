@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/pages/Programs.module.sass'
+import stls from '@/styles/components/pages/Programs.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Link from 'next/link'
@@ -98,8 +98,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                 return (
                   <Link
                     href={`/programs/${mbaTypeOfProgram}/${mbaFormat}/${program.url}`}
-                    key={program._id}
-                  >
+                    key={program._id}>
                     <a className={stls.program}>
                       <div className={stls.arrow}>
                         <SVGArrowTopRight />

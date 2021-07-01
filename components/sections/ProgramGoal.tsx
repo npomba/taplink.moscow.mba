@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/ProgramGoal.module.sass'
+import stls from '@/styles/components/sections/ProgramGoal.module.sass'
 
 const ProgramGoal = ({ data }) => {
   return (

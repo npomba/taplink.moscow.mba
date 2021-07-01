@@ -7,7 +7,7 @@ import ContactCards from '@/components/general/ContactCards'
 import contactData from '@/data/contactData'
 import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
-import breadcrumbsStls from '@/styles/modules/general/Breadcrumbs.module.sass'
+import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 
 const contact = ({ programs }) => {
   const contactInfo = contactData()

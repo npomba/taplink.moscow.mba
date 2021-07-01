@@ -2,7 +2,7 @@ import stls from '@/styles/pages/legal/Index.module.sass'
 import { NextSeo } from 'next-seo'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
-import breadcrumbsStls from '@/styles/modules/general/Breadcrumbs.module.sass'
+import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 
 const legal = ({ programs }) => {
   return (

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/general/ContactCard.module.sass'
+import stls from '@/styles/components/general/ContactCard.module.sass'
 import SVGLocation from '@/components/svgs/SVGLocation'
 import { Fragment } from 'react'
 

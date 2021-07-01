@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/ContactUs.module.sass'
+import stls from '@/styles/components/sections/ContactUs.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'

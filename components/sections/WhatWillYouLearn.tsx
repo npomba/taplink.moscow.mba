@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/WhatWillYouLearn.module.sass'
+import stls from '@/styles/components/sections/WhatWillYouLearn.module.sass'
 import Image from 'next/image'
 import { base64pixel } from '@/config/index'
 

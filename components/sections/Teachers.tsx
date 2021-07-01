@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Teachers.module.sass'
+import stls from '@/styles/components/sections/Teachers.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'

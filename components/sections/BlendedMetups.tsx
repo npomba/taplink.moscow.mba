@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/BlendedMetups.module.sass'
+import stls from '@/styles/components/sections/BlendedMetups.module.sass'
 import Image from 'next/image'
 import useAt from '@/components/hooks/useAt'
 

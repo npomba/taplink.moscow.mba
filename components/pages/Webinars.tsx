@@ -1,5 +1,5 @@
-import stls from '@/styles/modules/pages/Webinars.module.sass'
-import breadcrumbsStls from '@/styles/modules/general/Breadcrumbs.module.sass'
+import stls from '@/styles/components/pages/Webinars.module.sass'
+import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import WebinarCards from '@/components/sections/WebinarCards'

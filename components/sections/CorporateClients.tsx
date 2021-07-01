@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/CorporateClients.module.sass'
+import stls from '@/styles/components/sections/CorporateClients.module.sass'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Diploma.module.sass'
+import stls from '@/styles/components/sections/Diploma.module.sass'
 import Image from 'next/image'
 import useAt from '@/components/hooks/useAt'
 import { base64pixel } from '@/config/index'

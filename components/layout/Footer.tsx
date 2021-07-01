@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/layout/Footer.module.sass'
+import stls from '@/styles/components/layout/Footer.module.sass'
 import Link from 'next/link'
 import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'

@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/ResultsExecutive.module.sass'
+import stls from '@/styles/components/sections/ResultsExecutive.module.sass'
 
 const ResultsExecutive = () => {
   return (

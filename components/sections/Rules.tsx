@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/Rules.module.sass'
+import stls from '@/styles/components/sections/Rules.module.sass'
 
 const Rules = ({ prices }) => {
   return (

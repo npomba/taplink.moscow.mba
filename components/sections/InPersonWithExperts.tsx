@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/InPersonWithExperts.module.sass'
+import stls from '@/styles/components/sections/InPersonWithExperts.module.sass'
 import Image from 'next/image'
 
 const InPersonWithExperts = () => {

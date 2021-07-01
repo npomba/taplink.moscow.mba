@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/sections/WebinarCards.module.sass'
+import stls from '@/styles/components/sections/WebinarCards.module.sass'
 import WebinarCard from '@/components/sections/WebinarCard'
 
 const WebinarCards = ({ timeframe }) => {
