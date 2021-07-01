@@ -5,10 +5,12 @@ const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const trainingModuleClasses = [stls.trainingModule]
-  if (isOpen) trainingModuleClasses.push(stls.opened)
-
   const trainingContentClasses = [stls.trainingContent]
-  if (isOpen) trainingContentClasses.push(stls.showTrainingContent)
+
+  if (isOpen) {
+    trainingModuleClasses.push(stls.opened)
+    trainingContentClasses.push(stls.showTrainingContent)
+  }
 
   return (
     <div className={stls.trainingBlock}>
