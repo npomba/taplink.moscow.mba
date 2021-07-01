@@ -9,18 +9,18 @@ const ProgramsModules = ({ data }) => {
   const at = useAt()
 
   return (
-    <section className='training-section'>
-      <div className='section-pl'>
+    <section className={stls.trainingSection}>
+      <div className={stls.sectionPl}>
         <h2>Программа обучения</h2>
-        <ul className='training-red-list'>
+        <ul className={stls.trainingRedList}>
           <li>
-            <div className='number'>
+            <div className={stls.number}>
               <ProgramSubjects subjects='base' />
             </div>
             <p>дисциплин базовой части</p>
           </li>
           <li>
-            <div className='number'>
+            <div className={stls.number}>
               <ProgramSubjects subjects='specialty' />
             </div>
             <p>дисциплин специализации</p>
@@ -28,7 +28,7 @@ const ProgramsModules = ({ data }) => {
         </ul>
         <h3>{!at.executive && 'Базовые дисциплины'}</h3>
       </div>
-      <div className='training-list'>
+      <div className={stls.trainingList}>
         {at.mini && (
           <>
             <ProgramsModule
@@ -148,10 +148,10 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
       </div>
-      <div className='section-pl'>
+      <div className={stls.sectionPl}>
         <h3>{!at.executive && 'Специализированные дисциплины'}</h3>
       </div>
-      <div className='training-list'>
+      <div className={stls.trainingList}>
         {(at.industry || at.professional) && (
           <>
             <ProgramsModule
