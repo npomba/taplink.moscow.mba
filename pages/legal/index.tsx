@@ -1,6 +1,6 @@
+import stls from '@/styles/pages/legal/Index.module.sass'
 import { NextSeo } from 'next-seo'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
-import stls from '@/styles/modules/LegalPage.module.sass'
 
 const legal = ({ programs }) => {
   return (

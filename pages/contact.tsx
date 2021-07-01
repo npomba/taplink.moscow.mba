@@ -1,6 +1,6 @@
+import stls from '@/styles/pages/Contact.module.sass'
 import { NextSeo, CorporateContactJsonLd } from 'next-seo'
 import truncate from 'truncate'
-import stls from '@/styles/modules/ContactPage.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
 import ContactCards from '@/components/general/ContactCards'

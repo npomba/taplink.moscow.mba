@@ -1,7 +1,7 @@
+import stls from '@/styles/pages/Payment.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Image from 'next/image'
-import stls from '@/styles/modules/PaymentPage.module.sass'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
