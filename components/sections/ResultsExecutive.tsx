@@ -1,3 +1,5 @@
+import stls from '@/styles/modules/sections/ResultsExecutive.module.sass'
+
 const ResultsExecutive = () => {
   return (
     <section className='executive-results-section'>

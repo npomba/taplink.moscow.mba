@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/Programs.module.sass'
 import Link from 'next/link'
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
@@ -5,15 +6,12 @@ import langHeader from '@/data/translation/header'
 import Until from '@/components/costs/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
-
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-
 import Script from 'next/script'
-
-import Discount from '../costs/Discount'
-import SVGCheckCircle from '../svgs/SVGCheckCircle'
-import SVGScreen from '../svgs/SVGScreen'
+import Discount from '@/components/costs/Discount'
+import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
+import SVGScreen from '@/components/svgs/SVGScreen'
 
 const Programs = ({ programs }) => {
   const data = programs

@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/Reviews.module.sass'
 import Image from 'next/image'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'

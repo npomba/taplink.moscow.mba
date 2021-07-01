@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/ProgramsModules.module.sass'
 import useAt from '@/components/hooks/useAt'
 import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'

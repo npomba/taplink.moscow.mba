@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/About.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 

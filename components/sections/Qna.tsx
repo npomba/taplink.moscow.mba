@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/Qna.module.sass'
+import stls from '@/styles/modules/sections/Qna.module.sass'
 
 import Script from 'next/script'
 

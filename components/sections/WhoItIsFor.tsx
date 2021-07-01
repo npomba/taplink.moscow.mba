@@ -1,5 +1,5 @@
+import stls from '@/styles/modules/sections/WhoItIsFor.module.sass'
 import WhoItIsForItem from '@/components/general/WhoItIsForItem'
-import stls from '@/styles/modules/WhoItIsFor.module.sass'
 
 const whatCanBeLearned = [
   {

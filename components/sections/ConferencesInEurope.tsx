@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/ConferencesInEurope.module.sass'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'

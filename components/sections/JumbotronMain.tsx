@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/JumbotronMain.module.sass'
 import Link from 'next/link'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
