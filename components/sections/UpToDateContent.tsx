@@ -3,9 +3,13 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import Image from 'next/image'
 
-const UpToDateContent = () => {
+const UpToDateContent = ({ noBottomLine = false }) => {
+  const upToDateContentClasses = [stls.actualSection]
+
+  if (noBottomLine) upToDateContentClasses.push(stls.noLine)
+
   return (
-    <section className={[stls.actualSection, stls.noLine].join(' ')}>
+    <section className={upToDateContentClasses.join(' ')}>
       <div className='section-pl'>
         <h2>{SetString(lang.uptodateTitle)}</h2>
       </div>
