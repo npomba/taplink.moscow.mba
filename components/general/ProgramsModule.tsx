@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/general/ProgramsModule.module.sass'
 import { useState } from 'react'
 
 const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {

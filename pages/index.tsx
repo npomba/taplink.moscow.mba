@@ -1,6 +1,6 @@
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import JumbotronCta from '@/components/sections/JumbotronCta'
 import About from '@/components/sections/About'
@@ -11,9 +11,10 @@ import CorporateClients from '@/components/sections/CorporateClients'
 import Programs from '@/components/sections/Programs'
 import Executive from '@/components/sections/Executive'
 import ContactUs from '@/components/sections/ContactUs'
-import { apiProgramsReqUrl, server } from '@/config/index'
+import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 
 // import Lang from '../components/hooks/Lang'
+//
 
 const Home = ({ programs }) => {
   return (
@@ -21,9 +22,9 @@ const Home = ({ programs }) => {
       <NextSeo
         title={'Moscow Business Academy'}
         description={truncate(
-          `${setString(lang.headerTitlePreHighlight)} ${setString(
+          `${SetString(lang.headerTitlePreHighlight)} ${SetString(
             lang.headerTitleHighlight
-          )} ${setString(lang.headerTitlePostHighlight)}`,
+          )} ${SetString(lang.headerTitlePostHighlight)}`,
           120
         )}
         canonical={'https://moscow.mba/'}
@@ -48,7 +49,7 @@ const Home = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

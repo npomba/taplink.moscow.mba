@@ -1,16 +1,18 @@
+import stls from '@/styles/modules/sections/JumbotronProgram.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
-import Until from '@/components/dates/Until'
+import Until from '@/components/costs/Until'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import JumbotronLabel from '@/components/general/JumbotronLabel'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import InfoRectangle from '@/components/general/InfoRectangle'
-import Discount from '../prices/Discount'
+import Discount from '@/components/costs/Discount'
 import useAt from '@/components/hooks/useAt'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
+
   return (
     <section className='jumbotron-section'>
       <div className='image'>
@@ -56,7 +58,7 @@ const JumbotronProgram = ({ data }) => {
                 nested
               >
                 {close => (
-                  <PopUpForm
+                  <PopupForm
                     programId={data._id}
                     programTitle={data.title}
                     title={'Получите консультацию'}

@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/pages/Webinars.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import WebinarCards from '@/components/sections/WebinarCards'

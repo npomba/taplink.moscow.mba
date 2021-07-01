@@ -1,23 +1,26 @@
+import stls from '@/styles/modules/sections/ForeignAffiliates.module.sass'
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/foreignAffiliates'
+import { base64pixel } from '@/config/index'
 
 const ForeignAffiliates = () => {
   return (
     <section className='branches-section section-pl'>
-      <h2>{setString(lang.foreignAffiliatesTitle)}</h2>
-      <p className='title-desc'>{setString(lang.foreignAffiliatesDisc)}</p>
+      <h2>{SetString(lang.foreignAffiliatesTitle)}</h2>
+      <p className='title-desc'>{SetString(lang.foreignAffiliatesDisc)}</p>
       <div className='branches-flex'>
         <ul className='branches-images'>
           <li>
             <div className='image'>
               <Image
                 src={imageData.circleOne.src}
-                alt={setString(imageData.circleOne.alt)}
+                alt={SetString(imageData.circleOne.alt)}
                 width={191}
                 height={191}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -25,10 +28,11 @@ const ForeignAffiliates = () => {
             <div className='image'>
               <Image
                 src={imageData.circleTwo.src}
-                alt={setString(imageData.circleTwo.alt)}
+                alt={SetString(imageData.circleTwo.alt)}
                 width={191}
                 height={191}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -36,9 +40,11 @@ const ForeignAffiliates = () => {
             <div className='image'>
               <Image
                 src={imageData.circleThree.src}
-                alt={setString(imageData.circleThree.alt)}
+                alt={SetString(imageData.circleThree.alt)}
                 width={191}
                 height={191}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -48,19 +54,20 @@ const ForeignAffiliates = () => {
                 5 000 м<sup>2</sup>
               </div>
               <div className='line'></div>
-              <p>{setString(lang.foreignAffiliatesSurfaceArea)}</p>
+              <p>{SetString(lang.foreignAffiliatesSurfaceArea)}</p>
             </div>
           </li>
         </ul>
         <div className='branches-map'>
           {/*TODO: swap fixed layout with default, fix up the css for an image */}
           <Image
-            src='/assets/images/branches_map.png'
-            alt={setString(lang.foreignAffiliatesDisc)}
+            src='/assets/images/branches_map-alt.png'
+            alt={SetString(lang.foreignAffiliatesDisc)}
             width={659}
             height={394}
             layout='fixed'
-            priority={true}
+            placeholder='blur'
+            blurDataURL={base64pixel}
           />
         </div>
       </div>

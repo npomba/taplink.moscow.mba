@@ -1,0 +1,8 @@
+@use '@/styles/utils/mixin' as m
+
+.h1
+  text-transform: uppercase
+  @include m.media(widescreen, desktop, tablet, laptop)
+    margin: 54px 0
+  @include m.media(phone)
+    margin: 30px 0

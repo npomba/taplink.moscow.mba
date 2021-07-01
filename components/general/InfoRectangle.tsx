@@ -1,11 +1,10 @@
-import Until from '@/components/dates/Until'
-import TrainingPeriod from '@/components/dates/TrainingPeriod'
-
-import setString from '@/components/hooks/setString'
+import stls from '@/styles/modules/general/InfoRectangle.module.sass'
+import Until from '@/components/costs/Until'
+import TrainingPeriod from '@/components/costs/TrainingPeriod'
+import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
-
 import useAt from '@/components/hooks/useAt'
-import Price from '../prices/Price'
+import Price from '@/components/costs/Price'
 
 const InfoRectangle = ({ programPage = false }) => {
   const at = useAt()
@@ -36,11 +35,11 @@ const InfoRectangle = ({ programPage = false }) => {
         <p>Форма обучения:</p>
         <div className='detail'>
           {at.online
-            ? setString(langMenu.formatRemote)
+            ? SetString(langMenu.formatRemote)
             : at.blended
-            ? setString(langMenu.formatBlended)
+            ? SetString(langMenu.formatBlended)
             : at.executive
-            ? setString(langMenu.formatExecutive)
+            ? SetString(langMenu.formatExecutive)
             : ''}
         </div>
       </li>
@@ -72,25 +71,23 @@ const InfoRectangle = ({ programPage = false }) => {
             {at.industry && at.blended && (
               <Price discount={false} type='industry' format='blended' />
             )}{' '}
-            {at.executive && <Price discount={false} type='executive' />}{' '}
-            &#8381;
+            {at.executive && <Price discount={false} type='executive' />} Р.
           </span>{' '}
           <span className='new-price'>
             {at.mini && at.online && (
               <>
-                <Price discount={false} type='mini' format='online' /> &#8381;
+                <Price discount={false} type='mini' format='online' /> Р.
               </>
             )}
             {at.professional && at.online && (
               <>
                 <Price discount={false} type='professional' format='online' />{' '}
-                &#8381;
+                Р.
               </>
             )}
             {at.industry && at.online && (
               <>
-                <Price discount={false} type='industry' format='online' />{' '}
-                &#8381;
+                <Price discount={false} type='industry' format='online' /> Р.
               </>
             )}{' '}
           </span>

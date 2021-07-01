@@ -1,30 +1,33 @@
+import stls from '@/styles/modules/sections/StudentsInternational.module.sass'
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/studentsInternational'
+import { base64pixel } from '@/config/index'
 
 const StudentsInternational = () => {
   return (
     <section className='world-mba-section'>
       <div className='world-mba-flex'>
         <div className='world-mba-text'>
-          <h2>{setString(lang.mbaWorldTitle)}</h2>
-          <p className='title-desc'>{setString(lang.mbaWorldDics)}</p>
+          <h2>{SetString(lang.mbaWorldTitle)}</h2>
+          <p className='title-desc'>{SetString(lang.mbaWorldDics)}</p>
         </div>
         <div className='world-mba-image'>
           <div className='image'>
             <Image
               src={imageData.image.src}
-              alt={setString(imageData.image.alt)}
+              alt={SetString(imageData.image.alt)}
               width={769}
               height={597}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='info'>
-            <span>{setString(lang.mbaWorldMoreThan)}</span>
+            <span>{SetString(lang.mbaWorldMoreThan)}</span>
             <strong>15</strong>
-            <span>{setString(lang.mbaWorldCountries)}</span>
+            <span>{SetString(lang.mbaWorldCountries)}</span>
           </div>
         </div>
       </div>

@@ -1,9 +1,9 @@
 import axios from 'axios'
-import { thisServer } from '@/config/index'
+import { frontendUrl } from '@/config/index'
 
 const onSubmitForm = async values => {
   try {
-    const res = await axios.post(`${thisServer}/api/contact`, values)
+    const res = await axios.post(`${frontendUrl}/api/contact`, values)
     let output
     res.status === 200 && (output = 200)
     res.status === 500 && (output = 500)

@@ -1,58 +1,61 @@
-import setString from '@/components/hooks/setString'
+import stls from '@/styles/modules/sections/UpToDateContent.module.sass'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import Image from 'next/image'
 
 const UpToDateContent = () => {
   return (
-    <section className='actual-section no-line'>
+    <section className={[stls.actualSection, stls.noLine].join(' ')}>
       <div className='section-pl'>
-        <h2>{setString(lang.uptodateTitle)}</h2>
+        <h2>{SetString(lang.uptodateTitle)}</h2>
       </div>
-      <div className='actual-content'>
-        <div className='actual-content-top'>
-          <div className='desc'>
-            {setString(lang.uptodateDicsFirst)}{' '}
-            <strong className='red'>{setString(lang.uptodateDicsRed)} </strong>
-            {setString(lang.uptodateDicsSecond)}
+      <div className={stls.actualContent}>
+        <div className={stls.actualContentTop}>
+          <div className={stls.desc}>
+            {SetString(lang.uptodateDicsFirst)}{' '}
+            <strong className='red'>{SetString(lang.uptodateDicsRed)} </strong>
+            {SetString(lang.uptodateDicsSecond)}
           </div>
-          <div className='right-image'>
+          <div className={stls.actualBottomImage}>
             <Image
-              src={'/assets/images/actual_pic_2.jpg'}
-              alt='Оператор снимает конференцию'
-              width={410}
-              height={635}
+              src={'/assets/images/actual_pic_1.jpg'}
+              alt='Студенты обучаются на конференции'
+              width={850}
+              height={366}
             />
           </div>
         </div>
-        <div className='actual-bottom-image'>
+        <div className={stls.actualRightImage}>
           <Image
-            src={'/assets/images/actual_pic_1.jpg'}
-            alt='Студенты обучаются на конференции'
-            width={850}
-            height={366}
+            src={'/assets/images/actual_pic_2.jpg'}
+            alt='Оператор снимает конференцию'
+            width={410}
+            height={635}
           />
         </div>
       </div>
       <div className='section-pl'>
-        <ul className='actual-content-list'>
+        <ul className={stls.actualContentList}>
           <li>
-            <div className='number'>2021 {setString(lang.uptodateYear)}</div>
+            <div className={stls.number}>
+              2021 {SetString(lang.uptodateYear)}
+            </div>
             <p>
-              {setString(lang.uptodateBenefitOneDics)} 2021{' '}
-              {setString(lang.uptodateYearV2)}
+              {SetString(lang.uptodateBenefitOneDics)} 2021{' '}
+              {SetString(lang.uptodateYearV2)}
             </p>
           </li>
           <li>
-            <div className='number'>
-              53 {setString(lang.uptodateBenefitTwoTitle)}
+            <div className={stls.number}>
+              53 {SetString(lang.uptodateBenefitTwoTitle)}
             </div>
-            <p>{setString(lang.uptodateBenefitTwoDics)}</p>
+            <p>{SetString(lang.uptodateBenefitTwoDics)}</p>
           </li>
           <li>
-            <div className='number'>
-              {setString(lang.uptodateBenefitThreeTitle)}
+            <div className={stls.number}>
+              {SetString(lang.uptodateBenefitThreeTitle)}
             </div>
-            <p>{setString(lang.uptodateBenefitThreeDics)}</p>
+            <p>{SetString(lang.uptodateBenefitThreeDics)}</p>
           </li>
         </ul>
       </div>

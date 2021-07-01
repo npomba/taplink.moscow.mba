@@ -1,3 +1,5 @@
+import stls from '@/styles/modules/sections/Rules.module.sass'
+
 const Rules = ({ prices }) => {
   return (
     <section className='rules-section'>

@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/Pros.module.sass'
 import useAt from '@/components/hooks/useAt'
 import Image from 'next/image'
 
@@ -69,7 +70,7 @@ const Pros = ({ format = 'online' }) => {
                     : at.executive
                     ? 'executive'
                     : null}{' '}
-                  online не отличается от дипломов очных программ за счет того,
+                  online не отличаются от дипломов очных программ за счет того,
                   что преподают те же спикеры по тем же учебным прграммам
                 </p>
               </div>

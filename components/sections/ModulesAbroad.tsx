@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/ModulesAbroad.module.sass'
 import Image from 'next/image'
 
 const ModulesAbroad = () => {

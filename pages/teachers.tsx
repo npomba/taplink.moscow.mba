@@ -1,7 +1,7 @@
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Teachers from '../components/sections/Teachers'
-import { apiProgramsReqUrl, server } from '@/config/index'
+import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import stls from '@/styles/modules/Breadcrumbs.module.sass'
 
@@ -29,7 +29,7 @@ const teachers = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

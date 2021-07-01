@@ -3,18 +3,19 @@ import { useEffect, useState } from 'react'
 import TagManager from 'react-gtm-module'
 import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
-import Header from '@/components/Header'
-import Footer from '@/components/Footer'
-import PageWrapper from '@/components/PageWrapper'
-import '@/styles/hugeStyles.sass'
-import '@/styles/hugeStyles.scss'
-import { apiProgramsReqUrl, server } from '@/config/index'
+import Header from '@/components/layout/Header'
+import Footer from '@/components/layout/Footer'
+import Wrapper from '@/components/layout/Wrapper'
+import '@/styles/app.sass'
 import { motion, AnimatePresence } from 'framer-motion'
 import { dev, gtmId } from '@/config/index'
 
 import NProgress from 'nprogress'
 import Router from 'next/router'
 import 'nprogress/nprogress.css'
+
+import Script from 'next/script'
+
 function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
@@ -60,7 +61,9 @@ function MyApp({ Component, pageProps, router }) {
         logo='https://moscow.mba/logo.jpg'
         url='https://moscow.mba/'
       />
-      <PageWrapper>
+      <Script src='/assets/js/vendors/jquery-3.6.0.min.js' />
+      <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
+      <Wrapper>
         <Header programs={programs} />
         <AnimatePresence>
           <motion.div
@@ -87,7 +90,7 @@ function MyApp({ Component, pageProps, router }) {
           </motion.div>
         </AnimatePresence>
         <Footer />
-      </PageWrapper>
+      </Wrapper>
     </>
   )
 }

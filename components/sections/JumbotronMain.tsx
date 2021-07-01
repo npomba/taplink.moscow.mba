@@ -1,14 +1,21 @@
+import stls from '@/styles/modules/sections/JumbotronMain.module.sass'
 import Link from 'next/link'
 import Image from 'next/image'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
+import { base64pixel } from '@/config/index'
 
 const JumbotronMain = () => {
   return (
     <section className='jumbotron-section main-jumbotron'>
       <div className='image'>
-        <Image src='/assets/images/jumbotron_1.jpg' layout='fill' />
+        {/* should replace following alt with english supported version */}
+        <Image
+          src='/assets/images/jumbotron_1.jpg'
+          layout='fill'
+          alt={'Студенты обучаются'}
+        />
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
@@ -21,18 +28,19 @@ const JumbotronMain = () => {
                   alt='Moscow Business Academy'
                   width={482}
                   height={146}
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <h1>Moscow Business Academy</h1>
               <div className='desc main-desc'>
-                {setString(lang.headerSubtitle)}
+                {SetString(lang.headerSubtitle)}
               </div>
             </div>
           </div>
           <Link href='/programs/mini/online' locale='ru'>
             <a className='jumbotron-squad'>
-              <p>{setString(lang.redCubeLink)}</p>
+              <p>{SetString(lang.redCubeLink)}</p>
               <div className='arrow'>
                 <img src='/assets/images/arrow_diagonal.svg' />
               </div>

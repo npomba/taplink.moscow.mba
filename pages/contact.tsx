@@ -1,11 +1,11 @@
+import stls from '@/styles/pages/Contact.module.sass'
 import { NextSeo, CorporateContactJsonLd } from 'next-seo'
 import truncate from 'truncate'
-import stls from '@/styles/modules/ContactPage.module.sass'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
 import ContactCards from '@/components/general/ContactCards'
 import contactData from '@/data/contactData'
-import { apiProgramsReqUrl, server } from '@/config/index'
+import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
 
@@ -14,9 +14,9 @@ const contact = ({ programs }) => {
   return (
     <>
       <NextSeo
-        title={`${setString(lang.linkContacts)} - Moscow Business Academy`}
+        title={`${SetString(lang.linkContacts)} - Moscow Business Academy`}
         description={truncate(
-          `${setString(contactInfo.ru.address.city)}, ${setString(
+          `${SetString(contactInfo.ru.address.city)}, ${SetString(
             contactInfo.ru.address.street
           )}, ${contactInfo.ru.tels[0].val}, ${contactInfo.ru.email.val}`,
           120
@@ -29,7 +29,7 @@ const contact = ({ programs }) => {
         logo='https://moscow.mba/logo.jpg'
         contactPoint={[
           {
-            telephone: '+7-800-500-27-47',
+            telephone: contactInfo.ru.tels[0].valDashes,
             contactType: 'customer service',
             areaServed: 'RU',
             availableLanguage: ['Russian'],
@@ -44,7 +44,7 @@ const contact = ({ programs }) => {
         </div>
       </section>
       <div className='container'>
-        <h1 className={stls.h1}>{setString(lang.linkContacts)}</h1>
+        <h1 className={stls.h1}>{SetString(lang.linkContacts)}</h1>
         <ContactCards />
       </div>
     </>
@@ -52,7 +52,7 @@ const contact = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

@@ -1,5 +1,6 @@
+import stls from '@/styles/pages/legal/Index.module.sass'
 import { NextSeo } from 'next-seo'
-import { server, apiProgramsReqUrl } from '@/config/index'
+import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import stls from '@/styles/modules/LegalPage.module.sass'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
@@ -181,7 +182,7 @@ const legal = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

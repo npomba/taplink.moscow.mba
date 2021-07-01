@@ -1,5 +1,6 @@
+import stls from '@/styles/modules/sections/WebinarCard.module.sass'
 import Image from 'next/image'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 
@@ -47,7 +48,7 @@ const WebinarCard = ({
         modal
         nested>
         {close => (
-          <PopUpForm
+          <PopupForm
             title={'Узнайте подробнее о вебинаре'}
             disc={
               'Оставьте заявку и узнайте подробнее о программе вебинара и спикере'

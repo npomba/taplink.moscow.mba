@@ -1,5 +1,5 @@
 import Webinars from '@/components/pages/Webinars'
-import { server, apiProgramsReqUrl } from '@/config/index'
+import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 
 const upcoming = ({ programs }) => {
   return (
@@ -12,7 +12,7 @@ const upcoming = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {

@@ -1,3 +1,4 @@
+import stls from '@/styles/modules/sections/Students.module.sass'
 import { CircularProgressbar } from 'react-circular-progressbar'
 // import 'react-circular-progressbar/dist/styles.css'
 

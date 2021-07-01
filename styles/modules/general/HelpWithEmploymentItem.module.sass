@@ -1,0 +1,56 @@
+@use '@/styles/utils/mixin' as m
+
+.block
+  flex: 1 1 calc(50% - 55px)
+  display: flex
+  align-items: flex-start
+  margin: 0 0 30px
+  color: #2D2C2A
+
+  &:nth-of-type(odd)
+    margin-rigth: 55px
+
+  @include m.media(laptop, tablet, phone)
+    flex: 1 1 50%
+
+  @include m.media(tablet, phone)
+    margin: 0 0 30px
+
+  .content
+    line-height: 120%
+
+    .title
+      margin-bottom: 10px
+      font-size: 24px
+      font-weight: 500
+      line-height: 120%
+
+      @include m.media(tablet, phone)
+        font-size: 20px
+
+    .description
+      font-weight: 300
+      font-size: 16px
+
+      @include m.media(tablet, phone)
+        font-size: 15px
+
+.iconCheck
+  width: 57px
+  height: 57px
+  border-radius: 50%
+  display: flex
+  align-items: center
+  justify-content: center
+  text-align: center
+  background: #FF3535
+  flex-shrink: 0
+  margin-right: 43px
+
+  @include m.media(tablet, phone)
+    width: 26px
+    height: 26px
+    margin-right: 17px
+
+    img
+      transform: scale(.55)

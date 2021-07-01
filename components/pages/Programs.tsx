@@ -1,15 +1,15 @@
+import stls from '@/styles/modules/pages/Programs.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Link from 'next/link'
 import useAt from '@/components/hooks/useAt'
 import langMenu from '@/data/translation/menu'
-import setString from '@/components/hooks/setString'
+import SetString from '@/components/hooks/SetString'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 import Filters from '@/components/general/Filters'
-import stls from '@/styles/modules/ProgramsPage.module.sass'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
 
@@ -32,11 +32,11 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
         } - Moscow Business Academy`}
         description={
           at.mini
-            ? truncate(setString(langMenu.categoryDiscMini), 120)
+            ? truncate(SetString(langMenu.categoryDiscMini), 120)
             : at.professional
-            ? truncate(setString(langMenu.categoryDiscProfessional), 120)
+            ? truncate(SetString(langMenu.categoryDiscProfessional), 120)
             : at.industry
-            ? truncate(setString(langMenu.categoryDiscIndustry), 120)
+            ? truncate(SetString(langMenu.categoryDiscIndustry), 120)
             : ''
         }
         canonical={'https://moscow.mba/programs/professional/online'}
@@ -71,11 +71,11 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
 
               <p className={stls.desc}>
                 {at.mini
-                  ? setString(langMenu.categoryDiscMini)
+                  ? SetString(langMenu.categoryDiscMini)
                   : at.professional
-                  ? setString(langMenu.categoryDiscProfessional)
+                  ? SetString(langMenu.categoryDiscProfessional)
                   : at.industry
-                  ? setString(langMenu.categoryDiscIndustry)
+                  ? SetString(langMenu.categoryDiscIndustry)
                   : ''}
               </p>
 

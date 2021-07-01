@@ -1,11 +1,11 @@
+import stls from '@/styles/pages/Payment.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Image from 'next/image'
-import stls from '@/styles/modules/PaymentPage.module.sass'
-import { server, apiProgramsReqUrl } from '@/config/index'
+import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
-import PopUpForm from '@/components/popups/Form'
+import PopupForm from '@/components/popups/PopupForm'
 import contactData from '@/data/contactData'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import breadcrumbsStls from '@/styles/modules/Breadcrumbs.module.sass'
@@ -118,7 +118,7 @@ const payment = ({ programs }) => {
 
             <Popup trigger={<a className={stls.btnAlt}>Помощь</a>} modal nested>
               {close => (
-                <PopUpForm
+                <PopupForm
                   title={'Помощь с оплатой'}
                   disc={
                     'Оставьте заявку, наш менеджер свяжется с Вами и поможет по вопросам оплаты'
@@ -135,7 +135,7 @@ const payment = ({ programs }) => {
 }
 
 export async function getStaticProps() {
-  const res = await fetch(`${server}${apiProgramsReqUrl}`)
+  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
   const { data } = await res.json()
 
   return {
