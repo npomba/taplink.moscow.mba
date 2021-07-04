@@ -5,9 +5,9 @@ import { CircularProgressbar } from 'react-circular-progressbar'
 
 const WhoStudies = () => {
   return (
-    <section className={circleStls.whoTrainingSection}>
+    <section className={stls.container}>
       <h2>Кто учится на программе?</h2>
-      <ul className={circleStls.whoTrainingList}>
+      <ul className={stls.list}>
         <li>
           <CircularProgressbar className={circleStls.circleLg} value={45} />
           <strong className={circleStls.strong}>45%</strong>
@@ -19,7 +19,7 @@ const WhoStudies = () => {
           <p>SEO и руководителей</p>
         </li>
       </ul>
-      <div className={circleStls.lines}>
+      <div className={stls.lines}>
         <SVGDecorativeLines />
       </div>
     </section>
