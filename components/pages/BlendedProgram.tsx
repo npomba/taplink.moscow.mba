@@ -59,7 +59,7 @@ const PageBlendedProgram = ({ program }) => {
         /> */}
         <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
-        <UpToDateContent />
+        <UpToDateContent withBottomLine />
         <CorporateClients />
         <Accreditation />
         <Diploma />

@@ -1,9 +1,13 @@
 @use '@/styles/utils/mixin' as m
 
-.actualSection
+.container
   position: relative
-  padding-bottom: 140px
-  margin-bottom: 130px
+  margin-bottom: 140px
+  @include m.media(laptop, tablet, phone)
+    margin-bottom: 80px
+    padding-bottom: 0
+  @include m.media(tablet, phone)
+    margin-bottom: 60px
   @include m.media(laptop, tablet, phone)
     padding-bottom: 70px
     margin-bottom: 70px
@@ -12,44 +16,33 @@
     margin-bottom: 60px
   @include m.media(phone)
     padding-bottom: 40px
-  &:after
-    content: ''
-    height: 1px
-    background: #e6e6e6
-    width: 100vw
-    left: 50%
-    margin-left: -50vw
-    position: absolute
-    z-index: 2
-    bottom: 0
-
-  &:before
-    content: ''
-    height: 2px
-    background: #ff3535
-    width: 169px
-    left: 220px
-    position: absolute
-    z-index: 3
-    bottom: 0
-    @include m.media(desktop, laptop, tablet, phone)
-      left: 0
-    @include m.media(tablet, phone)
-      width: 110px
-
-  &.noLine
-    margin-bottom: 140px
-    padding-bottom: 0
-    @include m.media(laptop, tablet, phone)
-      margin-bottom: 80px
-      padding-bottom: 0
-    @include m.media(tablet, phone)
-      margin-bottom: 60px
-    &:after,
+  &.withLine
+    padding-bottom: 140px
+    &:after
+      content: ''
+      height: 1px
+      background: #e6e6e6
+      width: 100vw
+      left: 50%
+      margin-left: -50vw
+      position: absolute
+      z-index: 2
+      bottom: 0
     &:before
-      display: none
+      content: ''
+      height: 2px
+      background: #ff3535
+      width: 169px
+      left: 220px
+      position: absolute
+      z-index: 3
+      bottom: 0
+      @include m.media(desktop, laptop, tablet, phone)
+        left: 0
+      @include m.media(tablet, phone)
+        width: 110px
 
-.actualContent
+.content
   position: relative
   display: flex
   margin-top: 33px
@@ -58,7 +51,7 @@
     padding-right: 0
   @include m.media(tablet, phone)
     margin-bottom: 25px
-  .actualRightImage
+  .rightImg
     margin-top: 19px
     width: 410px
     height: calc(100% - 19px)
@@ -88,7 +81,7 @@
       object-position: top left
       width: 100%
 
-.actualContentTop
+.top
   width: 850px
   margin-right: 30px
   @include m.media(desktop, tablet, phone)
@@ -118,13 +111,13 @@
     @include m.media(phone)
       font-size: 18px
       min-height: calc(260px - 2vw)
-  .actualBottomImage
+  .bottomImg
     @include m.media(phone)
       margin-top: -50px
     img
       width: 100%
 
-.actualContentList
+.list
   display: flex
   margin: 0 -15px
   line-height: 1.2

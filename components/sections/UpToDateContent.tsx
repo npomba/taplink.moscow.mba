@@ -3,24 +3,24 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import Image from 'next/image'
 
-const UpToDateContent = ({ noBottomLine = false }) => {
-  const upToDateContentClasses = [stls.actualSection]
+const UpToDateContent = ({ withBottomLine = false }) => {
+  const upToDateContentClasses = [stls.container]
 
-  if (noBottomLine) upToDateContentClasses.push(stls.noLine)
+  if (withBottomLine) upToDateContentClasses.push(stls.withLine)
 
   return (
     <section className={upToDateContentClasses.join(' ')}>
       <div className='section-pl'>
         <h2>{SetString(lang.uptodateTitle)}</h2>
       </div>
-      <div className={stls.actualContent}>
-        <div className={stls.actualContentTop}>
+      <div className={stls.content}>
+        <div className={stls.top}>
           <div className={stls.desc}>
             {SetString(lang.uptodateDicsFirst)}{' '}
             <strong className='red'>{SetString(lang.uptodateDicsRed)} </strong>
             {SetString(lang.uptodateDicsSecond)}
           </div>
-          <div className={stls.actualBottomImage}>
+          <div className={stls.bottomImg}>
             <Image
               src={'/assets/images/actual_pic_1.jpg'}
               alt='Студенты обучаются на конференции'
@@ -29,7 +29,7 @@ const UpToDateContent = ({ noBottomLine = false }) => {
             />
           </div>
         </div>
-        <div className={stls.actualRightImage}>
+        <div className={stls.rightImg}>
           <Image
             src={'/assets/images/actual_pic_2.jpg'}
             alt='Оператор снимает конференцию'
@@ -39,7 +39,7 @@ const UpToDateContent = ({ noBottomLine = false }) => {
         </div>
       </div>
       <div className='section-pl'>
-        <ul className={stls.actualContentList}>
+        <ul className={stls.list}>
           <li>
             <div className={stls.number}>
               2021 {SetString(lang.uptodateYear)}
