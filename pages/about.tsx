@@ -33,7 +33,7 @@ const about = ({ programs }) => {
         <StudentsInternational />
         <CorporateClients />
         <Teachers />
-        <UpToDateContent />
+        <UpToDateContent noBottomLine />
         <Accreditation />
         <ContactUs />
       </div>
