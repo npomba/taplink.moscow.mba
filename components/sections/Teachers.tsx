@@ -8,7 +8,6 @@ import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
 import { base64pixel } from '@/config/index'
-import stls from '@/styles/modules/Teachers.module.sass'
 
 const splitParaText = (string, splitBy) => {
   const indexOfWordToSplitBy = string.indexOf(splitBy)
