@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/Accordion.module.sass'
+import stls from '@/styles/components/general/Accordion.module.sass'
 
 const Accordion = ({ title, accordionContent, isList = false }) => {
   let content
