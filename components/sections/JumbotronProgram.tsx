@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/JumbotronProgram.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
@@ -6,11 +7,12 @@ import Breadcrumbs from '@/components/general/Breadcrumbs'
 import JumbotronLabel from '@/components/general/JumbotronLabel'
 import PopupForm from '@/components/popups/PopupForm'
 import InfoRectangle from '@/components/general/InfoRectangle'
-import Discount from '../costs/Discount'
+import Discount from '@/components/costs/Discount'
 import useAt from '@/components/hooks/useAt'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
+
   return (
     <section className='jumbotron-section'>
       <div className='image'>
@@ -22,7 +24,7 @@ const JumbotronProgram = ({ data }) => {
       </div>
       <div className='container'>
         <div className='jumbotron-content'>
-          <Breadcrumbs pageTitle={data.title} />
+          <Breadcrumbs programChunkData={data} />
           <div className='jumbotron-top'>
             {at.online && (
               <div className='jumbotron-discount'>

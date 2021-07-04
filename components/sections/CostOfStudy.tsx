@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/CostOfStudy.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Until from '@/components/costs/Until'
@@ -127,7 +128,7 @@ const CostOfStudy = ({ programTitle = null, programId = null }) => {
               }
               format={at.online ? 'online' : at.blended ? 'blended' : null}
             />{' '}
-            &#8381;
+            Р.
           </div>
           <div className='button-block'>
             <Popup

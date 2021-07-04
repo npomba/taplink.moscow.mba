@@ -1,12 +1,14 @@
+import stls from '@/styles/pages/Payment.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Image from 'next/image'
-import stls from '@/styles/modules/PaymentPage.module.sass'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopupForm from '@/components/popups/PopupForm'
 import contactData from '@/data/contactData'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 
 const payment = ({ programs }) => {
   const contactInfo = contactData()
@@ -21,6 +23,12 @@ const payment = ({ programs }) => {
         )}
         canonical={'https://moscow.mba/payment'}
       />
+      <section
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}>
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <div className={stls.content}>
           <h1 className={stls.h1}>Оплата</h1>

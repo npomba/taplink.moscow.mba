@@ -1,7 +1,9 @@
+import stls from '@/styles/components/sections/ForeignAffiliates.module.sass'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/foreignAffiliates'
+import { base64pixel } from '@/config/index'
 
 const ForeignAffiliates = () => {
   return (
@@ -17,7 +19,8 @@ const ForeignAffiliates = () => {
                 alt={SetString(imageData.circleOne.alt)}
                 width={191}
                 height={191}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -28,7 +31,8 @@ const ForeignAffiliates = () => {
                 alt={SetString(imageData.circleTwo.alt)}
                 width={191}
                 height={191}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -39,6 +43,8 @@ const ForeignAffiliates = () => {
                 alt={SetString(imageData.circleThree.alt)}
                 width={191}
                 height={191}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -60,7 +66,8 @@ const ForeignAffiliates = () => {
             width={659}
             height={394}
             layout='fixed'
-            priority={true}
+            placeholder='blur'
+            blurDataURL={base64pixel}
           />
         </div>
       </div>

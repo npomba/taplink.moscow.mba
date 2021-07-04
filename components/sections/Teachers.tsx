@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/Teachers.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
@@ -5,6 +6,7 @@ import PopupForm from '@/components/popups/PopupForm'
 import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
+import { base64pixel } from '@/config/index'
 
 const Teachers = ({
   programTitle = null,
@@ -34,7 +36,8 @@ const Teachers = ({
                   width={425}
                   height={422}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div className='image pic-2'>
@@ -44,7 +47,8 @@ const Teachers = ({
                   width={236}
                   height={236}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
             </div>
@@ -90,7 +94,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -110,7 +115,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -130,7 +136,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -150,7 +157,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -170,7 +178,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -190,7 +199,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -210,7 +220,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>
@@ -230,7 +241,8 @@ const Teachers = ({
                   width={269}
                   height={322}
                   layout='responsive'
-                  priority={true}
+                  placeholder='blur'
+                  blurDataURL={base64pixel}
                 />
               </div>
               <div>

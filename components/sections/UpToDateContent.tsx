@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/UpToDateContent.module.sass'
+import stls from '@/styles/components/sections/UpToDateContent.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
 import Image from 'next/image'

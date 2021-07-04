@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/Qna.module.sass'
 import Accordion from '@/components/general/Accordion'
 
 import Script from 'next/script'

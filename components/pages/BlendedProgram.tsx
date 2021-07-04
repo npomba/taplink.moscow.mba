@@ -1,3 +1,4 @@
+import stls from '@/styles/components/pages/BlendedProgram.module.sass'
 import { NextSeo, CourseJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
 import truncate from 'truncate'

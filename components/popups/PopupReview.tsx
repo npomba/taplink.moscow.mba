@@ -1,5 +1,7 @@
+import stls from '@/styles/components/popups/PopupReview.module.sass'
 import Image from 'next/image'
-import SVGClose from '../svgs/SVGClose'
+import SVGClose from '@/components/svgs/SVGClose'
+import { base64pixel } from '@/config/index'
 
 const PopupReview = ({ review, closePopUp }) => {
   return (
@@ -13,7 +15,8 @@ const PopupReview = ({ review, closePopUp }) => {
                 alt={review.name}
                 height={185}
                 width={185}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
             <div className='info'>

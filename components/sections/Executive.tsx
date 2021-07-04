@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/Executive.module.sass'
 import Link from 'next/link'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
@@ -6,7 +7,8 @@ import langMenu from '@/data/translation/menu'
 import imageData from '@/data/images/executive'
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-import ProgramSubjects from '../hooks/ProgramSubjects'
+import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import { base64pixel } from '@/config/index'
 
 const Executive = () => {
   return (
@@ -33,11 +35,11 @@ const Executive = () => {
             {SetString(langMenu.price)}:{' '}
             <i className='new-price'>
               {' '}
-              <Price discount={false} type={'executive'} /> &#8381;
+              <Price discount={false} type={'executive'} /> Р.
             </i>
             {/* <i className='old-price'>
               {' '}
-              <Price discount={true} type={'executive'} /> &#8381;
+              <Price discount={true} type={'executive'} /> Р.
             </i> */}
           </div>
           <Link href='/programs/executive/' locale='ru'>
@@ -53,7 +55,8 @@ const Executive = () => {
               alt={SetString(imageData.largerCircle.alt)}
               width={401}
               height={400}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='image pic-2'>
@@ -62,7 +65,8 @@ const Executive = () => {
               alt={SetString(imageData.smallerCircle.alt)}
               width={221}
               height={221}
-              priority={true}
+              placeholder='blur'
+              blurDataURL={base64pixel}
             />
           </div>
           <div className='count'>

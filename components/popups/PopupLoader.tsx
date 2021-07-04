@@ -1,3 +1,4 @@
+import stls from '@/styles/components/popups/PopupLoader.module.sass'
 import SVGLoader from '@/components/svgs/SVGLoader'
 import SVGClose from '@/components/svgs/SVGClose'
 

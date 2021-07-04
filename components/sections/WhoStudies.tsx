@@ -1,6 +1,6 @@
+import stls from '@/styles/components/sections/WhoStudies.module.sass'
 import SVGDecorativeLines from '@/components/svgs/SVGDecorativeLines'
-
-import circleStls from '@/styles/modules/CircularProgressBar.module.sass'
+import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import { CircularProgressbar } from 'react-circular-progressbar'
 
 const WhoStudies = () => {

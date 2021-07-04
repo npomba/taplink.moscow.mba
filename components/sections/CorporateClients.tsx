@@ -1,7 +1,9 @@
+import stls from '@/styles/components/sections/CorporateClients.module.sass'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/corporateClients'
+import { base64pixel } from '@/config/index'
 
 const CorporateClients = () => {
   return (
@@ -24,7 +26,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.hh.alt)}
                 width={141}
                 height={106}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -35,7 +38,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.rzd.alt)}
                 width={141}
                 height={107}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -46,7 +50,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.tatenergo.alt)}
                 width={240}
                 height={92}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -57,7 +62,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.toms.alt)}
                 width={163}
                 height={54}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -70,7 +76,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.rosneft.alt)}
                 width={142}
                 height={107}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -81,7 +88,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.rosseti.alt)}
                 width={142}
                 height={107}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -92,7 +100,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.sberbankLeasing.alt)}
                 width={168}
                 height={67}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>
@@ -103,7 +112,8 @@ const CorporateClients = () => {
                 alt={SetString(imageData.lukomA.alt)}
                 width={165}
                 height={43}
-                priority={true}
+                placeholder='blur'
+                blurDataURL={base64pixel}
               />
             </div>
           </li>

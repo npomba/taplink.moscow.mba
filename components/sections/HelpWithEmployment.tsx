@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/HelpWithEmployment.module.sass'
+import stls from '@/styles/components/sections/HelpWithEmployment.module.sass'
 import HelpWithEmploymentItem from '@/components/general/HelpWIthEmploymentItem'
 
 const employmentMeasures = [
