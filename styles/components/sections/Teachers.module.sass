@@ -1,6 +1,6 @@
 @use '@/styles/utils/mixin' as m
-  
-.aboutDetailSection
+
+.container
   position: relative
   z-index: 3
   color: #b3b3b3
@@ -32,19 +32,19 @@
 .standalonePage
   .titlePl
     color: #333
-  .aboutTeachersList li
+  .teachersList li
     margin-bottom: 20px
-  .aboutDetailContent h2,
-  .aboutDetailContent h3,
-  .aboutDetailContent h5,
-  .aboutTeachersBlock .name
+  .content h2,
+  .content h3,
+  .content h5,
+  .teachersItem .name
     color: #2d2c2a
-  .aboutDetailImages .pic2
+  .detailImage .pic2
     border-color: #fff
   &::after
     background-color: #fff
 
-.aboutDetailContent
+.content
   position: relative
   z-index: 2
   padding-right: 20px
@@ -77,7 +77,7 @@
   line-height: 1.2
   margin-top: -5px
 
-.aboutDetailList
+.detailList
   line-height: 1.2
   min-height: 380px
   margin-bottom: 29px
@@ -123,14 +123,14 @@
     img
       width: 20px
 
-.aboutTeachersLink
+.btn
   margin-bottom: 30px
   text-align: center
   @include m.media(phone)
     button
       width: 100%
 
-.aboutTeachersList
+.teachersList
   display: flex
   flex-wrap: wrap
   margin: 0 -35px
@@ -165,7 +165,7 @@
       &:nth-of-type(n + 5)
         display: none
 
-.dobbleImages
+.twoImages
   position: relative
   max-width: 500px
   .image
@@ -187,7 +187,7 @@
     margin-top: -67px
     margin-left: -56px
 
-.aboutDetailImages
+.detailImage
   width: 425px
   position: absolute
   z-index: -1
@@ -199,7 +199,7 @@
     max-width: 425px
     position: static
     top: 0
-  &.dobbleImages
+  &.twoImages
     @include m.media(laptop, tablet, phone)
       width: auto
       margin: 0 auto 30px
@@ -215,7 +215,7 @@
       margin-top: -100px
       border-width: 5px
 
-.aboutTeachersBlock
+.teachersItem
   line-height: 1.2
   @include m.media(phone)
     display: flex

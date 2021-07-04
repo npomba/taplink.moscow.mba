@@ -26,7 +26,7 @@ const Teachers = ({
   atStandAlonePage = false
 }) => {
   const router = useRouter()
-  const detailSectionClasses = [stls.aboutDetailSection]
+  const detailSectionClasses = [stls.container]
 
   if (atStandAlonePage) detailSectionClasses.push(stls.standalonePage)
 
@@ -60,14 +60,14 @@ const Teachers = ({
           <div className={stls.titlePl}>
             {SetString(lang.teachersTitleLabel)}
           </div>
-          <div className={stls.aboutDetailContent}>
+          <div className={stls.content}>
             <h2>
               {SetString(lang.teachersTitleFirst)}{' '}
               <span className='red'>{SetString(lang.teachersTitleRed)} </span>
               {SetString(lang.teachersTitleSecond)}
             </h2>
             <div className={stls.text}>{SetString(lang.teachersDics)}</div>
-            <div className={`${stls.dobbleImages} ${stls.aboutDetailImages}`}>
+            <div className={`${stls.twoImages} ${stls.detailImage}`}>
               <div className={`${stls.image} ${stls.pic1}`}>
                 <Image
                   src={imagesData.circleSpeakerOne.src}
@@ -91,7 +91,7 @@ const Teachers = ({
                 />
               </div>
             </div>
-            <ul className={stls.aboutDetailList}>
+            <ul className={stls.detailList}>
               <li>
                 <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
@@ -129,9 +129,9 @@ const Teachers = ({
             <h3>{SetString(lang.teachersProsTitle)}</h3>
           </div>
         </div>
-        <ul className={stls.aboutTeachersList}>
+        <ul className={stls.teachersList}>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-1.jpg'
@@ -152,7 +152,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-2.jpg'
@@ -173,7 +173,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-3.jpg'
@@ -194,7 +194,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-4.jpg'
@@ -215,7 +215,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-5.jpg'
@@ -236,7 +236,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-6.jpg'
@@ -257,7 +257,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-7.jpg'
@@ -278,7 +278,7 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className={stls.aboutTeachersBlock}>
+            <div className={stls.teachersItem}>
               <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-8.jpg'
@@ -299,7 +299,7 @@ const Teachers = ({
             </div>
           </li>
         </ul>
-        <div className={stls.aboutTeachersLink}>
+        <div className={stls.btn}>
           <Popup
             trigger={
               <button className='button'>
