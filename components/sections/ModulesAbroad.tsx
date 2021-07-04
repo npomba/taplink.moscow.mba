@@ -20,11 +20,12 @@ const ModulesAbroad = () => {
         <li>
           <div className='image'>
             <Image
-              src='/assets/images/abroad_modules_pic_1.jpg'
-              alt={'Студенты на конференции MBA'}
-              width={550}
-              height={225}
+              src='/assets/images/new_abroad_modules_pic_1.jpg'
+              alt={'Вид на Статую Свободы, США'}
+              width={516}
+              height={344}
             />
+            <div className='red-offset bottom-right'></div>
           </div>
           <div className='text'>
             <div className='country'>США</div>
@@ -41,11 +42,12 @@ const ModulesAbroad = () => {
         <li>
           <div className='image'>
             <Image
-              src='/assets/images/abroad_modules_pic_2.jpg'
-              alt={'Встреча студентов MBA в Китае'}
-              width={550}
-              height={225}
+              src='/assets/images/new_abroad_modules_pic_2.jpg'
+              alt={'Вид на небоскреб Wangjing SOHO, Китай'}
+              width={516}
+              height={344}
             />
+            <div className='red-offset top-left'></div>
           </div>
           <div className='text'>
             <div className='country'>Китай</div>
