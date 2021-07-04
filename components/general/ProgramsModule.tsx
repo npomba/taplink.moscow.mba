@@ -4,18 +4,18 @@ import { useState } from 'react'
 const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {
   const [isOpen, setIsOpen] = useState(false)
 
-  const trainingModuleClasses = [stls.trainingModule]
-  const trainingContentClasses = [stls.trainingContent]
+  const moduleClassNames = [stls.module]
+  const contentClassNames = [stls.content]
 
   if (isOpen) {
-    trainingModuleClasses.push(stls.opened)
-    trainingContentClasses.push(stls.showTrainingContent)
+    moduleClassNames.push(stls.opened)
+    contentClassNames.push(stls.show)
   }
 
   return (
-    <div className={stls.trainingBlock}>
+    <div className={stls.container}>
       <div
-        className={trainingModuleClasses.join(' ')}
+        className={moduleClassNames.join(' ')}
         onClick={() => setIsOpen(prevState => !prevState)}>
         <div className={stls.plus}>
           <i></i>
@@ -23,8 +23,8 @@ const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {
         </div>
         {title}
       </div>
-      <div className={trainingContentClasses.join(' ')}>
-        {subTitle && <h4 className={stls.trainingContentTitle}>{subTitle}</h4>}
+      <div className={contentClassNames.join(' ')}>
+        {subTitle && <h4 className={stls.title}>{subTitle}</h4>}
         <ul className='simple-list'>
           {items.map((item, idx) => (
             <li key={idx}>{item}</li>

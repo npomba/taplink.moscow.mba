@@ -1,6 +1,6 @@
 @use '@/styles/utils/mixin' as m
-  
-.trainingBlock
+
+.container
   // margin: 0 15px 59px
   margin: 0 0 59px
   width: calc(50% - 30px)
@@ -30,7 +30,7 @@
     @include m.media(tablet, phone)
       display: none
 
-.trainingModule
+.module
   flex-shrink: 0
   width: 190px
   font-size: 32px
@@ -89,7 +89,7 @@
       &:nth-of-type(2)
         transform: rotate(-90deg)
 
-.trainingContent
+.content
   padding-top: 7px
   max-width: 382px
   @include m.media(widescreen, desktop, laptop)
@@ -99,10 +99,10 @@
     padding-top: 15px
     padding-bottom: 20px
     max-width: 100%
-    &.showTrainingContent
+    &.show
       display: block
 
-.trainingContentTitle
+.title
   font-style: normal
   font-weight: 500
   font-size: 17px

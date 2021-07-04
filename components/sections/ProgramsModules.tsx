@@ -9,26 +9,26 @@ const ProgramsModules = ({ data }) => {
   const at = useAt()
 
   return (
-    <section className={stls.trainingSection}>
-      <div className={stls.sectionPl}>
+    <section className={stls.container}>
+      <div className={stls.pl}>
         <h2>Программа обучения</h2>
-        <ul className={stls.trainingRedList}>
-          <li>
+        <ul className={stls.redRectangle}>
+          <li className={stls.redItem}>
             <div className={stls.number}>
               <ProgramSubjects subjects='base' />
             </div>
-            <p>дисциплин базовой части</p>
+            <p className={stls.p}>дисциплин базовой части</p>
           </li>
-          <li>
+          <li className={stls.redItem}>
             <div className={stls.number}>
               <ProgramSubjects subjects='specialty' />
             </div>
-            <p>дисциплин специализации</p>
+            <p className={stls.p}>дисциплин специализации</p>
           </li>
         </ul>
-        <h3>{!at.executive && 'Базовые дисциплины'}</h3>
+        <h3 className={stls.h3}>{!at.executive && 'Базовые дисциплины'}</h3>
       </div>
-      <div className={stls.trainingList}>
+      <div className={stls.list}>
         {at.mini && (
           <>
             <ProgramsModule
@@ -148,10 +148,12 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
       </div>
-      <div className={stls.sectionPl}>
-        <h3>{!at.executive && 'Специализированные дисциплины'}</h3>
+      <div className={stls.pl}>
+        <h3 className={stls.h3}>
+          {!at.executive && 'Специализированные дисциплины'}
+        </h3>
       </div>
-      <div className={stls.trainingList}>
+      <div className={stls.list}>
         {(at.industry || at.professional) && (
           <>
             <ProgramsModule
