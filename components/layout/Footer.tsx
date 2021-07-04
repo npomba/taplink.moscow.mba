@@ -1,8 +1,8 @@
+import stls from '@/styles/components/layout/Footer.module.sass'
 import Link from 'next/link'
 import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
-
 import contactData from '@/data/contactData'
 import SVGLocation from '@/components/svgs/SVGLocation'
 import SVGVK from '@/components/svgs/SVGVK'

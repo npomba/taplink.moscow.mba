@@ -1,14 +1,11 @@
+import stls from '@/styles/components/general/ProgramsColumn.module.sass'
 import Link from 'next/link'
-
 import langMenu from '@/data/translation/menu'
 import SetString from '@/components/hooks/SetString'
-
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
-
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
-
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Discount from '../costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'
@@ -44,11 +41,11 @@ const ProgramsColumn = ({ data, id, type }) => {
             {SetString(langMenu.price)}:{' '}
             <i className='new-price'>
               {' '}
-              <Price discount={true} type={type} format={'online'} /> &#8381;
+              <Price discount={true} type={type} format={'online'} /> Р.
             </i>{' '}
             <i className='old-price'>
               {' '}
-              <Price discount={false} type={type} format={'online'} /> &#8381;
+              <Price discount={false} type={type} format={'online'} /> Р.
             </i>
           </div>
           <div className='info-list'>
@@ -99,7 +96,7 @@ const ProgramsColumn = ({ data, id, type }) => {
             {SetString(langMenu.price)}:{' '}
             <i className='simple-price'>
               {' '}
-              <Price discount={false} type={type} format={'blended'} /> &#8381;
+              <Price discount={false} type={type} format={'blended'} /> Р.
             </i>
           </div>
           <div className='info-list'>

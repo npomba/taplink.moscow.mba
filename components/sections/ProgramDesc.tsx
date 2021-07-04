@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/ProgramDesc.module.sass'
 import useAt from '@/components/hooks/useAt'
 import Image from 'next/image'
 

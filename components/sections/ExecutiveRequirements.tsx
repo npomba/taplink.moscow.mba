@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/ExecutiveRequirements.module.sass'
 import Image from 'next/image'
 
 const ExecutiveRequirements = () => {

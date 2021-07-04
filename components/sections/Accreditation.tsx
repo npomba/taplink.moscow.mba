@@ -1,8 +1,10 @@
+import stls from '@/styles/components/sections/Accreditation.module.sass'
 import Image from 'next/image'
 import imgData from '@/data/images/accreditation'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
-import SVGPaperCorner from '../svgs/SVGPaperCorner'
+import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
+import { base64pixel } from '@/config/index'
 
 const Accreditation = () => {
   return (
@@ -13,7 +15,8 @@ const Accreditation = () => {
           alt={SetString(imgData.accreditationImageAlt.alt)}
           width={644}
           height={664}
-          priority={true}
+          placeholder='blur'
+          blurDataURL={base64pixel}
           layout='responsive'
         />
       </div>

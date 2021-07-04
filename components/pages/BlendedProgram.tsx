@@ -1,3 +1,4 @@
+import stls from '@/styles/components/pages/BlendedProgram.module.sass'
 import { NextSeo, CourseJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
 import truncate from 'truncate'
@@ -58,7 +59,7 @@ const PageBlendedProgram = ({ program }) => {
         /> */}
         <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
-        <UpToDateContent />
+        <UpToDateContent withBottomLine />
         <CorporateClients />
         <Accreditation />
         <Diploma />

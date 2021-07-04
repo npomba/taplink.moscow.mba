@@ -1,0 +1,58 @@
+@use '@/styles/utils/mixin' as m
+
+.container
+  margin-bottom: 110px
+  @include m.media(laptop, tablet, phone)
+    margin-bottom: 50px
+  .h3
+    font-weight: bold
+    font-size: 36px
+    line-height: 1.2
+    margin-bottom: 30px
+    @include m.media(tablet, phone)
+      font-size: 28px
+
+.redRectangle
+  display: inline-flex
+  align-items: center
+  background: #ff3535
+  margin-bottom: 42px
+  padding: 16px 30px
+  color: #fff
+  line-height: 1.2
+  margin-top: 8px
+  @include m.media(tablet, phone)
+    padding: 16px 20px
+  @include m.media(phone)
+    align-items: flex-start
+  .redItem
+    display: flex
+    align-items: center
+    padding: 0 13px
+    @include m.media(phone)
+      display: block
+  .p
+    max-width: 200px
+
+.list
+  display: flex
+  flex-wrap: wrap
+  @include m.media(tablet, phone)
+    display: block
+    margin: 0
+  // margin: 0 -15px;
+
+.number
+  font-size: 52px
+  flex-shrink: 0
+  margin-right: 11px
+  @include m.media(phone)
+    margin-right: 0
+    margin-bottom: 5px
+
+.pl
+  position: relative
+  z-index: 2
+  padding-left: 220px
+  @include m.media(desktop, laptop, tablet, phone)
+    padding-left: 0

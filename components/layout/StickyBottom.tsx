@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/StickyBottom.module.sass'
+import stls from '@/styles/components/layout/StickyBottom.module.sass'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Until from '@/components/costs/Until'

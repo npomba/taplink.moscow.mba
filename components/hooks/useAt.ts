@@ -103,7 +103,7 @@ const useAt = () => {
     articles: articles(),
     contact: contact(),
     programChunk: programChunk(),
-    getSplitedPath
+    getSplitedPath,
   }
 }
 

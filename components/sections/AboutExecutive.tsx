@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/AboutExecutive.module.sass'
 import Image from 'next/image'
 
 const AboutExecutive = () => {

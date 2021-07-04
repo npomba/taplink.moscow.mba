@@ -1,11 +1,13 @@
+import stls from '@/styles/pages/Contact.module.sass'
 import { NextSeo, CorporateContactJsonLd } from 'next-seo'
 import truncate from 'truncate'
-import stls from '@/styles/modules/ContactPage.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
 import ContactCards from '@/components/general/ContactCards'
 import contactData from '@/data/contactData'
 import { apiProgramsReqUrl, backendUrl } from '@/config/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
+import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 
 const contact = ({ programs }) => {
   const contactInfo = contactData()
@@ -34,7 +36,12 @@ const contact = ({ programs }) => {
           }
         ]}
       />
-
+      <section
+        className={`jumbotron-section ${breadcrumbsStls.jumbotronGeneral}`}>
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <h1 className={stls.h1}>{SetString(lang.linkContacts)}</h1>
         <ContactCards />

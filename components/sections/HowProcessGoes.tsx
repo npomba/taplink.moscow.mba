@@ -1,5 +1,5 @@
+import stls from '@/styles/components/sections/HowProcessGoes.module.sass'
 import useAt from '@/components/hooks/useAt'
-
 import Script from 'next/script'
 
 const HowProcessGoes = () => {

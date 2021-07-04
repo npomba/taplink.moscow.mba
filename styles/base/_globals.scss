@@ -1,4 +1,3 @@
-
 $styrene: 'Styrene', Arial, Tahoma, sans-serif;
 $visuelt: 'Visuelt', Arial, Tahoma, sans-serif;
 $mazzardH: 'mazzardH', Arial, Tahoma, sans-serif;
@@ -771,6 +770,7 @@ header {
     top: 0;
     height: 100%;
     width: 100%;
+    background-color: rgba(#000, 0.5);
     &:after {
       content: '';
       position: absolute;
@@ -2156,153 +2156,6 @@ footer {
   }
 }
 
-/*about-detail-section ===================================*/
-.about-detail-section {
-  position: relative;
-  z-index: 3;
-  color: #b3b3b3;
-  padding: 136px 0 100px;
-  margin-bottom: 140px;
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    width: 102vw;
-    margin-left: -51vw;
-    height: 100%;
-    top: 0;
-    background: #2d2c2a;
-  }
-  .title-pl {
-    color: #808080;
-    margin-top: 9px;
-  }
-}
-
-.about-detail-content {
-  position: relative;
-  z-index: 2;
-  padding-right: 20px;
-  padding-right: 500px;
-  h2 {
-    margin-right: -160px;
-    color: #fff;
-  }
-  h3 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 52px;
-  }
-  .text {
-    margin-bottom: 36px;
-    line-height: 1.2;
-    margin-top: -5px;
-  }
-}
-
-.about-detail-list {
-  line-height: 1.2;
-  min-height: 380px;
-  margin-bottom: 29px;
-  li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-  }
-  .circle {
-    width: 57px;
-    height: 57px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: $red;
-    flex-shrink: 0;
-    margin-right: 43px;
-  }
-  h5 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-}
-
-.about-detail-images {
-  width: 425px;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 59px;
-  .pic-2 {
-    width: 236px;
-    border: 10px solid #2d2c2a;
-    margin-top: -140px;
-  }
-}
-
-.about-teachers-link {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.about-teachers-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -35px;
-  li {
-    margin-bottom: 60px;
-    padding: 0 35px;
-    width: 25%;
-  }
-}
-
-.about-teachers-block {
-  line-height: 1.2;
-  .image {
-    margin-bottom: 17px;
-    display: block;
-    transition: $transition;
-    // &:hover {
-    //   opacity: 0.8;
-    // }
-    img {
-      max-width: 100%;
-      max-height: 322px;
-    }
-  }
-  .name {
-    font-weight: 500;
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 13px;
-  }
-  p {
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-  .link {
-    display: inline-block;
-    color: #fff;
-    transition: $transition;
-    &:hover {
-      color: $red;
-    }
-    span {
-      margin-right: 10px;
-    }
-    img {
-      flex-shrink: 0;
-      position: relative;
-      top: 1px;
-    }
-  }
-}
-
 /*accreditations-section =================================*/
 .accreditations-section {
   margin-bottom: 130px;
@@ -2708,83 +2561,6 @@ footer {
       margin-bottom: 0 !important;
     }
   }
-}
-
-/* training-section ======================================*/
-.training-section {
-  margin-bottom: 110px;
-  h3 {
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 30px;
-  }
-}
-
-.training-red-list {
-  display: inline-flex;
-  align-items: center;
-  background: $red;
-  margin-bottom: 42px;
-  padding: 16px 30px;
-  color: #fff;
-  line-height: 1.2;
-  margin-top: 8px;
-  li {
-    display: flex;
-    align-items: center;
-    padding: 0 13px;
-  }
-  .number {
-    font-size: 52px;
-    flex-shrink: 0;
-    margin-right: 11px;
-  }
-  p {
-    max-width: 200px;
-  }
-}
-
-.training-list {
-  display: flex;
-  flex-wrap: wrap;
-  // margin: 0 -15px;
-}
-
-.training-block {
-  // margin: 0 15px 59px;
-  margin: 0 0 59px;
-  width: calc(50% - 30px);
-  border-top: 1px solid rgba(0, 0, 0, 0.11);
-  padding-top: 30px;
-  padding-right: 10px;
-  position: relative;
-  display: flex;
-  align-items: flex-start;
-  &:before {
-    content: '';
-    width: 145px;
-    background: $red;
-    height: 2px;
-    position: absolute;
-    left: 0;
-    top: -1px;
-    position: absolute;
-  }
-}
-
-.training-modul {
-  flex-shrink: 0;
-  width: 190px;
-  font-size: 32px;
-  font-weight: 400;
-  line-height: 1.2;
-  margin-right: 30px;
-}
-
-.training-content {
-  padding-top: 7px;
-  max-width: 382px;
 }
 
 /* diplom-section ========================================*/
@@ -3277,7 +3053,7 @@ footer {
   padding-top: 16px;
 }
 
-.faq-block {
+.accordion-block {
   background: #f7f7f7;
   margin-bottom: 5px;
   padding: 20px 33px 20px 92px;
@@ -3288,7 +3064,7 @@ footer {
     background: #f2f2f2;
   }
   &.opened {
-    .faq-question {
+    .accordion-title {
       color: $red;
     }
     .plus {
@@ -3324,13 +3100,13 @@ footer {
   }
 }
 
-.faq-question {
+.accordion-title {
   font-size: 20px;
   line-height: 1.3;
   transition: $transition;
 }
 
-.faq-answer {
+.accordion-content {
   font-size: 15px;
   line-height: 1.3;
   padding-top: 16px;
@@ -3346,12 +3122,16 @@ footer {
   padding: 0;
   border-radius: 3px;
   .mfp-close {
+    position: absolute;
     top: 16px;
     right: 16px;
     line-height: 1px;
     opacity: 1;
     width: 24px;
     height: 24px;
+    cursor: pointer;
+    background: transparent;
+    border: 0;
     img,
     svg,
     i {
@@ -3789,46 +3569,6 @@ footer {
   }
 }
 
-/* who-training-section =====================================*/
-.who-training-section {
-  background: #2d2c2a;
-  margin-bottom: 136px;
-  padding: 93px 80px 83px;
-  position: relative;
-  z-index: 2;
-  color: #fff;
-  overflow: hidden;
-  display: flex;
-  align-items: center;
-  .lines {
-    position: absolute;
-    z-index: -1;
-    top: 0;
-    left: 0;
-  }
-  h2 {
-    flex-grow: 1;
-    padding-right: 40px;
-    margin-bottom: 72px;
-  }
-}
-
-.who-training-list {
-  flex-grow: 0;
-  display: flex;
-  margin: 0 -30px;
-  text-align: center;
-  li {
-    padding: 0 30px;
-    width: 50%;
-  }
-  p {
-    font-size: 20px;
-    line-height: 1.3;
-    min-height: 52px;
-  }
-}
-
 /* abroad-modules-section ==================================*/
 .abroad-modules-top {
   display: flex;
@@ -3865,9 +3605,35 @@ footer {
     &:last-child {
       border-right: none;
     }
+    &:first-of-type {
+      .image {
+        margin-bottom: 74px;
+      }
+    }
+    &:nth-of-type(2) {
+      .image {
+        margin-top: 35px;
+      }
+    }
   }
   .image {
+    position: relative;
     margin-bottom: 37px;
+    .red-offset {
+      position: absolute;
+      width: 100%;
+      height: 100%;
+      background-color: $red;
+      z-index: -1;
+      &.top-left {
+        top: -35px;
+        left: -35px;
+      }
+      &.bottom-right {
+        bottom: -35px;
+        right: -35px;
+      }
+    }
     img {
       max-width: 100%;
     }
@@ -4513,18 +4279,6 @@ footer {
   .footer-socials a {
     width: 80px;
   }
-  .about-detail-images {
-    width: 380px;
-  }
-  .about-detail-content {
-    padding-right: 435px;
-  }
-  .about-teachers-list {
-    margin: 0 -15px;
-    li {
-      padding: 0 15px;
-    }
-  }
   .accreditations-section::after {
     margin-left: 50px;
   }
@@ -4603,9 +4357,6 @@ footer {
     h2 {
       width: 360px;
     }
-  }
-  .training-modul {
-    width: 162px;
   }
   .diplom-section {
     padding: 120px 50px;
@@ -4714,16 +4465,30 @@ footer {
     margin: 0 -40px;
     li {
       padding: 0 40px 120px;
+      &:first-of-type {
+        .image {
+          margin-bottom: 57px;
+        }
+      }
+      &:nth-of-type(2) {
+        .image {
+          margin-top: 17px;
+        }
+      }
+    }
+    .image {
+      .red-offset.bottom-right {
+        bottom: -17px;
+        right: -17px;
+      }
+      .red-offset.top-left {
+        top: -17px;
+        left: -17px;
+      }
     }
   }
   .abroad-modules-text {
     padding-left: 41px;
-  }
-  .who-training-section {
-    display: block;
-  }
-  .who-training-list p {
-    min-height: 1px;
   }
   .requirements-list {
     li {
@@ -5307,36 +5072,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .about-detail-section {
-    padding: 90px 0 40px;
-    margin-bottom: 80px;
-  }
-  .about-detail-content {
-    padding-right: 0;
-    h2 {
-      margin-right: 0;
-    }
-    h3 {
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
-  }
-  .about-detail-images {
-    max-width: 425px;
-    position: static;
-    top: 0;
-    margin-bottom: 30px;
-  }
-  .about-detail-list {
-    min-height: 1px;
-    margin-bottom: 70px;
-  }
-  .about-teachers-list li {
-    width: 33.333%;
-    &:nth-of-type(n + 7) {
-      display: none;
-    }
-  }
   .accreditations-section {
     margin-bottom: 80px;
     &.small-mb {
@@ -5454,17 +5189,6 @@ footer {
   .process-section {
     padding-bottom: 80px;
     margin-bottom: 80px;
-  }
-  .training-block {
-    display: block;
-  }
-  .training-modul {
-    width: 100%;
-    margin-right: 0;
-    margin-bottom: 20px;
-  }
-  .training-section {
-    margin-bottom: 50px;
   }
   .diplom-section {
     display: block;
@@ -5711,29 +5435,23 @@ footer {
       width: 100%;
       border-right: none;
       margin-bottom: 40px;
+      &:first-of-type,
+      &:nth-of-type(2) {
+        .image {
+          margin-bottom: 20px;
+        }
+      }
     }
     .image {
-      margin-bottom: 20px;
+      .red-offset {
+        display: none;
+      }
       img {
         width: 100%;
       }
     }
     .text {
       max-width: 100%;
-    }
-  }
-  .who-training-section {
-    margin-bottom: 80px;
-    padding: 60px 30px;
-    h2 {
-      padding-right: 0;
-      margin-bottom: 40px;
-    }
-  }
-  .who-training-list {
-    margin: 0 -10px;
-    li {
-      padding: 0 10px;
     }
   }
   .requirements-section {
@@ -5792,7 +5510,6 @@ footer {
 
 @media (min-width: 768px) {
   .process-step-block,
-  .training-content,
   .program-options-block {
     display: block !important;
   }
@@ -5927,33 +5644,6 @@ footer {
     }
     .empty {
       display: none;
-    }
-  }
-  .about-detail-section {
-    margin-bottom: 60px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-  .about-teachers-list {
-    margin: 0 -8px;
-    li {
-      padding: 0 8px;
-    }
-  }
-  .about-teachers-block .name {
-    font-size: 18px;
-  }
-  .about-detail-content {
-    h3 {
-      font-size: 28px;
-    }
-  }
-  .about-detail-list {
-    .circle {
-      margin-right: 30px;
-    }
-    h5 {
-      font-size: 20px;
     }
   }
   .accreditations-section {
@@ -6146,85 +5836,6 @@ footer {
       display: none;
     }
   }
-  .training-section h3 {
-    font-size: 28px;
-  }
-  .training-red-list {
-    padding: 16px 20px;
-  }
-  .training-list {
-    display: block;
-    margin: 0;
-  }
-  .training-block {
-    border-top: none;
-    padding-top: 0;
-    width: 100%;
-    margin: 0 0 10px;
-    &:before {
-      display: none;
-    }
-  }
-  .training-modul {
-    background: #f7f7f7;
-    cursor: pointer;
-    font-weight: 300;
-    font-size: 18px;
-    margin-bottom: 0;
-    display: flex;
-    align-items: center;
-    height: 52px;
-    padding: 5px 20px;
-    transition: $transition;
-    &:hover {
-      background: #f2f2f2;
-    }
-    .plus {
-      flex-shrink: 0;
-      display: block;
-      margin-right: 22px;
-      width: 20px;
-      height: 20px;
-      position: relative;
-      margin-top: 2px;
-      i {
-        background: #d9d9d9;
-        display: block;
-        width: 20px;
-        height: 2px;
-        border-radius: 5px;
-        position: absolute;
-        left: 0;
-        top: 50%;
-        margin-top: -1px;
-        transition: $transition;
-        &:nth-of-type(2) {
-          transform: rotate(-90deg);
-        }
-      }
-    }
-    &.opened {
-      color: #fff;
-      background: $red;
-      .plus {
-        i {
-          background: #fff;
-          &:nth-of-type(2) {
-            transform: rotate(-180deg);
-          }
-        }
-      }
-    }
-  }
-  .training-content {
-    display: none;
-    &.showTrainingContent {
-      display: block;
-    }
-    padding-top: 15px;
-    padding-bottom: 20px;
-    max-width: 100%;
-  }
   .diplom-section {
     margin: 0 -10px 60px;
     padding: 60px 10px;
@@ -6319,7 +5930,7 @@ footer {
   .faq-section {
     margin-bottom: 60px;
   }
-  .faq-block {
+  .accordion-block {
     padding-left: 58px;
     padding-right: 25px;
     .plus {
@@ -6327,7 +5938,7 @@ footer {
       top: 20px;
     }
   }
-  .faq-question {
+  .accordion-content {
     font-size: 16px;
   }
   .students-section {
@@ -6393,12 +6004,6 @@ footer {
       font-size: 36px;
     }
   }
-  .who-training-section {
-    margin-bottom: 60px;
-    margin-left: -10px;
-    margin-right: -10px;
-    padding: 50px 10px;
-  }
   .requirements-section {
     margin-bottom: 60px;
   }
@@ -6445,9 +6050,6 @@ footer {
     .content {
       padding-left: 20px;
     }
-  }
-  .who-training-list p {
-    font-size: 16px;
   }
   .executive-results-red {
     font-size: 25px;
@@ -6939,78 +6541,8 @@ footer {
     text-align: left;
     line-height: 1.8;
   }
-  .about-detail-images {
-    .pic-2 {
-      width: 160px;
-      margin-top: -100px;
-    }
-  }
   .title-pl {
     font-size: 18px;
-  }
-
-  .about-detail-list {
-    margin-bottom: 60px;
-    li {
-      margin-bottom: 20px;
-    }
-    .circle {
-      width: 40px;
-      height: 40px;
-      margin-right: 20px;
-      img {
-        width: 20px;
-      }
-    }
-    h5 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-  }
-  .about-detail-content {
-    h3 {
-      font-size: 24px;
-    }
-  }
-  .about-teachers-list {
-    display: block;
-    margin-bottom: 40px;
-    li {
-      width: 100%;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #3d3c39;
-      margin-bottom: 15px;
-      &:nth-of-type(4) {
-        padding-bottom: 0;
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      &:nth-of-type(n + 5) {
-        display: none;
-      }
-    }
-  }
-  .about-teachers-block {
-    display: flex;
-    align-items: flex-start;
-    .image {
-      flex-shrink: 0;
-      margin-right: 25px;
-      margin-bottom: 0;
-      width: 143px;
-    }
-    .name {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-    p {
-      margin-bottom: 15px;
-    }
-  }
-  .about-teachers-link {
-    .button {
-      width: 100%;
-    }
   }
   .button {
     padding: 20px;
@@ -7051,16 +6583,6 @@ footer {
     }
     h5 {
       font-size: 18px;
-    }
-  }
-  .training-red-list {
-    align-items: flex-start;
-    li {
-      display: block;
-    }
-    .number {
-      margin-right: 0;
-      margin-bottom: 5px;
     }
   }
   .students-list p {
@@ -7174,9 +6696,6 @@ footer {
   .abroad-modules-section h2 {
     font-size: 32px;
   }
-  .who-training-list p {
-    font-size: 15px;
-  }
   .requirements-info {
     padding: 40px 30px;
     p {
@@ -7275,33 +6794,6 @@ div.popup-content {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.about-detailt-section--stand-alone-page {
-  & .about-teachers-list li {
-    margin-bottom: 20px;
-  }
-  &.about-detail-section .title-pl,
-  &.about-detail-section {
-    color: #333;
-  }
-  &.about-detail-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 0;
-  }
-  & .about-detail-content h2,
-  & .about-detail-content h3,
-  & .about-detail-content h5,
-  & .about-teachers-block .name {
-    color: #2d2c2a;
-  }
-  & .about-detail-images .pic-2 {
-    border-color: #fff;
-  }
-  &::after {
-    background-color: #fff;
-  }
 }
 
 .jumbotron-content-cta {
@@ -7407,14 +6899,6 @@ div.popup-content {
 
 .popup-content-origin {
   max-width: 1024px;
-}
-
-.training-content__title {
-  font-style: normal;
-  font-weight: 500;
-  font-size: 17px;
-  line-height: 120%;
-  margin-bottom: 17px;
 }
 
 .inputs-flex--alt {

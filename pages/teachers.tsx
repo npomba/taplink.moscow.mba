@@ -1,7 +1,9 @@
+import stls from '@/styles/components/general/Breadcrumbs.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Teachers from '../components/sections/Teachers'
 import { apiProgramsReqUrl, backendUrl } from '@/config/index'
+import Breadcrumbs from '@/components/general/Breadcrumbs'
 
 const teachers = ({ programs }) => {
   return (
@@ -14,6 +16,11 @@ const teachers = ({ programs }) => {
         )}
         canonical={'https://moscow.mba/teachers'}
       />
+      <section className={`jumbotron-section ${stls.jumbotronGeneral}`}>
+        <div className='container'>
+          <Breadcrumbs />
+        </div>
+      </section>
       <div className='container'>
         <Teachers atStandAlonePage />
       </div>

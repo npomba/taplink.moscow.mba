@@ -1,3 +1,4 @@
+import stls from '@/styles/components/sections/ProgramsModules.module.sass'
 import useAt from '@/components/hooks/useAt'
 import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'
@@ -8,26 +9,26 @@ const ProgramsModules = ({ data }) => {
   const at = useAt()
 
   return (
-    <section className='training-section'>
-      <div className='section-pl'>
+    <section className={stls.container}>
+      <div className={stls.pl}>
         <h2>Программа обучения</h2>
-        <ul className='training-red-list'>
-          <li>
-            <div className='number'>
+        <ul className={stls.redRectangle}>
+          <li className={stls.redItem}>
+            <div className={stls.number}>
               <ProgramSubjects subjects='base' />
             </div>
-            <p>дисциплин базовой части</p>
+            <p className={stls.p}>дисциплин базовой части</p>
           </li>
-          <li>
-            <div className='number'>
+          <li className={stls.redItem}>
+            <div className={stls.number}>
               <ProgramSubjects subjects='specialty' />
             </div>
-            <p>дисциплин специализации</p>
+            <p className={stls.p}>дисциплин специализации</p>
           </li>
         </ul>
-        <h3>{!at.executive && 'Базовые дисциплины'}</h3>
+        <h3 className={stls.h3}>{!at.executive && 'Базовые дисциплины'}</h3>
       </div>
-      <div className='training-list'>
+      <div className={stls.list}>
         {at.mini && (
           <>
             <ProgramsModule
@@ -147,10 +148,12 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
       </div>
-      <div className='section-pl'>
-        <h3>{!at.executive && 'Специализированные дисциплины'}</h3>
+      <div className={stls.pl}>
+        <h3 className={stls.h3}>
+          {!at.executive && 'Специализированные дисциплины'}
+        </h3>
       </div>
-      <div className='training-list'>
+      <div className={stls.list}>
         {(at.industry || at.professional) && (
           <>
             <ProgramsModule

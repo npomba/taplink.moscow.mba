@@ -1,3 +1,4 @@
+import stls from '@/styles/components/pages/OnlineProgram.module.sass'
 import { NextSeo, CourseJsonLd } from 'next-seo'
 import { useRouter } from 'next/router'
 import truncate from 'truncate'
@@ -56,7 +57,7 @@ const PageOnlineProgram = ({ program }) => {
         /> */}
         <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
-        <UpToDateContent />
+        <UpToDateContent withBottomLine />
         <CorporateClients />
         <Accreditation />
         <Diploma />

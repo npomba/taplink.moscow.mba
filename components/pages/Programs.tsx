@@ -1,3 +1,4 @@
+import stls from '@/styles/components/pages/Programs.module.sass'
 import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import Link from 'next/link'
@@ -9,7 +10,6 @@ import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQt from '@/components/hooks/ProgramsQt'
 import Filters from '@/components/general/Filters'
-import stls from '@/styles/modules/ProgramsPage.module.sass'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
 

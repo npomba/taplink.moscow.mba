@@ -1,3 +1,5 @@
+import stls from '@/styles/components/sections/ProgramGoal.module.sass'
+
 const ProgramGoal = ({ data }) => {
   return (
     <section className='purpose-section'>

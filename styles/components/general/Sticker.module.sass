@@ -1,10 +1,12 @@
+@use '@/styles/utils/mixin' as m
+
 .sheet
   &.short,
   &.long
     position: relative
     padding: 56px 71px
     width: 100%
-    @media(max-width: 767px)
+    @include m.media(tablet, phone)
       padding: 45px 50px
 
   &.short
@@ -12,7 +14,7 @@
 
   &.long
     display: flex
-    @media (min-width: 767px)
+    @include m.media(widescreen, desktop)
       & > *:nth-last-child(1)
         display: flex
         flex-direction: column
@@ -27,22 +29,24 @@
         right: 50%
         transform: translate(-50%, -50%)
         background-color: #E3E3E3
-
-    @media (min-width: 767px) and (max-width: 1329px)
-      @supports (gap: 160px)
-        gap: 160px
+    @include m.media(desktop)
+      padding: 45px 40px
+      @supports (gap: 40px)
+        gap: 40px
 
       // @supports not (gap: 30px)
       //   & > *:not(:last-child)
       //     margin-right: 30px
 
-    @media (max-width: 767px)
+    @include m.media(laptop, tablet, phone)
       flex-direction: column
 
     & > *
       flex: 1
     & .listItems
       max-width: 432px
+      @include m.media(laptop, tablet, phone)
+        max-width: 100%
 
   &.red,
   &.dark
@@ -87,7 +91,7 @@
   font-weight: bold
   font-size: 36px
   line-height: 120%
-  @media(max-width: 767px)
+  @include m.media(tablet, phone)
     font-size: 24px
     padding-bottom: 16px
 
@@ -103,7 +107,7 @@
         padding-left: 18px
     & p
       margin-top: -21px
-      @media(max-width: 767px)
+      @include m.media(tablet, phone)
         margin-top: -16px
 
   &:not(:last-child)
@@ -113,5 +117,5 @@
     font-weight: normal
     font-size: 20px
     line-height: 130%
-    @media(max-width: 767px)
+    @include m.media(tablet, phone)
       font-size: 14px

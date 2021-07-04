@@ -1,3 +1,4 @@
+import stls from '@/styles/components/popups/PopupForm.module.sass'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
