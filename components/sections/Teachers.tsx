@@ -1,35 +1,75 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
+import { useRouter } from 'next/router'
 import Image from 'next/image'
 import PopupForm from '@/components/popups/PopupForm'
 import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
 import { base64pixel } from '@/config/index'
+import stls from '@/styles/modules/Teachers.module.sass'
+
+const splitParaText = (string, splitBy) => {
+  const indexOfWordToSplitBy = string.indexOf(splitBy)
+
+  if (indexOfWordToSplitBy === -1) return [string, '']
+
+  const firstPartOfString = string.slice(0, indexOfWordToSplitBy)
+  const secondPartOfString = string.slice(indexOfWordToSplitBy)
+
+  return [firstPartOfString, secondPartOfString]
+}
 
 const Teachers = ({
   programTitle = null,
   programId = null,
   atStandAlonePage = false
 }) => {
+  const router = useRouter()
+  const detailSectionClasses = [stls.aboutDetailSection]
+
+  if (atStandAlonePage) detailSectionClasses.push(stls.standalonePage)
+
+  const firstParaText = SetString(lang.teachersListItemDisc)
+  const secondParaText = SetString(lang.teachersListItemDiscSecond)
+
+  const wordToSplitBy = {
+    europe: {
+      ru: 'Европы',
+      'en-US': 'Europe'
+    },
+    and: {
+      ru: ' и ',
+      'en-US': ' and '
+    }
+  }
+
+  const [firstParaPartOne, firstParaPartTwo] = splitParaText(
+    firstParaText,
+    wordToSplitBy.europe[router.locale]
+  )
+  const [secondParaPartOne, secondParaPartTwo] = splitParaText(
+    secondParaText,
+    wordToSplitBy.and[router.locale]
+  )
+
   return (
     <>
-      <section
-        className={`about-detail-section ${
-          atStandAlonePage && 'about-detailt-section--stand-alone-page'
-        }`}>
-        <div className='section-pl'>
-          <div className='title-pl'>{SetString(lang.teachersTitleLabel)}</div>
-          <div className='about-detail-content'>
+      <section className={detailSectionClasses.join(' ')}>
+        <div className={stls.sectionPl}>
+          <div className={stls.titlePl}>
+            {SetString(lang.teachersTitleLabel)}
+          </div>
+          <div className={stls.aboutDetailContent}>
             <h2>
               {SetString(lang.teachersTitleFirst)}{' '}
               <span className='red'>{SetString(lang.teachersTitleRed)} </span>
               {SetString(lang.teachersTitleSecond)}
             </h2>
-            <div className='text'>{SetString(lang.teachersDics)}</div>
-            <div className='dobble-images about-detail-images'>
-              <div className='image pic-1'>
+            <div className={stls.text}>{SetString(lang.teachersDics)}</div>
+            <div className={`${stls.dobbleImages} ${stls.aboutDetailImages}`}>
+              <div className={`${stls.image} ${stls.pic1}`}>
                 <Image
                   src={imagesData.circleSpeakerOne.src}
                   alt={SetString(imagesData.circleSpeakerOne.alt)}
@@ -40,7 +80,7 @@ const Teachers = ({
                   blurDataURL={base64pixel}
                 />
               </div>
-              <div className='image pic-2'>
+              <div className={`${stls.image} ${stls.pic2}`}>
                 <Image
                   src={imagesData.circleSpeakerTwo.src}
                   alt={SetString(imagesData.circleSpeakerTwo.alt)}
@@ -52,27 +92,33 @@ const Teachers = ({
                 />
               </div>
             </div>
-            <ul className='about-detail-list'>
+            <ul className={stls.aboutDetailList}>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitle)}</h5>
-                  <p>{SetString(lang.teachersListItemDisc)}</p>
+                  <p>
+                    {firstParaPartOne}
+                    <span className={stls.breakLine}>{firstParaPartTwo}</span>
+                  </p>
                 </div>
               </li>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitleSecond)}</h5>
-                  <p>{SetString(lang.teachersListItemDiscSecond)}</p>
+                  <p>
+                    {secondParaPartOne}
+                    <span className={stls.breakLine}>{secondParaPartTwo}</span>
+                  </p>
                 </div>
               </li>
               <li>
-                <div className='circle'>
+                <div className={stls.circle}>
                   <img src='/assets/images/icon_check.svg' />
                 </div>
                 <div>
@@ -84,10 +130,10 @@ const Teachers = ({
             <h3>{SetString(lang.teachersProsTitle)}</h3>
           </div>
         </div>
-        <ul className='about-teachers-list'>
+        <ul className={stls.aboutTeachersList}>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-1.jpg'
                   alt={SetString(lang.teachersTeacherOneTitle)}
@@ -99,7 +145,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherOneTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherOneDics)}</p>
@@ -107,8 +153,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-2.jpg'
                   alt={SetString(lang.teachersTeacherTwoTitle)}
@@ -120,7 +166,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherTwoTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherTwoDics)}</p>
@@ -128,8 +174,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-3.jpg'
                   alt={SetString(lang.teachersTeacherThreeTitle)}
@@ -141,7 +187,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherThreeTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherThreeDics)}</p>
@@ -149,8 +195,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-4.jpg'
                   alt={SetString(lang.teachersTeacherFourTitle)}
@@ -162,7 +208,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherFourTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherFourDics)}</p>
@@ -170,8 +216,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-5.jpg'
                   alt={SetString(lang.teachersTeacherFiveTitle)}
@@ -183,7 +229,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherFiveTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherFiveDics)}</p>
@@ -191,8 +237,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-6.jpg'
                   alt={SetString(lang.teachersTeacherSixTitle)}
@@ -204,7 +250,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherSixTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherSixDics)}</p>
@@ -212,8 +258,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-7.jpg'
                   alt={SetString(lang.teachersTeacherSevenTitle)}
@@ -225,7 +271,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherSevenTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherSevenDics)}</p>
@@ -233,8 +279,8 @@ const Teachers = ({
             </div>
           </li>
           <li>
-            <div className='about-teachers-block'>
-              <div className='image'>
+            <div className={stls.aboutTeachersBlock}>
+              <div className={stls.image}>
                 <Image
                   src='/assets/images/teachers/teacher-8.jpg'
                   alt={SetString(lang.teachersTeacherEightTitle)}
@@ -246,7 +292,7 @@ const Teachers = ({
                 />
               </div>
               <div>
-                <div className='name'>
+                <div className={stls.name}>
                   {SetString(lang.teachersTeacherEightTitle)}
                 </div>
                 <p>{SetString(lang.teachersTeacherEightDics)}</p>
@@ -254,7 +300,7 @@ const Teachers = ({
             </div>
           </li>
         </ul>
-        <div className='about-teachers-link'>
+        <div className={stls.aboutTeachersLink}>
           <Popup
             trigger={
               <button className='button'>

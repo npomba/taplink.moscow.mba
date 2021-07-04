@@ -2156,153 +2156,6 @@ footer {
   }
 }
 
-/*about-detail-section ===================================*/
-.about-detail-section {
-  position: relative;
-  z-index: 3;
-  color: #b3b3b3;
-  padding: 136px 0 100px;
-  margin-bottom: 140px;
-  &:after {
-    content: '';
-    position: absolute;
-    z-index: -1;
-    left: 50%;
-    width: 102vw;
-    margin-left: -51vw;
-    height: 100%;
-    top: 0;
-    background: #2d2c2a;
-  }
-  .title-pl {
-    color: #808080;
-    margin-top: 9px;
-  }
-}
-
-.about-detail-content {
-  position: relative;
-  z-index: 2;
-  padding-right: 20px;
-  padding-right: 500px;
-  h2 {
-    margin-right: -160px;
-    color: #fff;
-  }
-  h3 {
-    color: #fff;
-    font-weight: bold;
-    font-size: 36px;
-    line-height: 1.2;
-    margin-bottom: 52px;
-  }
-  .text {
-    margin-bottom: 36px;
-    line-height: 1.2;
-    margin-top: -5px;
-  }
-}
-
-.about-detail-list {
-  line-height: 1.2;
-  min-height: 380px;
-  margin-bottom: 29px;
-  li {
-    display: flex;
-    align-items: flex-start;
-    margin-bottom: 30px;
-  }
-  .circle {
-    width: 57px;
-    height: 57px;
-    border-radius: 50%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    background: $red;
-    flex-shrink: 0;
-    margin-right: 43px;
-  }
-  h5 {
-    color: #fff;
-    font-weight: 500;
-    font-size: 24px;
-    margin-bottom: 10px;
-  }
-}
-
-.about-detail-images {
-  width: 425px;
-  position: absolute;
-  z-index: -1;
-  right: 0;
-  top: 59px;
-  .pic-2 {
-    width: 236px;
-    border: 10px solid #2d2c2a;
-    margin-top: -140px;
-  }
-}
-
-.about-teachers-link {
-  margin-bottom: 30px;
-  text-align: center;
-}
-
-.about-teachers-list {
-  display: flex;
-  flex-wrap: wrap;
-  margin: 0 -35px;
-  li {
-    margin-bottom: 60px;
-    padding: 0 35px;
-    width: 25%;
-  }
-}
-
-.about-teachers-block {
-  line-height: 1.2;
-  .image {
-    margin-bottom: 17px;
-    display: block;
-    transition: $transition;
-    // &:hover {
-    //   opacity: 0.8;
-    // }
-    img {
-      max-width: 100%;
-      max-height: 322px;
-    }
-  }
-  .name {
-    font-weight: 500;
-    font-size: 20px;
-    color: #fff;
-    margin-bottom: 13px;
-  }
-  p {
-    font-size: 13px;
-    margin-bottom: 20px;
-  }
-  .link {
-    display: inline-block;
-    color: #fff;
-    transition: $transition;
-    &:hover {
-      color: $red;
-    }
-    span {
-      margin-right: 10px;
-    }
-    img {
-      flex-shrink: 0;
-      position: relative;
-      top: 1px;
-    }
-  }
-}
-
 /*accreditations-section =================================*/
 .accreditations-section {
   margin-bottom: 130px;
@@ -4422,18 +4275,6 @@ footer {
   .footer-socials a {
     width: 80px;
   }
-  .about-detail-images {
-    width: 380px;
-  }
-  .about-detail-content {
-    padding-right: 435px;
-  }
-  .about-teachers-list {
-    margin: 0 -15px;
-    li {
-      padding: 0 15px;
-    }
-  }
   .accreditations-section::after {
     margin-left: 50px;
   }
@@ -5227,36 +5068,6 @@ footer {
     justify-content: center;
     align-items: center;
   }
-  .about-detail-section {
-    padding: 90px 0 40px;
-    margin-bottom: 80px;
-  }
-  .about-detail-content {
-    padding-right: 0;
-    h2 {
-      margin-right: 0;
-    }
-    h3 {
-      font-size: 32px;
-      margin-bottom: 40px;
-    }
-  }
-  .about-detail-images {
-    max-width: 425px;
-    position: static;
-    top: 0;
-    margin-bottom: 30px;
-  }
-  .about-detail-list {
-    min-height: 1px;
-    margin-bottom: 70px;
-  }
-  .about-teachers-list li {
-    width: 33.333%;
-    &:nth-of-type(n + 7) {
-      display: none;
-    }
-  }
   .accreditations-section {
     margin-bottom: 80px;
     &.small-mb {
@@ -5829,33 +5640,6 @@ footer {
     }
     .empty {
       display: none;
-    }
-  }
-  .about-detail-section {
-    margin-bottom: 60px;
-    padding-top: 60px;
-    padding-bottom: 30px;
-  }
-  .about-teachers-list {
-    margin: 0 -8px;
-    li {
-      padding: 0 8px;
-    }
-  }
-  .about-teachers-block .name {
-    font-size: 18px;
-  }
-  .about-detail-content {
-    h3 {
-      font-size: 28px;
-    }
-  }
-  .about-detail-list {
-    .circle {
-      margin-right: 30px;
-    }
-    h5 {
-      font-size: 20px;
     }
   }
   .accreditations-section {
@@ -6753,78 +6537,8 @@ footer {
     text-align: left;
     line-height: 1.8;
   }
-  .about-detail-images {
-    .pic-2 {
-      width: 160px;
-      margin-top: -100px;
-    }
-  }
   .title-pl {
     font-size: 18px;
-  }
-
-  .about-detail-list {
-    margin-bottom: 60px;
-    li {
-      margin-bottom: 20px;
-    }
-    .circle {
-      width: 40px;
-      height: 40px;
-      margin-right: 20px;
-      img {
-        width: 20px;
-      }
-    }
-    h5 {
-      font-size: 18px;
-      margin-bottom: 5px;
-    }
-  }
-  .about-detail-content {
-    h3 {
-      font-size: 24px;
-    }
-  }
-  .about-teachers-list {
-    display: block;
-    margin-bottom: 40px;
-    li {
-      width: 100%;
-      padding-bottom: 15px;
-      border-bottom: 1px solid #3d3c39;
-      margin-bottom: 15px;
-      &:nth-of-type(4) {
-        padding-bottom: 0;
-        border-bottom: none;
-        margin-bottom: 0;
-      }
-      &:nth-of-type(n + 5) {
-        display: none;
-      }
-    }
-  }
-  .about-teachers-block {
-    display: flex;
-    align-items: flex-start;
-    .image {
-      flex-shrink: 0;
-      margin-right: 25px;
-      margin-bottom: 0;
-      width: 143px;
-    }
-    .name {
-      font-size: 16px;
-      margin-bottom: 5px;
-    }
-    p {
-      margin-bottom: 15px;
-    }
-  }
-  .about-teachers-link {
-    .button {
-      width: 100%;
-    }
   }
   .button {
     padding: 20px;
@@ -7076,33 +6790,6 @@ div.popup-content {
 
 .cursor-pointer {
   cursor: pointer;
-}
-
-.about-detailt-section--stand-alone-page {
-  & .about-teachers-list li {
-    margin-bottom: 20px;
-  }
-  &.about-detail-section .title-pl,
-  &.about-detail-section {
-    color: #333;
-  }
-  &.about-detail-section {
-    padding-top: 50px;
-    padding-bottom: 50px;
-    margin-bottom: 0;
-  }
-  & .about-detail-content h2,
-  & .about-detail-content h3,
-  & .about-detail-content h5,
-  & .about-teachers-block .name {
-    color: #2d2c2a;
-  }
-  & .about-detail-images .pic-2 {
-    border-color: #fff;
-  }
-  &::after {
-    background-color: #fff;
-  }
 }
 
 .jumbotron-content-cta {
