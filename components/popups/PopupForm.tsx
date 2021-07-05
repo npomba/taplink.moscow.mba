@@ -3,7 +3,7 @@ import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 import Popup from 'reactjs-popup'
 import PopupThankyou from '@/components/popups/PopupThankyou'
@@ -36,10 +36,18 @@ const Form = ({
   const closeLoadingModal = () => setOpenLoader(false)
   const { asPath } = useRouter()
 
+  // useEffect(() => {
+  //   const utms = sessionStorage.getItem('utms')
+  //   console.log(JSON.parse(utms))
+  // }, [])
+
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
     values.leadPage = asPath
+    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    values.utms = utms
+    sessionStorage.removeItem('utms')
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()

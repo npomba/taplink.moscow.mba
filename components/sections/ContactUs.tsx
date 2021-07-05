@@ -40,6 +40,9 @@ const ContactUs = ({
     setOpenLoader(o => !o)
     values.programTitle = programTitle
     values.leadPage = asPath
+    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    values.utms = utms
+    sessionStorage.removeItem('utms')
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()

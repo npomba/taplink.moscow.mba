@@ -8,10 +8,10 @@ import { v4 as uuidv4 } from 'uuid'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 
-export default async (req, res) => {
+const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  let { name, phone, email, programTitle, leadPage } = req.body
+  let { name, phone, email, programTitle, leadPage, utms } = req.body
 
   if (name.includes('@')) {
     email = name
@@ -108,7 +108,12 @@ export default async (req, res) => {
     longitude: locationData && locationData.coordinates.longitude,
     timeZone: locationData && locationData.timeZone,
     postalCode: locationData && locationData.postalCode,
-    programTitle: programTitle || ''
+    programTitle: programTitle || '',
+    utmSource: (utms && utms.utm_source) || null,
+    utmMedium: (utms && utms.utm_medium) || null,
+    utmCampaign: (utms && utms.utm_campaign) || null,
+    utmContent: (utms && utms.utm_content) || null,
+    utmTerm: (utms && utms.utm_term) || null
   }
 
   const subject = 'Новая заявка с moscow.mba'
@@ -254,23 +259,23 @@ export default async (req, res) => {
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: ''
+        tdVal: data.utmSource
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: ''
+        tdVal: data.utmMedium
       },
       {
         tdKey: 'Название РК',
-        tdVal: ''
+        tdVal: data.utmCampaign
       },
       {
         tdKey: 'Объявление',
-        tdVal: ''
+        tdVal: data.utmContent
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: ''
+        tdVal: data.utmTerm
       },
       {
         tdKey: 'Дубль',
@@ -392,3 +397,5 @@ export default async (req, res) => {
     console.error(err)
   }
 }
+
+export default contact
