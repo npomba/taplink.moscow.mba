@@ -5,7 +5,7 @@ import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
 import Until from '@/components/costs/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsNumber from '@/components/sections/ProgramsNumber'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Script from 'next/script'
@@ -96,7 +96,7 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
                     type={'mini'}
                     format={'online'}
@@ -143,10 +143,10 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-1-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
                     type={'mini'}
-                    format={'online'}
+                    format={'blended'}
                   />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
@@ -232,9 +232,9 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
-                    type={'mini'}
+                    type={'professional'}
                     format={'online'}
                   />
                   <div className='price'>
@@ -283,10 +283,10 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-2-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
-                    type={'mini'}
-                    format={'online'}
+                    type={'professional'}
+                    format={'blended'}
                   />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
@@ -376,9 +376,9 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
-                    type={'mini'}
+                    type={'industry'}
                     format={'online'}
                   />
                   <div className='price'>
@@ -427,9 +427,9 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-3-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <ProgramsNumber
+                  <ProgramsQty
                     programs={data}
-                    type={'mini'}
+                    type={'industry'}
                     format={'online'}
                   />
                   <div className='price'>

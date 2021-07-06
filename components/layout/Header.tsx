@@ -9,7 +9,7 @@ import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
 import useAt from '@/components/hooks/useAt'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Script from 'next/script'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import contactData from '@/data/contactData'
@@ -364,14 +364,11 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'mini'}
-                                format={'online'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'mini'}
+                              format={'online'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price
@@ -422,14 +419,11 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'mini'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'mini'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price
@@ -553,14 +547,11 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'professional'}
-                                format={'online'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'professional'}
+                              format={'online'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price
@@ -614,14 +605,11 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'professional'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'professional'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price
@@ -754,14 +742,11 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'industry'}
-                                format={'online'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'industry'}
+                              format={'online'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price
@@ -812,14 +797,11 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'industry'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'industry'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
                               <Price

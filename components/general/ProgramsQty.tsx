@@ -12,26 +12,26 @@ const getStringDeclensionNumber = num => {
   return 2
 }
 
-const ProgramsNumber = ({ programs, type = '', format = '' }) => {
-  let programsNumber
+const ProgramsQty = ({ programs, type = '', format = '' }) => {
+  let ProgramsQty
 
   if (type && format)
-    programsNumber = programs.filter(
+    ProgramsQty = programs.filter(
       program =>
         program.mbaTypeOfProgram === type && program.mbaFormat === format
     ).length
-  else programsNumber = programs.length
+  else ProgramsQty = programs.length
 
   return (
     <div className='directions-count'>
-      <span>{programsNumber} </span>
+      <span>{ProgramsQty} </span>
       {setString(
         langMenu.qtPrograms,
         false,
-        getStringDeclensionNumber(programsNumber)
+        getStringDeclensionNumber(ProgramsQty)
       )}
     </div>
   )
 }
 
-export default ProgramsNumber
+export default ProgramsQty

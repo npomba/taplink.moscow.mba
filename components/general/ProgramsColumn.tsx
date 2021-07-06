@@ -5,7 +5,7 @@ import SetString from '@/components/hooks/SetString'
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsNumber from '@/components/sections/ProgramsNumber'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Discount from '@/components/costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'
@@ -33,7 +33,7 @@ const ProgramsColumn = ({ data, id, type }) => {
               </span>
             </div>
           </div>
-          <ProgramsNumber programs={data} type={type} format={'online'} />
+          <ProgramsQty programs={data} type={type} format={'online'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
             <Price discount={true} type={type} format={'online'} />
@@ -79,7 +79,7 @@ const ProgramsColumn = ({ data, id, type }) => {
         <div className='program-detail-list'>
           <div className='name'>{SetString(langMenu.blendedTitle)}</div>
 
-          <ProgramsNumber programs={data} type={type} format={'blended'} />
+          <ProgramsQty programs={data} type={type} format={'blended'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
             <Price discount={false} type={type} format={'blended'} />

@@ -8,7 +8,7 @@ import SetString from '@/components/hooks/SetString'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Filters from '@/components/general/Filters'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
@@ -65,7 +65,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                   {mbaFormat}
                 </h2>
                 <span className={stls.qtPrograms}>
-                  <ProgramsQt programs={programs} /> программ
+                  <ProgramsQty programs={programs} />
                 </span>
               </div>
 
