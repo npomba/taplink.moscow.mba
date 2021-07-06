@@ -5,14 +5,13 @@ import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
 import Until from '@/components/costs/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsNumber from '@/components/sections/ProgramsNumber'
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Script from 'next/script'
 import Discount from '@/components/costs/Discount'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGScreen from '@/components/svgs/SVGScreen'
-
 const Programs = ({ programs }) => {
   const data = programs
   return (
@@ -96,14 +95,11 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'mini'}
-                      format={'online'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price discount={true} type={'mini'} format={'online'} />{' '}
@@ -146,14 +142,11 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-1-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'mini'}
-                      format={'blended'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price discount={false} type={'mini'} format={'blended'} />{' '}
@@ -238,14 +231,11 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'professional'}
-                      format={'online'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price
@@ -292,14 +282,11 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-2-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'professional'}
-                      format={'blended'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price
@@ -388,14 +375,11 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'industry'}
-                      format={'online'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price
@@ -442,14 +426,11 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-3-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'industry'}
-                      format={'blended'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsNumber
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
                     <Price

@@ -5,9 +5,9 @@ import SetString from '@/components/hooks/SetString'
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsNumber from '@/components/sections/ProgramsNumber'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-import Discount from '../costs/Discount'
+import Discount from '@/components/costs/Discount'
 import SVGCheckCircle from '../svgs/SVGCheckCircle'
 import SVGScreen from '../svgs/SVGScreen'
 import SVGPaperCorner from '../svgs/SVGPaperCorner'
@@ -33,10 +33,7 @@ const ProgramsColumn = ({ data, id, type }) => {
               </span>
             </div>
           </div>
-          <div className='directions-count'>
-            <ProgramsQt programs={data} type={type} format={'online'} />{' '}
-            {SetString(langMenu.qtPrograms)}
-          </div>
+          <ProgramsNumber programs={data} type={type} format={'online'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
             <Price discount={true} type={type} format={'online'} />
@@ -81,10 +78,7 @@ const ProgramsColumn = ({ data, id, type }) => {
       <li>
         <div className='program-detail-list'>
           <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-          <div className='directions-count'>
-            <ProgramsQt programs={data} type={type} format={'blended'} />{' '}
-            {SetString(langMenu.qtPrograms)}
-          </div>
+          <ProgramsNumber programs={data} type={type} format={'blended'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
             <Price discount={false} type={type} format={'blended'} />

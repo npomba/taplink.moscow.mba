@@ -20,7 +20,7 @@ export default {
   },
 
   qtPrograms: {
-    ru: 'программ',
+    ru: ['программа', 'программы', 'программ'],
     en: 'programs'
   },
 
