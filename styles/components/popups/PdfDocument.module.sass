@@ -1,5 +1,5 @@
 @use '@/styles/utils/mixin' as m
-
+  
 .pdfDocument
   position: relative
   display: flex
@@ -19,10 +19,10 @@
     margin-bottom: 10px
 
 .pdfModalPortrait
-  canvas
-    @include m.media(widescreen)
-      max-height: 95vh
-      max-width: calc(95vh * .7)
+    canvas
+      @include m.media(widescreen)
+        max-height: 95vh
+        max-width: calc(95vh * .7)
       @include m.media(desktop, laptop)
         max-height: 95vh
         max-width: calc(95vh * .7)
@@ -41,7 +41,7 @@
     @include m.media(laptop, tablet, phone)
       max-width: 90vw !important
       max-height: calc(90vw * .70) !important
-
+  
 .pdfDocumentLinkContainer
   display: flex
   align-items: center
@@ -59,7 +59,7 @@
     color: #ff3535
     a
       color: currentColor
-
+  
 .popupPdfTrigger
   display: flex
   flex-direction: column

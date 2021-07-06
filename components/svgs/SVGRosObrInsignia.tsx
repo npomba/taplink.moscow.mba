@@ -1,4 +1,4 @@
-import stls from '@/styles/modules/MoreInfo.module.sass'
+import stls from '@/styles/components/general/MoreInfo.module.sass'
 
 const RosObrNadzorInsignia = () => {
   return (

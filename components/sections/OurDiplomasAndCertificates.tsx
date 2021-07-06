@@ -1,6 +1,6 @@
+import stls from '@/styles/components/sections/OurDiplomasAndCertificates.module.sass'
 import Script from 'next/script'
 import Accordion from '@/components/general/Accordion'
-import stls from '@/styles/modules/LegalPage.module.sass'
 
 const profIndDiplomas = [
   {
@@ -112,13 +112,10 @@ const diplomasBasedOnProgram = [
 ]
 
 const OurDiplomasAndCertificates = () => {
-  const ourDiplomasAndCertificatesClasses = [
-    stls.legalSection,
-    stls.diplomasAndCertificates
-  ]
+  const diplomasClassNames = [stls.legalSection, stls.diplomasAndCertificates]
 
   return (
-    <section className={ourDiplomasAndCertificatesClasses.join(' ')}>
+    <section className={diplomasClassNames.join(' ')}>
       <h2 className={stls.subHeading}>Выдаваемые дипломы и сертификаты</h2>
       <p>
         Мы производим обучение на основании государственной лицензии №041221.
@@ -133,6 +130,7 @@ const OurDiplomasAndCertificates = () => {
           title={programType}
           accordionContent={diplomas}
           isPdf={true}
+          idx={idx}
         />
       ))}
       <Script src='/assets/js/accordion.js' strategy='lazyOnload' />

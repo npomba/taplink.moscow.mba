@@ -1,12 +1,12 @@
+import stls from '@/styles/components/general/PdfDocument.module.sass'
 import { Document, Page, pdfjs } from 'react-pdf'
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import Popup from 'reactjs-popup'
 import PopupPdf from '@/components/popups/PopupPdf'
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
-import stls from '@/styles/modules/PdfDocument.module.sass'
 
-const PdfDocument = ({ fileSrc, fileName, pageNum, landscape }) => {
+const PdfDocument = ({ fileSrc, fileName, pageNum, landscape = false }) => {
   const pdfDocumentClasses = [stls.pdfDocument, 'pdf-document']
 
   if (landscape) pdfDocumentClasses.push(stls.pdfDocumentLandscape)

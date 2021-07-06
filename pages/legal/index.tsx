@@ -1,11 +1,10 @@
 import stls from '@/styles/pages/legal/Index.module.sass'
-// import stls from '@/styles/modules/LegalPage.module.sass'
 import { NextSeo } from 'next-seo'
 import { backendUrl, apiProgramsReqUrl } from '@/config/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import breadcrumbsStls from '@/styles/components/general/Breadcrumbs.module.sass'
 import CurrentLicenses from '@/components/sections/CurrentLicenses'
-import MemberOfRABE from '@/components/sections/MemberOfRABE'
+import MemberOfRabe from '@/components/sections/MemberOfRabe'
 import OurDiplomasAndCertificates from '@/components/sections/OurDiplomasAndCertificates'
 import CompanyCard from '@/components/sections/CompanyCard'
 import LegalDocuments from '@/components/sections/LegalDocuments'
@@ -14,7 +13,7 @@ const legal = ({ programs }) => {
   return (
     <>
       <NextSeo
-        title={'Нормативные документы - Moscow Business Academy'}
+        title={'Сведения об организации - Moscow Business Academy'}
         description={
           'Лицензия на осуществление образовательной деятельности, приложение к...'
         }
@@ -30,7 +29,7 @@ const legal = ({ programs }) => {
       <div className='container'>
         <h1 className={stls.mainHeading}>Сведения об организации</h1>
         <CurrentLicenses />
-        <MemberOfRABE />
+        <MemberOfRabe />
         <OurDiplomasAndCertificates />
         <CompanyCard />
         <LegalDocuments />

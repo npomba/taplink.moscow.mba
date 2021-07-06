@@ -1,6 +1,5 @@
+import stls from '@/styles/components/sections/LegalDocuments.module.sass'
 import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
-import stls from '@/styles/modules/LegalPage.module.sass'
-import pdfStls from '@/styles/modules/PdfDocument.module.sass'
 
 const legalDocuments = [
   'Лицензия на осуществление образовательной деятельности',
@@ -33,7 +32,7 @@ const LegalDocuments = () => {
   const legalDocumentsClasses = [stls.legalSection, stls.legalDocuments]
   const legalDocumentLinkClasses = [
     stls.listItem,
-    pdfStls.pdfDocumentLinkContainer
+    stls.pdfDocumentLinkContainer
   ]
 
   return (
@@ -47,13 +46,19 @@ const LegalDocuments = () => {
             <div key={idx} className={stls.flexContainer}>
               <li className={legalDocumentLinkClasses.join(' ')}>
                 <SVGPaperCorner fill='#000' />
-                <a href={`/legaldocuments/doc-${idx}.pdf`}>
+                <a
+                  href={`/legaldocuments/doc-${idx}.pdf`}
+                  rel='noopener noreferrer'
+                  target='_blank'>
                   {legalDocuments[idx - 1] + '.pdf'}
                 </a>
               </li>
               <li className={legalDocumentLinkClasses.join(' ')}>
                 <SVGPaperCorner fill='#000' />
-                <a href={`/legaldocuments/doc-${idx + 1}.pdf`}>
+                <a
+                  href={`/legaldocuments/doc-${idx + 1}.pdf`}
+                  rel='noopener noreferrer'
+                  target='_blank'>
                   {document + '.pdf'}
                 </a>
               </li>

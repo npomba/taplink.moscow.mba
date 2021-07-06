@@ -91,11 +91,11 @@ const Footer = () => {
                   <a>{SetString(langHeader.linkLegal)}</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/legal/about' locale='ru'>
                   <a>{SetString(lang.legalAboutLink)}</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/payment' locale='ru'>
                   <a>{SetString(lang.paymentLink)}</a>

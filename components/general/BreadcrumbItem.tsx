@@ -5,7 +5,7 @@ const BreadcrumbItem = ({
   linkPath,
   itemIndex,
   listLength,
-  userViewingProgramChunk,
+  userViewingProgramChunk
 }) => {
   let linkRef = null
 

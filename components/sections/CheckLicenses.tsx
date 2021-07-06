@@ -1,5 +1,5 @@
+import stls from '@/styles/components/sections/CheckLicenses.module.sass'
 import RosObrNadzorInsignia from '@/components/svgs/SVGRosObrInsignia'
-import stls from '@/styles/modules/MoreInfo.module.sass'
 
 const CheckLicenses = () => {
   const containerClasses = [stls.container, stls.darkBgColor, stls.noMargin]

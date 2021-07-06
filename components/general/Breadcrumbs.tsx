@@ -63,7 +63,7 @@ const mainRoutes = [
   },
   {
     label: {
-      ru: 'Нормативные документы',
+      ru: 'Сведения об организации',
       'en-US': 'Legal'
     },
     path: '/legal'

@@ -1,12 +1,12 @@
+import stls from '@/styles/components/sections/MemberOfRabe.module.sass'
 import PdfDocument from '@/components/general/PdfDocument'
-import stls from '@/styles/modules/LegalPage.module.sass'
 
 const MemberOfRABE = () => {
-  const memberOfRABEClasses = [stls.legalSection, stls.memberOfRABE]
+  const rabeClassNames = [stls.legalSection, stls.memberOfRabe]
 
   return (
-    <section className={memberOfRABEClasses.join(' ')}>
-      <div className={stls.descRABE}>
+    <section className={rabeClassNames.join(' ')}>
+      <div className={stls.descRabe}>
         <h2 className={stls.subHeading}>Членство в РАБО</h2>
         <p>
           Moscow Business Academy является членом Российской Ассоциации

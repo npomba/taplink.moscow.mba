@@ -1,6 +1,6 @@
+import stls from '@/styles/components/sections/CurrentLicenses.module.sass'
 import PdfDocument from '@/components/general/PdfDocument'
 import CheckLicenses from '@/components/sections/CheckLicenses'
-import stls from '@/styles/modules/LegalPage.module.sass'
 
 const licenses = [
   {

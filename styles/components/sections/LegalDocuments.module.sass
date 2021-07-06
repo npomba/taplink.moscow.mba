@@ -1,0 +1,69 @@
+@use '@/styles/utils/mixin' as m
+
+.legalSection
+  border-bottom: solid 1px #D2D2D2
+  &:not(:first-of-type)
+    padding: 75px 0
+    @include m.media(tablet, phone)
+      padding: 60px 0
+  p
+    font-size: 20px
+    @include m.media(tablet, phone)
+      font-size: 16px
+
+.subHeading
+  font-size: 36px
+  @include m.media(tablet, phone)
+    font-size: 23px
+    margin-bottom: 15px
+
+.legalDocuments
+  border-bottom: none
+
+.list
+  display: flex
+  flex-wrap: wrap
+  margin-bottom: 56px
+  @include m.media(tablet, phone)
+    margin-bottom: 0
+
+.flexContainer
+  flex: 1 0 100%
+  display: flex
+  align-items: flex-end
+  flex-wrap: wrap
+  .listItem
+    margin-bottom: 20px
+    padding-right: 45px
+    @include m.media(tablet, phone)
+      flex: 1 0 100%
+
+.listItem
+  margin-bottom: 10px
+  list-style: none
+  flex: 0 0 50%
+  display: flex
+  align-items: center
+  line-height: 130%
+  // max-width: 760px
+  & a
+    padding: 4px 4px 4px 0
+    transition: color 0.2s ease-in-out
+
+.pdfDocumentLinkContainer
+  display: flex
+  align-items: center
+  color: #000000
+  cursor: pointer
+  transition: all 0.3s ease-out
+  svg
+    flex: 0 0 18px
+    margin-right: 10px
+  svg path
+    fill: currentColor
+  a
+    border-bottom: dashed 1px currentColor
+  &:hover
+    color: #ff3535
+    a
+      color: currentColor

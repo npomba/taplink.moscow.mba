@@ -5,7 +5,8 @@ const Accordion = ({
   title,
   accordionContent,
   isList = false,
-  isPdf = false
+  isPdf = false,
+  idx = null
 }) => {
   const accordionBlockClasses = ['accordion-block']
   const accordionContentClasses = ['accordion-content']
@@ -13,6 +14,11 @@ const Accordion = ({
   if (isPdf) {
     accordionBlockClasses.push('accordion-block--equal-padding')
     accordionContentClasses.push('accordion-pdf-content')
+  }
+
+  if (idx === 0) {
+    accordionBlockClasses.push('opened')
+    accordionContentClasses.push('grid')
   }
 
   let content
