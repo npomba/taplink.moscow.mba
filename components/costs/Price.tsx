@@ -41,10 +41,10 @@ const Price = ({ discount = false, type = null, format = null }) => {
   return (
     <>
       <i className={discount ? 'new-price' : 'simple-price'}>
-        {price[regularOrDiscounted][type][format]} Р.
+        {price[regularOrDiscounted]?.[type]?.[format]} Р.
       </i>
       {discount && (
-        <i className='old-price'>{price.regular[type][format]} Р.</i>
+        <i className='old-price'>{price.regular[type]?.[format]} Р.</i>
       )}
     </>
   )
