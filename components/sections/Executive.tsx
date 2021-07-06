@@ -33,10 +33,7 @@ const Executive = () => {
           </ul>
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
-            <i className='new-price'>
-              {' '}
-              <Price discount={false} type={'executive'} /> Р.
-            </i>
+            <Price discount={false} type={'executive'} />
             {/* <i className='old-price'>
               {' '}
               <Price discount={true} type={'executive'} /> Р.

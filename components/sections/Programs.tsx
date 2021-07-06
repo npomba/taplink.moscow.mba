@@ -106,24 +106,7 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'mini'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'mini'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price discount={true} type={'mini'} format={'online'} />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
@@ -173,15 +156,7 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'mini'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price discount={false} type={'mini'} format={'blended'} />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
@@ -273,24 +248,11 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'professional'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'professional'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price
+                      discount={true}
+                      type={'professional'}
+                      format={'online'}
+                    />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
@@ -340,15 +302,11 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'professional'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price
+                      discount={false}
+                      type={'professional'}
+                      format={'blended'}
+                    />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
@@ -440,24 +398,11 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'industry'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'industry'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price
+                      discount={true}
+                      type={'industry'}
+                      format={'online'}
+                    />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
@@ -507,15 +452,11 @@ const Programs = ({ programs }) => {
                   </div>
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'industry'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price
+                      discount={false}
+                      type={'industry'}
+                      format={'blended'}
+                    />
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
