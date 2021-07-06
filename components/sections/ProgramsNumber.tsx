@@ -1,4 +1,4 @@
-import setString from '@/components/hooks/setString'
+import setString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
 
 const getStringDeclensionNumber = num => {

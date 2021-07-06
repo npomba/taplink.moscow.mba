@@ -78,6 +78,7 @@ const ProgramsColumn = ({ data, id, type }) => {
       <li>
         <div className='program-detail-list'>
           <div className='name'>{SetString(langMenu.blendedTitle)}</div>
+
           <ProgramsNumber programs={data} type={type} format={'blended'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}

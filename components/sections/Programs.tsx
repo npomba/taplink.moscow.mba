@@ -12,6 +12,7 @@ import Script from 'next/script'
 import Discount from '@/components/costs/Discount'
 import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
 import SVGScreen from '@/components/svgs/SVGScreen'
+
 const Programs = ({ programs }) => {
   const data = programs
   return (

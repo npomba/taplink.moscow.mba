@@ -18,8 +18,10 @@ const SetString = (str, programTitle = false, stringDeclensionNumber = -1) => {
       output = str.title
     }
   }
+
   if (stringDeclensionNumber >= 0 && router.locale === 'ru')
     output = str.ru[stringDeclensionNumber]
+
   return output
 }
 
