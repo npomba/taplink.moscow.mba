@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import PopupLoader from '@/components/popups/PopupLoader'
-import SVGClose from '@/components/svgs/SVGClose'
+import IconClose from '@/components/icons/IconClose'
 
 const PopupPdf = ({ closePdfPopup, pdfFile, pageNum, landscape }) => {
   const pdfPageClasses = [stls.pdfPage]
@@ -27,7 +27,7 @@ const PopupPdf = ({ closePdfPopup, pdfFile, pageNum, landscape }) => {
         </Document>
       </div>
       <button className='pdf-close' type='button' onClick={closePdfPopup}>
-        <SVGClose />
+        <IconClose />
       </button>
     </div>
   )

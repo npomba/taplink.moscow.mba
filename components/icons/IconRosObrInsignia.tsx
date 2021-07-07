@@ -1,6 +1,6 @@
 import stls from '@/styles/components/general/MoreInfo.module.sass'
 
-const RosObrNadzorInsignia = () => {
+const IconRosObrInsignia = () => {
   return (
     <svg
       className={stls.insignia}
@@ -20,4 +20,4 @@ const RosObrNadzorInsignia = () => {
   )
 }
 
-export default RosObrNadzorInsignia
+export default IconRosObrInsignia

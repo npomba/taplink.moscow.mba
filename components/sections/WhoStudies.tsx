@@ -1,5 +1,5 @@
 import stls from '@/styles/components/sections/WhoStudies.module.sass'
-import SVGDecorativeLines from '@/components/svgs/SVGDecorativeLines'
+import IconDecorativeLines from '@/components/icons/IconDecorativeLines'
 import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import { CircularProgressbar } from 'react-circular-progressbar'
 
@@ -20,7 +20,7 @@ const WhoStudies = () => {
         </li>
       </ul>
       <div className={stls.lines}>
-        <SVGDecorativeLines />
+        <IconDecorativeLines />
       </div>
     </section>
   )

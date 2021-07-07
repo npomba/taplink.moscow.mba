@@ -1,5 +1,5 @@
 import stls from '@/styles/components/general/ContactCard.module.sass'
-import SVGLocation from '@/components/svgs/SVGLocation'
+import IconLocation from '@/components/icons/IconLocation'
 import { Fragment } from 'react'
 
 const ContactCard = ({
@@ -14,7 +14,7 @@ const ContactCard = ({
       <address className='vcard'>
         <span className='adr'>
           <h2 className={`locality ${stls.h2}`}>
-            <SVGLocation large={true} />
+            <IconLocation large={true} />
             {city}
           </h2>
         </span>

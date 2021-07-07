@@ -1,6 +1,6 @@
 import stls from '@/styles/components/popups/PopupLoader.module.sass'
-import SVGLoader from '@/components/svgs/SVGLoader'
-import SVGClose from '@/components/svgs/SVGClose'
+import IconLoader from '@/components/icons/IconLoader'
+import IconClose from '@/components/icons/IconClose'
 
 const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
   const popupContentClasses = ['popup-content']
@@ -15,7 +15,7 @@ const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
     <div id='thanksModal' className='popup-modal loader-modal mfp-with-anim'>
       <div className={popupContentClasses.join(' ')}>
         <div className={loaderContentClasses.join(' ')}>
-          <SVGLoader />
+          <IconLoader />
           {!loadingPopupContent && (
             <p>Ваша заявка отправляется, пожалуйста, подождите</p>
           )}
@@ -23,7 +23,7 @@ const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
       </div>
       {!loadingPopupContent && (
         <button className='mfp-close' type='button' onClick={closePopUp}>
-          <SVGClose />
+          <IconClose />
         </button>
       )}
     </div>

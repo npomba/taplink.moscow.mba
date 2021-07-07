@@ -13,16 +13,16 @@ import ProgramsQty from '@/components/general/ProgramsQty'
 import Script from 'next/script'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import contactData from '@/data/contactData'
-import SVGLocation from '@/components/svgs/SVGLocation'
-import SVGLogo from '@/components/svgs/SVGLogo'
-import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
+import IconLocation from '@/components/icons/IconLocation'
+import IconLogo from '@/components/icons/IconLogo'
+import IconLogoTitle from '@/components/icons/IconLogoTitle'
 import Image from 'next/image'
 import ProgramsColumn from '@/components/general/ProgramsColumn'
 import Discount from '@/components/costs/Discount'
-import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
-import SVGScreen from '@/components/svgs/SVGScreen'
-import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
-import SVGClock from '@/components/svgs/SVGClock'
+import IconCheckCircle from '@/components/icons/IconCheckCircle'
+import IconScreen from '@/components/icons/IconScreen'
+import IconPaperCorner from '@/components/icons/IconPaperCorner'
+import IconClock from '@/components/icons/IconClock'
 
 const Header = ({ programs }) => {
   let data = programs || []
@@ -41,10 +41,10 @@ const Header = ({ programs }) => {
             <Link href='/'>
               <a className='main-logo' aria-label='Moscow Business Academy'>
                 <span className='pic'>
-                  <SVGLogo />
+                  <IconLogo />
                 </span>
                 <span className='text'>
-                  <SVGLogoTitle />
+                  <IconLogoTitle />
                 </span>
               </a>
             </Link>
@@ -67,7 +67,7 @@ const Header = ({ programs }) => {
               </span>
             </div>
             <div className='header-place'>
-              <SVGLocation />
+              <IconLocation />
               {SetString(contactInfo.ru.address.city)},{' '}
               {SetString(contactInfo.ru.address.street)}
             </div>
@@ -309,7 +309,7 @@ const Header = ({ programs }) => {
                 </span>
               </div>
               <div className='header-place'>
-                <SVGLocation />
+                <IconLocation />
                 <span>{SetString(lang.address)}</span>
               </div>
             </div>
@@ -380,13 +380,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='mini' sum={true} />{' '}
@@ -435,13 +435,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='mini' sum={true} />{' '}
@@ -474,7 +474,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Mini MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='mini' />
@@ -483,7 +483,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscMini)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='mini' subjects='base' />{' '}
@@ -492,7 +492,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='mini' subjects='specialty' />{' '}
@@ -563,13 +563,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects
@@ -621,13 +621,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects
@@ -663,7 +663,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Professional MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='professional' />
@@ -672,7 +672,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscProfessional)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects
@@ -684,7 +684,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects
@@ -758,13 +758,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='industry' sum={true} />{' '}
@@ -813,13 +813,13 @@ const Header = ({ programs }) => {
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='industry' sum={true} />{' '}
@@ -852,7 +852,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Industry MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='industry' />
@@ -861,7 +861,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscIndustry)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='industry' subjects='base' />{' '}
@@ -870,7 +870,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects

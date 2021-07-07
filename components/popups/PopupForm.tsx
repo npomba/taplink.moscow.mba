@@ -8,7 +8,7 @@ import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 import Popup from 'reactjs-popup'
 import PopupThankyou from '@/components/popups/PopupThankyou'
 import PopupLoader from '@/components/popups/PopupLoader'
-import SVGClose from '@/components/svgs/SVGClose'
+import IconClose from '@/components/icons/IconClose'
 import { useRouter } from 'next/router'
 
 type FormValues = {
@@ -143,7 +143,7 @@ const Form = ({
           </div>
         </form>
         <button className='mfp-close' type='button' onClick={closePopUpForm}>
-          <SVGClose />
+          <IconClose />
         </button>
       </div>
     </div>

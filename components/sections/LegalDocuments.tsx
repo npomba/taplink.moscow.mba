@@ -1,5 +1,5 @@
 import stls from '@/styles/components/sections/LegalDocuments.module.sass'
-import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
+import IconPaperCorner from '@/components/icons/IconPaperCorner'
 
 const legalDocuments = [
   'Лицензия на осуществление образовательной деятельности',
@@ -45,7 +45,7 @@ const LegalDocuments = () => {
           return (
             <div key={idx} className={stls.flexContainer}>
               <li className={legalDocumentLinkClasses.join(' ')}>
-                <SVGPaperCorner fill='#000' />
+                <IconPaperCorner fill='#000' />
                 <a
                   href={`/legaldocuments/doc-${idx}.pdf`}
                   rel='noopener noreferrer'
@@ -54,7 +54,7 @@ const LegalDocuments = () => {
                 </a>
               </li>
               <li className={legalDocumentLinkClasses.join(' ')}>
-                <SVGPaperCorner fill='#000' />
+                <IconPaperCorner fill='#000' />
                 <a
                   href={`/legaldocuments/doc-${idx + 1}.pdf`}
                   rel='noopener noreferrer'

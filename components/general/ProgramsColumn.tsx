@@ -8,10 +8,10 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQty from '@/components/general/ProgramsQty'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Discount from '@/components/costs/Discount'
-import SVGCheckCircle from '../svgs/SVGCheckCircle'
-import SVGScreen from '../svgs/SVGScreen'
-import SVGPaperCorner from '../svgs/SVGPaperCorner'
-import SVGClock from '../svgs/SVGClock'
+import IconCheckCircle from '@/components/icons/IconCheckCircle'
+import IconScreen from '@/components/icons/IconScreen'
+import IconPaperCorner from '@/components/icons/IconPaperCorner'
+import IconClock from '@/components/icons/IconClock'
 
 const ProgramsColumn = ({ data, id, type }) => {
   return (
@@ -41,13 +41,13 @@ const ProgramsColumn = ({ data, id, type }) => {
           <div className='info-list'>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGCheckCircle fill={'#C7C7C7'} />
+                <IconCheckCircle fill={'#C7C7C7'} />
               </div>
               <span>{SetString(langMenu.formatRemote)}</span>
             </div>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGScreen fill={'#C7C7C7'} />
+                <IconScreen fill={'#C7C7C7'} />
               </div>
               <span>
                 <ProgramSubjects type={type} sum={true} />{' '}
@@ -87,13 +87,13 @@ const ProgramsColumn = ({ data, id, type }) => {
           <div className='info-list'>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGCheckCircle fill={'#C7C7C7'} />
+                <IconCheckCircle fill={'#C7C7C7'} />
               </div>
               <span>{SetString(langMenu.formatBlended)}</span>
             </div>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGScreen fill={'#C7C7C7'} />
+                <IconScreen fill={'#C7C7C7'} />
               </div>
               <span>
                 <ProgramSubjects type={type} sum={true} />{' '}
@@ -134,7 +134,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </div>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGClock fill={'#C7C7C7'} />
+              <IconClock fill={'#C7C7C7'} />
             </div>
             <span>
               <TrainingPeriod type={type} />
@@ -151,7 +151,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </p>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGPaperCorner fill={'#C7C7C7'} />
+              <IconPaperCorner fill={'#C7C7C7'} />
             </div>
             <span>
               <ProgramSubjects type={type} subjects='base' />{' '}
@@ -160,7 +160,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </div>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGPaperCorner fill={'#C7C7C7'} />
+              <IconPaperCorner fill={'#C7C7C7'} />
             </div>
             <span>
               <ProgramSubjects type={type} subjects='specialty' />{' '}

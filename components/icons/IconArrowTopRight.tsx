@@ -1,4 +1,4 @@
-const SVGArrowTopRight = () => {
+const IconArrowTopRight = () => {
   return (
     <svg
       width='36'
@@ -13,4 +13,4 @@ const SVGArrowTopRight = () => {
   )
 }
 
-export default SVGArrowTopRight
+export default IconArrowTopRight

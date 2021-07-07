@@ -10,8 +10,8 @@ import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQty from '@/components/general/ProgramsQty'
 import Filters from '@/components/general/Filters'
-import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
-import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
+import IconCheckCircle from '@/components/icons/IconCheckCircle'
+import IconArrowTopRight from '@/components/icons/IconArrowTopRight'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
@@ -81,12 +81,12 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
 
               <div className={stls.counters}>
                 <p>
-                  <SVGCheckCircle />
+                  <IconCheckCircle />
                   <ProgramSubjects subjects='base' />
                   &nbsp;дисциплин об управлениии
                 </p>
                 <p>
-                  <SVGCheckCircle />
+                  <IconCheckCircle />
                   <ProgramSubjects subjects='specialty' />
                   &nbsp;дисциплин специализации
                 </p>
@@ -105,7 +105,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                     key={program._id}>
                     <a className={stls.program}>
                       <div className={stls.arrow}>
-                        <SVGArrowTopRight />
+                        <IconArrowTopRight />
                       </div>
                       <div className={stls.number}>{idx + 1}.</div>
                       <div className={stls.programTitle}>{program.title}</div>

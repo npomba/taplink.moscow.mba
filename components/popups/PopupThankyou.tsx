@@ -2,7 +2,7 @@ import stls from '@/styles/components/popups/PopupThankyou.module.sass'
 import { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import useAt from '@/components/hooks/useAt'
-import SVGClose from '../svgs/SVGClose'
+import IconClose from '@/components/icons/IconClose'
 
 const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
   useEffect(() => {
@@ -57,7 +57,7 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
         </div>
       </div>
       <button className='mfp-close' type='button' onClick={closePopUp}>
-        <SVGClose />
+        <IconClose />
       </button>
     </div>
   )

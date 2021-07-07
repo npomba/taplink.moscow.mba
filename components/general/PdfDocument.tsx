@@ -4,7 +4,7 @@ import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import Popup from 'reactjs-popup'
 import PopupPdf from '@/components/popups/PopupPdf'
-import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
+import IconPaperCorner from '@/components/icons/IconPaperCorner'
 
 const PdfDocument = ({ fileSrc, fileName, pageNum, landscape = false }) => {
   const pdfDocumentClasses = [stls.pdfDocument, 'pdf-document']
@@ -22,7 +22,7 @@ const PdfDocument = ({ fileSrc, fileName, pageNum, landscape = false }) => {
           <div className={`${stls.popupPdfTrigger} trigger`}>
             <Page className={stls.pdfPage} width={320} pageNumber={pageNum} />
             <div className={stls.pdfDocumentLinkContainer}>
-              <SVGPaperCorner fill='#000' />
+              <IconPaperCorner fill='#000' />
               <a>{fileName}</a>
             </div>
           </div>

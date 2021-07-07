@@ -2,8 +2,8 @@ import stls from '@/styles/components/layout/StickyBottom.module.sass'
 import { useEffect, useState } from 'react'
 import Link from 'next/link'
 import Until from '@/components/costs/Until'
-import SVGCross from '@/components/svgs/SVGCross'
-import SVGClose from '@/components/svgs/SVGClose'
+import IconCross from '@/components/icons/IconCross'
+import IconClose from '@/components/icons/IconClose'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import PopupForm from '@/components/popups/PopupForm'
@@ -83,18 +83,18 @@ const StickyBottom = () => {
           <a
             className={`${stls.pointer} close-bottom-module-btn ${stls.crossIn}`}
             onClick={closeStickyModule}>
-            <SVGCross />
+            <IconCross />
           </a>
         </div>
         <a
           className={`${stls.pointer} close-bottom-module-btn ${stls.crossOut}`}
           onClick={closeStickyModule}>
-          <SVGCross />
+          <IconCross />
         </a>
         <a
           className={`${stls.pointer} ${stls.crossTop}`}
           onClick={closeStickyModule}>
-          <SVGClose />
+          <IconClose />
         </a>
       </div>
       {/* </div> */}

@@ -1,6 +1,6 @@
 import stls from '@/styles/components/popups/PopupLearnMore.module.sass'
 import Discount from '@/components/costs/Discount'
-import SVGClose from '@/components/svgs/SVGClose'
+import IconClose from '@/components/icons/IconClose'
 import Until from '@/components/costs/Until'
 import learmMoreStls from '@/styles/components/layout/StickyBottom.module.sass'
 import Popup from 'reactjs-popup'
@@ -40,7 +40,7 @@ const PopupLearnMore = ({ close }) => {
         </Link>
       </div>
       <button className='mfp-close' type='button' onClick={close}>
-        <SVGClose />
+        <IconClose />
       </button>
     </div>
   )
