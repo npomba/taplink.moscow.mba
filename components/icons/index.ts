@@ -1,5 +1,5 @@
-import IconArrowDiagonal from '@/components/icons/IconArrowDiagonal'
 import IconArrowTopRight from '@/components/icons/IconArrowTopRight'
+import IconBell from '@/components/icons/IconBell'
 import IconCheck from '@/components/icons/IconCheck'
 import IconCheckCircle from '@/components/icons/IconCheckCircle'
 import IconClock from '@/components/icons/IconClock'
@@ -19,8 +19,8 @@ import IconVk from '@/components/icons/IconVk'
 import IconWhatsapp from '@/components/icons/IconWhatsapp'
 
 export {
-  IconArrowDiagonal,
   IconArrowTopRight,
+  IconBell,
   IconCheck,
   IconCheckCircle,
   IconClock,

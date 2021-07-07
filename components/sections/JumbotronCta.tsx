@@ -14,6 +14,7 @@ import PopupLoader from '@/components/popups/PopupLoader'
 import Until from '@/components/costs/Until'
 import { useRouter } from 'next/router'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
+import { IconArrowTopRight } from '@/components/icons'
 
 type FormValues = {
   name: string
@@ -182,11 +183,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                         disabled={errors.name || errors.phone ? true : false}>
                         {SetString(lang.inputSubmitAlt)}
                         <div className='arrow'>
-                          <img
-                            src='/assets/images/arrow_diagonal.svg'
-                            width='17px'
-                            alt={'стрелка'}
-                          />
+                          <IconArrowTopRight width={'17'} height={'17'} />
                         </div>
                       </button>
                     </div>
