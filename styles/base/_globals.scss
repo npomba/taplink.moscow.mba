@@ -6886,6 +6886,12 @@ div.popup-content.pdf-popup-content {
   }
   & .jumbotron-list {
     width: 272px;
+    @media (min-width: 1330px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 67px;
+    }
   }
   & .jumCta-desc-top {
     font-style: normal;

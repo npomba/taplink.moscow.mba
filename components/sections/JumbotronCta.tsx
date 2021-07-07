@@ -58,7 +58,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
   }
 
   return (
-    <section className='jumbotron-section jumbotron-section--cta'>
+    <section className={stls.container}>
       <Popup open={openLoader} onClose={closeLoadingModal}>
         <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
@@ -69,7 +69,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
           programTitle={programTitle}
         />
       </Popup>
-      <div className='image'>
+      <div className={stls.image}>
         <Image
           src='/assets/images/jumbotron_1.jpg'
           alt={'Аудитория MBA'}
