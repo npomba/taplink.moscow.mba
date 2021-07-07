@@ -1,5 +1,5 @@
 import stls from '@/styles/components/general/ContactCard.module.sass'
-import IconLocation from '@/components/icons/IconLocation'
+import { IconLocation } from '@/components/icons'
 import { Fragment } from 'react'
 
 const ContactCard = ({

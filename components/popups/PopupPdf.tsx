@@ -3,7 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import PopupLoader from '@/components/popups/PopupLoader'
-import IconClose from '@/components/icons/IconClose'
+import { IconClose } from '@/components/icons'
 
 const PopupPdf = ({ closePdfPopup, pdfFile, pageNum, landscape }) => {
   const pdfPageClasses = [stls.pdfPage]

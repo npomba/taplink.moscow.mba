@@ -4,10 +4,12 @@ import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 import contactData from '@/data/contactData'
-import IconLocation from '@/components/icons/IconLocation'
-import IconVk from '@/components/icons/IconVK'
-import IconTelegram from '@/components/icons/IconTelegram'
-import IconWhatsapp from '@/components/icons/IconWhatsapp'
+import {
+  IconLocation,
+  IconVk,
+  IconTelegram,
+  IconWhatsapp
+} from '@/components/icons'
 
 const Footer = () => {
   const contactInfo = contactData()

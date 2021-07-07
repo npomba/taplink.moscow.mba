@@ -1,4 +1,6 @@
-const SVGLocation = ({ fill = '#09121F', large = false }) => {
+import stls from '@/styles/components/icons/IconLocation.module.sass'
+
+const IconLocation = ({ fill = '#09121F', large = false }) => {
   return (
     <svg
       width={large ? '25' : '16'}
@@ -14,4 +16,4 @@ const SVGLocation = ({ fill = '#09121F', large = false }) => {
   )
 }
 
-export default SVGLocation
+export default IconLocation

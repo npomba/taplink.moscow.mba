@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
-import IconTriangleBottom from '@/components/icons/IconTriangleBottom'
+import { IconTriangleBottom } from '@/components/icons'
 
 const HeaderLangLink = () => {
   const [showMe, setShowMe] = useState(false)

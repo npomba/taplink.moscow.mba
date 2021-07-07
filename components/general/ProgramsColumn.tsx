@@ -8,10 +8,12 @@ import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQty from '@/components/general/ProgramsQty'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Discount from '@/components/costs/Discount'
-import IconCheckCircle from '@/components/icons/IconCheckCircle'
-import IconScreen from '@/components/icons/IconScreen'
-import IconPaperCorner from '@/components/icons/IconPaperCorner'
-import IconClock from '@/components/icons/IconClock'
+import {
+  IconCheckCircle,
+  IconScreen,
+  IconPaperCorner,
+  IconClock
+} from '@/components/icons'
 
 const ProgramsColumn = ({ data, id, type }) => {
   return (

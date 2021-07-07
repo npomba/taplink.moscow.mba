@@ -1,4 +1,6 @@
-const SVGCross = () => {
+import stls from '@/styles/components/icons/IconCross.module.sass'
+
+const IconCross = () => {
   return (
     <svg
       width='27'
@@ -13,4 +15,4 @@ const SVGCross = () => {
   )
 }
 
-export default SVGCross
+export default IconCross

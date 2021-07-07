@@ -1,4 +1,6 @@
-const SVGDecorativeLines = () => {
+import stls from '@/styles/components/icons/IconDecorativeLines.module.sass'
+
+const IconDecorativeLines = () => {
   return (
     <svg
       width='429'
@@ -25,4 +27,4 @@ const SVGDecorativeLines = () => {
   )
 }
 
-export default SVGDecorativeLines
+export default IconDecorativeLines

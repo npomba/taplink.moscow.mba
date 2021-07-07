@@ -1,4 +1,6 @@
-const SVGLogo = () => {
+import stls from '@/styles/components/icons/IconLogo.module.sass'
+
+const IconLogo = () => {
   return (
     <svg
       width='64'
@@ -17,4 +19,4 @@ const SVGLogo = () => {
   )
 }
 
-export default SVGLogo
+export default IconLogo

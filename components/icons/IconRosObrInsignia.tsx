@@ -1,4 +1,5 @@
 import stls from '@/styles/components/general/MoreInfo.module.sass'
+import stls1 from '@/styles/components/icons/IconRosObrInsignia.module.sass'
 
 const IconRosObrInsignia = () => {
   return (

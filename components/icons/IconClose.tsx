@@ -1,4 +1,6 @@
-const SVGClose = ({ stroke = 'black' }) => {
+import stls from '@/styles/components/icons/IconClose.module.sass'
+
+const IconClose = ({ stroke = 'black' }) => {
   return (
     <svg
       width='14'
@@ -22,4 +24,4 @@ const SVGClose = ({ stroke = 'black' }) => {
   )
 }
 
-export default SVGClose
+export default IconClose

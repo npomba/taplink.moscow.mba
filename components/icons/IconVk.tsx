@@ -1,4 +1,6 @@
-const SVGVK = ({ fill = '#fff' }) => {
+import stls from '@/styles/components/icons/IconVk.module.sass'
+
+const IconVk = ({ fill = '#fff' }) => {
   return (
     <svg
       width='18'
@@ -16,4 +18,4 @@ const SVGVK = ({ fill = '#fff' }) => {
   )
 }
 
-export default SVGVK
+export default IconVk

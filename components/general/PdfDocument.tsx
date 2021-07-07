@@ -4,7 +4,7 @@ import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import Popup from 'reactjs-popup'
 import PopupPdf from '@/components/popups/PopupPdf'
-import IconPaperCorner from '@/components/icons/IconPaperCorner'
+import { IconPaperCorner } from '@/components/icons'
 
 const PdfDocument = ({ fileSrc, fileName, pageNum, landscape = false }) => {
   const pdfDocumentClasses = [stls.pdfDocument, 'pdf-document']

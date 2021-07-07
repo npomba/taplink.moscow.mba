@@ -1,3 +1,5 @@
+import stls from '@/styles/components/icons/IconArrowTopRight.module.sass'
+
 const IconArrowTopRight = () => {
   return (
     <svg

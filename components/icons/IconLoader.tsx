@@ -1,4 +1,6 @@
-const SVGLoader = () => {
+import stls from '@/styles/components/icons/IconLoader.module.sass'
+
+const IconLoader = () => {
   // <!-- By Sam Herbert (@sherb), for everyone. More @ http://goo.gl/7AJzbL -->
   return (
     <svg
@@ -77,4 +79,4 @@ const SVGLoader = () => {
   )
 }
 
-export default SVGLoader
+export default IconLoader

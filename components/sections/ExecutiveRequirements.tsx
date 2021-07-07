@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/ExecutiveRequirements.module.sass'
+import { IconCheck } from '@/components/icons'
 import Image from 'next/image'
 
 const ExecutiveRequirements = () => {
@@ -25,7 +26,7 @@ const ExecutiveRequirements = () => {
       <ul className='requirements-list'>
         <li>
           <div className='circle'>
-            <img alt='' src='/assets/images/icon_check.svg' />
+            <IconCheck />
           </div>
           <div>
             <h5>Управление отношениями</h5>
@@ -37,7 +38,7 @@ const ExecutiveRequirements = () => {
         </li>
         <li>
           <div className='circle'>
-            <img alt='' src='/assets/images/icon_check.svg' />
+            <IconCheck />
           </div>
           <div>
             <h5>Управление задачами</h5>
@@ -50,7 +51,7 @@ const ExecutiveRequirements = () => {
         </li>
         <li>
           <div className='circle'>
-            <img alt='' src='/assets/images/icon_check.svg' />
+            <IconCheck />
           </div>
           <div>
             <h5>Управление собой</h5>
@@ -63,7 +64,7 @@ const ExecutiveRequirements = () => {
         </li>
         <li>
           <div className='circle'>
-            <img alt='' src='/assets/images/icon_check.svg' />
+            <IconCheck />
           </div>
           <div>
             <h5>Амбициозность</h5>

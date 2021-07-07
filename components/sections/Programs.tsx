@@ -10,8 +10,7 @@ import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Script from 'next/script'
 import Discount from '@/components/costs/Discount'
-import IconCheckCircle from '@/components/icons/IconCheckCircle'
-import IconScreen from '@/components/icons/IconScreen'
+import { IconCheckCircle, IconScreen } from '@/components/icons'
 
 const Programs = ({ programs }) => {
   const data = programs

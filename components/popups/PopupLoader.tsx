@@ -1,6 +1,5 @@
 import stls from '@/styles/components/popups/PopupLoader.module.sass'
-import IconLoader from '@/components/icons/IconLoader'
-import IconClose from '@/components/icons/IconClose'
+import { IconLoader, IconClose } from '@/components/icons'
 
 const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
   const popupContentClasses = ['popup-content']

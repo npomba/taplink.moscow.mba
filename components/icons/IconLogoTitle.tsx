@@ -1,4 +1,6 @@
-const SVGLogoTItle = () => {
+import stls from '@/styles/components/icons/IconLogoTItle.module.sass'
+
+const IconLogoTItle = () => {
   return (
     <svg
       width='64'
@@ -94,4 +96,4 @@ const SVGLogoTItle = () => {
   )
 }
 
-export default SVGLogoTItle
+export default IconLogoTItle

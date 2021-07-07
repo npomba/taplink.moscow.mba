@@ -1,4 +1,6 @@
-const SVGCheckCircle = ({ fill = '#D9D9D9' }) => {
+import stls from '@/styles/components/icons/IconCheckCircle.module.sass'
+
+const IconCheckCircle = ({ fill = '#D9D9D9' }) => {
   return (
     <svg
       width='24'
@@ -14,4 +16,4 @@ const SVGCheckCircle = ({ fill = '#D9D9D9' }) => {
   )
 }
 
-export default SVGCheckCircle
+export default IconCheckCircle

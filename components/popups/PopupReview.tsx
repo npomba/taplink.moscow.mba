@@ -1,6 +1,6 @@
 import stls from '@/styles/components/popups/PopupReview.module.sass'
 import Image from 'next/image'
-import IconClose from '@/components/icons/IconClose'
+import { IconClose } from '@/components/icons'
 import { base64pixel } from '@/config/index'
 
 const PopupReview = ({ review, closePopUp }) => {

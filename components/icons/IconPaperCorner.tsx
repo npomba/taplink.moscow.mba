@@ -1,4 +1,6 @@
-const SVGPaperCorner = ({ fill = '#FF3535' }) => {
+import stls from '@/styles/components/icons/IconPaperCorner.module.sass'
+
+const IconPaperCorner = ({ fill = '#FF3535' }) => {
   return (
     <svg
       width='18'
@@ -14,4 +16,4 @@ const SVGPaperCorner = ({ fill = '#FF3535' }) => {
   )
 }
 
-export default SVGPaperCorner
+export default IconPaperCorner

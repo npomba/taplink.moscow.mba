@@ -1,4 +1,6 @@
-const SVGTelegram = ({ fill = '#fff' }) => {
+import stls from '@/styles/components/icons/IconTelegram.module.sass'
+
+const IconTelegram = ({ fill = '#fff' }) => {
   return (
     <svg
       width='17'
@@ -14,4 +16,4 @@ const SVGTelegram = ({ fill = '#fff' }) => {
   )
 }
 
-export default SVGTelegram
+export default IconTelegram

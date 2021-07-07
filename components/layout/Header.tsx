@@ -13,16 +13,18 @@ import ProgramsQty from '@/components/general/ProgramsQty'
 import Script from 'next/script'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import contactData from '@/data/contactData'
-import IconLocation from '@/components/icons/IconLocation'
-import IconLogo from '@/components/icons/IconLogo'
-import IconLogoTitle from '@/components/icons/IconLogoTitle'
+import {
+  IconLocation,
+  IconLogo,
+  IconLogoTitle,
+  IconCheckCircle,
+  IconScreen,
+  IconPaperCorner,
+  IconClock
+} from '@/components/icons'
 import Image from 'next/image'
 import ProgramsColumn from '@/components/general/ProgramsColumn'
 import Discount from '@/components/costs/Discount'
-import IconCheckCircle from '@/components/icons/IconCheckCircle'
-import IconScreen from '@/components/icons/IconScreen'
-import IconPaperCorner from '@/components/icons/IconPaperCorner'
-import IconClock from '@/components/icons/IconClock'
 
 const Header = ({ programs }) => {
   let data = programs || []

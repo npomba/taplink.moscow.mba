@@ -1,5 +1,5 @@
 import stls from '@/styles/components/sections/WhoStudies.module.sass'
-import IconDecorativeLines from '@/components/icons/IconDecorativeLines'
+import { IconDecorativeLines } from '@/components/icons'
 import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import { CircularProgressbar } from 'react-circular-progressbar'
 

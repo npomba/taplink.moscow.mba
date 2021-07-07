@@ -10,8 +10,7 @@ import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import ProgramsQty from '@/components/general/ProgramsQty'
 import Filters from '@/components/general/Filters'
-import IconCheckCircle from '@/components/icons/IconCheckCircle'
-import IconArrowTopRight from '@/components/icons/IconArrowTopRight'
+import { IconCheckCircle, IconArrowTopRight } from '@/components/icons'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()

@@ -1,4 +1,6 @@
-const SVGTriangleBottom = ({ fill = '#FF3535' }) => {
+import stls from '@/styles/components/icons/IconTriangleBottom.module.sass'
+
+const IconTriangleBottom = ({ fill = '#FF3535' }) => {
   return (
     <svg
       width='7'
@@ -11,4 +13,4 @@ const SVGTriangleBottom = ({ fill = '#FF3535' }) => {
   )
 }
 
-export default SVGTriangleBottom
+export default IconTriangleBottom

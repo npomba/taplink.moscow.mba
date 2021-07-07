@@ -1,4 +1,6 @@
-const SVGScreen = ({ fill = '#FF3535' }) => {
+import stls from '@/styles/components/icons/IconScreen.module.sass'
+
+const IconScreen = ({ fill = '#FF3535' }) => {
   return (
     <svg
       width='20'
@@ -14,4 +16,4 @@ const SVGScreen = ({ fill = '#FF3535' }) => {
   )
 }
 
-export default SVGScreen
+export default IconScreen

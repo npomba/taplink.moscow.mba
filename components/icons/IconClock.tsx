@@ -1,4 +1,6 @@
-const SVGClock = ({ fill = '#FF3535' }) => {
+import stls from '@/styles/components/icons/IconClock.module.sass'
+
+const IconClock = ({ fill = '#FF3535' }) => {
   return (
     <svg
       width='20'
@@ -14,4 +16,4 @@ const SVGClock = ({ fill = '#FF3535' }) => {
   )
 }
 
-export default SVGClock
+export default IconClock
