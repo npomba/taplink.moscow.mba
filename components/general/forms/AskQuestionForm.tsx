@@ -2,7 +2,7 @@ import stls from '@/styles/components/general/forms/AskQuestionForm.module.sass'
 import { useState } from 'react'
 import AskQuestionFormStage from '@/components/general/forms/AskQuestionFormStage'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
-import SVGClose from '@/components/svgs/SVGClose'
+import { IconClose } from '@/components/icons'
 
 const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
   const [formStage, setFormStage] = useState(0)
@@ -67,7 +67,7 @@ const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
   return (
     <div className={askQuestionFormClasses.join(' ')}>
       <a className={stls.crossTop} onClick={handleAskQuestionFormClose}>
-        <SVGClose />
+        <IconClose />
       </a>
       {formStages[formStage]}
     </div>

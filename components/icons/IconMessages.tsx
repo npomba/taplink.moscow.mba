@@ -1,12 +1,9 @@
-const SVGMessages = () => {
+import stls from '@/styles/components/icons/IconMessages.module.sass'
+
+const IconMessages = () => {
   return (
-    <>
-      <svg
-        width='21'
-        height='19'
-        viewBox='0 0 21 19'
-        fill='none'
-        xmlns='http://www.w3.org/2000/svg'>
+    <div className={stls.container}>
+      <svg viewBox='0 0 21 19' fill='none' xmlns='http://www.w3.org/2000/svg'>
         <path
           d='M19.2347 12.5252C19.2347 14.0608 17.9718 15.2125 16.5147 15.2125H9.42325C9.13182 15.2125 8.93753 15.3084 8.74325 15.5005L6.41183 17.8998C6.1204 18.1878 5.63468 17.9959 5.63468 17.6119V16.2683C5.63468 15.6924 5.14896 15.3084 4.66325 15.3084H4.27467C2.81753 15.3084 1.55469 14.0608 1.55469 12.6211V3.79133C1.55469 2.25573 2.81753 1.104 4.27467 1.104H11.269'
           stroke='white'
@@ -27,8 +24,8 @@ const SVGMessages = () => {
           strokeMiterlimit='10'
         />
       </svg>
-    </>
+    </div>
   )
 }
 
-export default SVGMessages
+export default IconMessages

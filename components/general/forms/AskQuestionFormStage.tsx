@@ -2,27 +2,29 @@ import stls from '@/styles/components/general/forms/AskQuestionFormStage.module.
 import { useState } from 'react'
 import { useRouter } from 'next/router'
 import ContactButton from '@/components/btns/ContactButton'
-import SVGArrowLeft from '@/components/svgs/SVGArrowLeft'
-import SVGTelegram from '@/components/svgs/SVGTelegram'
-import SVGWhatsApp from '@/components/svgs/SVGWhatsapp'
-import SVGViber from '@/components/svgs/SVGViber'
-import SVGVK from '@/components/svgs/SVGVK'
-import SVGMobilePhone from '@/components/svgs/SVGMobilePhone'
-import SVGEmail from '@/components/svgs/SVGEmail'
+import {
+  IconArrowLeft,
+  IconTelegram,
+  IconWhatsapp,
+  IconViber,
+  IconVk,
+  IconMobilePhone,
+  IconEmail
+} from '@/components/icons'
 
 const waysToContact = [
   {
     name: 'Telegram',
     stageStep: 1,
-    svg: <SVGTelegram />,
+    svg: <IconTelegram />,
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <SVGMobilePhone />
+        icon: <IconMobilePhone />
       },
       {
         name: 'Написать',
-        icon: <SVGTelegram marginRight='19px' />
+        icon: <IconTelegram marginRight='19px' />
       }
     ],
     validationRules: {
@@ -34,15 +36,15 @@ const waysToContact = [
   {
     name: 'WhatsApp',
     stageStep: 1,
-    svg: <SVGWhatsApp />,
+    svg: <IconWhatsapp />,
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <SVGMobilePhone />
+        icon: <IconMobilePhone />
       },
       {
         name: 'Написать',
-        icon: <SVGTelegram marginRight='19px' />
+        icon: <IconTelegram marginRight='19px' />
       }
     ],
     validationRules: {
@@ -54,15 +56,15 @@ const waysToContact = [
   {
     name: 'Viber',
     stageStep: 1,
-    svg: <SVGViber />,
+    svg: <IconViber />,
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <SVGMobilePhone />
+        icon: <IconMobilePhone />
       },
       {
         name: 'Написать',
-        icon: <SVGTelegram marginRight='19px' />
+        icon: <IconTelegram marginRight='19px' />
       }
     ],
     validationRules: {
@@ -74,11 +76,11 @@ const waysToContact = [
   {
     name: 'VK',
     stageStep: 2,
-    svg: <SVGVK />,
+    svg: <IconVk />,
     contactMethods: [
       {
         name: 'Написать',
-        icon: <SVGTelegram marginRight='19px' />
+        icon: <IconTelegram marginRight='19px' />
       }
     ],
     validationRules: {
@@ -90,11 +92,11 @@ const waysToContact = [
   {
     name: 'Телефон',
     stageStep: 2,
-    svg: <SVGMobilePhone />,
+    svg: <IconMobilePhone />,
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <SVGMobilePhone />
+        icon: <IconMobilePhone />
       }
     ],
     validationRules: {
@@ -106,11 +108,11 @@ const waysToContact = [
   {
     name: 'Email',
     stageStep: 2,
-    svg: <SVGEmail />,
+    svg: <IconEmail />,
     contactMethods: [
       {
         name: 'Написать',
-        icon: <SVGTelegram marginRight='19px' />
+        icon: <IconTelegram marginRight='19px' />
       }
     ],
     validationRules: {
@@ -145,7 +147,7 @@ const createFormStageTitleContainer = dataToCreateTitleContainer => {
       <div
         className={stls.goBackArrow}
         onClick={() => handleUserGoingBack(stageStep)}>
-        <SVGArrowLeft />
+        <IconArrowLeft />
       </div>
       {wayToContactTitle}
     </div>

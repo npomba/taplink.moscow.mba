@@ -1,11 +1,11 @@
 import stls from '@/styles/components/general/AskQuestion.module.sass'
-import SVGMessages from '@/components/svgs/SVGMessages'
+import { IconMessages } from '@/components/icons/'
 
 const AskQuestion = ({ handleClickedAskQuestion }) => {
   return (
     <div className={stls.container}>
       <div className={stls.messages} onClick={handleClickedAskQuestion}>
-        <SVGMessages />
+        <IconMessages />
       </div>
     </div>
   )
