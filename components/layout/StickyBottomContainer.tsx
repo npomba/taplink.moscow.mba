@@ -22,11 +22,7 @@ const StickyBottomContainer = () => {
     setIsStickyBottomShown(false)
   }
 
-  const handleAskQuestionFormClose = () => {
-    setClickedAsk(false)
-
-    if (!stickyHasBeenClosed) setIsStickyBottomShown(true)
-  }
+  const handleAskQuestionFormClose = () => setClickedAsk(false)
 
   return (
     <div className={containerClasses.join(' ')}>

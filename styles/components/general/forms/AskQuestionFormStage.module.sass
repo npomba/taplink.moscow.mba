@@ -1,8 +1,8 @@
+// @use '@/styles/base' as b
 @use '@/styles/components/layout/StickyBottom.module.sass' as stickyBottom
 @use '@/styles/utils/mixin' as m
 
 .questionTextarea
-  position: relative
   width: 305px
   height: 70px
   margin-bottom: 9px
@@ -17,20 +17,6 @@
     padding-left: 6px
   @include m.media(phone)
     width: 100%
-
-.questionTextareaPlaceholder
-  position: absolute
-  left: 52px
-  top: 40px
-  font-size: 16px
-  color: #000
-  opacity: 0.7
-  transition: all .3s ease-out
-  pointer-events: none
-  &.questionTextareaPlaceholderSmall
-    top: 10px
-    font-size: 13px
-    color: #ff3535
 
 .waysToContactGrid
   display: grid
@@ -95,6 +81,23 @@
     margin-bottom: 11px
   & > *
     width: 100%
+
+button.formStageButton
+  display: flex
+  align-items: center
+  padding: 14px 70px
+  font-family: Mazzard
+  font-weight: 400
+  font-size: 15px
+  &.sendButton
+    justify-content: center
+  & > *:first-child
+    margin-right: 15px
+  svg
+    min-height: 12px
+    min-width: 13px
+  @include m.media(phone)
+    justify-content: center
 
 .formSubmitted
   display: flex
