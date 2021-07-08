@@ -4,7 +4,7 @@ import { useRouter } from 'next/router'
 import { useState } from 'react'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/header'
-import SVGTriangleBottom from '@/components/svgs/SVGTriangleBottom'
+import { IconTriangleBottom } from '@/components/icons'
 
 const HeaderLangLink = () => {
   const [showMe, setShowMe] = useState(false)
@@ -15,7 +15,7 @@ const HeaderLangLink = () => {
     <div className={`${showMe && 'lang-red-highlight'} lang`}>
       <a className='lang__btn' onClick={showLangMenu}>
         {SetString(lang.linkLang)}{' '}
-        <SVGTriangleBottom fill={`${showMe ? '#FF3535' : '#000'}`} />
+        <IconTriangleBottom fill={`${showMe ? '#FF3535' : '#000'}`} />
       </a>
       <ul className={`lang__selectList ${showMe && 'show'}`}>
         <li className='selectList__item'>

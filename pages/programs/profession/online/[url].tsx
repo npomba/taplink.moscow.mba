@@ -1,9 +1,9 @@
 import { apiProgramsReqUrl, backendUrl } from '@/config/index'
 
-import OnlineProgram from '@/components/pages/OnlineProgram'
+import ProfessionOnlineProgram from '@/components/pages/ProfessionOnlineProgram'
 
 const programsMiniOnlineProgram = ({ program, programs }) => {
-  return <OnlineProgram program={program} />
+  return <ProfessionOnlineProgram program={program} />
 }
 
 export const getStaticProps = async context => {

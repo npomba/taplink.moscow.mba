@@ -4,6 +4,8 @@ import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
+import { IconArrowTopRight } from '@/components/icons'
+
 import { base64pixel } from '@/config/index'
 
 const JumbotronMain = () => {
@@ -42,7 +44,7 @@ const JumbotronMain = () => {
             <a className='jumbotron-squad'>
               <p>{SetString(lang.redCubeLink)}</p>
               <div className='arrow'>
-                <img src='/assets/images/arrow_diagonal.svg' />
+                <IconArrowTopRight />
               </div>
             </a>
           </Link>

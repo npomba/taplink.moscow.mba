@@ -3,6 +3,7 @@ import Image from 'next/image'
 import PopupForm from '@/components/popups/PopupForm'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
+import { IconBell } from '@/components/icons'
 
 const WebinarCard = ({
   title,
@@ -23,7 +24,7 @@ const WebinarCard = ({
             className={`vebinars-block ${disabled && 'disabled'} popup-open`}
             data-effect='mfp-zoom-in'>
             <div className='bell'>
-              <img src='/assets/images/icon_bell.svg' alt='' />
+              <IconBell />
             </div>
             <div className='date'>
               <strong>

@@ -11,7 +11,7 @@ import { motion, AnimatePresence } from 'framer-motion'
 import { dev, gtmId } from '@/config/index'
 
 import NProgress from 'nprogress'
-import Router from 'next/router'
+import Router, { useRouter } from 'next/router'
 import 'nprogress/nprogress.css'
 
 import Script from 'next/script'
@@ -20,6 +20,26 @@ function MyApp({ Component, pageProps, router }) {
   const [loading, setLoading] = useState(false)
   useEffect(() => {
     TagManager.initialize({ gtmId, dataLayerName: 'dataLayer' })
+
+    const utms = JSON.parse(sessionStorage.getItem('utms')) || {}
+    let utmsAreEmpty = false
+
+    for (const key in utms) {
+      if (utms.hasOwnProperty(key)) {
+        utmsAreEmpty = true
+        break
+      }
+    }
+
+    if (!utmsAreEmpty) {
+      const urlUtmsArr = router.asPath.split('?')[1]
+
+      urlUtmsArr &&
+        urlUtmsArr.split('&').forEach(utm => {
+          utms[utm.split('=')[0]] = utm.split('=')[1]
+        })
+      sessionStorage.setItem('utms', JSON.stringify(utms))
+    }
 
     NProgress.configure({
       // minimum: 0.3,

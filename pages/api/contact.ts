@@ -20,7 +20,8 @@ const contact = async (req, res) => {
     contactMethod,
     question,
     programTitle,
-    leadPage
+    leadPage,
+    utms
   } = req.body
 
   if (name?.includes('@')) {
@@ -121,7 +122,12 @@ const contact = async (req, res) => {
     longitude: locationData && locationData.coordinates.longitude,
     timeZone: locationData && locationData.timeZone,
     postalCode: locationData && locationData.postalCode,
-    programTitle: programTitle || ''
+    programTitle: programTitle || '',
+    utmSource: (utms && utms.utm_source) || null,
+    utmMedium: (utms && utms.utm_medium) || null,
+    utmCampaign: (utms && utms.utm_campaign) || null,
+    utmContent: (utms && utms.utm_content) || null,
+    utmTerm: (utms && utms.utm_term) || null
   }
 
   const subject = 'Новая заявка с moscow.mba'
@@ -275,23 +281,23 @@ const contact = async (req, res) => {
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: ''
+        tdVal: data.utmSource
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: ''
+        tdVal: data.utmMedium
       },
       {
         tdKey: 'Название РК',
-        tdVal: ''
+        tdVal: data.utmCampaign
       },
       {
         tdKey: 'Объявление',
-        tdVal: ''
+        tdVal: data.utmContent
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: ''
+        tdVal: data.utmTerm
       },
       {
         tdKey: 'Дубль',

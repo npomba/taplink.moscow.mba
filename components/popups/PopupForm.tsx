@@ -8,7 +8,7 @@ import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
 import Popup from 'reactjs-popup'
 import PopupThankyou from '@/components/popups/PopupThankyou'
 import PopupLoader from '@/components/popups/PopupLoader'
-import SVGClose from '@/components/svgs/SVGClose'
+import { IconClose } from '@/components/icons'
 import { useRouter } from 'next/router'
 
 type FormValues = {
@@ -36,10 +36,18 @@ const Form = ({
   const closeLoadingModal = () => setOpenLoader(false)
   const { asPath } = useRouter()
 
+  // useEffect(() => {
+  //   const utms = sessionStorage.getItem('utms')
+  //   console.log(JSON.parse(utms))
+  // }, [])
+
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
     values.leadPage = asPath
+    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    values.utms = utms
+    sessionStorage.removeItem('utms')
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()
@@ -135,7 +143,7 @@ const Form = ({
           </div>
         </form>
         <button className='mfp-close' type='button' onClick={closePopUpForm}>
-          <SVGClose />
+          <IconClose />
         </button>
       </div>
     </div>

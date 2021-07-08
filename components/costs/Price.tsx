@@ -1,4 +1,8 @@
+import useAt from '@/components/hooks/useAt'
+
 const Price = ({ discount = false, type = null, format = null }) => {
+  const at = useAt()
+
   const price = {
     regular: {
       mini: {
@@ -13,6 +17,9 @@ const Price = ({ discount = false, type = null, format = null }) => {
         online: '289 000',
         blended: '299 000'
       },
+      profession: {
+        online: '70 000'
+      },
       executive: '1 400 000'
     },
     discounted: {
@@ -25,56 +32,26 @@ const Price = ({ discount = false, type = null, format = null }) => {
       industry: {
         online: '159 000'
       },
+      profession: {
+        online: '39 000'
+      },
       executive: '1 400 000'
     }
   }
 
+  const regularOrDiscounted = discount ? 'discounted' : 'regular'
+
+  if ((!format && at.executive) || (!format && type === 'executive'))
+    return <>{price[regularOrDiscounted].executive} Р.</>
+
   return (
     <>
-      {/* Discounts */}
-      {discount &&
-        type === 'mini' &&
-        format === 'online' &&
-        price.discounted.mini.online}
-      {discount &&
-        type === 'professional' &&
-        format === 'online' &&
-        price.discounted.professional.online}
-      {discount &&
-        type === 'industry' &&
-        format === 'online' &&
-        price.discounted.industry.online}
-      {discount && type === 'executive' && price.discounted.executive}
-
-      {/* Regular */}
-      {!discount &&
-        type === 'mini' &&
-        format === 'online' &&
-        price.regular.mini.online}
-      {!discount &&
-        type === 'mini' &&
-        format === 'blended' &&
-        price.regular.mini.blended}
-
-      {!discount &&
-        type === 'professional' &&
-        format === 'online' &&
-        price.regular.professional.online}
-      {!discount &&
-        type === 'professional' &&
-        format === 'blended' &&
-        price.regular.professional.blended}
-
-      {!discount &&
-        type === 'industry' &&
-        format === 'online' &&
-        price.regular.industry.online}
-      {!discount &&
-        type === 'industry' &&
-        format === 'blended' &&
-        price.regular.industry.blended}
-
-      {!discount && type === 'executive' && price.regular.executive}
+      <i className={discount ? 'new-price' : 'simple-price'}>
+        {price[regularOrDiscounted]?.[type]?.[format]} Р.
+      </i>
+      {discount && (
+        <i className='old-price'>{price.regular[type]?.[format]} Р.</i>
+      )}
     </>
   )
 }

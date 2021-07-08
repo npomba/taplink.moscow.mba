@@ -65,6 +65,10 @@ const useAt = () => {
     return getSplitedPath[1] === 'industry'
   }
 
+  const profession = () => {
+    return getSplitedPath[1] === 'profession'
+  }
+
   const executive = () => {
     return getSplitedPath[1] === 'executive'
   }
@@ -92,6 +96,7 @@ const useAt = () => {
     mini: mini(),
     professional: professional(),
     industry: industry(),
+    profession: profession(),
     executive: executive(),
     programs: programs(),
     online: online(),
@@ -103,7 +108,7 @@ const useAt = () => {
     articles: articles(),
     contact: contact(),
     programChunk: programChunk(),
-    getSplitedPath,
+    getSplitedPath
   }
 }
 

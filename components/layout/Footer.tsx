@@ -4,10 +4,12 @@ import SetString from '@/components/hooks/SetString'
 import langHeader from '@/data/translation/header'
 import lang from '@/data/translation/footer'
 import contactData from '@/data/contactData'
-import SVGLocation from '@/components/svgs/SVGLocation'
-import SVGVK from '@/components/svgs/SVGVK'
-import SVGTelegram from '@/components/svgs/SVGTelegram'
-import SVGWhatsapp from '@/components/svgs/SVGWhatsapp'
+import {
+  IconLocation,
+  IconVk,
+  IconTelegram,
+  IconWhatsapp
+} from '@/components/icons'
 
 const Footer = () => {
   const contactInfo = contactData()
@@ -91,11 +93,11 @@ const Footer = () => {
                   <a>{SetString(langHeader.linkLegal)}</a>
                 </Link>
               </li>
-              <li>
+              {/* <li>
                 <Link href='/legal/about' locale='ru'>
                   <a>{SetString(lang.legalAboutLink)}</a>
                 </Link>
-              </li>
+              </li> */}
               <li>
                 <Link href='/payment' locale='ru'>
                   <a>{SetString(lang.paymentLink)}</a>
@@ -104,7 +106,7 @@ const Footer = () => {
             </ul>
             <div className='footer-contacts'>
               <div className='footer-place'>
-                <SVGLocation />
+                <IconLocation />
                 <span>
                   {SetString(contactInfo.ru.address.city)},{' '}
                   {SetString(contactInfo.ru.address.street)}
@@ -113,12 +115,12 @@ const Footer = () => {
               <ul className='footer-socials'>
                 <li>
                   <a href='#!' aria-label='MBA VK'>
-                    <SVGVK />
+                    <IconVk />
                   </a>
                 </li>
                 <li>
                   <a href='#!' aria-label='MBA Telegram'>
-                    <SVGTelegram />
+                    <IconTelegram />
                   </a>
                 </li>
                 <li>
@@ -127,7 +129,7 @@ const Footer = () => {
                     aria-label='MBA Whatsapp'
                     target='_blank'
                     rel='noopener noreferrer'>
-                    <SVGWhatsapp />
+                    <IconWhatsapp />
                   </a>
                 </li>
               </ul>

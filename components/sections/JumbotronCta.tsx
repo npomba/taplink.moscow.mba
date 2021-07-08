@@ -14,6 +14,7 @@ import PopupLoader from '@/components/popups/PopupLoader'
 import Until from '@/components/costs/Until'
 import { useRouter } from 'next/router'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
+import { IconArrowTopRight } from '@/components/icons'
 
 type FormValues = {
   name: string
@@ -39,6 +40,9 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
     values.leadPage = asPath
+    const utms = JSON.parse(sessionStorage.getItem('utms'))
+    values.utms = utms
+    sessionStorage.removeItem('utms')
     const req = await onSubmitForm(values)
     if (req === 200) {
       closeLoadingModal()
@@ -54,7 +58,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
   }
 
   return (
-    <section className='jumbotron-section jumbotron-section--cta'>
+    <section className={stls.container}>
       <Popup open={openLoader} onClose={closeLoadingModal}>
         <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
@@ -65,7 +69,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
           programTitle={programTitle}
         />
       </Popup>
-      <div className='image'>
+      <div className={stls.image}>
         <Image
           src='/assets/images/jumbotron_1.jpg'
           alt={'Аудитория MBA'}
@@ -179,11 +183,7 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                         disabled={errors.name || errors.phone ? true : false}>
                         {SetString(lang.inputSubmitAlt)}
                         <div className='arrow'>
-                          <img
-                            src='/assets/images/arrow_diagonal.svg'
-                            width='17px'
-                            alt={'стрелка'}
-                          />
+                          <IconArrowTopRight width={'17'} height={'17'} />
                         </div>
                       </button>
                     </div>

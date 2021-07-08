@@ -5,13 +5,15 @@ import SetString from '@/components/hooks/SetString'
 import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
-import Discount from '../costs/Discount'
-import SVGCheckCircle from '../svgs/SVGCheckCircle'
-import SVGScreen from '../svgs/SVGScreen'
-import SVGPaperCorner from '../svgs/SVGPaperCorner'
-import SVGClock from '../svgs/SVGClock'
+import Discount from '@/components/costs/Discount'
+import {
+  IconCheckCircle,
+  IconScreen,
+  IconPaperCorner,
+  IconClock
+} from '@/components/icons'
 
 const ProgramsColumn = ({ data, id, type }) => {
   return (
@@ -33,31 +35,21 @@ const ProgramsColumn = ({ data, id, type }) => {
               </span>
             </div>
           </div>
-          <div className='directions-count'>
-            <ProgramsQt programs={data} type={type} format={'online'} />{' '}
-            {SetString(langMenu.qtPrograms)}
-          </div>
+          <ProgramsQty programs={data} type={type} format={'online'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
-            <i className='new-price'>
-              {' '}
-              <Price discount={true} type={type} format={'online'} /> Р.
-            </i>{' '}
-            <i className='old-price'>
-              {' '}
-              <Price discount={false} type={type} format={'online'} /> Р.
-            </i>
+            <Price discount={true} type={type} format={'online'} />
           </div>
           <div className='info-list'>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGCheckCircle fill={'#C7C7C7'} />
+                <IconCheckCircle fill={'#C7C7C7'} />
               </div>
               <span>{SetString(langMenu.formatRemote)}</span>
             </div>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGScreen fill={'#C7C7C7'} />
+                <IconScreen fill={'#C7C7C7'} />
               </div>
               <span>
                 <ProgramSubjects type={type} sum={true} />{' '}
@@ -88,27 +80,22 @@ const ProgramsColumn = ({ data, id, type }) => {
       <li>
         <div className='program-detail-list'>
           <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-          <div className='directions-count'>
-            <ProgramsQt programs={data} type={type} format={'blended'} />{' '}
-            {SetString(langMenu.qtPrograms)}
-          </div>
+
+          <ProgramsQty programs={data} type={type} format={'blended'} />
           <div className='price'>
             {SetString(langMenu.price)}:{' '}
-            <i className='simple-price'>
-              {' '}
-              <Price discount={false} type={type} format={'blended'} /> Р.
-            </i>
+            <Price discount={false} type={type} format={'blended'} />
           </div>
           <div className='info-list'>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGCheckCircle fill={'#C7C7C7'} />
+                <IconCheckCircle fill={'#C7C7C7'} />
               </div>
               <span>{SetString(langMenu.formatBlended)}</span>
             </div>
             <div className='info-flex'>
               <div className='pic'>
-                <SVGScreen fill={'#C7C7C7'} />
+                <IconScreen fill={'#C7C7C7'} />
               </div>
               <span>
                 <ProgramSubjects type={type} sum={true} />{' '}
@@ -149,7 +136,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </div>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGClock fill={'#C7C7C7'} />
+              <IconClock fill={'#C7C7C7'} />
             </div>
             <span>
               <TrainingPeriod type={type} />
@@ -166,7 +153,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </p>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGPaperCorner fill={'#C7C7C7'} />
+              <IconPaperCorner fill={'#C7C7C7'} />
             </div>
             <span>
               <ProgramSubjects type={type} subjects='base' />{' '}
@@ -175,7 +162,7 @@ const ProgramsColumn = ({ data, id, type }) => {
           </div>
           <div className='info-flex'>
             <div className='pic'>
-              <SVGPaperCorner fill={'#C7C7C7'} />
+              <IconPaperCorner fill={'#C7C7C7'} />
             </div>
             <span>
               <ProgramSubjects type={type} subjects='specialty' />{' '}

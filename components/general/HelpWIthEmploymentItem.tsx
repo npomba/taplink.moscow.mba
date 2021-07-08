@@ -1,10 +1,11 @@
 import stls from '@/styles/components/general/HelpWithEmploymentItem.module.sass'
+import { IconCheck } from '@/components/icons'
 
 const HelpWithEmploymentItem = ({ title, description }) => {
   return (
     <div className={stls.block}>
       <div className={stls.iconCheck}>
-        <img src='/assets/images/icon_check.svg' />
+        <IconCheck />
       </div>
       <div className={stls.content}>
         <h4 className={stls.title}>{title}</h4>
