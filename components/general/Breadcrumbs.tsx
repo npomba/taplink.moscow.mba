@@ -70,13 +70,6 @@ const mainRoutes = [
   },
   {
     label: {
-      ru: 'Карточка организации',
-      'en-US': 'Company Card'
-    },
-    path: '/legal/about'
-  },
-  {
-    label: {
       ru: 'Оплата',
       'en-US': 'Payment'
     },
@@ -84,56 +77,57 @@ const mainRoutes = [
   }
 ]
 
-const homeRoute = mainRoutes.find(route => route.path === '/')
+const Breadcrumbs = ({ programChunkData = {} }) => {
+  const at = useAt()
+  const homeRoute = mainRoutes.find(route => route.path === '/')
 
-const addProgramsRoute = (splitedPath, additionalRoutes, router) => {
-  const excludingMainProgramsRoute = splitedPath.filter(
-    pathPart => pathPart !== 'programs'
-  )
+  const addProgramsRoute = (splitedPath, additionalRoutes, router) => {
+    const excludingMainProgramsRoute = splitedPath.filter(
+      pathPart => pathPart !== 'programs'
+    )
 
-  const programsRoute = excludingMainProgramsRoute.reduce(
-    (acc, curr, idx) => {
-      idx === 0
-        ? (acc.label[router.locale] +=
-            curr[0].toUpperCase() + curr.slice(1) + ' MBA ')
-        : (acc.label[router.locale] += curr.toUpperCase())
-      return acc
-    },
-    {
-      label: {
-        ru: '',
-        'en-US': ''
+    const programsRoute = excludingMainProgramsRoute.reduce(
+      (acc, curr, idx) => {
+        idx === 0
+          ? (acc.label[router.locale] +=
+              curr[0].toUpperCase() + curr.slice(1) + ' MBA ')
+          : (acc.label[router.locale] += curr.toUpperCase())
+
+        return acc
       },
-      path: splitedPath.join('/')
-    }
-  )
+      {
+        label: {
+          ru: '',
+          'en-US': ''
+        },
+        path: splitedPath.join('/')
+      }
+    )
 
-  additionalRoutes.push(programsRoute)
-}
-
-const addProgramChunkRoute = (
-  splitedPath,
-  additionalRoutes,
-  programChunkData
-) => {
-  const { title, titleEng, url: programChunkUrl } = programChunkData
-
-  const programChunkRoute = {
-    label: {
-      ru: title,
-      'en-US': titleEng
-    },
-    path: splitedPath.join('/') + '/' + programChunkUrl
+    additionalRoutes.push(programsRoute)
   }
 
-  additionalRoutes.push(programChunkRoute)
-}
+  const addProgramChunkRoute = (
+    splitedPath,
+    additionalRoutes,
+    programChunkData
+  ) => {
+    const { title, titleEng, url: programChunkUrl } = programChunkData
 
-const Breadcrumbs = ({ programChunkData = {} }) => {
+    const programChunkRoute = {
+      label: {
+        ru: title,
+        'en-US': titleEng
+      },
+      path: splitedPath.join('/') + '/' + programChunkUrl
+    }
+
+    additionalRoutes.push(programChunkRoute)
+  }
+
   const [breadcrumbsList, setBreadcrumbsList] = useState([homeRoute])
   const maxNumOfBreadcrumbs = 3
   const router = useRouter()
-  const at = useAt()
   const userViewingPrograms = at.programs
   const userViewingProgramChunk = at.programChunk
 
