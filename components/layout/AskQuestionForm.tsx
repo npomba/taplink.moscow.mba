@@ -173,9 +173,15 @@ const createButtons = (
       <ContactButton
         key={wayToContact.name + idx}
         wayToContact={wayToContact}
-        chooseWayToContact={selectedWayToContact =>
-          handleUserClick(selectedWayToContact, wayToContact.stageStep)
-        }
+        chooseWayToContact={(e, selectedWayToContact) => {
+          const formContainer = e.target.closest(`.${stls.container}`)
+          const enteredQuestion = formContainer.querySelector('textarea').value
+          handleUserClick(
+            selectedWayToContact,
+            wayToContact.stageStep,
+            enteredQuestion
+          )
+        }}
       />
     ))
   }
@@ -343,12 +349,13 @@ const showEnterContactDataStage = dataToShowThisStage => {
     if (!isValid) contactDataInput.focus()
 
     if (isValid) {
-      const { name, selectedMethod } = wayToContact
+      const { name, selectedMethod, question } = wayToContact
 
       const userDataToSend = {
         contactWay: name,
-        selectedMethod,
+        contactMethod: selectedMethod,
         [validationType]: enteredContactData,
+        question,
         leadPage
       }
 
@@ -456,9 +463,9 @@ const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
 
   if (formStage !== 0) askQuestionFormClasses.push(stls.noPadding)
 
-  const chooseWayToContact = (wayToContact, stageStep) => {
+  const chooseWayToContact = (wayToContact, stageStep, enteredQuestion) => {
     setFormStage(prevState => prevState + stageStep)
-    setHowToContact(wayToContact)
+    setHowToContact({ ...wayToContact, question: enteredQuestion })
   }
 
   const chooseContactMethod = method => {
@@ -479,9 +486,10 @@ const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
     <FormStage
       key='selectWay'
       wayToContact={howToContact}
-      handleUserClick={(selectedWayToContact, stageStep) =>
-        chooseWayToContact(selectedWayToContact, stageStep)
-      }
+      handleUserClick={(selectedWayToContact, stageStep, enteredQuestion) => {
+        console.log(enteredQuestion)
+        chooseWayToContact(selectedWayToContact, stageStep, enteredQuestion)
+      }}
       handleUserGoingBack={goToPrevStage}
       selectWay
     />,

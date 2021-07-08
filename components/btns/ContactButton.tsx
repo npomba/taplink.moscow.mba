@@ -13,7 +13,6 @@ const ContactButton = ({ wayToContact, chooseWayToContact }) => {
   const selectedWayToContact = {
     name,
     contactMethods,
-    svg,
     stageStep,
     validationRules,
     selectedMethod: null
@@ -23,7 +22,7 @@ const ContactButton = ({ wayToContact, chooseWayToContact }) => {
 
   return (
     <button
-      onClick={() => chooseWayToContact(selectedWayToContact)}
+      onClick={e => chooseWayToContact(e, selectedWayToContact)}
       className={contactButtonClasses.join(' ')}>
       {svg}
     </button>

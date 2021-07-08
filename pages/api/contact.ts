@@ -17,6 +17,7 @@ const contact = async (req, res) => {
     email,
     contactWay,
     contactMethod,
+    question,
     programTitle,
     leadPage
   } = req.body
@@ -101,6 +102,7 @@ const contact = async (req, res) => {
     promocode,
     contactWay: contactWay || '',
     contactMethod: contactMethod || '',
+    question: question || '',
     root: root || '',
     leadPage: root + leadPage || '',
     ip,
