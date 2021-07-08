@@ -1,0 +1,114 @@
+@use '@/styles/components/layout/StickyBottom.module.sass' as stickyBottom
+@use '@/styles/utils/mixin' as m
+  
+.questionTextarea
+  position: relative
+  width: 305px
+  height: 70px
+  margin-bottom: 9px
+  padding: 14px
+  font-size: 16px
+  border: solid 1px #636363
+  caret-color: #ff3535
+  resize: none
+  &::placeholder
+    font-family: 'Styrene'
+    color: #adadad
+    padding-left: 6px
+  @include m.media(phone)
+    width: 100%
+
+.questionTextareaPlaceholder
+  position: absolute
+  left: 52px
+  top: 40px
+  font-size: 16px
+  color: #000
+  opacity: 0.7
+  transition: all .3s ease-out
+  pointer-events: none
+  &.questionTextareaPlaceholderSmall
+    top: 10px
+    font-size: 13px
+    color: #ff3535
+
+.waysToContactGrid
+  display: grid
+  grid-template-columns: repeat(3, 1fr)
+  gap: 4px
+
+.howToContact
+  font-size: 16px
+  grid-column: 1 / -1
+  font-weight: 500
+  margin-bottom: 5px
+
+.wayToContactTitleContainer
+  position: relative
+  display: flex
+  justify-content: center
+  align-items: center
+  padding: 20px
+  background-color: #f7f7f7
+  color: #ff3535
+
+.goBackArrow
+  position: absolute
+  left: 20px
+  top: 50%
+  padding: 15px
+  transform: translateY(-50%)
+  cursor: pointer
+
+.wayToContactTitle
+  font-size: 14px
+  font-weight: normal
+  line-height: 18px
+  color: #808080
+
+.inputContainer
+  position: relative
+
+.inputPlaceholder
+  position: absolute
+  top: -5px
+  left: 0
+  font-size: 16px
+  color: #000
+  transition: all .3s ease-out
+  pointer-events: none
+  &.inputPlaceholderSmall
+    top: -15px
+    font-size: 13px
+    color: #ff3535
+
+.contactDataInput
+  width: 100%
+  padding-bottom: 14px
+  border: none
+  border-bottom: solid 1px #000
+
+.bottomContainer
+  position: relative
+  padding: 35px
+  & > *:first-child
+    margin-bottom: 11px
+  & > *
+    width: 100%
+
+.formSubmitted
+  display: flex
+  flex-direction: column
+  justify-content: center
+  align-items: center
+  .weWillContactYouPara,
+  .thanksForSubmitting
+    color: #ff3535
+  .thanksForSubmitting
+    font-size: 22px
+  .weWillContactYouPara
+    font-size: 12px
+  .circle
+    width: 68px
+    height: 68px
+    margin-bottom: 11px

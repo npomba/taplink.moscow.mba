@@ -8,10 +8,13 @@ import 'reactjs-popup/dist/index.css'
 import PopupForm from '@/components/popups/PopupForm'
 import PopupLearnMore from '@/components/popups/PopupLearnMore'
 
-const StickyBottom = () => {
+const StickyBottom = ({
+  openStickyModule,
+  hideStickyModule,
+  closeStickyModule,
+  clickedAsk
+}) => {
   useEffect(() => {
-    const stickyBottomPart = document.querySelector('.sticky-bottom-part')
-
     document.addEventListener('scroll', () => {
       // check if on programs page
       const pathArr = window.location.pathname.split('/').filter(part => part)
@@ -26,19 +29,17 @@ const StickyBottom = () => {
         )
       ) {
         const pageHeight = document.body.scrollHeight
-        window.pageYOffset > 1500 && window.pageYOffset < pageHeight - 2500
-          ? stickyBottomPart.classList.add('show')
-          : stickyBottomPart.classList.remove('show')
+        window.pageYOffset > 1500 &&
+        window.pageYOffset < pageHeight - 2500 &&
+        !clickedAsk
+          ? openStickyModule()
+          : hideStickyModule()
       }
     })
-  }, [])
-
-  const [stickyModule, setStickyModule] = useState(false)
-  const closeStickyModule = () => setStickyModule(o => !o)
+  }, [hideStickyModule, openStickyModule, clickedAsk])
 
   return (
-    <div
-      className={`${stls.sticky} sticky-bottom-part ${stickyModule && 'hide'}`}>
+    <div className={`${stls.sticky} sticky-bottom-part show`}>
       {/* <div className='container'> */}
       <div className={stls.content}>
         <p className={stls.p}>

@@ -1,0 +1,44 @@
+@use '@/styles/components/layout/StickyBottom.module.sass' as stickyBottom
+@use '@/styles/utils/mixin' as m
+  
+.container
+  position: absolute
+  right: 0
+  bottom: 82px
+  width:  375px
+  display: flex
+  flex-direction: column
+  justify-content: center
+  min-height: 226px
+  padding: 27px 35px
+  background-color: #fff
+  @include m.media(phone)
+    width: 100vw
+  &.noPadding
+    padding: 0
+  &::after
+    display: none
+    content: ''
+    position: absolute
+    left: 50%
+    top: 7px
+    transform: translateX(-50%)
+    width: 55px
+    height: 3px
+    border-radius: 1.5px
+    background-color: #e9e9e9
+    @include m.media(tablet, phone)
+      display: block
+
+a.crossTop
+  @include stickyBottom.crossTop
+  position: absolute
+  top: -23px
+  right: 5px
+  display: block
+  cursor: pointer
+  @include m.media(tablet, phone)
+    top: -20px
+    right: 10px
+  svg path
+    stroke: #AEAEAE
