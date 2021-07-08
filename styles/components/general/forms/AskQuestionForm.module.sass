@@ -16,19 +16,6 @@
     width: 100vw
   &.noPadding
     padding: 0
-  &::after
-    display: none
-    content: ''
-    position: absolute
-    left: 50%
-    top: 7px
-    transform: translateX(-50%)
-    width: 55px
-    height: 3px
-    border-radius: 1.5px
-    background-color: #e9e9e9
-    @include m.media(tablet, phone)
-      display: block
 
 a.crossTop
   @include stickyBottom.crossTop

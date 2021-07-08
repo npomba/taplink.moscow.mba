@@ -164,8 +164,7 @@ const createButtons = dataToCreateButtons => {
     enterContactData,
     handleUserClick,
     setIsContactDataInputTouched,
-    userQuestion,
-    isQuestionLengthInvalid
+    userQuestion
   } = dataToCreateButtons
 
   let buttons
@@ -182,7 +181,6 @@ const createButtons = dataToCreateButtons => {
             userQuestion
           )
         }}
-        disabled={isQuestionLengthInvalid}
       />
     ))
   }
@@ -192,7 +190,7 @@ const createButtons = dataToCreateButtons => {
       <button
         key={method.name + idx}
         onClick={() => handleUserClick(method.name)}
-        className='button formStageButton'>
+        className={`button ${stls.formStageButton}`}>
         {method.icon} {method.name}
       </button>
     ))
@@ -216,42 +214,26 @@ const showSelectWayStage = dataToShowThisStage => {
     userQuestion,
     setUserQuestion,
     questionTextareaPlaceholder,
-    setQuestionTextareaPlaceholder,
     isQuestionTextareaTouched,
-    setIsQuestionTextareaTouched,
-    setIsQuestionLengthInvalid
+    setIsQuestionTextareaTouched
   } = dataToShowThisStage
 
   const questionTextareaPlaceholderClasses = [stls.questionTextareaPlaceholder]
 
   if (isQuestionTextareaTouched)
     questionTextareaPlaceholderClasses.push(
-      stls.questionTextareaPlaceholderSmall
+      stls.questionTextareaPlaceholderInvisible
     )
 
   const buttons = createButtons(dataToShowThisStage)
 
-  const handleQuestionChange = e => {
-    checkQuestionValidity()
-    setUserQuestion(e.target.value)
-  }
-
-  const checkQuestionValidity = () => {
-    if (userQuestion.length < 5) {
-      setIsQuestionLengthInvalid(true)
-      setQuestionTextareaPlaceholder('*Ваш вопрос слишком короткий')
-    } else {
-      setIsQuestionLengthInvalid(false)
-      setQuestionTextareaPlaceholder('')
-    }
-  }
-
   return (
     <>
       <textarea
-        onFocus={() => setIsQuestionTextareaTouched(true)}
+        autoFocus
+        placeholder='Напишите вопрос...'
         value={userQuestion}
-        onChange={e => handleQuestionChange(e)}
+        onChange={e => setUserQuestion(e.target.value)}
         className={stls.questionTextarea}
       />
       <p className={questionTextareaPlaceholderClasses.join(' ')}>
@@ -417,12 +399,7 @@ const AskQuestionFormStage = ({
     vk: 'ID ВКонтакте'
   }
 
-  const [userQuestion, setUserQuestion] = useState('')
-  const [isQuestionLengthInvalid, setIsQuestionLengthInvalid] = useState(true)
-  const [isQuestionTextareaTouched, setIsQuestionTextareaTouched] =
-    useState(false)
-  const [questionTextareaPlaceholder, setQuestionTextareaPlaceholder] =
-    useState('Напишите вопрос...')
+  const [userQuestion, setUserQuestion] = useState(wayToContact?.question ?? '')
 
   const [isContactDataInputTouched, setIsContactDataInputTouched] =
     useState(false)
@@ -440,12 +417,6 @@ const AskQuestionFormStage = ({
     handleUserGoingBack,
     userQuestion,
     setUserQuestion,
-    isQuestionTextareaTouched,
-    setIsQuestionTextareaTouched,
-    questionTextareaPlaceholder,
-    setQuestionTextareaPlaceholder,
-    isQuestionLengthInvalid,
-    setIsQuestionLengthInvalid,
     isContactDataInputTouched,
     setIsContactDataInputTouched,
     inputPlaceholderText,

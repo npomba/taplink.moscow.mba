@@ -1,6 +1,6 @@
 import stls from '@/styles/components/btns/ContactButton.module.sass'
 
-const ContactButton = ({ wayToContact, chooseWayToContact, disabled }) => {
+const ContactButton = ({ wayToContact, chooseWayToContact }) => {
   const {
     name,
     contactMethods,
@@ -23,8 +23,7 @@ const ContactButton = ({ wayToContact, chooseWayToContact, disabled }) => {
   return (
     <button
       onClick={() => chooseWayToContact(selectedWayToContact)}
-      className={contactButtonClasses.join(' ')}
-      disabled={disabled}>
+      className={contactButtonClasses.join(' ')}>
       {svg}
     </button>
   )
