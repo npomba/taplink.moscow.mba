@@ -925,7 +925,7 @@ h1 {
     right: 40px;
     text-align: center;
     line-height: 85px;
-    img {
+    svg {
       display: inline-block;
       vertical-align: middle;
     }
@@ -988,16 +988,33 @@ h1 {
   line-height: 1.2;
   width: 330px;
   margin-top: -13px;
-  li {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    &:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-bottom: none;
+  & .jumDivider {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  @media (min-width: 1020px) {
+    display: flex;
+    justify-content: space-between;
+    &.jumbotron-list-program {
+      flex-direction: column;
+    }
+    & .jumDivider {
+      height: 1px;
+      width: 100%;
     }
   }
+  @media (max-width: 1019px) {
+    & .jumDivider {
+      padding: 0;
+      width: 1px;
+    }
+  }
+  @media (max-width: 480px) {
+    & .jumDivider {
+      display: none;
+    }
+  }
+
   .number {
     font-weight: bold;
     font-size: 48px;
@@ -6361,17 +6378,17 @@ footer {
           padding-right: 22px;
           padding-bottom: 22px;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           border-bottom: 1px solid rgb(#fff, 0.3);
           padding-left: 36px;
           padding-bottom: 22px;
         }
-        &:nth-child(3) {
+        &:nth-child(5) {
           border-right: 1px solid rgb(#fff, 0.3);
           padding-top: 22px;
           padding-right: 22px;
         }
-        &:nth-child(4) {
+        &:nth-child(7) {
           padding-top: 22px;
           padding-left: 36px;
         }
@@ -6863,6 +6880,12 @@ div.popup-content.pdf-popup-content {
 
 .jumbotron-content-cta {
   padding-left: 0;
+
+  @media (max-width: 1330px) {
+    & .jumDivider {
+      display: none;
+    }
+  }
 
   h1 {
     font-size: 58px;
