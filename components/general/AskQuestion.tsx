@@ -1,4 +1,4 @@
-import stls from '@/styles/components/layout/AskQuestion.module.sass'
+import stls from '@/styles/components/general/AskQuestion.module.sass'
 import SVGMessages from '@/components/svgs/SVGMessages'
 
 const AskQuestion = ({ handleClickedAskQuestion }) => {

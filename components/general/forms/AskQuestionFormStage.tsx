@@ -1,16 +1,14 @@
-import stls from '@/styles/components/layout/AskQuestionForm.module.sass'
+import stls from '@/styles/components/general/forms/AskQuestionFormStage.module.sass'
 import { useState } from 'react'
 import { useRouter } from 'next/router'
-import onSubmitForm from '@/components/hooks/onSubmitForm'
 import ContactButton from '@/components/btns/ContactButton'
+import SVGArrowLeft from '@/components/svgs/SVGArrowLeft'
 import SVGTelegram from '@/components/svgs/SVGTelegram'
 import SVGWhatsApp from '@/components/svgs/SVGWhatsapp'
 import SVGViber from '@/components/svgs/SVGViber'
 import SVGVK from '@/components/svgs/SVGVK'
 import SVGMobilePhone from '@/components/svgs/SVGMobilePhone'
 import SVGEmail from '@/components/svgs/SVGEmail'
-import SVGArrowLeft from '@/components/svgs/SVGArrowLeft'
-import SVGClose from '@/components/svgs/SVGClose'
 
 const waysToContact = [
   {
@@ -396,7 +394,7 @@ const showFormSubmittedStage = () => {
   )
 }
 
-const FormStage = ({
+const AskQuestionFormStage = ({
   wayToContact,
   handleUserClick,
   handleUserGoingBack,
@@ -464,76 +462,4 @@ const FormStage = ({
   if (formSubmitted) return showFormSubmittedStage()
 }
 
-const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
-  const [formStage, setFormStage] = useState(0)
-  const [howToContact, setHowToContact] = useState(null)
-
-  const askQuestionFormClasses = [stls.container]
-
-  if (formStage !== 0) askQuestionFormClasses.push(stls.noPadding)
-
-  const chooseWayToContact = (wayToContact, stageStep, enteredQuestion) => {
-    setFormStage(prevState => prevState + stageStep)
-    setHowToContact({ ...wayToContact, question: enteredQuestion })
-  }
-
-  const chooseContactMethod = method => {
-    setFormStage(prevState => prevState + 1)
-    setHowToContact(prevState => ({ ...prevState, selectedMethod: method }))
-  }
-
-  const enterContactData = data => {
-    setFormStage(prevState => prevState + 1)
-    setHowToContact(prevState => ({ ...prevState, contactData: data }))
-    onSubmitForm(data)
-  }
-
-  const goToPrevStage = stageStep =>
-    setFormStage(prevState => prevState - stageStep)
-
-  const formStages = [
-    <FormStage
-      key='selectWay'
-      wayToContact={howToContact}
-      handleUserClick={(selectedWayToContact, stageStep, enteredQuestion) =>
-        chooseWayToContact(selectedWayToContact, stageStep, enteredQuestion)
-      }
-      handleUserGoingBack={goToPrevStage}
-      selectWay
-    />,
-    <FormStage
-      key='selectMethod'
-      wayToContact={howToContact}
-      handleUserClick={method => chooseContactMethod(method)}
-      handleUserGoingBack={goToPrevStage}
-      selectMethod
-    />,
-    <FormStage
-      key='enterContactData'
-      wayToContact={howToContact}
-      handleUserClick={data => enterContactData(data)}
-      handleUserGoingBack={goToPrevStage}
-      enterContactData
-    />,
-    <FormStage
-      key='formSubmitted'
-      wayToContact={howToContact}
-      handleUserClick={() => {}}
-      handleUserGoingBack={() => {}}
-      formSubmitted
-    />
-  ]
-
-  return (
-    <div className={askQuestionFormClasses.join(' ')}>
-      <a
-        className={`${stls.crossTop} ${stls.pointer}`}
-        onClick={handleAskQuestionFormClose}>
-        <SVGClose />
-      </a>
-      {formStages[formStage]}
-    </div>
-  )
-}
-
-export default AskQuestionForm
+export default AskQuestionFormStage

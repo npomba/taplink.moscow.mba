@@ -13,7 +13,9 @@
   cursor: pointer
   transition: all .3s ease-out
   &:disabled
-    cursor: not-allowed
+    &:hover
+      background-color: #808080
+      cursor: default
   @include m.media(phone)
     width: 100%
 
