@@ -9,9 +9,9 @@ $mobileViewLineBrakeView: '625px'
   // height: 82px
   //
   padding: 13px 0
-  position: fixed
+  // position: fixed
   display: flex
-  bottom: 0
+  // bottom: 0
   transform: translateY(200%)
   box-shadow: 0px -4px 10px rgba(0, 0, 0, 0.15)
   transition: transform 0.2s ease-in-out
@@ -102,7 +102,7 @@ $mobileViewLineBrakeView: '625px'
   @media(max-width: $mobileViewLineBrakeView)
     display: none
 
-.crossTop
+@mixin crossTop
   display: none
   @media(max-width: $mobileViewLineBrakeView)
     display: block
@@ -110,6 +110,9 @@ $mobileViewLineBrakeView: '625px'
     top: -34px
     right: 0
     opacity: 0.5
+
+.crossTop
+  @include crossTop
 
 .pointer
   cursor: pointer

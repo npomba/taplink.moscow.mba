@@ -8,10 +8,18 @@ import { v4 as uuidv4 } from 'uuid'
 import moment from 'moment'
 import { WebServiceClient } from '@maxmind/geoip2-node'
 
-export default async (req, res) => {
+const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  let { name, phone, email, programTitle, leadPage } = req.body
+  let {
+    name,
+    phone,
+    email,
+    contactWay,
+    contactMethod,
+    programTitle,
+    leadPage
+  } = req.body
 
   if (name.includes('@')) {
     email = name
@@ -91,7 +99,8 @@ export default async (req, res) => {
     phone: phone || '',
     email: email || '',
     promocode,
-    contactWay: '',
+    contactWay: contactWay || '',
+    contactMethod: contactMethod || '',
     root: root || '',
     leadPage: root + leadPage || '',
     ip,
@@ -392,3 +401,5 @@ export default async (req, res) => {
     console.error(err)
   }
 }
+
+export default contact

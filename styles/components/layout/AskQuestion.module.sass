@@ -1,0 +1,35 @@
+@use '@/styles/utils/mixin' as m
+  
+.container
+  position: absolute
+  right: 0
+  bottom: 82px
+  height: 80px
+  padding-right: 27px
+  background-color: transparent
+  z-index: 1
+  @include m.media(laptop)
+    height: 60px
+  @include m.media(tablet, phone)
+    height: 80px
+    
+.messages
+  position: relative
+  width: 58px
+  height: 58px
+  background-color: #27C500
+  border-radius: 50%
+  cursor: pointer
+  transition: all .3s ease-out
+  &:hover
+    background-color: lighten(#27C500, 2%)
+  & > *
+    position: absolute
+  & > *:first-of-type
+    left: 30%
+    top: 60%
+    transform: translate(-30%, -60%)
+  & > *:nth-of-type(2)
+    left: 60%
+    top: 50%
+    transform: translate(-60%, -50%)

@@ -10,6 +10,7 @@ const onSubmitForm = async values => {
     return output
   } catch (err) {
     console.log(err)
+    console.log(values)
     return err
   }
 }

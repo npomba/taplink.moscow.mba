@@ -1,11 +1,11 @@
 import stls from '@/styles/components/layout/Wrapper.module.sass'
-import StickyBottom from '@/components/layout/StickyBottom'
+import StickyBottomContainer from '@/components/layout/StickyBottomContainer'
 
 const Wrapper = ({ children }) => {
   return (
     <div className='page'>
       {children}
-      <StickyBottom />
+      <StickyBottomContainer />
     </div>
   )
 }
