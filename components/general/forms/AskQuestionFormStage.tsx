@@ -9,7 +9,8 @@ import {
   IconViber,
   IconVk,
   IconMobilePhone,
-  IconEmail
+  IconEmail,
+  IconCheck
 } from '@/components/icons'
 
 const waysToContact = [
@@ -24,7 +25,7 @@ const waysToContact = [
       },
       {
         name: 'Написать',
-        icon: <IconTelegram marginRight='19px' />
+        icon: <IconTelegram />
       }
     ],
     validationRules: {
@@ -44,7 +45,7 @@ const waysToContact = [
       },
       {
         name: 'Написать',
-        icon: <IconTelegram marginRight='19px' />
+        icon: <IconTelegram />
       }
     ],
     validationRules: {
@@ -64,7 +65,7 @@ const waysToContact = [
       },
       {
         name: 'Написать',
-        icon: <IconTelegram marginRight='19px' />
+        icon: <IconTelegram />
       }
     ],
     validationRules: {
@@ -80,7 +81,7 @@ const waysToContact = [
     contactMethods: [
       {
         name: 'Написать',
-        icon: <IconTelegram marginRight='19px' />
+        icon: <IconTelegram />
       }
     ],
     validationRules: {
@@ -112,7 +113,7 @@ const waysToContact = [
     contactMethods: [
       {
         name: 'Написать',
-        icon: <IconTelegram marginRight='19px' />
+        icon: <IconTelegram />
       }
     ],
     validationRules: {
@@ -191,7 +192,9 @@ const createButtons = dataToCreateButtons => {
         key={method.name + idx}
         onClick={() => handleUserClick(method.name)}
         className={`button ${stls.formStageButton}`}>
-        {method.icon} {method.name}
+        <div className={stls.btnContent}>
+          {method.icon} {method.name}
+        </div>
       </button>
     ))
   }
@@ -363,11 +366,7 @@ const showFormSubmittedStage = () => {
   return (
     <div className={`${stls.formSubmitted} thanks-popup-content`}>
       <div className={`circle ${stls.circle}`}>
-        <img
-          src='/assets/images/icon_check.svg'
-          alt='Галочка подтверждения'
-          className='light'
-        />
+        <IconCheck />
       </div>
       <h3 className={stls.thanksForSubmitting}>Спасибо за заявку!</h3>
       <p className={stls.weWillContactYouPara}>
