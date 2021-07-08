@@ -11,7 +11,6 @@ import { WebServiceClient } from '@maxmind/geoip2-node'
 const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-
   let {
     name,
     phone,
