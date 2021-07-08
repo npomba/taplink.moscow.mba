@@ -167,7 +167,6 @@ const createButtons = dataToCreateButtons => {
   } = dataToCreateButtons
 
   let buttons
-  let placeholder
 
   if (selectWay) {
     buttons = waysToContact.map((wayToContact, idx) => (
