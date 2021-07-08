@@ -199,7 +199,7 @@ const createButtons = dataToCreateButtons => {
   if (enterContactData) {
     buttons = (
       <button
-        className='button'
+        className={`button ${stls.formStageButton} ${stls.sendButton}`}
         onClick={() => setIsContactDataInputTouched(true)}>
         Отправить
       </button>
