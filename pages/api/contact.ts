@@ -15,6 +15,7 @@ const contact = async (req, res) => {
     name,
     phone,
     email,
+    vk,
     contactWay,
     contactMethod,
     question,
@@ -22,7 +23,7 @@ const contact = async (req, res) => {
     leadPage
   } = req.body
 
-  if (name.includes('@')) {
+  if (name?.includes('@')) {
     email = name
     name = ''
   }
@@ -99,6 +100,7 @@ const contact = async (req, res) => {
     name: name || '',
     phone: phone || '',
     email: email || '',
+    vk: vk || '',
     promocode,
     contactWay: contactWay || '',
     contactMethod: contactMethod || '',
@@ -168,12 +170,24 @@ const contact = async (req, res) => {
         tdVal: data.email
       },
       {
+        tdKey: 'ВКонтакте',
+        tdVal: data.vk
+      },
+      {
         tdKey: 'Промокод',
         tdVal: data.promocode
       },
       {
         tdKey: 'Способ связи',
         tdVal: data.contactWay
+      },
+      {
+        tdKey: 'Как связаться',
+        tdVal: data.contactMethod
+      },
+      {
+        tdKey: 'Вопрос',
+        tdVal: data.question
       },
       {
         tdKey: 'Лид сайт',
@@ -245,10 +259,6 @@ const contact = async (req, res) => {
       },
       {
         tdKey: 'Университет',
-        tdVal: ''
-      },
-      {
-        tdKey: 'Вопрос',
         tdVal: ''
       },
       {
@@ -385,7 +395,7 @@ const contact = async (req, res) => {
       from: 'lead@moscow.mba',
       to: `${
         dev
-          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com'
+          ? 'nova@ipo.msk.ru, novailoveyou3@gmail.com, fullextentofsuperiority@mail.ru'
           : 'mba.academy@yandex.ru, leads@moscow.mba'
       }`,
       subject, // Subject line

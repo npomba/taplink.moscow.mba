@@ -8,11 +8,12 @@
   height: 32px
   padding: 8px 0
   color: #fff
-  background-color: #ff3535
   text-transform: uppercase
   border: none
   cursor: pointer
   transition: all .3s ease-out
+  &:disabled
+    cursor: not-allowed
   @include m.media(phone)
     width: 100%
 

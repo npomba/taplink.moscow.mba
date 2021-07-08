@@ -132,11 +132,9 @@ const createWayToContactTitle = (wayToContact, enterContactData) => {
   return <p className={stls.wayToContactTitle}>{wayToContactTitle}</p>
 }
 
-const createFormStageTitleContainer = (
-  wayToContact,
-  enterContactData,
-  handleUserGoingBack
-) => {
+const createFormStageTitleContainer = dataToCreateTitleContainer => {
+  const { wayToContact, enterContactData, handleUserGoingBack } =
+    dataToCreateTitleContainer
   const { stageStep } = wayToContact
 
   const wayToContactTitle = createWayToContactTitle(
@@ -158,30 +156,34 @@ const createFormStageTitleContainer = (
   return formStageTitleContainer
 }
 
-const createButtons = (
-  wayToContact,
-  selectWay,
-  selectMethod,
-  enterContactData,
-  handleUserClick,
-  handleContactDataInputTouched = _ => {}
-) => {
+const createButtons = dataToCreateButtons => {
+  const {
+    wayToContact,
+    selectWay,
+    selectMethod,
+    enterContactData,
+    handleUserClick,
+    setIsContactDataInputTouched,
+    userQuestion,
+    isQuestionLengthInvalid
+  } = dataToCreateButtons
+
   let buttons
+  let placeholder
 
   if (selectWay) {
     buttons = waysToContact.map((wayToContact, idx) => (
       <ContactButton
         key={wayToContact.name + idx}
         wayToContact={wayToContact}
-        chooseWayToContact={(e, selectedWayToContact) => {
-          const formContainer = e.target.closest(`.${stls.container}`)
-          const enteredQuestion = formContainer.querySelector('textarea').value
+        chooseWayToContact={selectedWayToContact => {
           handleUserClick(
             selectedWayToContact,
             wayToContact.stageStep,
-            enteredQuestion
+            userQuestion
           )
         }}
+        disabled={isQuestionLengthInvalid}
       />
     ))
   }
@@ -201,7 +203,7 @@ const createButtons = (
     buttons = (
       <button
         className='button'
-        onClick={() => handleContactDataInputTouched(true)}>
+        onClick={() => setIsContactDataInputTouched(true)}>
         Отправить
       </button>
     )
@@ -212,27 +214,50 @@ const createButtons = (
 
 const showSelectWayStage = dataToShowThisStage => {
   const {
-    wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
-    handleUserClick
+    userQuestion,
+    setUserQuestion,
+    questionTextareaPlaceholder,
+    setQuestionTextareaPlaceholder,
+    isQuestionTextareaTouched,
+    setIsQuestionTextareaTouched,
+    setIsQuestionLengthInvalid
   } = dataToShowThisStage
 
-  const buttons = createButtons(
-    wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
-    handleUserClick
-  )
+  const questionTextareaPlaceholderClasses = [stls.questionTextareaPlaceholder]
+
+  if (isQuestionTextareaTouched)
+    questionTextareaPlaceholderClasses.push(
+      stls.questionTextareaPlaceholderSmall
+    )
+
+  const buttons = createButtons(dataToShowThisStage)
+
+  const handleQuestionChange = e => {
+    checkQuestionValidity()
+    setUserQuestion(e.target.value)
+  }
+
+  const checkQuestionValidity = () => {
+    if (userQuestion.length < 5) {
+      setIsQuestionLengthInvalid(true)
+      setQuestionTextareaPlaceholder('*Ваш вопрос слишком короткий')
+    } else {
+      setIsQuestionLengthInvalid(false)
+      setQuestionTextareaPlaceholder('')
+    }
+  }
 
   return (
     <>
       <textarea
-        autoFocus
-        placeholder='Напишите вопрос...'
-        className={stls.questionTextarea}></textarea>
+        onFocus={() => setIsQuestionTextareaTouched(true)}
+        value={userQuestion}
+        onChange={e => handleQuestionChange(e)}
+        className={stls.questionTextarea}
+      />
+      <p className={questionTextareaPlaceholderClasses.join(' ')}>
+        {questionTextareaPlaceholder}
+      </p>
       <div className={stls.waysToContactGrid}>
         <p className={stls.howToContact}>Куда ответить:</p>
         {buttons}
@@ -242,27 +267,9 @@ const showSelectWayStage = dataToShowThisStage => {
 }
 
 const showSelectMethodStage = dataToShowThisStage => {
-  const {
-    wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
-    handleUserClick,
-    handleUserGoingBack
-  } = dataToShowThisStage
-
-  const formStageTitleContainer = createFormStageTitleContainer(
-    wayToContact,
-    enterContactData,
-    handleUserGoingBack
-  )
-  const buttons = createButtons(
-    wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
-    handleUserClick
-  )
+  const formStageTitleContainer =
+    createFormStageTitleContainer(dataToShowThisStage)
+  const buttons = createButtons(dataToShowThisStage)
 
   return (
     <>
@@ -275,11 +282,7 @@ const showSelectMethodStage = dataToShowThisStage => {
 const showEnterContactDataStage = dataToShowThisStage => {
   const {
     wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
     handleUserClick,
-    handleUserGoingBack,
     isContactDataInputTouched,
     setIsContactDataInputTouched,
     inputPlaceholderText,
@@ -292,20 +295,10 @@ const showEnterContactDataStage = dataToShowThisStage => {
   if (isContactDataInputTouched)
     inputPlaceholderClasses.push(stls.inputPlaceholderSmall)
 
-  const formStageTitleContainer = createFormStageTitleContainer(
-    wayToContact,
-    enterContactData,
-    handleUserGoingBack
-  )
+  const formStageTitleContainer =
+    createFormStageTitleContainer(dataToShowThisStage)
 
-  const buttons = createButtons(
-    wayToContact,
-    selectWay,
-    selectMethod,
-    enterContactData,
-    handleUserClick,
-    setIsContactDataInputTouched
-  )
+  const buttons = createButtons(dataToShowThisStage)
 
   const {
     validationRules: { shouldBeValidated, validationType }
@@ -425,8 +418,16 @@ const FormStage = ({
     vk: 'ID ВКонтакте'
   }
 
+  const [userQuestion, setUserQuestion] = useState('')
+  const [isQuestionLengthInvalid, setIsQuestionLengthInvalid] = useState(true)
+  const [isQuestionTextareaTouched, setIsQuestionTextareaTouched] =
+    useState(false)
+  const [questionTextareaPlaceholder, setQuestionTextareaPlaceholder] =
+    useState('Напишите вопрос...')
+
   const [isContactDataInputTouched, setIsContactDataInputTouched] =
     useState(false)
+
   const [inputPlaceholderText, setInputPlaceholderText] = useState(
     `Введите ${whatDataToEnter[validationType]}`
   )
@@ -438,6 +439,14 @@ const FormStage = ({
     enterContactData,
     handleUserClick,
     handleUserGoingBack,
+    userQuestion,
+    setUserQuestion,
+    isQuestionTextareaTouched,
+    setIsQuestionTextareaTouched,
+    questionTextareaPlaceholder,
+    setQuestionTextareaPlaceholder,
+    isQuestionLengthInvalid,
+    setIsQuestionLengthInvalid,
     isContactDataInputTouched,
     setIsContactDataInputTouched,
     inputPlaceholderText,
@@ -486,10 +495,9 @@ const AskQuestionForm = ({ handleAskQuestionFormClose }) => {
     <FormStage
       key='selectWay'
       wayToContact={howToContact}
-      handleUserClick={(selectedWayToContact, stageStep, enteredQuestion) => {
-        console.log(enteredQuestion)
+      handleUserClick={(selectedWayToContact, stageStep, enteredQuestion) =>
         chooseWayToContact(selectedWayToContact, stageStep, enteredQuestion)
-      }}
+      }
       handleUserGoingBack={goToPrevStage}
       selectWay
     />,

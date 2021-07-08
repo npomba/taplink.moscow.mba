@@ -43,6 +43,7 @@ a.crossTop
     stroke: #AEAEAE
 
 .questionTextarea
+  position: relative
   width: 305px
   height: 70px
   margin-bottom: 9px
@@ -57,6 +58,20 @@ a.crossTop
     padding-left: 6px
   @include m.media(phone)
     width: 100%
+
+.questionTextareaPlaceholder
+  position: absolute
+  left: 52px
+  top: 40px
+  font-size: 16px
+  color: #000
+  opacity: 0.7
+  transition: all .3s ease-out
+  pointer-events: none
+  &.questionTextareaPlaceholderSmall
+    top: 10px
+    font-size: 13px
+    color: #ff3535
 
 .waysToContactGrid
   display: grid
