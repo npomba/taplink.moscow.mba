@@ -196,14 +196,19 @@ const JumbotronCta = ({ programTitle = null, programId = null }) => {
                 <div className='number'>100+</div>
                 <p>{SetString(lang.benefitOneDisc)}</p>
               </li>
+              <li className='jumDivider'></li>
               <li>
                 <div className='number'>2021+</div>
                 <p>{SetString(lang.benefitTwoDisc)}</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>150+</div>
                 <p>{SetString(lang.benefitThreeDisc)}</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>2000+</div>
                 <p>{SetString(lang.benefitFourDisc)}</p>

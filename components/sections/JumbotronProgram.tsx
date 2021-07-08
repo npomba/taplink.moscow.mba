@@ -13,7 +13,7 @@ import useAt from '@/components/hooks/useAt'
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
   const profession = data.mbaTypeOfProgram === 'profession'
-  console.log(profession)
+  // console.log(profession)
 
   return (
     <section className='jumbotron-section'>
@@ -68,15 +68,19 @@ const JumbotronProgram = ({ data }) => {
                 )}
               </Popup>
             </div>
-            <ul className='jumbotron-list'>
+            <ul className='jumbotron-list jumbotron-list-program'>
               <li>
                 <div className='number'>2021</div>
                 <p>Новейшая программа 2021 года</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>150+</div>
                 <p>международных экспертов</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>2000+</div>
                 <p>студентов по всему миру</p>

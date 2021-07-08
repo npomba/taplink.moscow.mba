@@ -1,11 +1,11 @@
 @use '@/styles/components/layout/StickyBottom.module.sass' as stickyBottom
 @use '@/styles/utils/mixin' as m
-  
+
 .container
   position: absolute
   right: 0
   bottom: 82px
-  width:  375px
+  width: 375px
   display: flex
   flex-direction: column
   justify-content: center
@@ -17,8 +17,8 @@
   &.noPadding
     padding: 0
   &::after
-    display: none
     content: ''
+    display: none
     position: absolute
     left: 50%
     top: 7px
