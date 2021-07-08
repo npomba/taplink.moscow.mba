@@ -7,8 +7,8 @@ import contactData from '@/data/contactData'
 import {
   IconLocation,
   IconVk,
-  IconTelegram,
-  IconWhatsapp
+  IconTelegramAlt,
+  IconWhatsappAlt
 } from '@/components/icons'
 
 const Footer = () => {
@@ -120,7 +120,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a href='#!' aria-label='MBA Telegram'>
-                    <IconTelegram />
+                    <IconTelegramAlt />
                   </a>
                 </li>
                 <li>
@@ -129,7 +129,7 @@ const Footer = () => {
                     aria-label='MBA Whatsapp'
                     target='_blank'
                     rel='noopener noreferrer'>
-                    <IconWhatsapp />
+                    <IconWhatsappAlt />
                   </a>
                 </li>
               </ul>

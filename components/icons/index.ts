@@ -18,10 +18,12 @@ import IconPaperCorner from '@/components/icons/IconPaperCorner'
 import IconRosObrInsignia from '@/components/icons/IconRosObrInsignia'
 import IconScreen from '@/components/icons/IconScreen'
 import IconTelegram from '@/components/icons/IconTelegram'
+import IconTelegramAlt from '@/components/icons/IconTelegramAlt'
 import IconTriangleBottom from '@/components/icons/IconTriangleBottom'
 import IconViber from '@/components/icons/IconViber'
 import IconVk from '@/components/icons/IconVk'
 import IconWhatsapp from '@/components/icons/IconWhatsapp'
+import IconWhatsappAlt from '@/components/icons/IconWhatsappAlt'
 
 export {
   IconArrowLeft,
@@ -44,8 +46,10 @@ export {
   IconRosObrInsignia,
   IconScreen,
   IconTelegram,
+  IconTelegramAlt,
   IconTriangleBottom,
   IconViber,
   IconVk,
-  IconWhatsapp
+  IconWhatsapp,
+  IconWhatsappAlt
 }
