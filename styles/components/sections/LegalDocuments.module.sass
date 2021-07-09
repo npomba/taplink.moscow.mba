@@ -1,7 +1,6 @@
 @use '@/styles/utils/mixin' as m
 
-.legalSection
-  border-bottom: solid 1px #D2D2D2
+.container
   &:not(:first-of-type)
     padding: 75px 0
     @include m.media(tablet, phone)
@@ -11,14 +10,11 @@
     @include m.media(tablet, phone)
       font-size: 16px
 
-.subHeading
+.title
   font-size: 36px
   @include m.media(tablet, phone)
     font-size: 23px
     margin-bottom: 15px
-
-.legalDocuments
-  border-bottom: none
 
 .list
   display: flex
@@ -27,43 +23,40 @@
   @include m.media(tablet, phone)
     margin-bottom: 0
 
-.flexContainer
-  flex: 1 0 100%
+.item
+  padding-right: 45px
   display: flex
-  align-items: flex-end
-  flex-wrap: wrap
-  .listItem
-    margin-bottom: 20px
-    padding-right: 45px
-    @include m.media(tablet, phone)
-      flex: 1 0 100%
-
-.listItem
-  margin-bottom: 10px
-  list-style: none
+  flex-direction: column
   flex: 0 0 50%
-  display: flex
-  align-items: center
-  line-height: 130%
-  // max-width: 760px
-  & a
-    padding: 4px 4px 4px 0
-    transition: color 0.2s ease-in-out
-
-.pdfDocumentLinkContainer
-  display: flex
-  align-items: center
-  color: #000000
-  cursor: pointer
-  transition: all 0.3s ease-out
+  list-style: none
+  color: #000
+  @include m.media(tablet, phone)
+    flex: 1 0 100%
+  &:hover
+    color: #ff3535
+    a
+      color: #ff3535
   div
     flex: 0 0 18px
     margin-right: 10px
   svg path
-    fill: currentColor
-  a
-    border-bottom: dashed 1px currentColor
-  &:hover
-    color: #ff3535
-    a
-      color: currentColor
+    fill: #000
+
+.link
+  display: flex
+  position: relative
+  padding: 30px 0
+  width: 100%
+  height: 100%
+  line-height: 150%
+  cursor: pointer
+  transition: color 0.2s ease-in-out
+  &::after
+    content: ''
+    position: absolute
+    bottom: 0
+    display: flex
+    width: 100%
+    border-bottom: dashed 1px #000
+    &:hover
+      border-bottom-color: #ff3535

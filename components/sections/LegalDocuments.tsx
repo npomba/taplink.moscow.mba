@@ -29,42 +29,22 @@ const legalDocuments = [
 ]
 
 const LegalDocuments = () => {
-  const legalDocumentsClasses = [stls.legalSection, stls.legalDocuments]
-  const legalDocumentLinkClasses = [
-    stls.listItem,
-    stls.pdfDocumentLinkContainer
-  ]
-
   return (
-    <section className={legalDocumentsClasses.join(' ')}>
-      <h2 className={stls.subHeading}>Нормативные документы</h2>
+    <section className={stls.container}>
+      <h2 className={stls.title}>Нормативные документы</h2>
       <ul className={stls.list}>
-        {legalDocuments.map((document, idx) => {
-          if (!(idx % 2)) return null
-
-          return (
-            <div key={idx} className={stls.flexContainer}>
-              <li className={legalDocumentLinkClasses.join(' ')}>
-                <IconPaperCorner fill='#000' />
-                <a
-                  href={`/legaldocuments/doc-${idx}.pdf`}
-                  rel='noopener noreferrer'
-                  target='_blank'>
-                  {legalDocuments[idx - 1] + '.pdf'}
-                </a>
-              </li>
-              <li className={legalDocumentLinkClasses.join(' ')}>
-                <IconPaperCorner fill='#000' />
-                <a
-                  href={`/legaldocuments/doc-${idx + 1}.pdf`}
-                  rel='noopener noreferrer'
-                  target='_blank'>
-                  {document + '.pdf'}
-                </a>
-              </li>
-            </div>
-          )
-        })}
+        {legalDocuments.map((document, idx) => (
+          <li key={document + idx} className={stls.item}>
+            <a
+              className={stls.link}
+              href={`/legaldocuments/doc-${idx}.pdf`}
+              rel='noopener noreferrer'
+              target='_blank'>
+              <IconPaperCorner fill='#000' />
+              <p>{document + '.pdf'}</p>
+            </a>
+          </li>
+        ))}
       </ul>
     </section>
   )
