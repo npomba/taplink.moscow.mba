@@ -1,5 +1,15 @@
 import stls from '@/styles/components/sections/MemberOfRabe.module.sass'
-import PdfDocument from '@/components/general/PdfDocument'
+import ImageContainer from '@/components/general/ImageContainer'
+import rabeP1 from '@/public/legaldocuments/rabe-p1.jpg'
+import rabeP1HighRes from '@/public/legaldocuments/rabe-p1-high-res.jpg'
+
+const rabeImage = {
+  regularRes: rabeP1,
+  highRes: rabeP1HighRes,
+  name: 'Свидетельство РАБО',
+  width: 342,
+  height: 483
+}
 
 const MemberOfRABE = () => {
   const rabeClassNames = [stls.legalSection, stls.memberOfRabe]
@@ -23,10 +33,10 @@ const MemberOfRABE = () => {
           предпринимательства и бизнеса.
         </p>
       </div>
-      <PdfDocument
-        fileSrc='/legaldocuments/doc-25.pdf'
-        fileName='Свидетельство РАБО'
-        pageNum={1}
+      <ImageContainer
+        image={rabeImage}
+        imageWidth={rabeImage.width}
+        imageHeight={rabeImage.height}
       />
     </section>
   )

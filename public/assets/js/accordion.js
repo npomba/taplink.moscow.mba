@@ -1,7 +1,7 @@
 if ($('.accordion-block').length) {
   $('.accordion-block').click(function (e) {
     var target = $(e.target)
-    if (target.parents('.trigger').length) return
+    if (target.parents('.trigger').length || target.hasClass('trigger')) return
 
     if ($(window).width() > '767') {
       $('.accordion-block').not($(this)).removeClass('opened')
