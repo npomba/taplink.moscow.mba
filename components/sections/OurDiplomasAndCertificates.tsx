@@ -3,135 +3,131 @@ import Script from 'next/script'
 import Accordion from '@/components/general/Accordion'
 
 import academyDiplomaProfInd from '@/public/assets/diplomas/profind/diploma-profind.jpg'
-import academyDiplomaProfIndHighRes from '@/public/assets/diplomas/profind/diploma-profind-high-res.jpg'
 import qualificationDiplomaProfInd from '@/public/assets/diplomas/profind/qualification-diploma-profind.jpg'
-import qualificationDiplomaProfIndHighRes from '@/public/assets/diplomas/profind/qualification-diploma-profind-high-res.jpg'
 import diplomaAddendumProfInd from '@/public/assets/diplomas/profind/diploma-addendum-profind.jpg'
-import diplomaAddendumProfIndHighRes from '@/public/assets/diplomas/profind/diploma-addendum-profind-high-res.jpg'
 import diplomaSupplementProfInd from '@/public/assets/diplomas/profind/diploma-supplement-profind.jpg'
-import diplomaSupplementProfIndHighRes from '@/public/assets/diplomas/profind/diploma-supplement-profind-high-res.jpg'
 
 import academyDiplomaMini from '@/public/assets/diplomas/mini/diploma-mini.jpg'
-import academyDiplomaMiniHighRes from '@/public/assets/diplomas/mini/diploma-mini-high-res.jpg'
 import qualificationDiplomaMini from '@/public/assets/diplomas/mini/qualification-diploma-mini.jpg'
-import qualificationDiplomaMiniHighRes from '@/public/assets/diplomas/mini/qualification-diploma-mini-high-res.jpg'
 import diplomaAddendumMini from '@/public/assets/diplomas/mini/diploma-addendum-mini.jpg'
-import diplomaAddendumMiniHighRes from '@/public/assets/diplomas/mini/diploma-addendum-mini-high-res.jpg'
 import diplomaSupplementMini from '@/public/assets/diplomas/mini/diploma-supplement-mini.jpg'
-import diplomaSupplementMiniHighRes from '@/public/assets/diplomas/mini/diploma-supplement-mini-high-res.jpg'
 
 import certificateProfession from '@/public/assets/diplomas/profession/certificate-profession.jpg'
-import certificateProfessionHighRes from '@/public/assets/diplomas/profession/certificate-profession-high-res.jpg'
 import qualificationDiplomaProfession from '@/public/assets/diplomas/profession/qualification-diploma-profession.jpg'
-import qualificationDiplomaProfessionHighRes from '@/public/assets/diplomas/profession/qualification-diploma-profession-high-res.jpg'
 import diplomaAddendumProfession from '@/public/assets/diplomas/profession/diploma-addendum-profession.jpg'
-import diplomaAddendumProfessionHighRes from '@/public/assets/diplomas/profession/diploma-addendum-profession-high-res.jpg'
 
 import certificateCourses from '@/public/assets/diplomas/courses/certificate-courses.jpg'
-import certificateCoursesHighRes from '@/public/assets/diplomas/courses/certificate-courses-high-res.jpg'
 import qualificationCertificateCourses from '@/public/assets/diplomas/courses/qualification-certificate-courses.jpg'
-import qualificationCertificateCoursesHighRes from '@/public/assets/diplomas/courses/qualification-certificate-courses-high-res.jpg'
 
 const profIndDocuments = [
   {
-    regularRes: academyDiplomaProfInd,
-    highRes: academyDiplomaProfIndHighRes,
+    path: academyDiplomaProfInd,
     name: 'Диплом академии',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: qualificationDiplomaProfInd,
-    highRes: qualificationDiplomaProfIndHighRes,
+    path: qualificationDiplomaProfInd,
     name: 'Диплом уст. образца',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: diplomaAddendumProfInd,
-    highRes: diplomaAddendumProfIndHighRes,
+    path: diplomaAddendumProfInd,
     name: 'Приложение к диплому',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: diplomaSupplementProfInd,
-    highRes: diplomaSupplementProfIndHighRes,
+    path: diplomaSupplementProfInd,
     name: 'Диплом Supplement',
-    width: 268,
-    height: 378
+    fillWidth: 795,
+    fullHeight: 1125
   }
 ]
 
 const miniDocuments = [
   {
-    regularRes: academyDiplomaMini,
-    highRes: academyDiplomaMiniHighRes,
+    path: academyDiplomaMini,
     name: 'Диплом академии',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: qualificationDiplomaMini,
-    highRes: qualificationDiplomaMiniHighRes,
+    path: qualificationDiplomaMini,
     name: 'Диплом уст. образца',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: diplomaAddendumMini,
-    highRes: diplomaAddendumMiniHighRes,
+    path: diplomaAddendumMini,
     name: 'Приложение к диплому',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: diplomaSupplementMini,
-    highRes: diplomaSupplementMiniHighRes,
+    path: diplomaSupplementMini,
     name: 'Диплом Supplement',
-    width: 268,
-    height: 378
+    fillWidth: 795,
+    fullHeight: 1125
   }
 ]
 
 const professionDocuments = [
   {
-    regularRes: certificateProfession,
-    highRes: certificateProfessionHighRes,
+    path: certificateProfession,
     name: 'Сертификат академии',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: qualificationDiplomaProfession,
-    highRes: qualificationDiplomaProfessionHighRes,
+    path: qualificationDiplomaProfession,
     name: 'Диплом уст. образца',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: diplomaAddendumProfession,
-    highRes: diplomaAddendumProfessionHighRes,
+    path: diplomaAddendumProfession,
     name: 'Приложение к диплому',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   }
 ]
 
 const coursesDocuments = [
   {
-    regularRes: certificateCourses,
-    highRes: certificateCoursesHighRes,
+    path: certificateCourses,
     name: 'Сертификат академии',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   },
   {
-    regularRes: qualificationCertificateCourses,
-    highRes: qualificationCertificateCoursesHighRes,
+    path: qualificationCertificateCourses,
     name: 'Удостоверение уст. образца',
-    width: 370,
-    height: 261
+    fillWidth: 783,
+    fullHeight: 1110,
+    smallWidth: 362,
+    smallHeight: 257
   }
 ]
 
