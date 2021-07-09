@@ -6274,6 +6274,19 @@ footer {
   }
 }
 
+a.iconPhoneHeader {
+  display: none;
+}
+
+@media (max-width: 360px) {
+  a.iconMainNumHeader {
+    display: none;
+  }
+  a.iconPhoneHeader {
+    display: block;
+  }
+}
+
 @media (max-width: 480px) {
   h1 {
     font-size: 31px;
@@ -6297,16 +6310,19 @@ footer {
   }
   .main-logo {
     margin-left: -10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     .pic {
-      img {
+      svg {
         max-width: 66px;
         height: 63px;
         display: block;
       }
     }
-    .text {
-      display: none;
-    }
+    // .text {
+    //   display: none;
+    // }
   }
   .header-top {
     height: auto;
@@ -6936,7 +6952,7 @@ div.popup-content.pdf-popup-content {
       display: flex;
       flex-direction: column;
       justify-content: space-between;
-      margin-bottom: 67px;
+      // margin-bottom: 67px;
     }
   }
   & .jumCta-desc-top {

@@ -103,7 +103,6 @@ const Breadcrumbs = ({ programChunkData = {} }) => {
         path: splitedPath.join('/')
       }
     )
-
     additionalRoutes.push(programsRoute)
   }
 

@@ -20,7 +20,8 @@ import {
   IconCheckCircle,
   IconScreen,
   IconPaperCorner,
-  IconClock
+  IconClock,
+  IconMobilePhone
 } from '@/components/icons'
 import Image from 'next/image'
 import ProgramsColumn from '@/components/general/ProgramsColumn'
@@ -74,11 +75,16 @@ const Header = ({ programs }) => {
               {SetString(contactInfo.ru.address.street)}
             </div>
             <div className='header-phones'>
-              <a href={contactInfo.ru.tels[0].href}>
+              <a
+                href={contactInfo.ru.tels[0].href}
+                className='iconMainNumHeader'>
                 {contactInfo.ru.tels[0].val}
               </a>
               <a href={contactInfo.ru.tels[1].href}>
                 {contactInfo.ru.tels[1].val}
+              </a>
+              <a href={contactInfo.ru.tels[0].href} className='iconPhoneHeader'>
+                <IconMobilePhone large fill={'#000'} />
               </a>
             </div>
             {at.index || at.about || at.contact ? <HeaderLangLink /> : null}
@@ -276,7 +282,10 @@ const Header = ({ programs }) => {
 
                 <li>
                   <Link href='/legal' locale='ru'>
-                    <a className={at.legal ? 'red' : ''}>
+                    <a
+                      className={`onClickCloseMobileMenu ${
+                        at.legal ? 'red' : ''
+                      }`}>
                       {SetString(lang.linkLegal)}
                     </a>
                   </Link>
