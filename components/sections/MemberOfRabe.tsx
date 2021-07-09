@@ -1,14 +1,14 @@
 import stls from '@/styles/components/sections/MemberOfRabe.module.sass'
 import ImageContainer from '@/components/general/ImageContainer'
 import rabeP1 from '@/public/legaldocuments/rabe-p1.jpg'
-import rabeP1HighRes from '@/public/legaldocuments/rabe-p1-high-res.jpg'
 
 const rabeImage = {
-  regularRes: rabeP1,
-  highRes: rabeP1HighRes,
+  path: rabeP1,
   name: 'Свидетельство РАБО',
-  width: 342,
-  height: 483
+  fullWidth: 1326,
+  fullHeight: 1875,
+  smallWidth: 342,
+  smallHeight: 508
 }
 
 const MemberOfRABE = () => {
@@ -35,8 +35,8 @@ const MemberOfRABE = () => {
       </div>
       <ImageContainer
         image={rabeImage}
-        imageWidth={rabeImage.width}
-        imageHeight={rabeImage.height}
+        imageWidth={rabeImage.smallWidth}
+        imageHeight={rabeImage.smallHeight}
       />
     </section>
   )

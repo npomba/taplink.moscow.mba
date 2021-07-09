@@ -52,8 +52,8 @@ const Accordion = ({
       <ImageContainer
         key={idx}
         image={image}
-        imageWidth={image.width}
-        imageHeight={image.height}
+        imageWidth={image.smallWidth}
+        imageHeight={image.smallHeight}
       />
     ))
   }

@@ -2,16 +2,13 @@ import Image from 'next/image'
 import { IconClose } from '@/components/icons'
 
 const PopupImage = ({ closePopupImage, image }) => {
-  const popupImageWidth = image.width * 1.75
-  const popupImageHeight = image.height * 1.75
-
   return (
     <div className='popup-modal mfp-with-anim'>
-      <div className='popup-content pdf-popup-content'>
+      <div className='popup-content pdf-popup-content image-popup'>
         <Image
-          src={image.highRes}
-          width={popupImageWidth}
-          height={popupImageHeight}
+          src={image.path}
+          width={image.fullWidth}
+          height={image.FullHeight}
           alt={image.name}
         />
       </div>

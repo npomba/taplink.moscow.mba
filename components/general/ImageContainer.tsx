@@ -12,7 +12,7 @@ const ImageContainer = ({ image, imageWidth, imageHeight }) => {
         width={imageWidth}
         height={imageHeight}
         placeholder='blur'
-        src={image.regularRes}
+        src={image.path}
         alt={image.name}
       />
       <div className={stls.imageLinkContainer}>
