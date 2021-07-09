@@ -1,25 +1,33 @@
 import stls from '@/styles/components/sections/CurrentLicenses.module.sass'
-import PdfDocument from '@/components/general/PdfDocument'
+import ImageContainer from '@/components/general/ImageContainer'
 import CheckLicenses from '@/components/sections/CheckLicenses'
+import licenseP1 from '@/public/legaldocuments/license-p1.jpg'
+import licenseP1HighRes from '@/public/legaldocuments/license-p1-high-res.jpg'
+import licenseP2HighRes from '@/public/legaldocuments/license-p2-high-res.jpg'
+import charterP1 from '@/public/legaldocuments/charter-p1.jpg'
+import charterP1HighRes from '@/public/legaldocuments/charter-p1-high-res.jpg'
 
 const licenses = [
   {
-    fileSrc: '/legaldocuments/doc-1.pdf',
-    fileName: 'Лицензия (стр. 1)',
-    pageNum: 1,
-    landscape: false
+    regularRes: licenseP1,
+    highRes: licenseP1HighRes,
+    name: 'Лицензия (стр. 1)',
+    width: 342,
+    height: 508
   },
   {
-    fileSrc: '/legaldocuments/doc-1.pdf',
-    fileName: 'Лицензия (стр. 2)',
-    pageNum: 2,
-    landscape: false
+    regularRes: licenseP2HighRes,
+    highRes: licenseP2HighRes,
+    name: 'Лицензия (стр. 2)',
+    width: 342,
+    height: 508
   },
   {
-    fileSrc: '/legaldocuments/doc-2.pdf',
-    fileName: 'Положение № 1.1',
-    pageNum: 1,
-    landscape: false
+    regularRes: charterP1,
+    highRes: charterP1HighRes,
+    name: 'Положение № 1.1',
+    width: 342,
+    height: 508
   }
 ]
 
@@ -33,14 +41,13 @@ const CurrentLicenses = () => {
         Лицензия Департамента образования города Москвы на осуществление
         образовательной деятельности:
       </p>
-      <div className={stls.pdfContainer}>
+      <div className={stls.licensesContainer}>
         {licenses.map((license, idx) => (
-          <PdfDocument
-            key={license.fileSrc + idx}
-            fileSrc={license.fileSrc}
-            fileName={license.fileName}
-            pageNum={license.pageNum}
-            landscape={license.landscape}
+          <ImageContainer
+            key={license.name + idx}
+            image={license}
+            imageWidth={license.width}
+            imageHeight={license.height}
           />
         ))}
       </div>

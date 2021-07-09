@@ -1,19 +1,19 @@
 import stls from '@/styles/components/general/Accordion.module.sass'
-import PdfDocument from '@/components/general/PdfDocument'
+import ImageContainer from '@/components/general/ImageContainer'
 
 const Accordion = ({
   title,
   accordionContent,
   isList = false,
-  isPdf = false,
+  isImage = false,
   idx = null
 }) => {
   const accordionBlockClasses = ['accordion-block']
   const accordionContentClasses = ['accordion-content']
 
-  if (isPdf) {
+  if (isImage) {
     accordionBlockClasses.push('accordion-block--equal-padding')
-    accordionContentClasses.push('accordion-pdf-content')
+    accordionContentClasses.push('accordion-image-content')
   }
 
   if (idx === 0) {
@@ -47,18 +47,15 @@ const Accordion = ({
     )
   }
 
-  if (isPdf && Array.isArray(accordionContent)) {
-    content = accordionContent.map(
-      ({ fileSrc, fileName, pageNum, landscape }, idx) => (
-        <PdfDocument
-          key={idx}
-          fileSrc={fileSrc}
-          fileName={fileName}
-          pageNum={pageNum}
-          landscape={landscape}
-        />
-      )
-    )
+  if (isImage && Array.isArray(accordionContent)) {
+    content = accordionContent.map((image, idx) => (
+      <ImageContainer
+        key={idx}
+        image={image}
+        imageWidth={image.width}
+        imageHeight={image.height}
+      />
+    ))
   }
 
   return (

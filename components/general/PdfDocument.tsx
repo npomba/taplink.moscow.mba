@@ -3,6 +3,7 @@ import { Document, Page, pdfjs } from 'react-pdf'
 import pdfjsWorker from 'pdfjs-dist/build/pdf.worker.entry'
 pdfjs.GlobalWorkerOptions.workerSrc = pdfjsWorker
 import Popup from 'reactjs-popup'
+import 'reactjs-popup/dist/index.css'
 import PopupPdf from '@/components/popups/PopupPdf'
 import { IconPaperCorner } from '@/components/icons'
 

@@ -3154,7 +3154,7 @@ footer {
   display: none;
 }
 
-.accordion-pdf-content {
+.accordion-image-content {
   grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
 }
@@ -3177,6 +3177,13 @@ footer {
     cursor: pointer;
     background: transparent;
     border: 0;
+    &.image-close {
+      top: -18px;
+      right: -18px;
+      svg path {
+        stroke: #eee;
+      }
+    }
     img,
     svg,
     i {
@@ -4590,7 +4597,7 @@ footer {
     }
   }
 
-  .accordion-pdf-content {
+  .accordion-image-content {
     grid-template-columns: repeat(2, 1fr);
   }
 }
@@ -5578,7 +5585,7 @@ footer {
     width: calc(100% - 30px);
     margin-bottom: 30px;
   }
-  .accordion-pdf-content {
+  .accordion-image-content {
     grid-template-columns: 1fr;
     row-gap: 30px;
   }
@@ -7099,6 +7106,9 @@ html #nprogress .spinner-icon {
 
 .grid {
   display: grid;
+  @media screen and (max-width: 1019px) {
+    justify-items: center;
+  }
 }
 
 .btnLoanGroup {

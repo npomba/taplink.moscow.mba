@@ -2,112 +2,155 @@ import stls from '@/styles/components/sections/OurDiplomasAndCertificates.module
 import Script from 'next/script'
 import Accordion from '@/components/general/Accordion'
 
-const profIndDiplomas = [
+import academyDiplomaProfInd from '@/public/assets/diplomas/profind/diploma-profind.jpg'
+import academyDiplomaProfIndHighRes from '@/public/assets/diplomas/profind/diploma-profind-high-res.jpg'
+import qualificationDiplomaProfInd from '@/public/assets/diplomas/profind/qualification-diploma-profind.jpg'
+import qualificationDiplomaProfIndHighRes from '@/public/assets/diplomas/profind/qualification-diploma-profind-high-res.jpg'
+import diplomaAddendumProfInd from '@/public/assets/diplomas/profind/diploma-addendum-profind.jpg'
+import diplomaAddendumProfIndHighRes from '@/public/assets/diplomas/profind/diploma-addendum-profind-high-res.jpg'
+import diplomaSupplementProfInd from '@/public/assets/diplomas/profind/diploma-supplement-profind.jpg'
+import diplomaSupplementProfIndHighRes from '@/public/assets/diplomas/profind/diploma-supplement-profind-high-res.jpg'
+
+import academyDiplomaMini from '@/public/assets/diplomas/mini/diploma-mini.jpg'
+import academyDiplomaMiniHighRes from '@/public/assets/diplomas/mini/diploma-mini-high-res.jpg'
+import qualificationDiplomaMini from '@/public/assets/diplomas/mini/qualification-diploma-mini.jpg'
+import qualificationDiplomaMiniHighRes from '@/public/assets/diplomas/mini/qualification-diploma-mini-high-res.jpg'
+import diplomaAddendumMini from '@/public/assets/diplomas/mini/diploma-addendum-mini.jpg'
+import diplomaAddendumMiniHighRes from '@/public/assets/diplomas/mini/diploma-addendum-mini-high-res.jpg'
+import diplomaSupplementMini from '@/public/assets/diplomas/mini/diploma-supplement-mini.jpg'
+import diplomaSupplementMiniHighRes from '@/public/assets/diplomas/mini/diploma-supplement-mini-high-res.jpg'
+
+import certificateProfession from '@/public/assets/diplomas/profession/certificate-profession.jpg'
+import certificateProfessionHighRes from '@/public/assets/diplomas/profession/certificate-profession-high-res.jpg'
+import qualificationDiplomaProfession from '@/public/assets/diplomas/profession/qualification-diploma-profession.jpg'
+import qualificationDiplomaProfessionHighRes from '@/public/assets/diplomas/profession/qualification-diploma-profession-high-res.jpg'
+import diplomaAddendumProfession from '@/public/assets/diplomas/profession/diploma-addendum-profession.jpg'
+import diplomaAddendumProfessionHighRes from '@/public/assets/diplomas/profession/diploma-addendum-profession-high-res.jpg'
+
+import certificateCourses from '@/public/assets/diplomas/courses/certificate-courses.jpg'
+import certificateCoursesHighRes from '@/public/assets/diplomas/courses/certificate-courses-high-res.jpg'
+import qualificationCertificateCourses from '@/public/assets/diplomas/courses/qualification-certificate-courses.jpg'
+import qualificationCertificateCoursesHighRes from '@/public/assets/diplomas/courses/qualification-certificate-courses-high-res.jpg'
+
+const profIndDocuments = [
   {
-    fileSrc: '/assets/diplomas/pro-ind/doc-1.pdf',
-    fileName: 'Диплом академии',
-    pageNum: 1,
-    landscape: true
+    regularRes: academyDiplomaProfInd,
+    highRes: academyDiplomaProfIndHighRes,
+    name: 'Диплом академии',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/pro-ind/doc-2.pdf',
-    fileName: 'Диплом уст. образца',
-    pageNum: 1,
-    landscape: true
+    regularRes: qualificationDiplomaProfInd,
+    highRes: qualificationDiplomaProfIndHighRes,
+    name: 'Диплом уст. образца',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/pro-ind/doc-3.pdf',
-    fileName: 'Приложение к диплому',
-    pageNum: 1,
-    landscape: true
+    regularRes: diplomaAddendumProfInd,
+    highRes: diplomaAddendumProfIndHighRes,
+    name: 'Приложение к диплому',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/pro-ind/doc-4.pdf',
-    fileName: 'Diploma Supplement',
-    pageNum: 1,
-    landscape: false
+    regularRes: diplomaSupplementProfInd,
+    highRes: diplomaSupplementProfIndHighRes,
+    name: 'Диплом Supplement',
+    width: 268,
+    height: 378
   }
 ]
 
-const miniDiplomas = [
+const miniDocuments = [
   {
-    fileSrc: '/assets/diplomas/mini/doc-1.pdf',
-    fileName: 'Диплом академии',
-    pageNum: 1,
-    landscape: true
+    regularRes: academyDiplomaMini,
+    highRes: academyDiplomaMiniHighRes,
+    name: 'Диплом академии',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/mini/doc-2.pdf',
-    fileName: 'Диплом уст. образца',
-    pageNum: 1,
-    landscape: true
+    regularRes: qualificationDiplomaMini,
+    highRes: qualificationDiplomaMiniHighRes,
+    name: 'Диплом уст. образца',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/mini/doc-3.pdf',
-    fileName: 'Приложение к диплому',
-    pageNum: 1,
-    landscape: true
+    regularRes: diplomaAddendumMini,
+    highRes: diplomaAddendumMiniHighRes,
+    name: 'Приложение к диплому',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/mini/doc-4.pdf',
-    fileName: 'Diploma Supplement',
-    pageNum: 1,
-    landscape: false
+    regularRes: diplomaSupplementMini,
+    highRes: diplomaSupplementMiniHighRes,
+    name: 'Диплом Supplement',
+    width: 268,
+    height: 378
   }
 ]
 
-const professionDiplomas = [
+const professionDocuments = [
   {
-    fileSrc: '/assets/diplomas/prof/doc-1.pdf',
-    fileName: 'Диплом академии',
-    pageNum: 1,
-    landscape: true
+    regularRes: certificateProfession,
+    highRes: certificateProfessionHighRes,
+    name: 'Сертификат академии',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/prof/doc-2.pdf',
-    fileName: 'Диплом уст. образца',
-    pageNum: 1,
-    landscape: true
+    regularRes: qualificationDiplomaProfession,
+    highRes: qualificationDiplomaProfessionHighRes,
+    name: 'Диплом уст. образца',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/prof/doc-3.pdf',
-    fileName: 'Приложение к диплому',
-    pageNum: 1,
-    landscape: true
+    regularRes: diplomaAddendumProfession,
+    highRes: diplomaAddendumProfessionHighRes,
+    name: 'Приложение к диплому',
+    width: 370,
+    height: 261
   }
 ]
 
-const courseDiplomas = [
+const coursesDocuments = [
   {
-    fileSrc: '/assets/diplomas/mini/doc-1.pdf',
-    fileName: 'Диплом академии',
-    pageNum: 1,
-    landscape: true
+    regularRes: certificateCourses,
+    highRes: certificateCoursesHighRes,
+    name: 'Сертификат академии',
+    width: 370,
+    height: 261
   },
   {
-    fileSrc: '/assets/diplomas/mini/doc-2.pdf',
-    fileName: 'Удостоверение о повышении квалификации',
-    pageNum: 1,
-    landscape: true
+    regularRes: qualificationCertificateCourses,
+    highRes: qualificationCertificateCoursesHighRes,
+    name: 'Удостоверение уст. образца',
+    width: 370,
+    height: 261
   }
 ]
 
-const diplomasBasedOnProgram = [
+const documentsBasedOnProgram = [
   {
     programType: 'MBA Professional / Industry',
-    diplomas: profIndDiplomas
+    documents: profIndDocuments
   },
   {
     programType: 'MBA Mini',
-    diplomas: miniDiplomas
+    documents: miniDocuments
   },
   {
     programType: 'Профессия',
-    diplomas: professionDiplomas
+    documents: professionDocuments
   },
   {
     programType: 'Курс',
-    diplomas: courseDiplomas
+    documents: coursesDocuments
   }
 ]
 
@@ -124,12 +167,12 @@ const OurDiplomasAndCertificates = () => {
         и международный диплом Supplement, которые можно добавить в портфолио и
         показать работодателю.
       </p>
-      {diplomasBasedOnProgram.map(({ programType, diplomas }, idx) => (
+      {documentsBasedOnProgram.map(({ programType, documents }, idx) => (
         <Accordion
-          key={idx}
+          key={programType + idx}
           title={programType}
-          accordionContent={diplomas}
-          isPdf={true}
+          accordionContent={documents}
+          isImage={true}
           idx={idx}
         />
       ))}
