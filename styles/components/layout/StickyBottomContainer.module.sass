@@ -1,5 +1,5 @@
 @use '@/styles/utils/mixin' as m
-  
+
 .container
   position: fixed
   bottom: 0
@@ -10,6 +10,7 @@
   &.stickyShown
     bottom: 0
   &.stickyClosed
-    bottom: -82px
+    bottom: -60px
     @include m.media(phone)
+      margin-top: 50px
       bottom: -100px

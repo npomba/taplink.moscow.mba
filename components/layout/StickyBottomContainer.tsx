@@ -1,4 +1,5 @@
 import stls from '@/styles/components/layout/StickyBottomContainer.module.sass'
+import stlsQuestionBtn from '@/styles/components/general/AskQuestion.module.sass'
 import { useState } from 'react'
 import Overlay from '@/components/layout/Overlay'
 import StickyBottom from '@/components/layout/StickyBottom'
@@ -34,7 +35,10 @@ const StickyBottomContainer = () => {
           />
         </>
       ) : (
-        <AskQuestion handleClickedAskQuestion={handleClickedAskQuestion} />
+        <AskQuestion
+          handleClickedAskQuestion={handleClickedAskQuestion}
+          stickyShown={isStickyBottomShown}
+        />
       )}
       <StickyBottom
         openStickyModule={() => setIsStickyBottomShown(true)}

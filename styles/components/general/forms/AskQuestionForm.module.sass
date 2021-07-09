@@ -2,17 +2,16 @@
 @use '@/styles/utils/mixin' as m
 
 .container
-  position: absolute
-  right: 0
-  bottom: 82px
+  position: relative
   width: 375px
+  margin-left: auto
   display: flex
   flex-direction: column
-  justify-content: center
   padding: 27px 35px
   background-color: #fff
   @include m.media(phone)
     width: 100vw
+    margin-bottom: 40px
   &.noPadding
     padding: 0
   // &::after
