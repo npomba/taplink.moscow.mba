@@ -9,7 +9,7 @@ const WhoItIsFor = ({ data: { suitsForTitle, suitsForDesc } }) => {
 
   return (
     <section className={stls.container}>
-      <h2 className={stls.title}>Кому подойдет эта программа?</h2>
+      <h2 className={stls.title}>Кому подойдет программа?</h2>
       {whatCanBeLearned.map(({ title, description }, idx) => (
         <WhoItIsForItem
           key={title + idx}

@@ -9,6 +9,8 @@ import PopupForm from '@/components/popups/PopupForm'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import Discount from '@/components/costs/Discount'
 import useAt from '@/components/hooks/useAt'
+import { IconCheckCircleAlt } from '@/components/icons'
+import Loan from '@/components/costs/Loan'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
@@ -50,23 +52,35 @@ const JumbotronProgram = ({ data }) => {
                 узнайте возможные варианты скидок и требования к поступлению
               </div>
 
-              <Popup
-                trigger={
-                  <a className='button white-button cursor-pointer'>
-                    Оставить заявку
-                  </a>
-                }
-                modal
-                nested>
-                {close => (
-                  <PopupForm
-                    programId={data._id}
-                    programTitle={data.title}
-                    title={'Получите консультацию'}
-                    closePopUpForm={close}
-                  />
-                )}
-              </Popup>
+              <div className='btnLoanGroup'>
+                <Popup
+                  trigger={
+                    <a className='button white-button cursor-pointer'>
+                      Оставить заявку
+                    </a>
+                  }
+                  modal
+                  nested>
+                  {close => (
+                    <PopupForm
+                      programId={data._id}
+                      programTitle={data.title}
+                      title={'Получите консультацию'}
+                      closePopUpForm={close}
+                    />
+                  )}
+                </Popup>
+                <div className='loanContainer'>
+                  <IconCheckCircleAlt />
+                  <p>
+                    Можно учиться в рассрочку за{' '}
+                    <Loan
+                      type={data.mbaTypeOfProgram}
+                      format={data.mbaFormat}
+                    />
+                  </p>
+                </div>
+              </div>
             </div>
             <ul className='jumbotron-list jumbotron-list-program'>
               <li>

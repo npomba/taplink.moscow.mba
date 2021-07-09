@@ -6,6 +6,8 @@ $text_color: #262626;
 $red: #ff3535;
 $transition: all 0.3s ease-out;
 
+@use '@/styles/utils/mixin' as m;
+
 *,
 *:before,
 *:after {
@@ -882,7 +884,6 @@ header {
     max-width: 500px;
   }
   .button {
-    margin-bottom: 40px;
     width: 100%;
     max-width: 260px;
   }
@@ -7098,4 +7099,36 @@ html #nprogress .spinner-icon {
 
 .grid {
   display: grid;
+}
+
+.btnLoanGroup {
+  display: flex;
+  margin-bottom: 40px;
+  @include m.media(phone, tablet) {
+    flex-direction: column;
+  }
+  & .button {
+    margin-bottom: 0;
+  }
+}
+
+.loanContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 27ch;
+  margin-left: 31px;
+  @include m.media(phone, tablet) {
+    margin-left: 0;
+    margin-top: 11px;
+  }
+  & p {
+    margin-left: 11px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+}
+
+h2.prosTitle {
+  max-width: 24ch;
 }

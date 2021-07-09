@@ -13,10 +13,10 @@ import ContactUs from '@/components/sections/ContactUs'
 import Qna from '@/components/sections/Qna'
 import Students from '@/components/sections/Students'
 import Teachers from '@/components/sections/Teachers'
-import UpToDateContent from '@/components/sections/UpToDateContent'
 import Diploma from '@/components/sections/Diploma'
 import CorporateClients from '@/components/sections/CorporateClients'
 import CostOfStudy from '@/components/sections/CostOfStudy'
+import HelpWithEmployment from '@/components/sections/HelpWithEmployment'
 import Accreditation from '@/components/sections/Accreditation'
 import Pros from '@/components/sections/Pros'
 import GetStudyPlan from '@/components/sections/GetStudyPlan'
@@ -52,12 +52,13 @@ const ProfessionOnlineProgram = ({ program }) => {
         <ProgramModules data={data} />
         <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
-        <UpToDateContent withBottomLine />
-        <CorporateClients />
-        <Accreditation />
-        <Diploma />
         <Students />
         <Reviews />
+        <Accreditation />
+        <HelpWithEmployment />
+        <CorporateClients />
+        <Diploma />
+
         <CostOfStudy
           programId={data._id}
           programTitle={data.title}

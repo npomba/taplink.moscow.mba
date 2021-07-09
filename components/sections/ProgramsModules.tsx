@@ -4,6 +4,7 @@ import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'
 import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import { IconCheckCircleAltDim } from '@/components/icons'
 
 const ProgramsModules = ({ data }) => {
   const at = useAt()
@@ -21,9 +22,13 @@ const ProgramsModules = ({ data }) => {
           </li>
           <li className={stls.redItem}>
             <div className={stls.number}>
-              <ProgramSubjects subjects='specialty' />
+              {!at.profession && <ProgramSubjects subjects='specialty' />}
+              {at.profession && <IconCheckCircleAltDim />}
             </div>
-            <p className={stls.p}>дисциплин специализации</p>
+            <p className={stls.p}>
+              {!at.profession && 'дисциплин специализации'}
+              {at.profession && 'Практика и защита дипломной работы'}
+            </p>
           </li>
         </ul>
         <h3 className={stls.h3}>{!at.executive && 'Базовые дисциплины'}</h3>
@@ -192,9 +197,9 @@ const ProgramsModules = ({ data }) => {
         )}
       </div>
       <div className={stls.pl}>
-        <h3 className={stls.h3}>
-          {!at.executive && 'Специализированные дисциплины'}
-        </h3>
+        {!at.executive && !at.profession && (
+          <h3 className={stls.h3}>Специализированные дисциплины</h3>
+        )}
       </div>
       <div className={stls.list}>
         {(at.industry || at.professional) && (
@@ -252,7 +257,7 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
 
-        {at.blended && !at.mini && (
+        {!at.profession && at.blended && !at.mini && (
           <>
             <ProgramsModule
               title='Практика'
@@ -272,7 +277,7 @@ const ProgramsModules = ({ data }) => {
             />
           </>
         )}
-        {at.online && !at.mini && (
+        {!at.profession && at.online && !at.mini && (
           <Stickers>
             <Sticker
               type={'short'}
@@ -293,7 +298,7 @@ const ProgramsModules = ({ data }) => {
             />
           </Stickers>
         )}
-        {at.online && at.mini && (
+        {!at.profession && at.online && at.mini && (
           <Sticker
             type={'long'}
             clr={'light'}
@@ -304,7 +309,7 @@ const ProgramsModules = ({ data }) => {
             ]}
           />
         )}
-        {at.blended && !at.mini && (
+        {!at.profession && at.blended && !at.mini && (
           <Sticker
             type={'long'}
             clr={'light'}
@@ -317,7 +322,7 @@ const ProgramsModules = ({ data }) => {
             ]}
           />
         )}
-        {at.blended && at.mini && (
+        {!at.profession && at.blended && at.mini && (
           <Stickers>
             <Sticker
               type={'short'}

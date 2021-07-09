@@ -3,6 +3,8 @@ import IconArrowTopRight from '@/components/icons/IconArrowTopRight'
 import IconBell from '@/components/icons/IconBell'
 import IconCheck from '@/components/icons/IconCheck'
 import IconCheckCircle from '@/components/icons/IconCheckCircle'
+import IconCheckCircleAlt from '@/components/icons/IconCheckCircleAlt'
+import IconCheckCircleAltDim from '@/components/icons/IconCheckCircleAltDim'
 import IconClock from '@/components/icons/IconClock'
 import IconClose from '@/components/icons/IconClose'
 import IconCross from '@/components/icons/IconCross'
@@ -31,6 +33,8 @@ export {
   IconBell,
   IconCheck,
   IconCheckCircle,
+  IconCheckCircleAlt,
+  IconCheckCircleAltDim,
   IconClock,
   IconClose,
   IconCross,

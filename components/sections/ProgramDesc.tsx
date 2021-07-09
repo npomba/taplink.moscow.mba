@@ -7,15 +7,16 @@ const ProgramDesc = () => {
   return (
     <section className='top-path-section'>
       <div className='top-path-content'>
-        <div className='title-pl'>О&nbsp;программе</div>
+        {!at.profession && <div className='title-pl'>О&nbsp;программе</div>}
         <h2>
           {at.mini && at.online && 'MBA Mini ONLINE'}
           {at.professional && at.online && 'MBA Professional ONLINE'}
           {at.industry && at.online && 'MBA Industry ONLINE'}
           {at.mini && at.blended && 'MBA Mini BLENDED'}
           {at.professional && at.blended && 'MBA Professional BLENDED'}
-          {at.industry && at.blended && 'MBA Industry BLENDED'} — путь
-          руководителя к росту
+          {at.industry && at.blended && 'MBA Industry BLENDED'}
+          {!at.profession && '— путь руководителя к росту'}
+          {at.profession && 'Компетенции, востребованные на рынке'}
         </h2>
         <div className='title-desc'>
           {at.mini &&
@@ -36,15 +37,27 @@ const ProgramDesc = () => {
           {at.industry &&
             at.blended &&
             'MBA Industry Blended — смешанная программа MBA: дистанционный формат плюс очные сессии. Разработана для предпринимателей и руководителей компаний, которые ценят свое время и хотят пройти обучение без сильного отрыва от работы'}
+          {at.profession &&
+            'Мы проводим более 100 исследований ежегодно и добавляем в программу то, что требуют топовые работодатели. После обучения вы будете на 100% готовы к новым профессиональным вызовам'}
         </div>
       </div>
       <div className='image'>
-        <Image
-          src='/assets/images/top_path_pic_1.jpg'
-          alt='Слушатели на конференции'
-          width={503}
-          height={503}
-        />
+        {!at.profession && (
+          <Image
+            src='/assets/images/top_path_pic_1.jpg'
+            alt='Слушатели на конференции'
+            width={503}
+            height={503}
+          />
+        )}
+        {at.profession && (
+          <Image
+            src='/assets/images/handsome-business-man.jpg'
+            alt='Слушатели на конференции'
+            width={503}
+            height={503}
+          />
+        )}
       </div>
     </section>
   )

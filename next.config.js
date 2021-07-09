@@ -30,7 +30,11 @@ module.exports = {
                 'https://moscow.mba',
                 'https://www.googleadservices.com',
                 'https://www.google.ru',
-                'https://www.googletagmanager.com'
+                'https://www.googletagmanager.com',
+                "'sha256-yD2YThwDBB7lr1RbtQ3odfhOChA2l5RZg8iqCFjRIhY='",
+                'https://connect.facebook.net/en_US/fbevents.js',
+                'https://connect.facebook.net/signals/config/1845052109010998',
+                'https://www.facebook.com/tr/'
               ],
               scriptSrc: [
                 "'self'",
@@ -49,7 +53,10 @@ module.exports = {
                 'https://www.google.com',
                 'https://googleads.g.doubleclick.net',
                 'https://moscow.mba',
-                'http://www.googleadservices.com'
+                'http://www.googleadservices.com',
+                "'sha256-yD2YThwDBB7lr1RbtQ3odfhOChA2l5RZg8iqCFjRIhY='",
+                'https://connect.facebook.net/en_US/fbevents.js',
+                'https://connect.facebook.net/signals/config/1845052109010998'
               ],
               // scriptSrcElem: [
               //   "'self'",
