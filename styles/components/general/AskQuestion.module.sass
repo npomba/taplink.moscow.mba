@@ -7,8 +7,9 @@
   margin-bottom: 20px
   background-color: transparent
   z-index: 1
-  &.stickyHidden
-    margin-bottom: 60px
+  @include m.media(phone)
+    &.stickyHidden
+      margin-bottom: 60px
 
 .messages
   position: relative

@@ -11,6 +11,8 @@
     bottom: 0
   &.stickyClosed
     bottom: -60px
+    @include m.media(desktop, widescreen)
+      bottom: -90px
     @include m.media(phone)
       margin-top: 50px
       bottom: -100px
