@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/Pros.module.sass'
 import useAt from '@/components/hooks/useAt'
 import Image from 'next/image'
+import { IconCheck } from '@/components/icons'
 
 const Pros = ({ format = 'online' }) => {
   const at = useAt()
@@ -8,9 +9,10 @@ const Pros = ({ format = 'online' }) => {
     return (
       <section className='advantages-section section-pl'>
         <div className='title-pl red'>
-          online <br /> модули
+          {!at.profession && 'online модули'}
+          {at.profession && 'online обучение'}
         </div>
-        <h2>
+        <h2 className='prosTitle'>
           На MBA{' '}
           {at.mini
             ? 'mini'
@@ -27,7 +29,7 @@ const Pros = ({ format = 'online' }) => {
           <ul className='advantages-list'>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Учитесь из любой точки мира</h5>
@@ -41,7 +43,7 @@ const Pros = ({ format = 'online' }) => {
             </li>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Онлайн-формат даёт возможность учиться у лучших</h5>
@@ -55,7 +57,7 @@ const Pros = ({ format = 'online' }) => {
             </li>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Получаете престижные дипломы</h5>
@@ -77,7 +79,7 @@ const Pros = ({ format = 'online' }) => {
             </li>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Общайтесь с экспертами online</h5>
@@ -125,7 +127,7 @@ const Pros = ({ format = 'online' }) => {
           <ul className='advantages-list'>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Учитесь из любой точки мира</h5>
@@ -139,7 +141,7 @@ const Pros = ({ format = 'online' }) => {
             </li>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Онлайн-формат даёт возможность учиться у лучших</h5>
@@ -153,7 +155,7 @@ const Pros = ({ format = 'online' }) => {
             </li>
             <li>
               <div className='circle'>
-                <img src='/assets/images/icon_check_red.svg' alt='' />
+                <IconCheck stroke={'#FF3535'} />
               </div>
               <div>
                 <h5>Общайтесь с экспертами online</h5>

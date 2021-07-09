@@ -11,9 +11,20 @@ import { WebServiceClient } from '@maxmind/geoip2-node'
 const contact = async (req, res) => {
   process.env.TZ = 'Europe/Moscow'
   // data from the client
-  let { name, phone, email, programTitle, leadPage, utms } = req.body
+  let {
+    name,
+    phone,
+    email,
+    vk,
+    contactWay,
+    contactMethod,
+    question,
+    programTitle,
+    leadPage,
+    utms
+  } = req.body
 
-  if (name.includes('@')) {
+  if (name?.includes('@')) {
     email = name
     name = ''
   }
@@ -90,8 +101,11 @@ const contact = async (req, res) => {
     name: name || '',
     phone: phone || '',
     email: email || '',
+    vk: vk || '',
     promocode,
-    contactWay: '',
+    contactWay: contactWay || '',
+    contactMethod: contactMethod || '',
+    question: question || '',
     root: root || '',
     leadPage: root + leadPage || '',
     ip,
@@ -162,12 +176,24 @@ const contact = async (req, res) => {
         tdVal: data.email
       },
       {
+        tdKey: 'ВКонтакте',
+        tdVal: data.vk
+      },
+      {
         tdKey: 'Промокод',
         tdVal: data.promocode
       },
       {
         tdKey: 'Способ связи',
         tdVal: data.contactWay
+      },
+      {
+        tdKey: 'Как связаться',
+        tdVal: data.contactMethod
+      },
+      {
+        tdKey: 'Вопрос',
+        tdVal: data.question
       },
       {
         tdKey: 'Лид сайт',
@@ -239,10 +265,6 @@ const contact = async (req, res) => {
       },
       {
         tdKey: 'Университет',
-        tdVal: ''
-      },
-      {
-        tdKey: 'Вопрос',
         tdVal: ''
       },
       {

@@ -40,7 +40,7 @@ export default {
   },
 
   linkLegal: {
-    ru: 'Нормативные документы',
+    ru: 'Сведения об организации',
     en: 'Legal'
   },
 

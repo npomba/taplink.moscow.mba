@@ -8,10 +8,9 @@ import SetString from '@/components/hooks/SetString'
 import Breadcrumbs from '@/components/general/Breadcrumbs'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Filters from '@/components/general/Filters'
-import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
-import SVGArrowTopRight from '@/components/svgs/SVGArrowTopRight'
+import { IconCheckCircle, IconArrowTopRight } from '@/components/icons'
 
 const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
   const at = useAt()
@@ -65,7 +64,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                   {mbaFormat}
                 </h2>
                 <span className={stls.qtPrograms}>
-                  <ProgramsQt programs={programs} /> программ
+                  <ProgramsQty programs={programs} />
                 </span>
               </div>
 
@@ -81,18 +80,22 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
 
               <div className={stls.counters}>
                 <p>
-                  <SVGCheckCircle />
+                  <IconCheckCircle />
                   <ProgramSubjects subjects='base' />
                   &nbsp;дисциплин об управлениии
                 </p>
                 <p>
-                  <SVGCheckCircle />
+                  <IconCheckCircle />
                   <ProgramSubjects subjects='specialty' />
                   &nbsp;дисциплин специализации
                 </p>
               </div>
             </div>
-            <InfoRectangle programPage={true} />
+            <InfoRectangle
+              programPage={true}
+              type={mbaTypeOfProgram}
+              format={mbaFormat}
+            />
             <div className={`mini-programs-slider ${stls.programs}`}>
               {programs.map((program, idx) => {
                 return (
@@ -101,7 +104,7 @@ const PagePrograms = ({ programs, mbaTypeOfProgram, mbaFormat }) => {
                     key={program._id}>
                     <a className={stls.program}>
                       <div className={stls.arrow}>
-                        <SVGArrowTopRight />
+                        <IconArrowTopRight />
                       </div>
                       <div className={stls.number}>{idx + 1}.</div>
                       <div className={stls.programTitle}>{program.title}</div>

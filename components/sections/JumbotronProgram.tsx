@@ -9,9 +9,13 @@ import PopupForm from '@/components/popups/PopupForm'
 import InfoRectangle from '@/components/general/InfoRectangle'
 import Discount from '@/components/costs/Discount'
 import useAt from '@/components/hooks/useAt'
+import { IconCheckCircleAlt } from '@/components/icons'
+import Loan from '@/components/costs/Loan'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
+  const profession = data.mbaTypeOfProgram === 'profession'
+  // console.log(profession)
 
   return (
     <section className='jumbotron-section'>
@@ -27,7 +31,7 @@ const JumbotronProgram = ({ data }) => {
           <Breadcrumbs programChunkData={data} />
           <div className='jumbotron-top'>
             {at.online && (
-              <div className='jumbotron-discount'>
+              <div className='discount-sticker left-corner'>
                 <div className='size'>
                   <Discount />
                 </div>
@@ -48,40 +52,59 @@ const JumbotronProgram = ({ data }) => {
                 узнайте возможные варианты скидок и требования к поступлению
               </div>
 
-              <Popup
-                trigger={
-                  <a className='button white-button cursor-pointer'>
-                    Оставить заявку
-                  </a>
-                }
-                modal
-                nested>
-                {close => (
-                  <PopupForm
-                    programId={data._id}
-                    programTitle={data.title}
-                    title={'Получите консультацию'}
-                    closePopUpForm={close}
-                  />
-                )}
-              </Popup>
+              <div className='btnLoanGroup'>
+                <Popup
+                  trigger={
+                    <a className='button white-button cursor-pointer'>
+                      Оставить заявку
+                    </a>
+                  }
+                  modal
+                  nested>
+                  {close => (
+                    <PopupForm
+                      programId={data._id}
+                      programTitle={data.title}
+                      title={'Получите консультацию'}
+                      closePopUpForm={close}
+                    />
+                  )}
+                </Popup>
+                <div className='loanContainer'>
+                  <IconCheckCircleAlt />
+                  <p>
+                    Можно учиться в рассрочку за{' '}
+                    <Loan
+                      type={data.mbaTypeOfProgram}
+                      format={data.mbaFormat}
+                    />
+                  </p>
+                </div>
+              </div>
             </div>
-            <ul className='jumbotron-list'>
+            <ul className='jumbotron-list jumbotron-list-program'>
               <li>
                 <div className='number'>2021</div>
                 <p>Новейшая программа 2021 года</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>150+</div>
                 <p>международных экспертов</p>
               </li>
+              <li className='jumDivider'></li>
+
               <li>
                 <div className='number'>2000+</div>
                 <p>студентов по всему миру</p>
               </li>
             </ul>
           </div>
-          <InfoRectangle />
+          <InfoRectangle
+            type={data.mbaTypeOfProgram ?? 'executive'}
+            format={data.mbaFormat}
+          />
         </div>
       </div>
     </section>

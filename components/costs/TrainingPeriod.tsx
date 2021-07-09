@@ -7,6 +7,7 @@ const TrainingPeriod = ({ type = null }) => {
       {type === 'mini' && <>9 {SetString(langMenu.categoryMonth)}</>}
       {type === 'professional' && <>18 {SetString(langMenu.categoryMonth)}</>}
       {type === 'industry' && <>18 {SetString(langMenu.categoryMonth)}</>}
+      {type === 'profession' && <>4 {SetString(langMenu.categoryMonth)}</>}
       {type === 'executive' && <>26 {SetString(langMenu.categoryMonth)}</>}
     </>
   )

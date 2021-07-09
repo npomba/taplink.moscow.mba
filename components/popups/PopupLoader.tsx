@@ -1,19 +1,30 @@
 import stls from '@/styles/components/popups/PopupLoader.module.sass'
-import SVGLoader from '@/components/svgs/SVGLoader'
-import SVGClose from '@/components/svgs/SVGClose'
+import { IconLoader, IconClose } from '@/components/icons'
 
-const Loader = ({ closePopUp = null }) => {
+const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
+  const popupContentClasses = ['popup-content']
+  const loaderContentClasses = ['loader-content']
+
+  if (!loadingPopupContent) {
+    popupContentClasses.push('red-bg')
+    loaderContentClasses.push('thanks-popup-content')
+  }
+
   return (
     <div id='thanksModal' className='popup-modal loader-modal mfp-with-anim'>
-      <div className='popup-content red-bg'>
-        <div className='thanks-popup-content loader-content'>
-          <SVGLoader />
-          <p>Ваша заявка отправляется, пожалуйста, подождите</p>
+      <div className={popupContentClasses.join(' ')}>
+        <div className={loaderContentClasses.join(' ')}>
+          <IconLoader />
+          {!loadingPopupContent && (
+            <p>Ваша заявка отправляется, пожалуйста, подождите</p>
+          )}
         </div>
       </div>
-      <button className='mfp-close' type='button' onClick={closePopUp}>
-        <SVGClose />
-      </button>
+      {!loadingPopupContent && (
+        <button className='mfp-close' type='button' onClick={closePopUp}>
+          <IconClose />
+        </button>
+      )}
     </div>
   )
 }

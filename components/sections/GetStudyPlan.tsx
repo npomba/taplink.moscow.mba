@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/GetStudyPlan.module.sass'
+
 import Popup from 'reactjs-popup'
 import PopupForm from '@/components/popups/PopupForm'
 
@@ -9,7 +10,11 @@ const GetStudyPlan = () => {
         <div className={stls.content}>
           <h4 className={stls.title}>Получите полный учебный план</h4>
           <Popup
-            trigger={<a className={`${stls.btn} ${stls.pointer}`}>ПОЛУЧИТЬ</a>}
+            trigger={
+              <a className={`${stls.btn} ${stls.btnLightBg} ${stls.pointer}`}>
+                ПОЛУЧИТЬ
+              </a>
+            }
             modal
             nested>
             {close => (

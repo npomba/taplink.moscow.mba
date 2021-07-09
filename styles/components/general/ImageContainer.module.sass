@@ -1,0 +1,50 @@
+@use '@/styles/utils/mixin' as m
+  
+.imageContainer
+  display: flex
+  flex-direction: column
+  align-items: center
+  min-width: 190px
+  a, svg
+    transition: all .3s ease-out
+  &:hover
+    a, svg
+      color: #ff3535
+  div
+    cursor: pointer
+  @include m.media(desktop)
+    &:not(:last-child)
+      margin-right: 40px
+  @include m.media(laptop)
+    &:not(:last-child)
+      margin-bottom: 30px
+  @include m.media(tablet, phone)
+    // padding: 20px
+    // box-shadow: 0px 4px 20px rgba(0, 0, 0, 0.1)
+    &:not(:last-child)
+      margin-right: 10px
+
+.imageLinkContainer
+  display: flex
+  align-items: center
+  justify-content: center
+  margin-top: 25px
+  color: #000000
+  cursor: pointer
+  transition: all 0.3s ease-out
+  div
+    margin-right: 10px
+    @include m.media(tablet, phone)
+      display: none
+  svg path
+    fill: currentColor
+  a
+    @include m.media(widescreen, desktop, laptop)
+      padding-bottom: 5px
+      border-bottom: dashed 1px currentColor
+    @include m.media(tablet, phone)
+      font-weight: 500
+  &:hover
+    color: #ff3535
+    a
+      color: currentColor

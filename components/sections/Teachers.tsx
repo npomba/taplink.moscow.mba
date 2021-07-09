@@ -7,6 +7,7 @@ import PopupForm from '@/components/popups/PopupForm'
 import SetString from '@/components/hooks/SetString'
 import lang from 'data/translation/about'
 import imagesData from '@/data/images/teachers'
+import { IconCheck } from '@/components/icons'
 import { base64pixel } from '@/config/index'
 
 const splitParaText = (string, splitBy) => {
@@ -94,7 +95,7 @@ const Teachers = ({
             <ul className={stls.detailList}>
               <li>
                 <div className={stls.circle}>
-                  <img src='/assets/images/icon_check.svg' />
+                  <IconCheck />
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitle)}</h5>
@@ -106,7 +107,7 @@ const Teachers = ({
               </li>
               <li>
                 <div className={stls.circle}>
-                  <img src='/assets/images/icon_check.svg' />
+                  <IconCheck />
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitleSecond)}</h5>
@@ -118,7 +119,7 @@ const Teachers = ({
               </li>
               <li>
                 <div className={stls.circle}>
-                  <img src='/assets/images/icon_check.svg' />
+                  <IconCheck />
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitleThird)}</h5>

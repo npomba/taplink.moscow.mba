@@ -86,7 +86,7 @@ function MyApp({ Component, pageProps, router }) {
       <Wrapper>
         <Header programs={programs} />
         <AnimatePresence>
-          <motion.div
+          {/* <motion.div
             key={router.route}
             initial='initial'
             animate='animate'
@@ -102,11 +102,11 @@ function MyApp({ Component, pageProps, router }) {
               exit: {
                 opacity: 0
               }
-            }}>
-            <div className='main-content'>
-              <Component {...pageProps} />
-            </div>
-          </motion.div>
+            }}> */}
+          <div className='main-content'>
+            <Component {...pageProps} />
+          </div>
+          {/* </motion.div> */}
         </AnimatePresence>
         <Footer />
       </Wrapper>

@@ -77,7 +77,11 @@ const executive = ({ programs }) => {
         <ExecutiveRequirements />
         <Students />
         <Reviews />
-        <CostOfStudy programId={data._id} programTitle={data.title} />
+        <CostOfStudy
+          programId={data._id}
+          programTitle={data.title}
+          programType='executive'
+        />
         <Qna />
         <ContactUs
           programId={data._id}

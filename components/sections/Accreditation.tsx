@@ -3,7 +3,7 @@ import Image from 'next/image'
 import imgData from '@/data/images/accreditation'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/about'
-import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
+import { IconPaperCorner } from '@/components/icons'
 import { base64pixel } from '@/config/index'
 
 const Accreditation = () => {
@@ -33,7 +33,7 @@ const Accreditation = () => {
           rel='noopener noreferrer'
           className='accreditations-link'>
           <div className='pic'>
-            <SVGPaperCorner fill={'#C7C7C7'} />
+            <IconPaperCorner fill={'#C7C7C7'} />
           </div>
           <span>{SetString(lang.accreditationLicenseLink)}</span>
         </a>

@@ -1,0 +1,23 @@
+@use '@/styles/utils/mixin' as m
+
+.legalSection
+  border-bottom: solid 1px #D2D2D2
+  &:not(:first-of-type)
+    padding: 75px 0
+    @include m.media(tablet, phone)
+      padding: 60px 0
+  p
+    font-size: 20px
+    @include m.media(tablet, phone)
+      font-size: 16px
+
+.diplomasAndCertificates
+  p
+    max-width: 810px
+    margin-bottom: 55px
+
+.subHeading
+  font-size: 36px
+  @include m.media(tablet, phone)
+    font-size: 23px
+    margin-bottom: 15px

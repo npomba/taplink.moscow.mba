@@ -1,6 +1,6 @@
 import stls from '@/styles/components/popups/PopupReview.module.sass'
 import Image from 'next/image'
-import SVGClose from '@/components/svgs/SVGClose'
+import { IconClose } from '@/components/icons'
 import { base64pixel } from '@/config/index'
 
 const PopupReview = ({ review, closePopUp }) => {
@@ -28,7 +28,7 @@ const PopupReview = ({ review, closePopUp }) => {
             </div>
           </div>
           <button className='mfp-close' type='button' onClick={closePopUp}>
-            <SVGClose />
+            <IconClose />
           </button>
         </div>
       </div>

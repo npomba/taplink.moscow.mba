@@ -4,6 +4,7 @@ import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'
 import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
+import { IconCheckCircleAltDim } from '@/components/icons'
 
 const ProgramsModules = ({ data }) => {
   const at = useAt()
@@ -21,9 +22,13 @@ const ProgramsModules = ({ data }) => {
           </li>
           <li className={stls.redItem}>
             <div className={stls.number}>
-              <ProgramSubjects subjects='specialty' />
+              {!at.profession && <ProgramSubjects subjects='specialty' />}
+              {at.profession && <IconCheckCircleAltDim />}
             </div>
-            <p className={stls.p}>дисциплин специализации</p>
+            <p className={stls.p}>
+              {!at.profession && 'дисциплин специализации'}
+              {at.profession && 'Практика и защита дипломной работы'}
+            </p>
           </li>
         </ul>
         <h3 className={stls.h3}>{!at.executive && 'Базовые дисциплины'}</h3>
@@ -133,6 +138,49 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
 
+        {at.profession && (
+          <>
+            <ProgramsModule
+              title='1 модуль'
+              subTitle=''
+              items={[
+                'Бизнес-стратегия в эпоху цифровизации: как изменить бизнес-модель и сделать технологию конкурентным преимуществом',
+                'Что такое подрывные инновации и как их предвидеть',
+                'Платформы и экосистемы как основа цифрового бизнеса',
+                'Стратегия голубого океана и создание новых ценностных кривых'
+              ]}
+            />
+            <ProgramsModule
+              title='2 модуль'
+              subTitle=''
+              items={[
+                'Основы современного маркетинга: модели, каналы и инструменты B2C- и B2B-маркетинга в цифровой среде',
+                'Основы современного маркетинга: модели, каналы и инструменты B2C- и B2B-маркетинга в цифровой среде',
+                'Управление взаимоотношениями с клиентами',
+                'Принципы использования маркетинговой аналитики и больших данных в современном бизнесе'
+              ]}
+            />
+            <ProgramsModule
+              title='3 модуль'
+              subTitle=''
+              items={[
+                'Бизнес-стратегия в эпоху цифровизации: как изменить бизнес-модель и сделать технологию конкурентным преимуществом',
+                'Что такое подрывные инновации и как их предвидеть',
+                'Платформы и экосистемы как основа цифрового бизнеса'
+              ]}
+            />
+            <ProgramsModule
+              title='4 модуль'
+              subTitle=''
+              items={[
+                'Основы современного маркетинга: модели, каналы и инструменты B2C- и B2B-маркетинга в цифровой среде',
+                'Управление взаимоотношениями с клиентами',
+                'Принципы использования маркетинговой аналитики и больших данных в современном бизнесе'
+              ]}
+            />
+          </>
+        )}
+
         {at.executive && (
           <>
             <ProgramsModule
@@ -149,9 +197,9 @@ const ProgramsModules = ({ data }) => {
         )}
       </div>
       <div className={stls.pl}>
-        <h3 className={stls.h3}>
-          {!at.executive && 'Специализированные дисциплины'}
-        </h3>
+        {!at.executive && !at.profession && (
+          <h3 className={stls.h3}>Специализированные дисциплины</h3>
+        )}
       </div>
       <div className={stls.list}>
         {(at.industry || at.professional) && (
@@ -209,7 +257,7 @@ const ProgramsModules = ({ data }) => {
           </>
         )}
 
-        {at.blended && !at.mini && (
+        {!at.profession && at.blended && !at.mini && (
           <>
             <ProgramsModule
               title='Практика'
@@ -229,7 +277,7 @@ const ProgramsModules = ({ data }) => {
             />
           </>
         )}
-        {at.online && !at.mini && (
+        {!at.profession && at.online && !at.mini && (
           <Stickers>
             <Sticker
               type={'short'}
@@ -250,7 +298,7 @@ const ProgramsModules = ({ data }) => {
             />
           </Stickers>
         )}
-        {at.online && at.mini && (
+        {!at.profession && at.online && at.mini && (
           <Sticker
             type={'long'}
             clr={'light'}
@@ -261,7 +309,7 @@ const ProgramsModules = ({ data }) => {
             ]}
           />
         )}
-        {at.blended && !at.mini && (
+        {!at.profession && at.blended && !at.mini && (
           <Sticker
             type={'long'}
             clr={'light'}
@@ -274,7 +322,7 @@ const ProgramsModules = ({ data }) => {
             ]}
           />
         )}
-        {at.blended && at.mini && (
+        {!at.profession && at.blended && at.mini && (
           <Stickers>
             <Sticker
               type={'short'}

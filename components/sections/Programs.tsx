@@ -5,13 +5,12 @@ import langMenu from '@/data/translation/menu'
 import langHeader from '@/data/translation/header'
 import Until from '@/components/costs/Until'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Price from '@/components/costs/Price'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import Script from 'next/script'
 import Discount from '@/components/costs/Discount'
-import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
-import SVGScreen from '@/components/svgs/SVGScreen'
+import { IconCheckCircle, IconScreen } from '@/components/icons'
 
 const Programs = ({ programs }) => {
   const data = programs
@@ -96,45 +95,25 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'mini'}
-                      format={'online'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsQty
+                    programs={data}
+                    type={'mini'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'mini'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'mini'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price discount={true} type={'mini'} format={'online'} />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='mini' sum={true} />{' '}
@@ -163,36 +142,25 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-1-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'mini'}
-                      format={'blended'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsQty
+                    programs={data}
+                    type={'mini'}
+                    format={'blended'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'mini'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price discount={false} type={'mini'} format={'blended'} />{' '}
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='mini' sum={true} />{' '}
@@ -263,45 +231,29 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
+                  <ProgramsQty
+                    programs={data}
+                    type={'professional'}
+                    format={'online'}
+                  />
+                  <div className='price'>
+                    {SetString(langMenu.price)}:{' '}
+                    <Price
+                      discount={true}
                       type={'professional'}
                       format={'online'}
                     />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
-                  <div className='price'>
-                    {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'professional'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'professional'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='professional' sum={true} />{' '}
@@ -330,36 +282,29 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-2-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
+                  <ProgramsQty
+                    programs={data}
+                    type={'professional'}
+                    format={'blended'}
+                  />
+                  <div className='price'>
+                    {SetString(langMenu.price)}:{' '}
+                    <Price
+                      discount={false}
                       type={'professional'}
                       format={'blended'}
                     />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
-                  <div className='price'>
-                    {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'professional'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='professional' sum={true} />{' '}
@@ -430,45 +375,29 @@ const Programs = ({ programs }) => {
                       </span>
                     </div>
                   </div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
+                  <ProgramsQty
+                    programs={data}
+                    type={'industry'}
+                    format={'online'}
+                  />
+                  <div className='price'>
+                    {SetString(langMenu.price)}:{' '}
+                    <Price
+                      discount={true}
                       type={'industry'}
                       format={'online'}
                     />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
-                  <div className='price'>
-                    {SetString(langMenu.price)}:{' '}
-                    <i className='new-price'>
-                      {' '}
-                      <Price
-                        discount={true}
-                        type={'industry'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
-                    <i className='old-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'industry'}
-                        format={'online'}
-                      />{' '}
-                      Р.
-                    </i>
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatRemote)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='industry' sum={true} />{' '}
@@ -497,36 +426,29 @@ const Programs = ({ programs }) => {
                 </div>
                 <div id='program-options-3-2' className='program-options-block'>
                   <div className='name'>{SetString(langMenu.blendedTitle)}</div>
-                  <div className='directions-count'>
-                    <ProgramsQt
-                      programs={data}
-                      type={'industry'}
-                      format={'blended'}
-                    />{' '}
-                    {SetString(langMenu.qtPrograms)}
-                  </div>
+                  <ProgramsQty
+                    programs={data}
+                    type={'industry'}
+                    format={'online'}
+                  />
                   <div className='price'>
                     {SetString(langMenu.price)}:{' '}
-                    <i className='simple-price'>
-                      {' '}
-                      <Price
-                        discount={false}
-                        type={'industry'}
-                        format={'blended'}
-                      />{' '}
-                      Р.
-                    </i>
+                    <Price
+                      discount={false}
+                      type={'industry'}
+                      format={'blended'}
+                    />
                   </div>
                   <div className='info-list'>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGCheckCircle fill={'#C7C7C7'} />
+                        <IconCheckCircle fill={'#C7C7C7'} />
                       </div>
                       <span>{SetString(langMenu.formatBlended)}</span>
                     </div>
                     <div className='info-flex'>
                       <div className='pic'>
-                        <SVGScreen fill={'#C7C7C7'} />
+                        <IconScreen fill={'#C7C7C7'} />
                       </div>
                       <span>
                         <ProgramSubjects type='industry' sum={true} />{' '}

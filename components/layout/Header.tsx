@@ -9,20 +9,22 @@ import Until from '@/components/costs/Until'
 import Price from '@/components/costs/Price'
 import useAt from '@/components/hooks/useAt'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
-import ProgramsQt from '@/components/hooks/ProgramsQt'
+import ProgramsQty from '@/components/general/ProgramsQty'
 import Script from 'next/script'
 import TrainingPeriod from '@/components/costs/TrainingPeriod'
 import contactData from '@/data/contactData'
-import SVGLocation from '@/components/svgs/SVGLocation'
-import SVGLogo from '@/components/svgs/SVGLogo'
-import SVGLogoTitle from '@/components/svgs/SVGLogoTitle'
+import {
+  IconLocation,
+  IconLogo,
+  IconLogoTitle,
+  IconCheckCircle,
+  IconScreen,
+  IconPaperCorner,
+  IconClock
+} from '@/components/icons'
 import Image from 'next/image'
 import ProgramsColumn from '@/components/general/ProgramsColumn'
 import Discount from '@/components/costs/Discount'
-import SVGCheckCircle from '@/components/svgs/SVGCheckCircle'
-import SVGScreen from '@/components/svgs/SVGScreen'
-import SVGPaperCorner from '@/components/svgs/SVGPaperCorner'
-import SVGClock from '@/components/svgs/SVGClock'
 
 const Header = ({ programs }) => {
   let data = programs || []
@@ -41,10 +43,10 @@ const Header = ({ programs }) => {
             <Link href='/'>
               <a className='main-logo' aria-label='Moscow Business Academy'>
                 <span className='pic'>
-                  <SVGLogo />
+                  <IconLogo />
                 </span>
                 <span className='text'>
-                  <SVGLogoTitle />
+                  <IconLogoTitle />
                 </span>
               </a>
             </Link>
@@ -67,7 +69,7 @@ const Header = ({ programs }) => {
               </span>
             </div>
             <div className='header-place'>
-              <SVGLocation />
+              <IconLocation />
               {SetString(contactInfo.ru.address.city)},{' '}
               {SetString(contactInfo.ru.address.street)}
             </div>
@@ -309,7 +311,7 @@ const Header = ({ programs }) => {
                 </span>
               </div>
               <div className='header-place'>
-                <SVGLocation />
+                <IconLocation />
                 <span>{SetString(lang.address)}</span>
               </div>
             </div>
@@ -364,45 +366,29 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
+                            <ProgramsQty
+                              programs={data}
+                              type={'mini'}
+                              format={'online'}
+                            />
+                            <div className='price'>
+                              {SetString(langMenu.price)}:{' '}
+                              <Price
+                                discount={true}
                                 type={'mini'}
                                 format={'online'}
                               />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
-                            <div className='price'>
-                              {SetString(langMenu.price)}:{' '}
-                              <i className='new-price'>
-                                {' '}
-                                <Price
-                                  discount={true}
-                                  type={'mini'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>{' '}
-                              <i className='old-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'mini'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='mini' sum={true} />{' '}
@@ -435,36 +421,29 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'mini'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'mini'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
-                              <i className='simple-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'mini'}
-                                  format={'blended'}
-                                />{' '}
-                                Р.
-                              </i>
+                              <Price
+                                discount={false}
+                                type={'mini'}
+                                format={'blended'}
+                              />
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='mini' sum={true} />{' '}
@@ -497,7 +476,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Mini MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='mini' />
@@ -506,7 +485,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscMini)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='mini' subjects='base' />{' '}
@@ -515,7 +494,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='mini' subjects='specialty' />{' '}
@@ -570,45 +549,29 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
+                            <ProgramsQty
+                              programs={data}
+                              type={'professional'}
+                              format={'online'}
+                            />
+                            <div className='price'>
+                              {SetString(langMenu.price)}:{' '}
+                              <Price
+                                discount={true}
                                 type={'professional'}
                                 format={'online'}
                               />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
-                            <div className='price'>
-                              {SetString(langMenu.price)}:{' '}
-                              <i className='new-price'>
-                                {' '}
-                                <Price
-                                  discount={true}
-                                  type={'professional'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>{' '}
-                              <i className='old-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'professional'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects
@@ -644,36 +607,29 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'professional'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'professional'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
-                              <i className='simple-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'professional'}
-                                  format={'blended'}
-                                />{' '}
-                                Р.
-                              </i>
+                              <Price
+                                discount={false}
+                                type={'professional'}
+                                format={'blended'}
+                              />
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects
@@ -709,7 +665,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Professional MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='professional' />
@@ -718,7 +674,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscProfessional)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects
@@ -730,7 +686,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects
@@ -788,45 +744,29 @@ const Header = ({ programs }) => {
                                 </span>
                               </div>
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
+                            <ProgramsQty
+                              programs={data}
+                              type={'industry'}
+                              format={'online'}
+                            />
+                            <div className='price'>
+                              {SetString(langMenu.price)}:{' '}
+                              <Price
+                                discount={true}
                                 type={'industry'}
                                 format={'online'}
                               />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
-                            <div className='price'>
-                              {SetString(langMenu.price)}:{' '}
-                              <i className='new-price'>
-                                {' '}
-                                <Price
-                                  discount={true}
-                                  type={'industry'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>{' '}
-                              <i className='old-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'industry'}
-                                  format={'online'}
-                                />{' '}
-                                Р.
-                              </i>
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatRemote)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='industry' sum={true} />{' '}
@@ -859,36 +799,29 @@ const Header = ({ programs }) => {
                             <div className='name'>
                               {SetString(langMenu.blendedTitle)}
                             </div>
-                            <div className='directions-count'>
-                              <ProgramsQt
-                                programs={data}
-                                type={'industry'}
-                                format={'blended'}
-                              />{' '}
-                              {SetString(langMenu.qtPrograms)}
-                            </div>
+                            <ProgramsQty
+                              programs={data}
+                              type={'industry'}
+                              format={'blended'}
+                            />
                             <div className='price'>
                               {SetString(langMenu.price)}:{' '}
-                              <i className='simple-price'>
-                                {' '}
-                                <Price
-                                  discount={false}
-                                  type={'industry'}
-                                  format={'blended'}
-                                />{' '}
-                                Р.
-                              </i>
+                              <Price
+                                discount={false}
+                                type={'industry'}
+                                format={'blended'}
+                              />
                             </div>
                             <div className='info-list'>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGCheckCircle fill={'#C7C7C7'} />
+                                  <IconCheckCircle fill={'#C7C7C7'} />
                                 </div>
                                 <span>{SetString(langMenu.formatBlended)}</span>
                               </div>
                               <div className='info-flex'>
                                 <div className='pic'>
-                                  <SVGScreen fill={'#C7C7C7'} />
+                                  <IconScreen fill={'#C7C7C7'} />
                                 </div>
                                 <span>
                                   <ProgramSubjects type='industry' sum={true} />{' '}
@@ -921,7 +854,7 @@ const Header = ({ programs }) => {
                         <div className='name'>Industry MBA</div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGClock fill={'#C7C7C7'} />
+                            <IconClock fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <TrainingPeriod type='industry' />
@@ -930,7 +863,7 @@ const Header = ({ programs }) => {
                         <p>{SetString(langMenu.categoryDiscIndustry)}</p>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects type='industry' subjects='base' />{' '}
@@ -939,7 +872,7 @@ const Header = ({ programs }) => {
                         </div>
                         <div className='info-flex'>
                           <div className='pic'>
-                            <SVGPaperCorner fill={'#C7C7C7'} />
+                            <IconPaperCorner fill={'#C7C7C7'} />
                           </div>
                           <span>
                             <ProgramSubjects

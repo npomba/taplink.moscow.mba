@@ -1,0 +1,11 @@
+@use '@/styles/utils/mixin' as m
+// @use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.sizeIcon($w: 15, $h: 14)
+  // @include m.flex
+  // @include m.gap($m: f.px(10, em))
+  & svg
+    width: 100%
+  // & path
+  //   @include m.dye(stroke, c.$nu)

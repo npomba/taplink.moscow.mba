@@ -6,6 +6,8 @@ $text_color: #262626;
 $red: #ff3535;
 $transition: all 0.3s ease-out;
 
+@use '@/styles/utils/mixin' as m;
+
 *,
 *:before,
 *:after {
@@ -37,6 +39,10 @@ $transition: all 0.3s ease-out;
     width: 1310px;
   }
 }
+// svg {
+//   width: 100%;
+//   height: 100%;
+// }
 .clearfix:before,
 .clearfix:after,
 .container:before,
@@ -635,6 +641,7 @@ header {
     font-weight: bold;
     font-size: 20px;
     display: inline-block;
+    margin-right: 5px;
   }
   .old-price {
     color: #808080;
@@ -877,7 +884,6 @@ header {
     max-width: 500px;
   }
   .button {
-    margin-bottom: 40px;
     width: 100%;
     max-width: 260px;
   }
@@ -920,14 +926,14 @@ h1 {
     right: 40px;
     text-align: center;
     line-height: 85px;
-    img {
+    svg {
       display: inline-block;
       vertical-align: middle;
     }
   }
 }
 
-.jumbotron-discount {
+.discount-sticker {
   display: flex;
   flex-direction: column;
   justify-content: center;
@@ -938,10 +944,12 @@ h1 {
   background: $red;
   color: #fff;
   text-align: center;
-  left: 30px;
-  top: 150px;
   line-height: 1;
-  transform: rotate(20deg);
+  &.left-corner {
+    left: 30px;
+    top: 150px;
+    transform: rotate(20deg);
+  }
   .size {
     font-weight: bold;
     font-size: 35px;
@@ -981,16 +989,33 @@ h1 {
   line-height: 1.2;
   width: 330px;
   margin-top: -13px;
-  li {
-    padding-bottom: 20px;
-    margin-bottom: 20px;
-    border-bottom: 1px solid rgba(255, 255, 255, 0.3);
-    &:last-child {
-      padding-bottom: 0;
-      margin-bottom: 0;
-      border-bottom: none;
+  & .jumDivider {
+    display: flex;
+    background-color: rgba(255, 255, 255, 0.3);
+  }
+  @media (min-width: 1020px) {
+    display: flex;
+    justify-content: space-between;
+    &.jumbotron-list-program {
+      flex-direction: column;
+    }
+    & .jumDivider {
+      height: 1px;
+      width: 100%;
     }
   }
+  @media (max-width: 1019px) {
+    & .jumDivider {
+      padding: 0;
+      width: 1px;
+    }
+  }
+  @media (max-width: 480px) {
+    & .jumDivider {
+      display: none;
+    }
+  }
+
   .number {
     font-weight: bold;
     font-size: 48px;
@@ -2839,9 +2864,16 @@ footer {
 
 /* program-price-section ==============================*/
 .program-price-section {
+  position: relative;
   margin-bottom: 130px;
   background: #f7f7f7;
   padding: 130px;
+
+  .discount-sticker.right-corner {
+    top: 66px;
+    right: 66px;
+    transform: rotate(15deg);
+  }
 }
 
 .program-price-tabs {
@@ -2933,7 +2965,7 @@ footer {
     color: #808080;
     font-size: 24px;
     position: relative;
-    margin-left: 12px;
+    margin-left: 28px;
     display: inline-block;
     &:after {
       content: '';
@@ -3100,6 +3132,14 @@ footer {
   }
 }
 
+.accordion-block--equal-padding {
+  padding: 20px 53px;
+
+  .accordion-title {
+    padding-left: 32px;
+  }
+}
+
 .accordion-title {
   font-size: 20px;
   line-height: 1.3;
@@ -3112,6 +3152,11 @@ footer {
   padding-top: 16px;
   padding-bottom: 12px;
   display: none;
+}
+
+.accordion-image-content {
+  grid-template-columns: repeat(3, 1fr);
+  row-gap: 50px;
 }
 
 /*================= МОДАЛКИ ======================*/
@@ -3132,6 +3177,13 @@ footer {
     cursor: pointer;
     background: transparent;
     border: 0;
+    &.image-close {
+      top: -18px;
+      right: -18px;
+      svg path {
+        stroke: #eee;
+      }
+    }
     img,
     svg,
     i {
@@ -3146,6 +3198,26 @@ footer {
         opacity: 1;
       }
     }
+  }
+
+  .image-popup {
+    margin-top: 20px;
+  }
+
+  .pdf-close {
+    position: absolute;
+    top: -12px;
+    right: -12px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 24px;
+    width: 24px;
+    background-color: rgba(255, 255, 255, 0.7);
+    border-radius: 50%;
+    border: none;
+    color: #000;
+    cursor: pointer;
   }
 }
 
@@ -3225,6 +3297,9 @@ footer {
     img {
       filter: brightness(0) invert(11%) sepia(96%) saturate(4162%)
         hue-rotate(358deg) brightness(88%) contrast(117%);
+    }
+    img.light {
+      filter: none;
     }
   }
   h3 {
@@ -3851,7 +3926,7 @@ footer {
     box-shadow: 0px 4px 50px rgba(0, 0, 0, 0.09);
     .bell {
       background: $red;
-      img {
+      svg {
         filter: brightness(0) invert(1);
         opacity: 1;
       }
@@ -3881,7 +3956,7 @@ footer {
     top: 20px;
     right: 20px;
     border-radius: 50%;
-    img {
+    svg {
       transition: $transition;
       opacity: 0.2;
     }
@@ -4291,7 +4366,7 @@ footer {
     align-items: center;
     position: relative;
   }
-  .jumbotron-discount {
+  .discount-sticker {
     left: auto;
     right: 0;
     top: 0;
@@ -4308,6 +4383,10 @@ footer {
     & ~ .jumbotron-label {
       margin-right: 140px;
     }
+  }
+  .discount-sticker.left-corner {
+    top: 0;
+    left: auto;
   }
   .jumbotron-red-info {
     margin-left: 0;
@@ -4520,6 +4599,10 @@ footer {
     .title {
       font-size: 22px;
     }
+  }
+
+  .accordion-image-content {
+    grid-template-columns: repeat(2, 1fr);
   }
 }
 
@@ -5506,6 +5589,10 @@ footer {
     width: calc(100% - 30px);
     margin-bottom: 30px;
   }
+  .accordion-image-content {
+    grid-template-columns: 1fr;
+    row-gap: 30px;
+  }
 }
 
 @media (min-width: 768px) {
@@ -5686,7 +5773,7 @@ footer {
       white-space: nowrap;
     }
   }
-  .jumbotron-discount {
+  .discount-sticker {
     left: auto;
     right: 0;
     top: 0;
@@ -5937,6 +6024,9 @@ footer {
       left: 20px;
       top: 20px;
     }
+  }
+  .accordion-block--equal-padding {
+    padding: 20px 23px;
   }
   .accordion-content {
     font-size: 16px;
@@ -6300,17 +6390,17 @@ footer {
           padding-right: 22px;
           padding-bottom: 22px;
         }
-        &:nth-child(2) {
+        &:nth-child(3) {
           border-bottom: 1px solid rgb(#fff, 0.3);
           padding-left: 36px;
           padding-bottom: 22px;
         }
-        &:nth-child(3) {
+        &:nth-child(5) {
           border-right: 1px solid rgb(#fff, 0.3);
           padding-top: 22px;
           padding-right: 22px;
         }
-        &:nth-child(4) {
+        &:nth-child(7) {
           padding-top: 22px;
           padding-left: 36px;
         }
@@ -6560,7 +6650,7 @@ footer {
   .jumbotron-label {
     font-size: 12px;
   }
-  .jumbotron-discount {
+  .discount-sticker {
     margin-top: -23px;
     & ~ .jumbotron-label {
       margin-right: 110px;
@@ -6792,12 +6882,22 @@ div.popup-content {
   background-color: transparent;
 }
 
+div.popup-content.pdf-popup-content {
+  padding: 0;
+}
+
 .cursor-pointer {
   cursor: pointer;
 }
 
 .jumbotron-content-cta {
   padding-left: 0;
+
+  @media (max-width: 1330px) {
+    & .jumDivider {
+      display: none;
+    }
+  }
 
   h1 {
     font-size: 58px;
@@ -6832,6 +6932,12 @@ div.popup-content {
   }
   & .jumbotron-list {
     width: 272px;
+    @media (min-width: 1330px) {
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      margin-bottom: 67px;
+    }
   }
   & .jumCta-desc-top {
     font-style: normal;
@@ -6922,13 +7028,18 @@ div.popup-content {
 }
 
 .red-rectangle-price {
-  & .old-price {
+  & .new-price {
+    font-size: 20px;
+    font-weight: 500;
+    margin-right: 8px;
     &::after {
       display: none;
     }
   }
-  & .new-price {
+  & .old-price {
     position: relative;
+    font-size: 16px;
+    font-weight: 300;
     &::after {
       content: '';
       width: 110%;
@@ -6995,4 +7106,43 @@ html #nprogress .bar {
 html #nprogress .spinner-icon {
   border-top-color: $red;
   border-left-color: $red;
+}
+
+.grid {
+  display: grid;
+  @media screen and (max-width: 1019px) {
+    justify-items: center;
+  }
+}
+
+.btnLoanGroup {
+  display: flex;
+  margin-bottom: 40px;
+  @include m.media(phone, tablet) {
+    flex-direction: column;
+  }
+  & .button {
+    margin-bottom: 0;
+  }
+}
+
+.loanContainer {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 27ch;
+  margin-left: 31px;
+  @include m.media(phone, tablet) {
+    margin-left: 0;
+    margin-top: 11px;
+  }
+  & p {
+    margin-left: 11px;
+    font-weight: 500;
+    line-height: 120%;
+  }
+}
+
+h2.prosTitle {
+  max-width: 24ch;
 }
