@@ -7,7 +7,7 @@ import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
 import Wrapper from '@/components/layout/Wrapper'
 import '@/styles/app.sass'
-import { motion, AnimatePresence } from 'framer-motion'
+// import { motion, AnimatePresence } from 'framer-motion'
 import { dev, gtmId } from '@/config/index'
 
 import NProgress from 'nprogress'
@@ -85,8 +85,8 @@ function MyApp({ Component, pageProps, router }) {
       <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
       <Wrapper>
         <Header programs={programs} />
-        <AnimatePresence>
-          {/* <motion.div
+        {/* <AnimatePresence> */}
+        {/* <motion.div
             key={router.route}
             initial='initial'
             animate='animate'
@@ -103,11 +103,11 @@ function MyApp({ Component, pageProps, router }) {
                 opacity: 0
               }
             }}> */}
-          <div className='main-content'>
-            <Component {...pageProps} />
-          </div>
-          {/* </motion.div> */}
-        </AnimatePresence>
+        <div className='main-content'>
+          <Component {...pageProps} />
+        </div>
+        {/* </motion.div> */}
+        {/* </AnimatePresence> */}
         <Footer />
       </Wrapper>
     </>

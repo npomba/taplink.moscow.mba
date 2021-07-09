@@ -9,8 +9,17 @@ const Pros = ({ format = 'online' }) => {
     return (
       <section className='advantages-section section-pl'>
         <div className='title-pl red'>
-          {!at.profession && 'online модули'}
-          {at.profession && 'online обучение'}
+          {!at.profession && (
+            <>
+              online
+              <br /> модули
+            </>
+          )}
+          {at.profession && (
+            <>
+              online <br /> обучение
+            </>
+          )}
         </div>
         <h2 className='prosTitle'>
           На MBA{' '}

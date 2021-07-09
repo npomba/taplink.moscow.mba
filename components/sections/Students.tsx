@@ -46,7 +46,7 @@ const Students = () => {
         <div className='dobble-images students-images'>
           <div className='image pic-1'>
             <Image
-              src='/assets/images/students_pic_1.jpg'
+              src='/assets/images/students_pic_1.png'
               alt='Группа счастливых выпускников'
               width={481}
               height={473}
