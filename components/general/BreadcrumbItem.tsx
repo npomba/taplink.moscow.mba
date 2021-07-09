@@ -7,20 +7,9 @@ const BreadcrumbItem = ({
   listLength,
   userViewingProgramChunk
 }) => {
-  let linkRef = null
+  let linkRef = linkPath
 
-  if (linkPath === '/programs') linkPath += '/mini/online'
-
-  // a crutch for a bug where /programs path duplicates
-  if (userViewingProgramChunk && itemIndex === 1) {
-    linkRef =
-      '/programs/' +
-      linkText
-        .split(' ')
-        .filter((_, idx) => idx !== 1)
-        .join('/')
-        .toLowerCase()
-  }
+  if (linkPath === '/programs') linkRef += '/mini/online'
 
   const lastBreadcrumbItem = itemIndex === listLength - 1
 
@@ -33,7 +22,7 @@ const BreadcrumbItem = ({
 
   return (
     <li>
-      <Link href={linkRef ?? linkPath}>
+      <Link href={linkRef}>
         <a>{linkText}</a>
       </Link>
     </li>
