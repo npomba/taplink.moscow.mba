@@ -7,7 +7,7 @@ import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import { IconCheckCircleAltDim } from '@/components/icons'
 
-const ProgramsModules = ({ data, smallerMb }) => {
+const ProgramsModules = ({ data, smallerMb = false }) => {
   const at = useAt()
 
   return (
