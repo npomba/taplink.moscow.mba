@@ -17,6 +17,7 @@ import IconLogoTitle from '@/components/icons/IconLogoTitle'
 import IconMessages from '@/components/icons/IconMessages'
 import IconMobilePhone from '@/components/icons/IconMobilePhone'
 import IconPaperCorner from '@/components/icons/IconPaperCorner'
+import IconPhoneAlt from '@/components/icons/IconPhoneAlt'
 import IconRosObrInsignia from '@/components/icons/IconRosObrInsignia'
 import IconScreen from '@/components/icons/IconScreen'
 import IconTelegram from '@/components/icons/IconTelegram'
@@ -47,6 +48,7 @@ export {
   IconMessages,
   IconMobilePhone,
   IconPaperCorner,
+  IconPhoneAlt,
   IconRosObrInsignia,
   IconScreen,
   IconTelegram,

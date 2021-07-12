@@ -11,9 +11,9 @@ import {
   IconWhatsapp,
   IconViber,
   IconVk,
-  IconMobilePhone,
   IconEmail,
-  IconCheck
+  IconCheck,
+  IconPhoneAlt
 } from '@/components/icons'
 
 const waysToContact = [
@@ -24,7 +24,7 @@ const waysToContact = [
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <IconMobilePhone />
+        icon: <IconPhoneAlt />
       },
       {
         name: 'Написать',
@@ -44,7 +44,7 @@ const waysToContact = [
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <IconMobilePhone />
+        icon: <IconPhoneAlt />
       },
       {
         name: 'Написать',
@@ -64,7 +64,7 @@ const waysToContact = [
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <IconMobilePhone />
+        icon: <IconPhoneAlt />
       },
       {
         name: 'Написать',
@@ -96,11 +96,11 @@ const waysToContact = [
   {
     name: 'Телефон',
     stageStep: 2,
-    svg: <IconMobilePhone />,
+    svg: <IconPhoneAlt />,
     contactMethods: [
       {
         name: 'Позвонить',
-        icon: <IconMobilePhone />
+        icon: <IconPhoneAlt />
       }
     ],
     validationRules: {

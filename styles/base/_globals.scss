@@ -6326,6 +6326,8 @@ a.iconPhoneHeader {
         max-width: 66px;
         height: 63px;
         display: block;
+        width: 50px;
+        margin-left: 9px;
       }
     }
     // .text {
@@ -7169,4 +7171,8 @@ html #nprogress .spinner-icon {
 
 h2.prosTitle {
   max-width: 24ch;
+}
+
+input:focus {
+  font-size: 16px;
 }
