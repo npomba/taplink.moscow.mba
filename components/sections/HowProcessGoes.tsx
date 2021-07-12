@@ -1,4 +1,6 @@
 import stls from '@/styles/components/sections/HowProcessGoes.module.sass'
+import studentPhoto from '@/public/assets/images/student-using-laptop.jpg'
+import Image from 'next/image'
 import useAt from '@/components/hooks/useAt'
 import Script from 'next/script'
 
@@ -9,7 +11,19 @@ const HowProcessGoes = () => {
     <>
       <section className='process-section'>
         <div className='process-content'>
-          <h2>Как проходит процесс обучения</h2>
+          <div className='process-heading-container'>
+            <h2>Как проходит процесс обучения</h2>
+            {at.profession && (
+              <div className={stls.studentPhoto}>
+                <Image
+                  src={studentPhoto}
+                  height={337}
+                  width={506}
+                  alt={'Студент академии сидит перед ноутбуком'}
+                />
+              </div>
+            )}
+          </div>
           <div className='process-info'>
             <ul className='process-step-tabs'>
               <li>

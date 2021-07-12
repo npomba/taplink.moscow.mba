@@ -86,8 +86,12 @@
 
 button.formStageButton
   display: flex
+  justify-content: center
   align-items: center
   padding: 14px 70px
+  &:nth-child(2)
+    .btnContent
+      transform: translateX(-5px)
   &.sendButton
     justify-content: center
   svg
@@ -96,6 +100,7 @@ button.formStageButton
 
 .btnContent
   display: flex
+  justify-content: center
   & > *:first-child
     margin-right: 15px
 

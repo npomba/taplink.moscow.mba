@@ -1,0 +1,10 @@
+@use '@/styles/utils/mixin' as m
+  
+.studentPhoto
+  width: 506px
+  height: 337px
+  @include m.media(desktop)
+    width: 336px
+    height: 224px
+  @include m.media(laptop, tablet, phone)
+    display: none
