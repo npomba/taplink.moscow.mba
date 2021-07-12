@@ -2498,6 +2498,10 @@ footer {
     flex-shrink: 0;
     margin-right: 26px;
     margin-top: -14px;
+    margin-bottom: 57px;
+    @media screen and (max-width: 1019px) {
+      margin-bottom: 32px;
+    }
   }
 }
 
