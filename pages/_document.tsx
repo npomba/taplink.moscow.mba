@@ -12,7 +12,7 @@ class MyDocument extends Document {
         <Head>
           <meta charSet='UTF-8' />
           <meta name='theme-color' content='#ff3535' />
-          <meta name='facebook-domain-verification' content='rmb3vopl4l6drvhw7ku8wn1s45qkbj'>
+          <meta name='facebook-domain-verification' content='rmb3vopl4l6drvhw7ku8wn1s45qkbj' />
 
           <link
             rel='preload'
