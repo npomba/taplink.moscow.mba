@@ -1,7 +1,10 @@
 import stls from '@/styles/components/general/forms/AskQuestionFormStage.module.sass'
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import { useRouter } from 'next/router'
+import TagManager from 'react-gtm-module'
 import ContactButton from '@/components/btns/ContactButton'
+import { v4 as uuidv4 } from 'uuid'
+
 import {
   IconArrowLeft,
   IconTelegram,
@@ -423,6 +426,26 @@ const AskQuestionFormStage = ({
     setInputPlaceholderText,
     leadPage
   }
+
+  useEffect(() => {
+    if (formSubmitted) {
+      const tagManagerArgs = {
+        dataLayer: {
+          event: 'generate_lead',
+          ecommerce: {
+            add: {
+              actionField: {
+                id: uuidv4()
+              }
+            }
+          }
+        },
+        dataLayerName: 'dataLayer'
+      }
+      console.log('test')
+      TagManager.dataLayer(tagManagerArgs)
+    }
+  }, [])
 
   if (selectWay) return showSelectWayStage(dataToShowSpecificStage)
 
