@@ -1,21 +1,33 @@
 import stls from '@/styles/components/sections/CorporateClients.module.sass'
+import classNames from 'classnames'
 import Image from 'next/image'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import imageData from '@/data/images/corporateClients'
 import { base64pixel } from '@/config/index'
 
-const CorporateClients = () => {
+const CorporateClients = ({ partnershipTitle = false }) => {
+  const title = partnershipTitle ? (
+    <h3 className={stls.partnershipTitle}>
+      {SetString(lang.corporateClientsPartnership)}
+    </h3>
+  ) : (
+    <>
+      <h2>
+        {SetString(lang.corporateClientsTitleTop)} <br />
+        {SetString(lang.corporateClientsTitleBottom)}
+      </h2>
+      <p>{SetString(lang.corporateClientsDics)}</p>
+    </>
+  )
+
   return (
     <section className='clients-section'>
-      <div className='section-pl'>
-        <div className='clients-text'>
-          <h2>
-            {SetString(lang.corporateClientsTitleTop)} <br />
-            {SetString(lang.corporateClientsTitleBottom)}
-          </h2>
-          <p>{SetString(lang.corporateClientsDics)}</p>
-        </div>
+      <div
+        className={classNames('section-pl', {
+          [stls.noPaddingLeft]: partnershipTitle
+        })}>
+        <div className='clients-text'>{title}</div>
       </div>
       <div className='clients-slider js-slick'>
         <ul className='clients-slider-block'>

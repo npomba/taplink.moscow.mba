@@ -184,6 +184,11 @@ export default {
     en: 'clients in Russia'
   },
 
+  corporateClientsPartnership: {
+    ru: 'Мы сотрудничаем с крупными организациями:',
+    en: 'We are partnered with large companies:'
+  },
+
   corporateClientsDics: {
     ru: 'Опыт наших экспертов используют многие ведущие компании России и стран СНГ. Наш опыт будет полезен не только гигантам промышленной, добывающей индустрии, крупным сетевикам, но и среднему и малому бизнесу',
     en: "Our experts' experience is used by many leading companies in Russia and CIS. Nevertheless it's valuable not only for large-scale, but also for startups and medium-scale companies"

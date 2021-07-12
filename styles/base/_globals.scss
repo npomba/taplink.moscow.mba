@@ -1507,7 +1507,7 @@ h2 {
   flex-wrap: wrap;
   text-align: center;
   li {
-    width: 50%;
+    flex: 0 0 25%;
     height: 138px;
     display: flex;
     align-items: center;
@@ -1516,6 +1516,9 @@ h2 {
     border-top: none;
     border-left: none;
     padding: 5px 12px;
+    @media screen and (max-width: 1019px) {
+      flex: 0 0 50%;
+    }
   }
   img {
     display: inline-block;
@@ -2498,6 +2501,10 @@ footer {
     flex-shrink: 0;
     margin-right: 26px;
     margin-top: -14px;
+    margin-bottom: 57px;
+    @media screen and (max-width: 1019px) {
+      margin-bottom: 32px;
+    }
   }
 }
 
@@ -6326,6 +6333,8 @@ a.iconPhoneHeader {
         max-width: 66px;
         height: 63px;
         display: block;
+        width: 50px;
+        margin-left: 9px;
       }
     }
     // .text {
@@ -7169,4 +7178,8 @@ html #nprogress .spinner-icon {
 
 h2.prosTitle {
   max-width: 24ch;
+}
+
+input:focus {
+  font-size: 16px;
 }

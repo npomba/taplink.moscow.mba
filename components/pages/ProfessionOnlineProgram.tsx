@@ -49,14 +49,14 @@ const ProfessionOnlineProgram = ({ program }) => {
 
         <Pros format={'online'} />
         <HowProcessGoes />
-        <ProgramModules data={data} />
+        <ProgramModules data={data} smallerMb />
         <GetStudyPlan />
         <Teachers programId={data._id} programTitle={data.title} />
         <Students />
         <Reviews />
         <Accreditation />
         <HelpWithEmployment />
-        <CorporateClients />
+        <CorporateClients partnershipTitle />
         <Diploma />
 
         <CostOfStudy
