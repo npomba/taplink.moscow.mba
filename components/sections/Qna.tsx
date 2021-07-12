@@ -1,4 +1,7 @@
 import stls from '@/styles/components/sections/Qna.module.sass'
+import classNames from 'classnames'
+import Popup from 'reactjs-popup'
+import PopupForm from '@/components/popups/PopupForm'
 import Accordion from '@/components/general/Accordion'
 
 import Script from 'next/script'
@@ -43,7 +46,7 @@ const faq = [
   }
 ]
 
-const Qna = () => {
+const Qna = ({ programId, programTitle }) => {
   return (
     <>
       <section className='faq-section section-pl'>
@@ -57,6 +60,23 @@ const Qna = () => {
               Задавайте вопросы на интересующую тему и наши менеджеры ответят
               Вам в ближайшее время
             </div>
+            <Popup
+              trigger={
+                <a className={classNames('button', stls.emptyBtn)}>
+                  Задать вопрос
+                </a>
+              }
+              modal
+              nested>
+              {close => (
+                <PopupForm
+                  programId={programId}
+                  programTitle={programTitle}
+                  title={'Получите консультацию'}
+                  closePopUpForm={close}
+                />
+              )}
+            </Popup>
           </div>
           <div className='faq-content'>
             {faq.map((item, idx) => (
