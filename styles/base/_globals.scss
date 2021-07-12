@@ -2867,12 +2867,15 @@ footer {
   position: relative;
   margin-bottom: 130px;
   background: #f7f7f7;
-  padding: 130px;
+  padding: 130px 120px 130px 130px;
 
   .discount-sticker.right-corner {
     top: 66px;
     right: 66px;
     transform: rotate(15deg);
+    @media screen and (max-width: 767px) {
+      display: none;
+    }
   }
 }
 
@@ -2913,7 +2916,7 @@ footer {
   padding: 0 73px;
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
+  align-items: stretch;
   &:first-child {
     border-right: 1px solid #d9d9d9;
   }
@@ -2967,6 +2970,9 @@ footer {
     position: relative;
     margin-left: 28px;
     display: inline-block;
+    @media screen and (min-width: 1019px) and (max-width: 1329px) {
+      margin-left: 15px;
+    }
     &:after {
       content: '';
       width: 110%;
@@ -3039,6 +3045,11 @@ footer {
     width: 50%;
     &:last-child {
       padding-left: 50px;
+    }
+    &:first-child {
+      @media screen and (max-width: 1019px) {
+        margin-bottom: 30px;
+      }
     }
   }
   .price {
