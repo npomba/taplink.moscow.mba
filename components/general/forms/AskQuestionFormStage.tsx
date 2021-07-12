@@ -364,7 +364,8 @@ const showEnterContactDataStage = dataToShowThisStage => {
 
 const showFormSubmittedStage = () => {
   return (
-    <div className={`${stls.formSubmitted} thanks-popup-content`}>
+    <div
+      className={`${stls.formSubmitted} thanks-popup-content thanks-popup-content--question`}>
       <div className={`circle ${stls.circle}`}>
         <IconCheck />
       </div>
