@@ -436,13 +436,18 @@ const AskQuestionFormStage = ({
             add: {
               actionField: {
                 id: uuidv4()
-              }
+              },
+              products: [
+                {
+                  id: 'question',
+                  name: 'question'
+                }
+              ]
             }
           }
         },
         dataLayerName: 'dataLayer'
       }
-      console.log('test')
       TagManager.dataLayer(tagManagerArgs)
     }
   }, [])
