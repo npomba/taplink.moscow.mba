@@ -56,7 +56,7 @@ const ProfessionOnlineProgram = ({ program }) => {
         <Reviews />
         <Accreditation />
         <HelpWithEmployment />
-        <CorporateClients />
+        <CorporateClients partnershipTitle />
         <Diploma />
 
         <CostOfStudy
