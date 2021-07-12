@@ -14,19 +14,34 @@ export default {
     en: 'EXPERTS'
   },
 
-  teachersTitleFirst: {
+  teachersTitleFirstMain: {
     ru: 'Российские и',
     en: 'Russian and'
   },
 
-  teachersTitleRed: {
+  teachersTitleFirstSecondary: {
+    ru: 'Преподаватели курса -',
+    en: ''
+  },
+
+  teachersTitleRedMain: {
     ru: 'зарубежные',
     en: 'foreign'
   },
 
-  teachersTitleSecond: {
+  teachersTitleRedSecondary: {
+    ru: 'практикующие',
+    en: ''
+  },
+
+  teachersTitleSecondMain: {
     ru: 'эксперты программы',
     en: 'experts of the program'
+  },
+
+  teachersTitleSecondSecondary: {
+    ru: 'эксперты',
+    en: ''
   },
 
   teachersDics: {
@@ -39,9 +54,14 @@ export default {
     en: 'Practitioners'
   },
 
-  teachersListItemDisc: {
+  teachersListItemDiscMain: {
     ru: 'Реализовывали крупные проекты на рынках Европы и США',
     en: 'They have implemented major projects on the markets of Europe and USA'
+  },
+
+  teachersListItemDiscSecondary: {
+    ru: 'Имеют опыт работы в крупных российских и зарубежных организациях',
+    en: ''
   },
 
   teachersListItemTitleSecond: {
@@ -59,14 +79,24 @@ export default {
     en: 'International teaching experience'
   },
 
-  teachersListItemDiscThird: {
+  teachersListItemDiscThirdMain: {
     ru: 'Преподают в ведущих бизнес-школах мира',
     en: 'They work in the leading world-class business schools'
   },
 
-  teachersProsTitle: {
+  teachersListItemDiscThirdSecondary: {
+    ru: 'Преподают в ведущих российских учебных заведениях',
+    en: ''
+  },
+
+  teachersProsTitleMain: {
     ru: 'Более 150 профессоров международного уровня',
     en: 'More than 150 international-level professors'
+  },
+
+  teachersProsTitleSecondary: {
+    ru: 'Программы готовят более 150 специалистов международного уровня',
+    en: ''
   },
 
   teachersTeacherOneTitle: {
