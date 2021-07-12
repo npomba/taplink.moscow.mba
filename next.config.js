@@ -34,7 +34,8 @@ module.exports = {
                 "'sha256-yD2YThwDBB7lr1RbtQ3odfhOChA2l5RZg8iqCFjRIhY='",
                 'https://connect.facebook.net/en_US/fbevents.js',
                 'https://connect.facebook.net/signals/config/1845052109010998',
-                'https://www.facebook.com/tr/'
+                'https://www.facebook.com/tr/',
+                "'sha256-Uz0yn00PqpvyPuK+MptaAirzRCPwuCU4Vhj/iAbfJxk='"
               ],
               scriptSrc: [
                 "'self'",
@@ -56,7 +57,8 @@ module.exports = {
                 'http://www.googleadservices.com',
                 "'sha256-yD2YThwDBB7lr1RbtQ3odfhOChA2l5RZg8iqCFjRIhY='",
                 'https://connect.facebook.net/en_US/fbevents.js',
-                'https://connect.facebook.net/signals/config/1845052109010998'
+                'https://connect.facebook.net/signals/config/1845052109010998',
+                "'sha256-Uz0yn00PqpvyPuK+MptaAirzRCPwuCU4Vhj/iAbfJxk='"
               ],
               // scriptSrcElem: [
               //   "'self'",

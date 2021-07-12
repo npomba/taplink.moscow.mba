@@ -125,7 +125,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <a
-                    href='https://api.whatsapp.com/message/DSPLWVLIMR66E1'
+                    href='https://api.whatsapp.com/send?phone=89258088389text=%D0%94%D0%BE%D0%B1%D1%80%D1%8B%D0%B9%20%D0%B4%D0%B5%D0%BD%D1%8C!'
                     aria-label='MBA Whatsapp'
                     target='_blank'
                     rel='noopener noreferrer'>
