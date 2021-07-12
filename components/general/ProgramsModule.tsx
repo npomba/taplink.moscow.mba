@@ -1,11 +1,18 @@
 import stls from '@/styles/components/general/ProgramsModule.module.sass'
 import { useState } from 'react'
 
-const ProgramsModule = ({ title = 'Модуль', subTitle = '', items }) => {
+const ProgramsModule = ({
+  title = 'Модуль',
+  subTitle = '',
+  items,
+  fadeOutEffect = false
+}) => {
   const [isOpen, setIsOpen] = useState(false)
 
   const moduleClassNames = [stls.module]
   const contentClassNames = [stls.content]
+
+  if (fadeOutEffect) contentClassNames.push(stls.fadeOutEffect)
 
   if (isOpen) {
     moduleClassNames.push(stls.opened)

@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/ProgramsModules.module.sass'
+import classNames from 'classnames'
 import useAt from '@/components/hooks/useAt'
 import ProgramsModule from '@/components/general/ProgramsModule'
 import Stickers from '@/components/general/Stickers'
@@ -6,11 +7,12 @@ import Sticker from '@/components/general/Sticker'
 import ProgramSubjects from '@/components/hooks/ProgramSubjects'
 import { IconCheckCircleAltDim } from '@/components/icons'
 
-const ProgramsModules = ({ data }) => {
+const ProgramsModules = ({ data, smallerMb }) => {
   const at = useAt()
 
   return (
-    <section className={stls.container}>
+    <section
+      className={classNames(stls.container, { [stls.smallMb]: smallerMb })}>
       <div className={stls.pl}>
         <h2>Программа обучения</h2>
         <ul className={stls.redRectangle}>
@@ -168,6 +170,7 @@ const ProgramsModules = ({ data }) => {
                 'Что такое подрывные инновации и как их предвидеть',
                 'Платформы и экосистемы как основа цифрового бизнеса'
               ]}
+              fadeOutEffect
             />
             <ProgramsModule
               title='4 модуль'
@@ -177,6 +180,7 @@ const ProgramsModules = ({ data }) => {
                 'Управление взаимоотношениями с клиентами',
                 'Принципы использования маркетинговой аналитики и больших данных в современном бизнесе'
               ]}
+              fadeOutEffect
             />
           </>
         )}
