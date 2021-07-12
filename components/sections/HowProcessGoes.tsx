@@ -13,14 +13,16 @@ const HowProcessGoes = () => {
         <div className='process-content'>
           <div className='process-heading-container'>
             <h2>Как проходит процесс обучения</h2>
-            <div className={stls.studentPhoto}>
-              <Image
-                src={studentPhoto}
-                height={337}
-                width={506}
-                alt={'Студент академии сидит перед ноутбуком'}
-              />
-            </div>
+            {at.profession && (
+              <div className={stls.studentPhoto}>
+                <Image
+                  src={studentPhoto}
+                  height={337}
+                  width={506}
+                  alt={'Студент академии сидит перед ноутбуком'}
+                />
+              </div>
+            )}
           </div>
           <div className='process-info'>
             <ul className='process-step-tabs'>
