@@ -686,82 +686,9 @@ header {
   display: none;
 }
 
-.lang {
-  position: relative;
-  &.lang-red-highlight {
-    & .lang__btn {
-      color: $red;
-    }
-  }
-}
-
-.lang__btn {
-  cursor: pointer;
-  display: flex;
-  align-items: center;
-  & svg {
-    margin-left: 4px;
-  }
-}
-
-.lang__selectList {
-  display: none;
-  &.show {
-    display: block;
-    position: absolute;
-    padding: 15px;
-    top: 2.5rem;
-    right: 0;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.15);
-    background-color: #fff;
-    z-index: 2;
-    &::after {
-      content: '';
-      position: absolute;
-      top: -10px;
-      right: 13px;
-      width: 0;
-      height: 0;
-      border-left: 10px solid transparent;
-      border-right: 10px solid transparent;
-      border-bottom: 10px solid #fff;
-    }
-    & li {
-      font-style: normal;
-      font-weight: normal;
-      font-size: 12px;
-      line-height: 120%;
-      display: flex;
-      align-items: center;
-      &:nth-child(1) {
-        padding-bottom: 8px;
-        margin-bottom: 8px;
-        border-bottom: 1px solid #e5e5e5;
-      }
-      & a {
-        display: flex;
-        align-items: center;
-        transition: color 0.2s ease-in-out;
-        &:hover {
-          color: $red;
-        }
-        & span {
-          display: flex;
-          align-items: center;
-          margin-right: 5px;
-        }
-      }
-    }
-  }
-}
-
 .header-menu .selectList__item {
   margin: 0.5rem 0 0 0;
   padding: 0.6rem;
-}
-
-.selectList__item a {
-  cursor: pointer;
 }
 
 /*jumbotron-section ===================================*/
@@ -4716,9 +4643,6 @@ footer {
         max-width: 60px;
       }
     }
-  }
-  .lang {
-    display: none;
   }
   .header-phones {
     flex-direction: row;
