@@ -14,8 +14,11 @@ import Loan from '@/components/costs/Loan'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
-  const profession = data.mbaTypeOfProgram === 'profession'
-  // console.log(profession)
+  const isDiscounted =
+    (at.mini && at.online) ||
+    (at.professional && at.online) ||
+    (at.industry && at.online) ||
+    (at.profession && at.online)
 
   return (
     <section className='jumbotron-section'>
@@ -75,8 +78,10 @@ const JumbotronProgram = ({ data }) => {
                   <p>
                     Можно учиться в рассрочку за{' '}
                     <Loan
+                      discount={isDiscounted}
                       type={data.mbaTypeOfProgram}
                       format={data.mbaFormat}
+                      notComparingPrices
                     />
                   </p>
                 </div>

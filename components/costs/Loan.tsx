@@ -1,6 +1,11 @@
 import useAt from '@/components/hooks/useAt'
 
-const Loan = ({ discount = false, type = null, format = null }) => {
+const Loan = ({
+  discount = false,
+  type = null,
+  format = null,
+  notComparingPrices = false
+}) => {
   const at = useAt()
 
   const price = {
@@ -41,16 +46,16 @@ const Loan = ({ discount = false, type = null, format = null }) => {
 
   return (
     <>
-      {discount && !at.blended && (
+      <i className={discount ? 'new-price' : 'simple-price'}>
+        {price[regularOrDiscounted]?.[type]?.[format]} Р. / мес
+      </i>
+      {discount && !at.blended && !notComparingPrices && (
         <>
           <i className='old-price'>
             {price.loanRegular[type]?.[format]} Р. / мес
           </i>
         </>
       )}
-      <i className={discount ? 'new-price' : 'simple-price'}>
-        {price[regularOrDiscounted]?.[type]?.[format]} Р. / мес
-      </i>
     </>
   )
 }
