@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/ProgramDesc.module.sass'
+import classNames from 'classnames'
 import useAt from '@/components/hooks/useAt'
 import Image from 'next/image'
 
@@ -6,7 +7,10 @@ const ProgramDesc = () => {
   const at = useAt()
   return (
     <section className='top-path-section'>
-      <div className='top-path-content'>
+      <div
+        className={classNames('top-path-content', {
+          [stls.smallPl]: at.profession
+        })}>
         {!at.profession && <div className='title-pl'>О&nbsp;программе</div>}
         <h2>
           {at.mini && at.online && 'MBA Mini ONLINE'}
