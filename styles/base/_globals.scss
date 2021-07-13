@@ -2031,159 +2031,6 @@ h2 {
   }
 }
 
-/*footer =================================================*/
-footer {
-  background: #262626;
-  overflow: hidden;
-  color: #fff;
-  position: relative;
-  z-index: 3;
-}
-
-.footer-top {
-  display: flex;
-  padding: 87px 0 52px;
-}
-
-.footer-top-left {
-  width: 380px;
-  flex-shrink: 0;
-  margin-right: 103px;
-  position: relative;
-  z-index: 3;
-  padding-right: 20px;
-  &:after {
-    content: '';
-    width: 102vw;
-    right: 0;
-    top: -100px;
-    height: 1000px;
-    position: absolute;
-    z-index: -1;
-    background: #1f1f1f;
-  }
-}
-
-.footer-top-right {
-  flex-grow: 1;
-}
-
-.footer-bottom {
-  position: relative;
-  z-index: 5;
-  border-top: 1px solid #333333;
-  color: #808080;
-  padding: 26px 0;
-  display: flex;
-  align-items: center;
-  font-size: 13px;
-  font-weight: 400;
-}
-
-.footer-copyright {
-  width: 380px;
-  flex-shrink: 0;
-  margin-right: 103px;
-}
-
-.footer-links {
-  margin-right: auto;
-  &:last-child {
-    margin-right: 0;
-  }
-  &:hover {
-    text-decoration: underline;
-  }
-}
-
-.footer-tel {
-  font-weight: bold;
-  font-size: 32px;
-  line-height: 1.2;
-  margin-bottom: 18px;
-}
-
-.footer-mail {
-  font-size: 20px;
-  color: #f7f7f7;
-  line-height: 1.3;
-  margin-bottom: 20px;
-  opacity: 0.5;
-}
-
-.footer-menu {
-  font-size: 20px;
-  line-height: 1.3;
-  display: flex;
-  flex-direction: column;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  align-content: flex-start;
-  max-height: 254px;
-  margin: 0 -40px 67px;
-  li {
-    margin-bottom: 20px;
-    padding: 0 40px;
-    width: 33.333%;
-  }
-  a {
-    transition: $transition;
-    &:hover {
-      color: $red;
-    }
-  }
-  .empty {
-    height: 30px;
-  }
-}
-
-.footer-contacts {
-  display: flex;
-  align-items: center;
-}
-
-.footer-place {
-  align-items: center;
-  display: flex;
-  line-height: 1.2;
-  margin-right: 20px;
-  svg {
-    flex-shrink: 0;
-    margin-right: 10px;
-    filter: invert(58%) sepia(3%) saturate(7%) hue-rotate(348deg)
-      brightness(86%) contrast(85%);
-  }
-}
-
-.footer-socials {
-  margin-left: auto;
-  display: flex;
-  li {
-    margin-left: -1px;
-  }
-  a {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    height: 50px;
-    border: 1px solid #ffffff;
-    width: 94px;
-    transition: $transition;
-    position: relative;
-    svg path {
-      transition: $transition;
-    }
-    &:hover {
-      border-color: $red;
-      z-index: 5;
-      svg path {
-        fill: $red;
-      }
-    }
-  }
-}
-
 /*accreditations-section =================================*/
 .accreditations-section {
   margin-bottom: 130px;
@@ -4358,28 +4205,6 @@ footer {
   .support-section {
     padding: 90px 100px;
   }
-  .footer-tel {
-    font-size: 26px;
-  }
-  .footer-top-left {
-    width: 300px;
-    margin-right: 50px;
-  }
-  .footer-copyright {
-    width: 300px;
-    margin-right: 50px;
-  }
-  .footer-menu {
-    font-size: 18px;
-    margin: 0 -20px 60px;
-    max-height: 230px;
-    li {
-      padding: 0 20px;
-    }
-  }
-  .footer-socials a {
-    width: 80px;
-  }
   .accreditations-section::after {
     margin-left: 50px;
   }
@@ -5131,43 +4956,6 @@ footer {
     padding: 40px;
     margin-bottom: 50px;
   }
-  .footer-top {
-    display: block;
-    padding-top: 0;
-    padding-bottom: 35px;
-  }
-  .footer-top-left {
-    width: 100%;
-    margin-right: 0;
-    position: relative;
-    padding-top: 85px;
-    padding-right: 0;
-    padding-bottom: 35px;
-    margin-bottom: 35px;
-    &:after {
-      height: 100%;
-      top: 0;
-      right: 50%;
-      margin-right: -51vw;
-    }
-  }
-  .footer-tel {
-    font-size: 32px;
-    margin-bottom: 13px;
-  }
-  .footer-menu {
-    margin-bottom: 30px;
-  }
-  .footer-bottom {
-    justify-content: space-between;
-  }
-  .footer-copyright {
-    margin-right: 0;
-    width: auto;
-  }
-  .footer-links {
-    margin-right: 0;
-  }
   .simple-form {
     .inputs-flex .width-33 {
       width: calc(50% - 30px);
@@ -5748,15 +5536,6 @@ footer {
     padding: 40px 25px;
     .text {
       margin-bottom: 20px;
-    }
-  }
-  .footer-menu {
-    max-height: 275px;
-    li {
-      width: 50%;
-    }
-    .empty {
-      display: none;
     }
   }
   .accreditations-section {
@@ -6641,39 +6420,6 @@ a.iconPhoneHeader {
     .pic-2 {
       width: 170px;
     }
-  }
-  .footer-contacts {
-    display: block;
-  }
-  .footer-place {
-    margin-right: 0;
-    margin-bottom: 25px;
-  }
-  .footer-socials a {
-    width: 90px;
-  }
-  .footer-menu {
-    font-size: 15px;
-    margin: 0 -10px 30px;
-    max-height: 230px;
-    li {
-      margin-bottom: 14px;
-      padding: 0 10px;
-    }
-  }
-  .footer-tel {
-    font-size: 30px;
-  }
-  .footer-mail {
-    font-size: 18px;
-  }
-  .footer-bottom {
-    padding-top: 0;
-    border-top: none;
-    flex-direction: column;
-    align-items: flex-start;
-    text-align: left;
-    line-height: 1.8;
   }
   .title-pl {
     font-size: 18px;
