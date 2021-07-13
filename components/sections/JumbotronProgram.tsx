@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/JumbotronProgram.module.sass'
+import classNames from 'classnames'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
@@ -49,7 +50,10 @@ const JumbotronProgram = ({ data }) => {
           </div>
           <div className='jumbotron-flex'>
             <div className='jumbotron-text'>
-              <h1>{data.title}</h1>
+              <h1
+                className={classNames({ [stls.smallerTitle]: at.profession })}>
+                {data.title}
+              </h1>
               <div className='desc'>
                 {at.profession
                   ? data.description
