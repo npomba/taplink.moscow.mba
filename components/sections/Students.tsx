@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/Students.module.sass'
+import useAt from '@/components/hooks/useAt'
 import { CircularProgressbar } from 'react-circular-progressbar'
 // import 'react-circular-progressbar/dist/styles.css'
 
@@ -6,6 +7,8 @@ import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import Image from 'next/image'
 
 const Students = () => {
+  const at = useAt()
+
   return (
     <section className='students-section section-pl'>
       <div className='title-pl red'>Более 2000</div>
@@ -31,7 +34,11 @@ const Students = () => {
                 value={92}
                 text={'92%'}
               />
-              <p>повысили показатели своих проектов</p>
+              <p>
+                {at.profession
+                  ? 'применили полученные знания в работе'
+                  : 'повысили показатели своих проектов'}
+              </p>
             </li>
             <li>
               <CircularProgressbar
