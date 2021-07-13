@@ -3,7 +3,7 @@ import StickyBottomContainer from '@/components/layout/StickyBottomContainer'
 
 const Wrapper = ({ children }) => {
   return (
-    <div className='page'>
+    <div className={stls.page}>
       {children}
       <StickyBottomContainer />
     </div>
