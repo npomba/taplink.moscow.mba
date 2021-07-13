@@ -65,7 +65,7 @@ const ProfessionOnlineProgram = ({ program }) => {
           programFormat={data.mbaFormat}
           programType={data.mbaTypeOfProgram}
         />
-        <Qna />
+        <Qna programId={data._id} programTitle={data.title} />
         <ContactUs
           programId={data._id}
           programTitle={data.title}

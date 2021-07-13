@@ -82,7 +82,7 @@ const executive = ({ programs }) => {
           programTitle={data.title}
           programType='executive'
         />
-        <Qna />
+        <Qna programId={data._id} programTitle={data.title} />
         <ContactUs
           programId={data._id}
           programTitle={data.title}
