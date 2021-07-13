@@ -51,10 +51,10 @@ const JumbotronProgram = ({ data }) => {
             <div className='jumbotron-text'>
               <h1>{data.title}</h1>
               <div className='desc'>
-                Оставьте заявку и получите консультацию по программе, а также
-                узнайте возможные варианты скидок и требования к поступлению
+                {at.profession
+                  ? data.description
+                  : 'Оставьте заявку и получите консультацию по программе, а также узнайте возможные варианты скидок и требования к поступлению'}
               </div>
-
               <div className='btnLoanGroup'>
                 <Popup
                   trigger={
