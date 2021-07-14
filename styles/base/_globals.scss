@@ -2940,6 +2940,7 @@ h2 {
 }
 
 .accordion-image-content {
+  padding-top: 56px;
   grid-template-columns: repeat(3, 1fr);
   row-gap: 50px;
 }
@@ -5321,6 +5322,7 @@ h2 {
     margin-bottom: 30px;
   }
   .accordion-image-content {
+    padding-top: 47px;
     grid-template-columns: 1fr;
     row-gap: 30px;
   }

@@ -156,7 +156,7 @@ const OurDiplomasAndCertificates = () => {
   return (
     <section className={diplomasClassNames.join(' ')}>
       <h2 className={stls.subHeading}>Выдаваемые дипломы и сертификаты</h2>
-      <p>
+      <p className={stls.desc}>
         Мы производим обучение на основании государственной лицензии №041221.
         После окончания обучения в Moscow Business Academy Вы получите диплом о
         профессиональной переподготовке установленного образца, диплом академии

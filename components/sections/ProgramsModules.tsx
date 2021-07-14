@@ -20,7 +20,11 @@ const ProgramsModules = ({ data, smallerMb = false }) => {
             <div className={stls.number}>
               <ProgramSubjects subjects='base' />
             </div>
-            <p className={stls.p}>дисциплин базовой части</p>
+            <p className={stls.p}>
+              {at.profession
+                ? 'профильных дисциплин'
+                : 'дисциплин базовой части'}
+            </p>
           </li>
           <li className={stls.redItem}>
             <div className={stls.number}>

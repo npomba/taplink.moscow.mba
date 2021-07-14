@@ -7,7 +7,6 @@ const onSubmitForm = async values => {
     let output
     res.status === 200 && (output = 200)
     res.status === 500 && (output = 500)
-    console.log(values)
     return output
   } catch (err) {
     console.log(err)
