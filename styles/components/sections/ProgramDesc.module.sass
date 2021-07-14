@@ -1,5 +1,12 @@
 @use '@/styles/utils/mixin' as m
 
+.imageContainer
+  width: 503px
+  height: 503px
+  @include m.media(laptop, tablet, phone)
+    width: 280px
+    height: 280px
+
 .smallPl
   padding: 117px 290px 117px 215px
   @include m.media(desktop, laptop)
