@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: process.env.SITE_URL || 'https://moscow.mba',
+  siteUrl: process.env.SITE_URL || 'https://promo.moscow.mba',
   changefreq: 'daily',
   priority: 0.7,
   sitemapSize: 5000,
@@ -7,7 +7,7 @@ module.exports = {
   exclude: ['/payment'],
   alternateRefs: [
     {
-      href: 'https://moscow.mba/en-US',
+      href: 'https://promo.moscow.mba/en-US',
       hreflang: 'en'
     }
   ],

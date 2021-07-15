@@ -1,7 +1,21 @@
+import stls from '@/styles/components/costs/Price.module.sass'
+import classNames from 'classnames'
 import useAt from '@/components/hooks/useAt'
 
-const Price = ({ discount = false, type = null, format = null }) => {
+const Price = ({ discount = false }) => {
   const at = useAt()
+
+  const type = at.mini
+    ? 'mini'
+    : at.professional
+    ? 'professional'
+    : at.industry
+    ? 'industry'
+    : at.profession
+    ? 'profession'
+    : null
+
+  const format = at.online ? 'online' : at.blended ? 'blended' : null
 
   const price = {
     regular: {
@@ -39,20 +53,21 @@ const Price = ({ discount = false, type = null, format = null }) => {
     }
   }
 
-  const regularOrDiscounted = discount ? 'discounted' : 'regular'
-
-  if ((!format && at.executive) || (!format && type === 'executive'))
-    return <>{price[regularOrDiscounted].executive} Р.</>
-
   return (
-    <>
-      <i className={discount ? 'new-price' : 'simple-price'}>
-        {price[regularOrDiscounted]?.[type]?.[format]} Р.
-      </i>
+    <div className={stls.container}>
       {discount && (
-        <i className='old-price'>{price.regular[type]?.[format]} Р.</i>
+        <span className={stls.discount}>
+          {price.discounted?.[type]?.[format]} Р.{' '}
+        </span>
       )}
-    </>
+
+      <span
+        className={classNames({
+          [stls.discounted]: discount
+        })}>
+        {price.regular[type]?.[format]} Р.
+      </span>
+    </div>
   )
 }
 

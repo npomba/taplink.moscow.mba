@@ -2,7 +2,7 @@ const dev = process.env.NODE_ENV !== 'production'
 
 const backendUrl = dev ? 'http://localhost:5000' : 'https://ipo-cp.ru'
 
-const frontendUrl = dev ? 'http://localhost:3000' : 'https://moscow.mba'
+const frontendUrl = dev ? 'http://localhost:3000' : 'https://promo.moscow.mba'
 
 const gtmId = 'GTM-M4JLQXM'
 

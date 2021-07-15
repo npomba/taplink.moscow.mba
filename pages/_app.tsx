@@ -5,7 +5,6 @@ import { DefaultSeo, LogoJsonLd } from 'next-seo'
 import SEO from '../seo.config'
 import Header from '@/components/layout/Header'
 import Footer from '@/components/layout/Footer'
-import Wrapper from '@/components/layout/Wrapper'
 import '@/styles/app.sass'
 // import { motion, AnimatePresence } from 'framer-motion'
 import { dev, gtmId } from '@/config/index'
@@ -78,38 +77,14 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <DefaultSeo {...SEO} />
       <LogoJsonLd
-        logo='https://moscow.mba/logo.jpg'
-        url='https://moscow.mba/'
+        logo='https://promo.moscow.mba/logo.jpg'
+        url='https://promo.moscow.mba/'
       />
-      <Script src='/assets/js/vendors/jquery-3.6.0.min.js' />
-      <Script src='/assets/js/myjs.js' strategy='lazyOnload' />
-      <Wrapper>
-        <Header programs={programs} />
-        {/* <AnimatePresence> */}
-        {/* <motion.div
-            key={router.route}
-            initial='initial'
-            animate='animate'
-            transition={{ ease: 'easeInOut', duration: 0.4 }}
-            exit='exit'
-            variants={{
-              initial: {
-                opacity: 0
-              },
-              animate: {
-                opacity: 1
-              },
-              exit: {
-                opacity: 0
-              }
-            }}> */}
-        <div className='main-content'>
-          <Component {...pageProps} />
-        </div>
-        {/* </motion.div> */}
-        {/* </AnimatePresence> */}
-        <Footer />
-      </Wrapper>
+      <Header />
+      <main>
+        <Component {...pageProps} />
+      </main>
+      <Footer />
     </>
   )
 }

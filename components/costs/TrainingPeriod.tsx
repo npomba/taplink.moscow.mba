@@ -1,14 +1,16 @@
 import SetString from '@/components/hooks/SetString'
 import langMenu from '@/data/translation/menu'
+import useAt from '@/components/hooks/useAt'
 
-const TrainingPeriod = ({ type = null }) => {
+const TrainingPeriod = ({ preposition = false }) => {
+  const at = useAt()
   return (
     <>
-      {type === 'mini' && <>9 {SetString(langMenu.categoryMonth)}</>}
-      {type === 'professional' && <>18 {SetString(langMenu.categoryMonth)}</>}
-      {type === 'industry' && <>18 {SetString(langMenu.categoryMonth)}</>}
-      {type === 'profession' && <>4 {SetString(langMenu.categoryMonth)}</>}
-      {type === 'executive' && <>26 {SetString(langMenu.categoryMonth)}</>}
+      {preposition && 'От '}
+      {at.mini && <>9 {SetString(langMenu.categoryMonth)}</>}
+      {at.professional && <>18 {SetString(langMenu.categoryMonth)}</>}
+      {at.industry && <>18 {SetString(langMenu.categoryMonth)}</>}
+      {at.profession && <>4 {SetString(langMenu.categoryMonth)}</>}
     </>
   )
 }

@@ -1,0 +1,22 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.list
+  @include m.gap($p: 0)
+
+.item
+  @include m.flex($ai: center)
+  max-width: 28ch
+  @include m.gap($mb: f.px(17))
+  font-size: f.px(14)
+  line-height: 100%
+  &::before
+    content: ''
+    @include m.flex
+    min-width: f.px(7, em)
+    max-width: f.px(7, em)
+    min-height: f.px(7, em)
+    max-height: f.px(7, em)
+    @include m.gap($mr: f.px(28))
+    @include m.dye(bg, c.$alpha)

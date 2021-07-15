@@ -1,16 +1,23 @@
-$breakpointsMin: (phone: null, tablet: 481px, laptop: 768px, desktop: 1020px, widescreen: 1330px)
-$breakpointsMax: (phone: 480px, tablet: 767px, laptop: 1019px, desktop: 1329px, widescreen: null)
+@use "sass:list"
+@use "sass:map"
+
+$phone: 480px
+$tablet: 768px
+$laptop: 1200px
+
+$bkpMin: (phone: null, tablet: $phone+1, laptop: $tablet+1, desktop: $laptop+1)
+$bkpMax: (phone: $phone, tablet: $tablet, laptop: $laptop, desktop: null)
 
 @mixin media($keys...)
   @each $key in $keys
-    @if (map-get($breakpointsMin, $key) != null) and (map-get($breakpointsMax, $key) != null)
-      @media (min-width: map-get($breakpointsMin, $key)) and (max-width: map-get($breakpointsMax, $key))
+    @if (map-get($bkpMin, $key) != null) and (map-get($bkpMax, $key) != null)
+      @media (min-width: map-get($bkpMin, $key)) and (max-width: map-get($bkpMax, $key))
         @content
-    @else if (map-get($breakpointsMin, $key) != null) and (map-get($breakpointsMax, $key) == null)
-      @media (min-width: map-get($breakpointsMin, $key))
+    @else if (map-get($bkpMin, $key) != null) and (map-get($bkpMax, $key) == null)
+      @media (min-width: map-get($bkpMin, $key))
         @content
-    @else if (map-get($breakpointsMin, $key) == null) and (map-get($breakpointsMax, $key) != null)
-      @media (max-width: map-get($breakpointsMax, $key))
+    @else if (map-get($bkpMin, $key) == null) and (map-get($bkpMax, $key) != null)
+      @media (max-width: map-get($bkpMax, $key))
         @content
 
 // @mixin orientPort {
@@ -18,6 +25,7 @@ $breakpointsMax: (phone: 480px, tablet: 767px, laptop: 1019px, desktop: 1329px, 
 //     @content;
 //   }
 // }
+
 // @mixin orientLand
 //   @media only screen and (orientation: landscape)
 //     @content

@@ -1,0 +1,14 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.gap($mt: f.px(9))
+
+.discount
+  font-size: f.px(23)
+  font-weight: 500
+  @include m.dye(c, c.$alpha)
+
+.discounted
+  text-decoration: line-through

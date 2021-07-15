@@ -1,10 +1,11 @@
 import stls from '@/styles/components/popups/PopupForm.module.sass'
+import classNames from 'classnames'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
 import onSubmitForm from '@/components/hooks/onSubmitForm'
 import { useForm } from 'react-hook-form'
 import { useState } from 'react'
-import handlePlaceholder from '@/components/general/forms/handlePlaceholder'
+import handlePlaceholder from '@/components/general/handlePlaceholder'
 import Popup from 'reactjs-popup'
 import PopupThankyou from '@/components/popups/PopupThankyou'
 import PopupLoader from '@/components/popups/PopupLoader'
@@ -36,11 +37,6 @@ const Form = ({
   const closeLoadingModal = () => setOpenLoader(false)
   const { asPath } = useRouter()
 
-  // useEffect(() => {
-  //   const utms = sessionStorage.getItem('utms')
-  //   console.log(JSON.parse(utms))
-  // }, [])
-
   const onSubmitFormThis = async values => {
     setOpenLoader(o => !o)
     values.programTitle = programTitle
@@ -63,7 +59,7 @@ const Form = ({
   }
 
   return (
-    <div id='teachersModal' className='popup-modal mfp-hide mfp-with-anim'>
+    <div>
       <Popup open={openLoader} onClose={closeLoadingModal}>
         <PopupLoader closePopUp={closeLoadingModal} />
       </Popup>
@@ -74,21 +70,19 @@ const Form = ({
           programTitle={programTitle}
         />
       </Popup>
-      <div className='popup-content-origin red-bg'>
-        <h2>{title}</h2>
-        <div className='desc'>
+      <div className={stls.container}>
+        <h3 className={stls.title}>{title}</h3>
+        <p className={stls.desc}>
           {!programTitle && disc}{' '}
           {programTitle &&
             `Оставьте заявку и получите консультацию по программе ${programTitle}, узнайте возможные варианты скидок и требования к поступлению`}
-        </div>
-        <form
-          method='post'
-          className='simple-form support-form'
-          onSubmit={handleSubmit(onSubmitFormThis)}>
-          <div className='inputs-flex'>
-            <div className='input-block width-33'>
+        </p>
+        <form method='post' onSubmit={handleSubmit(onSubmitFormThis)}>
+          <div>
+            <div className={stls.inputGroup}>
               <input
                 type='text'
+                className={stls.input}
                 aria-label={SetString(lang.inputName)}
                 {...register('name', {
                   maxLength: {
@@ -98,16 +92,13 @@ const Form = ({
                 })}
                 onKeyUp={handleKeyUp}
               />
-              <div className='input-placeholder'>
-                {SetString(lang.inputName)}
-              </div>
-              <p className='inpt-err-msg'>
-                {errors.name && errors.name.message}
-              </p>
+              <p className={stls.inputName}>{SetString(lang.inputName)}</p>
+              <p>{errors.name && errors.name.message}</p>
             </div>
-            <div className='input-block width-33'>
+            <div className={stls.inputGroup}>
               <input
                 type='tel'
+                className={stls.input}
                 aria-label={SetString(lang.inputPhone)}
                 {...register('phone', {
                   required: `*${SetString(lang.formErrEmptyPhone)}`,
@@ -118,31 +109,27 @@ const Form = ({
                 })}
                 onKeyUp={handleKeyUp}
               />
-              <div className='input-placeholder'>
-                {SetString(lang.inputPhone)}
-              </div>
-              <p className='inpt-err-msg'>
-                {errors.phone && errors.phone.message}
-              </p>
+              <p className={stls.inputName}>{SetString(lang.inputPhone)}</p>
+              <p>{errors.phone && errors.phone.message}</p>
             </div>
-            <div className='input-block width-33'>
+            <div className={stls.btnGroup}>
               <button
                 type='submit'
-                className={`button white-button ${
-                  errors.name || errors.phone ? 'btn-disabled' : ''
-                }`}
+                className={classNames({
+                  [stls.btnLead]: true,
+                  [stls.disabled]: errors.name || errors.phone
+                })}
                 disabled={errors.name || errors.phone ? true : false}>
                 {SetString(lang.inputSubmit)}
               </button>
             </div>
           </div>
-          <div className='personal-datas'>
+          <p className={stls.policy}>
             {SetString(lang.privacyPolicyFirst)}{' '}
-            {/* <a href=''>{SetString(lang.privacyPolicySecond)}</a> */}
             {SetString(lang.privacyPolicySecond)}
-          </div>
+          </p>
         </form>
-        <button className='mfp-close' type='button' onClick={closePopUpForm}>
+        <button className={stls.close} onClick={closePopUpForm}>
           <IconClose />
         </button>
       </div>

@@ -1,0 +1,15 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.title
+  @include m.gap($mb: f.px(5, em))
+  font-size: f.px(15)
+  line-height: f.px(21, em)
+  text-transform: uppercase
+  @include m.dye(c, c.$alpha)
+
+.text
+  @include m.gap($mt: 0, $mb: f.px(29, em))
+  font-size: f.px(14)
+  line-height: f.px(19, em)

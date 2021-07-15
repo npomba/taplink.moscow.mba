@@ -1,0 +1,27 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  @include m.gap($mb: f.px(51, em))
+
+.content
+  position: relative
+
+.title
+  position: relative
+  max-width: 13ch
+  @include m.gap($mb: f.px(8, em), $mt: f.px(8, em))
+  font-size: f.px(35)
+  font-weight: 700
+  line-height: 100%
+  z-index: 1
+
+.discount
+  position: absolute
+  top: 0
+  right: 0
+
+.info
+  max-width: f.px(320)
+  @include m.flex($jc: space-between)

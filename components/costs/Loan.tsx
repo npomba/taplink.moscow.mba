@@ -46,15 +46,9 @@ const Loan = ({
 
   return (
     <>
-      <i className={discount ? 'new-price' : 'simple-price'}>
-        {price[regularOrDiscounted]?.[type]?.[format]} Р. / мес
-      </i>
+      {price[regularOrDiscounted]?.[type]?.[format]} Р. / мес
       {discount && !at.blended && !notComparingPrices && (
-        <>
-          <i className='old-price'>
-            {price.loanRegular[type]?.[format]} Р. / мес
-          </i>
-        </>
+        <>{price.loanRegular[type]?.[format]} Р. / мес</>
       )}
     </>
   )

@@ -240,7 +240,7 @@ export default {
   },
 
   inputName: {
-    ru: 'Введите имя',
+    ru: 'Имя',
     en: 'Name'
   },
 

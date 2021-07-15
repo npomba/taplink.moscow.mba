@@ -4,7 +4,7 @@ const dev = process.env.NODE_ENV !== 'production'
 module.exports = {
   poweredByHeader: false,
   i18n: {
-    locales: ['ru', 'en-US'],
+    locales: ['ru'],
     defaultLocale: 'ru',
     localeDetection: false
   },
@@ -27,7 +27,7 @@ module.exports = {
                 'https://www.google.com',
                 'https://bid.g.doubleclick.net',
                 'https://mc.yandex.ru',
-                'https://moscow.mba',
+                'https://promo.moscow.mba',
                 'https://www.googleadservices.com',
                 'https://www.google.ru',
                 'https://www.googletagmanager.com',
@@ -53,7 +53,7 @@ module.exports = {
                 'https://www.googleadservices.com',
                 'https://www.google.com',
                 'https://googleads.g.doubleclick.net',
-                'https://moscow.mba',
+                'https://promo.moscow.mba',
                 'http://www.googleadservices.com',
                 "'sha256-yD2YThwDBB7lr1RbtQ3odfhOChA2l5RZg8iqCFjRIhY='",
                 'https://connect.facebook.net/en_US/fbevents.js',
@@ -105,23 +105,63 @@ module.exports = {
   async redirects() {
     return [
       {
-        source: '/programs',
-        destination: '/programs/mini/online',
+        source: '/',
+        destination: '/mini/online/human-resource',
         permanent: true
       },
       {
-        source: '/programs/mini',
-        destination: '/programs/mini/online',
+        source: '/mini',
+        destination: '/mini/online/human-resource',
         permanent: true
       },
       {
-        source: '/programs/professional',
-        destination: '/programs/professional/online',
+        source: '/professional',
+        destination: '/professional/online/crisis-management',
         permanent: true
       },
       {
-        source: '/programs/industry',
-        destination: '/programs/industry/online',
+        source: '/industry',
+        destination: '/industry/online/marketing-management',
+        permanent: true
+      },
+      {
+        source: '/profession',
+        destination: '/profession/online/commercial-accountant',
+        permanent: true
+      },
+      {
+        source: '/mini/online',
+        destination: '/mini/online/human-resource',
+        permanent: true
+      },
+      {
+        source: '/professional/online',
+        destination: '/professional/online/crisis-management',
+        permanent: true
+      },
+      {
+        source: '/industry/online',
+        destination: '/industry/online/marketing-management',
+        permanent: true
+      },
+      {
+        source: '/profession/online',
+        destination: '/profession/online/commercial-accountant',
+        permanent: true
+      },
+      {
+        source: '/mini/blended',
+        destination: '/mini/blended/human-resource',
+        permanent: true
+      },
+      {
+        source: '/professional/blended',
+        destination: '/professional/blended/crisis-management',
+        permanent: true
+      },
+      {
+        source: '/industry/blended',
+        destination: '/industry/blended/marketing-management',
         permanent: true
       }
     ]

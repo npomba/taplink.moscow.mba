@@ -1,0 +1,78 @@
+@use '@/styles/utils/mixin' as m
+@use '@/styles/utils/funcs' as f
+@use '@/styles/themes/default/colors' as c
+
+.container
+  position: relative
+  @include m.gap($ptb: f.px(25, em), $plr: f.px(20, em))
+
+.title
+  max-width: 14ch
+  @include m.gap($mt: 0, $mb: f.px(25), $mlr: 0)
+  font-size: f.px(36)
+  line-height: 100%
+
+.desc
+  font-size: f.px(14)
+  font-weight: 300
+  @include m.gap($mt: 0, $mb: f.px(25), $mlr: 0)
+
+.inputGroup
+  position: relative
+
+.input
+  max-width: 100%
+  min-width: 100%
+  @include m.gap($ptb: f.px(10, em))
+  color: #fff
+  font-weight: 300
+  font-size: 16px
+  font-family: Styrene,Arial,Tahoma,sans-serif
+  background: transparent
+  border-radius: 0
+  border: none
+  border-bottom: 1px solid hsla(0,0%,100%,.7)
+  transition: all .3s ease-out
+
+.inputName
+  @include m.gap($m: 0)
+  position: absolute
+  z-index: 3
+  transition: all .3s ease-out
+  left: 0
+  width: 100%
+  top: 0
+  color: #fff
+  font-size: 16px
+  pointer-events: none
+  opacity: .7
+
+.btnGroup
+  @include m.gap($mt: f.px(25, em))
+
+.btnLead
+  display: inline-block
+  width: 100%
+  @include m.gap($p: f.px(20, em))
+  font-size: f.px(13)
+  font-weight: 700
+  letter-spacing: f.px(1)
+  text-transform: uppercase
+  @include m.dye(bg, c.$beta)
+  @include m.dye(c, c.$eta)
+
+.close
+  position: absolute
+  top: 0
+  right: 0
+  @include m.gap(f.px(5, em))
+  opacity: 0.3
+  &:focus
+    opacity: 1
+    &::before
+      opacity: 0
+
+.policy
+  @include m.gap($mt: f.px(16, em))
+  font-size: f.px(13)
+  @include m.dye(c, c.$zeta)
