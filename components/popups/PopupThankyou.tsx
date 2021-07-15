@@ -2,7 +2,7 @@ import stls from '@/styles/components/popups/PopupThankyou.module.sass'
 import { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import useAt from '@/components/hooks/useAt'
-import { IconClose, IconCheck } from '@/components/icons'
+import { IconClose } from '@/components/icons'
 
 const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
   useEffect(() => {
@@ -46,9 +46,7 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
     <div id='thanksModal' className='popup-modal thankyou-modal mfp-with-anim'>
       <div className='popup-content red-bg'>
         <div className='thanks-popup-content'>
-          <div className='circle'>
-            <IconCheck stroke={'#FF3535'} />
-          </div>
+          <div className='circle'>{/* <IconCheck stroke={'#FF3535'} /> */}</div>
           <h3>Спасибо!</h3>
           <p>Наш менеджер свяжется с Вами в ближайшее время</p>
           <button className='button white-button' onClick={closePopUp}>
