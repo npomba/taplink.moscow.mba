@@ -1,4 +1,5 @@
 import stls from '@/styles/components/btns/ContactButton.module.sass'
+import classNames from 'classnames'
 
 const ContactButton = ({ wayToContact, chooseWayToContact }) => {
   const {
@@ -18,12 +19,10 @@ const ContactButton = ({ wayToContact, chooseWayToContact }) => {
     selectedMethod: null
   }
 
-  const contactButtonClasses = [stls.contactButton, stls[contactButtonClass]]
-
   return (
     <button
       onClick={() => chooseWayToContact(selectedWayToContact)}
-      className={contactButtonClasses.join(' ')}>
+      className={classNames(stls.contactButton, stls[contactButtonClass])}>
       {svg}
     </button>
   )

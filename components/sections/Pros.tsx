@@ -22,16 +22,16 @@ const Pros = ({ format = 'online' }) => {
           )}
         </div>
         <h2 className='prosTitle'>
-          На MBA{' '}
+          На{' '}
           {at.mini
-            ? 'mini'
+            ? 'MBA mini'
             : at.professional
-            ? 'professional'
+            ? 'MBA professional'
             : at.industry
-            ? 'industry'
+            ? 'MBA industry'
             : at.executive
-            ? 'executive'
-            : null}{' '}
+            ? 'MBA executive'
+            : 'курсе'}{' '}
           мы обучаем онлайн. И делаем это качественно
         </h2>
         <div className='advantages-content'>

@@ -1,4 +1,5 @@
 import stls from '@/styles/components/sections/JumbotronProgram.module.sass'
+import classNames from 'classnames'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
 import Image from 'next/image'
@@ -14,8 +15,11 @@ import Loan from '@/components/costs/Loan'
 
 const JumbotronProgram = ({ data }) => {
   const at = useAt()
-  const profession = data.mbaTypeOfProgram === 'profession'
-  // console.log(profession)
+  const isDiscounted =
+    (at.mini && at.online) ||
+    (at.professional && at.online) ||
+    (at.industry && at.online) ||
+    (at.profession && at.online)
 
   return (
     <section className='jumbotron-section'>
@@ -46,12 +50,15 @@ const JumbotronProgram = ({ data }) => {
           </div>
           <div className='jumbotron-flex'>
             <div className='jumbotron-text'>
-              <h1>{data.title}</h1>
+              <h1
+                className={classNames({ [stls.smallerTitle]: at.profession })}>
+                {data.title}
+              </h1>
               <div className='desc'>
-                Оставьте заявку и получите консультацию по программе, а также
-                узнайте возможные варианты скидок и требования к поступлению
+                {at.profession
+                  ? data.description
+                  : 'Оставьте заявку и получите консультацию по программе, а также узнайте возможные варианты скидок и требования к поступлению'}
               </div>
-
               <div className='btnLoanGroup'>
                 <Popup
                   trigger={
@@ -75,8 +82,10 @@ const JumbotronProgram = ({ data }) => {
                   <p>
                     Можно учиться в рассрочку за{' '}
                     <Loan
+                      discount={isDiscounted}
                       type={data.mbaTypeOfProgram}
                       format={data.mbaFormat}
+                      notComparingPrices
                     />
                   </p>
                 </div>

@@ -1,6 +1,7 @@
 import stls from '@/styles/components/sections/Teachers.module.sass'
 import Popup from 'reactjs-popup'
 import 'reactjs-popup/dist/index.css'
+import useAt from '@/components/hooks/useAt'
 import { useRouter } from 'next/router'
 import Image from 'next/image'
 import PopupForm from '@/components/popups/PopupForm'
@@ -26,13 +27,35 @@ const Teachers = ({
   programId = null,
   atStandAlonePage = false
 }) => {
+  const at = useAt()
   const router = useRouter()
   const detailSectionClasses = [stls.container]
 
   if (atStandAlonePage) detailSectionClasses.push(stls.standalonePage)
 
-  const firstParaText = SetString(lang.teachersListItemDisc)
+  const title = at.profession ? (
+    <h2>
+      {SetString(lang.teachersTitleFirstSecondary)}{' '}
+      <span className='red'>{SetString(lang.teachersTitleRedSecondary)} </span>
+      {SetString(lang.teachersTitleSecondSecondary)}
+    </h2>
+  ) : (
+    <h2>
+      {SetString(lang.teachersTitleFirstMain)}{' '}
+      <span className='red'>{SetString(lang.teachersTitleRedMain)} </span>
+      {SetString(lang.teachersTitleSecondMain)}
+    </h2>
+  )
+
+  const firstParaText = SetString(
+    at.profession
+      ? lang.teachersListItemDiscSecondary
+      : lang.teachersListItemDiscMain
+  )
   const secondParaText = SetString(lang.teachersListItemDiscSecond)
+  const teachersProsTitle = SetString(
+    at.profession ? lang.teachersProsTitleSecondary : lang.teachersProsTitleMain
+  )
 
   const wordToSplitBy = {
     europe: {
@@ -42,6 +65,10 @@ const Teachers = ({
     and: {
       ru: ' и ',
       'en-US': ' and '
+    },
+    specialists: {
+      ru: 'специалистов',
+      en: 'specialists'
     }
   }
 
@@ -53,6 +80,10 @@ const Teachers = ({
     secondParaText,
     wordToSplitBy.and[router.locale]
   )
+  const [teachersProsPartOne, teachersProsPartTwo] = splitParaText(
+    teachersProsTitle,
+    wordToSplitBy.specialists[router.locale]
+  )
 
   return (
     <>
@@ -62,11 +93,7 @@ const Teachers = ({
             {SetString(lang.teachersTitleLabel)}
           </div>
           <div className={stls.content}>
-            <h2>
-              {SetString(lang.teachersTitleFirst)}{' '}
-              <span className='red'>{SetString(lang.teachersTitleRed)} </span>
-              {SetString(lang.teachersTitleSecond)}
-            </h2>
+            {title}
             <div className={stls.text}>{SetString(lang.teachersDics)}</div>
             <div className={`${stls.twoImages} ${stls.detailImage}`}>
               <div className={`${stls.image} ${stls.pic1}`}>
@@ -123,12 +150,21 @@ const Teachers = ({
                 </div>
                 <div>
                   <h5>{SetString(lang.teachersListItemTitleThird)}</h5>
-                  <p>{SetString(lang.teachersListItemDiscThird)}</p>
+                  <p>
+                    {SetString(
+                      at.profession
+                        ? lang.teachersListItemDiscThirdSecondary
+                        : lang.teachersListItemDiscThirdMain
+                    )}
+                  </p>
                 </div>
               </li>
             </ul>
-            <h3>{SetString(lang.teachersProsTitle)}</h3>
           </div>
+          <h3 className={stls.teachersPros}>
+            {teachersProsPartOne}
+            <span className={stls.breakLine}>{teachersProsPartTwo}</span>
+          </h3>
         </div>
         <ul className={stls.teachersList}>
           <li>

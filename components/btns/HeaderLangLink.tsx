@@ -1,4 +1,5 @@
 import stls from '@/styles/components/btns/HeaderLangLink.module.sass'
+import classNames from 'classnames'
 import Link from 'next/link'
 import { useRouter } from 'next/router'
 import { useState } from 'react'
@@ -11,23 +12,25 @@ const HeaderLangLink = () => {
   const showLangMenu = () => setShowMe(!showMe)
   const router = useRouter()
 
+  // `lang__selectList ${showMe && 'show'}`
+
   return (
-    <div className={`${showMe && 'lang-red-highlight'} lang`}>
-      <a className='lang__btn' onClick={showLangMenu}>
+    <div className={classNames(stls.lang, { [stls.redHighlight]: showMe })}>
+      <a className={stls.btn} onClick={showLangMenu}>
         {SetString(lang.linkLang)}{' '}
         <IconTriangleBottom fill={`${showMe ? '#FF3535' : '#000'}`} />
       </a>
-      <ul className={`lang__selectList ${showMe && 'show'}`}>
-        <li className='selectList__item'>
+      <ul className={classNames(stls.list, { [stls.show]: showMe })}>
+        <li className={stls.listItem}>
           <Link href={`${router.pathname}`} locale='ru'>
-            <a onClick={showLangMenu}>
+            <a className={stls.listItemLink} onClick={showLangMenu}>
               <span>🇷🇺</span>РУССКИЙ
             </a>
           </Link>
         </li>
-        <li className='selectList__item'>
+        <li className={stls.listItem}>
           <Link href={`${router.pathname}`} locale='en-US'>
-            <a onClick={showLangMenu}>
+            <a className={stls.listItemLink} onClick={showLangMenu}>
               <span>🇺🇸</span>ENGLISH
             </a>
           </Link>

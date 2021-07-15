@@ -1,4 +1,18 @@
+@use '@/styles/utils/mixin' as m
+
 .mb,
 .olItem
   &:not(:last-child)
     margin-bottom: 20px
+
+a.emptyBtn
+  width: 260px
+  margin-top: 20px
+  border: solid 2px #ff3535
+  color: #262626
+  background-color: transparent
+  transition: all .3s ease-out
+  &:hover
+    color: #fff
+  @include m.media(phone)
+    width: 100%
