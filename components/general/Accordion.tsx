@@ -3,13 +3,13 @@ import classNames from 'classnames'
 import ImageContainer from '@/components/general/ImageContainer'
 
 const Accordion = ({
-  title,
-  accordionContent,
+  title = false,
+  accordionContent = false,
   isList = false,
   isImage = false,
-  accordionIndex,
-  activeAccordion,
-  setActiveAccordion
+  accordionIndex = false,
+  activeAccordion = false,
+  setActiveAccordion = false
 }) => {
   let content
 
