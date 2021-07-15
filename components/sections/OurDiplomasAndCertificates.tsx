@@ -170,7 +170,7 @@ const OurDiplomasAndCertificates = () => {
           key={programType + idx}
           title={programType}
           accordionContent={documents}
-          isImage={true}
+          isImage
           accordionIndex={idx}
           activeAccordion={idx === activeAccordionIndex}
           setActiveAccordion={setActiveAccordionIndex}

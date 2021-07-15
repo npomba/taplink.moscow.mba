@@ -3,13 +3,13 @@ import classNames from 'classnames'
 import ImageContainer from '@/components/general/ImageContainer'
 
 const Accordion = ({
-  title = false,
-  accordionContent = false,
+  title,
+  accordionContent,
   isList = false,
   isImage = false,
-  accordionIndex = false,
-  activeAccordion = false,
-  setActiveAccordion = false
+  accordionIndex = null,
+  activeAccordion = null,
+  setActiveAccordion = null
 }) => {
   let content
 
@@ -51,7 +51,7 @@ const Accordion = ({
   const handleAccordionClick = () => {
     if (activeAccordion) setActiveAccordion(-1)
 
-    if (!activeAccordion) setActiveAccordion(accordionIndex)
+    if (!activeAccordion && setActiveAccordion) setActiveAccordion(accordionIndex)
   }
 
   return (
