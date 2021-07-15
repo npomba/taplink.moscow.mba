@@ -1,11 +1,17 @@
 import stls from '@/styles/components/sections/Students.module.sass'
-import { CircularProgressbar } from 'react-circular-progressbar'
+import useAt from '@/components/hooks/useAt'
+import {
+  CircularProgressbar,
+  CircularProgressbarWithChildren
+} from 'react-circular-progressbar'
 // import 'react-circular-progressbar/dist/styles.css'
 
 import circleStls from '@/styles/components/CircularProgressBar.module.sass'
 import Image from 'next/image'
 
 const Students = () => {
+  const at = useAt()
+
   return (
     <section className='students-section section-pl'>
       <div className='title-pl red'>Более 2000</div>
@@ -18,27 +24,31 @@ const Students = () => {
           <h4>Согласно опросу 2000 наших студентов:</h4>
           <ul className='students-list'>
             <li>
-              <CircularProgressbar
-                className={circleStls.circle}
+              <CircularProgressbarWithChildren
                 value={96}
-                text={'96%'}
-              />
+                className={circleStls.circle}>
+                <p className={circleStls.text}>96%</p>
+              </CircularProgressbarWithChildren>
               <p>остались довольны обучением</p>
             </li>
             <li>
-              <CircularProgressbar
+              <CircularProgressbarWithChildren
                 className={circleStls.circle}
-                value={92}
-                text={'92%'}
-              />
-              <p>повысили показатели своих проектов</p>
+                value={92}>
+                <p className={circleStls.text}>92%</p>
+              </CircularProgressbarWithChildren>
+              <p>
+                {at.profession
+                  ? 'применили полученные знания в работе'
+                  : 'повысили показатели своих проектов'}
+              </p>
             </li>
             <li>
-              <CircularProgressbar
+              <CircularProgressbarWithChildren
                 className={circleStls.circle}
-                value={72}
-                text={'72%'}
-              />
+                value={72}>
+                <p className={circleStls.text}>72%</p>
+              </CircularProgressbarWithChildren>
               <p>продвинулись по карьерной лестнице</p>
             </li>
           </ul>

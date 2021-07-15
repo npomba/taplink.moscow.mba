@@ -11,7 +11,8 @@ const InfoRectangle = ({ programPage = false, type = null, format = null }) => {
   const isDiscounted =
     (at.mini && at.online) ||
     (at.professional && at.online) ||
-    (at.industry && at.online)
+    (at.industry && at.online) ||
+    (at.profession && at.online)
 
   return (
     <ul

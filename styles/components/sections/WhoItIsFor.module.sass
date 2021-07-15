@@ -1,13 +1,26 @@
 @use '@/styles/utils/mixin' as m
 
 .container
-  display: flex
-  flex-wrap: wrap
   margin: 130px 0
-
   @include m.media(laptop, tablet, phone)
     flex-direction: column
-    margin: 65px 0
+    margin: 60px 0
 
 .title
-  flex: 1 0 100%
+  margin-bottom: 85px
+  padding-left: 215px
+  max-width: 620px
+  @include m.media(laptop, tablet, phone)
+    padding-left: 0
+    margin-bottom: 40px
+    max-width: 100%
+  @include m.media(tablet, phone)
+    font-size: 32px
+    margin-bottom: 0
+
+.itemsContainer
+  display: flex
+  flex-wrap: wrap
+  @include m.media(laptop, tablet, phone)
+    padding-bottom: 60px
+    border-bottom: solid 1px #e6e6e6
