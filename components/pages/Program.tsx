@@ -13,12 +13,12 @@ const Program = ({ program: { title, _id, goalsOfProgram } }) => {
       <NextSeo
         title={`${title} MBA - Moscow Business Academy`}
         description={truncate(goalsOfProgram, 120)}
-        canonical={`https://moscow.mba${router.asPath}`}
+        canonical={`https://promo.moscow.mba${router.asPath}`}
       />
       <CourseJsonLd
         courseName={`${title} MBA`}
         providerName='Moscow Business Academy'
-        providerUrl={`https://moscow.mba${router.asPath}`}
+        providerUrl={`https://promo.moscow.mba${router.asPath}`}
         description={truncate(goalsOfProgram, 120)}
       />
       <Heading title={title} />
