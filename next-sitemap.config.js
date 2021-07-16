@@ -5,12 +5,6 @@ module.exports = {
   sitemapSize: 5000,
   generateRobotsTxt: true,
   exclude: ['/payment'],
-  alternateRefs: [
-    {
-      href: 'https://promo.moscow.mba/en-US',
-      hreflang: 'en'
-    }
-  ],
   transform: async (config, path) => {
     return {
       loc: path, // => this will be exported as http(s)://<config.siteUrl>/<path>
