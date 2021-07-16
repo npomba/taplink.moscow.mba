@@ -13,6 +13,7 @@
   line-height: 100%
 
 .desc
+  max-width: 29ch
   font-size: f.px(14)
   font-weight: 300
   @include m.gap($mt: 0, $mb: f.px(25), $mlr: 0)
@@ -35,7 +36,7 @@
   transition: all .3s ease-out
 
 .inputName
-  @include m.gap($m: 0)
+  @include m.gap($m: 0, $mb: f.px(10))
   position: absolute
   z-index: 3
   transition: all .3s ease-out

@@ -250,7 +250,7 @@ export default {
   },
 
   inputSubmit: {
-    ru: 'Оставить заявку',
+    ru: 'Отправить',
     en: 'Submit'
   },
 
