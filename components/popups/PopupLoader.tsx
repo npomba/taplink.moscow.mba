@@ -1,30 +1,18 @@
 import stls from '@/styles/components/popups/PopupLoader.module.sass'
 import { IconLoader, IconClose } from '@/components/icons'
 
-const Loader = ({ closePopUp = null, loadingPopupContent = false }) => {
-  const popupContentClasses = ['popup-content']
-  const loaderContentClasses = ['loader-content']
-
-  if (!loadingPopupContent) {
-    popupContentClasses.push('red-bg')
-    loaderContentClasses.push('thanks-popup-content')
-  }
-
+const Loader = ({ closePopUp = null }) => {
   return (
-    <div id='thanksModal' className='popup-modal loader-modal mfp-with-anim'>
-      <div className={popupContentClasses.join(' ')}>
-        <div className={loaderContentClasses.join(' ')}>
-          <IconLoader />
-          {!loadingPopupContent && (
-            <p>Ваша заявка отправляется, пожалуйста, подождите</p>
-          )}
-        </div>
+    <div className={stls.container}>
+      <button className={stls.close} type='button' onClick={closePopUp}>
+        <IconClose />
+      </button>
+      <div className={stls.loader}>
+        <IconLoader />
       </div>
-      {!loadingPopupContent && (
-        <button className='mfp-close' type='button' onClick={closePopUp}>
-          <IconClose />
-        </button>
-      )}
+      <p className={stls.text}>
+        Ваша заявка отправляется, пожалуйста, подождите
+      </p>
     </div>
   )
 }

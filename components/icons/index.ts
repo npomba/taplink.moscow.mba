@@ -1,3 +1,4 @@
+import IconCheck from '@/components/icons/IconCheck'
 import IconCheckCircle from '@/components/icons/IconCheckCircle'
 import IconClock from '@/components/icons/IconClock'
 import IconClose from '@/components/icons/IconClose'
@@ -9,6 +10,7 @@ import IconRaboLogo from '@/components/icons/IconRaboLogo'
 import IconScreenPlay from '@/components/icons/IconScreenPlay'
 
 export {
+  IconCheck,
   IconCheckCircle,
   IconClock,
   IconClose,
