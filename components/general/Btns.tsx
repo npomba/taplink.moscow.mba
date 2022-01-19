@@ -17,11 +17,11 @@ const Btns = () => {
     },
     {
       label: 'Официальный сайт:',
-      btn: <BtnBeta>Перейти</BtnBeta>
+      btn: <BtnBeta href='https://moscow.mba'>Перейти</BtnBeta>
     },
     {
       label: 'Контактная информация:',
-      btn: <BtnBeta>Перейти</BtnBeta>
+      btn: <BtnBeta href='https://moscow.mba/contact'>Перейти</BtnBeta>
     }
   ]
 
