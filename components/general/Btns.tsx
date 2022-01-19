@@ -18,11 +18,11 @@ const Btns = () => {
     {
       label: 'Официальный сайт:',
       btn: <BtnBeta href='https://moscow.mba'>Перейти</BtnBeta>
-    },
-    {
-      label: 'Контактная информация:',
-      btn: <BtnBeta href='https://moscow.mba/contact'>Перейти</BtnBeta>
     }
+    // {
+    //   label: 'Контактная информация:',
+    //   btn: <BtnBeta href='https://moscow.mba/contact'>Перейти</BtnBeta>
+    // }
   ]
 
   return (
