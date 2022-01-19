@@ -139,7 +139,7 @@ const contact = async (req, res) => {
 
   // console.log(createLeadBackApiRes)
 
-  const subject = 'Новая заявка с moscow.mba'
+  const subject = 'Новая заявка с taplink.moscow.mba'
 
   const createEmailBody = () => {
     const createTr = (item, idx) => {
