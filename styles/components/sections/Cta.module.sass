@@ -2,14 +2,27 @@
 @use '@/styles/utils/funcs' as f
 @use '@/styles/themes/default/colors' as c
 
+.heading
+  position: relative
+  margin-bottom: f.px(26)
+
 .title
-  @include m.gap($mb: f.px(5, em))
+  margin-top: 0
+  margin-bottom: f.px(3)
   font-size: f.px(15)
-  line-height: f.px(21, em)
+  font-weight: 700
+  line-height: 140%
   text-transform: uppercase
   @include m.dye(c, c.$alpha)
 
-.text
-  @include m.gap($mt: 0, $mb: f.px(29, em))
+.p
+  margin-top: 0
+  margin-bottom: 0
   font-size: f.px(14)
-  line-height: f.px(19, em)
+  line-height: 140%
+
+.discountCircle
+  position: absolute
+  top: 0
+  right: 0
+  transform: translateY(-50%)

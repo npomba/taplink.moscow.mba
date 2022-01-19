@@ -3,20 +3,32 @@
 @use '@/styles/themes/default/colors' as c
 
 .list
-  @include m.gap($p: 0, $mb: f.px(22))
+  display: flex
+  flex-wrap: wrap
+  justify-content: space-between
+  margin-top: 0
+  margin-bottom: f.px(92)
+  padding: 0
 
 .item
-  @include m.flex($ai: center)
-  max-width: 28ch
-  @include m.gap($mb: f.px(17))
+  display: flex
+  flex-direction: column
+  flex-basis: 46%
+  margin-bottom: f.px(17)
   font-size: f.px(14)
   line-height: 100%
-  &::before
-    content: ''
-    @include m.flex
-    min-width: f.px(7, em)
-    max-width: f.px(7, em)
-    min-height: f.px(7, em)
-    max-height: f.px(7, em)
-    @include m.gap($mr: f.px(28))
-    @include m.dye(bg, c.$alpha)
+  &:nth-last-child(-n+2)
+    margin-bottom: 0
+
+.title
+  margin-top: 0
+  margin-bottom: f.px(10)
+  font-size: f.px(36)
+  line-height: 120%
+
+.desc
+  max-width: 14ch
+  margin: 0
+  font-size: f.px(16)
+  font-weight: 300
+  line-height: 120%

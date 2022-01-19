@@ -2,9 +2,16 @@ import { NextSeo } from 'next-seo'
 import truncate from 'truncate'
 import SetString from '@/components/hooks/SetString'
 import lang from '@/data/translation/index'
-import { apiProgramsReqUrl, backendUrl } from '@/config/index'
+import Heading from '@/components/general/Heading'
+import Pros from '@/components/sections/Pros'
+import Cta from '@/components/sections/Cta'
 
-const Home = ({ programs }) => {
+const Home = () => {
+  const program = {
+    title: 'Об академии',
+    _id: '123',
+    goalsOfProgram: []
+  }
   return (
     <>
       <NextSeo
@@ -17,19 +24,11 @@ const Home = ({ programs }) => {
         )}
         canonical={'https://promo.moscow.mba/'}
       />
+      <Heading />
+      <Pros />
+      <Cta />
     </>
   )
-}
-
-export async function getStaticProps() {
-  const res = await fetch(`${backendUrl}${apiProgramsReqUrl}`)
-  const { data } = await res.json()
-
-  return {
-    props: {
-      programs: data
-    }
-  }
 }
 
 export default Home

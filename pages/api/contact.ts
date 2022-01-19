@@ -21,7 +21,8 @@ const contact = async (req, res) => {
     question,
     programTitle,
     leadPage,
-    utms
+    utms,
+    referer
   } = req.body
 
   if (name?.includes('@')) {
@@ -41,6 +42,9 @@ const contact = async (req, res) => {
 
   // get protocol
   const protocol = req.headers['x-forwarded-proto']
+
+  // get referer
+  // const referer = req.headers['referer']
 
   // get root path
   const root = protocol + '://' + req.headers.host
@@ -94,41 +98,46 @@ const contact = async (req, res) => {
   const locationData = await getUserLocation()
 
   const data = {
-    id: uuidv4(),
-    date: now.format('DD-MM-YYYY'),
-    time: now.format('HH:mm:ss'),
-    utc: now.format('Z'),
-    name: name || '',
+    id: uuidv4() || null,
+    date: now.format('DD-MM-YYYY') || null,
+    time: now.format('HH:mm:ss') || null,
+    utc: now.format('Z') || null,
+    name: name || null,
     phone: phone || '',
     email: email || '',
-    vk: vk || '',
-    promocode,
-    contactWay: contactWay || '',
-    contactMethod: contactMethod || '',
-    question: question || '',
-    root: root || '',
-    leadPage: root + leadPage || '',
-    ip,
-    cityEn: locationData && locationData.city.names.en,
-    cityRu: locationData && locationData.city.names.ru,
-    countryCode: locationData && locationData.country.code,
-    countryEn: locationData && locationData.country.names.en,
-    countryRu: locationData && locationData.country.names.ru,
-    continentCode: locationData && locationData.continent.code,
-    continentEn: locationData && locationData.continent.names.en,
-    continentRu: locationData && locationData.continent.names.ru,
-    accuracyRadius: locationData && locationData.coordinates.accuracyRadius,
-    latitude: locationData && locationData.coordinates.latitude,
-    longitude: locationData && locationData.coordinates.longitude,
-    timeZone: locationData && locationData.timeZone,
-    postalCode: locationData && locationData.postalCode,
-    programTitle: programTitle || '',
-    utmSource: (utms && utms.utm_source) || null,
+    vk: vk || null,
+    promocode: promocode || null,
+    contactWay: contactWay || null,
+    contactMethod: contactMethod || null,
+    question: question || null,
+    root: root || null,
+    leadPage: root + leadPage || null,
+    ip: ip || null,
+    cityEn: (locationData && locationData.city.names.en) || null,
+    cityRu: (locationData && locationData.city.names.ru) || null,
+    countryCode: (locationData && locationData.country.code) || null,
+    countryEn: (locationData && locationData.country.names.en) || null,
+    countryRu: (locationData && locationData.country.names.ru) || null,
+    continentCode: (locationData && locationData.continent.code) || null,
+    continentEn: (locationData && locationData.continent.names.en) || null,
+    continentRu: (locationData && locationData.continent.names.ru) || null,
+    accuracyRadius:
+      (locationData && locationData.coordinates.accuracyRadius) || null,
+    latitude: (locationData && locationData.coordinates.latitude) || null,
+    longitude: (locationData && locationData.coordinates.longitude) || null,
+    timeZone: (locationData && locationData.timeZone) || null,
+    postalCode: (locationData && locationData.postalCode) || null,
+    programTitle: programTitle || null,
+    utmSource: (utms && utms.utm_source) || referer || null,
     utmMedium: (utms && utms.utm_medium) || null,
     utmCampaign: (utms && utms.utm_campaign) || null,
     utmContent: (utms && utms.utm_content) || null,
     utmTerm: (utms && utms.utm_term) || null
   }
+
+  // const createLeadBackApiRes = await createLeadBackApi({ data })
+
+  // console.log(createLeadBackApiRes)
 
   const subject = 'Новая заявка с moscow.mba'
 
@@ -149,119 +158,119 @@ const contact = async (req, res) => {
     const tbodyTrs = [
       {
         tdKey: 'ID',
-        tdVal: data.id
+        tdVal: data.id || ''
       },
       {
         tdKey: 'Дата',
-        tdVal: data.date
+        tdVal: data.date || ''
       },
       {
         tdKey: 'Время',
-        tdVal: data.time
+        tdVal: data.time || ''
       },
       {
         tdKey: 'UTC',
-        tdVal: data.utc
+        tdVal: data.utc || ''
       },
       {
         tdKey: 'Имя',
-        tdVal: data.name
+        tdVal: data.name || ''
       },
       {
         tdKey: 'Телефон',
-        tdVal: data.phone
+        tdVal: data.phone || ''
       },
       {
         tdKey: 'Почта',
-        tdVal: data.email
+        tdVal: data.email || ''
       },
       {
         tdKey: 'ВКонтакте',
-        tdVal: data.vk
+        tdVal: data.vk || ''
       },
       {
         tdKey: 'Промокод',
-        tdVal: data.promocode
+        tdVal: data.promocode || ''
       },
       {
         tdKey: 'Способ связи',
-        tdVal: data.contactWay
+        tdVal: data.contactWay || ''
       },
       {
         tdKey: 'Как связаться',
-        tdVal: data.contactMethod
+        tdVal: data.contactMethod || ''
       },
       {
         tdKey: 'Вопрос',
-        tdVal: data.question
+        tdVal: data.question || ''
       },
       {
         tdKey: 'Лид сайт',
-        tdVal: data.root
+        tdVal: data.root || ''
       },
       {
         tdKey: 'Лид страница',
-        tdVal: data.leadPage
+        tdVal: data.leadPage || ''
       },
       {
         tdKey: 'IP',
-        tdVal: data.ip
+        tdVal: data.ip || ''
       },
       {
         tdKey: 'Город (en)',
-        tdVal: data.cityEn
+        tdVal: data.cityEn || ''
       },
       {
         tdKey: 'Город (ru)',
-        tdVal: data.cityRu
+        tdVal: data.cityRu || ''
       },
       {
         tdKey: 'Код страны',
-        tdVal: data.countryCode
+        tdVal: data.countryCode || ''
       },
       {
         tdKey: 'Страна (en)',
-        tdVal: data.countryEn
+        tdVal: data.countryEn || ''
       },
       {
         tdKey: 'Страна (ru)',
-        tdVal: data.countryRu
+        tdVal: data.countryRu || ''
       },
       {
         tdKey: 'Континент код',
-        tdVal: data.continentCode
+        tdVal: data.continentCode || ''
       },
       {
         tdKey: 'Континент (en)',
-        tdVal: data.continentEn
+        tdVal: data.continentEn || ''
       },
       {
         tdKey: 'Континент (ru)',
-        tdVal: data.continentRu
+        tdVal: data.continentRu || ''
       },
       {
         tdKey: 'Погрешность (м)',
-        tdVal: data.accuracyRadius
+        tdVal: data.accuracyRadius || ''
       },
       {
         tdKey: 'Широта',
-        tdVal: data.latitude
+        tdVal: data.latitude || ''
       },
       {
         tdKey: 'Долгота',
-        tdVal: data.longitude
+        tdVal: data.longitude || ''
       },
       {
         tdKey: 'Часовой пояс',
-        tdVal: data.timeZone
+        tdVal: data.timeZone || ''
       },
       {
         tdKey: 'Зип код',
-        tdVal: data.postalCode
+        tdVal: data.postalCode || ''
       },
       {
         tdKey: 'Направление',
-        tdVal: data.programTitle
+        tdVal: data.programTitle || ''
       },
       {
         tdKey: 'Университет',
@@ -281,23 +290,23 @@ const contact = async (req, res) => {
       },
       {
         tdKey: 'Источник рекламы',
-        tdVal: data.utmSource
+        tdVal: data.utmSource || ''
       },
       {
         tdKey: 'Тип трафика',
-        tdVal: data.utmMedium
+        tdVal: data.utmMedium || ''
       },
       {
         tdKey: 'Название РК',
-        tdVal: data.utmCampaign
+        tdVal: data.utmCampaign || ''
       },
       {
         tdKey: 'Объявление',
-        tdVal: data.utmContent
+        tdVal: data.utmContent || ''
       },
       {
         tdKey: 'Ключевое слово',
-        tdVal: data.utmTerm
+        tdVal: data.utmTerm || ''
       },
       {
         tdKey: 'Дубль',
@@ -407,12 +416,14 @@ const contact = async (req, res) => {
       subject, // Subject line
       text: `
       ${name}, \n
-      ${phone}
+      ${phone},
+      ${email}
       `, // plain text body
       html
     })
 
-    console.log('Message sent: %s', emailRes.messageId)
+    // console.log('Message sent: %s', emailRes.messageId)
+    // res.setHeader('Cache-Control', 'max-age=0, s-maxage=86400')
     res.status(200).json({ status: 200, msg: 'Email is sent' })
   } catch (err) {
     res.status(500).json({ status: 500, err, msg: 'Unexpected server error' })

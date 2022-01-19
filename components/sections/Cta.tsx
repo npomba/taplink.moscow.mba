@@ -1,19 +1,27 @@
 import stls from '@/styles/components/sections/Cta.module.sass'
 import Wrapper from '@/components/layout/Wrapper'
-import MonthlyPayment from '@/components/general/MonthlyPayment'
+import DiscountCircle from '@/components/general/DiscountCircle'
 import { BtnCta } from '@/components/btns'
+import Btns from '@/components/general/Btns'
 
-const Cta = ({ data: { title, id } }) => {
+const Cta = () => {
   return (
     <section>
       <Wrapper>
-        <h2 className={stls.title}>Узнайте больше о программе!</h2>
-        <p className={stls.text}>
-          Оставьте свои контакты, менеджер свяжется с Вами, пришлет презентацию
-          программы и ответит на вопросы!
-        </p>
-        <BtnCta data={{ title, id }} />
-        <MonthlyPayment />
+        <div className={stls.heading}>
+          <h2 className={stls.title}>
+            ОСТАВЬТЕ ЗАЯВКУ НА <br /> КОНСУЛЬТАЦИЮ
+          </h2>
+          <p className={stls.p}>
+            Оставьте свои контакты, менеджер свяжется с Вами, подберет программу
+            и ответит на вопросы!
+          </p>
+          <div className={stls.discountCircle}>
+            <DiscountCircle />
+          </div>
+        </div>
+        <BtnCta />
+        <Btns />
       </Wrapper>
     </section>
   )

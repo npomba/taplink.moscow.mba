@@ -1,3 +1,4 @@
+import BtnBeta from '@/components/btns/BtnBeta'
 import BtnCta from '@/components/btns/BtnCta'
 
-export { BtnCta }
+export { BtnBeta, BtnCta }

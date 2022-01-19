@@ -8,14 +8,9 @@ const Header = () => {
     <>
       <header className={stls.container}>
         <Wrapper>
-          <Logo />
-          <div className={stls.icons}>
-            <div className={stls.iconLeft}>
-              <IconEcicelLogo />
-            </div>
-            <div className={stls.iconRight}>
-              <IconRaboLogo />
-            </div>
+          <div className={stls.content}>
+            <Logo />
+            <p className={stls.p}>moscow.mba</p>
           </div>
         </Wrapper>
       </header>

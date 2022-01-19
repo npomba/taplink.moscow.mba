@@ -4,13 +4,14 @@
 
 .container
   position: relative
-  @include m.gap($ptb: f.px(25, em), $plr: f.px(20, em))
+  padding: f.px(49) f.px(25)
 
 .title
   max-width: 14ch
-  @include m.gap($mt: 0, $mb: f.px(25), $mlr: 0)
-  font-size: f.px(36)
-  line-height: 100%
+  margin-top: 0
+  margin-bottom: f.px(28)
+  font-size: f.px(20)
+  line-height: 120%
 
 .desc
   max-width: 29ch
@@ -20,6 +21,9 @@
 
 .inputGroup
   position: relative
+  margin-bottom: f.px(32)
+  &:nth-last-child(1)
+    margin-bottom: 0
 
 .input
   max-width: 100%
@@ -45,6 +49,7 @@
   top: 0
   color: #fff
   font-size: 16px
+  font-weight: 300
   pointer-events: none
   opacity: .7
 
@@ -54,18 +59,22 @@
 .btnLead
   display: inline-block
   width: 100%
-  @include m.gap($p: f.px(20, em))
-  font-size: f.px(13)
+  @include m.gap($p: f.px(20))
+  font-size: f.px(15)
   font-weight: 700
-  letter-spacing: f.px(1)
+  line-height: 120%
+  letter-spacing: 0.1em
   text-transform: uppercase
   @include m.dye(bg, c.$beta)
   @include m.dye(c, c.$eta)
 
+.inputGroups .inputGroup .error
+  @include m.dye(c, c.$beta)
+
 .close
   position: absolute
-  top: 0
-  right: 0
+  top: f.px(10)
+  right: f.px(10)
   @include m.gap(f.px(5, em))
   opacity: 0.3
   &:focus
@@ -76,4 +85,4 @@
 .policy
   @include m.gap($mt: f.px(16, em))
   font-size: f.px(13)
-  @include m.dye(c, c.$zeta)
+  @include m.dye(c, c.$theta)

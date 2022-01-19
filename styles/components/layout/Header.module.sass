@@ -3,12 +3,15 @@
 @use '@/styles/themes/default/colors' as c
 
 .container
-  padding-top: f.px(26, em)
-  @include m.gap($mb: f.px(90, em))
+  padding-top: f.px(42)
+  @include m.gap($mb: f.px(64))
 
-.icons
-  @include m.flex($ai: center)
-  @include m.gap($mt: f.px(23, em))
+.content
+  @include m.flex($fd: column, $ai: center)
 
-.iconRight
-  @include m.gap($ml: f.px(13, em))
+.p
+  margin-top: f.px(11)
+  margin-bottom: 0
+  font-size: f.px(13)
+  line-height: 120%
+  @include m.dye(c, c.$delta)

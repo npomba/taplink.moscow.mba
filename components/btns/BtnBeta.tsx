@@ -1,12 +1,12 @@
-import stls from '@/styles/components/btns/BtnCta.module.sass'
+import stls from '@/styles/components/btns/BtnBeta.module.sass'
 import Popup from 'reactjs-popup'
 import PopupForm from '@/components/popups/PopupForm'
 
-const BtnCta = () => {
+const BtnBeta = ({ children }) => {
   return (
     <>
       <Popup
-        trigger={<button className={stls.container}>Оставить заявку</button>}
+        trigger={<button className={stls.container}>{children}</button>}
         modal
         nested>
         {close => (
@@ -20,4 +20,4 @@ const BtnCta = () => {
   )
 }
 
-export default BtnCta
+export default BtnBeta

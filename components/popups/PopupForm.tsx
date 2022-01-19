@@ -72,13 +72,8 @@ const Form = ({
       </Popup>
       <div className={stls.container}>
         <h3 className={stls.title}>{title}</h3>
-        <p className={stls.desc}>
-          {!programTitle && disc}{' '}
-          {programTitle &&
-            `Оставьте свои контакты, менеджер свяжется с вами, ответит на вопросы, пришлет презентацию программы, образцы дипломов и требования к поступлению`}
-        </p>
         <form method='post' onSubmit={handleSubmit(onSubmitFormThis)}>
-          <div>
+          <div className={stls.inputGroups}>
             <div className={stls.inputGroup}>
               <input
                 type='text'
@@ -93,7 +88,7 @@ const Form = ({
                 onKeyUp={handleKeyUp}
               />
               <p className={stls.inputName}>{SetString(lang.inputName)}</p>
-              <p>{errors.name && errors.name.message}</p>
+              <p className={stls.error}>{errors.name && errors.name.message}</p>
             </div>
             <div className={stls.inputGroup}>
               <input
@@ -110,7 +105,9 @@ const Form = ({
                 onKeyUp={handleKeyUp}
               />
               <p className={stls.inputName}>{SetString(lang.inputPhone)}</p>
-              <p>{errors.phone && errors.phone.message}</p>
+              <p className={stls.error}>
+                {errors.phone && errors.phone.message}
+              </p>
             </div>
             <div className={stls.btnGroup}>
               <button

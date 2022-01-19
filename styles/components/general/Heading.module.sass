@@ -3,25 +3,25 @@
 @use '@/styles/themes/default/colors' as c
 
 .container
-  @include m.gap($mb: f.px(17, em))
-
-.content
-  position: relative
+  margin-bottom: f.px(20)
 
 .title
   position: relative
-  max-width: 13ch
-  @include m.gap($mb: f.px(8, em), $mt: f.px(8, em))
-  font-size: f.px(35)
+  margin-top: 0
+  margin-bottom: f.px(20)
+  font-size: f.px(20)
   font-weight: 700
-  line-height: 100%
-  z-index: 1
+  line-height: 120%
+  text-transform: uppercase
 
-.discount
-  position: absolute
-  top: 0
-  right: 0
+.pFirst,
+.p
+  font-size: f.px(14)
+  font-weight: 300
+  line-height: 130%
 
-.info
-  max-width: f.px(320)
-  @include m.flex($jc: space-between)
+.pFirst
+  margin-bottom: f.px(12)
+
+.p
+  margin: 0

@@ -1,29 +1,24 @@
 import stls from '@/styles/components/general/Heading.module.sass'
-import StudyDuration from '@/components/general/StudyDuration'
-import Price from '@/components/costs/Price'
-import StudyFormat from '@/components/general/StudyFormat'
 import Wrapper from '@/components/layout/Wrapper'
-import ProgramLabel from '@/components/general/ProgramLabel'
-import DiscountCircle from '@/components/general/DiscountCircle'
 
-const Heading = ({ title }) => {
+const Heading = () => {
   return (
     <section className={stls.container}>
       <Wrapper>
-        <div className={stls.content}>
-          <div className={stls.discount}>
-            <DiscountCircle />
-          </div>
-          <ProgramLabel />
-          <h1 className={stls.title}>«{title}»</h1>
-          <div className={stls.info}>
-            <StudyDuration />
-            <StudyFormat />
-          </div>
-          <div className={stls.price}>
-            <Price discount />
-          </div>
-        </div>
+        <h1 className={stls.title}>Об академии</h1>
+        <p className={stls.pFirst}>
+          Московская Бизнес Академия яляется
+          <br /> одной из ведущих бизнес-школ
+          <br /> на территории СНГ и одной из немногих
+          <br /> бизнес-школ, которая экспортирует
+          <br /> отечественные MBA на Запад и работает
+          на&nbsp;глобальном&nbsp;рынке
+        </p>
+        <p className={stls.p}>
+          Ежегодно сотни руководителей <br /> и владельцев компаний получают
+          здесь <br /> бизнес-образование международного <br /> уровня и
+          завязывают новые&nbsp;знакомства
+        </p>
       </Wrapper>
     </section>
   )

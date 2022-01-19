@@ -240,22 +240,22 @@ export default {
   },
 
   inputName: {
-    ru: 'Имя',
-    en: 'Name'
+    ru: 'Введите имя',
+    en: 'Type in Name'
   },
 
   inputPhone: {
-    ru: 'Номер телефона',
-    en: 'Phone number'
+    ru: 'Введите номер телефона',
+    en: 'Type in phone number'
   },
 
   inputSubmit: {
-    ru: 'Отправить',
+    ru: 'Оставить заявку',
     en: 'Submit'
   },
 
   inputSubmitAlt: {
-    ru: 'Отправить',
+    ru: 'Оставить заявку',
     en: 'Submit'
   },
 
