@@ -77,8 +77,8 @@ function MyApp({ Component, pageProps, router }) {
     <>
       <DefaultSeo {...SEO} />
       <LogoJsonLd
-        logo='https://promo.moscow.mba/logo.jpg'
-        url='https://promo.moscow.mba/'
+        logo='https://taplink.moscow.mba/logo.jpg'
+        url='https://taplink.moscow.mba/'
       />
       <Header />
       <main>

@@ -22,7 +22,7 @@ const Home = () => {
           )} ${SetString(lang.headerTitlePostHighlight)}`,
           120
         )}
-        canonical={'https://promo.moscow.mba/'}
+        canonical={'https://taplink.moscow.mba/'}
       />
       <Heading />
       <Pros />

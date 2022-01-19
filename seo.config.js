@@ -2,7 +2,7 @@ const seo = {
   openGraph: {
     type: 'website',
     locale: 'ru',
-    url: 'https://promo.moscow.mba/',
+    url: 'https://taplink.moscow.mba/',
     site_name: 'Moscow Business Academy'
   },
   // twitter: {
@@ -13,7 +13,7 @@ const seo = {
   defaultTitle: 'Moscow Business Academy',
   description:
     'Moscow Business Academy является одной из ведущих бизнес-школ на территории СНГ и одной из немногих бизнес-школ, которая...',
-  canonical: 'https://promo.moscow.mba/'
+  canonical: 'https://taplink.moscow.mba/'
 }
 
 export default seo
