@@ -1,16 +1,31 @@
-import axios from 'axios'
-import { frontendUrl } from '@/config/index'
+import hitContactRoute from '@/components/hooks/hitContactRoute'
 
-const onSubmitForm = async values => {
-  try {
-    const res = await axios.post(`${frontendUrl}/api/contact`, values)
-    let output
-    res.status === 200 && (output = 200)
-    res.status === 500 && (output = 500)
-    return output
-  } catch (err) {
-    console.log(err)
-    return err
+const onSubmitForm = async ({
+  values,
+  programTitle,
+  promoCourseLink = null,
+  setOpenLoader,
+  asPath,
+  setOpen,
+  reset
+}) => {
+  setOpenLoader(o => !o)
+  values.programTitle = programTitle
+  values.leadPage = promoCourseLink ? promoCourseLink : asPath
+  const utms = JSON.parse(sessionStorage.getItem('utms'))
+  utms.utm_term = decodeURIComponent(utms.utm_term)
+  values.utms = utms
+  sessionStorage.removeItem('utms')
+  const referer = JSON.parse(sessionStorage.getItem('referer'))
+  values.referer = referer
+  sessionStorage.removeItem('referer')
+  const req = await hitContactRoute(values)
+  if (req === 200) {
+    setOpenLoader(false)
+    setOpen(o => !o)
+    reset()
+  } else {
+    console.log('err')
   }
 }
 

@@ -37,22 +37,22 @@ const Form = ({
   const closeLoadingModal = () => setOpenLoader(false)
   const { asPath } = useRouter()
 
-  const onSubmitFormThis = async values => {
-    setOpenLoader(o => !o)
-    values.programTitle = programTitle
-    values.leadPage = asPath
-    const utms = JSON.parse(sessionStorage.getItem('utms'))
-    values.utms = utms
-    sessionStorage.removeItem('utms')
-    const req = await onSubmitForm(values)
-    if (req === 200) {
-      closeLoadingModal()
-      setOpen(o => !o)
-      reset()
-    } else {
-      console.log('err')
-    }
-  }
+  // const onSubmitFormThis = async values => {
+  //   setOpenLoader(o => !o)
+  //   values.programTitle = programTitle
+  //   values.leadPage = asPath
+  //   const utms = JSON.parse(sessionStorage.getItem('utms'))
+  //   values.utms = utms
+  //   sessionStorage.removeItem('utms')
+  //   const req = await onSubmitForm(values)
+  //   if (req === 200) {
+  //     closeLoadingModal()
+  //     setOpen(o => !o)
+  //     reset()
+  //   } else {
+  //     console.log('err')
+  //   }
+  // }
 
   const handleKeyUp = e => {
     handlePlaceholder(e)
@@ -72,7 +72,18 @@ const Form = ({
       </Popup>
       <div className={stls.container}>
         <h3 className={stls.title}>{title}</h3>
-        <form method='post' onSubmit={handleSubmit(onSubmitFormThis)}>
+        <form
+          method='post'
+          onSubmit={handleSubmit(values =>
+            onSubmitForm({
+              values,
+              programTitle,
+              setOpenLoader,
+              asPath,
+              setOpen,
+              reset
+            })
+          )}>
           <div className={stls.inputGroups}>
             <div className={stls.inputGroup}>
               <input
