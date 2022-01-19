@@ -3,8 +3,10 @@ import { useEffect } from 'react'
 import TagManager from 'react-gtm-module'
 import useAt from '@/components/hooks/useAt'
 import { IconClose, IconCheck } from '@/components/icons'
+import { v4 as uuidv4 } from 'uuid'
 
 const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
+  const id = programId || uuidv4()
   useEffect(() => {
     const tagManagerArgs = {
       dataLayer: {
@@ -12,12 +14,12 @@ const Thankyou = ({ closePopUp = null, programId, programTitle }) => {
         ecommerce: {
           add: {
             actionField: {
-              id: programId
+              id: 'bca2082e-4bf0-4d98-a2ca-24b0784aeb06'
             },
             products: [
               {
-                id: programId,
-                name: programTitle,
+                id: 'bca2082e-4bf0-4d98-a2ca-24b0784aeb06',
+                name: 'taplink.moscow.mba',
                 programFormat: at.online
                   ? 'online'
                   : at.blended
